@@ -80,7 +80,7 @@
         {{ target.number }}
         Group: {{ group.name }}
         {% assign range_title_key = target | replace '-','.' }
-        {% assign range_title_dot_key | append: '-title' %}
+        {% assign range_title_dot_key =  range_title_key | append: '-title' %}
         {% assign target_range = t.dns_ranges[range_title_dot_key] %}
         {{ target_range }}
 
