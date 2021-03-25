@@ -14,7 +14,7 @@
     {% if tab_key == 'sources' %}
       {% assign tab_include = 'components/indicator/sources.html' %}
     {% elsif tab_key == 'history_1'  %}
-      {% assign tab_include = 'components/indicator/status_summary.html' %}
+      {% assign tab_include = 'components/indicator/history.html' %}
     {% endif %}
     <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{ tab_key }}">
       <article>
