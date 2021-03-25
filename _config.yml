@@ -8,15 +8,15 @@
 # Site settings
 title: German Indicators For The Sustainable Development Goals
 description: Data Platform Prototype
-baseurl: "/sdg-indicators" # the subpath of your site, e.g. /blog
+baseurl: "/dns-indicators" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: staging
-remote_data_prefix: "https://SdgTestEnvironment.github.io/sdg-data"
+remote_data_prefix: "https://DnsTestEnvironment.github.io/sdg-data"
 # URL for the "Edit Data" button on indicators.
-data_edit_url: http://prose.io/#SdgTestEnvironment/sdg-data/edit/develop/data/indicator_[id].csv
+data_edit_url: http://prose.io/#DnsTestEnvironment/sdg-data/edit/develop/data/indicator_[id].csv
 # URL for the "Edit Metadata" button on indicators.
-metadata_edit_url: http://prose.io/#SdgTestEnvironment/sdg-data/edit/develop/meta/[id].md
+metadata_edit_url: http://prose.io/#DnsTestEnvironment/sdg-data/edit/develop/meta/[id].md
 # permalink: /news/:year/:month/:day/:title.html
 
 
@@ -34,9 +34,9 @@ analytics:
 
 ###################################################################################################
 email_contacts:
-  questions: sdg-indicators@destatis.de
-  suggestions: sdg-indicators@destatis.de
-  functional: sdg-indicators@destatis.de
+  questions: dns-indikatoren@destatis.de
+  suggestions: dns-indikatoren@destatis.de
+  functional: dns-indikatoren@destatis.de
 ###################################################################################################
 
 
@@ -119,7 +119,7 @@ menu:
 
 
 footer_menu:
-  - path: 'mailto:sdg-indicators@destatis.de' #menu.contactPath
+  - path: 'mailto:dns-indikatoren@destatis.de' #menu.contactPath
     translation_key: menu.contact_us
   - path: menu.twitterPath #https://twitter.com/destatis?lang=de
     translation_key:  general.twitter
