@@ -77,9 +77,18 @@
     <div class="indicator-cards target goal-target col-md-6">
       <span>
         <label class="hidden-md hidden-lg">{{ page.t.general.dns_target }}</label>
-        {{ target.number }}
+        {% assign size = target_id | size | minus: 2 %}
+        {% assign range_id = target_id | slice: 0, size | replace: "-", "." %}
+
+        {% assign range_title_key = range_id  | append: '-title' %}
+        {% assign target_range = t.dns_ranges[range_title_key] %}
+        {{ target_range }}
+        
       </span>
-      {{ target.name }}
+      {% assign target_title_key = target_id | append: '-title' %}
+      {% assign target_title_key_dashes = target_id_dashes | append: '-title' %}
+      {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
+      {{ target_title }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
