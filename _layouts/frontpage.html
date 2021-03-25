@@ -21,7 +21,7 @@
         {% cycle 'add row' : '<div class="row no-gutters">', '', '', '', '', '' %}
             <div class="col-xs-4 col-md-2">
                 <a href="{{ goal.url }}">
-                  <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal }}.png" id="goal-{{ goal.number }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" />
+                  <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal.number }}.png" id="goal-{{ goal.number }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" />
               </a>
             </div>
         {% cycle 'end row' : '', '', '', '', '', '</div>' %}
