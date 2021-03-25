@@ -79,8 +79,9 @@
         <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
         {{ target.number }}
         Group: {{ group.name }}
-        {% assign range_title_key = target | append: '-title' %}
-        {% assign target_range = page.t.dns_ranges[range_title_key] %}
+        {% assign range_title_key = target | replace '-','.' }
+        {% assign range_title_slash_key | append: '-title' %}
+        {% assign target_range = t.dns_ranges[range_title_slash_key] %}
 
       </span>
       {{ target.name }}
