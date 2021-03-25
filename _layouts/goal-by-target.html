@@ -76,10 +76,10 @@
     {% assign target = group.name | sdg_lookup %}
     <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
+        <label class="hidden-md hidden-lg">{{ page.t.general.dns_target }}</label>
         {{ target.number }}
       </span>
-      {{ target.name }}
+      {{ postulate }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
