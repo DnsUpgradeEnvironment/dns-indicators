@@ -80,12 +80,15 @@
         {{ target.number }}
         Group: {{ group.name }} <!--5.1.1-->
 
-        {% assign range_number = group.name | replace: '.1','x' | replace_first: 'x', '.1' | replace: 'x', ''} <!--5.1-->
+        {% assign range_number = group.name | replace: '.1','x' | replace_first: 'x', '.1' | replace: 'x', '' %} <!--5.1-->
         {% assign range_title_key = range_number | append: '-title' %}<!--5.1-title-->
         {% assign target_range = page.t.dns_ranges[range_title_key] %}
         {{ target_range }}
 
       </span>
+      {% assign target_number = group.name %}
+      {% assign target_title_key = target_number | append:  '-title' %}
+      {% assign postulate = page.t.dns_targets[target_title_key] %}
       {{ target.name }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
