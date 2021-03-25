@@ -1,6 +1,12 @@
 {% include head.html %}
 {% include header.html %}
 
+{% assign goal_number = page.goal.number %}
+{% assign goal_title_key = goal_number | append: '-title' %}
+{% assign goal_short_key = goal_number | append: '-short' %}
+{% assign goal_title = page.t.global_goals[goal_title_key] %}
+{% assign goal_short = page.t.dns_goals[goal_title_key] %}
+
 <div class="heading goal-banner goal-{{ page.goal.number }}">
   <div class="container">
     <div class="row">
@@ -9,7 +15,7 @@
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <span class="hidden-sm hidden-md hidden-lg">{{ page.t.general.goal }} {{ page.goal.number }}: </span>{{ page.goal.name }}
+          <span class="hidden-sm hidden-md hidden-lg titles goal-{{page.goal.number}}">{{ page.t.general.goal }} {{ page.goal.number }}: {{ goal_short }}</span><span class="hidden-xs titles goal-{{page.goal.number}}">{{ goal_title }}</span>
         </h1>
       </div>
     </div>
