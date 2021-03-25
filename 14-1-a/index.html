@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325164719">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325165859">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,7 +442,7 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": Meere schützen" >
+          <h1 class="titles goal-14" title=": Meere schützen" >
             Meere schützen – <i title=": Meere und Meeresressourcen schützen und nachhaltig nutzen">Meere und Meeresressourcen schützen und nachhaltig nutzen</i>
             <span class="lead-copy">
               14.1.a: Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee
@@ -1036,7 +1036,7 @@ opensdg.chartConfigAlter(function(config, info) {
   
   
   <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.details tab"
@@ -1075,6 +1075,22 @@ data-event-label="Change to indicator.history tab"
 >Statusübersicht</a>
   </li>
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to indicator.sources tab"
+>Datenquellen</a>
+  </li>
+
 
   
   <li role="presentation" class="nav-item">
@@ -1094,11 +1110,22 @@ data-event-label="Change to indicator.history tab"
     
     
     
-    <div role="tabpanel" class="tab-pane active" id="global">
+    <div role="tabpanel" class="tab-pane active" id="national">
       <article>
         <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
         <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1109,7 +1136,7 @@ data-event-label="Change to indicator.history tab"
       
       
       <tr>
-        <th scope="row">Indikatorenbezeichnung </th>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
         <td>
           
             <p>Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee</p>
@@ -1122,19 +1149,13 @@ data-event-label="Change to indicator.history tab"
   
       
         
-          
-      
-        
-          
-      
-        
       
       
       <tr>
-        <th scope="row">Unterzielnummerierung </th>
+        <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
         <td>
           
-            <p>14.1.1</p>
+            <p>Die Indikatoren geben den gleitenden, abflussgewichteten Durchschnitt der letzten 5 Jahre der Stickstoffkonzentrationen in Milligramm (mg) Stickstoff pro Liter (l) Wasserabfluss von Flüssen in die Nord- und Ostsee an.<sup>1</sup><br /><br /><small><sup>1</sup>Für die Nordsee sind dies die Flüsse Eider, Elbe, Ems, Weser, Rhein, Treene, Aarlau, Bongsieler Kanal und Miele. Für die Ostsee sind dies die Peene, Trave, Warnow, Langballigau, Füsinger Au, Koseler Au, Schwentine, Kossau, Goddesdorfer Au, Oldenburger Graben, Aalbeck, Schwartau, Lippingau, Hagener Au, Barthe, Duvenbaek, Hellbach, Maurine, Recknitz, Ryck, Stepenitz, Uecker, Wallensteingraben und Zarow.</small></p>
 
           
         </td>
@@ -1144,29 +1165,113 @@ data-event-label="Change to indicator.history tab"
   
       
         
+      
+      
+      <tr>
+        <th scope="row">Geographische Abdeckung </th>
+        <td>
           
+            <p>Deutschland</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Ziel und Intention <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
+        <td>
           
+            <p>Hohe Konzentrationen von Stickstoff in den Meeren können zu Eutrophierungseffekten wie Sauerstoffmangel und dadurch zum Verlust an Biodiversität und zur Zerstörung von Fisch-Aufzugsgebieten führen. Daher soll der Eintrag von Stickstoff unter 2,8 mg Stickstoff pro Liter Abfluss für die in die Nordsee einmündenden Flüsse und unter 2,6 mg Stickstoff pro Liter für die in die Ostsee einmündenden Flüsse liegen. Dies entspricht den im Rahmen der Umsetzung der Wasserrahmenrichtlinie vereinbarten Bewirtschaftungszielen der Oberflächengewässerverordnung sowie den Zielen der Meeresstrategie-Rahmenrichtlinie und des Ostseeaktionsplans.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Datenstand </th>
+        <td>
           
+            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Letzte Änderung des Codes <small>(Daten)</small> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
+                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Letzte Änderung des Codes <small>(Texte)</small> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
+                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+        
+      
+      
+      
   
   
   
@@ -1875,6 +1980,293 @@ data-event-label="Change to indicator.history tab"
       </article>
     </div>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/uba.png" alt=" Umweltbundesamt (UBA)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Umweltbundesamt (nach Angaben der Länder bzw. Flussgebietsgemeinschaften)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Umweltbundesamt (UBA)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.umweltbundesamt.de/daten/wasser/nordsee/flusseintraege-direkte-eintraege-in-die-nordsee" target="_blank">
+                Flusseinträge und direkte Einträge in die Nordsee <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.umweltbundesamt.de/daten/wasser/ostsee/flusseintraege-direkte-eintraege-in-die-ostsee" target="_blank">
+                Nährstoffeinträge über Flüsse und Direkteinleiter in die Ostsee <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
+
+      </article>
+    </div>
+    
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -1974,12 +2366,12 @@ data-event-label="Change to indicator.history tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325164719'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325165859'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325164719"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325165859"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

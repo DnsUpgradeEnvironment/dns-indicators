@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325164719">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325165859">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,7 +442,7 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": Wirtschaftliche Leistungsfähigkeit" >
+          <h1 class="titles goal-8" title=": Wirtschaftliche Leistungsfähigkeit" >
             Wirtschaftliche Leistungsfähigkeit – <i title=": Wirtschaftsleistung umwelt- und sozialverträglich steigern">Wirtschaftsleistung umwelt- und sozialverträglich steigern</i>
             <span class="lead-copy">
               8.4: Bruttoinlandsprodukt je Einwohner
@@ -1017,7 +1017,7 @@ opensdg.chartConfigAlter(function(config, info) {
   
   
   <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.details tab"
@@ -1056,6 +1056,22 @@ data-event-label="Change to indicator.history tab"
 >Statusübersicht</a>
   </li>
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to indicator.sources tab"
+>Datenquellen</a>
+  </li>
+
 
   
   <li role="presentation" class="nav-item">
@@ -1075,11 +1091,22 @@ data-event-label="Change to indicator.history tab"
     
     
     
-    <div role="tabpanel" class="tab-pane active" id="global">
+    <div role="tabpanel" class="tab-pane active" id="national">
       <article>
         <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
         <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1090,7 +1117,7 @@ data-event-label="Change to indicator.history tab"
       
       
       <tr>
-        <th scope="row">Indikatorenbezeichnung </th>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
         <td>
           
             <p>Bruttoinlandsprodukt je Einwohner</p>
@@ -1103,19 +1130,13 @@ data-event-label="Change to indicator.history tab"
   
       
         
-          
-      
-        
-          
-      
-        
       
       
       <tr>
-        <th scope="row">Unterzielnummerierung </th>
+        <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
         <td>
           
-            <p>8.4.1</p>
+            <p>Der Indikator zeigt das preisbereinigte Bruttoinlandsprodukt (BIP) je Einwohnerin bzw. Einwohner in Deutschland auf Basis des Jahres 2015. Das BIP misst den Wert der im Inland erwirtschafteten Leistung; als Einwohnerinnen und Einwohner gelten dabei alle Personen, die in Deutschland ihren ständigen Wohnsitz haben.</p>
 
           
         </td>
@@ -1125,29 +1146,113 @@ data-event-label="Change to indicator.history tab"
   
       
         
+      
+      
+      <tr>
+        <th scope="row">Geographische Abdeckung </th>
+        <td>
           
+            <p>Deutschland</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Ziel und Intention <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
+        <td>
           
+            <p>Zwischen der Entwicklung des Bruttoinlandprodukts und den anderen Indikatoren der Nachhaltigkeitsstrategie gibt es vielfältige Beziehungen. So spielen soziale Faktoren wie die Bevölkerungsstruktur, das Arbeitskräfteangebot, das Bildungssystem sowie der soziale Zusammenhalt in der Gesellschaft eine wichtige Rolle für die internationale Wettbewerbsfähigkeit der Wirtschaft. Das BIP gilt als wichtiger Indikator für Konjunktur und Wachstum einer Volkswirtschaft, folglich ist das Ziel ein stetiges und angemessenes Wachstum.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Datenstand </th>
+        <td>
           
+            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Letzte Änderung des Codes <small>(Daten)</small> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
+                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Letzte Änderung des Codes <small>(Texte)</small> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
+                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+        
+      
+      
+      
   
   
   
@@ -1856,6 +1961,293 @@ data-event-label="Change to indicator.history tab"
       </article>
     </div>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/vwgdl.png" alt=" Statistische Ämter des Bundes und der Länder" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Statistische Ämter des Bundes und der Länder</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Statistische Ämter des Bundes und der Länder</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.destatis.de/DE/Service/Bibliothek/_publikationen-fachserienliste-18.html?nn=206136" target="_blank">
+                Volkswirtschaftliche Gesamtrechnungen - Fachserie 18, Reihe 1.4 <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.statistik-bw.de/VGRdL/" target="_blank">
+                Volkswirtschaftliche Gesamtrechnungen der Länder <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
+
+      </article>
+    </div>
+    
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -1955,12 +2347,12 @@ data-event-label="Change to indicator.history tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325164719'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325165859'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325164719"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325165859"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

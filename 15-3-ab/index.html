@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325164719">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325165859">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,7 +442,7 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": Ökosysteme" >
+          <h1 class="titles goal-15" title=": Ökosysteme" >
             Ökosysteme – <i title=": Weltweit Entwaldungen vermeiden und Böden schützen">Weltweit Entwaldungen vermeiden und Böden schützen</i>
             <span class="lead-copy">
               15.3.a, b: Erhalt bzw. Wiederaufbau von Wäldern unter REDD+ sowie internationaler Bodenschutz
@@ -1027,7 +1027,7 @@ opensdg.chartConfigAlter(function(config, info) {
   
   
   <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.details tab"
@@ -1066,6 +1066,22 @@ data-event-label="Change to indicator.history tab"
 >Statusübersicht</a>
   </li>
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+data-event-category="Tab change"
+data-event-action="Change metadata view"
+data-event-label="Change to indicator.sources tab"
+>Datenquellen</a>
+  </li>
+
 
   
   <li role="presentation" class="nav-item">
@@ -1085,11 +1101,22 @@ data-event-label="Change to indicator.history tab"
     
     
     
-    <div role="tabpanel" class="tab-pane active" id="global">
+    <div role="tabpanel" class="tab-pane active" id="national">
       <article>
         <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
         <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1100,7 +1127,7 @@ data-event-label="Change to indicator.history tab"
       
       
       <tr>
-        <th scope="row">Indikatorenbezeichnung </th>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
         <td>
           
             <p>Erhalt bzw. Wiederaufbau von Wäldern unter REDD+ sowie internationaler Bodenschutz</p>
@@ -1113,19 +1140,13 @@ data-event-label="Change to indicator.history tab"
   
       
         
-          
-      
-        
-          
-      
-        
       
       
       <tr>
-        <th scope="row">Unterzielnummerierung </th>
+        <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
         <td>
           
-            <p>15.2.2</p>
+            <p>Der Indikator 15.3.a zeigt die ergebnisbasierten Auszahlungen Deutschlands an Entwicklungs- und Schwellenländer für den nachgewiesenen Erhalt beziehungsweise Wiederaufbau von Wäldern unter dem REDD+-Regelwerk. Der Indikator 15.3.b umfasst die bilateralen Bruttoentwicklungsausgaben Deutschlands im Zusammenhang mit der Umsetzung des Übereinkommens der Vereinten Nationen zur Bekämpfung der Wüstenbildung in Entwicklungs- und Schwellenländern.</p>
 
           
         </td>
@@ -1138,26 +1159,97 @@ data-event-label="Change to indicator.history tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">Ziel und Intention <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
+        <td>
           
+            <p>Die Vermeidung von Entwaldung und Walddegradierung (Schädigung), eine nachhaltige Waldbewirtschaftung sowie der Wiederaufbau von Wäldern und Aufforstung tragen mittelbar und unmittelbar zum Erhalt biologischer Vielfalt, zur Boden-, Wasser, und Luftqualität, zur Verminderung von Bodenerosion, zur Minderung des CO<sub>2</sub>-Ausstoßes und zur Speicherung von Kohlenstoff sowie zur Erhaltung wichtiger Entwicklungs- und Einkommensperspektiven für Waldländer bei. Ziel ist es, die Zahlungen unter dem REDD+-Regelwerk bis zum Jahr 2030 zu steigern. Gesunde Böden sind eine wesentliche, nicht bzw. schwer erneuerbare natürliche Ressource. Sie spielen eine Schlüsselrolle bei der Nahrungsmittelproduktion, der Verringerung der Auswirkungen häufiger und extremer Wetterereignisse, dem Erhalt der biologischen Vielfalt und der Bereitstellung wesentlicher Ökosystemleistungen. Ziel ist es daher, Deutschlands Beitrag für den internationalen Bodenschutz bis 2030 zu steigern. Auf internationaler Ebene ist die Desertifikationsbekämpfung neben den Themen Biodiversität und Klimawandel ein Ziel der drei Rio-Konventionen.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Datenstand </th>
+        <td>
           
+            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Letzte Änderung des Codes <small>(Daten)</small> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
+                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Letzte Änderung des Codes <small>(Texte)</small> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
+                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+        
+      
+      
+      
   
   
   
@@ -1840,6 +1932,460 @@ data-event-label="Change to indicator.history tab"
       </article>
     </div>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+        <h4>Datenquelle 1</h4>
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/destatis.png" alt=" Statistisches Bundesamt (Destatis)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Statistisches Bundesamt</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Statistisches Bundesamt (Destatis)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+        <h4>Datenquelle 2</h4>
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/de/index.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/bmz.png" alt=" Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
+
+      </article>
+    </div>
+    
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -1939,12 +2485,12 @@ data-event-label="Change to indicator.history tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325164719'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325165859'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325164719"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325165859"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
