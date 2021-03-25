@@ -49,8 +49,8 @@
   </div>
 
   <div class="col-xs-6 col-md-6 col-lg-4">
-    <a href="https://sustainabledevelopment-deutschland.github.io/{{ language }}/{{ page.sdg_goal }}" class="btn btn-primary btn-block goal-{{ page.sdg_goal }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
-      <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.target_link_dns }} {{ page.t.general.goal }} {{ page.sdg_goal }} </b><b class="btn-label visible-sm visible-xs">{{ page.t.general.goal }} {{ page.sdg_goal }} {{ page.t.general.national }}</b>
+    <a href="https://sdg-indikatoren.de/{{ language }}/{{ page.sdg_goal }}" class="btn btn-primary btn-block goal-{{ page.sdg_goal }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
+      <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.target_link_sdg }} {{ page.t.general.goal }} {{ page.sdg_goal }} </b><b class="btn-label visible-sm visible-xs">{{ page.t.general.goal }} {{ page.sdg_goal }} {{ page.t.general.global }}</b>
     </a>
   </div>
 
@@ -81,11 +81,8 @@
         Group: {{ group.name }} 5.1.1-->
         {% assign number = group.name %}
         {% assign size = number | size | minus: 2 %}
-        size: {{ size }}
         {% assign range_number = number | slice: 0, size %}<!--5.1-->
-        range_number: {{ range_number }}
         {% assign range_title_key = range_number | append: '-title' %}<!--5.1-title-->
-        range_title_key: {{ range_title_key }}
         {% assign target_range = page.t.dns_ranges[range_title_key] %}
         {{ target_range }}
 
