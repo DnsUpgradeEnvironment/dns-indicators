@@ -76,17 +76,20 @@
     {% assign target = group.name | sdg_lookup %}
     <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <label class="hidden-md hidden-lg">{{ page.t.general.dns_target }}</label>
-        {% assign size = target_id | size | minus: 2 %}
-        {% assign range_id = target_id | slice: 0, size | replace: "-", "." %}
+        <label class="hidden-md hidden-lg">{{ page.t.general.dns_target }}</label>        
+        {% assign size = target | size | minus: 2 %}
+        {% assign range_id = target | slice: 0, size | replace: "-", "." %}
 
         {% assign range_title_key = range_id  | append: '-title' %}
         {% assign target_range = t.dns_ranges[range_title_key] %}
         {{ target_range }}
 
       </span>
-      {% assign target_title_key = target_id | append: '-title' %}
+      {% assign target_title_key = target | append: '-title' %}
+
+      {% assign target_id_dashes = target | replace: ".", "-" %}
       {% assign target_title_key_dashes = target_id_dashes | append: '-title' %}
+
       {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
       {{ target_title }}
     </div>
