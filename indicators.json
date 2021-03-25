@@ -6,108 +6,12 @@
       "indicators": [
         
         {
-          "id": "1-1-1",
-          "title": "Anteil der Bevölkerung, der unter der internationalen Armutsgrenze lebt, nach Geschlecht, Alter, Erwerbsstatus und geografischem Standort (städtisch/ländlich)",
+          "id": "1-1-ab",
+          "title": "Materielle Deprivation sowie erhebliche materielle Deprivation",
           "description": "",
           "keywords": "",
-          "href": "/dns-indicators/1-1-1",
-          "status": "notstarted"
-        },
-        {
-          "id": "1-2-1",
-          "title": "Anteil der Bevölkerung, der unter der nationalen Armutsgrenze lebt, nach Geschlecht und Alter",
-          "description": "",
-          "keywords": "Indikator 1.2.1, Armutsgefährdungsquote (nach Eurostat-Definition), nationale Armutsgrenze",
-          "href": "/dns-indicators/1-2-1",
+          "href": "/dns-indicators/1-1-ab",
           "status": "complete"
-        },
-        {
-          "id": "1-2-2",
-          "title": "Anteil der Männer, Frauen und Kinder jeden Alters, die in Armut in all ihren Dimensionen nach der jeweiligen nationalen Definition leben",
-          "description": "",
-          "keywords": "Indikator 1.2.2, Armutsgefährdung oder soziale Ausgrenzung (nach Eurostat-Definition), Erhebliche materielle Deprivation",
-          "href": "/dns-indicators/1-2-2",
-          "status": "complete"
-        },
-        {
-          "id": "1-3-1",
-          "title": "Anteil der Bevölkerung, der durch sozialen Basisschutz/Sozialschutzsysteme abgedeckt ist, nach Geschlecht, mit getrennter Ausweisung der Kinder, Arbeitslosen, älteren Menschen, Menschen mit Behinderungen, Schwangeren, Neugeborenen, Opfern von Arbeitsunfällen, Armen und Schwachen",
-          "description": "",
-          "keywords": "Indikator 1.3.1, Arbeitslose Leistungsbezieher, Bevölkerung mit Krankenversicherungsschutz",
-          "href": "/dns-indicators/1-3-1",
-          "status": "complete"
-        },
-        {
-          "id": "1-4-1",
-          "title": "Anteil der Bevölkerung, der in Haushalten mit Zugang zu grundlegenden Diensten lebt",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-4-1",
-          "status": "notstarted"
-        },
-        {
-          "id": "1-4-2",
-          "title": "Anteil der gesamten erwachsenen Bevölkerung, der sichere Landnutzungs- und -besitzrechte hat, (a) mit gesetzlich anerkannten Dokumenten und (b) seine Landrechte als sicher ansieht, nach Geschlecht und Art der Nutzungs- und Besitzrechte",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-4-2",
-          "status": "notstarted"
-        },
-        {
-          "id": "1-5-1",
-          "title": "Anzahl der Katastrophen zugeschriebenen Todesopfer, Vermissten und direkt Betroffenen je 100&nbsp;000 Einwohner",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-5-1",
-          "status": "notstarted"
-        },
-        {
-          "id": "1-5-2",
-          "title": "Katastrophen zugeschriebene direkte wirtschaftliche Schäden im Verhältnis zum globalen Bruttoinlandsprodukt (BIP)",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-5-2",
-          "status": "notstarted"
-        },
-        {
-          "id": "1-5-3",
-          "title": "Anzahl der Staaten, die nationale Strategien zur Katastrophenvorsorge im Einklang mit dem Sendai-Rahmenwerk für Katastrophenvorsorge 2015-2030 beschließen und umsetzen",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-5-3",
-          "status": "notstarted"
-        },
-        {
-          "id": "1-5-4",
-          "title": "Anteil der Gemeinden, die lokale Strategien zur Katastrophenvorsorge im Einklang mit nationalen Strategien zur Katastrophenvorsorge beschließen und umsetzen",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-5-4",
-          "status": "notstarted"
-        },
-        {
-          "id": "1-a-1",
-          "title": "Gesamtumfang der Zuschüsse im Rahmen der öffentlichen Entwicklungszusammenarbeit (ODA) aller Geber mit Schwerpunkt auf der Minderung der Armut, gemessen am Bruttonationaleinkommen (BNE) des Empfängerlands",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-a-1",
-          "status": "complete"
-        },
-        {
-          "id": "1-a-2",
-          "title": "Anteil der Gesamtausgaben des Staates für Grundleistungen (Bildung, Gesundheit und soziale Sicherung)",
-          "description": "",
-          "keywords": "Indikator 1.a.2, Staatsausgaben für Gesundheit (COFOG Abteilung 07), Staatsausgaben für Bildung (COFOG Abteilung 09), Staatsausgaben für soziale Sicherung (COFOG Abteilung 10)",
-          "href": "/dns-indicators/1-a-2",
-          "status": "complete"
-        },
-        {
-          "id": "1-b-1",
-          "title": "Armutsorientierte öffentliche Sozialausgaben",
-          "description": "",
-          "keywords": "",
-          "href": "/dns-indicators/1-b-1",
-          "status": "notstarted"
         }]
     }
   },
