@@ -12,7 +12,7 @@ baseurl: "/dns-indicators" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: staging
-remote_data_prefix: "https://DnsTestEnvironment.github.io/sdg-data"
+remote_data_prefix: "https://DnsTestEnvironment.github.io/dns-data"
 # URL for the "Edit Data" button on indicators.
 data_edit_url: http://prose.io/#DnsTestEnvironment/sdg-data/edit/develop/data/indicator_[id].csv
 # URL for the "Edit Metadata" button on indicators.
