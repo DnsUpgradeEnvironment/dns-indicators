@@ -76,7 +76,7 @@
     {% assign target = group.name | sdg_lookup %}
     <div class="indicator-cards target goal-target col-md-6">
       <span>
-        <label class="hidden-md hidden-lg">{{ page.t.general.dns_target }}</label>        
+        <label class="hidden-md hidden-lg">{{ page.t.general.dns_target }}</label>
         {% assign size = target | size | minus: 2 %}
         {% assign range_id = target | slice: 0, size | replace: "-", "." %}
 
@@ -92,6 +92,7 @@
 
       {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
       {{ target_title }}
+      {{ target.name }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
@@ -140,16 +141,6 @@
     {% endfor %}
     </div>
   {% endfor %}
-
-  {% if  page.goal.number == "11" %}
-    <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        11.c
-      </span>
-      {{ page.t.global_targets.11-c-title }}
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-  {% endif %}
 
 
 </div>
