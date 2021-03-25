@@ -51,7 +51,7 @@
    $background-c: nth($goal-banner-backgroundColors, $i);
    .goal-#{$i} {
      &.goal-banner {
-       background-color: $background-c;
+       background-color: white,//$background-c;
      }
      &.sup-goal-banner {
        height: 5px;
