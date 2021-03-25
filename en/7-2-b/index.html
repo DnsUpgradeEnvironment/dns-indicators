@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325154333">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325160308">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -471,24 +471,17 @@ var translations = {
 <!---3 Btns if there is a corresponding Indicator-->
 
   
-    <div class="col-xs-3 col-md-3 col-lg-4">
+    <div class="col-xs-6 col-md-6 col-lg-6">
       <a href="/dns-indicators/en/7-2-a" class="btn btn-primary btn-block goal-7 navigation-btn" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous indicator </b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-4">
-      <a href="https://sdg-indikatoren.de/en/" class="btn btn-primary btn-block goal-7 navigation-btn" title="" role="button">
-        <b class="btn-label hidden-sm hidden-xs">Related global indicator:</b> <b>SDG-</b>
-      </a>
-    </div>
-
-    <div class="col-xs-3 col-md-3 col-lg-4">
+    <div class="col-xs-6 col-md-6 col-lg-6">
       <a href="/dns-indicators/en/8-1-a" class="btn btn-primary btn-block goal-7 navigation-btn" role="button">
-        <b class="btn-label hidden-sm hidden-xs">Next indicator</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <b class="btn-label hidden-sm hidden-xs">Next indicator </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
-  <!---2 Btns if there is no corresponding Indicator-->
   
 <!--#8 addNavigationButtons---stop-------------------------------------->
 
@@ -1091,37 +1084,68 @@ data-event-label="Change to Sources tab"
   
       
         
+      
+      
+      <tr>
+        <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
+        <td>
           
+            <p>The indicator reflects the share of electricity from renewable energy sources in gross electricity consumption.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
           
+            <p>Germany</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
+        <td>
           
+            <p>Switching to renewable energies (natural energy sources that constantly regenerate) can reduce the demand for fossil fuels. As a result, the dependency on imports of conventional fuels would be reduced, as would energy-related emissions, and hence the extent of climate change would be mitigated. According to the energy concept of the Federal Government, the share of electricity from renewable energy sources in gross electricity consumption should therefore increase to at least 35 % by 2020, at least 50 % by 2030 and at least 80 % by 2050.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
-          
       
-        
-          
       
-        
+      <tr>
+        <th scope="row">Data state </th>
+        <td>
           
+            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+
+          
+        </td>
+        </tr>
+        
       
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
       
         
       
@@ -1167,7 +1191,7 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/b4b3ae10cb9c9e9f1775068849e8e18341dd5d17" target="_blank">
+              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
                 2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
@@ -1183,34 +1207,6 @@ data-event-label="Change to Sources tab"
       
       
       
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -1351,22 +1347,6 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Target name </th>
-        <td>
-          
-            <p>Zukunftsfähige Energieversorgung ausbauen</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
         <th scope="row">Indicator name </th>
         <td>
           
@@ -1386,7 +1366,20 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
           
+            <p>7.2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
           
@@ -1402,42 +1395,6 @@ data-event-label="Change to Sources tab"
       
         
           
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -1630,6 +1587,43 @@ data-event-label="Change to Sources tab"
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
       
         
       
@@ -1664,13 +1658,20 @@ data-event-label="Change to Sources tab"
   
       
         
-          
       
-        
-          
       
-        
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
           
+            <p>Working Group on Renewable Energies Statistics, Federal Ministry for Economic Affairs and Energy</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
       
@@ -1717,130 +1718,6 @@ data-event-label="Change to Sources tab"
       
         
           
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -1988,6 +1865,14 @@ data-event-label="Change to Sources tab"
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
       
         
       
@@ -2022,13 +1907,20 @@ data-event-label="Change to Sources tab"
   
       
         
-          
       
-        
-          
       
-        
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
           
+            <p>Länderarbeitskreis Energiebilanzen</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
       
@@ -2075,57 +1967,6 @@ data-event-label="Change to Sources tab"
       
         
           
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -2274,12 +2115,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325154333'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325160308'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325154333"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325160308"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
