@@ -21,8 +21,8 @@
     </div>
 
     <div class="col-xs-6 col-md-6 col-lg-4">
-      <a href="https://sdg-indikatoren.de/{{ language }}/{{ page.indicator.sdg_indicator }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" title="{{ t.general.link_sdg_indicator }}" role="button">
-        <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.indicator_link_sdg }}</b> <b>SDG-{{ page.indicator.sdg_indicator | replace: "/", "" | replace: "-", "."}}</b>
+      <a href="https://sdg-indikatoren.de/{{ language }}/{{ page.indicator.sdg_indicator | replace: '.', '-'}}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" title="{{ t.general.link_sdg_indicator }}" role="button">
+        <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.indicator_link_sdg }}</b> <b>SDG-{{ page.indicator.sdg_indicator | replace: "/", ""}}</b>
       </a>
     </div>
 
