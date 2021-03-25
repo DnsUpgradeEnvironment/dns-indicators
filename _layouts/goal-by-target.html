@@ -86,10 +86,10 @@
         {{ target_range }}
 
       </span>
-      {% assign target_number = group.name %}
-      {% assign target_title_key = target_number | append:  '-title' %}
+      {% assign target_number = group.name %}<!--5.1.1-->
+      {% assign target_title_key = target_number | append:  '-title' %}<!--5.1.1-title-->
       {% assign postulate = page.t.dns_targets[target_title_key] %}
-      {{ target.name }}
+      {{ postulate }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
