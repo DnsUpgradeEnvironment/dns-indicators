@@ -132,6 +132,9 @@ footer_menu:
 # non-global metadata tab.
 non_global_metadata: indicator.national_metadata
 
+frontpage_heading: Indikatoren der Deutschen Nachhaltigkeitsstrategie
+
+
 search_index_extra_fields:
   #- indicator_number
   - national_indicator_available
