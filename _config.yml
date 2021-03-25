@@ -81,8 +81,8 @@ languages:
 menu:
   - path: /
     translation_key: general.seventeen_goals
-  - path: /reporting-status/
-    translation_key: menu.reporting_status
+  # - path: /reporting-status/
+  #   translation_key: menu.reporting_status
   - translation_key: menu.about
     dropdown:
       - path: /about_platform/
