@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325161147">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325163252">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,10 +442,10 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": " >
-             – <i title=": "></i>
+          <h1 class="titles goal-" title=": Mobilität" >
+            Mobilität – <i title=": Mobilität sichern – Umwelt schonen">Mobilität sichern – Umwelt schonen</i>
             <span class="lead-copy">
-              : Endenergieverbrauch im Personenverkehr
+              11.2.b: Endenergieverbrauch im Personenverkehr
             </span>
           </h1>
         </div>
@@ -999,29 +999,54 @@ opensdg.chartConfigAlter(function(config, info) {
   
   <ul class="nav nav-tabs spacer medium" role="tablist">
 
+
+  
+  
+  
+  
+  
+  
+  
+  
   <li role="presentation" class="nav-item active">
-  <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to National Metadata tab"
->Nationale Metadaten</a>
-</li>
+data-event-label="Change to indicator.details tab"
+>Details</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Global Metadata tab"
->Globale Metadaten</a>
-</li>
+data-event-label="Change to indicator.contentAndProgress tab"
+>Inhalt und Entwicklung</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Sources tab"
->Datenquellen</a>
-</li>
+data-event-label="Change to indicator.history tab"
+>Statusübersicht</a>
+  </li>
 
 
   
@@ -1033,303 +1058,20 @@ data-event-label="Change to Sources tab"
 
 <div class="tab-content">
   
-    <div role="tabpanel" class="tab-pane active" id="national">
-  <!-- National Metadata -->
-  <div >
-    <article>
-      <p>
-        
-        
-        Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br><br>Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.
-      </p>
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
-        <td>
-          
-            <p>Endenergieverbrauch im Personenverkehr</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="global">
+      <article>
+        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Der Endenergieverbrauch im Personenverkehr stellt den Energieverbrauch durch die Beförderung von Personen mit der Bahn, im Luft- und Straßenverkehr (öffentlicher und Individualverkehr) im Inland dar.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            <p>Deutschland</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Ziel und Intention <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Der Verkehr bringt eine Reihe von Herausforderungen mit sich. So beeinträchtigen etwa Lärm und Luftschadstoffe die Lebensqualität insbesondere in Städten und verkehrsbedingte Emissionen tragen zum Klimawandel bei. Der Ausstoß von schädlichen Treibhausgasen steht im Zusammenhang mit der im Verkehr verbrauchten Energie.<br /><br />Ziel ist es den Endenergieverbrauch im Personenverkehr bis zum Jahr 2030 um 15 bis 20 % zu senken.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Datenstand </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Daten)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Texte)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="global">
-  <!-- Global Metadata -->
-  <div>
-    <article>
-      <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
-      <table class="table">
+        <table class="table">
   
   
   
@@ -1519,90 +1261,21 @@ data-event-label="Change to Sources tab"
   
 </table>
 
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="sources">
-  <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-  <div class="row">
-  
+      </article>
+    </div>
     
     
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 1</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="content">
+      <article>
+        
+        <table class="table">
   
   
   
@@ -1622,10 +1295,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Content and progress </th>
         <td>
           
-            <p><a href="https://www.ifeu.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/ifeu.png" alt=" Institut für Energie- und Umweltforschung (Ifeu)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+            <p><i> Text aus dem Indikatorenbericht 2021</i><br /><br />Die Daten zum Endenergieverbrauch im Inland werden der Transport Emission Estimation Model (TREMOD)-Datenbank des Instituts für Energie- und Umweltforschung entnommen. TREMOD ist ein Modell zur Bewertung von Verkehrsemissionen. Die Daten enthalten die Kraftstoffverbräuche im Zusammenhang mit dem Personenverkehr innerhalb Deutschlands – unabhängig vom Ort der Betankung – nach dem Verbrauchskonzept. Endenergie bezeichnet dabei den direkt im Verkehr genutzten Teil der Energie, lässt also die Umwandlungsverluste während der Herstellung der Kraftstoffe sowie eventuelle Leitungsverluste unberücksichtigt.<br /><br />Die Personenbeförderungsleistung gibt die Anzahl der zurückgelegten Personenkilometer an. Sie wird zur Berechnung des spezifischen Energieverbrauchs in diesem Sektor verwendet und stammt auch aus TREMOD. Im Luftverkehr werden nur die Inlandsflüge (nationaler Luftverkehr) berücksichtigt. Internationale Flüge vom und in das Bundesgebiet bleiben unberücksichtigt. Auch die Personenbeförderung in der Schifffahrt wird nicht einbezogen.<br /><br />30,1 % des gesamten Endenergieverbrauches sind dem Verkehr zuzurechnen. Hieran hat der Personenverkehr einen Anteil von über 70 %. Einsparungen beim Endenergieverbrauch im Personenverkehr wirken sich daher merklich auf den gesamten Energieverbrauch in Deutschland aus. Die Anzahl der Personenkilometer gibt Aufschluss darüber, inwieweit sich die Beförderungsleistung (Änderung der Fahrgast-/Fluggastzahlen je gefahrenem Kilometer) ändert. Ergänzend wird neben dem Endenergieverbrauch auch die Energieeffizienz im Personenverkehr, gemessen als Endenergieverbrauch je Personenkilometer, betrachtet.<br /><br />Im Zeitraum 2005 bis 2018 verringerte sich der Endenergieverbrauch in der Personenbeförderung insgesamt um 0,9 %. Wird der Verlauf seit 2008 analysiert, stieg der Indikatorwert um 1,1 % an. Der Endenergieverbrauch im Personenverkehr entwickelt sich damit aktuell gegenläufig zu seinem Ziel in der Deutschen Nachhaltigkeitsstrategie.<br /><br />Obwohl sich die Anzahl der zurückgelegten Personenkilometer zwischen 2005 und 2018 um 9,0 % erhöht hat, sank der Energieverbrauch im gleichen Zeitraum, bezogen auf alle Verkehrsträger, um 9,1 % auf 1,49 Megajoule pro Personenkilometer. Somit wurde die Effizienz im Personenverkehr merklich gesteigert. Ein besonders großer Anteil der Effizienzsteigerung ist den Eisenbahnen zuzurechnen. Hier stieg die Beförderungsleistung um 25,3 %, während der Endenergieverbrauch um 8,9 % gesenkt werden konnte. Dies entspricht einer Effizienzsteigerung um 27,3 %. Auch im Luftverkehr konnte eine deutliche Effizienzsteigerung um 17,1 % gegenüber dem Jahr 2005 erzielt werden. Eine leichte Effizienzsteigerung von 7,4 % konnte zuletzt im Straßenverkehr aufgrund der gestiegenen Personentbeförderungsleistung erreicht werden, auch wenn der Endenergieverbrauch hier nahezu konstant blieb (-0,5 %).<br /><br />Der motorisierte Individualverkehr mit Pkw und Zweirädern hatte im Jahr 2018 einen Anteil von 81,4 % an der gesamten Personenbeförderungsleistung. In 2017 lag dieser bei 81,6 %. Er lässt sich in verschiedene Kategorien unterteilen. Der Berufsverkehr (Pendler- und Geschäftsfahrten) hatte im Jahr 2017 (aktuellere Daten lagen noch nicht vor) mit 39,2 % den größten Anteil, gefolgt vom Freizeitverkehr mit 29,5 %. Der Einkaufsverkehr hatte einen Anteil von 17,1 %. Die verschiedenen Fahrtzwecke haben sich seit 2005 unterschiedlich entwickelt. Insbesondere die beruflich bedingten Fahrten haben deutlich zugenommen (+30,0 %) während die Fahrten für Freizeit (-11,4 %) und Einkauf (-2,7 %) abgenommen haben.<br /><br /></p>
 
           
         </td>
@@ -1633,62 +1306,82 @@ data-event-label="Change to Sources tab"
         
       
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Institut für Energie- und Umweltforschung</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Institut für Energie- und Umweltforschung (Ifeu)</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1743,81 +1436,22 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
     
     
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 2</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="history_1">
+      <article>
+        <p>In dieser Übersichtstabelle sind die Bewertungen des Indikators für Deutschland nach Stand der vorhergehenden Jahre dargestellt. Daran lässt sich ablesen, ob das Wettersymbol für einen Indikator in den vergangenen Jahren stabil oder eher volatil war. <i>(Bewertungen aus dem Indikatorenbericht 2021)</i></p>
+
+        <table class="table">
   
   
   
@@ -1849,10 +1483,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Indikator </th>
         <td>
           
-            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/destatis.png" alt=" Statistisches Bundesamt (Destatis)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+            <p>11.2.b Endenergieverbrauch im Personenverkehr</p>
 
           
         </td>
@@ -1865,10 +1499,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">Ziel </th>
         <td>
           
-            <p>Statistisches Bundesamt</p>
+            <p>Senkung um 15 bis 20 % bis 2030</p>
 
           
         </td>
@@ -1881,10 +1515,106 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">YearA </th>
         <td>
           
-            <p>Statistisches Bundesamt (Destatis)</p>
+            <p>2018</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearB </th>
+        <td>
+          
+            <p>2017</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearC </th>
+        <td>
+          
+            <p>2016</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Jahr </th>
+        <td>
+          
+            <p>2015</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearE </th>
+        <td>
+          
+            <p>2014</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearF </th>
+        <td>
+          
+            <p>2013</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearG </th>
+        <td>
+          
+            <p>2012</p>
 
           
         </td>
@@ -1900,22 +1630,179 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">Status year A </th>
+        <td>
           
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year B </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year C </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year E </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year F </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year G </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
           
       
         
           
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1958,13 +1845,9 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
-  </div>
-
-
-</div>
-
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -2064,12 +1947,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325161147'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325163252'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325161147"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325163252"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325161147">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325163252">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,10 +442,10 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": " >
-             – <i title=": "></i>
+          <h1 class="titles goal-" title=": Land use" >
+            Land use – <i title=": Flächen nachhaltig nutzen">Flächen nachhaltig nutzen</i>
             <span class="lead-copy">
-              : Density of settlements
+              11.1.c: Density of settlements
             </span>
           </h1>
         </div>
@@ -1006,29 +1006,54 @@ opensdg.chartConfigAlter(function(config, info) {
   
   <ul class="nav nav-tabs spacer medium" role="tablist">
 
+
+  
+  
+  
+  
+  
+  
+  
+  
   <li role="presentation" class="nav-item active">
-  <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to National Metadata tab"
->National Metadata</a>
-</li>
+data-event-label="Change to indicator.details tab"
+>Details</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Global Metadata tab"
->Global Metadata</a>
-</li>
+data-event-label="Change to indicator.contentAndProgress tab"
+>Content and progress</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Sources tab"
->Sources</a>
-</li>
+data-event-label="Change to indicator.history tab"
+>Indicator status summary</a>
+  </li>
 
 
   
@@ -1040,303 +1065,20 @@ data-event-label="Change to Sources tab"
 
 <div class="tab-content">
   
-    <div role="tabpanel" class="tab-pane active" id="national">
-  <!-- National Metadata -->
-  <div >
-    <article>
-      <p>
-        
-        
-        The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br><br>Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.
-      </p>
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Time series available </th>
-        <td>
-          
-            <p>Density of settlements</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="global">
+      <article>
+        <p>This table includes additional information to the above visualized indicators, i.e. a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
-        <td>
-          
-            <p>The indicator shows the number of inhabitants per square kilometre of settlement and transport area.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Geographical coverage </th>
-        <td>
-          
-            <p>Germany</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
-        <td>
-          
-            <p>The “density of settlements” indicator provides information on the efficient use of the settlement area. The goal of the Federal Government is to counteract the reduction in the density of settlements by means of space-saving measures in new construction projects and inner-urban development, such as the reduction in housing and commercial vacancies, as well as re-densification and an increase in building density</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Data state </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Last modification of code <small>(data)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Last modification of code <small>(text)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="global">
-  <!-- Global Metadata -->
-  <div>
-    <article>
-      <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
-      <table class="table">
+        <table class="table">
   
   
   
@@ -1526,90 +1268,21 @@ data-event-label="Change to Sources tab"
   
 </table>
 
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="sources">
-  <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-  <div class="row">
-  
+      </article>
+    </div>
     
     
-    <div class="col-md-6">
-      
-        <h4>Source 1</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="content">
+      <article>
+        
+        <table class="table">
   
   
   
@@ -1629,10 +1302,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Content and progress </th>
         <td>
           
-            <p><a href="https://www.destatis.de/EN/Home/_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/destatis.png" alt=" Federal Statistical Office" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
+            <p><i>Text from the Indicator Report 2021</i><br /><br />The data sources for the indicator are the population figures and the area survey by type of actual use compiled by the Federal Statistical Office. With regard to population data, the 2011 census caused a jump in the time series, which is why only the comparisons up to 2010 and from 2011 onwards can be usefully interpreted. <br /><br /><br /><br />Regarding the area survey by type of actual use, a methodological change in the survey basis took place in 2016, so that the comparability of the data with previous years is limited from 2016 onwards. In order to be able to compare the data, the respective values were recalculated on the basis of the 2011 Census and the change in the area survey in 2016.<br /><br /><br /><br />The distinction between “rural” and “non-rural” is based on a type classification of the Thünen Institute. This classification allocates a degree of “ruralness” to rural districts and towns not attached to an administrative district – based on spatial characteristics such as “density of settlements”, “share of agricultural and forestry area” and “location relative to the centres”.<br /><br /><br /><br />In contrast to population density, the concept of the density of settlements refers to the ratio of inhabitants solely to the settlement and transport area. In addition to residential building areas, the settlement area includes areas with special functional character (e.g. hospitals and schools), industrial and commercial areas and mixed-use areas as well as open areas (parks, green spaces, garden land). Consequently, changes not only in population numbers, but also in the residential building area, such as an internal densification of the transport or commercial area, lead to a change in the density of settlements.<br /><br /><br /><br />The density of settlements differs substantially between rural and non-rural regions: one square kilometre of settlement and transport area accommodates around 3,330 people on average in non-rural district types, compared with around 1,216 people in rural district types (as in 2016). In this context, the residential building area in cities is frequently a much more densely built-up area as well as has many more multiple-floor buildings than rural regions, where more scattered development incorporating larger, unsealed areas such as domestic gardens is prevalent.<br /><br /><br /><br />From 2000 until the end of 2010, there was a steady decline in the density of settlements in both rural and non-rural regions. In this context, the non-rural regions experienced a slightly lower absolute decrease than the rural regions. Viewed in relative terms, the 11 % decline in rural regions, due to their considerably lower density of settlements, was however substantially larger than that of 4 % in non-rural regions.<br /><br /><br /><br />Since 2012, differences have been observed between the development in rural and non-rural regions. In non-rural regions, the density of settlements rose steadily from 3,251 inhabitants per square kilometre (2012) to 3,330 (2016). In rural regions, the decrease in the density of settlements continued at a moderate pace until 2014 (1,210 inhabitants/km²). In 2015, however, there was an increase (1,218 inhabitants/km²), presumably due to the population growth resulting from the influx of refugees, which slowed in 2016 (1,216 inhabitants/km²).<br /><br /><br /><br />Considering the development of the number of inhabitants and the settlement and transport area separately, considerable differences between rural and non-rural regions can be observed. Between 2000 and 2015, the volume of the settlement and transport area in both rural and non-rural regions increased, although to different extents of 13 % and 8 % respectively. Following the slight increase in the population of rural regions at the start of the millennium, it decreased by around 2.3 % until 2010 and then increased again slightly by 1 % until 2016. In the non-rural regions, however, the population grew between 2000 and 2010 (by about 1.7 %) and between 2011 and 2016 (by 4.4 %). The effects of the development of additional settlement and transport area were therefore amplified in rural regions by the declining population numbers.</p>
 
           
         </td>
@@ -1640,62 +1313,82 @@ data-event-label="Change to Sources tab"
         
       
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Federal Statistical Office (Destatis)</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Federal Statistical Office</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1750,81 +1443,22 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
     
     
-    <div class="col-md-6">
-      
-        <h4>Source 2</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="history_1">
+      <article>
+        <p>The synoptic table provides information about the evaluation of the indicator for Germany in previous years. It shows if the weather symbol assigned to an indicator was rather stable or volatile in the past years. <i>(Evaluation of the indicator report 2018)</i></p>
+
+        <table class="table">
   
   
   
@@ -1856,10 +1490,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Indicator </th>
         <td>
           
-            <p><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/bbsr.png" alt=" Federal Institute for Research on Building, Urban Affairs and Spatial Development" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
+            <p>11.1.c Density of settlements</p>
 
           
         </td>
@@ -1872,10 +1506,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">Target </th>
         <td>
           
-            <p>Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR)</p>
+            <p>No decrease in the density of settlements</p>
 
           
         </td>
@@ -1888,10 +1522,106 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">YearA </th>
         <td>
           
-            <p>Federal Institute for Research on Building, Urban Affairs and Spatial Development</p>
+            <p>2018</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearB </th>
+        <td>
+          
+            <p>2017</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearC </th>
+        <td>
+          
+            <p>2016</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Year </th>
+        <td>
+          
+            <p>2015</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearE </th>
+        <td>
+          
+            <p>2014</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearF </th>
+        <td>
+          
+            <p>2013</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearG </th>
+        <td>
+          
+            <p>2012</p>
 
           
         </td>
@@ -1907,22 +1637,179 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">Status year A </th>
+        <td>
           
+            <p>Leicht bewölkt</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year B </th>
+        <td>
+          
+            <p>Leicht bewölkt</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year C </th>
+        <td>
+          
+            <p>Leicht bewölkt</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Evaluation </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year E </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year F </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year G </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
           
       
         
           
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1965,224 +1852,9 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
-    
-    
-    <div class="col-md-6">
-      
-        <h4>Source 3</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.thuenen.de/en/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/jht.png" alt=" Johann Heinrich von Thünen-Institut" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Thünen-Institut</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Johann Heinrich von Thünen-Institut</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-  </div>
-
-
-</div>
-
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -2282,12 +1954,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325161147'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325163252'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325161147"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325163252"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

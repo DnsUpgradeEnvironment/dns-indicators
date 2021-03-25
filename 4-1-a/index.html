@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325161147">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325163252">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,10 +442,10 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": " >
-             – <i title=": "></i>
+          <h1 class="titles goal-" title=": Bildung" >
+            Bildung – <i title=": Bildung und Qualifikation kontinuierlich verbessern">Bildung und Qualifikation kontinuierlich verbessern</i>
             <span class="lead-copy">
-              : Frühe Schulabgängerinnen und Schulabgänger
+              4.1.a: Frühe Schulabgängerinnen und Schulabgänger
             </span>
           </h1>
         </div>
@@ -1008,29 +1008,54 @@ opensdg.chartConfigAlter(function(config, info) {
   
   <ul class="nav nav-tabs spacer medium" role="tablist">
 
+
+  
+  
+  
+  
+  
+  
+  
+  
   <li role="presentation" class="nav-item active">
-  <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to National Metadata tab"
->Nationale Metadaten</a>
-</li>
+data-event-label="Change to indicator.details tab"
+>Details</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Global Metadata tab"
->Globale Metadaten</a>
-</li>
+data-event-label="Change to indicator.contentAndProgress tab"
+>Inhalt und Entwicklung</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Sources tab"
->Datenquellen</a>
-</li>
+data-event-label="Change to indicator.history tab"
+>Statusübersicht</a>
+  </li>
 
 
   
@@ -1042,303 +1067,20 @@ data-event-label="Change to Sources tab"
 
 <div class="tab-content">
   
-    <div role="tabpanel" class="tab-pane active" id="national">
-  <!-- National Metadata -->
-  <div >
-    <article>
-      <p>
-        
-        
-        Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br><br>Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.
-      </p>
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
-        <td>
-          
-            <p>Frühe Schulabgängerinnen und Schulabgänger</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="global">
+      <article>
+        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Der Indikator gibt den Anteil derjenigen 18- bis 24-Jährigen an allen Personen derselben Altersgruppe an, die weder über eine Hochschulzugangsberechtigung wie Abitur oder die Fachhochschulreife noch über eine abgeschlossene Berufsausbildung verfügen und die derzeit nicht an Aus- und Weiterbildungsmaßnahmen teilnehmen.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            <p>Deutschland</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Ziel und Intention <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Das staatliche Bildungssystem und das duale System der Berufsausbildung sind die Eckpfeiler einer zukunftsorientierten Qualifikation für junge Menschen in Deutschland. Fehlende Schul- und Berufsabschlüsse bedeuten ein erhöhtes Armutsrisiko und eine daraus resultierende stärkere Belastung der Sozialsysteme. Für das Jahr 2030 ist das Ziel, diesen Anteil auf 9,5 % zu senken.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Datenstand </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Daten)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Texte)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="global">
-  <!-- Global Metadata -->
-  <div>
-    <article>
-      <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
-      <table class="table">
+        <table class="table">
   
   
   
@@ -1528,88 +1270,21 @@ data-event-label="Change to Sources tab"
   
 </table>
 
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="sources">
-  <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-  <div class="row">
-  
+      </article>
+    </div>
     
     
-    <div class="col-md-6">
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="content">
+      <article>
+        
+        <table class="table">
   
   
   
@@ -1629,10 +1304,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Content and progress </th>
         <td>
           
-            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/destatis.png" alt=" Statistisches Bundesamt (Destatis)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+            <p><i> Text aus dem Indikatorenbericht 2021</i><br /><br />Hinter dem Begriff „frühe Schulabgängerinnen und -abgänger“ verbergen sich nicht die jungen „Überfliegerinnen und Überflieger“, die vor Ende der Regelschulzeit einen Schulabschluss erlangen. Auch ist der Begriff nicht mit Schulabbrecherinnen bzw. -abbrechern zu verwechseln. Vielmehr handelt es sich hierbei um Personen im Alter zwischen 18 und 24 Jahren, die weder über eine Hochschulzugangsberechtigung wie Abitur oder die Fachhochschulreife noch über eine abgeschlossene Berufsausbildung verfügen und die derzeit nicht an Aus- und Weiterbildungsmaßnahmen teilnehmen. Das bedeutet, dass auch junge Menschen, die beispielsweise die Haupt- oder die Realschule erfolgreich abgeschlossen haben, sich aber nicht mehr im Bildungsprozess befinden, als frühe Schulabgängerinnen bzw. -abgänger gezählt werden.<br /><br />Die Angaben stammen aus dem Mikrozensus, dessen jährliche Stichprobenerhebung 1 % der Bevölkerung in Deutschland umfasst. Aus dem Indikator lässt sich nicht ableiten, wann und welche Art von Bildungseinrichtung die Personen zuletzt besucht haben. Ergänzende Informationen bietet die jährliche Schulstatistik, eine koordinierte Länderstatistik, die vom Statistischen Bundesamt veröffentlicht wird.<br /><br />Im Jahr 2019 lag der Wert des Indikators bei 10,3 %. Dies entspricht insgesamt 625 000 jungen Menschen ohne Abschluss des Sekundarbereichs II, die sich nicht oder nicht mehr in (Aus-) Bildung oder Weiterbildung befanden. Der Wert des Indikators stieg ab 2014 (9,5 %) leicht an und entwickelte sich damit entgegen der gewünschten Richtung. Bei einer Fortsetzung des derzeitigen Trends würde das Ziel von 9,5 % für das Jahr 2030 nicht erreicht werden.<br /><br />Bei den geschlechtsspezifischen Quoten für den Indikator gab es zwischen 1999 und 2005 keine systematischen Unterschiede zwischen Frauen und Männern. Seit 2006 ist die Quote für Frauen niedriger als die für Männer. So lag der Wert für Frauen im Jahr 2019 bei 8,7 % und für Männer bei 11,8 %.<br /><br />Laut Schulstatistik haben 2019 insgesamt rund 53 000 junge Menschen (7,0 % der gleichaltrigen Wohnbevölkerung) die Schule ohne einen Hauptschulabschluss verlassen. Dies entspricht im Vergleich zu 1999 einem Rückgang um knapp ein Drittel. Auch hier ist der Anteil bei jungen Frauen nach wie vor deutlich geringer (5,0 %) als bei jungen Männern (9,0 %).<br /><br />Dagegen erreichten im Jahr 2019 17,4 % (132 429) der gleichaltrigen Wohnbevölkerung einen Hauptschulabschluss, 44,5 % (337 578) einen mittleren Abschluss, 32,1 % (277 308) die allgemeine Hochschulreife und 0,1 % (624) die Fachhochschulreife. Im Zeitverlauf seit 1999 zeigen sich bei zwei Abschlussarten besonders starke Veränderungen. So nahm der Anteil der Personen mit Hauptschulabschluss um 8,7 Prozentpunkte ab, während der Anteil der Personen mit allgemeiner Hochschulreife um 7,4 Prozentpunkte anstieg (jeweils bezogen auf die gleichaltrige Bevölkerung).</p>
 
           
         </td>
@@ -1640,87 +1315,82 @@ data-event-label="Change to Sources tab"
         
       
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Statistisches Bundesamt</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Statistisches Bundesamt (Destatis)</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Link zur <br>Datenquelle </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Bildungsstand/Publikationen/Downloads-Bildungsstand/bildungsindikatoren-1023017197004.pdf?__blob=publicationFile" target="_blank">
-                Internationale Bildungsindikatoren im Ländervergleich <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      
   
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1775,13 +1445,418 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
-  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="history_1">
+      <article>
+        <p>In dieser Übersichtstabelle sind die Bewertungen des Indikators für Deutschland nach Stand der vorhergehenden Jahre dargestellt. Daran lässt sich ablesen, ob das Wettersymbol für einen Indikator in den vergangenen Jahren stabil oder eher volatil war. <i>(Bewertungen aus dem Indikatorenbericht 2021)</i></p>
 
+        <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Indikator </th>
+        <td>
+          
+            <p>4.1.a Frühe Schulabgängerinnen und Schulabgänger</p>
 
-</div>
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Verringerung des Anteils auf 9,5 % bis 2030</p>
 
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearA </th>
+        <td>
+          
+            <p>2019</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearB </th>
+        <td>
+          
+            <p>2018</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearC </th>
+        <td>
+          
+            <p>2017</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Jahr </th>
+        <td>
+          
+            <p>2016</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearE </th>
+        <td>
+          
+            <p>2015</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearF </th>
+        <td>
+          
+            <p>2014</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearG </th>
+        <td>
+          
+            <p>2013</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year A </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year B </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year C </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year E </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year F </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year G </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+      </article>
+    </div>
+    
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -1881,12 +1956,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325161147'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325163252'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325161147"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325163252"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

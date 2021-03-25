@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325161147">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325163252">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,10 +442,10 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": " >
-             – <i title=": "></i>
+          <h1 class="titles goal-" title=": Housing" >
+            Housing – <i title=": Bezahlbarer Wohnraum für alle">Bezahlbarer Wohnraum für alle</i>
             <span class="lead-copy">
-              : Housing cost overload
+              11.3: Housing cost overload
             </span>
           </h1>
         </div>
@@ -1015,29 +1015,54 @@ opensdg.chartConfigAlter(function(config, info) {
   
   <ul class="nav nav-tabs spacer medium" role="tablist">
 
+
+  
+  
+  
+  
+  
+  
+  
+  
   <li role="presentation" class="nav-item active">
-  <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to National Metadata tab"
->National Metadata</a>
-</li>
+data-event-label="Change to indicator.details tab"
+>Details</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Global Metadata tab"
->Global Metadata</a>
-</li>
+data-event-label="Change to indicator.contentAndProgress tab"
+>Content and progress</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Sources tab"
->Sources</a>
-</li>
+data-event-label="Change to indicator.history tab"
+>Indicator status summary</a>
+  </li>
 
 
   
@@ -1049,303 +1074,20 @@ data-event-label="Change to Sources tab"
 
 <div class="tab-content">
   
-    <div role="tabpanel" class="tab-pane active" id="national">
-  <!-- National Metadata -->
-  <div >
-    <article>
-      <p>
-        
-        
-        The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br><br>Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.
-      </p>
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Time series available </th>
-        <td>
-          
-            <p>Housing cost overload</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="global">
+      <article>
+        <p>This table includes additional information to the above visualized indicators, i.e. a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
-        <td>
-          
-            <p>The indicator shows the share of people who live in households that spend more than 40 % of their disposable household income on housing. Housing expenditure includes net rent, heating expenses, incidental rental expenses, energy costs and expenditure on water supply as well as value-maintaining investments and interest payments on loans in the case of residential ownership.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Geographical coverage </th>
-        <td>
-          
-            <p>Germany</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
-        <td>
-          
-            <p>High housing costs place restrictions on households with regard to their other consumption choices. Housing expenditure that amounts to more than 40 % of disposable household income is considered to be an overload. The proportion of people who live in households that spend more than 40 % of their disposable household income on housing is therefore to be reduced to 13 % by 2030.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Data state </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Last modification of code <small>(data)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Last modification of code <small>(text)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="global">
-  <!-- Global Metadata -->
-  <div>
-    <article>
-      <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
-      <table class="table">
+        <table class="table">
   
   
   
@@ -1535,88 +1277,21 @@ data-event-label="Change to Sources tab"
   
 </table>
 
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="sources">
-  <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-  <div class="row">
-  
+      </article>
+    </div>
     
     
-    <div class="col-md-6">
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="content">
+      <article>
+        
+        <table class="table">
   
   
   
@@ -1636,10 +1311,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Content and progress </th>
         <td>
           
-            <p><a href="https://www.destatis.de/EN/Home/_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/destatis.png" alt=" Federal Statistical Office" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
+            <p><i>Text from the Indicator Report 2021</i><br /><br />The initial data for the indicator originate from the Europe-wide harmonised statistics on income and living conditions (EU-SILC). The indicator expresses expenditure on housing relative to disposable household income. In case a household is in receipt of housing allowance or comparable social benefits such as payments for accommodation and heating from basic security benefits, these are also included in the calculation of the indicator. These social benefits are not added to the income, but are deducted from the housing costs so that the burden of housing costs of households that rely on housing-related social benefits is reduced or approaches zero.<br /><br /><br /><br />The purchase of an owner-occupied property is not included in the expenditure on housing. Other spending on measures to enhance the value of a property should not be taken into account either. However, it is not always possible to clearly differentiate between these and value-maintaining expenditures that are considered as housing expenditure. Therefore, some simplifying assumptions must be made. Moreover, the indicator also does not take into account any additional expenditure associated with the place of residence. For instance, expenditure on travelling from the place of residence to the workplace is not taken into account, although it is possible that the threshold of 40 % is not reached only due to the fact that the place of residence is far away from work.<br /><br /><br /><br />By defining the threshold value as “40 % of disposable household income”, the indicator provides no information about average housing costs. If clusters emerge close to this threshold, they can cause major changes in the indicator over time even if there is only a small change in the ratio of income and housing expenditure. <br /><br /><br /><br />The indicator increased from 14.5 % in 2010 to a relatively constant 16 % during the period from 2011 until 2016. In 2017, it decreased to the initial value of 14.5 %. However, due to statistical uncertainties this cannot be considered a statistically significant change, but constitutes more of a continuation at a similar level. Based on the current trend, it is therefore not (yet) possible to determine whether there is any movement in the direction of the set target.<br /><br /><br /><br />With regard to the actual housing situation and disposable income, the indicator provides only a limited amount of information. After all, the calculation method also declares high-income households with a high housing expenditure as being overburdened. However, the data do indicate that considerably more households with a low income are above the 40 % threshold. Separate analysis of the population at risk of poverty, i.e. of those people who have less than 60 % of the median equivalised income of the population, also shows that the share of people overburdened by housing costs is closely related to income. Among those at risk of poverty, the proportion of people overburdened by housing costs rose from 42.2 % (2010) to 54.4 % (2014). In the following three years, this share declined slightly and stood at 48.5 % in 2017. The proportion of people not considered to be at risk of poverty who were overburdened by housing costs was considerably lower and also relatively constant over time (starting value in 2010: 9.4 %, peak in 2011: 10.5 %, lowest value in 2017: 7.9 %).</p>
 
           
         </td>
@@ -1647,84 +1322,82 @@ data-event-label="Change to Sources tab"
         
       
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Federal Statistical Office (Destatis)</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Federal Statistical Office</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Link to <br>data source </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://www.destatis.de/Europa/DE/Thema/BevoelkerungSoziales/SozialesLebensbedingungen/SozialesLebensbedingungen.html" target="_blank">
-                 <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1779,13 +1452,366 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
-  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="history_1">
+      <article>
+        <p>The synoptic table provides information about the evaluation of the indicator for Germany in previous years. It shows if the weather symbol assigned to an indicator was rather stable or volatile in the past years. <i>(Evaluation of the indicator report 2018)</i></p>
 
+        <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Indicator </th>
+        <td>
+          
+            <p>11.3 Housing cost overload</p>
 
-</div>
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Reduce the proportion of people who overburdened to 13 % by 2030</p>
 
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearA </th>
+        <td>
+          
+            <p>2019</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearB </th>
+        <td>
+          
+            <p>2018</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearC </th>
+        <td>
+          
+            <p>2017</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Year </th>
+        <td>
+          
+            <p>2016</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearE </th>
+        <td>
+          
+            <p>2015</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year A </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year B </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year C </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Evaluation </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year E </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+      </article>
+    </div>
+    
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -1885,12 +1911,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325161147'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325163252'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325161147"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325163252"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325161147">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325163252">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,10 +442,10 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": " >
-             – <i title=": "></i>
+          <h1 class="titles goal-" title=": Globale Gesundheit" >
+            Globale Gesundheit – <i title=": Globale Gesundheitsarchitektur stärken">Globale Gesundheitsarchitektur stärken</i>
             <span class="lead-copy">
-              : Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion
+              3.3: Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion
             </span>
           </h1>
         </div>
@@ -1000,29 +1000,54 @@ opensdg.chartConfigAlter(function(config, info) {
   
   <ul class="nav nav-tabs spacer medium" role="tablist">
 
+
+  
+  
+  
+  
+  
+  
+  
+  
   <li role="presentation" class="nav-item active">
-  <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to National Metadata tab"
->Nationale Metadaten</a>
-</li>
+data-event-label="Change to indicator.details tab"
+>Details</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Global Metadata tab"
->Globale Metadaten</a>
-</li>
+data-event-label="Change to indicator.contentAndProgress tab"
+>Inhalt und Entwicklung</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Sources tab"
->Datenquellen</a>
-</li>
+data-event-label="Change to indicator.history tab"
+>Statusübersicht</a>
+  </li>
 
 
   
@@ -1034,303 +1059,20 @@ data-event-label="Change to Sources tab"
 
 <div class="tab-content">
   
-    <div role="tabpanel" class="tab-pane active" id="national">
-  <!-- National Metadata -->
-  <div >
-    <article>
-      <p>
-        
-        
-        Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br><br>Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.
-      </p>
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
-        <td>
-          
-            <p>Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="global">
+      <article>
+        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Der Indikator umfasst Ausgaben bzw. Zusagen Deutschlands für Programme zur globalen Pandemieprävention und -reaktion. Ausgenommen sind hierbei Programme zur Eindämmung der COVID-19-Pandemie. Um die Aussagekraft des Indikators zu verbessern, wird er bis zur nächsten Neuauflage der DNS im Hinblick auf seine Wirkung evaluiert, mit dem Ziel, ihn zu einem Output-Indikator fortzuentwickeln.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            <p>Deutschland</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Ziel und Intention <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Die COVID-19-Pandemie hat gezeigt, welche weitreichenden Auswirkungen grenzüberschreitende Gesundheitsgefahren für Menschen und Wirtschaft weltweit haben. Dementsprechend bedeutet die Unterstützung von Programmen zur Pandemieprävention und -reaktion einen wichtigen Beitrag zur globalen Gesundheit – insbesondere in Ländern des Globalen Südens. Ziel ist es daher, Deutschlands Beitrag für die globale Pandemieprävention und -reaktion bis 2030 substanziell gegenüber dem Jahr 2019 zu steigern.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Datenstand </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Daten)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Texte)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="global">
-  <!-- Global Metadata -->
-  <div>
-    <article>
-      <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
-      <table class="table">
+        <table class="table">
   
   
   
@@ -1520,90 +1262,21 @@ data-event-label="Change to Sources tab"
   
 </table>
 
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="sources">
-  <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-  <div class="row">
-  
+      </article>
+    </div>
     
     
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 1</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="content">
+      <article>
+        
+        <table class="table">
   
   
   
@@ -1623,10 +1296,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Content and progress </th>
         <td>
           
-            <p><a href="https://www.auswaertiges-amt.de/de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/aa.png" alt=" Auswärtiges Amt (AA)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+            <p><i> Text aus dem Indikatorenbericht 2021</i><br /><br />Die Daten des Indikators stammen aus Sonderauswertungen der entsprechenden Haushaltstitel bzw. der Verpflichtungsermächtigungen des Auswärtigen Amtes, des Bundesministeriums für Bildung und Forschung, des Bundesministeriums für Gesundheit und des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung. In den Auswertungen wurden Programme berücksichtigt, wenn diese in der Zielsetzung direkt zum Bereich Pandemieprävention und -reaktion zuzurechnen sind oder diese primär auf die Verbesserung relevanter Kapazitäten in der Gesundheitsversorgung abzielen. Die Programme umfassen dabei u. a. die Bereiche Pandemieprävention und -reaktion der Weltgesundheitsorganisation (WHO), Sanitärwesen, One Health (ein ganzheitlicher Ansatz, der die Verbindung der Gesundheit von Mensch, Tier und Umwelt anerkennt), Impfinfrastruktur sowie Forschung und Entwicklung sowohl im Ausland als auch im Inland, sofern die Ergebnisse und Innovationen auch Ländern des Globalen Süden zu Gute kommen. Zudem wurden zusätzlich Programme betrachtet, die als Reaktion auf die COVID-19-Pandemie gestartet wurden. Diese umfassen Programme und Aktivitäten der WHO, humanitäre Hilfe, Impfstoffentwicklung, Krisenreaktion sowie Soforthilfen und -kredite für die Reaktion des Gesundheitssektors in Ländern des Globalen Südens. Laut Definition sind die Ausgaben bzw. Zusagen in Reaktion auf die COVID-19-Pandemie vom Indikator ausgenommen und getrennt dargestellt.<br /><br />Bei den Zahlen ist zu beachten, dass eine genaue inhaltliche Abgrenzung von Programmen nicht abschließend möglich ist, da das Themenfeld umfassende Querverbindungen zu einer Vielzahl von weiteren Gesundheitsbereichen besitzt. Somit wird bei dem Indikator eine Bandbreite an Programmen berücksichtigt, wie z. B. der Beitrag Deutschlands an die WHO für dessen Notfallprogramm bzw. zur flexiblen Anschubfinanzierung von Krisenreaktionen in akuten Gesundheitsnotlagen (Contingency Fund for Emergencies), eine Impfprogrammförderung zur Reduktion von Kindersterblichkeit in der ostafrikanischen Gemeinschaft, die Verbesserung der Trinkwasser- und Sanitärversorgung in Burkina Faso sowie eine Sicherheitskooperation für biologische Bedrohungen. Neben der inhaltlichen Schwerpunktsetzung ist zu beachten, dass ein Teil der Programme allgemein auf die Stärkung globaler Koordinierungs- und Organisationskapazitäten abzielt und damit nicht ausschließlich Ländern des Globalen Südens zukommt.<br /><br />Des Weiteren können präventive und reaktive Maßnahmen nicht genau abgegrenzt werden. So können einerseits präventive Kapazitätsstärkung die Reaktion auf eine pandemische Lage unterstützen und andererseits reaktive Maßnahmen einen Beitrag zur langfristigen Kapazitätsstärkung leisten. Um einen Ausreißer in den Zahlen zu vermeiden, der sich aus der Reaktion auf die COVID-19-Pandemie ergibt, sind diese Ausgaben bzw. Zusagen nicht Teil des Indikators, sondern getrennt als Information in der Grafik ausgewiesen.<br /><br />Die dargestellten Ausgaben bzw. Zusagen sagen zudem nichts über den Erfolg der Programme aus. Der Indikator stellt einen monetären Beitrag Deutschlands zur Pandemieprävention und -reaktion dar. Zur Wirkung der Beiträge wäre eine weitergehende Evaluierung notwendig. Unter Berücksichtigung der oben genannten Einschränkungen bilden die ermittelten Zahlen daher keinesfalls die deutschen Ausgaben bzw. Zusagen vollständig ab, welche einen gegebenenfalls mittelbaren Einfluss auf das Themenfeld haben.<br /><br />Zwischen den Jahren 2015 bis 2020 stiegen die Ausgaben bzw. Zusagen zur Pandemieprävention und -reaktion von 137,9 Millionen Euro auf 353,1 Millionen Euro (vorläufige Daten). Dies ist eine Steigerung um durchschnittlich 43,1 Millionen Euro der letzten fünf jährlichen Veränderungen. Bei Fortsetzung dieser Entwicklung würde das angestrebte Ziel, Deutschlands Beitrag bis 2030 substantiell gegenüber dem Jahr 2019 zu steigern, erreicht werden. Die Grafik verdeutlicht ebenfalls die sprunghafte Steigerung der Ausgaben bzw. Zusagen zur Eindämmung der COVID-19-Pandemie in Höhe von 635,2 Millionen Euro im Jahr 2020.</p>
 
           
         </td>
@@ -1634,62 +1307,82 @@ data-event-label="Change to Sources tab"
         
       
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Auswärtiges Amt</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Auswärtiges Amt (AA)</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1744,81 +1437,22 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
     
     
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 2</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="history_1">
+      <article>
+        <p>In dieser Übersichtstabelle sind die Bewertungen des Indikators für Deutschland nach Stand der vorhergehenden Jahre dargestellt. Daran lässt sich ablesen, ob das Wettersymbol für einen Indikator in den vergangenen Jahren stabil oder eher volatil war. <i>(Bewertungen aus dem Indikatorenbericht 2021)</i></p>
+
+        <table class="table">
   
   
   
@@ -1850,10 +1484,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Indikator </th>
         <td>
           
-            <p><a href="https://www.bmbf.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/bmbf.png" alt=" Bundesministerium für Bildung und Forschung (BMBF)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+            <p>3.3 Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion</p>
 
           
         </td>
@@ -1866,10 +1500,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">Ziel </th>
         <td>
           
-            <p>Bundesministerium für Bildung und Forschung</p>
+            <p>Steigerung der Ausgaben bis 2030</p>
 
           
         </td>
@@ -1882,10 +1516,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">YearA </th>
         <td>
           
-            <p>Bundesministerium für Bildung und Forschung (BMBF)</p>
+            <p>2020</p>
 
           
         </td>
@@ -1917,6 +1551,103 @@ data-event-label="Change to Sources tab"
       
         
           
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year A </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1959,435 +1690,9 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
-    
-    
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 3</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.bundesgesundheitsministerium.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/bmfg.png" alt=" Bundesministerium für Gesundheit (BMG)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Bundesministerium für Gesundheit</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Bundesministerium für Gesundheit (BMG)</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-    
-    
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 4</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.bmz.de/de/index.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/bmz.png" alt=" Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-  </div>
-
-
-</div>
-
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -2487,12 +1792,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325161147'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325163252'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325161147"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325163252"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

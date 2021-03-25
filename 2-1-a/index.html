@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325161147">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210325163252">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -442,10 +442,10 @@ var translations = {
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1 class="titles goal-" title=": " >
-             – <i title=": "></i>
+          <h1 class="titles goal-" title=": Landbewirtschaftung" >
+            Landbewirtschaftung – <i title=": In unseren Kulturlandschaften umweltverträglich produzieren">In unseren Kulturlandschaften umweltverträglich produzieren</i>
             <span class="lead-copy">
-              : Stickstoffüberschuss der Landwirtschaft
+              2.1.a: Stickstoffüberschuss der Landwirtschaft
             </span>
           </h1>
         </div>
@@ -1000,29 +1000,54 @@ opensdg.chartConfigAlter(function(config, info) {
   
   <ul class="nav nav-tabs spacer medium" role="tablist">
 
+
+  
+  
+  
+  
+  
+  
+  
+  
   <li role="presentation" class="nav-item active">
-  <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to National Metadata tab"
->Nationale Metadaten</a>
-</li>
+data-event-label="Change to indicator.details tab"
+>Details</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Global Metadata tab"
->Globale Metadaten</a>
-</li>
+data-event-label="Change to indicator.contentAndProgress tab"
+>Inhalt und Entwicklung</a>
+  </li>
 
-<li role="presentation" class="nav-item">
-  <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to Sources tab"
->Datenquellen</a>
-</li>
+data-event-label="Change to indicator.history tab"
+>Statusübersicht</a>
+  </li>
 
 
   
@@ -1034,303 +1059,20 @@ data-event-label="Change to Sources tab"
 
 <div class="tab-content">
   
-    <div role="tabpanel" class="tab-pane active" id="national">
-  <!-- National Metadata -->
-  <div >
-    <article>
-      <p>
-        
-        
-        Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br><br>Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.
-      </p>
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
-        <td>
-          
-            <p>Stickstoffüberschuss der Landwirtschaft</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="global">
+      <article>
+        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Der Indikator stellt den jährlichen Stickstoffüberschuss für den Sektor Landwirtschaft, berechnet als Stickstoffzufuhr abzüglich Abfuhr von Stickstoff, in Kilogramm (kg) je Hektar (ha) und Jahr landwirtschaftlich genutzter Fläche dar.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            <p>Deutschland</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Ziel und Intention <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
-        <td>
-          
-            <p>Im Übermaß in die Umwelt eingetragener Stickstoff führt zur Belastung von Grund- und Oberflächenwasser, zur Überversorgung von Binnengewässern, Meeren und Landökosystemen mit Nährstoffen (Eutrophierung), zur Entstehung von Treibhausgasen und versauernden Luftschadstoffen mit negativen Folgen für Klima, Artenvielfalt und Landschaftsqualität. Für den Zeitraum 2028 bis 2032 soll im Mittel eine Verringerung der Stickstoffüberschüsse der Gesamtbilanz für Deutschland auf 70 Kilogramm je Hektar landwirtschaftlich genutzter Fläche pro Jahr erreicht werden.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Datenstand </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Daten)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Letzte Änderung des Codes <small>(Texte)</small> </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
-                2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="global">
-  <!-- Global Metadata -->
-  <div>
-    <article>
-      <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
-      <table class="table">
+        <table class="table">
   
   
   
@@ -1520,90 +1262,21 @@ data-event-label="Change to Sources tab"
   
 </table>
 
-    </article>
-  </div>
-</div>
-<div role="tabpanel" class="tab-pane" id="sources">
-  <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-  <div class="row">
-  
+      </article>
+    </div>
     
     
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 1</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="content">
+      <article>
+        
+        <table class="table">
   
   
   
@@ -1623,10 +1296,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Content and progress </th>
         <td>
           
-            <p><a href="https://www.julius-kuehn.de/pb/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/jki.png" alt=" Institut für Pflanzenbau und Bodenkunde, Julius Kühn-Institut" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+            <p><i> Text aus dem Indikatorenbericht 2021</i><br /><br />Bei der Berechnung des Indikators werden Stickstoffzufuhren durch Düngemittel, aus biologischer Stickstofffixierung, durch atmosphärische Einträge, durch Saat- und Pflanzgut sowie durch Futtermittel berücksichtigt. Die Stickstoffabfuhr erfolgt über pflanzliche und tierische Marktprodukte. Der überschüssige Stickstoff kann in gasförmiger Form in die Atmosphäre entweichen, sich im Boden anreichern oder in Richtung Grundwasser verlagern. Dadurch kann es letztendlich auch zu einem Stickstoffeintrag in Flüsse oder andere Ökosysteme kommen. Der Stickstoffüberschuss der Landwirtschaft beeinflusst hierdurch direkt die Entwicklung der Indikatoren <a href="https://sustainabledevelopment-deutschland.github.io/6-1-b/">6.1.b</a> „Nitrat im Grundwasser“, <a href="https://sustainabledevelopment-deutschland.github.io/14-1-a/">14.1.a</a> „Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee“ und <a href="https://sustainabledevelopment-deutschland.github.io/15-2-a/">15.2</a> „Eutrophierung der Ökosysteme“. Bei dem Indikator <a href="https://sustainabledevelopment-deutschland.github.io/3-2-a/">3.2.a</a> „Emissionen von Luftschadstoffen“ hat der Eintrag von Stickstoff aus der Landwirtschaft in die Atmosphäre Auswirkungen auf die Entstehung von Stickstoffdioxiden und Ammoniak.<br /><br />Der Indikator wird vom Institut für Pflanzenbau und Bodenkunde des Julius Kühn-Instituts und dem Institut für Landschaftsökologie und Ressourcenmanagement der Universität Gießen berechnet. Im Jahr 2018 waren Düngemittel mit 54,5 % (94 Kilogramm Stickstoff je Hektar) die wichtigste Komponente der Stickstoffzufuhr in der Gesamtbilanz. Daneben trugen Futtermittel mit 34,1 % (59 kg/ha), die biologische Stickstofffixierung mit 7,6 % (13 kg/ha) und die außerlandwirtschaftlichen Emissionen mit 1,8 % (3 kg/ha) substantiell zur Stickstoffzufuhr bei.<br /><br />Die Berechnung des Indikators basiert auf dem gleitenden Fünfjahresdurchschnitt, bei dem der Mittelwert aus Werten von fünf Berichtsjahren gebildet wird. Der gleitende Fünfjahresdurchschnitt gibt jeweils den Wert für das mittlere der fünf Berichtjahre an. Hierdurch werden witterungs- und marktabhängige jährliche Schwankungen geglättet, die nicht von den landwirtschaftlichen Betrieben beeinflusst werden können. Der Indikator trifft keine Aussage zur regionalen Verteilung der Stickstoffüberschüsse. Für die Jahre 2016 und 2017 wurden verschiedene Eingangsdaten rückwirkend aktualisiert. Auch wurde die Berechnungsmethodik überarbeitet und einige Koeffizienten wurden aktualisiert. Dadurch ergeben sich Abweichungen bei den Werten des Indikators für die vergangenen Berichtsjahre im Vergleich zu der letzten Veröffentlichung.<br /><br />Der gleitende Fünfjahresdurchschnitt des Stickstoffsaldos sank im Zeitraum von 1992 bis 2016 um 19,9 % (von 116,6 auf 93,3 Kilogramm je Hektar und Jahr). Die Reduktionen des Stickstoffüberschusses sind jedoch hauptsächlich auf Entwicklungen zu Beginn der Zeitreihe bis zum Jahr 2011 zurückzuführen. Seitdem stagniert der Stickstoffüberschuss und liegt wie schon im Jahr 2011 unverändert bei 93 Kilogramm je Hektar. Somit kann eine Verringerung bis auf 70 Kilogramm je Hektar landwirtschaftlich genutzter Fläche im Jahresmittel 2028-2032 bei einer Fortsetzung der jetzigen Entwicklung nicht erreicht werden. Der deutliche Rückgang des Stickstoffüberschusses Anfang der 1990er Jahre resultierte aus einem reduzierten Düngemitteleinsatz und abnehmenden Tierbeständen in den neuen Bundesländern. Die vergleichsweise schwache Reduktion im weiteren Verlauf der Zeitreihe beruhte auf einem leichten Rückgang beim Einsatz mineralischer Düngemittel und höheren Erntemengen aufgrund des technischen Fortschritts in der Pflanzenproduktion und -züchtung (effizientere Stickstoffdüngung, Sortenspektrum). Gleichzeitig wurde der Anbauumfang ertragsstarker Kulturarten (Mais, Weizen) ausgeweitet, sowie die Futterverwertung bei den Nutztieren verbessert.</p>
 
           
         </td>
@@ -1634,87 +1307,82 @@ data-event-label="Change to Sources tab"
         
       
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Institut für Pflanzenbau und Bodenkunde, Julius Kühn-Institut</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p>Institut für Pflanzenbau und Bodenkunde, Julius Kühn-Institut</p>
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      <tr>
-        <th scope="row">Link zur <br>Datenquelle </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://www.bmel-statistik.de/landwirtschaft/statistischer-monatsbericht-des-bmel-kapitel-a-landwirtschaft/" target="_blank">
-                Nährstoffbilanzen und Düngemittel <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
   
-      
-        
-      
-      
-      
   
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1769,81 +1437,22 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
     
     
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 2</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="history_1">
+      <article>
+        <p>In dieser Übersichtstabelle sind die Bewertungen des Indikators für Deutschland nach Stand der vorhergehenden Jahre dargestellt. Daran lässt sich ablesen, ob das Wettersymbol für einen Indikator in den vergangenen Jahren stabil oder eher volatil war. <i>(Bewertungen aus dem Indikatorenbericht 2021)</i></p>
+
+        <table class="table">
   
   
   
@@ -1875,10 +1484,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row"> </th>
+        <th scope="row">Indikator </th>
         <td>
           
-            <p><a href="https://www.uni-giessen.de/fbz/fb09/institute/ilr"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/ug.png" alt=" Institut für Landschaftsökologie und Ressourcenmanagement, Universität Gießen" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
+            <p>2.1.a Stickstoffüberschuss der Landwirtschaft</p>
 
           
         </td>
@@ -1891,10 +1500,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">Ziel </th>
         <td>
           
-            <p>Institut für Landschaftsökologie und Ressourcenmanagement, Universität Gießen</p>
+            <p>Verringerung der Stickstoffüberschüsse der Gesamtbilanz für Deutschland auf 70 Kilogramm je Hektar landwirtschaftlich genutzter Fläche im Jahresmittel 2028-2032</p>
 
           
         </td>
@@ -1907,10 +1516,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Organisation </th>
+        <th scope="row">YearA </th>
         <td>
           
-            <p>Institut für Landschaftsökologie und Ressourcenmanagement, Universität Gießen</p>
+            <p>2016</p>
 
           
         </td>
@@ -1923,19 +1532,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Link zur <br>Datenquelle </th>
+        <th scope="row">YearB </th>
         <td>
           
-            
-            
-            
-            
-
-            
-              <a href="https://www.bmel-statistik.de/landwirtschaft/statistischer-monatsbericht-des-bmel-kapitel-a-landwirtschaft/" target="_blank">
-                Nährstoffbilanzen und Düngemittel <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
+            <p>2015</p>
 
           
         </td>
@@ -1947,6 +1547,80 @@ data-event-label="Change to Sources tab"
         
       
       
+      <tr>
+        <th scope="row">YearC </th>
+        <td>
+          
+            <p>2014</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Jahr </th>
+        <td>
+          
+            <p>2013</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearE </th>
+        <td>
+          
+            <p>2012</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearF </th>
+        <td>
+          
+            <p>2011</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">YearG </th>
+        <td>
+          
+            <p>2010</p>
+
+          
+        </td>
+        </tr>
+        
       
   
       
@@ -1957,16 +1631,179 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">Status year A </th>
+        <td>
           
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year B </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year C </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Blitz</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year E </th>
+        <td>
+          
+            <p>Wolke</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year F </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Status year G </th>
+        <td>
+          
+            <p>Sonne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
           
       
         
           
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -2009,13 +1846,9 @@ data-event-label="Change to Sources tab"
   
 </table>
 
+      </article>
     </div>
     
-  </div>
-
-
-</div>
-
   
   
   <div role="tabpanel" class="tab-pane" id="edit">
@@ -2115,12 +1948,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210325161147'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210325163252'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210325161147"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210325163252"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
