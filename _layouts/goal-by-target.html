@@ -84,7 +84,6 @@
         size: {{ size }}
         {% assign range_number = number | slice: 0, size %}<!--5.1-->
         range_number: {{ range_number }}
-        <!--{% assign range_number = group.name | replace: '.1','x' | replace_first: 'x', '.1' | replace: 'x', '' %} <!--5.1-->
         {% assign range_title_key = range_number | append: '-title' %}<!--5.1-title-->
         range_title_key: {{ range_title_key }}
         {% assign target_range = page.t.dns_ranges[range_title_key] %}
