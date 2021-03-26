@@ -1695,10 +1695,10 @@ function getCombinationData(fieldItems) {
    sortedFieldValuePairs = [];                  //pendant to re
    re.forEach(function(combinationArray){       //für jede der einträge in re
      var combinations = {};                     // definiere ein leeres Objekt combinations
-     fieldItems.forEach(function(fieldItem) {   // gehe die Sortierten Disagg Kategorien durch
-       if (Object.keys(combinationArray).indexOf(fieldItem.field) != -1){
+     fieldItems.fields.forEach(function(field) {   // gehe die Sortierten Disagg Kategorien durch
+       if (Object.keys(combinationArray).indexOf(field) != -1){
          var pair = {};
-         pair[fieldItem.field] = combinationArray[fieldItem.field].value;
+         pair[field] = combinationArray.field;
          Object.assign(combinations, pair);
        }
      });
