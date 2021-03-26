@@ -21,7 +21,7 @@
       <tr>
         {% if indicator_metadata.field.scope != 'content' and indicator_metadata.field.scope != 'add_info' %}
 
-          {% if meta[indicator_metadata.name] %}
+
 
             <th scope="row">{{ metadata_label }} </th>
 
@@ -50,7 +50,7 @@
               {% endif %}
             </td>
 
-          {% endif %}
+          
 
         {% else %} <!-- case: content --no left column-->
           <p> {{ page.indicator[indicator_metadata.name] | t | markdownify }} </p>
