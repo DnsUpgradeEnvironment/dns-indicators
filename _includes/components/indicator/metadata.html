@@ -17,7 +17,7 @@
 
 
 
-      {% unless var = 'dontShow' or indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text" %}
+      {% unless var == 'dontShow' or indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text" %}
       <tr>
         <th scope="row">{{ metadata_label }} </th>
         <td>
