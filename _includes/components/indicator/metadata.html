@@ -53,14 +53,14 @@
 
       {% if indicator_metadata.name contains "_year" %}
 
-        {% if indicator_metadata.name contains "_a_" %}
-          {% assign year_a = page.indicator[indicator_metadata.name] %}
-        {% elsif indicator_metadata.name contains "_b_" %}
-          {% assign year_b = page.indicator[indicator_metadata.name] %}
+        {% if indicator_metadata.name contains "_d_" %}
+          {% assign year_d = page.indicator[indicator_metadata.name] %}
         {% elsif indicator_metadata.name contains "_c_" %}
           {% assign year_c = page.indicator[indicator_metadata.name] %}
-        {% elsif indicator_metadata.name contains "_d_" %}
-          {% assign year_d = page.indicator[indicator_metadata.name] %}
+        {% elsif indicator_metadata.name contains "_b_" %}
+          {% assign year_b = page.indicator[indicator_metadata.name] %}
+        {% elsif indicator_metadata.name contains "_a_" %}
+          {% assign year_a = page.indicator[indicator_metadata.name] %}
 
 
           {% assign status_a_downcase = year_a | downcase %}
@@ -107,7 +107,7 @@
                 {% endif %}
                 {% if year_a %}
                   <td align="left" style="margin-bottom: 15px;"><p>{{ year_a }}</p></td>
-                {% endif %} 
+                {% endif %}
               </tr>
             {% endif %}
 
