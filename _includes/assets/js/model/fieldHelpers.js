@@ -229,7 +229,7 @@ function getCombinationData(fieldItems) {
   // First get a list of all the single field/value pairs.
   var fieldValuePairs = [];
   fieldItems.forEach(function(fieldItem) {
-    console.log("X ",fieldItem.field, fieldItems.indexOf(fieldItem));
+    //console.log("X ",fieldItem.field, fieldItems.indexOf(fieldItem));
     fieldItem.values.forEach(function(value) {
       var pair = {};
       pair[fieldItem.field] = value;
@@ -237,7 +237,7 @@ function getCombinationData(fieldItems) {
     });
   });
 
- 
+
 
    // Next get a list of each single pair combined with every other.
    var fieldValuePairCombinations = {};
@@ -255,7 +255,6 @@ function getCombinationData(fieldItems) {
          var combinationUniqueId = JSON.stringify(combinationKeys.concat(combinationValues));      // erzeugt eine Auflistung der fields und values
          if (!(combinationUniqueId in fieldValuePairCombinations)) {                               // prüft ob diese Auflistung schon einmal vorkam
            fieldValuePairCombinations[combinationUniqueId] = Object.assign({}, combinationsForCurrentPair); // wenn nicht wir sie in List aufgenommen
-           console.log("Added to fieldValuePairCombinations");
          }
        }
        //
@@ -265,7 +264,7 @@ function getCombinationData(fieldItems) {
      });
    });
    fieldValuePairCombinations = Object.values(fieldValuePairCombinations);
-
+   console.log("retrun of function: ", fieldValuePairs.concat(fieldValuePairCombinations))
    // Return a combination of both.
    return fieldValuePairs.concat(fieldValuePairCombinations);
  }
