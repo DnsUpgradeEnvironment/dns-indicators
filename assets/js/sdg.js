@@ -1701,7 +1701,7 @@ function getCombinationData(fieldItems) {
          pair[fieldItem.field] = combinationArray[fieldItem.field].value;
          Object.assign(combinations, pair);
        }
-     };
+     });
      sortedFieldValuePairs.push(combinations);
    });
    console.log("sorted: ", sortedFieldValuePairs);
