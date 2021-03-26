@@ -1695,7 +1695,7 @@ function getCombinationData(fieldItems) {
    sortedFieldValuePairs = [];                  //pendant to re
    re.forEach(function(combinationArray){       //für jede der einträge in re
      var combinations = {};                     // definiere ein leeres Objekt combinations
-     fieldItems.fields.forEach(function(field) {   // gehe die Sortierten Disagg Kategorien durch
+     fieldItems.field.forEach(function(field) {   // gehe die Sortierten Disagg Kategorien durch
        if (Object.keys(combinationArray).indexOf(field) != -1){
          var pair = {};
          pair[field] = combinationArray.field;
