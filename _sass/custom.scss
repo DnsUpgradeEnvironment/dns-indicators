@@ -4,6 +4,68 @@
  * This file left blank intentionally. Implementations of Open SDG can use
  * a similarly named file for custom styles.
  */
+
+ //---status summary---start------------------------
+.frameStatus {
+    width: 20%;
+    float: left;
+    min-height: 1px;
+}
+@media screen and (max-width: 25em) {
+  .frameStatus {
+      display: none;
+  }
+}
+
+.tableresp {
+  width: 80%;
+  align: right;
+  float: right;
+}
+
+@media screen and (max-width: 25em) {
+  .tableresp {
+    width: 100%;
+    align: left;
+    float: left;
+  }
+}
+
+
+
+.responsiveWeather{
+  width: 100%;
+  max-width: 60px;
+  min-width: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: auto;
+  border: transparent;
+}
+
+
+.responsiveText{
+  font-size: 1.0em;//0.8vw;
+}
+
+@media screen and (max-width: 75em) {
+  .responsiveText {
+    font-size: 0.8em;//1.0vw;
+  }
+}
+@media screen and (max-width: 50em) {
+  .responsiveText {
+    font-size: 0.6em;//1.2vw;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .tableresp{
+    border-collapse: collapse;
+  }
+}
+//---status summary---stop------------------------
+
  //---edit head Banner
  $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #FD6925 #DD1367 #FD9C27 #BF8B2E #417D46 #0A96D8 #57BE2F #00689C #1F4A6A;
  @for $i from 1 through length($goal-colors) {
