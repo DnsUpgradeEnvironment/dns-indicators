@@ -268,9 +268,17 @@ function getCombinationData(fieldItems) {
    var re = fieldValuePairs.concat(fieldValuePairCombinations);
    console.log("retrun of function: ", re);
 
-   sortedFieldValuePairs = [];
-   re.forEach(function(combinationArray){
-     sortedFieldValuePairs.push(combinationArray);
+   sortedFieldValuePairs = [];                  //pendant to re
+   re.forEach(function(combinationArray){       //für jede der einträge in re
+     var combinations = {};                     // definiere ein leeres Objekt combinations
+     fieldItems.forEach(function(fieldItem) {   // gehe die Sortierten Disagg Kategorien durch
+       if (Object.keys(fieldValuePair).indexOf(fieldItem) != -1){
+         var pair = {};
+         pair[fieldItem.field] = combinationArray[fieldItem.field].value;
+         Object.assign(combinations, pair);
+       }
+     };
+     sortedFieldValuePairs.push(combinations);
    });
    console.log("sorted: ", sortedFieldValuePairs);
 
