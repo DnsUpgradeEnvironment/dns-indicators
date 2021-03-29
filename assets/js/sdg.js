@@ -1698,7 +1698,7 @@ function getCombinationData(fieldItems) {
      fieldItems.forEach(function(fieldItem) {   // gehe die Sortierten Disagg Kategorien durch
        if (Object.keys(combinationArray).indexOf(fieldItem.field) != -1){
          var pair = {};
-         pair[fieldItem.field] = combinationArray.[fieldItem.field];
+         pair[fieldItem.field] = combinationArray[fieldItem.field];
          Object.assign(combinations, pair);
        }
      });
