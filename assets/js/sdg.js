@@ -1665,37 +1665,32 @@ function getCombinationData(fieldItems) {
 
    // Next get a list of each single pair combined with every other.
    var fieldValuePairCombinations = {};
-   fieldValuePairs.forEach(function(fieldValuePair) {                                              // gehe alle Disaggregationen durch
-     var combinationsForCurrentPair = Object.assign({}, fieldValuePair);                           // definiere ein Objekt und füge die aktuelle Disagg hinzu
-     //console.log("loop1: ", combinationsForCurrentPair);
-     fieldValuePairs.forEach(function(fieldValuePairToAdd) {                                       // gehe wieder alle Disaggs durch
+   fieldValuePairs.forEach(function(fieldValuePair) {
+     var combinationsForCurrentPair = Object.assign({}, fieldValuePair);
+     fieldValuePairs.forEach(function(fieldValuePairToAdd) {
        // The following conditional reflects that we're not interested in combinations
        // within the same field. (Eg, not interested in combination of Female and Male).
-       if (Object.keys(fieldValuePair)[0] !== Object.keys(fieldValuePairToAdd)[0]) {               // wenn wir uns nicht für beide Disaggs (FieldValuePair & FieldValuePairToAdd) in der selben Kategorie befinden...
-         Object.assign(combinationsForCurrentPair, fieldValuePairToAdd);                           // füge die ...ToAdd Disagg dem Objekt hinzu???
-         //console.log("loop2: ", combinationsForCurrentPair);
-         var combinationKeys = Object.keys(combinationsForCurrentPair).sort();                     // such alle keys
-         var combinationValues = Object.values(combinationsForCurrentPair).sort();                 // und alle values
-         var combinationUniqueId = JSON.stringify(combinationKeys.concat(combinationValues));      // erzeugt eine Auflistung der fields und values
-         if (!(combinationUniqueId in fieldValuePairCombinations)) {                               // prüft ob diese Auflistung schon einmal vorkam
-           fieldValuePairCombinations[combinationUniqueId] = Object.assign({}, combinationsForCurrentPair); // wenn nicht wir sie in List aufgenommen
+       if (Object.keys(fieldValuePair)[0] !== Object.keys(fieldValuePairToAdd)[0]) {
+         Object.assign(combinationsForCurrentPair, fieldValuePairToAdd);
+         var combinationKeys = Object.keys(combinationsForCurrentPair).sort();
+         var combinationValues = Object.values(combinationsForCurrentPair).sort();
+         var combinationUniqueId = JSON.stringify(combinationKeys.concat(combinationValues));
+         if (!(combinationUniqueId in fieldValuePairCombinations)) {
+           fieldValuePairCombinations[combinationUniqueId] = Object.assign({}, combinationsForCurrentPair);
          }
        }
-       //
-       // if (Object.keys(combinationsForCurrentPair).length === Object.keys(fieldItems).length) {
-       //   console.log("Here we sould reset");
-       // }
      });
    });
    fieldValuePairCombinations = Object.values(fieldValuePairCombinations);
 
-   var re = fieldValuePairs.concat(fieldValuePairCombinations);
-   console.log("retrun of function: ", re);
+   var unsortedfieldValuePairCombinations = fieldValuePairs.concat(fieldValuePairCombinations);
 
-   sortedFieldValuePairs = [];                  //pendant to re
-   re.forEach(function(combinationArray){       //für jede der einträge in re
-     var combinations = {};                     // definiere ein leeres Objekt combinations
-     fieldItems.forEach(function(fieldItem) {   // gehe die Sortierten Disagg Kategorien durch
+   // Due to the forEch loops above the Combinations are in a more or less random order right now.
+   // The following sorts the combinations depending on the order of the "fieldItems".
+   sortedFieldValuePairs = [];
+   unsortedfieldValuePairCombinations.forEach(function(combinationArray){
+     var combinations = {};
+     fieldItems.forEach(function(fieldItem) {
        if (Object.keys(combinationArray).indexOf(fieldItem.field) != -1){
          var pair = {};
          pair[fieldItem.field] = combinationArray[fieldItem.field];
@@ -1704,9 +1699,7 @@ function getCombinationData(fieldItems) {
      });
      sortedFieldValuePairs.push(combinations);
    });
-   console.log("sorted: ", sortedFieldValuePairs);
 
-   // Return a combination of both.
    return sortedFieldValuePairs;
  }
 
