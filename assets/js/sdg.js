@@ -1707,7 +1707,7 @@ function getCombinationData(fieldItems) {
    console.log("sorted: ", sortedFieldValuePairs);
 
    // Return a combination of both.
-   return re;
+   return sortedFieldValuePairs;
  }
 
 /**
