@@ -36,12 +36,12 @@
 
                       <tr>
                         <th width="10%"> <div class=responsiveText>{{ page.t.summary.indicator }}</div> </th>
-                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ page.t.summary[indicator_key] }}</div></a> </th> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
+                        <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ page.t.summary[indicator_key] }}</div></a> </th>
                       </tr>
                       <tr>
                         <th> <div class=responsiveText>{{ page.t.summary.target }} </div></th>
                         {% assign target = "history_target_" | append: i %}
-                        <td colspan="9"> <div class=responsiveText>{{ page.t.summary[target_key] }}</div> </td> <!--{{ indicator[target]}}</div> </td>-->
+                        <td colspan="9"> <div class=responsiveText>{{ page.t.summary[target_key] }}</div> </td>
 
                       </tr>
 
@@ -66,7 +66,7 @@
                           {% assign add = add | minus: 1 %}
                         {% endif %}
 
-                        {% for k in (1..add) %}<!--add empty cells-->
+                        {% for k in (1..add) %}
                           {% if k > 5 %}
                             <td width="10%" align="center"> </td>
                           {% else %}
