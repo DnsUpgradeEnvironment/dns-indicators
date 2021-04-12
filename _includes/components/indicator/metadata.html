@@ -73,6 +73,9 @@
           {% endif %}
         </tr>
       {% elsif indicator_metadata.name contains "status_year_a"%}
+        {% assign year_b = indicator_metadata.name | replace: '_a_', '_b_' %}
+        {% assign year_c = indicator_metadata.name | replace: '_a_', '_c_' %}
+        {% assign year_d = indicator_metadata.name | replace: '_a_', '_d_' %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
           <td align="left" style="margin-bottom: 15px;">
