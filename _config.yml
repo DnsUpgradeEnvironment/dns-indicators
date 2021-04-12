@@ -83,23 +83,27 @@ menu:
     translation_key: general.seventeen_goals
   # - path: /reporting-status/
   #   translation_key: menu.reporting_status
+  - translation_key: menu.status_title
+    dropdown:
+      - path: /status_summary/
+        translation_key: menu.status_summary
+      - path: /status/
+        translation_key: menu.status
   - translation_key: menu.about
     dropdown:
-      - path: /about_platform/
-        translation_key: menu.about_platform
-      - path: /about_navigation/
-        translation_key: menu.about_navigation
-      - path: /about_guidance/
-        translation_key: menu.about_guidance
+      - path: /about/
+        translation_key: menu.about_this_site
+      - path: /guidance/
+        translation_key: menu.guidance
   - translation_key: menu.facts
     dropdown:
       - path: /facts_agenda/
-        translation_key: menu.facts_agenda
-      - path: /facts_dns/
-        translation_key: menu.facts_dns
-  - path: https://sustainabledevelopment-deutschland.github.io
-    translation_key: menu.linkToDnsPlatform
-
+        translation_key: menu.about_this_site
+      - path: /facts_publications/
+        translation_key: menu.publications
+  - path: menu.pathToSdg
+    translation_key: menu.sdglogo
+    
 
 
   # - path: /
