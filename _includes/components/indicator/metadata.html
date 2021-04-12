@@ -60,6 +60,16 @@
               </td>
             {% endif %}
           </tr>
+        {% else %}
+          {% if indicator_metadata.name contains "status" %}
+            <td align="left" style="padding-left: 0px;padding-right: 0px;">
+              {{ page.indicator[indicator_metadata.name] | markdownify }} <!--<a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] | markdownify }}.png" alt="X" class="responsiveWeather" title="X" style="border: transparent"/></a>-->
+            </td>
+          {% else %}
+            <td>
+              {{ page.indicator[indicator_metadata.name] | markdownify }}
+            </td>
+          {% endif %}
         {% endif %}
 
       {% endif %}
