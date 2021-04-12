@@ -49,6 +49,8 @@
 
       {% if indicator_metadata.name contains "history_year_a" %}
         {% assign year_b = indicator_metadata.name | replace: '_a_', '_b_' %}
+        {% assign year_c = indicator_metadata.name | replace: '_a_', '_c_' %}
+        {% assign year_d = indicator_metadata.name | replace: '_a_', '_d_' %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
           <td align="left" style="margin-bottom: 15px;">
@@ -59,6 +61,16 @@
               <p>{{ page.indicator[year_b] | markdownify }}</p>
             </td>
           {% endif %}
+          {% if page.indicator[year_c] %}
+            <td align="left" style="margin-bottom: 15px;">
+              <p>{{ page.indicator[year_c] | markdownify }}</p>
+            </td>
+          {% endif %}
+          {% if page.indicator[year_d] %}
+            <td align="left" style="margin-bottom: 15px;">
+              <p>{{ page.indicator[year_d] | markdownify }}</p>
+            </td>
+          {% endif %}
         </tr>
       {% elsif indicator_metadata.name contains "status_year_a"%}
         <tr>
@@ -66,7 +78,21 @@
           <td align="left" style="margin-bottom: 15px;">
             <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
           </td>
-
+          {% if page.indicator[year_b] %}
+            <td align="left" style="margin-bottom: 15px;">
+              <p>{{ page.indicator[year_b] | markdownify }}</p>
+            </td>
+          {% endif %}
+          {% if page.indicator[year_c] %}
+            <td align="left" style="margin-bottom: 15px;">
+              <p>{{ page.indicator[year_c] | markdownify }}</p>
+            </td>
+          {% endif %}
+          {% if page.indicator[year_d] %}
+            <td align="left" style="margin-bottom: 15px;">
+              <p>{{ page.indicator[year_d] | markdownify }}</p>
+            </td>
+          {% endif %}
         </tr>
 
       {% endif %}
