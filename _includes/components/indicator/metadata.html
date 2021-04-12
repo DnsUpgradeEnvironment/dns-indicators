@@ -1,6 +1,6 @@
 <table class="table">
   {% for indicator_metadata in site.data.schema %}
-    {%- assign metadata_label = indicator_metadata.name | translate_metadata_field -%}
+    {%- assign metadata_label = indicator_metadata.name | t -%}
     {% if indicator_metadata.field.scope == include.scope %}
       {% if site.hide_empty_metadata %}
         {% unless page.indicator[indicator_metadata.name] and page.indicator[indicator_metadata.name] != '' %}
@@ -50,9 +50,15 @@
         {% if indicator_metadata.name contains "_year_a" %}
           <tr>
             <th scope="row">{{ metadata_label }} </th>
-            <td>
-              {{ page.indicator[indicator_metadata.name] | markdownify }}
-            </td>
+            {% if indicator_metadata.name contains "status" %}
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] | markdownify }}.png" alt="X" class="responsiveWeather" title="X" style="border: transparent"/></a>
+              </td>
+            {% else %}
+              <td>
+                {{ page.indicator[indicator_metadata.name] | markdownify }}
+              </td>
+            {% endif %}
           </tr>
         {% endif %}
 
