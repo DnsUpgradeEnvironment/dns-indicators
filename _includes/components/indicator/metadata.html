@@ -9,7 +9,7 @@
       {% endif %}
 
       {% assign var = 'doShow' %}
-      {% if indicator_metadata.name contains "source_organisation_" or indicator_metadata.name contains "_year" or indicator_metadata.name == "national_indicator_available" or indicator_metadata.name == "national_geographical_coverage" %}
+      {% if indicator_metadata.name contains "source_organisation_" or indicator_metadata.name contains "history" or indicator_metadata.name == "national_indicator_available" or indicator_metadata.name == "national_geographical_coverage" %}
         {% assign var = 'dontShow' %}
         {% if indicator_metadata.name contains "short" or indicator_metadata.name contains "_logo" %}
           {% assign var = 'doShow' %}
@@ -46,6 +46,15 @@
           </td>
         </tr>
       {% endunless %}
+
+      {% if indicator_metadata.name contains "history_indicator" or indicator_metadata.name contains "history_target" %}
+        <tr>
+          <th scope="row">{{ metadata_label }} </th>
+          <td colspan="9">
+            {{ page.indicator[indicator_metadata.name] | markdownify }}
+          </td>
+        </tr>
+        {% endif %}
 
       {% if indicator_metadata.name contains "history_year_a" %}
         {% assign year_b = indicator_metadata.name | replace: '_a_', '_b_' %}
