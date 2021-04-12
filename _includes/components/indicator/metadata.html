@@ -59,7 +59,7 @@
                 {{ page.indicator[indicator_metadata.name] | markdownify }}
               </td>
             {% endif %}
-          </tr>
+
         {% elsif indicator_metadata.name contains "_year" %}
           {% if indicator_metadata.name contains "status" %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
@@ -71,6 +71,8 @@
             </td>
           {% endif %}
         {% endif %}
+
+        </tr>
 
       {% endif %}
   {% endfor %}
