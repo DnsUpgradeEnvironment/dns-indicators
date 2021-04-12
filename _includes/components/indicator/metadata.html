@@ -52,7 +52,7 @@
             <th scope="row">{{ metadata_label }} </th>
             {% if indicator_metadata.name contains "status" %}
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] | markdownify }}.png" alt="X" class="responsiveWeather" title="X" style="border: transparent"/></a>
+                {{ page.indicator[indicator_metadata.name] | markdownify }} <!--<a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] | markdownify }}.png" alt="X" class="responsiveWeather" title="X" style="border: transparent"/></a>-->
               </td>
             {% else %}
               <td>
