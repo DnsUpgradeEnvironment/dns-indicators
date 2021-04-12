@@ -79,12 +79,12 @@
         <tr>
           <th scope="row">{{ metadata_label }} </th>
           <td align="left" style="padding-left: 0px;padding-right: 0px;">
-            <img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[year_a] }}.png" alt="{{ page.indicator[year_a] }}">
+            <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] | markdownify }}.png" alt="{{ page.indicator[indicator_metadata.name] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
           </td>
           {% if page.indicator[year_b] %}
-            <td align="left" style="margin-bottom: 15px;">
-              <p>{{ page.indicator[year_b] | markdownify }}</p>
-            </td>
+          <td align="left" style="padding-left: 0px;padding-right: 0px;">
+            <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_c] | markdownify }}.png" alt="{{  page.indicator[year_c] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+          </td>
           {% endif %}
           {% if page.indicator[year_c] %}
             <td align="left" style="margin-bottom: 15px;">
