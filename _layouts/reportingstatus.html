@@ -8,7 +8,7 @@
 
 {% assign goals = reporting_data.goals %}
 <script>
-  console.log({{ goals}});
+  console.log( {{ goals }} );
 </script>
 
 <div id="main-content" class="container reportingstatus" role="main">
@@ -38,11 +38,23 @@
             {% for i in (1..3) %}
               {% assign hty_active = "history_active_" | append: i %}
               {% assign hty_indicator = "history_indicator_" | append: i %}
+              {% assign hty_target = "history_target_" | append: i %}
               {% if indicator[hty_active] == true %}
-                <h1> {{ indicator[hty_indicator] }} </h1>
+                <table class="table table-hover tableresp">
+                  <tr>
+                    <th width="10%"> <div class=responsiveText>{{ page.t.summary.indicator }}</div> </th>
+                    <td colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ indicator[permalink] }}/ "><div class=responsiveText>{{ indicator[hty_indicator] }}</div></a> </td> <!--{{ indicator[hty_indicator] }}</div></a> </th>-->
+                  </tr>
+                  <tr>
+                    <th> <div class=responsiveText>{{ page.t.summary.target }} </div></th>
+                    <td colspan="9"> <div class=responsiveText>{{ indicator[hty_target] }}</div> </td> <!--{{ t.summary[target_key] }}</div> </td>-->
+                  </tr>
+
+
+
               {% endif %}
             {% endfor %}
-            <h1> {{ indicator[indicator_name] }} </h1>
+
           {% endfor %}
         {% endfor %}
 
