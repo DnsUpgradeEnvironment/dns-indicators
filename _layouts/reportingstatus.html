@@ -1,25 +1,49 @@
 {% include head.html %}
 {% include header.html %}
 
-<div id="main-content" class="container reportingstatus">
+{% assign reporting_data = site.data.reporting %}
+{% if site.data[page.language].reporting %}
+  {% assign reporting_data = site.data[page.language].reporting %}
+{% endif %}
 
-  <h1>{{ t.summary.status_summary }}</h1>
+{% assign goals = reporting_data.goals %}
+<script>
+  console.log({{ goals}});
+</script>
 
-  {%- for goalreport in site.data.reporting.goals -%}
-    {%- assign goal_number = goalreport.goal -%}
+<div id="main-content" class="container reportingstatus" role="main">
+
+  <h1>{{ page.t.summary.status_summary }}</h1>
+
+  {%- for goalreport in goals -%}
+    {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
+    {%- assign goal_number = goal.number -%}
     {%- assign goal_short_key = goal_number | append: '-short' -%}
     {%- assign goal_short = t.global_goals[goal_short_key] -%}
-    <div class="goal">
-      <div class="frameStatus">
-        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
-          <img src="{{ site.goal_image_base }}/{{ current_language }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ t.general.goal }} {{ goal_number }}" width="95%" min-height="60px"/>
+
+    <div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="{{ goal.url }}">
+          <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ page.t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
+        </h3>
+        {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | group_by: 'target_id' %}
+        {% for group in goal_indicators %}
+          {% for indicator in group.items %}
+            {% assign idc_sort_order = indicator["indicator_sort_order"] %}
+            {% assign indicator_key = idc_sort_order | append: "_" | append: i %}
+            {% assign target_key = indicator_key | append: "_target" %}
+            <h1> {{ indicator[indicator_name] }} </h1>
+          {% endfor %}
+        {% endfor %}
+
       </div>
+
+
     </div>
   {%- endfor -%}
 </div>
