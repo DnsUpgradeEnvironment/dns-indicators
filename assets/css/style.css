@@ -2627,7 +2627,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
     display: none; } }
 .tableresp {
   width: 80%;
-  align: right;
+  align: left;
   float: right; }
 
 @media screen and (max-width: 25em) {
