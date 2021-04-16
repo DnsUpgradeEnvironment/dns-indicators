@@ -36,7 +36,7 @@ create_pages:
     - folder: /reporting-status
       layout: reportingstatus
     - filename: status_summary.html
-      folder: /
+      folder: /status_summary
       layout: reportingstatus
     - filename: indicators.json
       folder: /
