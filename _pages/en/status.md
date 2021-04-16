@@ -1,6 +1,8 @@
 ---
 title: Statusübersicht - Bewertung für Deutschland aus den Vorjahren
-permalink: /en/status_summary/
+permalink: /en/status/
 language: en
 layout: page
 ---
+
+Text will follow soon
