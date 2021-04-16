@@ -56,7 +56,7 @@
                     {% for letter in letters %}
                       {% assign year = "history_year_" | append: letter | append: "_" | append: i %}
                       {% if indicator[year] %}
-                        {% if j == 'g' or j == 'f' or j == 'e' %}
+                        {% if letter == 'g' or letter == 'f' or letter == 'e' %}
                           <td width="10%" align="center" class="hidden-xs"> <p><span class="responsiveText hidden-xs">{{ indicator[year] }}</span></p> </td>
                         {% else %}
                           <td width="10%" align="center"> <p><span class="responsiveText">{{ indicator[year] }}</span></p> </td>
@@ -78,6 +78,42 @@
                       {% endif %}
                     {% endfor %}
                   </tr>
+                  <tr>
+                    <th> <div class=responsiveText>{{ page.t.summary.status }}</div> </th>
+                    {% for letter in letters %}
+                      {% assign status = "history_status_year_" | append: letter | append: "_" | append: i %}
+                      {% if indicator[status] %}
+
+                        {% if indicator[status] == 'x' %}
+                          {% assign status_title = page.t.status['nebel'] %}
+                        {% elsif indicator[status] == 'Sonne' %}
+                          {% assign status_title = page.t.status['sonne'] %}
+                        {% elsif indicator[status] == 'Leicht bewölkt' %}
+                          {% assign status_title = page.t.status['leicht bewölkt'] %}
+                        {% elsif indicator[status] == 'Wolke' %}
+                          {% assign status_title = page.t.status['wolke'] %}
+                        {% elsif indicator[status] == 'Blitz' %}
+                          {% assign status_title = page.t.status['blitz'] %}
+                        {% endif %}
+
+                        {% if letter == 'g' or letter == 'f' or letter == 'e' %}
+                          <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather hidden-xs" title="{{ status_title }}"/></a> </td>
+                        {% else %}
+                          <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[status] }}.png" alt="{{ indicator[status] }}" class="responsiveWeather" title="{{ status_title }}"/></a> </td>
+                        {% endif %}
+                      {% elsif letter == 'a' %}
+                          <td width="10%" align="center"><p><span class="responsiveText">Keine Bewertung möglich</span></p></td>
+                      {% endif %}
+                    {% endfor %}
+                    {% for k in (1..add) %}
+                      {% if k > 3 %}
+                        <td width="10%" align="center"></td>
+                      {% else %}
+                        <td width="10%" align="center"class="hidden-xs"></td>
+                      {% endif %}
+                    {% endfor %}
+                  </tr>
+
                 </table>
 
 
