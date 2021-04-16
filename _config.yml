@@ -81,8 +81,6 @@ languages:
 menu:
   - path: /
     translation_key: general.seventeen_goals
-  # - path: /reporting-status/
-  #   translation_key: menu.reporting_status
   - translation_key: menu.status_title
     dropdown:
       - path: /status_summary/
@@ -101,27 +99,8 @@ menu:
         translation_key: menu.about_this_site
       - path: /facts_publications/
         translation_key: menu.publications
-  - path: /reportingstatus/
-    translation_key: X
   - path: menu.pathToSdg
     translation_key: menu.sdglogo
-
-
-
-  # - path: /
-  #   translation_key: general.seventeen_goals
-  # - path: /reporting-status/
-  #   translation_key: menu.reporting_status
-  # - path: /about_platform/
-  #   translation_key: menu.about_platform
-  # - path: /about_navigation/
-  #   translation_key: menu.about_navigation
-  # - path: /about_guidance/
-  #   translation_key: menu.about_guidance
-  # - path: /facts_agenda/
-  #   translation_key: menu.facts_agenda
-  # - path: /facts_dns/
-  #   translation_key: menu.facts_dns
 
 
 footer_menu:
