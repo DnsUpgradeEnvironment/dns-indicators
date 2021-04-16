@@ -4,7 +4,9 @@
 <div id="main-content" class="container reportingstatus" role="main">
 
   <h1>{{ page.t.summary.status_summary }}</h1>
-  {%- for goalreport in include.goals -%}
+  <h1>{{ include.goals }}</h1>
+  {%- for goalreport in include.goals
+    <h1>{{ goalreport }}</h1>
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
     <div class="goal reporting-status-item">
       <div class="frame goal-tiles">
