@@ -133,7 +133,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210416134256">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20210416135141">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -366,195 +366,288 @@ var translations = {
 <div id="top" tabindex=-1></div>
 
 
-<div id="main-content" class="container reportingstatus">
 
-  <h1></h1><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/1/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//1.png" alt=" -  1" width="95%" min-height="60px"/>
+
+
+
+<script>
+  console.log({"goal"=>1, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>1, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>1}}{"goal"=>2, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>3, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>3}}{"goal"=>3, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>7, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>7}}{"goal"=>4, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>3, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>3}}{"goal"=>5, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>4, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>4}}{"goal"=>6, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>3, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>3}}{"goal"=>7, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>3, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>3}}{"goal"=>8, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>7, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>7}}{"goal"=>9, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>2, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>2}}{"goal"=>10, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>2, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>2}}{"goal"=>11, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>8, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>8}}{"goal"=>12, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>4, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>4}}{"goal"=>13, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>2, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>2}}{"goal"=>14, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>2, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>2}}{"goal"=>15, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>3, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>3}}{"goal"=>16, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>3, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>3}}{"goal"=>17, "statuses"=>[{"status"=>"complete", "translation_key"=>"complete", "count"=>3, "percentage"=>100.0}, {"status"=>"inprogress", "translation_key"=>"inprogress", "count"=>0, "percentage"=>0.0}, {"status"=>"notstarted", "translation_key"=>"notstarted", "count"=>0, "percentage"=>0.0}], "totals"=>{"total"=>3}});
+</script>
+
+<div id="main-content" class="container reportingstatus" role="main">
+
+  <h1>Status summary - Evaluation for Germany in previous years</h1><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/1">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/1.png" alt="No poverty - Goal 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/1/"><span class="visible-xs"> 1 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/1/"><span class="visible-xs">Goal 1 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/2/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//2.png" alt=" -  2" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/2">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/2.png" alt="Zero hunger - Goal 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/2/"><span class="visible-xs"> 2 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/2/"><span class="visible-xs">Goal 2 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/3/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//3.png" alt=" -  3" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/3">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png" alt="Good health and well-being - Goal 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/3/"><span class="visible-xs"> 3 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/3/"><span class="visible-xs">Goal 3 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/4/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//4.png" alt=" -  4" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/4">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png" alt="Quality education - Goal 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/4/"><span class="visible-xs"> 4 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/4/"><span class="visible-xs">Goal 4 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/5/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//5.png" alt=" -  5" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/5">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/5.png" alt="Gender equality - Goal 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/5/"><span class="visible-xs"> 5 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/5/"><span class="visible-xs">Goal 5 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/6/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//6.png" alt=" -  6" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/6">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/6.png" alt="Clean water and sanitation - Goal 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/6/"><span class="visible-xs"> 6 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/6/"><span class="visible-xs">Goal 6 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/7/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//7.png" alt=" -  7" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/7">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/7.png" alt="Affordable and clean energy - Goal 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/7/"><span class="visible-xs"> 7 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/7/"><span class="visible-xs">Goal 7 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/8/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//8.png" alt=" -  8" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/8">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/8/"><span class="visible-xs"> 8 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/8/"><span class="visible-xs">Goal 8 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/9/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//9.png" alt=" -  9" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/9">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/9/"><span class="visible-xs"> 9 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/9/"><span class="visible-xs">Goal 9 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/10/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//10.png" alt=" -  10" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/10">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png" alt="Reduced inequalities - Goal 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/10/"><span class="visible-xs"> 10 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/10/"><span class="visible-xs">Goal 10 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/11/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//11.png" alt=" -  11" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/11">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/11/"><span class="visible-xs"> 11 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/11/"><span class="visible-xs">Goal 11 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/12/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//12.png" alt=" -  12" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/12">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png" alt="Responsible consumption and production - Goal 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/12/"><span class="visible-xs"> 12 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/12/"><span class="visible-xs">Goal 12 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/13/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//13.png" alt=" -  13" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/13">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/13.png" alt="Climate action - Goal 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/13/"><span class="visible-xs"> 13 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/13/"><span class="visible-xs">Goal 13 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/14/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//14.png" alt=" -  14" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/14">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/14.png" alt="Life below water - Goal 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/14/"><span class="visible-xs"> 14 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/14/"><span class="visible-xs">Goal 14 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/15/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//15.png" alt=" -  15" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/15">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/15.png" alt="Life on land - Goal 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/15/"><span class="visible-xs"> 15 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/15/"><span class="visible-xs">Goal 15 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/16/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//16.png" alt=" -  16" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/16">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/16/"><span class="visible-xs"> 16 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/16/"><span class="visible-xs">Goal 16 - <span></a>
+        </h3>
+        
+        
+
       </div>
-    </div><div class="goal">
-      <div class="frameStatus">
-        <a href="/dns-indicators/17/">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns//17.png" alt=" -  17" width="95%" min-height="60px"/>
+
+
+    </div><div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+        <a href="/dns-indicators/en/17">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/17.png" alt="Partnerships for the goals - Goal 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
         </a>
       </div>
-      <div>
-          <h3 class="status-goal">
-            <a href="/dns-indicators/17/"><span class="visible-xs"> 17 - <span></a>
-          </h3>
+      <div class="details">
+        <h3 class="status-goal">
+          <a href="/dns-indicators/17/"><span class="visible-xs">Goal 17 - <span></a>
+        </h3>
+        
+        
+
       </div>
+
+
     </div></div>
 <footer role="contentinfo">
   <div class="container">
@@ -615,12 +708,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20210416134256'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20210416135141'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20210416134256"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20210416135141"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
