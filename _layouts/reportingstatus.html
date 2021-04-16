@@ -18,6 +18,8 @@
   {%- for goalreport in goals -%}
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
     {%- assign goal_number = goal.number -%}
+    {%- assign goal_short_key = goal_number | append: '-short' -%}
+    {%- assign goal_short = t.global_goals[goal_short_key] -%}
 
     <div class="goal reporting-status-item">
       <div class="frame goal-tiles">
@@ -27,12 +29,12 @@
       </div>
       <div class="details">
         <h3 class="status-goal">
-          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
+          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ page.t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
         </h3>
         {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
       </div>
 
-      
+
     </div>
   {%- endfor -%}
 </div>
