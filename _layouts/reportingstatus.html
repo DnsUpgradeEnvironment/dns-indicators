@@ -34,9 +34,13 @@
         {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | group_by: 'target_id' %}
         {% for group in goal_indicators %}
           {% for indicator in group.items %}
-            {% assign idc_sort_order = indicator["indicator_sort_order"] %}
-            {% assign indicator_key = idc_sort_order | append: "_" | append: i %}
-            {% assign target_key = indicator_key | append: "_target" %}
+            {% for i in (1..3) %}
+              {% assign hty_active = "history_active_" | append: i %}
+              {% assign hty_indicator = "history_indicator_" | append: i %}
+              {% if indicator[hty_active] == true %}
+                <h1> {{ indicator[hty_indicator] }} </h1>
+              {% endif %}
+            {% endfor %}
             <h1> {{ indicator[indicator_name] }} </h1>
           {% endfor %}
         {% endfor %}
