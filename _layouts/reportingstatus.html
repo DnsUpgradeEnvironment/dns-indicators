@@ -3,7 +3,16 @@
 
 <div id="main-content" class="container reportingstatus" role="main">
 
-  <h1>Test!!</h1>
-
+  <h1>{{ page.t.summary.status_summary }}</h1>
+  {%- for goalreport in include.goals -%}
+    {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
+    <div class="goal reporting-status-item">
+      <div class="frame goal-tiles">
+          <a href="{{ goal.url }}">
+          <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+          </a>
+      </div>
+    </div>
+  {%- endfor -%}
 </div>
 {% include footer.html %}
