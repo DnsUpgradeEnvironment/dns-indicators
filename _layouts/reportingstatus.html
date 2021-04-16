@@ -49,6 +49,36 @@
                     <th> <div class=responsiveText>{{ page.t.summary.target }} </div></th>
                     <td colspan="9"> <div class=responsiveText>{{ indicator[hty_target] }}</div> </td> <!--{{ t.summary[target_key] }}</div> </td>-->
                   </tr>
+                  <tr>
+                    <th> <div class=responsiveText>{{ page.t.summary.year }}</div> </th>
+                    {% assign letters = "g,f,e,d,c,b,a" | split: ',' %}
+                    {% assign add = letters.size %}
+                    {% for letter in letters %}
+                      {% assign year = "history_year_" | append: letter | append: "_" | append: i %}
+                      {% if indicator[year] %}
+                        {% if j == 'g' or j == 'f' or j == 'e' %}
+                          <td width="10%" align="center" class="hidden-xs"> <p><span class="responsiveText hidden-xs">{{ indicator[year] }}</span></p> </td>
+                        {% else %}
+                          <td width="10%" align="center"> <p><span class="responsiveText">{{ indicator[year] }}</span></p> </td>
+                        {% endif %}
+
+                        {% assign add = add | minus: 1 %}
+                      {% endif %}
+                    {% endfor %}
+
+                    {% if add == letters.size %}
+                      {% assign add = add | minus: 1 %}
+                    {% endif %}
+
+                    {% for k in (1..add) %}<!--add empty cells-->
+                      {% if k > 3 %}
+                        <td width="10%" align="center"> </td>
+                      {% else %}
+                        <td width="10%" align="center" class="hidden-xs"> </td>
+                      {% endif %}
+                    {% endfor %}
+                  </tr>
+                </table>
 
 
 
