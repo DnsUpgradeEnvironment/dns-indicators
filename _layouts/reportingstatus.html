@@ -12,7 +12,7 @@
 
   <h1>{{ page.t.summary.status_summary }}</h1>
   <h1>{{ include.goals }}</h1>
-  {%- for goalreport in goals
+  {%- for goalreport in goals -%}
     <h1>{{ goalreport }}</h1>
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
     <div class="goal reporting-status-item">
