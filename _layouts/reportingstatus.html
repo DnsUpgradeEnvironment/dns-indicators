@@ -1,11 +1,18 @@
 {% include head.html %}
 {% include header.html %}
 
+{% assign reporting_data = site.data.reporting %}
+{% if site.data[page.language].reporting %}
+  {% assign reporting_data = site.data[page.language].reporting %}
+{% endif %}
+
+{% assign goals = reporting_data.goals %}
+
 <div id="main-content" class="container reportingstatus" role="main">
 
   <h1>{{ page.t.summary.status_summary }}</h1>
   <h1>{{ include.goals }}</h1>
-  {%- for goalreport in include.goals
+  {%- for goalreport in goals
     <h1>{{ goalreport }}</h1>
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
     <div class="goal reporting-status-item">
