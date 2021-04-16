@@ -29,7 +29,7 @@
       </div>
       <div>
         <h3 class="status-goal">
-          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ page.t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
+          <a href="{{ page.baseurl }}/{{ goal_number }}/"><span class="visible-xs">{{ page.t.general.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
         </h3>
         <!--{% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | group_by: 'target_id' %}-->
         {% assign goal_indicators = page.indicators | where: 'sdg_goal', goal.number | group_by: 'target_id' %}
