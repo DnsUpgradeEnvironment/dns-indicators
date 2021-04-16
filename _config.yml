@@ -27,7 +27,22 @@ create_indicators:
 create_goals:
   layout: goal-by-target
 #create_pages: true
-
+create_pages:
+  pages:
+    - folder: ''
+      layout: frontpage
+    - folder: /goals
+      layout: goals
+    - folder: /reporting-status
+      layout: reportingstatus
+    - filename: status_summary.html
+      folder: /
+      layout: reportingstatus
+    - filename: indicators.json
+      folder: /
+      layout: indicator-json
+    - folder: /search
+      layout: search
 
 analytics:
   ga_prod: ''
