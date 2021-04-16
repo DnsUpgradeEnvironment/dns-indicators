@@ -35,9 +35,9 @@ create_pages:
       layout: goals
     - folder: /reporting-status
       layout: reportingstatus
-    - filename: status_summary.html
-      folder: /status_summary
-      layout: reportingstatus
+    # - filename: status_summary.html
+    #   folder: /status_summary
+    #   layout: reportingstatus
     - filename: indicators.json
       folder: /
       layout: indicator-json
@@ -98,7 +98,7 @@ menu:
     translation_key: general.seventeen_goals
   - translation_key: menu.status_title
     dropdown:
-      - path: /status_summary/
+      - path: /reporting-status/
         translation_key: menu.status_summary
       - path: /status/
         translation_key: menu.status
