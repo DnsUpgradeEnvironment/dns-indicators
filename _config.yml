@@ -101,9 +101,11 @@ menu:
         translation_key: menu.about_this_site
       - path: /facts_publications/
         translation_key: menu.publications
+  - path: /reportingstatus/
+    translation_key: X
   - path: menu.pathToSdg
     translation_key: menu.sdglogo
-    
+
 
 
   # - path: /
