@@ -1,4 +1,15 @@
   <!-- 1 --------------------------------------------------------------->
 <div id="report">
-  <img src="https://dnstestenvironment.github.io/sdg-indicators/assets/img/report/cover.png" alt="cover"/>
+  <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover"/>
+
+  {% assign reporting_data = site.data[page.language].reporting %}
+  {% assign goals = reporting_data.goals %}
+  {%- for goalreport in goals -%}
+    {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
+    {%- assign goal_number = goal.number -%}
+    {%- assign goal_short_key = goal_number | append: '-short' -%}
+    {%- assign goal_short = page.t.global_goals[goal_short_key] -%}
+    <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+  {% endfor %}
+
 </div>
