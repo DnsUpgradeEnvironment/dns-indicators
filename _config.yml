@@ -36,7 +36,7 @@ create_pages:
     - folder: /reporting-status
       layout: reportingstatus
     - folder: /report
-      layout: reportingstatus
+      layout: report
     # - filename: status_summary.html
     #   folder: /status_summary
     #   layout: reportingstatus
