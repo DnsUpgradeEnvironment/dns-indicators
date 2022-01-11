@@ -30,23 +30,20 @@ var app = angular.module("app", []);
 
 app.controller("listController", ["$scope",
   function($scope) {
+    $scope.exportUsingJSPDF = function() {
+      // var pdf = new jsPDF('landscape');
+      var pdf = new jsPDF('p','pt','a4');
+      var pdfName = 'testen.pdf';
 
-$scope.exportUsingJSPDF = function() {
-
-
-       // var pdf = new jsPDF('landscape');
-       var pdf = new jsPDF('p','pt','a4');
-      var pdfName = 'test.pdf';
-
-        //stop showing the content in the generated PDF
-         var elementHandler = {
-            '#hideThis': function(element, renderer) {
-                return true;
-            }
+      //stop showing the content in the generated PDF
+      var elementHandler = {
+        '#hideThis': function(element, renderer) {
+          return true;
+          }
         }
-         var options = {
-            'elementHandlers': elementHandler,
-            pagesplit: true, width:550
+        var options = {
+          'elementHandlers': elementHandler,
+          pagesplit: true, width:550
         };
 
         var $divs = $('.myDivClass')                //jQuery object of all the myDivClass divs
@@ -74,6 +71,5 @@ $scope.exportUsingJSPDF = function() {
             recursiveAddHtmlAndSave(currentRecursion, numRecursionsNeeded);
         });
     }
-
   }
 ]);
