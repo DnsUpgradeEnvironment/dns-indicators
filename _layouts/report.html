@@ -4,12 +4,18 @@
 
   {% assign reporting_data = site.data[page.language].reporting %}
   {% assign goals = reporting_data.goals %}
+
+
+
   {%- for goalreport in goals -%}
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
     {%- assign goal_number = goal.number -%}
     {%- assign goal_short_key = goal_number | append: '-short' -%}
     {%- assign goal_short = page.t.global_goals[goal_short_key] -%}
-    <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+    <div id="{{goal_number}}"  class="myDivClass" style="background-color:white">
+      <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+      <h1> {{ goal_short }} </h1>
+    </div>
   {% endfor %}
 
 </div>
