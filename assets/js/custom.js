@@ -36,13 +36,13 @@ app.controller("listController", ["$scope",
       var pdfName = 'testen.pdf';
 
       //stop showing the content in the generated PDF
-      var elementHandler = {
-        '#hideThis': function(element, renderer) {
-          return true;
-          }
-        }
+      // var elementHandler = {
+      //   '#hideThis': function(element, renderer) {
+      //     return true;
+      //     }
+      //   }
         var options = {
-          'elementHandlers': elementHandler,
+          //'elementHandlers': elementHandler,
           pagesplit: true, width:550
         };
 
