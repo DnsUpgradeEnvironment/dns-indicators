@@ -4,8 +4,8 @@
 
 <button onclick="exportUsingJSPDF()">Export Using JSPDF 3.0</button>
 <div id="report">
-  <div id="cover"class="myDivClass" style="background-color:white">
-    <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover"/>
+  <div id="cover" class="myDivClass" style="background-color:white">
+    <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
   </div>
 
   {% assign reporting_data = site.data[page.language].reporting %}
@@ -16,9 +16,18 @@
     {%- assign goal_number = goal.number -%}
     {%- assign goal_short_key = goal_number | append: '-short' -%}
     {%- assign goal_short = page.t.global_goals[goal_short_key] -%}
-    <div id="{{goal_number}}"  class="myDivClass" style="background-color:white">
+
+    {% assign goal_indicators = page.indicators | where: 'sdg_goal', goal.number | group_by: 'target_id' %}
+    {% for group in goal_indicators %}
+      {% for indicator in group.items %}
+
+    <div id="{{indicator}}"  class="myDivClass" style="background-color:white">
       <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
       <h1> {{ goal_short }} </h1>
+      <h2> {{ indicator[indicator_display] }} {{ indicator[national_indicator_available] }} </h2>
+      <div>
+        <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/{{ indicator[sort_order] }}.PNG" alt={{indicator}} width="500" height="300"/>
+      </div>
     </div>
   {% endfor %}
 
