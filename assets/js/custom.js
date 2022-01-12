@@ -28,42 +28,42 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
 
 
 function exportUsingJSPDF(){
-  console.log("Yes");
-  const doc = new jsPDF();
-  doc.text("Hello world!", 10, 10);
-  doc.save("a4.pdf");
-}
+//   console.log("Yes");
+//   const doc = new jsPDF();
+//   doc.text("Hello world!", 10, 10);
+//   doc.save("a4.pdf");
+// Stand: report 2.11}
 
-//   var pdf = new jsPDF('p','pt','a4');
-//   var pdfName = 'testen.pdf';
-//   var options = {
-//     //'elementHandlers': elementHandler,
-//     pagesplit: true, width:550
-//   };
-//   var $divs = $('.myDivClass')                //jQuery object of all the myDivClass divs
-//   var numRecursionsNeeded = $divs.length -1;     //the number of times we need to call addHtml (once per div)
-//   var currentRecursion=0;
-//   function recursiveAddHtmlAndSave(currentRecursion, totalRecursions){
-//       //Once we have done all the divs save the pdf
-//       if(currentRecursion==totalRecursions){
-//           pdf.save(pdfName);
-//       }else{
-//           currentRecursion++;
-//           pdf.addPage();
-//           //$('.myDivClass')[currentRecursion] selects one of the divs out of the jquery collection as a html element
-//           //addHtml requires an html element. Not a string like fromHtml.
-//           pdf.fromHTML($('.myDivClass')[currentRecursion], 15, 20, options, function(){
-//               console.log(currentRecursion);
-//               recursiveAddHtmlAndSave(currentRecursion, totalRecursions)
-//           });
-//       }
-//   }
-//   pdf.fromHTML($('.myDivClass')[currentRecursion], 15, 20, options, function(){
-//       recursiveAddHtmlAndSave(currentRecursion, numRecursionsNeeded);
-//   });
-//
-//
-// }
+  var pdf = new jsPDF('p','pt','a4');
+  var pdfName = 'testen.pdf';
+  var options = {
+    //'elementHandlers': elementHandler,
+    pagesplit: true, width:550
+  };
+  var $divs = $('.myDivClass')                //jQuery object of all the myDivClass divs
+  var numRecursionsNeeded = $divs.length -1;     //the number of times we need to call addHtml (once per div)
+  var currentRecursion=0;
+  function recursiveAddHtmlAndSave(currentRecursion, totalRecursions){
+      //Once we have done all the divs save the pdf
+      if(currentRecursion==totalRecursions){
+          pdf.save(pdfName);
+      }else{
+          currentRecursion++;
+          pdf.addPage();
+          //$('.myDivClass')[currentRecursion] selects one of the divs out of the jquery collection as a html element
+          //addHtml requires an html element. Not a string like fromHtml.
+          pdf.fromHTML($('.myDivClass')[currentRecursion], 15, 20, options, function(){
+              console.log(currentRecursion);
+              recursiveAddHtmlAndSave(currentRecursion, totalRecursions)
+          });
+      }
+  }
+  pdf.fromHTML($('.myDivClass')[currentRecursion], 15, 20, options, function(){
+      recursiveAddHtmlAndSave(currentRecursion, numRecursionsNeeded);
+  });
+
+
+}
 //---------
 
 // var app = angular.module("app", []);
