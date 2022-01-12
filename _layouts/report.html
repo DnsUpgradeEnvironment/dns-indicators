@@ -2,7 +2,7 @@
 {% include head.html %}
 <script src='{{ site.baseurl }}/assets/js/custom.js?v={{ cache_bust }}'></script>
 
-<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.3</button>
+<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.4</button>
 <div id="report">
   <div id="cover" class="myDivClass" style="background-color:white">
     <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
@@ -26,7 +26,7 @@
           <h1> {{ goal_short }} </h1>
           <h2> {{ indicator[indicator_display] }} {{ indicator[national_indicator_available] }} </h2>
           <div>
-            <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/{{ indicator[sort_order] }}.PNG" alt={{indicator}} width="500" height="300"/>
+            <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/{{ indicator[sort_order] }}.PNG" alt={{indicator[indicator]}} width="500" height="300"/>
           </div>
         </div>
       {% endfor %}
