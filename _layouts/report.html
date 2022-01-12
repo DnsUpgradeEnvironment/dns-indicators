@@ -26,15 +26,15 @@
           <h1> {{ goal_short }} </h1>
           <h2> {{ indicator['indicator_display'] }} {{ indicator['national_indicator_available'] }} </h2>
           <div>
-            <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/{{ indicator['indicator_sort_order'] }}.PNG" alt="{{indicator['indicator']}}" width="500" height="300"/>
+            <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/{{ indicator['indicator_sort_order'] }}.PNG" alt="{{indicator['indicator']}}" width="400" height="300"/>
           </div>
           <h3>Definition der Indikatoren</h3>
           <p>{{ indicator['dns_indicator_definition'] }}</p>
-          <hr style="width:50%;text-align:left;margin-left:0">
+          <!-- <hr style="width:50%;text-align:left;margin-left:0">
           <h3>Ziele und Intention der Bundesregierung</h3>
           <p>{{ indicator['dns_indicator_intention'] }}</p>
           <h3>Inhalt und Entwicklung des Indikators</h3>
-          <p>{{ indicator['content_and_progress'] }}</p>
+          <p>{{ indicator['content_and_progress'] }}</p> -->
         </div>
       {% endfor %}
     {% endfor %}
