@@ -1,18 +1,9 @@
 <!-- 1 --------------------------------------------------------------->
 {% include head.html %}
-<script>
-  function exportUsingJSPDF(){
-    console.log("Yes");
-    const doc = new jsPDF();
-    doc.text("Hello world3!", 10, 10);
-    doc.save("a4.pdf");
-  }
-</script>
 
+
+<button onclick="exportUsingJSPDF()">Export Using JSPDF 2.8</button>
 <div id="report">
-
-  <button onclick="exportUsingJSPDF()">Export Using JSPDF 2.7</button>
-
 
   <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover"/>
 
