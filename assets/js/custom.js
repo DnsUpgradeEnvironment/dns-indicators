@@ -28,7 +28,7 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
 import { jsPDF } from "jspdf";
 
 function exportUsingJSPDF(){
-  console.log("Yes"");
+  console.log("Yes");
   const doc = new jsPDF();
   doc.text("Hello world!", 10, 10);
   doc.save("a4.pdf");
