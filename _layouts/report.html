@@ -4,8 +4,9 @@
 
 <button onclick="exportUsingJSPDF()">Export Using JSPDF 3.0</button>
 <div id="report">
-
-  <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover"/>
+  <div id="cover"class="myDivClass" style="background-color:white">
+    <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover"/>
+  </div>
 
   {% assign reporting_data = site.data[page.language].reporting %}
   {% assign goals = reporting_data.goals %}
