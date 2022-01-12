@@ -2,7 +2,7 @@
 {% include head.html %}
 <script>
   function exportUsingJSPDF(){
-    console.log("Yes"");
+    console.log("Yes");
     const doc = new jsPDF();
     doc.text("Hello world3!", 10, 10);
     doc.save("a4.pdf");
@@ -11,15 +11,13 @@
 
 <div id="report">
 
-  <button onclick="exportUsingJSPDF()">Export Using JSPDF 2.6</button>
+  <button onclick="exportUsingJSPDF()">Export Using JSPDF 2.7</button>
 
 
   <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover"/>
 
   {% assign reporting_data = site.data[page.language].reporting %}
   {% assign goals = reporting_data.goals %}
-
-
 
   {%- for goalreport in goals -%}
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
