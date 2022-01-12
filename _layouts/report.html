@@ -1,8 +1,8 @@
 <!-- 1 --------------------------------------------------------------->
 {% include head.html %}
-{% include scripts-custom.html %}
+<script src='{{ site.baseurl }}/assets/js/custom.js?v={{ cache_bust }}'></script>
 
-<button onclick="exportUsingJSPDF()">Export Using JSPDF 2.8</button>
+<button onclick="exportUsingJSPDF()">Export Using JSPDF 2.10</button>
 <div id="report">
 
   <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover"/>
