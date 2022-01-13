@@ -26,7 +26,7 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
 
 //---------
 
-// 
+//
 // function exportUsingJSPDF(){
 //
 //   var pdf = new jsPDF('p','pt','a4');
@@ -60,6 +60,7 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
 //
 // }
 //---------
+var app = angular.module("app", []);
 
 app.controller("listController", ["$scope",
   function($scope) {
