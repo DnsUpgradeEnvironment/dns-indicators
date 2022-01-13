@@ -26,8 +26,9 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
 
 //---------
 
-function getSelectedIndicators() {
+function getSelectedIndicators(allIndicators) {
   var reportIndicators = document.forms[0];
+  var selectedIndicators = {};
   var txt = "";
   var i;
   for (i = 0; i < reportIndicators.length; i++) {

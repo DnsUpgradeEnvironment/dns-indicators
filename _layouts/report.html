@@ -4,7 +4,9 @@
 
 {% assign reporting_data = site.data[page.language].reporting %}
 {% assign goals = reporting_data.goals %}
-
+<script>
+  console.log("A: ", {{ page.indicators }});
+</script>
 <p>Wählen Sie aus welche Indikatoren im Bericht enthalten sein sollen.</p>
 
 <form action="/action_page.php">
@@ -15,12 +17,12 @@
 
     {% assign goal_indicators = page.indicators | where: 'sdg_goal', goal  %}
     {% for indicator in goal_indicators %}
-      <input type="checkbox" name="report_indicators" value="{{ indicator['indicator_display'] }}">{{ indicator['indicator_display'] }}<br>
+      <input type="checkbox" name="report_indicators" value="{{ indicator['indicator_display'] }}">{{ indicator['indicator_sort_order'] }}<br>
     {% endfor %}
   {% endfor %}
 
   <br>
-  <input type="button" onclick="getSelectedIndicators()" value="Erstelle Bericht">
+  <input type="button" onclick="getSelectedIndicators({{ page.indicators }})" value="Erstelle Bericht">
   <br><br>
   <input type="text" id="order" size="50">
 </form>
