@@ -65,22 +65,6 @@ var app = angular.module("app", []);
 app.controller("listController", ["$scope",
   function($scope) {
 
-   $scope.employees = [{pageIndex: "randomText1",pageHeader: "This should be shownxx in page1"},
-    {pageIndex: "randomeTexthere",pageHeader: "This should be shown in page2"},
-    {pageIndex: "someRandomText",pageHeader: "This should be shown in page3"},
-    {pageIndex: "four",pageHeader: "This is shown in page4"},];
-
-
- $scope.exportUsingHTML2PDF = function(){
-   var element = document.getElementById('element-to-print');
-html2pdf(element, {
-  margin:       1,
-  filename:     'myfile.pdf',
-  image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { dpi: 192, letterRendering: true },
-  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-});
-     }
 
 $scope.exportUsingJSPDF = function() {
 

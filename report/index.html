@@ -1,4 +1,5 @@
 <!-- 1 --------------------------------------------------------------->
+<html ng-app="app">
 <!DOCTYPE html>
 <html lang="de" class="no-js">
     <head>
@@ -134,7 +135,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113074451">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113075646">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -163,9 +164,9 @@ var translations = {
 <body class="language-de layout-report">
 <!-- <div class="container"> -->
 
-<script src='/dns-indicators/assets/js/custom.js?v=20220113074451'></script>
+<script src='/dns-indicators/assets/js/custom.js?v=20220113075646'></script>
 
-<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.9</button>
+<button ng-click="exportUsingJSPDF()">Export Using JSPDF 3.9</button>
 <div id="report">
   <div id="cover" class="myDivClass" style="background-color:white">
     <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
@@ -1313,3 +1314,4 @@ var translations = {
   
 
 </div>
+</html>
