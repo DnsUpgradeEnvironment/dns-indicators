@@ -15,7 +15,7 @@
 
     {% assign goal_indicators = page.indicators | where: 'sdg_goal', goal  %}
     {% for indicator in goal_indicators %}
-      <input type="checkbox" name="report_indicators" value="{{ indicator }}">{{ indicator['indicator_display'] }}<br>
+      <input type="checkbox" name="report_indicators" value="{{ indicator }}">{{ goal }}<br>
     {% endfor %}
   {% endfor %}
 
