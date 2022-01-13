@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113112204">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113113604">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -265,7 +265,7 @@ var translations = {
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-en">
-      <a class="language-toggle-link" href="/dns-indicators/en/5-1-e/"><span class="language-name">English</span>
+      <a class="language-toggle-link" href="/dns-indicators/en/5-1-e/" onclick="updateVisitCountMinus()"><span class="language-name">English</span>
         <span class="language-abbreviation">en</span></a>
     </li></ul>
 </div>
@@ -357,7 +357,7 @@ var translations = {
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-en">
-      <a class="language-toggle-link" href="/dns-indicators/en/5-1-e/"><span class="language-name">English</span>
+      <a class="language-toggle-link" href="/dns-indicators/en/5-1-e/" onclick="updateVisitCountMinus()"><span class="language-name">English</span>
         <span class="language-abbreviation">en</span></a>
     </li></ul>
 </div>
@@ -423,8 +423,11 @@ var translations = {
 </script>
 
 <script type="text/template" id="units_template">
-  <% if(units.length>1) { %>
+  
+  <% if(units.length > 1) { %>
+  
     <h4>Einheit</h4>
+
     <fieldset>
       <legend class="sr-only">Einheit</legend>
       <% _.each(units, function(unitsItem, index) { %>
@@ -432,12 +435,18 @@ var translations = {
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
       <% }); %>
     </fieldset>
+
+
+  
   <% } %>
+  
 </script>
 
 <script type="text/template" id="series_template">
   
-    <h4></h4>
+    
+      <h4></h4>
+    
     <fieldset>
       <legend class="sr-only"></legend>
       <% _.each(serieses, function(seriesItem, index) { %>
@@ -454,21 +463,24 @@ var translations = {
 
 
 
+<!-- Last check: 16.08.2021 -->
 <div class="heading goal-banner indicator goal-5">
   <div class="container">
     <div class="row">
+      
       <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/dns-indicators/5" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" id="goal-5"/>
+        <a href="/dns-indicators/5" title="Zeigt die Indikatorenliste zum SDG-Ziel an." onclick="updateVisitCountMinus()">
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" id="goal-5" class="goal-icon-image goal-icon-image-"/>
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
+      
         <div>
-          <h1 class="titles goal-5" title=": Gleichstellung" >
-            Gleichstellung – <i title=": Wirtschaftliche Teilhabe von Frauen global stärken">Wirtschaftliche Teilhabe von Frauen global stärken</i>
-            <span class="lead-copy">
-              5.1.e: Berufliche Qualifizierung von Frauen und Mädchen durch deutsche entwicklungspolitische Zusammenarbeit
-            </span>
+          <h1>
+            
+            Indikator 5.1.e
+            
+            <span class="lead-copy">Berufliche Qualifizierung von Frauen und Mädchen durch deutsche entwicklungspolitische Zusammenarbeit</span>
           </h1>
         </div>
       </div>
@@ -480,8 +492,8 @@ var translations = {
   
 <ol class="breadcrumb">
   
-  <li><a href="/dns-indicators/">Start</a></li>
-  <li><a href="/dns-indicators/5" title="Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen">Ziel 5</a></li>
+  <li><a href="/dns-indicators/" onclick="updateVisitCountMinus()">Start</a></li>
+  <li><a href="/dns-indicators/5" title="Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen" onclick="updateVisitCountMinus()">Ziel 5</a></li>
   <li class="active">Indikator 5.1.e</li>
   
 </ol>
@@ -517,6 +529,8 @@ var translations = {
 
   
 
+  
+
 <div class="row" id="page-content">
   <div class="col-xs-12">
     <div>
@@ -530,7 +544,9 @@ var translations = {
 </div>
 
 
-  
+  <!-- Last check: 21.10.2021 -->
+
+
 
 
 <div class="row"
@@ -541,6 +557,7 @@ var translations = {
   data-charttitle="Frauen und Mädchen, die durch berufliche Qualifizierungsmaßnahmen deutscher entwicklungspolitischer Zusammenarbeit erreicht wurden"
   data-charttitles="null"
   data-measurementunit="in Tausend"
+  data-xaxislabel=""
   data-showdata="true"
   data-graphtype="bar"
   data-geocoderegex=""
@@ -551,9 +568,13 @@ var translations = {
   data-showline="true"
   data-spangaps="true"
   data-graphannotations="null"
+  data-graphtargetlines="null"
+  data-graphseriesbreaks="null"
   data-indicatordownloads="null"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;1 000&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;},{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;display&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Zeitreihe&quot;,&quot;Ziel&quot;]},&quot;title&quot;:&quot;Anzeigen&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
+  data-graphstepsize="null"
 >
   
   <span role="status" class="sr-only" id="indicator-data-view-status"></span>
@@ -686,6 +707,14 @@ opensdg.chartConfigAlter(function(config, info) {
     }
     // Add these overrides onto the normal config.
     $.extend(true, config, overrides);
+  }
+  else {
+    // Otherwise remove any min/max that may be there.
+    try {
+      delete config.options.scales.yAxes[0].ticks.min;
+      delete config.options.scales.yAxes[0].ticks.max;
+    }
+    catch(e) {}
   }
 });
 </script>
@@ -862,6 +891,27 @@ opensdg.chartConfigAlter(function(config, info) {
     }
 });
 </script>
+
+<script>
+opensdg.chartConfigAlter(function(config, info) {
+  if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
+    var overrides = {
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              stepSize: info.graphStepsize.step,
+            }
+          }]
+        }
+      }
+    }
+    // Add these overrides onto the normal config.
+    $.extend(true, config, overrides);
+  }
+});
+</script>
+
 
 <script>
 opensdg.chartConfigAlter(function(config, info) {
@@ -2692,6 +2742,7 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
+
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
@@ -2731,8 +2782,8 @@ data-event-label="Change to indicator.sources tab"
 <!-- Google Analytics -->
 
 <!-- /.container </div> -->
+<!-- Last check: 09.09.2021 -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
@@ -2754,18 +2805,25 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
 <script>translations['general'] = translations['general'] || {};
     translations['general']['hide'] = '';</script>
 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220113112204'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220113113604'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220113112204"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220113113604"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -2798,6 +2856,7 @@ $(function() {
               chartTitle: domData.charttitle,
               chartTitles: domData.charttitles,
               measurementUnit: domData.measurementunit,
+              xAxisLabel: domData.xaxislabel,
               showData: domData.showdata,
               graphType: domData.graphtype,
               startValues: domData.startvalues,
@@ -2806,9 +2865,13 @@ $(function() {
               showLine: domData.showline,
               spanGaps: domData.spangaps,
               graphAnnotations: domData.graphannotations,
+              graphTargetLines: domData.graphtargetlines,
+              graphSeriesBreaks: domData.graphseriesbreaks,
               indicatorDownloads: domData.indicatordownloads,
+              dataSchema: domData.dataschema,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
               precision: domData.precision,
+              graphStepsize: domData.graphstepsize,
             }),
             view  = new indicatorView(model, {
               rootElement: '#indicatorData',
@@ -2832,18 +2895,35 @@ $(function() {
 
 
 });
+
 </script>
 
+<script src="html2pdf.bundle.min.js"></script>
+<script src="/html2pdf/js/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+<script type="text/javascript">
+  function generatePDF() {
+    // Choose the element that our invoice is rendered in.
+    var element = document.getElementById('chart-canvas');
+    var filename = chartInfo.indicatorId + '.png';
+    var options = {
+      // These options fix the height, width, and position.
+      margin: [20, 20, 20, 20],
+      filename: filename,
+      width: 500
+    };
 
+    // New Promise-based usage:
+    //html2pdf(element, options);
+    html2pdf(element, {
+      margin:       1,
+      filename:     'myfile.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { dpi: 192, letterRendering: true },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    });
 
-<script>
-
-function exportUsingJSPDF(){
-  console.log("Yes");
-  const doc = new jsPDF();
-  doc.text("Hello world2!", 10, 10);
-  doc.save("a4.pdf");
-}
+  }
 </script>
 
 
