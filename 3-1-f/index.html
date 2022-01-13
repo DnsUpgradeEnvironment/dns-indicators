@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113104330">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113105334">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -263,17 +263,11 @@ var translations = {
 
 
   <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
-      <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/dns-indicators/en/3-1-f/">
-              English
-            </a>
-          </li></ul>
-  </div>
+  <i class="fa fa-globe language-toggle-globe-links"></i>
+  <ul class="language-toggle-links"><li class="language-option-en">
+      <a class="language-toggle-link" href="/dns-indicators/en/3-1-f/"><span class="language-name">English</span>
+        <span class="language-abbreviation">en</span></a>
+    </li></ul>
 </div>
 
 
@@ -361,17 +355,11 @@ var translations = {
 
 
   <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
-      <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/dns-indicators/en/3-1-f/">
-              English
-            </a>
-          </li></ul>
-  </div>
+  <i class="fa fa-globe language-toggle-globe-links"></i>
+  <ul class="language-toggle-links"><li class="language-option-en">
+      <a class="language-toggle-link" href="/dns-indicators/en/3-1-f/"><span class="language-name">English</span>
+        <span class="language-abbreviation">en</span></a>
+    </li></ul>
 </div>
 
 
@@ -768,7 +756,9 @@ opensdg.annotationPresets = {
         label: {
             position: 'top',
             content: translations.indicator.annotation_series_break,
+            xAdjust: +60,
         },
+
     },
 };
 
@@ -917,7 +907,7 @@ opensdg.chartConfigAlter(function(config, info) {
 
           </div>
           <div id="plotLegend"></div>
-          
+          </u>
 
 
 
@@ -925,27 +915,33 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
+          
+          <dt><u>Datenquelle</u>:</dt>
+          
         <dd>Statistisches Bundesamt</dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
+        <dt><u>Geographische Abdeckung</u>:</dt>
         <dd>Deutschland</dd>
         
 
         
-        <dt>Einheit:</dt>
+        <dt><u>Einheit</u>:</dt>
         <dd>in&nbsp;% aller Erwachsenen</dd>
         
 
         
-        <dt>Anmerkung:</dt>
+
+        
+        <dt><u>Anmerkung</u>:</dt>
         <dd>Datenerhebung in den Jahren 1999, 2003, 2005, 2009, 2013 und 2017.  Altersstandardisierte Ergebnisse auf Basis der neuen Europastandardbevölkerung.</dd>
         
 
         
-        <dt>:</dt>
+
+        
+        <dt><u></u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
         
     <dl>
@@ -969,7 +965,7 @@ opensdg.chartConfigAlter(function(config, info) {
     </div>
     <div id="selectionsTable"></div>
 <dl id="tableTargetLines" class="clearfix"></dl>
-
+</u>
 
 
 
@@ -977,27 +973,33 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
+          
+          <dt><u>Datenquelle</u>:</dt>
+          
         <dd>Statistisches Bundesamt</dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
+        <dt><u>Geographische Abdeckung</u>:</dt>
         <dd>Deutschland</dd>
         
 
         
-        <dt>Einheit:</dt>
+        <dt><u>Einheit</u>:</dt>
         <dd>in&nbsp;% aller Erwachsenen</dd>
         
 
         
-        <dt>Anmerkung:</dt>
+
+        
+        <dt><u>Anmerkung</u>:</dt>
         <dd>Datenerhebung in den Jahren 1999, 2003, 2005, 2009, 2013 und 2017.  Altersstandardisierte Ergebnisse auf Basis der neuen Europastandardbevölkerung.</dd>
         
 
         
-        <dt>:</dt>
+
+        
+        <dt><u></u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
         
     <dl>
@@ -1011,7 +1013,7 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Karte wird geladen" />
 </div>
-
+</u>
 
 
 
@@ -1019,27 +1021,33 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
+          
+          <dt><u>Datenquelle</u>:</dt>
+          
         <dd>Statistisches Bundesamt</dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
+        <dt><u>Geographische Abdeckung</u>:</dt>
         <dd>Deutschland</dd>
         
 
         
-        <dt>Einheit:</dt>
+        <dt><u>Einheit</u>:</dt>
         <dd>in&nbsp;% aller Erwachsenen</dd>
         
 
         
-        <dt>Anmerkung:</dt>
+
+        
+        <dt><u>Anmerkung</u>:</dt>
         <dd>Datenerhebung in den Jahren 1999, 2003, 2005, 2009, 2013 und 2017.  Altersstandardisierte Ergebnisse auf Basis der neuen Europastandardbevölkerung.</dd>
         
 
         
-        <dt>:</dt>
+
+        
+        <dt><u></u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
         
     <dl>
@@ -2370,12 +2378,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220113104330'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220113105334'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220113104330"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220113105334"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

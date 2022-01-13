@@ -882,7 +882,7 @@ event.prototype = {
 var accessibilitySwitcher = function() {
 
   var contrastIdentifiers = ['default', 'high'],
-      contrastType = "" || "default",
+      contrastType = "single" || "default",
       singleToggle = (contrastType === 'long' || contrastType === 'single');
 
   if (contrastType === 'long') {
@@ -1086,6 +1086,7 @@ opensdg.maptitles = function(indicatorId) {
   return [this.mapTitle, this.mapUnit] ;
 
 };
+//Last check: 17.09.2021
 var indicatorModel = function (options) {
 
   var helpers = 
@@ -1102,7 +1103,7 @@ var VALUE_COLUMN = 'Value';
 // Note this headline color is overridden in indicatorView.js.
 var HEADLINE_COLOR = '#777777';
 var SERIES_TOGGLE = true;
-var GRAPH_TITLE_FROM_SERIES = false;
+var GRAPH_TITLE_FROM_SERIES = true;
 
   /**
  * Model helper functions with general utility.
@@ -1415,12 +1416,17 @@ function getSeriesFromStartValues(startValues) {
  * @param {Array} edges
  * @return {Array} Field item states
  */
-function getInitialFieldItemStates(rows, edges, columns) {
-  var initial = getFieldColumnsFromData(columns).map(function(field) {
+
+function getInitialFieldItemStates(rows, edges, columns, dataSchema) {
+  var fields = getFieldColumnsFromData(columns);
+  sortFieldNames(fields, dataSchema);
+  var initial = fields.map(function(field) {
+    var values = getUniqueValuesByProperty(field, rows);
+    sortFieldValueNames(field, values, dataSchema);
     return {
       field: field,
       hasData: true,
-      values: getUniqueValuesByProperty(field, rows).map(function(value) {
+      values: values.map(function(value) {
         return {
           value: value,
           state: 'default',
@@ -1431,7 +1437,7 @@ function getInitialFieldItemStates(rows, edges, columns) {
     };
   }, this);
 
-  return sortFieldItemStates(initial, edges);
+  return sortFieldItemStates(initial, edges, dataSchema);
 }
 
 /**
@@ -1439,15 +1445,16 @@ function getInitialFieldItemStates(rows, edges, columns) {
  * @param {Array} edges
  * return {Array} Sorted field item states
  */
-function sortFieldItemStates(fieldItemStates, edges) {
+function sortFieldItemStates(fieldItemStates, edges, dataSchema) {
   if (edges.length > 0) {
-    var froms = getUniqueValuesByProperty('From', edges);
-    var tos = getUniqueValuesByProperty('To', edges);
+    var froms = getUniqueValuesByProperty('From', edges).sort();
+    var tos = getUniqueValuesByProperty('To', edges).sort();
     var orderedEdges = froms.concat(tos);
     var fieldsNotInEdges = fieldItemStates
       .map(function(fis) { return fis.field; })
       .filter(function(field) { return !orderedEdges.includes(field); });
     var customOrder = orderedEdges.concat(fieldsNotInEdges);
+    sortFieldNames(customOrder, dataSchema);
 
     return _.sortBy(fieldItemStates, function(item) {
       return customOrder.indexOf(item.field);
@@ -1564,7 +1571,9 @@ function fieldItemStatesForView(fieldItemStates, fieldsByUnit, selectedUnit, dat
           var fieldItemValue = fieldItem.values.find(function(valueItem) {
             return valueItem.value === selectedValue;
           });
-          fieldItemValue.checked = true;
+          if (fieldItemValue) {
+            fieldItemValue.checked = true;
+          }
         })
       }
     });
@@ -1585,15 +1594,61 @@ function fieldItemStatesForView(fieldItemStates, fieldsByUnit, selectedUnit, dat
  */
 function sortFieldsForView(fieldItemStates, edges) {
   if (edges.length > 0 && fieldItemStates.length > 0) {
-    edges.forEach(function(edge) {
-      // This makes sure children are right after their parents.
-      var parentIndex = fieldItemStates.findIndex(function(fieldItem) {
-        return fieldItem.field == edge.From;
+
+    var parents = edges.map(function(edge) { return edge.From; });
+    var children = edges.map(function(edge) { return edge.To; });
+    var topLevelParents = [];
+    parents.forEach(function(parent) {
+      if (!(children.includes(parent)) && !(topLevelParents.includes(parent))) {
+        topLevelParents.push(parent);
+      }
+    });
+
+    var topLevelParentsByChild = {};
+    children.forEach(function(child) {
+      var currentParent = edges.find(function(edge) { return edge.To === child; }),
+          currentChild = child;
+      while (currentParent) {
+        currentParent = edges.find(function(edge) { return edge.To === currentChild; });
+        if (currentParent) {
+          currentChild = currentParent.From;
+          topLevelParentsByChild[child] = currentParent.From;
+        }
+      }
+    });
+    fieldItemStates.forEach(function(fieldItem) {
+      if (topLevelParents.includes(fieldItem.field) || typeof topLevelParentsByChild[fieldItem.field] === 'undefined') {
+        fieldItem.topLevelParent = '';
+      }
+      else {
+        fieldItem.topLevelParent = topLevelParentsByChild[fieldItem.field];
+      }
+    });
+
+    // As an intermediary step, create a hierarchical structure grouped
+    // by the top-level parent.
+    var tempHierarchy = [];
+    var tempHierarchyHash = {};
+    fieldItemStates.forEach(function(fieldItem) {
+      if (fieldItem.topLevelParent === '') {
+        fieldItem.children = [];
+        tempHierarchyHash[fieldItem.field] = fieldItem;
+        tempHierarchy.push(fieldItem);
+      }
+    });
+    fieldItemStates.forEach(function(fieldItem) {
+      if (fieldItem.topLevelParent !== '') {
+        tempHierarchyHash[fieldItem.topLevelParent].children.push(fieldItem);
+      }
+    });
+
+    // Now we clear out the field items and add them back as a flat list.
+    fieldItemStates.length = 0;
+    tempHierarchy.forEach(function(fieldItem) {
+      fieldItemStates.push(fieldItem);
+      fieldItem.children.forEach(function(child) {
+        fieldItemStates.push(child);
       });
-      var childIndex = fieldItemStates.findIndex(function(fieldItem) {
-        return fieldItem.field == edge.To;
-      });
-      arrayMove(fieldItemStates, childIndex, parentIndex + 1);
     });
   }
 }
@@ -1637,7 +1692,6 @@ function getCombinationData(fieldItems) {
   // First get a list of all the single field/value pairs.
   var fieldValuePairs = [];
   fieldItems.forEach(function(fieldItem) {
-    //console.log("X ",fieldItem.field, fieldItems.indexOf(fieldItem));
     fieldItem.values.forEach(function(value) {
       var pair = {};
       pair[fieldItem.field] = value;
@@ -1645,47 +1699,45 @@ function getCombinationData(fieldItems) {
     });
   });
 
+  // Generate all possible subsets of these key/value pairs.
+  var powerset = [];
+  // Start off with an empty item.
+  powerset.push([]);
+  for (var i = 0; i < fieldValuePairs.length; i++) {
+    for (var j = 0, len = powerset.length; j < len; j++) {
+      var candidate = powerset[j].concat(fieldValuePairs[i]);
+      if (!hasDuplicateField(candidate)) {
+        powerset.push(candidate);
+      }
+    }
+  }
 
+  function hasDuplicateField(pairs) {
+    var fields = [], i;
+    for (i = 0; i < pairs.length; i++) {
+      var field = Object.keys(pairs[i])[0]
+      if (fields.includes(field)) {
+        return true;
+      }
+      else {
+        fields.push(field);
+      }
+    }
+    return false;
+  }
 
-   // Next get a list of each single pair combined with every other.
-   var fieldValuePairCombinations = {};
-   fieldValuePairs.forEach(function(fieldValuePair) {
-     var combinationsForCurrentPair = Object.assign({}, fieldValuePair);
-     fieldValuePairs.forEach(function(fieldValuePairToAdd) {
-       // The following conditional reflects that we're not interested in combinations
-       // within the same field. (Eg, not interested in combination of Female and Male).
-       if (Object.keys(fieldValuePair)[0] !== Object.keys(fieldValuePairToAdd)[0]) {
-         Object.assign(combinationsForCurrentPair, fieldValuePairToAdd);
-         var combinationKeys = Object.keys(combinationsForCurrentPair).sort();
-         var combinationValues = Object.values(combinationsForCurrentPair).sort();
-         var combinationUniqueId = JSON.stringify(combinationKeys.concat(combinationValues));
-         if (!(combinationUniqueId in fieldValuePairCombinations)) {
-           fieldValuePairCombinations[combinationUniqueId] = Object.assign({}, combinationsForCurrentPair);
-         }
-       }
-     });
-   });
-   fieldValuePairCombinations = Object.values(fieldValuePairCombinations);
+  // Remove the empty item.
+  powerset.shift();
 
-   var unsortedfieldValuePairCombinations = fieldValuePairs.concat(fieldValuePairCombinations);
-
-   // Due to the forEch loops above the Combinations are in a more or less random order right now.
-   // The following sorts the combinations depending on the order of the "fieldItems".
-   sortedFieldValuePairs = [];
-   unsortedfieldValuePairCombinations.forEach(function(combinationArray){
-     var combinations = {};
-     fieldItems.forEach(function(fieldItem) {
-       if (Object.keys(combinationArray).indexOf(fieldItem.field) != -1){
-         var pair = {};
-         pair[fieldItem.field] = combinationArray[fieldItem.field];
-         Object.assign(combinations, pair);
-       }
-     });
-     sortedFieldValuePairs.push(combinations);
-   });
-
-   return sortedFieldValuePairs;
- }
+  return powerset.map(function(combinations) {
+    // We want to merge these into a single object.
+    var combinedSubset = {};
+    combinations.forEach(function(keyValue) {
+      Object.assign(combinedSubset, keyValue);
+    });
+    return combinedSubset;
+  });
+}
 
 /**
  * @param {Array} startValues Objects containing 'field' and 'value'
@@ -1857,7 +1909,54 @@ function getDataBySelectedFields(rows, selectedFields) {
   });
 }
 
-  /**
+/**
+ * @param {Array} fieldNames
+ * @param {Object} dataSchema
+ */
+function sortFieldNames(fieldNames, dataSchema) {
+  if (dataSchema && dataSchema.fields) {
+    var schemaFieldNames = dataSchema.fields.map(function(field) { return field.name; });
+    // If field names have been translated, we may need to use titles.
+    if (schemaFieldNames.length > 0 && !(fieldNames.includes(schemaFieldNames[0]))) {
+      schemaFieldNames = dataSchema.fields.map(function(field) { return field.title; });
+    }
+    fieldNames.sort(function(a, b) {
+      return schemaFieldNames.indexOf(a) - schemaFieldNames.indexOf(b);
+    });
+  }
+  else {
+    fieldNames.sort();
+  }
+}
+
+/**
+ * @param {string} fieldName
+ * @param {Array} fieldValues
+ * @param {Object} dataSchema
+ */
+function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
+  if (dataSchema && dataSchema.fields) {
+    var fieldSchema = dataSchema.fields.find(function(x) { return x.name == fieldName; });
+    // If field names have been translated, we may need to use titles.
+    if (!fieldSchema) {
+      fieldSchema = dataSchema.fields.find(function(x) { return x.title == fieldName; });
+    }
+    if (fieldSchema && fieldSchema.constraints && fieldSchema.constraints.enum) {
+      fieldValues.sort(function(a, b) {
+        return fieldSchema.constraints.enum.indexOf(a) - fieldSchema.constraints.enum.indexOf(b);
+      });
+    }
+    else {
+      fieldValues.sort();
+    }
+  }
+  else {
+    fieldValues.sort();
+  }
+}
+
+  //Last check: 17.09.2021
+/**
  * Model helper functions related to charts and datasets.
  */
 
@@ -1889,8 +1988,44 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries) {
-  return getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks) {
+  var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
+  if (graphTargetLines) {
+    annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
+  }
+  if (graphSeriesBreaks) {
+    annotations = annotations.concat(getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries));
+  }
+  return annotations;
+}
+
+/**
+ * @param {Array} graphTargetLines Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphTargetLines, selectedUnit, selectedSeries).map(function(targetLine) {
+    targetLine.preset = 'target_line';
+    targetLine.label = { content: targetLine.label_content };
+    return targetLine;
+  });
+
+}
+
+/**
+ * @param {Array} graphSeriesBreaks Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphSeriesBreaks, selectedUnit, selectedSeries).map(function(seriesBreak) {
+    seriesBreak.preset = 'series_break';
+    seriesBreak.label = { content: seriesBreak.label_content };
+    return seriesBreak;
+  });
 }
 
 /**
@@ -1951,9 +2086,6 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       index++;
     }
   }, this);
-
-  //datasets.sort(function(a, b) { return (a.label > b.label) ? 1 : -1; });
-
 
   if (headline.length > 0) {
     dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
@@ -2150,6 +2282,8 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     pointBackgroundColor: background,
     borderDash: border,
     borderWidth: 2,
+    headline: false,
+    pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
     excess: excess,
     spanGaps: spanGaps,
@@ -2177,8 +2311,7 @@ function getBaseDataset() {
  * @return {string} Human-readable description of combo
  */
 function getCombinationDescription(combination, fallback) {
-  //console.log("Combination for legend: ", combination);
-  var keys = Object.keys(combination); //.sort();
+  var keys = Object.keys(combination);
   if (keys.length === 0) {
     return fallback;
   }
@@ -2225,10 +2358,22 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
     pointBorderColor: getHeadlineColor(),
     pointBackgroundColor: getHeadlineColor(),
     borderWidth: 4,
+    headline: false,
+    pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
     showLine: showLine,
     spanGaps: spanGaps,
   });
+}
+
+  /**
+   * @param {Array} graphStepsize Objects containing 'unit' and 'title'
+   * @param {String} selectedUnit
+   * @param {String} selectedSeries
+   */
+  function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
+    return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
+
 }
 
   /**
@@ -2403,6 +2548,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     getGraphLimits: getGraphLimits,
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,
+    getGraphStepsize: getGraphStepsize,
     // Backwards compatibility.
     footerFields: deprecated('helpers.footerFields'),
   }
@@ -2432,6 +2578,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   this.chartTitles = options.chartTitles;
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
+//  this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
   this.showData = options.showData;
   this.selectedFields = [];
@@ -2451,13 +2598,18 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   this.showLine = options.showLine; // ? options.showLine : true;
   this.spanGaps = options.spanGaps;
   this.graphAnnotations = options.graphAnnotations;
+  this.graphTargetLines = options.graphTargetLines;
+  this.graphSeriesBreaks = options.graphSeriesBreaks;
   this.indicatorDownloads = options.indicatorDownloads;
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
+  this.dataSchema = options.dataSchema;
+  this.graphStepsize = options.graphStepsize;
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
       this.units = helpers.getUniqueValuesByProperty(helpers.UNIT_COLUMN, this.data);
+      helpers.sortFieldValueNames(helpers.UNIT_COLUMN, this.units, this.dataSchema);
       this.selectedUnit = this.units[0];
       this.fieldsByUnit = helpers.fieldsUsedByUnit(this.units, this.data, this.allColumns);
       this.dataHasUnitSpecificFields = helpers.dataHasUnitSpecificFields(this.fieldsByUnit);
@@ -2466,15 +2618,18 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
 
   this.refreshSeries = function() {
     if (this.hasSerieses) {
+      if (helpers.GRAPH_TITLE_FROM_SERIES) {
+        this.chartTitle = this.selectedSeries;
+      }
       this.data = helpers.getDataBySeries(this.allData, this.selectedSeries);
-      this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
+      this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
       this.fieldsBySeries = helpers.fieldsUsedBySeries(this.serieses, this.data, this.allColumns);
       this.dataHasSeriesSpecificFields = helpers.dataHasSeriesSpecificFields(this.fieldsBySeries);
     }
   }
 
   this.initialiseFields = function() {
-    this.fieldItemStates = helpers.getInitialFieldItemStates(this.data, this.edgesData, this.allColumns);
+    this.fieldItemStates = helpers.getInitialFieldItemStates(this.data, this.edgesData, this.allColumns, this.dataSchema);
     this.validParentsByChild = helpers.validParentsByChild(this.edgesData, this.fieldItemStates, this.data);
     this.selectableFields = helpers.getFieldNames(this.fieldItemStates);
     this.allowedFields = helpers.getInitialAllowedFields(this.selectableFields, this.edgesData);
@@ -2487,6 +2642,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   this.serieses = this.hasSerieses ? helpers.getUniqueValuesByProperty(helpers.SERIES_COLUMN, this.allData) : [];
   this.hasStartValues = Array.isArray(this.startValues) && this.startValues.length > 0;
   if (this.hasSerieses) {
+    helpers.sortFieldValueNames(helpers.SERIES_COLUMN, this.serieses, this.dataSchema);
     this.selectedSeries = this.serieses[0];
     if (this.hasStartValues) {
       this.selectedSeries = helpers.getSeriesFromStartValues(this.startValues) || this.selectedSeries;
@@ -2495,7 +2651,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   }
   else {
     this.data = this.allData;
-    this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
+    this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
   }
 
   // calculate some initial values:
@@ -2583,7 +2739,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
         var startingUnit = this.selectedUnit;
         if (this.hasStartValues) {
           var unitInStartValues = helpers.getUnitFromStartValues(this.startValues);
-          if (unitInStartValues) {
+          if (unitInStartValues && this.units.includes(unitInStartValues)) {
             startingUnit = unitInStartValues;
           }
         }
@@ -2687,7 +2843,6 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
       headline = helpers.sortData(headline, this.selectedUnit);
     }
 
-    console.log("selectedFields: ", this.selectedFields);
     var combinations = helpers.getCombinationData(this.selectedFields);
     var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps);
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
@@ -2718,10 +2873,11 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
       selectedSeries: this.selectedSeries,
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
-      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries),
+      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks),
       chartTitle: this.chartTitle,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
+      graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
     });
   };
 };
@@ -2744,7 +2900,7 @@ var mapView = function () {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
-      mapOptions: {"minZoom":5,"maxZoom":10,"tileURL":"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w","attribution":"<a href=\"https://www.openstreetmap.org/copyright\">&copy; OpenStreetMap</a> contributors |<br class=\"visible-xs\"> <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2020</a> |<br class=\"hidden-lg\"> <a href=\"https://www.destatis.de/DE/Home/_inhalt.html\">&copy; Statistisches Bundesamt (Destatis), 2020</a>"},"colorRange":[["#FCE9EB","#F7BDC4","#F2929D","#ED6676","#E83A4F","#E5243B","#B71D2F","#891623","#5C0E18","#2E070C"],["#FCF8EB","#F7E9C2","#F2DB9A","#EDCD72","#E8BE49","#E5B735","#CEA530","#A08025","#735C1B","#453710"],["#EDF5EB","#C9E2C3","#A6CF9C","#82BC74","#5EA94C","#4C9F38","#3D7F2D","#2E5F22","#1E4016","#0F200B"],["#F9E8EA","#EEBAC0","#E28C96","#D65E6C","#CB3042","#C5192D","#9E1424","#760F1B","#4F0A12","#270509"],["#FFEBE9","#FFC4BC","#FF9D90","#FF7564","#FF4E37","#FF3A21","#CC2E1A","#992314","#66170D","#330C07"],["#E9F8FB","#BEEBF6","#93DEF0","#67D1EA","#3CC4E5","#26BDE2","#1E97B5","#177188","#0F4C5A","#08262D"],["#FFF9E7","#FEEDB6","#FEE185","#FDD554","#FCC923","#FCC30B","#CA9C09","#977507","#654E04","#322702"],["#F6E8EC","#E3BAC6","#D18CA1","#BE5E7B","#AB3055","#A21942","#821435","#610F28","#410A1A","#20050D"],["#FFF0E9","#FED2BE","#FEB492","#FE9666","#FD783B","#FD6925","#CA541E","#983F16","#652A0F","#331507"],["#FCE7F0","#F5B8D1","#EE89B3","#E75A95","#E02B76","#DD1367","#B10F52","#850B3E","#580829","#2C0415"],["#FFF5E6","#FEE2B3","#FECE80","#FEBA4D","#FDA71A","#FD9D00","#CA7E00","#985E00","#653F00","#331F00"],["#FAF5EA","#EFE0C0","#E4CC96","#D9B86C","#CEA342","#C9992D","#A17A24","#795C1B","#503D12","#281F09"],["#ECF2EC","#C5D8C7","#9FBFA2","#79A57C","#528B57","#3F7E44","#326536","#264C29","#19321B","#0D190E"],["#E7F5FB","#B6E0F4","#85CBEC","#54B6E4","#23A1DD","#0A97D9","#0879AE","#065B82","#043C57","#021E2B"],["#EEF9EA","#CCECBF","#ABE095","#89D36B","#67C640","#56C02B","#459A22","#34731A","#224D11","#112609"],["#E6F0F5","#B3D2E2","#80B4CE","#4D95BA","#1A77A7","#00689D","#00537E","#003E5E","#002A3F","#00151F"],["#E8EDF0","#BAC8D2","#8CA4B5","#5E7F97","#305A79","#19486A","#143A55","#0F2B40","#0A1D2A","#050E15"]],"noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"color":"#888","fillOpacity":0.7},"styleHighlighted":{"weight":1,"opacity":1,"color":"#111","fillOpacity":0.7},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":55}},
+      mapOptions: {"minZoom":5,"maxZoom":10,"tileURL":"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w","attribution":"<a href=\"https://www.openstreetmap.org/copyright\">&copy; OpenStreetMap</a> contributors |<br class=\"visible-xs\"> <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2022</a> |<br class=\"hidden-lg\"> <a href=\"https://www.destatis.de/DE/Home/_inhalt.html\">&copy; Statistisches Bundesamt (Destatis), 2022</a>"},"colorRange":[["#FCE9EB","#F7BDC4","#F2929D","#ED6676","#E83A4F","#E5243B","#B71D2F","#891623","#5C0E18","#2E070C"],["#FCF8EB","#F7E9C2","#F2DB9A","#EDCD72","#E8BE49","#E5B735","#CEA530","#A08025","#735C1B","#453710"],["#EDF5EB","#C9E2C3","#A6CF9C","#82BC74","#5EA94C","#4C9F38","#3D7F2D","#2E5F22","#1E4016","#0F200B"],["#F9E8EA","#EEBAC0","#E28C96","#D65E6C","#CB3042","#C5192D","#9E1424","#760F1B","#4F0A12","#270509"],["#FFEBE9","#FFC4BC","#FF9D90","#FF7564","#FF4E37","#FF3A21","#CC2E1A","#992314","#66170D","#330C07"],["#E9F8FB","#BEEBF6","#93DEF0","#67D1EA","#3CC4E5","#26BDE2","#1E97B5","#177188","#0F4C5A","#08262D"],["#FFF9E7","#FEEDB6","#FEE185","#FDD554","#FCC923","#FCC30B","#CA9C09","#977507","#654E04","#322702"],["#F6E8EC","#E3BAC6","#D18CA1","#BE5E7B","#AB3055","#A21942","#821435","#610F28","#410A1A","#20050D"],["#FFF0E9","#FED2BE","#FEB492","#FE9666","#FD783B","#FD6925","#CA541E","#983F16","#652A0F","#331507"],["#FCE7F0","#F5B8D1","#EE89B3","#E75A95","#E02B76","#DD1367","#B10F52","#850B3E","#580829","#2C0415"],["#FFF5E6","#FEE2B3","#FECE80","#FEBA4D","#FDA71A","#FD9D00","#CA7E00","#985E00","#653F00","#331F00"],["#FAF5EA","#EFE0C0","#E4CC96","#D9B86C","#CEA342","#C9992D","#A17A24","#795C1B","#503D12","#281F09"],["#ECF2EC","#C5D8C7","#9FBFA2","#79A57C","#528B57","#3F7E44","#326536","#264C29","#19321B","#0D190E"],["#E7F5FB","#B6E0F4","#85CBEC","#54B6E4","#23A1DD","#0A97D9","#0879AE","#065B82","#043C57","#021E2B"],["#EEF9EA","#CCECBF","#ABE095","#89D36B","#67C640","#56C02B","#459A22","#34731A","#224D11","#112609"],["#E6F0F5","#B3D2E2","#80B4CE","#4D95BA","#1A77A7","#00689D","#00537E","#003E5E","#002A3F","#00151F"],["#E8EDF0","#BAC8D2","#8CA4B5","#5E7F97","#305A79","#19486A","#143A55","#0F2B40","#0A1D2A","#050E15"]],"noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"color":"#888","fillOpacity":0.7},"styleHighlighted":{"weight":1,"opacity":1,"color":"#111","fillOpacity":0.7},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":55}},
       mapLayers: [{"subfolder":"regions","label":"Region","min_zoom":0,"max_zoom":20,"staticBorders":true}],
       precision: precision,
       decimalSeparator: decimalSeparator,
@@ -2821,7 +2977,7 @@ var indicatorView = function (model, options) {
 
     view_obj.createSelectionsTable(args);
 
-    view_obj.updateChartTitle(args.chartTitle);
+    view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>",""));
   });
 
   this._model.onFieldsComplete.attach(function(sender, args) {
@@ -2893,13 +3049,7 @@ var indicatorView = function (model, options) {
     // loop through the available fields:
     $('.variable-selector').each(function(index, element) {
       var currentField = $(element).data('field');
-
-      // any info?
-      var match = _.find(args.selectedFields, { field : currentField });
       var element = $(view_obj._rootElement).find('.variable-selector[data-field="' + currentField + '"]');
-      var width = match ? (Number(match.values.length / element.find('.variable-options label').length) * 100) + '%' : '0';
-
-      $(element).find('.bar .selected').css('width', width);
 
       // is this an allowed field:
       if (args.allowedFields.includes(currentField)) {
@@ -2914,9 +3064,6 @@ var indicatorView = function (model, options) {
   });
 
   this._model.onFieldsStatusUpdated.attach(function (sender, args) {
-
-    // reset:
-    $(view_obj._rootElement).find('label').removeClass('selected possible excluded');
 
     _.each(args.data, function(fieldGroup) {
       _.each(fieldGroup.values, function(fieldItem) {
@@ -2938,14 +3085,6 @@ var indicatorView = function (model, options) {
 
       // Re-sort the items.
       view_obj.sortFieldGroup(fieldGroupElement);
-    });
-
-    _.each(args.selectionStates, function(ss) {
-      // find the appropriate 'bar'
-      var element = $(view_obj._rootElement).find('.variable-selector[data-field="' + ss.field + '"]');
-      element.find('.bar .default').css('width', ss.fieldSelection.defaultState + '%');
-      element.find('.bar .possible').css('width', ss.fieldSelection.possibleState + '%');
-      element.find('.bar .excluded').css('width', ss.fieldSelection.excludedState + '%');
     });
   });
 
@@ -3006,8 +3145,8 @@ var indicatorView = function (model, options) {
 
   $(this._rootElement).on('click', ':checkbox', function(e) {
 
-    // don't permit excluded selections:
-    if($(this).parent().hasClass('excluded') || $(this).closest('.variable-selector').hasClass('disallowed')) {
+    // don't permit disallowed selections:
+    if ($(this).closest('.variable-selector').hasClass('disallowed')) {
       return;
     }
 
@@ -3017,29 +3156,21 @@ var indicatorView = function (model, options) {
   });
 
   $(this._rootElement).on('click', '.variable-selector', function(e) {
-    var currentSelector = e.target;
 
-    var currentButton = getCurrentButtonFromCurrentSelector(currentSelector);
+    var $button = $(e.target).closest('button');
+    var $options = $(this).find('.variable-options');
 
-    var options = $(this).find('.variable-options');
-    var optionsAreVisible = options.is(':visible');
-    $(options)[optionsAreVisible ? 'hide' : 'show']();
-    currentButton.setAttribute("aria-expanded", optionsAreVisible ? "true" : "false");
-
-    var optionsVisibleAfterClick = options.is(':visible');
-    currentButton.setAttribute("aria-expanded", optionsVisibleAfterClick ? "true" : "false");
+    if ($options.is(':visible')) {
+      $options.hide();
+      $button.attr('aria-expanded', 'false');
+    }
+    else {
+      $options.show();
+      $button.attr('aria-expanded', 'true');
+    }
 
     e.stopPropagation();
   });
-
-  function getCurrentButtonFromCurrentSelector(currentSelector){
-    if(currentSelector.tagName === "H5"){
-      return currentSelector.parentElement;
-    }
-    else if(currentSelector.tagName === "BUTTON"){
-      return currentSelector;
-    }
-  }
 
   this.initialiseFields = function(args) {
     var fieldsContainValues = args.fields.some(function(field) {
@@ -3055,6 +3186,7 @@ var indicatorView = function (model, options) {
       $('#fields').html(template({
         fields: args.fields,
         allowedFields: args.allowedFields,
+        childFields: _.uniq(args.edges.map(function(edge) { return edge.To })),
         edges: args.edges
       }));
 
@@ -3075,8 +3207,13 @@ var indicatorView = function (model, options) {
       selectedUnit: selectedUnit
     }));
 
-    if(!units.length) {
+    
+    if (units.length <= 1) {
+    
       $(this._rootElement).addClass('no-units');
+    }
+    else {
+      $(this._rootElement).removeClass('no-units');
     }
   };
 
@@ -3092,7 +3229,9 @@ var indicatorView = function (model, options) {
         selectedSeries: selectedSeries
       }));
 
-      if(!serieses.length) {
+      
+      if (serieses.length < 1) {
+      
         $(this._rootElement).addClass('no-serieses');
       }
     }
@@ -3105,6 +3244,11 @@ var indicatorView = function (model, options) {
   };
 
   this.alterTableConfig = function(config, info) {
+    // deprecated start
+    if (typeof opensdg.tableConfigAlterations === 'undefined') {
+      opensdg.tableConfigAlterations = [];
+    }
+    // deprecated end
     opensdg.tableConfigAlterations.forEach(function(callback) {
       callback(config, info);
     });
@@ -3112,7 +3256,7 @@ var indicatorView = function (model, options) {
 
   this.alterDataDisplay = function(value, info, context) {
     // If value is empty, we will not alter it.
-    if (value == null || value == undefined ) {
+    if (value == null || value == undefined) {
       return value;
     }
     // Before passing to user-defined dataDisplayAlterations, let's
@@ -3126,6 +3270,11 @@ var indicatorView = function (model, options) {
       return value;
     }
     // Now go ahead with user-defined alterations.
+    // @deprecated start
+    if (typeof opensdg.dataDisplayAlterations === 'undefined') {
+      opensdg.dataDisplayAlterations = [];
+    }
+    // @deprecated end
     opensdg.dataDisplayAlterations.forEach(function(callback) {
       altered = callback(altered, info, context);
     });
@@ -3206,6 +3355,13 @@ var indicatorView = function (model, options) {
             ticks: {
               fontColor: tickColor,
             },
+            scaleLabel: {
+              display: this._model.xAxisLabel ? true : false,
+              labelString: this._model.xAxisLabel,
+              fontColor: tickColor,
+              fontSize: 14,
+              fontFamily: "'Open Sans', Helvetica, Arial, sans-serif",
+            }
           }],
           yAxes: [{
             gridLines: {
@@ -3216,24 +3372,28 @@ var indicatorView = function (model, options) {
             ticks: {
               suggestedMin: 0,
               fontColor: tickColor,
-              callback: function(value) {
-                return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
-              },
+              //callback: function(value) {
+                //return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
+              //},
             },
+
             scaleLabel: {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
               labelString: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
               fontColor: tickColor,
+              fontSize: 14,
+              fontFamily: "'Open Sans', Helvetica, Arial, sans-serif",
             }
           }]
         },
         legendCallback: function(chart) {
             var text = [];
             text.push('<h5 class="sr-only">' + translations.indicator.plot_legend_description + '</h5>');
-            text.push('<ul id="legend">');
+            text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
             _.each(chart.data.datasets, function(dataset) {
               text.push('<li>');
-              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+              text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
@@ -3251,13 +3411,54 @@ var indicatorView = function (model, options) {
           scaler: {}
         },
         tooltips: {
+          backgroundColor: 'rgba(0,0,0,0.7)',
           callbacks: {
             label: function(tooltipItems, data) {
-              return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
+              var label = data.datasets[tooltipItems.datasetIndex].label
+              label = label.replace('<sub>','').replace('</sub>','');
+              if (label.length > 45){
+
+                label = label.split(' ');
+                var line = '';
+
+                for(var i=0; i<label.length; i++){
+                  if (line.concat(label[i]).length < 45){
+                    line = line.concat(label[i] + ' ');
+                  }
+                  else {
+                    break
+                  }
+                }
+                return line;
+              } else {
+                return label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
+              }
+            },
+            afterLabel: function(tooltipItems, data) {
+
+              var label = data.datasets[tooltipItems.datasetIndex].label;
+              label = label.replace('<sub>','').replace('</sub>','');
+              if (label.length > 45){
+                label = label.split(' ');
+                var re = [];
+                var line = '';
+                for (var i=0; i<label.length; i++){
+                  if (line.concat(label[i]).length < 45){
+                    line = line.concat(label[i] + ' ');
+                  } else {
+                    re.push(line);
+                    line = '';
+                    line = line.concat(label[i] + ' ');
+                  }
+                };
+                re.push(line.slice(0, -1) + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip'));
+                re.shift();
+              }
+              return re;
             },
             afterBody: function() {
               var unit = view_obj._model.selectedUnit ? translations.t(view_obj._model.selectedUnit) : view_obj._model.measurementUnit;
-              if (typeof unit !== 'undefined' && unit !== '') {
+              if (typeof unit !== 'undefined' && unit !== '' && unit !== translations.t('no unit')) {
                 return '\n' + translations.indicator.unit + ': ' + unit;
               }
             }
@@ -3495,11 +3696,30 @@ var indicatorView = function (model, options) {
   this.createSelectionsTable = function(chartInfo) {
     this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
+    this.createTableTargetLines(chartInfo.graphAnnotations);
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
     this.createSourceButton(chartInfo.shortIndicatorId, '#tableSelectionDownload');
     this.createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#tableSelectionDownload');
   };
 
+  this.createTableTargetLines = function(graphAnnotations) {
+    var targetLines = graphAnnotations.filter(function(a) { return a.preset === 'target_line'; });
+    var $targetLines = $('#tableTargetLines');
+    $targetLines.empty();
+    targetLines.forEach(function(targetLine) {
+      var targetLineLabel = targetLine.label.content;
+      if (!targetLineLabel) {
+        targetLineLabel = opensdg.annotationPresets.target_line.label.content;
+      }
+      $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLine.value + '</dd>');
+    });
+    if (targetLines.length === 0) {
+      $targetLines.hide();
+    }
+    else {
+      $targetLines.show();
+    }
+  }
 
   this.createDownloadButton = function(table, name, indicatorId, el) {
     if(window.Modernizr.blobconstructor) {
