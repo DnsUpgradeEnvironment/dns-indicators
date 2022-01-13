@@ -2,7 +2,7 @@
 {% include head.html %}
 <script src='{{ site.baseurl }}/assets/js/custom.js?v={{ cache_bust }}'></script>
 
-<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.15</button>
+<button onclick="exportUsingJSPDF()">Export Using JSPDF 4.1</button>
 <div id="report">
   <div id="cover" class="myDivClass" style="background-color:white">
     <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
@@ -37,7 +37,7 @@
           <h3>Ziele und Intention der Bundesregierung</h3>
           <p>{{ intention }}</p>
           <h3>Inhalt und Entwicklung des Indikators</h3>
-          <h3>{{ content }}</h3>
+          <p>{{ content }}</p>
         </div>
       {% endfor %}
     {% endfor %}
