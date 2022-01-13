@@ -21,8 +21,8 @@
       {% for indicator in group.items %}
 
         {% assign definition = indicator['dns_indicator_definition'] | replace: "<br>", " " %}
-        {% assign  intention = indicator['dns_indicator_intention']  | replace: "<br>", "" %}
-        {% assign  content = indicator['content_and_progress']  | replace: "<br>", "" %}
+        {% assign  intention = indicator['dns_indicator_intention']  | replace: "<br>", "" | replace '"', "'" %}
+        {% assign  content = indicator['content_and_progress']  | replace: "<br>", " " | replace"<i> Text aus dem Indikatorenbericht 2021</i>", "" %}
 
         <div id="{{indicator[indicator]}}"  class="myDivClass" style="background-color:white">
           <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
