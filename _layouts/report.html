@@ -1,16 +1,30 @@
 <!-- 1 --------------------------------------------------------------->
 {% include head.html %}
+
+
+{% assign reporting_data = site.data[page.language].reporting %}
+{% assign goals = reporting_data.goals %}
+
 <p>Wählen Sie aus welche Indikatoren im Bericht enthalten sein sollen.</p>
 
 <form action="/action_page.php">
-  <input type="checkbox" name="report_indicators" value="1-1-ab">1-1-ab<br>
-  <input type="checkbox" name="report_indicators" value="2-1-a">2-1-a<br>
-  <input type="checkbox" name="report_indicators" value="2-1-b">2-1-b<br>
+
+  {% for goal in (1..17) %}
+    {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
+
+    {% assign goal_short_key = goal | append: '-short' %}
+    {% assign goal_short = page.t.global_goals[goal_short_key] %}
+
+    {% assign goal_indicators = page.indicators | where: 'sdg_goal', goal  %}
+    {% for indicator in goal_indicators %}
+      <input type="checkbox" name="report_indicators" value="1-1-ab">{{ indicator['indicator_display'] }}<br>
+    {% endfor %}
+  {% endfor %}
+  
   <br>
   <input type="button" onclick="getSelectedIndicators()" value="Send order">
   <br><br>
   <input type="text" id="order" size="50">
-  <input type="submit" value="Submit">
 </form>
 
 
@@ -19,11 +33,10 @@
 <button onclick="exportUsingJSPDF()">Export Using JSPDF 4.1</button>
 <div id="report">
   <div id="cover" class="myDivClass" style="background-color:white">
-    <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
+    <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="565" height="800"/>
   </div>
 
-  {% assign reporting_data = site.data[page.language].reporting %}
-  {% assign goals = reporting_data.goals %}
+
   {%- for goalreport in goals -%}
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
     {%- assign goal_number = goal.number -%}
@@ -50,6 +63,8 @@
           <hr style="width:50%;text-align:left;margin-left:0">
           <h3>Ziele und Intention der Bundesregierung</h3>
           <p>{{ intention }}</p>
+        </div>
+        <div id="{{indicator[indicator]}}"  class="myDivClass" style="background-color:white">
           <h3>Inhalt und Entwicklung des Indikators</h3>
           <p>{{ content }}</p>
         </div>
