@@ -29,7 +29,7 @@ function log(indicators){
   console.log(indicators);
 }
 
-function getSelectedIndicators() {
+function getSelectedIndicators(){
   var reportIndicators = document.forms[0];
   var txt = "";
   var i;
