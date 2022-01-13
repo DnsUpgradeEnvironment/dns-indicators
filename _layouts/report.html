@@ -1,8 +1,9 @@
 <!-- 1 --------------------------------------------------------------->
+<html ng-app="app">
 {% include head.html %}
 <script src='{{ site.baseurl }}/assets/js/custom.js?v={{ cache_bust }}'></script>
 
-<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.9</button>
+<button ng-click="exportUsingJSPDF()">Export Using JSPDF 3.9</button>
 <div id="report">
   <div id="cover" class="myDivClass" style="background-color:white">
     <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
@@ -41,3 +42,4 @@
   {% endfor %}
 
 </div>
+</html>
