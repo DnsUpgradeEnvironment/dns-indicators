@@ -1,81 +1,8 @@
 <!-- 1 --------------------------------------------------------------->
-<html ng-app="app">
-
-<meta charset="utf-8">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-{% include polyfills.html %}
-{% include javascript-variables.html %}
-{% include multilingual-js-base.html %}
-<!-- Basic Page Needs
-================================================== -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
-================================================== -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Title and meta description
-================================================== -->
-
-{% include title-tag.html %}
-
-<meta name="description" content="">
-<meta property="og:description" content="">
-{% if site.environment == 'staging' or include.noindex %}
-<meta name="robots" content="noindex, nofollow">
-{% endif %}
-<link rel="canonical" href="/">
-
-
-<link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
-<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
-http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
--->
-
-{% comment %}
-<link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/img/favicons/favicon-192.png"><!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/img/favicons/favicon-57.png"><!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/assets/img/favicons/favicon-72.png"><!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/assets/img/favicons/favicon-114.png"><!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/assets/img/favicons/favicon-144.png"><!-- CSS
-================================================== -->
-{% endcomment %}
-
-{% assign cache_bust = site.time | date: "%Y%m%d%H%M%S" %}
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-<link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css?v={{ cache_bust }}">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-  crossorigin=""/>
-<link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
-<link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
-<link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-
-
-<!-- 1 --------------------------------------------------------------->
-
-<link data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.33/vfs_fonts.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
-
-<!-------------------------------------------------------------------->
-
-
-
-
-
+{% include head.html %}
 <script src='{{ site.baseurl }}/assets/js/custom.js?v={{ cache_bust }}'></script>
 
-<button ng-click="exportUsingJSPDF()">Export Using JSPDF 3.9</button>
+<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.9</button>
 <div id="report">
   <div id="cover" class="myDivClass" style="background-color:white">
     <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
@@ -103,7 +30,7 @@ http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-A
           </div>
           <h3>Definition der Indikatoren</h3>
           <span>{{ indicator['dns_indicator_definition'] }}</span>
-          <hr style="width:50%;text-align:left;margin-left:0"> -->
+          <!--<hr style="width:50%;text-align:left;margin-left:0"> -->
           <h3>Ziele und Intention der Bundesregierung</h3>
           <!-- <p>{{ indicator['dns_indicator_intention'] }}</p> -->
           <h3>Inhalt und Entwicklung des Indikators</h3>
@@ -114,4 +41,3 @@ http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-A
   {% endfor %}
 
 </div>
-</html>
