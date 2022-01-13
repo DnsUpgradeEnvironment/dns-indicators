@@ -2,7 +2,7 @@
 {% include head.html %}
 <script src='{{ site.baseurl }}/assets/js/custom.js?v={{ cache_bust }}'></script>
 
-<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.9</button>
+<button onclick="exportUsingJSPDF()">Export Using JSPDF 3.11</button>
 <div id="report">
   <div id="cover" class="myDivClass" style="background-color:white">
     <img src="https://dnstestenvironment.github.io/dns-indicators/assets/img/report/cover.PNG" alt="cover" width="595" height="842"/>
@@ -10,7 +10,7 @@
 
   {% assign reporting_data = site.data[page.language].reporting %}
   {% assign goals = reporting_data.goals %}
-
+  {% assign counter = 0 %}
   {%- for goalreport in goals -%}
     {%- assign goal = goalreport.goal | downcase | sdg_lookup -%}
     {%- assign goal_number = goal.number -%}
@@ -20,8 +20,10 @@
     {% assign goal_indicators = page.indicators | where: 'sdg_goal', goal.number | group_by: 'target_id' %}
     {% for group in goal_indicators %}
       {% for indicator in group.items %}
+        {{% increment my_counter %}}
 
         <div id="{{indicator[indicator]}}"  class="myDivClass" style="background-color:white">
+          My counter: {{ mycounter }}
           <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
           <h1> {{ goal_short }} </h1>
           <h2> {{ indicator['indicator_display'] }} {{ indicator['national_indicator_available'] }} </h2>
