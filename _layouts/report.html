@@ -1,5 +1,19 @@
 <!-- 1 --------------------------------------------------------------->
 {% include head.html %}
+<p>Wählen Sie aus welche Indikatoren im Bericht enthalten sein sollen.</p>
+
+<form action="/action_page.php">
+  <input type="checkbox" name="report_indicators" value="1-1-ab">1-1-ab<br>
+  <input type="checkbox" name="report_indicators" value="2-1-a">2-1-a<br>
+  <input type="checkbox" name="report_indicators" value="2-1-b">2-1-b<br>
+  <br>
+  <input type="button" onclick="getSelectedIndicators()" value="Send order">
+  <br><br>
+  <input type="text" id="order" size="50">
+  <input type="submit" value="Submit">
+</form>
+
+
 <script src='{{ site.baseurl }}/assets/js/custom.js?v={{ cache_bust }}'></script>
 
 <button onclick="exportUsingJSPDF()">Export Using JSPDF 4.1</button>
