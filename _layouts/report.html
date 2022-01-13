@@ -15,12 +15,12 @@
 
     {% assign goal_indicators = page.indicators | where: 'sdg_goal', goal  %}
     {% for indicator in goal_indicators %}
-      <input type="checkbox" name="report_indicators" value="1-1-ab">{{ indicator['indicator_display'] }}<br>
+      <input type="checkbox" name="report_indicators" value="{{ indicator }}">{{ indicator['indicator_display'] }}<br>
     {% endfor %}
   {% endfor %}
 
   <br>
-  <input type="button" onclick="getSelectedIndicators()" value="Send order">
+  <input type="button" onclick="getSelectedIndicators()" value="Erstelle Bericht">
   <br><br>
   <input type="text" id="order" size="50">
 </form>

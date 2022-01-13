@@ -32,7 +32,7 @@ function getSelectedIndicators() {
   var i;
   for (i = 0; i < reportIndicators.length; i++) {
     if (reportIndicators[i].checked) {
-      txt = txt + reportIndicators[i].value + " ";
+      txt = txt + reportIndicators[i].value['indicator_display'] + " ";
     }
   }
   document.getElementById("order").value = "Selected indicators: " + txt;
