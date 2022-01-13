@@ -4,10 +4,10 @@
 
 {% assign reporting_data = site.data[page.language].reporting %}
 {% assign goals = reporting_data.goals %}
-<script>
-  console.log("A: ", {{ page.indicators }});
-</script>
+
+
 <p>Wählen Sie aus welche Indikatoren im Bericht enthalten sein sollen.</p>
+<input type="button" onclick="log({{page.indicators}})" value="log">
 
 <form action="/action_page.php">
 
