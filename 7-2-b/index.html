@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113075646">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220113081308">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -197,7 +197,7 @@ var translations = {
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
       <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
+    <ul class="dropdown-menu"><li class="language-option-en">
             <a href="/dns-indicators/en/7-2-b/">
               English
             </a>
@@ -268,7 +268,7 @@ var translations = {
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
       <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
+    <ul class="dropdown-menu"><li class="language-option-en">
             <a href="/dns-indicators/en/7-2-b/">
               English
             </a>
@@ -286,7 +286,7 @@ var translations = {
             aria-haspopup="true">
           <button data-target="search-mobile" aria-expanded="false">Suche</button>
           <div id="search-mobile" class="menu-target">
-  <form action="/dns-indicators/search">
+  <form action="/dns-indicators/search/">
     <label class="sr-only" for="indicator_search-mobile">Suche</label>
     <input type="text" name="q" id="indicator_search-mobile" title="Suche" /><!--
     --><button aria-label="Suche" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -297,7 +297,7 @@ var translations = {
       </ul>
 
       <div id="search" class="menu-target">
-  <form action="/dns-indicators/search">
+  <form action="/dns-indicators/search/">
     <label class="sr-only" for="indicator_search">Suche</label>
     <input type="text" name="q" id="indicator_search" title="Suche" /><!--
     --><button aria-label="Suche" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -366,7 +366,7 @@ var translations = {
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
       <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li>
+    <ul class="dropdown-menu"><li class="language-option-en">
             <a href="/dns-indicators/en/7-2-b/">
               English
             </a>
@@ -388,7 +388,15 @@ var translations = {
 
 <script type="text/template" id="item_template">
   <% _.each(fields, function(fieldItem) { %>
-    <div class="variable-selector<% if(allowedFields.indexOf(fieldItem.field) == -1) { %> disallowed child<% }%>" data-field="<%=fieldItem.field%>">
+    <div class="variable-selector
+      <% if(allowedFields.indexOf(fieldItem.field) == -1) { %> disallowed <% }%>
+      <% if (typeof childFields !== 'undefined' && childFields.indexOf(fieldItem.field) !== -1) { %> child <% }%>
+      <% // @deprecated start %>
+      <% if (typeof childFields === 'undefined' && allowedFields.indexOf(fieldItem.field) == -1) { %> child <% }%>
+      <% // @deprecated end %>
+      "
+      data-field="<%=fieldItem.field%>"
+    >
       <button class='accessBtn' tabindex='0' aria-expanded='false'
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %>
         aria-describedby='variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>'
@@ -399,9 +407,6 @@ var translations = {
           <span class="sr-only"> <%=translations.t(fieldItem.label)%></span>
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %></h6><% } else { %></h5><% } %>
       </button>
-      <div class="bar">
-        <div class="selected"></div>
-      </div>
       <div class="variable-options">
         <fieldset>
           <legend class="sr-only">Auswahl - <%=translations.t(fieldItem.field)%></legend>
@@ -443,7 +448,7 @@ var translations = {
 </script>
 
 <script type="text/template" id="series_template">
-  <% if(serieses.length) { %>
+  
     <h4></h4>
     <fieldset>
       <legend class="sr-only"></legend>
@@ -452,7 +457,7 @@ var translations = {
         <label><input type="radio" name="series" value="<%=seriesItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(seriesItem)%></label>
       <% }); %>
     </fieldset>
-  <% } %>
+  
 </script>
 
 <script>translations['indicator'] = {"add_info":"Zusätzliche Zeitreihen","additional_information_blurb":"Die untenstehende Zeitreihe besteht aus Zahlenspannen anstelle einzelner Werte. Aus techischen Gründen ist die Darstellung in Form von interaktiven Grafiken und Tabellen nur für Zeitreihen mit rein numerischen Werten möglich, daher wird die Zeitreihe hier im PDF-Format dargestellt.","chart":"Grafik","clear_all":"Auswahl aufheben","clear_selections":"Auswahl aufheben","contentAndProgress":"Inhalt und Entwicklung","copyright":"Copyright","dataset_size_warning":"Zu viele Zeitreihen ausgewählt, um diese in einer Grafik darzustellen. Es können nicht alle Zeitreihen dargestellt werden.","details":"Details","dns_metadata_blurb":"Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.","download_chart":"Grafik im CSV-Format speichern","download_chart_image":"Grafik als Bild speichern","download_csv":"im CSV-Format speichern","download_csv_title":"im CSV-Format speichern","download_headline":"Speichern der Headline im CSV-Format","download_headline_title":"Speichern der Headline im CSV-Format","download_source":"Daten im CSV-Format speichern","download_source_title":"Daten im CSV-Format speichern","download_table":"Tabelle im CSV-Format speichern","edit":"Bearbeiten","edit_data":"Daten bearbeiten","edit_metadata":"Metadaten bearbeiten","footnote":"Anmerkung","geographical_area":"Geographische Abdeckung","global_metadata":"Globale Metadaten","global_metadata_blurb":"Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href=\"https://unstats.un.org/sdgs/metadata/\">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.","history":"Statusübersicht","history_blurb":"In dieser Übersichtstabelle sind die Bewertungen des Indikators für Deutschland nach Stand der vorhergehenden Jahre dargestellt. Daran lässt sich ablesen, ob das Wettersymbol für einen Indikator in den vergangenen Jahren stabil oder eher volatil war. <i>(Bewertungen aus dem Indikatorenbericht 2021)</i>","legend_help":"Klicken Sie auf die Legende um Zeitreihen aus der Grafik zu entfernen.","loading_map":"Karte wird geladen","map":"Karte","metadata":"Metadaten","national_metadata":"Nationale Metadaten","national_metadata_blurb":"Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br><br>Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.","no_data_hint":"Aufgrund der bereits getroffenen Auswahl sind keine weiteren Auswahlmöglichkeiten verfügbar.","no_selection":"Für diesen Indikator stehen keine Disaggregationnen zur Verfügung","select_all":"Alle auswählen","series_help":"Wählen Sie hier aus, was in der Grafik bzw. Tabelle angezeigt werden soll.","series_help_dns":"Wählen Sie hier aus, was in der Grafik bzw. Tabelle angezeigt werden soll.","source":"Datenquelle","sources":"Datenquellen","sub_categories":"Auswahl","sub_categories_dns":"Auswahl","table":"Tabelle","timeseries":"Zeitreihe","unit_of_measurement":"Einheit","units_type":"Einheit","variable_hint":"Verfügbar","view_indicator_list":"Zeigt die Indikatorenliste zum SDG-Ziel an."};</script>
@@ -683,7 +688,7 @@ data-event-label="Change to Map tab"
 <script>
 // Add a chart alteration to support the chart_graph_limits metadata field.
 opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphLimits && info.graphLimits.length > 0) {
+  if (info.graphLimits && Object.keys(info.graphLimits).length > 0) {
     var overrides = {
       options: {
         scales: {
@@ -707,17 +712,19 @@ opensdg.chartConfigAlter(function(config, info) {
 opensdg.annotationPresets = {
     common: {
         // This "common" preset is applied to all annotations automatically.
-        borderColor: '#505a5f',
+        borderColor: '#949494',
         type: 'line',
+        borderDash: [10, 5],
+        borderWidth: 1,
         label: {
-            backgroundColor: 'black',
-            fontColor: 'white',
+            backgroundColor: 'white',
+            fontColor: 'black',
         },
         // This "highContrast" overrides colors when in high-contrast mode.
         highContrast: {
             label: {
-                backgroundColor: 'white',
-                fontColor: 'black'
+                backgroundColor: 'black',
+                fontColor: 'white'
             }
         },
         // This callback is used to generate a generic description for screenreaders.
@@ -747,10 +754,20 @@ opensdg.annotationPresets = {
     },
     target_line: {
         mode: 'horizontal',
-        borderDash: [5, 5],
+        borderWidth: 2,
+        borderDash: [15, 10],
+        borderColor: '#757575',
         label: {
             position: 'right',
             content: translations.indicator.annotation_2030_target,
+        },
+    },
+    series_break: {
+        mode: 'vertical',
+        borderDash: [2, 2],
+        label: {
+            position: 'top',
+            content: translations.indicator.annotation_series_break,
         },
     },
 };
@@ -759,18 +776,21 @@ opensdg.annotationPresets = {
 opensdg.chartConfigAlter(function(config, info) {
     if (info.graphAnnotations && info.graphAnnotations.length > 0) {
         // Apply some helpers/fixes to the annotations.
-        var annotations = info.graphAnnotations.map(function(annotation) {
+        var annotations = info.graphAnnotations.map(function(annotationOverrides) {
+            var annotation = {};
             // Apply the "common" preset.
             if (opensdg.annotationPresets.common) {
-                annotation = $.extend(true, {}, opensdg.annotationPresets.common, annotation);
+                $.extend(true, annotation, opensdg.annotationPresets.common);
             }
             // Apply any specified presets.
-            if (annotation.preset) {
-                var preset = annotation.preset;
+            if (annotationOverrides.preset) {
+                var preset = annotationOverrides.preset;
                 if (opensdg.annotationPresets[preset]) {
-                    annotation = $.extend(true, {}, opensdg.annotationPresets[preset], annotation);
+                    $.extend(true, annotation, opensdg.annotationPresets[preset]);
                 }
             }
+            // Now add any more annotation config.
+            $.extend(true, annotation, annotationOverrides);
             // Default to horizontal lines.
             if (!annotation.mode && annotation.type === 'line') {
                 annotation.mode = 'horizontal';
@@ -823,7 +843,7 @@ opensdg.chartConfigAlter(function(config, info) {
             var overrides = {
                 options: {
                     annotation: {
-                        drawTime: 'afterDatasetsDraw',
+                        drawTime: 'beforeDatasetsDraw',
                         annotations: annotations
                     }
                 }
@@ -884,7 +904,6 @@ opensdg.chartConfigAlter(function(config, info) {
                     ctx.lineTo(x, bottomY);
                     ctx.lineWidth = 2;
                     ctx.strokeStyle = '#757575';
-                    ctx.setLineDash([5, 2]);
                     ctx.stroke();
                     ctx.restore();
                 }
@@ -949,6 +968,7 @@ opensdg.chartConfigAlter(function(config, info) {
       <span id="column-sort-info"></span>
     </div>
     <div id="selectionsTable"></div>
+<dl id="tableTargetLines" class="clearfix"></dl>
 
 
 
@@ -2801,6 +2821,7 @@ data-event-label="Change to indicator.sources tab"
   
 
   
+
 </div>
 
   </div>
@@ -2881,12 +2902,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220113075646'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220113081308'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220113075646"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220113081308"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

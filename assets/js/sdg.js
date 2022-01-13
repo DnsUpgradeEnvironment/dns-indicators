@@ -881,19 +881,42 @@ event.prototype = {
 };
 var accessibilitySwitcher = function() {
 
-  var contrastIdentifiers = ['default', 'high'];
+  var contrastIdentifiers = ['default', 'high'],
+      contrastType = "" || "default",
+      singleToggle = (contrastType === 'long' || contrastType === 'single');
 
-  function setActiveContrast(contrast) {
-    var contrastType = ""
-    _.each(contrastIdentifiers, function(id) {
-      $('body').removeClass('contrast-' + id);
-    });
-    if(contrastType === "long"){
-	    $("body").addClass("long");
+  if (contrastType === 'long') {
+    $('body').addClass('long');
+  }
+  function setActiveContrast(newContrast) {
+    var oldContrast = getActiveContrast();
+    if (oldContrast !== newContrast) {
+      _.each(contrastIdentifiers, function(id) {
+        $('body').removeClass('contrast-' + id);
+      });
+      $('body').addClass('contrast-' + newContrast);
+
+      createCookie("contrast", newContrast, 365);
+
+      if (singleToggle) {
+        flipAllContrastLinks(oldContrast, newContrast);
+      }
     }
-    $('body').addClass('contrast-' + contrast);
+  }
 
-    createCookie("contrast", contrast, 365);
+  function flipAllContrastLinks(newContrast, oldContrast) {
+    var title = getContrastToggleTitle(newContrast),
+        label = getContrastToggleLabel(newContrast);
+        gaAttributes = opensdg.autotrack('switch_contrast', 'Accessibility', 'Change contrast setting', newContrast);
+    $('[data-contrast-switch-to]')
+      .data('contrast-switch-to', newContrast)
+      .attr('title', title)
+      .attr('aria-label', title)
+      .attr(gaAttributes)
+      .html(label)
+      .parent()
+        .addClass('contrast-' + newContrast)
+        .removeClass('contrast-' + oldContrast);
   }
 
   function getActiveContrast() {
@@ -901,7 +924,7 @@ var accessibilitySwitcher = function() {
       return $('body').hasClass('contrast-' + id);
     });
 
-    return contrast ? contrast : contrastIdentifiers[0];
+    return contrast.length > 0 ? contrast[0] : contrastIdentifiers[0];
   }
 
   function createCookie(name,value,days) {
@@ -937,21 +960,16 @@ var accessibilitySwitcher = function() {
 
   ////////////////////////////////////////////////////////////////////////////////////
 
-  _.each(contrastIdentifiers, function(contrast) {
-    var gaAttributes = opensdg.autotrack('switch_contrast', 'Accessibility', 'Change contrast setting', contrast);
-    var contrastTitle = getContrastToggleTitle(contrast);
-    $('.contrast-switcher').append($('<li />').attr({
-      'class': 'nav-link contrast contrast-' + contrast
-    }).html($('<a />').attr(gaAttributes).attr({
-      'href': 'javascript:void(0)',
-      'title': contrastTitle,
-      'aria-label': contrastTitle,
-      'data-contrast': contrast,
-    }).html(getContrastToggleLabel(contrast).replace(" ", "<br/>")).click(function() {
-      setActiveContrast($(this).data('contrast'));
-      imageFix(contrast);
-      broadcastContrastChange(contrast, this);
-    })));
+  $('[data-contrast-switch-to]').click(function() {
+
+    var oldContrast = getActiveContrast();
+    var newContrast = $(this).data('contrast-switch-to');
+
+    if (oldContrast !== newContrast) {
+      setActiveContrast(newContrast);
+      imageFix(newContrast);
+      broadcastContrastChange(newContrast, this);
+    }
   });
 
   function broadcastContrastChange(contrast, elem) {
@@ -963,13 +981,12 @@ var accessibilitySwitcher = function() {
   }
 
   function getContrastToggleLabel(identifier){
-    var contrastType = ""
-    if(contrastType === "long") {
-      if(identifier === "default"){
-        return translations.header.default_contrast;
+    if (contrastType === "long") {
+      if (identifier === "default") {
+        return translations.header.default_contrast.replace(' ', '<br>');
       }
-      else if(identifier === "high"){
-        return translations.header.high_contrast;
+      else if (identifier === "high") {
+        return translations.header.high_contrast.replace(' ', '<br>');
       }
     }
     else {
@@ -978,10 +995,10 @@ var accessibilitySwitcher = function() {
   }
 
   function getContrastToggleTitle(identifier){
-    if(identifier === "default"){
+    if (identifier === "default") {
       return translations.header.disable_high_contrast;
     }
-    else if(identifier === "high"){
+    else if (identifier === "high") {
       return translations.header.enable_high_contrast;
     }
   }
@@ -989,7 +1006,6 @@ var accessibilitySwitcher = function() {
 
   function imageFix(contrast) {
     var doNotSwitchTheseSuffixes = ['.svg'];
-    var doNotSwitchThesePrefixes = ['https://platform-cdn.sharethis.com/'];
     if (contrast == 'high')  {
       _.each($('img:not([src*=high-contrast])'), function(image) {
         var src = $(image).attr('src').toLowerCase();
@@ -997,12 +1013,6 @@ var accessibilitySwitcher = function() {
         for (var i = 0; i < doNotSwitchTheseSuffixes.length; i++) {
           var suffix = doNotSwitchTheseSuffixes[i];
           if (src.slice(0 - suffix.length) === suffix) {
-            switchThisImage = false;
-          }
-        }
-        for (var i = 0; i < doNotSwitchThesePrefixes.length; i++) {
-          var prefix = doNotSwitchThesePrefixes[i];
-          if (src.slice(0, prefix.length) === prefix) {
             switchThisImage = false;
           }
         }
@@ -1092,6 +1102,7 @@ var VALUE_COLUMN = 'Value';
 // Note this headline color is overridden in indicatorView.js.
 var HEADLINE_COLOR = '#777777';
 var SERIES_TOGGLE = true;
+var GRAPH_TITLE_FROM_SERIES = false;
 
   /**
  * Model helper functions with general utility.
@@ -1108,7 +1119,7 @@ function getUniqueValuesByProperty(prop, rows) {
       uniques.add(row[prop])
     }
   });
-  return Array.from(uniques).sort();
+  return Array.from(uniques);
 }
 
 // Use as a callback to Array.prototype.filter to get unique elements
@@ -1230,34 +1241,7 @@ function getMatchesByUnitSeries(items, selectedUnit, selectedSeries) {
   return matches;
 }
 
-/**
- * Move an item from one position in an array to another, in place.
- */
-function arrayMove(arr, fromIndex, toIndex) {
-  while (fromIndex < 0) {
-    fromIndex += arr.length;
-  }
-  while (toIndex < 0) {
-    toIndex += arr.length;
-  }
-  var paddingAdded = [];
-  if (toIndex >= arr.length) {
-    var k = toIndex - arr.length;
-    while ((k--) + 1) {
-      arr.push(undefined);
-      paddingAdded.push(arr.length - 1);
-    }
-  }
-  arr.splice(toIndex, 0, arr.splice(fromIndex, 1)[0]);
-
-  // Get rid of the undefined elements that were added.
-  paddingAdded.sort();
-  while (paddingAdded.length > 0) {
-    var paddingIndex = paddingAdded.pop() - 1;
-    arr.splice(paddingIndex, 1);
-  }
-}
-
+  var arrayMove = deprecated('utils.arrayMove');
   /**
  * Model helper functions related to units.
  */
@@ -2378,6 +2362,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     YEAR_COLUMN: YEAR_COLUMN,
     VALUE_COLUMN: VALUE_COLUMN,
     SERIES_TOGGLE: SERIES_TOGGLE,
+    GRAPH_TITLE_FROM_SERIES: GRAPH_TITLE_FROM_SERIES,
     convertJsonFormatToRows: convertJsonFormatToRows,
     getUniqueValuesByProperty: getUniqueValuesByProperty,
     dataHasUnits: dataHasUnits,
@@ -2389,6 +2374,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     getDataBySeries: getDataBySeries,
     getDataBySelectedFields: getDataBySelectedFields,
     getUnitFromStartValues: getUnitFromStartValues,
+    getSeriesFromStartValues: getSeriesFromStartValues,
     selectFieldsFromStartValues: selectFieldsFromStartValues,
     selectMinimumStartingFields: selectMinimumStartingFields,
     fieldsUsedByUnit: fieldsUsedByUnit,
@@ -2411,6 +2397,8 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     getCombinationData: getCombinationData,
     getDatasets: getDatasets,
     tableDataFromDatasets: tableDataFromDatasets,
+    sortFieldNames: typeof sortFieldNames !== 'undefined' ? sortFieldNames : function() {},
+    sortFieldValueNames: typeof sortFieldValueNames !== 'undefined' ? sortFieldValueNames : function() {},
     getPrecision: getPrecision,
     getGraphLimits: getGraphLimits,
     getGraphAnnotations: getGraphAnnotations,
@@ -3757,6 +3745,11 @@ var indicatorView = function (model, options) {
     .appendTo(fieldGroupElement.find('#indicatorData .variable-options'));
   }
 };
+// @deprecated start
+// Some backwards compatibiliy code after Lodash migration.
+_.findWhere = _.find;
+// @deprecated end
+
 var indicatorController = function (model, view) {
   this._model = model;
   this._view = view;
@@ -3878,8 +3871,29 @@ $(document).ready(function() {
 });
 var indicatorSearch = function() {
 
+  function sanitizeInput(input) {
+    if (input === null) {
+      return null;
+    }
+    var doc = new DOMParser().parseFromString(input, 'text/html');
+    var stripped = doc.body.textContent || "";
+    var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        "/": '&#x2F;',
+        "`": '&grave;',
+    };
+    var reg = /[&<>"'/`]/ig;
+    return stripped.replace(reg, function(match) {
+      return map[match];
+    });
+  }
+
   var urlParams = new URLSearchParams(window.location.search);
-  var searchTerms = urlParams.get('q');
+  var searchTerms = sanitizeInput(urlParams.get('q'));
   if (searchTerms !== null) {
     document.getElementById('search-bar-on-page').value = searchTerms;
     document.getElementById('search-term').innerHTML = searchTerms;
@@ -3909,8 +3923,9 @@ var indicatorSearch = function() {
 
     var results = [];
     var alternativeSearchTerms = [];
+    var noTermsProvided = (searchTerms === '');
 
-    if (useLunr) {
+    if (useLunr && !noTermsProvided) {
       // Engish-specific tweak for words separated only by commas.
       if (opensdg.language == 'en') {
         lunr.tokenizer.separator = /[\s\-,]+/
@@ -3956,7 +3971,7 @@ var indicatorSearch = function() {
         }
       }
     }
-    else {
+    else if (!noTermsProvided) {
       // Non-Lunr basic search functionality.
       results = _.filter(opensdg.searchItems, function(item) {
         var i, match = false;
@@ -4078,6 +4093,9 @@ $(function() {
   if (typeof translations.general === 'undefined') {
     translations.general = { hide: 'Hide' };
   }
+  if (typeof translations.cookies === 'undefined') {
+    translations.cookies = { cookie_settings: 'Cookie settings' };
+  }
   // @deprecated end
 
   var topLevelSearchLink = $('.top-level span:eq(1), .top-level button:eq(1)');
@@ -4130,6 +4148,7 @@ $(function() {
     $(".top-level li button[data-target='" + target + "']").attr("aria-expanded", "false");
 
     if(target === 'search') {
+      // TODO: This is never used and needs to be revisited.
       $(this).toggleClass('open');
 
       if($(this).hasClass('open') || !wasVisible) {
@@ -4137,6 +4156,9 @@ $(function() {
       } else {
         $(this).text(translations.search.search);
       }
+    } else if (target === 'search-mobile') {
+      topLevelMenuToggle.setAttribute('aria-expanded', false);
+      $(topLevelMenuToggle).find('> button').attr('aria-expanded', false);
     } else {
       // menu click, always hide search:
       topLevelSearchLink.removeClass('open');
@@ -4168,6 +4190,9 @@ $(function() {
     // update the viewport width:
     $('body').data('vwidth', viewportWidth);
   });
+
+  // Add the cookie settings link in the footer.
+  
 });
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
 "document"in self&&("classList"in document.createElement("_")&&(!document.createElementNS||"classList"in document.createElementNS("http://www.w3.org/2000/svg","g"))||!function(t){"use strict";if("Element"in t){var e="classList",n="prototype",i=t.Element[n],s=Object,r=String[n].trim||function(){return this.replace(/^\s+|\s+$/g,"")},o=Array[n].indexOf||function(t){for(var e=0,n=this.length;n>e;e++)if(e in this&&this[e]===t)return e;return-1},a=function(t,e){this.name=t,this.code=DOMException[t],this.message=e},c=function(t,e){if(""===e)throw new a("SYNTAX_ERR","An invalid or illegal string was specified");if(/\s/.test(e))throw new a("INVALID_CHARACTER_ERR","String contains an invalid character");return o.call(t,e)},l=function(t){for(var e=r.call(t.getAttribute("class")||""),n=e?e.split(/\s+/):[],i=0,s=n.length;s>i;i++)this.push(n[i]);this._updateClassName=function(){t.setAttribute("class",""+this)}},u=l[n]=[],h=function(){return new l(this)};if(a[n]=Error[n],u.item=function(t){return this[t]||null},u.contains=function(t){return t+="",-1!==c(this,t)},u.add=function(){var t,e=arguments,n=0,i=e.length,s=!1;do t=e[n]+"",-1===c(this,t)&&(this.push(t),s=!0);while(++n<i);s&&this._updateClassName()},u.remove=function(){var t,e,n=arguments,i=0,s=n.length,r=!1;do for(t=n[i]+"",e=c(this,t);-1!==e;)this.splice(e,1),r=!0,e=c(this,t);while(++i<s);r&&this._updateClassName()},u.toggle=function(t,e){t+="";var n=this.contains(t),i=n?e!==!0&&"remove":e!==!1&&"add";return i&&this[i](t),e===!0||e===!1?e:!n},u.toString=function(){return this.join(" ")},s.defineProperty){var f={get:h,enumerable:!0,configurable:!0};try{s.defineProperty(i,e,f)}catch(g){(void 0===g.number||-2146823252===g.number)&&(f.enumerable=!1,s.defineProperty(i,e,f))}}else s[n].__defineGetter__&&i.__defineGetter__(e,h)}}(self),function(){"use strict";var t=document.createElement("_");if(t.classList.add("c1","c2"),!t.classList.contains("c2")){var e=function(t){var e=DOMTokenList.prototype[t];DOMTokenList.prototype[t]=function(t){var n,i=arguments.length;for(n=0;i>n;n++)t=arguments[n],e.call(this,t)}};e("add"),e("remove")}if(t.classList.toggle("c3",!1),t.classList.contains("c3")){var n=DOMTokenList.prototype.toggle;DOMTokenList.prototype.toggle=function(t,e){return 1 in arguments&&!this.contains(t)==!e?e:n.call(this,t)}}t=null}());/*! modernizr 3.5.0 (Custom Build) | MIT *
@@ -4519,6 +4544,7 @@ $(function() {
       var container = L.Control.Search.prototype.onAdd.call(this, map);
 
       this._input.setAttribute('aria-label', this._input.placeholder);
+      this._tooltip.setAttribute('aria-label', this._input.placeholder);
 
       this._button.setAttribute('role', 'button');
       this._accessibleCollapse();
@@ -4533,6 +4559,26 @@ $(function() {
 
       return container;
     },
+    _createInput: function (text, className) {
+      var input = L.Control.Search.prototype._createInput.call(this, text, className);
+      input.setAttribute('aria-autocomplete', 'list');
+      input.setAttribute('aria-controls', 'map-search-listbox');
+      var combobox = L.DomUtil.create('div', '', this._container);
+      combobox.setAttribute('role', 'combobox');
+      combobox.setAttribute('aria-expanded', 'false');
+      combobox.setAttribute('aria-owns', 'map-search-listbox');
+      combobox.setAttribute('aria-haspopup', 'listbox');
+      combobox.id = 'map-search-combobox';
+      combobox.append(input);
+      this._combobox = combobox;
+      return input;
+    },
+    _createTooltip: function(className) {
+      var tooltip = L.Control.Search.prototype._createTooltip.call(this, className);
+      tooltip.id = 'map-search-listbox';
+      tooltip.setAttribute('role', 'listbox');
+      return tooltip;
+    },
     _accessibleExpand: function() {
       this._accessibleDescription(translations.indicator.map_search_hide);
       this._button.setAttribute('aria-expanded', 'true');
@@ -4540,6 +4586,7 @@ $(function() {
     _accessibleCollapse: function() {
       this._accessibleDescription(translations.indicator.map_search_show);
       this._button.setAttribute('aria-expanded', 'false');
+      this._button.focus();
     },
     _accessibleDescription: function(description) {
       this._button.title = description;
@@ -4558,13 +4605,25 @@ $(function() {
     cancel: function() {
       L.Control.Search.prototype.cancel.call(this);
       this._accessibleExpand();
+      this._combobox.setAttribute('aria-expanded', 'false');
+      this._input.removeAttribute('aria-activedescendant');
       return this;
     },
     showTooltip: function(records) {
       L.Control.Search.prototype.showTooltip.call(this, records);
       this._accessibleDescription(translations.indicator.map_search);
       this._button.removeAttribute('aria-expanded');
+      this._combobox.setAttribute('aria-expanded', 'true');
+      if (this._countertips > 0) {
+        this._input.setAttribute('aria-activedescendant', this._tooltip.childNodes[0].id);
+      }
       return this._countertips;
+    },
+    _createTip: function(text, val) {
+      var tip = L.Control.Search.prototype._createTip.call(this, text, val);
+      tip.setAttribute('role', 'option');
+      tip.id = 'map-search-option-' + val.layer.feature.properties.geocode;
+      return tip;
     },
     _handleSubmit: function(e) {
       // Prevent the enter key from immediately collapsing the search bar.
@@ -4573,6 +4632,19 @@ $(function() {
       }
       L.Control.Search.prototype._handleSubmit.call(this, e);
     },
+    _handleArrowSelect: function(velocity) {
+      L.Control.Search.prototype._handleArrowSelect.call(this, velocity);
+      var searchTips = this._tooltip.hasChildNodes() ? this._tooltip.childNodes : [];
+			for (i=0; i<searchTips.length; i++) {
+			  searchTips[i].setAttribute('aria-selected', 'false');
+      }
+      var selectedTip = searchTips[this._tooltip.currentSelection];
+      if (typeof selectedTip === 'undefined') {
+        selectedTip = searchTips[0];
+      }
+      selectedTip.setAttribute('aria-selected', 'true');
+      this._input.setAttribute('aria-activedescendant', selectedTip.id);
+    },
     _createAlert: function(className) {
       var alert = L.Control.Search.prototype._createAlert.call(this, className);
       alert.setAttribute('role', 'alert');
@@ -4580,25 +4652,6 @@ $(function() {
     }
   });
 }());
-function initialiseGoogleAnalytics(){
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    sendPageviewToGoogleAnalytics();
-}
-
-function sendPageviewToGoogleAnalytics(){
-    ga('create', '', 'auto');
-    ga('require', 'eventTracker', {
-        attributePrefix: 'data-'
-    });
-    // anonymize user IPs (chops off the last IP triplet)
-    ga('set', 'anonymizeIp', true);
-    // forces SSL even if the page were somehow loaded over http://
-    ga('set', 'forceSSL', true);
-    ga('send', 'pageview');
-}
-
-
+$(document).ready(function() {
+    $('a[href="#top"]').prepend('<i class="fa fa-arrow-up"></i>');
+});
