@@ -28,7 +28,7 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
 
 
 function returnSelectedIndicators(){
-  var checkedValue = document.querySelector('.messageCheckbox:checked').value;
+  var checkedValue = document.querySelector('.indicatorSelection:checked').value;
   console.log(checkedValue);
   return checkedValue
 }
