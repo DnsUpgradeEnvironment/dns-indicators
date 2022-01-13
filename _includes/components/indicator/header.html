@@ -13,11 +13,10 @@
       <div class="col-xs-12 indicator-details">
       {% endunless %}
         <div>
-          <h1>
-            {% unless page.indicator.standalone %}
-            {{ page.t.general.indicator }} {{ page.indicator.number }}
-            {% endunless %}
-            <span class="lead-copy">{{ page.indicator.name }}</span>
+          <h1 class="titles goal-{{page.goal.number}}" title="{{ t.general.section }}: {{ page.indicator.section }}" >
+            {{ page.indicator.section }} – <i title="{{ t.general.postulate}}: {{ page.indicator.target_name }}">{{ page.indicator.target_name }}</i>
+            <span class="lead-copy">
+              {{ page.indicator.indicator_display }}: {{ page.indicator.name }}
           </h1>
         </div>
       </div>

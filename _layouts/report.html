@@ -10,7 +10,7 @@
 {% assign inds = page.indicators %}
 <input type="button" onclick="log( {{inds}} )" value="console">
 
-<form action="/action_page.php">
+<form>
 
   {% for goal in (1..17) %}
     {% assign goal_short_key = goal | append: '-short' %}
