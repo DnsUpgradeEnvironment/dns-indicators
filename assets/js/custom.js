@@ -47,6 +47,8 @@ function exportUsingJSPDF(){
           pdf.addPage();
           //$('.myDivClass')[currentRecursion] selects one of the divs out of the jquery collection as a html element
           //addHtml requires an html element. Not a string like fromHtml.
+
+          pdf.text("Hello world!", 1, 1);
           pdf.fromHTML($('.myDivClass')[currentRecursion], 15, 20, options, function(){
               console.log(currentRecursion);
               recursiveAddHtmlAndSave(currentRecursion, totalRecursions)
