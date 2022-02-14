@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="de" class="no-js">
     <head>
-        <meta charset="utf-8">
+      <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+
         <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -102,6 +105,7 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
+
         
     <title>Ziel 1 - Keine Armut - German Indicators For The Sustainable Development Goals</title>
 
@@ -114,27 +118,24 @@ var translations = {
         
         <link rel="canonical" href="/">
 
-        
-
         <!--[if IE 9]>
         <script src="/dns-indicators/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        <!-- Favicons ================================================== -->
-        <!-- 128x128 -->
-        <link rel="shortcut icon" type="image/ico" href="/dns-indicators/assets/img/favicons/favicon.ico">
-        <link rel="icon" type="image/png" href="/dns-indicators/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
-        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
-        -->
-
         
+
+
+
+
+<link rel="shortcut icon" type="image/ico" href="/dns-indicators/assets/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="/dns-indicators/assets/img/favicons/favicon.png">
+
 
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220214012640">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220214153808">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -142,25 +143,17 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
 
-
-        <!-- 1 --------------------------------------------------------------->
-
-        <link data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.33/vfs_fonts.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
-
-        <!--------------------------------------------------------------------><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        
 
     </head>
-<body class="language-de layout-goal-by-target">
+<body class="language-de
+layout-goal-by-target
+">
 <!-- <div class="container"> -->
+
 
 <script>translations['header'] = {"alpha":"Alpha-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_address\">Kommentare</a>.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
@@ -176,17 +169,34 @@ var translations = {
 
 </div>
 
-<header role="banner">
+<header role="banner" class="header-default">
   <div class="container">
 
     <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/dns-indicators/" id="home">
-        <img src="/dns-indicators/assets/img/de/dns_logo.png" alt="Nachhaltige Entwicklung in Deutschland - " />
-      </a>
+      <a class="navbar-brand" href="/dns-indicators/" id="home" onclick="updateVisitCountMinus()">
+    <img src="/dns-indicators/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
+</a>
 
       <div class="mobile-widgets">
-        <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
-          <div class="language-toggle-container">
+    <ul id='accessibility-nav' class='contrast-switcher'>
+        
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+    </ul><div class="language-toggle-mobile">
+        <div class="language-toggle-container">
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -200,33 +210,16 @@ var translations = {
   </div>
 </div>
 
-        </div><!-- Add Btn to link to DNS Page--
-
-        
-          <a href="https://sustainabledevelopment-deutschland.github.io">
-            <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/>
-            <span class="hidden-sm hidden-md hidden-lg">DNS-Berichtsplattform</span>
-          </a>
-        
-
-        <!--     -->
-
-
-
-
-
-
-      </div>
+    </div></div>
     </div>
 
     <nav class="navbar navbar-default" id="main-nav">
-
       <ul class="top-level">
-        <li id="menuToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="menu-mobile" aria-expanded="false">Menü</button>
-          <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <li id="menuToggle"
+        aria-label=""
+        aria-haspopup="true">
+        <button data-target="menu-mobile" aria-expanded="false">Menü</button>
+        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/dns-indicators/">17 Ziele</a>
 </li>
 <li class="nav-link ">
@@ -269,12 +262,12 @@ var translations = {
 
 </li></ul>
 
-        </li>
-        <li id="searchToggle"
-            aria-label=""
-            aria-haspopup="true">
-          <button data-target="search-mobile" aria-expanded="false">Suche</button>
-          <div id="search-mobile" class="menu-target">
+    </li>
+    <li id="searchToggle"
+        aria-label=""
+        aria-haspopup="true">
+        <button data-target="search-mobile" aria-expanded="false">Suche</button>
+        <div id="search-mobile" class="menu-target">
   <form action="/dns-indicators/search/">
     <label class="sr-only" for="indicator_search-mobile">Suche</label>
     <input type="text" name="q" id="indicator_search-mobile" title="Suche" /><!--
@@ -282,9 +275,8 @@ var translations = {
   </form>
 </div>
 
-        </li>
-      </ul>
-
+    </li>
+</ul>
       <div id="search" class="menu-target">
   <form action="/dns-indicators/search/">
     <label class="sr-only" for="indicator_search">Suche</label>
@@ -292,7 +284,6 @@ var translations = {
     --><button aria-label="Suche" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
   </form>
 </div>
-
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/dns-indicators/">17 Ziele</a>
@@ -361,12 +352,13 @@ var translations = {
 
 </li></ul>
 
-
     </nav>
   </div>
 
 </header>
 <div id="top" tabindex=-1></div>
+
+
 
 
 
@@ -556,12 +548,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220214012640'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220214153808'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220214012640"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220214153808"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

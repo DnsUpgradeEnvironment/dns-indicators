@@ -29,6 +29,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
   return obj;
 };
+//Last check: 17.09.2021
 /**
  * TODO:
  * Integrate with high-contrast switcher.
@@ -255,6 +256,11 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     // Alter data before displaying it.
     alterData: function(value) {
+      // @deprecated start
+      if (typeof opensdg.dataDisplayAlterations === 'undefined') {
+        opensdg.dataDisplayAlterations = [];
+      }
+      // @deprecated end
       opensdg.dataDisplayAlterations.forEach(function(callback) {
         value = callback(value);
       });
@@ -322,6 +328,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       var minimumValues = [],
           maximumValues = [],
           availableYears = [];
+          avaialbleValues = [];
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
@@ -413,16 +420,37 @@ opensdg.autotrack = function(preset, category, action, label) {
           $(plugin.element).parent().append(downloadButton);
 
           // Keep track of the minimums and maximums.
+          console.log("features: ", geoJson.features);
           _.each(geoJson.features, function(feature) {
             if (feature.properties.values && feature.properties.values.length) {
               availableYears = availableYears.concat(Object.keys(feature.properties.values[0]));
-              minimumValues.push(_.min(Object.values(feature.properties.values[0])));
-              maximumValues.push(_.max(Object.values(feature.properties.values[0])));
+              for (var year in feature.properties.values[0]){
+                if (! _.isNaN(feature.properties.values[0][year]) && feature.properties.values[0][year]!="") {
+                  //availableYears.concat(year);
+                  avaialbleValues.push(feature.properties.values[0][year]);
+                }
+              };
+              // _.each(feature.properties.values[0], function(year){
+              //   if (!_.isNaN(year.values(year))) {
+              //     availableYears.concat(Object.key(year));
+              //     avaialbleValues.push(Object.values(year));
+              //   }
+              // });
+              minimumValues.push(_.min(avaialbleValues));
+              maximumValues.push(_.max(avaialbleValues));
             }
           });
+          console.log("minArray: ", minimumValues);
+          console.log("Values: ", avaialbleValues);
+          console.log("Years: ", availableYears);
         }
 
         // Calculate the ranges of values, years and colors.
+        function isMapValueInvalid(val) {
+          return _.isNaN(val) || val === '';
+        }
+        minimumValues = _.reject(minimumValues, isMapValueInvalid);
+        maximumValues = _.reject(maximumValues, isMapValueInvalid);
         plugin.valueRange = [_.min(minimumValues), _.max(maximumValues)];
 
 
@@ -567,7 +595,11 @@ opensdg.autotrack = function(preset, category, action, label) {
           }
           // Make sure the map is not too high.
           var heightPadding = 75;
+          var minHeight = 400;
           var maxHeight = $(window).height() - heightPadding;
+          if (maxHeight < minHeight) {
+            maxHeight = minHeight;
+          }
           if ($('#map').height() > maxHeight) {
             $('#map').height(maxHeight);
           }
@@ -1067,7 +1099,12 @@ opensdg.chartColors = function(indicatorId) {
 
 };
 opensdg.maptitles = function(indicatorId) {
-  if(indicatorId == "indicator_5-5-1"){
+  if(indicatorId == "indicator_2-4-1"){
+
+    this.mapTitle = translations.t("organically farmed agricultural land (data from destatis)")
+    this.mapUnit = translations.t("%")
+  }
+  else if(indicatorId == "indicator_5-5-1"){
 
     this.mapTitle = translations.t("seats held by women in national parliament")
     this.mapUnit = translations.t("%")
@@ -1082,7 +1119,11 @@ opensdg.maptitles = function(indicatorId) {
     this.mapTitle = translations.t("proportion of r&d expenditures to gdp")
     this.mapUnit = translations.t("%")
   }
+  else if(indicatorId == "indicator_11-2-1"){
 
+    this.mapTitle = translations.t("population that has convenient access to public transport (within 500 meters) (%)")
+    this.mapUnit = translations.t("%")
+  }
   return [this.mapTitle, this.mapUnit] ;
 
 };
@@ -2415,12 +2456,19 @@ function getHeadlineTable(rows, selectedUnit) {
 
 /**
  * @param {Object} data Object imported from JSON file
+ * @param {Array} dropKeys Array of keys to drop from the rows
  * @return {Array} Rows
  */
-function convertJsonFormatToRows(data) {
+function convertJsonFormatToRows(data, dropKeys) {
   var keys = Object.keys(data);
   if (keys.length === 0) {
     return [];
+  }
+
+  if (dropKeys && dropKeys.length > 0) {
+    keys = keys.filter(function(key) {
+      return !(dropKeys.includes(key));
+    });
   }
 
   return data[keys[0]].map(function(item, index) {
@@ -2491,6 +2539,26 @@ function sortData(rows, selectedUnit) {
 function getPrecision(precisions, selectedUnit, selectedSeries) {
   var match = getMatchByUnitSeries(precisions, selectedUnit, selectedSeries);
   return (match) ? match.decimals : false;
+}
+
+/**
+ * @param {Object} data Object imported from JSON file
+ * @return {Array} Rows
+ */
+function inputData(data) {
+  var dropKeys = [];
+  
+  return convertJsonFormatToRows(data, dropKeys);
+}
+
+/**
+ * @param {Object} edges Object imported from JSON file
+ * @return {Array} Rows
+ */
+function inputEdges(edges) {
+  var edgesData = convertJsonFormatToRows(edges);
+  
+  return edgesData;
 }
 
 
@@ -4468,6 +4536,8 @@ $(function() {
           '<span class="legend-value right">{highValue}</span>' +
           '<span class="arrow right"></span>' +
         '</div>';
+
+
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
       var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
       var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) { //[this.plugin.goalNr]
@@ -4505,6 +4575,8 @@ $(function() {
         '</li>';
       var plugin = this.plugin;
       var valueRange = this.plugin.valueRange;
+
+
       selectionList.innerHTML = this.selections.map(function(selection) {
         var value = plugin.getData(selection.feature.properties);
         var percentage, valueStatus;
@@ -4537,6 +4609,7 @@ $(function() {
     }
 
   });
+
 
   // Factory function for this class.
   L.Control.selectionLegend = function(plugin) {
