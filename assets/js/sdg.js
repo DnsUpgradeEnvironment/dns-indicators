@@ -2617,8 +2617,6 @@ function inputEdges(edges) {
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,
     getGraphStepsize: getGraphStepsize,
-    inputEdges: inputEdges,
-    inputData: inputData,
     // Backwards compatibility.
     footerFields: deprecated('helpers.footerFields'),
   }
