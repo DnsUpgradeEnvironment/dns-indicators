@@ -16,8 +16,8 @@ var indicatorModel = function (options) {
 
   // general members:
   var that = this;
-  this.data = helpers.convertJsonFormatToRows(options.data);
-  this.edgesData = helpers.convertJsonFormatToRows(options.edgesData);
+  this.data = helpers.inputData(options.data);
+  this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
   this.indicatorId = options.indicatorId;
@@ -26,7 +26,7 @@ var indicatorModel = function (options) {
   this.chartTitles = options.chartTitles;
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
-//  this.xAxisLabel = options.xAxisLabel;
+  this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
   this.showData = options.showData;
   this.selectedFields = [];
