@@ -2636,8 +2636,8 @@ function inputEdges(edges) {
 
   // general members:
   var that = this;
-  this.data = helpers.convertJsonFormatToRows(options.data);
-  this.edgesData = helpers.convertJsonFormatToRows(options.edgesData);
+  this.data = helpers.inputData(options.data);
+  this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
   this.indicatorId = options.indicatorId;
@@ -2646,7 +2646,7 @@ function inputEdges(edges) {
   this.chartTitles = options.chartTitles;
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
-//  this.xAxisLabel = options.xAxisLabel;
+  this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
   this.showData = options.showData;
   this.selectedFields = [];
@@ -3005,8 +3005,11 @@ var indicatorView = function (model, options) {
       }
     });
 
-    // Provide the hide/show functionality for the sidebar.
-    $('.data-view .nav-link').on('click', function(e) {
+    // Execute the hide/show functionality for the sidebar, both on
+    // the currently active tab, and each time a tab is clicked on.
+    $('.data-view .nav-item.active .nav-link').each(toggleSidebar);
+    $('.data-view .nav-link').on('click', toggleSidebar);
+    function toggleSidebar() {
       var $sidebar = $('.indicator-sidebar'),
           $main = $('.indicator-main'),
           hideSidebar = $(this).data('no-disagg'),
@@ -3025,7 +3028,7 @@ var indicatorView = function (model, options) {
         $sidebar.removeClass('indicator-sidebar-hidden');
         $main.removeClass('indicator-main-full');
       }
-    });
+    };
   });
 
   this._model.onDataComplete.attach(function (sender, args) {
@@ -3045,7 +3048,8 @@ var indicatorView = function (model, options) {
 
     view_obj.createSelectionsTable(args);
 
-    view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>",""));
+    view_obj.updateChartTitle(args.chartTitle);
+    view_obj.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
   });
 
   this._model.onFieldsComplete.attach(function(sender, args) {
@@ -3073,7 +3077,7 @@ var indicatorView = function (model, options) {
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.indicatorId, args.precision, view_obj._decimalSeparator, goalNr);
+      view_obj._mapView.initialise(args.indicatorId, args.precision, view_obj._decimalSeparator);
     }
   });
 
@@ -3143,7 +3147,7 @@ var indicatorView = function (model, options) {
       fieldGroupElement.attr('data-has-data', fieldGroup.hasData);
       var fieldGroupButton = fieldGroupElement.find('> button'),
           describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
-          noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '.');
+          noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
       if (!fieldGroup.hasData && !describedByCurrent.includes(noDataHintId)) {
         fieldGroupButton.attr('aria-describedby', describedByCurrent + ' ' + noDataHintId);
       }
@@ -3363,13 +3367,34 @@ var indicatorView = function (model, options) {
     }
   }
 
+  this.updateSeriesAndUnitElements = function(selectedSeries, selectedUnit) {
+    var hasSeries = typeof selectedSeries !== 'undefined',
+        hasUnit = typeof selectedUnit !== 'undefined',
+        hasBoth = hasSeries && hasUnit;
+    if (hasSeries || hasUnit || hasBoth) {
+      $('[data-for-series], [data-for-unit]').each(function() {
+        var elementSeries = $(this).data('for-series'),
+            elementUnit = $(this).data('for-unit'),
+            seriesMatches = elementSeries === selectedSeries,
+            unitMatches = elementUnit === selectedUnit;
+        if ((hasSeries || hasBoth) && !seriesMatches && elementSeries !== '') {
+          $(this).hide();
+        }
+        else if ((hasUnit || hasBoth) && !unitMatches && elementUnit !== '') {
+          $(this).hide();
+        }
+        else {
+          $(this).show();
+        }
+      });
+    }
+  }
+
   this.updatePlot = function(chartInfo) {
     this.updateIndicatorDataViewStatus(view_obj._chartInstance.data.datasets, chartInfo.datasets);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
     view_obj._chartInstance.data.labels = chartInfo.labels;
     this.updateHeadlineColor(this.isHighContrast() ? 'high' : 'default', view_obj._chartInstance);
-    // TODO: Investigate assets/js/chartjs/rescaler.js and why "allLabels" is needed.
-    view_obj._chartInstance.data.allLabels = chartInfo.labels;
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
