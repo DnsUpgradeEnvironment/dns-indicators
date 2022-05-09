@@ -27,7 +27,8 @@
               </span>
             </a
         </h3>
-        {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
+
+        {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
         {% for group in goal_indicators %}
           {% for indicator in group.items %}
             {% for single_indicator in (1..3) %}
