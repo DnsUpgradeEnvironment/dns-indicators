@@ -33,7 +33,7 @@ create_indicators:
   layout: indicator
 create_goals:
   layout: goal-by-target
-#create_pages: true
+create_pages: true
 
 
 analytics:
