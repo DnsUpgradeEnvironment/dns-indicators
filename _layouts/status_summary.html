@@ -28,7 +28,7 @@
             </a
         </h3>
 
-        {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
+        {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_number' %}
         {% for group in goal_indicators %}
           {% for indicator in group.items %}
             {% for single_indicator in (1..3) %}
