@@ -13,4 +13,3 @@ else
   htmlproofer --disable-external ./_test &&
   rm -rf ./_test
 fi
-

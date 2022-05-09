@@ -1,4 +1,3 @@
-//Last check: 17.09.2021
 var indicatorModel = function (options) {
 
   var helpers = {% include assets/js/model/helpers.js %}
@@ -25,8 +24,9 @@ var indicatorModel = function (options) {
   this.chartTitle = options.chartTitle,
   this.chartTitles = options.chartTitles;
   this.graphType = options.graphType;
+  this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
-  this.xAxisLabel = options.xAxisLabel;
+//  this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
   this.showData = options.showData;
   this.selectedFields = [];
@@ -134,6 +134,10 @@ var indicatorModel = function (options) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
+  }
+
+  this.updateChartType = function() {
+    this.graphType = helpers.getChartType(this.graphType, this.graphTypes, this.selectedUnit, this.selectedSeries, helpers.CHARTJS_3);
   }
 
   this.updateSelectedUnit = function(selectedUnit) {
@@ -286,6 +290,14 @@ var indicatorModel = function (options) {
       filteredData = helpers.getDataByUnit(filteredData, this.selectedUnit);
     }
 
+    var timeSeriesAttributes = [];
+    if (filteredData.length > 0) {
+      timeSeriesAttributes = helpers.getTimeSeriesAttributes(filteredData);
+    }
+    else if (headline.length > 0) {
+      timeSeriesAttributes = helpers.getTimeSeriesAttributes(headline);
+    }
+
     filteredData = helpers.sortData(filteredData, this.selectedUnit);
     if (headline.length > 0) {
       headline = helpers.sortData(headline, this.selectedUnit);
@@ -302,6 +314,7 @@ var indicatorModel = function (options) {
     }
 
     this.updateChartTitle();
+    this.updateChartType();
 
     this.onFieldsStatusUpdated.notify({
       data: this.fieldItemStates,
@@ -323,9 +336,11 @@ var indicatorModel = function (options) {
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks),
       chartTitle: this.chartTitle,
+      chartType: this.graphType,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
       graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
+      timeSeriesAttributes: timeSeriesAttributes,
     });
   };
 };

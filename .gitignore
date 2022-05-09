@@ -1,7 +1,6 @@
 tests/screenshot.png
 tests/node_modules
 tests/package-lock.json
-starter
 tests/site/Gemfile.lock
 site-starter
 data-starter
@@ -9,3 +8,4 @@ make-cache
 venv
 /site
 .vscode
+version-*
