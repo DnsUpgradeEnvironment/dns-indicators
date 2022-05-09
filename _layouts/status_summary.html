@@ -11,21 +11,17 @@
     {%- assign goal_short = t.global_goals[goal_short_key] -%} <!--Bezahlbare und saubere Energie-->
 
     {%- assign goal = goalreport.goal | strip | sdg_lookup -%}
-    <div class="frame goal-tiles">
-        <a href="{{ goal.url }}">
-        <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
-        </a>
-    </div>
-    
+
     <div class="goal">
-      <div class="frameStatus">
-        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
-          <img src="{{ site.goal_image_base }}/{{ data[page.language] }}/{{ goal_number }}.png" alt="{{ goal_short }} - {{ page.t.general.goal }} {{ goal_number }}" width="95%" min-height="60px"/>
-        </a>
+      <div class="frame goal-tiles">
+          <a href="{{ goal.url }}">
+            <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+          </a>
       </div>
+
       <div>
         <h3 class="status-goal">
-          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/"><span class="visible-xs">{{ page.t.summary.goal }} {{ goal_number}} - <span>{{ goal_short }}</a>
+            <a href="{{ goal.url }}">{{ goal.short }}</a>
         </h3>
         {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | group_by: 'target_id' %} <!--| sort: 'indicator_sort_order'-->
         {% for group in goal_indicators %}
