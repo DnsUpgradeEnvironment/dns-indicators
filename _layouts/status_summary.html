@@ -1,7 +1,7 @@
 {% include head.html %}
 {% include header.html %}
 
-<div id="main-content" class="container reportingstatus" role="main">
+<div id="main-content" class="container reportingstatus">
 
   <h1>{{ page.t.summary.status_summary }}</h1>
 
@@ -21,9 +21,13 @@
 
       <div>
         <h3 class="status-goal">
-            <a href="{{ goal.url }}">{{ goal.short }}</a>
+            <a href="{{ goal.url }}">
+              <span class="hidden-xs">{{ page.t.summary.goal }} {{ goal_number}} -
+                <span>{{ goal.short }}</span>
+              </span>
+            </a
         </h3>
-        {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | group_by: 'target_id' %} <!--| sort: 'indicator_sort_order'-->
+        {% assign goal_indicators = site.data.meta | where: 'sdg_goal', goal_number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
         {% for group in goal_indicators %}
           {% for indicator in group.items %}
             {% for single_indicator in (1..3) %}
