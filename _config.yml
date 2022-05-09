@@ -91,7 +91,7 @@ menu:
     translation_key: general.seventeen_goals
   - translation_key: menu.status_title
     dropdown:
-      - path: /reporting-status/
+      - path: /status_summary/
         translation_key: menu.status_summary
       - path: /status/
         translation_key: menu.status
@@ -109,6 +109,8 @@ menu:
         translation_key: menu.publications
   - path: menu.pathToSdg
     translation_key: menu.sdglogo
+
+
 
 
 contrast_type: single
