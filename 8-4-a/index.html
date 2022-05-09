@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="de" class="no-js">
     <head>
-      <meta charset="utf-8">
+        <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-
-
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -14,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://DnsTestEnvironment.github.io/dns-data/de',
+  remoteDataBaseUrl: 'https://DnsUpgradeEnvironment.github.io/dns-data/de',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -105,7 +102,6 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
-
         
     <title>
         
@@ -137,10 +133,12 @@ var translations = {
 
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220307014608">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220509080511">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -160,15 +158,18 @@ layout-indicator
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Alpha-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_address\">Kommentare</a>.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha-Version</strong>
     
     Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href="mailto:dns-indikatoren@destatis.de">Kommentare</a>.
+    
   </div>
 </div>
 
@@ -179,7 +180,7 @@ layout-indicator
 
     <div class="logo-and-mobile-widgets">
       <a class="navbar-brand" href="/dns-indicators/" id="home" onclick="updateVisitCountMinus()">
-    <img src="/dns-indicators/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
+    <img src="/dns-indicators/assets/img/de/SDG_logo.png" alt="Zum Hauptinhalt springen" />
 </a>
 
       <div class="mobile-widgets">
@@ -226,29 +227,21 @@ data-event-label="high"
         <button data-target="menu-mobile" aria-expanded="false">Menü</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/dns-indicators/">17 Ziele</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/reporting-status/">Übersicht</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/status/">Methodik</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/about/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/guidance/">Technische&nbspHinweise</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/facts_agenda/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/facts_publications/">Veröffentlichungen</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -258,14 +251,33 @@ data-event-label="high"
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-en">
-      <a class="language-toggle-link" href="/dns-indicators/en/8-4-a/" onclick="updateVisitCountMinus()"><span class="language-name">English</span>
+      <a class="language-toggle-link" href="/dns-indicators/en/8-4-a/"><span class="language-name">English</span>
         <span class="language-abbreviation">en</span></a>
     </li></ul>
 </div>
 
 
 
-</li></ul>
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
 
     </li>
     <li id="searchToggle"
@@ -292,53 +304,45 @@ data-event-label="high"
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/dns-indicators/">17 Ziele</a>
-</li>
-<li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Bewertung
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bewertung
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/reporting-status/">Übersicht</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/status/">Methodik</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Über uns
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Über uns
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/about/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/guidance/">Technische&nbspHinweise</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Wissenswertes
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Wissenswertes
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/facts_agenda/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/facts_publications/">Veröffentlichungen</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link ">
     <a href="/dns-indicators/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -348,20 +352,40 @@ data-event-label="high"
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-en">
-      <a class="language-toggle-link" href="/dns-indicators/en/8-4-a/" onclick="updateVisitCountMinus()"><span class="language-name">English</span>
+      <a class="language-toggle-link" href="/dns-indicators/en/8-4-a/"><span class="language-name">English</span>
         <span class="language-abbreviation">en</span></a>
     </li></ul>
 </div>
 
 
 
-</li></ul>
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
 
     </nav>
   </div>
 
 </header>
 <div id="top" tabindex=-1></div>
+
 
 
 
@@ -419,7 +443,6 @@ data-event-label="high"
   <% if(units.length > 1) { %>
   
     <h4>Einheit</h4>
-
     <fieldset>
       <legend class="sr-only">Einheit</legend>
       <% _.each(units, function(unitsItem, index) { %>
@@ -427,8 +450,6 @@ data-event-label="high"
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
       <% }); %>
     </fieldset>
-
-
   
   <% } %>
   
@@ -436,9 +457,7 @@ data-event-label="high"
 
 <script type="text/template" id="series_template">
   
-    
-      <h4></h4>
-    
+    <h4></h4>
     <fieldset>
       <legend class="sr-only"></legend>
       <% _.each(serieses, function(seriesItem, index) { %>
@@ -451,18 +470,16 @@ data-event-label="high"
 
 <script>translations['indicator'] = {"add_info":"Zusätzliche Zeitreihen","additional_information_blurb":"Die untenstehende Zeitreihe besteht aus Zahlenspannen anstelle einzelner Werte. Aus techischen Gründen ist die Darstellung in Form von interaktiven Grafiken und Tabellen nur für Zeitreihen mit rein numerischen Werten möglich, daher wird die Zeitreihe hier im PDF-Format dargestellt.","chart":"Grafik","clear_all":"Auswahl aufheben","clear_selections":"Auswahl aufheben","contentAndProgress":"Inhalt und Entwicklung","copyright":"Copyright","dataset_size_warning":"Zu viele Zeitreihen ausgewählt, um diese in einer Grafik darzustellen. Es können nicht alle Zeitreihen dargestellt werden.","details":"Details","dns_metadata_blurb":"Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.","download_chart":"Grafik im CSV-Format speichern","download_chart_image":"Grafik als Bild speichern","download_csv":"im CSV-Format speichern","download_csv_title":"im CSV-Format speichern","download_headline":"Speichern der Headline im CSV-Format","download_headline_title":"Speichern der Headline im CSV-Format","download_source":"Daten im CSV-Format speichern","download_source_title":"Daten im CSV-Format speichern","download_table":"Tabelle im CSV-Format speichern","edit":"Bearbeiten","edit_data":"Daten bearbeiten","edit_metadata":"Metadaten bearbeiten","footnote":"Anmerkung","geographical_area":"Geographische Abdeckung","global_metadata":"Globale Metadaten","global_metadata_blurb":"Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href=\"https://unstats.un.org/sdgs/metadata/\">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.","history":"Statusübersicht","history_blurb":"In dieser Übersichtstabelle sind die Bewertungen des Indikators für Deutschland nach Stand der vorhergehenden Jahre dargestellt. Daran lässt sich ablesen, ob das Wettersymbol für einen Indikator in den vergangenen Jahren stabil oder eher volatil war. <i>(Bewertungen aus dem Indikatorenbericht 2021)</i>","legend_help":"Klicken Sie auf die Legende um Zeitreihen aus der Grafik zu entfernen.","loading_map":"Karte wird geladen","map":"Karte","metadata":"Metadaten","national_metadata":"Nationale Metadaten","national_metadata_blurb":"Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br><br>Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.","no_data_hint":"Aufgrund der bereits getroffenen Auswahl sind keine weiteren Auswahlmöglichkeiten verfügbar.","no_selection":"Für diesen Indikator stehen keine Disaggregationnen zur Verfügung","select_all":"Alle auswählen","series_help":"Wählen Sie hier aus, was in der Grafik bzw. Tabelle angezeigt werden soll.","series_help_dns":"Wählen Sie hier aus, was in der Grafik bzw. Tabelle angezeigt werden soll.","source":"Datenquelle","sources":"Datenquellen","sub_categories":"Auswahl","sub_categories_dns":"Auswahl","table":"Tabelle","timeseries":"Zeitreihe","unit_of_measurement":"Einheit","units_type":"Einheit","variable_hint":"Verfügbar","view_indicator_list":"Zeigt die Indikatorenliste zum SDG-Ziel an."};</script>
 
-<script>translations['data'] = {"0- to 2-year-olds":"0- bis 2-Jährige","1 000":"1 000","1 000 eur":"1 000 Euro","1990 = 100":"1990 = 100","20 - 64 years":"20 bis 64 Jahre","2000 = 100":"2000 = 100","2005 = 100":"2005 = 100","2008 = 100":"2008 = 100","2015 = 100":"2015 = 100","2030 = 100":"2030 = 100","3- to 5-year-olds":"3- bis 5-Jährige","60 - 64 years":"60 bis 64 Jahre","Bundesland":"Region","Year":"Jahr","a) 3- to 10-year-olds":"3- bis 10-Jährige","a) criminal offences (overall)":"Straftaten (insgesamt)","a) drinking water and sanitation":"Trinkwasser- und Sanitärversorgung","a) final energy productivity":"Endenergieproduktivität","a) germany (total)":"Deutschland","a) materially deprived persons":"Materiell Deprivierte","a) moving five-year average, referring to the middle year":"a) Gleitender Fünfjahresdurchschnitt mit Bezug auf das mittlere Jahr","a) overweight":"Übergewicht ohne Adipositas","a) pandemic prevention and reaction":"a) Pandemieprävention und -reaktion","a) rural and non-rural areas":"insgesamt","a) sub-index forests":"a) Teilindex Wälder","a) time series":"Zeitreihe","a) total":"Insgesamt","a) total (moving four-year average)":"Insgesamt (gleitender Vierjahresdurchschnitt)","adolescents (12 to 17 years)":"Jugendliche (12 bis 17 Jahre)","adults (15 years and older)":"Erwachsene (ab 15 Jahren)","age":"Altersklasse","air pollutants":"Luftschadstoffe","air pollutants overall":"f) Luftschadstoffe insgesamt","all line-based technologies":"Alle leitungsgebundenen Technologien","area":"Region","b) 11- to 17-year-olds":"11- bis 17-Jährige","b) calculated annual values":"b) Berechnete jährliche Werte","b) containment of the covid-19 pandemic":"b) Eindämmung der COVID-19-Pandemie","b) drinking water":"Trinkwasserversorgung","b) obese":"Adipositas","b) primary energy consumption":"Primärenergieverbrauch","b) severely materially deprived persons":"Erhebliche materiell Deprivierte","b) students from other developing and emerging countries":"Studierende aus den übrigen Entwicklungs- und Schwellenländern","b) sub-index settlements":"b) Teilindex Siedlungen","b) target":"Ziel","b) target (max)":"Ziel","b) target (min)":"Ziel","baltic sea":"Ostsee","bb":"Brandenburg","be":"Berlin","bn eur":"Mrd. EUR","bundesland":"Region","burglary in homes":"Wohnungseinbruchsdiebstahl","bw":"Baden-Württemberg","by":"Bayern","c) researchers from other developing and emerging countries":"Forschende aus den übrigen Entwicklungs- und Schwellenländern","c) sanitation":"Sanitärversorgung","c) sub-index farmland":"c) Teilindex Agrarland","c) total":"Insgesamt","cable television (catv)":"Kabelfernsehen (CATV)","calculation as net expenditure":"Berechnung als Netto-Ausgabe","calculation in grant equivalents":"Berechnung in Zuschussäquivalenten","civil service":"in Führungspositionen im öffentlichen Dienst","co2 emissions per mileage of motor vehicles of the public sector":"CO<sub>2</sub>-Emissionen je Fahrleistung der Kfz der öffentlichen Hand","consumption, investments and exports (price-adjusted)":"Wert von Konsum, Investitionen und Exporten (preisbereinigt)","criminal offences":"Straftaten","d) students from ldcs":"Studierende aus LDCs","d) sub-index inland waters":"d) Teilindex Binnengewässer","data from bmel":"Daten des BMEL","data from destatis":"Daten des Statistischen Bundesamtes","dimension":"Zeitreihe","direct and indirect co2 emissions":"Direkte und indirekte CO<sub>2</sub>-Emissionen","direct and indirect energy consumption":"Direkter und indirekter Energieverbrauch","direct and indirect raw material consumption":"Direkter und indirekter Rohstoffeinsatz","display":"Anzeigen","e) researchers from ldcs":"Forschende aus LDCs","e) sub-index coasts/seas":"e) Teilindex Küsten/Meere","economy":"in Aufsichtsräten von börsennotierten und paritätisch mitbestimmten Unternehmen","emas organisational locations":"EMAS-Organisationsstandorte","emas organisations":"EMAS-Organisationen","employees in thousands":"Beschäftigte in Tausend","eries":"Zeitreihe","eu-28":"EU-28","euro zone":"Eurozone","f) index overall":"f) Index insgesamt","female":"Weiblich","final energy consumption for the carriage of goods":"Endenergieverbrauch durch Güterbeförderung","final energy consumption in passenger transport":"Endenergieverbrauch im Personenverkehr","final energy consumption per passenger-kilometre":"Energieverbrauch je Personenkilometer","final energy consumption per tonne-kilometre":"Energieverbrauch je Tonnenkilometer","foreign school graduates":"Ausländische Schulabsolventinnen und -absolventen","fraud":"Betrug","funding balance (share of gross domestic product (at current prices) in %)":"Finanzierungssaldo","german school graduates (share of all german leavers)":"Deutsche Schulabsolventinnen und -absolventen","germany":"Deutschland","gini coefficient of equivalised disposable income":"Gini-Koeffizient des verfügbaren Äquivalenzeinkommens","gini coefficient of equivalised income before social transfers":"Gini-Koeffizient des verfügbaren Äquivalenzeinkommens vor Sozialleistungen","gini coefficient of market income":"Gini-Koeffizient des Markteinkommens","gini coefficient of wealth":"Gini-Koeffizient des Vermögens","goods transport performance":"Güterbeförderungsleistung","gross domestic produkt (price-adjusted) (year-on-year changes in %)":"Bruttoinlandsprodukt (preisbereinigt)","ha/d":"Hektar pro Tag","hb":"Bremen","he":"Hessen","hh":"Hamburg","imports from ldcs":"Einfuhren aus LDCs","imports of processed products from ldcs":"Einfuhren von weiterverarbeiteten Produkten aus LDCs","in % of households":"in % der Haushalte","in relation to the middle and upper centers of the respective year":"bezogen auf die Mittel- und Oberzentren des jeweiligen Jahres","in relation to the middle and upper centers of the year 2012":"bezogen auf die Mittel- und Oberzentren des Jahres 2012","index/number":" ","kg/ha":"Kilogramm je Hektar","living space, industrial and commercial space (without mining land), public facilities":"Wohnbau, Industrie und Gewerbe (ohne Abbauland), Öffentliche Einrichtungen","m2/(inhabitant*a)":"Quadratmeter pro Jahr","male":"Männlich","male and female":"Beide Geschlechter","men":"Männer","mg/l":"Milligramm pro Liter","min.":"Minuten","mio.":"Millionen","mio. eur":"Millionen Euro","mv":"Mecklenburg-Vorpommern","nh3":"a) NH<sub>3</sub>","ni":"Niedersachsen","nmvoc":"b) NMVOC","non-rural areas":"nicht ländliche Räume","north sea":"Nordsee","nox":"c) NO<sub>x</sub>","number":"Anzahl","number of partner countries of german development cooperation whose rating has improved compared with 2012":"Anzahl der Partnerländer deutscher Entwicklungszusammenarbeit, deren Bewertung sich gegenüber 2012 verbessert hat","nw":"Nordrhein-Westfalen","objects with digitalisat":"Objekte mit Digitalisat","other criminal offences":"Sonstige Straftaten","partnership for sustainable textiles":"Bündnis für nachhaltige Textilien","passenger transport performance":"Personenbeförderungsleistung","per 100 000 inhabitants":"Je 100 000 Einwohner","percentage (%)":"Prozent","pm2.5":"d) PM<sub>2,5</sub>","proportion of msy examined in all managed stocks":"MSY-untersuchte an allen bewirtschafteten Beständen","proportion of sustainable managed stocks in all msy examined stocks":"Anteil der nachhaltig bewirtschafteten Bestände an allen MSY-untersuchten Beständen","pure fiber optic networks (fttb/h)":"Reine Glasfasernetze (FTTB/H)","rating for germany":"Bewertung für Deutschland","raw material input productivity":"Gesamtrohstoffproduktivität","raw material use for consumption, investments and exports":"Rohstoffeinsatz für Konsum, Investitionen und Exporte","recycled paper bearing the blue angel label as a proportion of the total paper consumption of the federal administration":"Anteil Recyclingpapier mit Blauem Engel am Gesamtpapierverbrauch der unmittelbaren Bundesverwaltung","redd+":"REDD+ (ergebnisbasierte Auszahlungen für internationalen Waldschutz)","rp":"Rheinland-Pfalz","rural areas":"ländliche Räume","sea":"Meer","serious and grievous bodily harm":"Gefährliche und schwere Körperverletzung","sex":"Geschlecht","sh":"Schleswig-Holstein","sl":"Saarland","sn":"Sachsen","so2":"e) SO<sub>2</sub>","soil conservation":"Internationaler Bodenschutz (Bruttoentwicklungsausgaben für internationalen Bodenschutz)","sports, leisure and recreation area, graveyard":"Sport-, Freizeit- und Erholungsfläche, Friedhof","st":"Sachsen-Anhalt","structural funding balance (share of gross domestic product (at current prices) in %)":"Struktureller Finanzierungssaldo","tertiary education":"Tertiärer Abschluss","tertiary or post-secondary non-tertiary education":"Insgesamt","th":"Thüringen","title":"Zeitreihe","total objects":"Objekte insgesamt","total official development assistance regarding food security":"Öffentliche Entwicklungsaufgaben im Bereich Ernährungssicherheit insgesamt","transport area":"Verkehrsfläche","typification":"Räumliche Typologie","unit":"Einheit","women":"Frauen","year":"Jahr"};</script>
+<script>translations['data'] = {"0- to 2-year-olds":"0- bis 2-Jährige","1 000":"1 000","1 000 eur":"1 000 Euro","1990 = 100":"1990 = 100","20 - 64 years":"20 bis 64 Jahre","2000 = 100":"2000 = 100","2005 = 100":"2005 = 100","2008 = 100":"2008 = 100","2015 = 100":"2015 = 100","2030 = 100":"2030 = 100","3- to 5-year-olds":"3- bis 5-Jährige","60 - 64 years":"60 bis 64 Jahre","Bundesland":"Region","Series":"Zeitreihe","Year":"Jahr","a) 3- to 10-year-olds":"3- bis 10-Jährige","a) criminal offences (overall)":"Straftaten (insgesamt)","a) drinking water and sanitation":"Trinkwasser- und Sanitärversorgung","a) final energy productivity":"Endenergieproduktivität","a) germany (total)":"Deutschland","a) materially deprived persons":"Materiell Deprivierte","a) moving five-year average, referring to the middle year":"a) Gleitender Fünfjahresdurchschnitt mit Bezug auf das mittlere Jahr","a) overweight":"Übergewicht ohne Adipositas","a) pandemic prevention and reaction":"a) Pandemieprävention und -reaktion","a) rural and non-rural areas":"insgesamt","a) sub-index forests":"a) Teilindex Wälder","a) time series":"Zeitreihe","a) total":"Insgesamt","a) total (moving four-year average)":"Insgesamt (gleitender Vierjahresdurchschnitt)","adolescents (12 to 17 years)":"Jugendliche (12 bis 17 Jahre)","adults (15 years and older)":"Erwachsene (ab 15 Jahren)","age":"Altersklasse","air pollutants":"Luftschadstoffe","air pollutants overall":"f) Luftschadstoffe insgesamt","all line-based technologies":"Alle leitungsgebundenen Technologien","area":"Region","b) 11- to 17-year-olds":"11- bis 17-Jährige","b) calculated annual values":"b) Berechnete jährliche Werte","b) containment of the covid-19 pandemic":"b) Eindämmung der COVID-19-Pandemie","b) drinking water":"Trinkwasserversorgung","b) obese":"Adipositas","b) primary energy consumption":"Primärenergieverbrauch","b) severely materially deprived persons":"Erhebliche materiell Deprivierte","b) students from other developing and emerging countries":"Studierende aus den übrigen Entwicklungs- und Schwellenländern","b) sub-index settlements":"b) Teilindex Siedlungen","b) target":"Ziel","b) target (max)":"Ziel","b) target (min)":"Ziel","baltic sea":"Ostsee","bb":"Brandenburg","be":"Berlin","bn eur":"Mrd. EUR","bundesland":"Region","burglary in homes":"Wohnungseinbruchsdiebstahl","bw":"Baden-Württemberg","by":"Bayern","c) researchers from other developing and emerging countries":"Forschende aus den übrigen Entwicklungs- und Schwellenländern","c) sanitation":"Sanitärversorgung","c) sub-index farmland":"c) Teilindex Agrarland","c) total":"Insgesamt","cable television (catv)":"Kabelfernsehen (CATV)","calculation as net expenditure":"Berechnung als Netto-Ausgabe","calculation in grant equivalents":"Berechnung in Zuschussäquivalenten","civil service":"in Führungspositionen im öffentlichen Dienst","co2 emissions per mileage of motor vehicles of the public sector":"CO<sub>2</sub>-Emissionen je Fahrleistung der Kfz der öffentlichen Hand","consumption, investments and exports (price-adjusted)":"Wert von Konsum, Investitionen und Exporten (preisbereinigt)","criminal offences":"Straftaten","d) students from ldcs":"Studierende aus LDCs","d) sub-index inland waters":"d) Teilindex Binnengewässer","data from bmel":"Daten des BMEL","data from destatis":"Daten des Statistischen Bundesamtes","dimension":"Zeitreihe","direct and indirect co2 emissions":"Direkte und indirekte CO<sub>2</sub>-Emissionen","direct and indirect energy consumption":"Direkter und indirekter Energieverbrauch","direct and indirect raw material consumption":"Direkter und indirekter Rohstoffeinsatz","display":"Anzeigen","e) researchers from ldcs":"Forschende aus LDCs","e) sub-index coasts/seas":"e) Teilindex Küsten/Meere","economy":"in Aufsichtsräten von börsennotierten und paritätisch mitbestimmten Unternehmen","emas organisational locations":"EMAS-Organisationsstandorte","emas organisations":"EMAS-Organisationen","employees in thousands":"Beschäftigte in Tausend","eu-28":"EU-28","euro zone":"Eurozone","f) index overall":"f) Index insgesamt","female":"Weiblich","final energy consumption for the carriage of goods":"Endenergieverbrauch durch Güterbeförderung","final energy consumption in passenger transport":"Endenergieverbrauch im Personenverkehr","final energy consumption per passenger-kilometre":"Energieverbrauch je Personenkilometer","final energy consumption per tonne-kilometre":"Energieverbrauch je Tonnenkilometer","foreign school graduates":"Ausländische Schulabsolventinnen und -absolventen","fraud":"Betrug","funding balance (share of gross domestic product (at current prices) in %)":"Finanzierungssaldo","german school graduates (share of all german leavers)":"Deutsche Schulabsolventinnen und -absolventen","germany":"Deutschland","gini coefficient of equivalised disposable income":"Gini-Koeffizient des verfügbaren Äquivalenzeinkommens","gini coefficient of equivalised income before social transfers":"Gini-Koeffizient des verfügbaren Äquivalenzeinkommens vor Sozialleistungen","gini coefficient of market income":"Gini-Koeffizient des Markteinkommens","gini coefficient of wealth":"Gini-Koeffizient des Vermögens","goods transport performance":"Güterbeförderungsleistung","gross domestic produkt (price-adjusted) (year-on-year changes in %)":"Bruttoinlandsprodukt (preisbereinigt)","ha/d":"Hektar pro Tag","hb":"Bremen","he":"Hessen","hh":"Hamburg","imports from ldcs":"Einfuhren aus LDCs","imports of processed products from ldcs":"Einfuhren von weiterverarbeiteten Produkten aus LDCs","in % of households":"in % der Haushalte","in relation to the middle and upper centers of the respective year":"bezogen auf die Mittel- und Oberzentren des jeweiligen Jahres","in relation to the middle and upper centers of the year 2012":"bezogen auf die Mittel- und Oberzentren des Jahres 2012","index/number":" ","kg/ha":"Kilogramm je Hektar","living space, industrial and commercial space (without mining land), public facilities":"Wohnbau, Industrie und Gewerbe (ohne Abbauland), Öffentliche Einrichtungen","m2/(inhabitant*a)":"Quadratmeter pro Jahr","male":"Männlich","male and female":"Beide Geschlechter","men":"Männer","mg/l":"Milligramm pro Liter","min.":"Minuten","mio.":"Millionen","mio. eur":"Millionen Euro","mv":"Mecklenburg-Vorpommern","nh3":"a) NH<sub>3</sub>","ni":"Niedersachsen","nmvoc":"b) NMVOC","non-rural areas":"nicht ländliche Räume","north sea":"Nordsee","nox":"c) NO<sub>x</sub>","number":"Anzahl","number of partner countries of german development cooperation whose rating has improved compared with 2012":"Anzahl der Partnerländer deutscher Entwicklungszusammenarbeit, deren Bewertung sich gegenüber 2012 verbessert hat","nw":"Nordrhein-Westfalen","objects with digitalisat":"Objekte mit Digitalisat","other criminal offences":"Sonstige Straftaten","partnership for sustainable textiles":"Bündnis für nachhaltige Textilien","passenger transport performance":"Personenbeförderungsleistung","per 100 000 inhabitants":"Je 100 000 Einwohner","percentage (%)":"Prozent","pm2.5":"d) PM<sub>2,5</sub>","proportion of msy examined in all managed stocks":"MSY-untersuchte an allen bewirtschafteten Beständen","proportion of sustainable managed stocks in all msy examined stocks":"Anteil der nachhaltig bewirtschafteten Bestände an allen MSY-untersuchten Beständen","pure fiber optic networks (fttb/h)":"Reine Glasfasernetze (FTTB/H)","rating for germany":"Bewertung für Deutschland","raw material input productivity":"Gesamtrohstoffproduktivität","raw material use for consumption, investments and exports":"Rohstoffeinsatz für Konsum, Investitionen und Exporte","recycled paper bearing the blue angel label as a proportion of the total paper consumption of the federal administration":"Anteil Recyclingpapier mit Blauem Engel am Gesamtpapierverbrauch der unmittelbaren Bundesverwaltung","redd+":"REDD+ (ergebnisbasierte Auszahlungen für internationalen Waldschutz)","rp":"Rheinland-Pfalz","rural areas":"ländliche Räume","sea":"Meer","serious and grievous bodily harm":"Gefährliche und schwere Körperverletzung","sex":"Geschlecht","sh":"Schleswig-Holstein","sl":"Saarland","sn":"Sachsen","so2":"e) SO<sub>2</sub>","soil conservation":"Internationaler Bodenschutz (Bruttoentwicklungsausgaben für internationalen Bodenschutz)","sports, leisure and recreation area, graveyard":"Sport-, Freizeit- und Erholungsfläche, Friedhof","st":"Sachsen-Anhalt","structural funding balance (share of gross domestic product (at current prices) in %)":"Struktureller Finanzierungssaldo","tertiary education":"Tertiärer Abschluss","tertiary or post-secondary non-tertiary education":"Insgesamt","th":"Thüringen","title":"Zeitreihe","total objects":"Objekte insgesamt","total official development assistance regarding food security":"Öffentliche Entwicklungsaufgaben im Bereich Ernährungssicherheit insgesamt","transport area":"Verkehrsfläche","typification":"Räumliche Typologie","unit":"Einheit","women":"Frauen","year":"Jahr"};</script>
 
 
-
-<!-- Last check: 16.08.2021 -->
 <div class="heading goal-banner indicator goal-8">
   <div class="container">
     <div class="row">
       
       <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/dns-indicators/8" title="Zeigt die Indikatorenliste zum SDG-Ziel an." onclick="updateVisitCountMinus()">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" id="goal-8" class="goal-icon-image goal-icon-image-"/>
+        <a href="/dns-indicators/8" title="Zeigt die Indikatorenliste zum SDG-Ziel an.">
+          <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" id="goal-8" class="goal-icon-image goal-icon-image-"/>
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
@@ -480,12 +497,13 @@ data-event-label="high"
   </div>
 </div>
 
+
 <div class="container">
   
 <ol class="breadcrumb">
   
-  <li><a href="/dns-indicators/" onclick="updateVisitCountMinus()">Start</a></li>
-  <li><a href="/dns-indicators/8" title="Dauerhaftes, inklusives und nachhaltiges Wirtschaftswachstum, produktive Vollbeschäftigung und menschenwürdige Arbeit für alle fördern" onclick="updateVisitCountMinus()">Ziel 8</a></li>
+  <li><a href="/dns-indicators/">Start</a></li>
+  <li><a href="/dns-indicators/8" title="Dauerhaftes, inklusives und nachhaltiges Wirtschaftswachstum, produktive Vollbeschäftigung und menschenwürdige Arbeit für alle fördern">Ziel 8</a></li>
   <li class="active">Indikator 8.4.a</li>
   
 </ol>
@@ -520,7 +538,9 @@ data-event-label="high"
   
 <!--#8 addNavigationButtons---stop-------------------------------------->
 
+  
 </div>
+
 <div id="main-content" class="container goal-8" role="main">
   
 
@@ -548,8 +568,7 @@ data-event-label="high"
 </div>
 
 
-  <!-- Last check: 21.10.2021 -->
-
+  
 
 
 
@@ -564,6 +583,7 @@ data-event-label="high"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="bar"
+  data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="true"
   data-startvalues="[{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Deutschland&quot;}]"
@@ -575,7 +595,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Bundesland&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Deutschland&quot;,&quot;Brandenburg&quot;,&quot;Berlin&quot;,&quot;Baden-Württemberg&quot;,&quot;Bayern&quot;,&quot;Bremen&quot;,&quot;Hessen&quot;,&quot;Hamburg&quot;,&quot;Mecklenburg-Vorpommern&quot;,&quot;Niedersachsen&quot;,&quot;Nordrhein-Westfalen&quot;,&quot;Rheinland-Pfalz&quot;,&quot;Schleswig-Holstein&quot;,&quot;Saarland&quot;,&quot;Sachsen&quot;,&quot;Sachsen-Anhalt&quot;,&quot;Thüringen&quot;]},&quot;title&quot;:&quot;Region&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Kreis&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;ahrweiler&quot;,&quot;aichach-friedberg&quot;,&quot;alb-donau-kreis&quot;,&quot;altenburger land&quot;,&quot;altenkirchen (westerwald)&quot;,&quot;altmarkkreis salzwedel&quot;,&quot;altötting&quot;,&quot;alzey-worms&quot;,&quot;amberg, stadt&quot;,&quot;amberg-sulzbach&quot;,&quot;ammerland&quot;,&quot;anhalt-bitterfeld&quot;,&quot;ansbach&quot;,&quot;ansbach, stadt&quot;,&quot;aschaffenburg&quot;,&quot;aschaffenburg, stadt&quot;,&quot;augsburg&quot;,&quot;augsburg, stadt&quot;,&quot;aurich&quot;,&quot;bad dürkheim&quot;,&quot;bad kissingen&quot;,&quot;bad kreuznach&quot;,&quot;bad tölz-wolfratshausen&quot;,&quot;baden-baden, stadt&quot;,&quot;bamberg&quot;,&quot;bamberg, stadt&quot;,&quot;barnim&quot;,&quot;bautzen&quot;,&quot;bayreuth&quot;,&quot;bayreuth, stadt&quot;,&quot;berchtesgadener land&quot;,&quot;bergstraße&quot;,&quot;berlin, stadt&quot;,&quot;bernkastel-wittlich&quot;,&quot;biberach&quot;,&quot;bielefeld, stadt&quot;,&quot;birkenfeld&quot;,&quot;bochum, stadt&quot;,&quot;bodenseekreis&quot;,&quot;bonn, stadt&quot;,&quot;borken&quot;,&quot;bottrop, stadt&quot;,&quot;brandenburg an der havel, stadt&quot;,&quot;braunschweig, stadt&quot;,&quot;breisgau-hochschwarzwald&quot;,&quot;bremen, stadt&quot;,&quot;bremerhaven, stadt&quot;,&quot;burgenlandkreis&quot;,&quot;böblingen&quot;,&quot;börde&quot;,&quot;calw&quot;,&quot;celle&quot;,&quot;cham&quot;,&quot;chemnitz, stadt&quot;,&quot;cloppenburg&quot;,&quot;coburg&quot;,&quot;coburg, stadt&quot;,&quot;cochem-zell&quot;,&quot;coesfeld&quot;,&quot;cottbus, stadt&quot;,&quot;cuxhaven&quot;,&quot;dachau&quot;,&quot;dahme-spreewald&quot;,&quot;darmstadt, stadt&quot;,&quot;darmstadt-dieburg&quot;,&quot;deggendorf&quot;,&quot;delmenhorst, stadt&quot;,&quot;dessau-roßlau, stadt&quot;,&quot;diepholz&quot;,&quot;dillingen an der donau&quot;,&quot;dingolfing-landau&quot;,&quot;dithmarschen&quot;,&quot;donau-ries&quot;,&quot;donnersbergkreis&quot;,&quot;dortmund, stadt&quot;,&quot;dresden, stadt&quot;,&quot;duisburg, stadt&quot;,&quot;düren&quot;,&quot;düsseldorf, stadt&quot;,&quot;ebersberg&quot;,&quot;eichsfeld&quot;,&quot;eichstätt&quot;,&quot;eifelkreis bitburg-prüm&quot;,&quot;eisenach, stadt&quot;,&quot;elbe-elster&quot;,&quot;emden, stadt&quot;,&quot;emmendingen&quot;,&quot;emsland&quot;,&quot;ennepe-ruhr-kreis&quot;,&quot;enzkreis&quot;,&quot;erding&quot;,&quot;erfurt, stadt&quot;,&quot;erlangen, stadt&quot;,&quot;erlangen-höchstadt&quot;,&quot;erzgebirgskreis&quot;,&quot;essen, stadt&quot;,&quot;esslingen&quot;,&quot;euskirchen&quot;,&quot;flensburg, stadt&quot;,&quot;forchheim&quot;,&quot;frankenthal (pfalz), stadt&quot;,&quot;frankfurt (oder), stadt&quot;,&quot;frankfurt am main, stadt&quot;,&quot;freiburg im breisgau, stadt&quot;,&quot;freising&quot;,&quot;freudenstadt&quot;,&quot;freyung-grafenau&quot;,&quot;friesland&quot;,&quot;fulda&quot;,&quot;fürstenfeldbruck&quot;,&quot;fürth&quot;,&quot;fürth, stadt&quot;,&quot;garmisch-partenkirchen&quot;,&quot;gelsenkirchen, stadt&quot;,&quot;gera, stadt&quot;,&quot;germersheim&quot;,&quot;gießen&quot;,&quot;gifhorn&quot;,&quot;goslar&quot;,&quot;gotha&quot;,&quot;grafschaft bentheim&quot;,&quot;greiz&quot;,&quot;groß-gerau&quot;,&quot;göppingen&quot;,&quot;görlitz&quot;,&quot;göttingen&quot;,&quot;günzburg&quot;,&quot;gütersloh&quot;,&quot;hagen, stadt&quot;,&quot;halle (saale), stadt&quot;,&quot;hamburg&quot;,&quot;hameln-pyrmont&quot;,&quot;hamm, stadt&quot;,&quot;harburg&quot;,&quot;harz&quot;,&quot;havelland&quot;,&quot;haßberge&quot;,&quot;heidekreis&quot;,&quot;heidelberg, stadt&quot;,&quot;heidenheim&quot;,&quot;heilbronn&quot;,&quot;heilbronn, stadt&quot;,&quot;heinsberg&quot;,&quot;helmstedt&quot;,&quot;herford&quot;,&quot;herne, stadt&quot;,&quot;hersfeld-rotenburg&quot;,&quot;herzogtum lauenburg&quot;,&quot;hildburghausen&quot;,&quot;hildesheim&quot;,&quot;hochsauerlandkreis&quot;,&quot;hochtaunuskreis&quot;,&quot;hof&quot;,&quot;hof, stadt&quot;,&quot;hohenlohekreis&quot;,&quot;holzminden&quot;,&quot;höxter&quot;,&quot;ilm-kreis&quot;,&quot;ingolstadt, stadt&quot;,&quot;jena, stadt&quot;,&quot;jerichower land&quot;,&quot;kaiserslautern&quot;,&quot;kaiserslautern, stadt&quot;,&quot;karlsruhe&quot;,&quot;karlsruhe, stadt&quot;,&quot;kassel&quot;,&quot;kassel, stadt&quot;,&quot;kaufbeuren, stadt&quot;,&quot;kelheim&quot;,&quot;kempten (allgäu), stadt&quot;,&quot;kiel, stadt&quot;,&quot;kitzingen&quot;,&quot;kleve&quot;,&quot;koblenz, stadt&quot;,&quot;konstanz&quot;,&quot;krefeld, stadt&quot;,&quot;kronach&quot;,&quot;kulmbach&quot;,&quot;kusel&quot;,&quot;kyffhäuserkreis&quot;,&quot;köln, stadt&quot;,&quot;lahn-dill-kreis&quot;,&quot;landau in der pfalz, stadt&quot;,&quot;landsberg am lech&quot;,&quot;landshut&quot;,&quot;landshut, stadt&quot;,&quot;leer&quot;,&quot;leipzig&quot;,&quot;leipzig, stadt&quot;,&quot;leverkusen, stadt&quot;,&quot;lichtenfels&quot;,&quot;limburg-weilburg&quot;,&quot;lindau (bodensee)&quot;,&quot;lippe&quot;,&quot;ludwigsburg&quot;,&quot;ludwigshafen am rhein, stadt&quot;,&quot;ludwigslust-parchim&quot;,&quot;lörrach&quot;,&quot;lübeck, stadt&quot;,&quot;lüchow-dannenberg&quot;,&quot;lüneburg&quot;,&quot;magdeburg, stadt&quot;,&quot;main-kinzig-kreis&quot;,&quot;main-spessart&quot;,&quot;main-tauber-kreis&quot;,&quot;main-taunus-kreis&quot;,&quot;mainz, stadt&quot;,&quot;mainz-bingen&quot;,&quot;mannheim, stadt&quot;,&quot;mansfeld-südharz&quot;,&quot;marburg-biedenkopf&quot;,&quot;mayen-koblenz&quot;,&quot;mecklenburgische seenplatte&quot;,&quot;meißen&quot;,&quot;memmingen, stadt&quot;,&quot;merzig-wadern&quot;,&quot;mettmann&quot;,&quot;miesbach&quot;,&quot;miltenberg&quot;,&quot;minden-lübbecke&quot;,&quot;mittelsachsen&quot;,&quot;märkisch-oderland&quot;,&quot;märkischer kreis&quot;,&quot;mönchengladbach, stadt&quot;,&quot;mühldorf am inn&quot;,&quot;mülheim an der ruhr, stadt&quot;,&quot;münchen&quot;,&quot;münchen, stadt&quot;,&quot;münster, stadt&quot;,&quot;neckar-odenwald-kreis&quot;,&quot;neu-ulm&quot;,&quot;neuburg-schrobenhausen&quot;,&quot;neumarkt in der oberpfalz&quot;,&quot;neumünster, stadt&quot;,&quot;neunkirchen&quot;,&quot;neustadt an der aisch-bad windsheim&quot;,&quot;neustadt an der waldnaab&quot;,&quot;neustadt an der weinstraße, stadt&quot;,&quot;neuwied&quot;,&quot;nienburg (weser)&quot;,&quot;nordfriesland&quot;,&quot;nordhausen&quot;,&quot;nordsachsen&quot;,&quot;nordwestmecklenburg&quot;,&quot;northeim&quot;,&quot;nürnberg, stadt&quot;,&quot;nürnberger land&quot;,&quot;oberallgäu&quot;,&quot;oberbergischer kreis&quot;,&quot;oberhausen, stadt&quot;,&quot;oberhavel&quot;,&quot;oberspreewald-lausitz&quot;,&quot;odenwaldkreis&quot;,&quot;oder-spree&quot;,&quot;offenbach&quot;,&quot;offenbach am main, stadt&quot;,&quot;oldenburg&quot;,&quot;oldenburg (oldenburg), stadt&quot;,&quot;olpe&quot;,&quot;ortenaukreis&quot;,&quot;osnabrück&quot;,&quot;osnabrück, stadt&quot;,&quot;ostalbkreis&quot;,&quot;ostallgäu&quot;,&quot;osterholz&quot;,&quot;osterode am harz&quot;,&quot;ostholstein&quot;,&quot;ostprignitz-ruppin&quot;,&quot;paderborn&quot;,&quot;passau&quot;,&quot;passau, stadt&quot;,&quot;peine&quot;,&quot;pfaffenhofen an der ilm&quot;,&quot;pforzheim, stadt&quot;,&quot;pinneberg&quot;,&quot;pirmasens, stadt&quot;,&quot;plön&quot;,&quot;potsdam, stadt&quot;,&quot;potsdam-mittelmark&quot;,&quot;prignitz&quot;,&quot;rastatt&quot;,&quot;ravensburg&quot;,&quot;recklinghausen&quot;,&quot;regen&quot;,&quot;regensburg&quot;,&quot;regensburg, stadt&quot;,&quot;region hannover&quot;,&quot;rems-murr-kreis&quot;,&quot;remscheid, stadt&quot;,&quot;rendsburg-eckernförde&quot;,&quot;reutlingen&quot;,&quot;rhein-erft-kreis&quot;,&quot;rhein-hunsrück-kreis&quot;,&quot;rhein-kreis neuss&quot;,&quot;rhein-lahn-kreis&quot;,&quot;rhein-neckar-kreis&quot;,&quot;rhein-pfalz-kreis&quot;,&quot;rhein-sieg-kreis&quot;,&quot;rheingau-taunus-kreis&quot;,&quot;rheinisch-bergischer kreis&quot;,&quot;rhön-grabfeld&quot;,&quot;rosenheim&quot;,&quot;rosenheim, stadt&quot;,&quot;rostock&quot;,&quot;rostock, stadt&quot;,&quot;rotenburg (wümme)&quot;,&quot;roth&quot;,&quot;rottal-inn&quot;,&quot;rottweil&quot;,&quot;saale-holzland-kreis&quot;,&quot;saale-orla-kreis&quot;,&quot;saalekreis&quot;,&quot;saalfeld-rudolstadt&quot;,&quot;saarbrücken, regionalverband&quot;,&quot;saarlouis&quot;,&quot;saarpfalz-kreis&quot;,&quot;salzgitter, stadt&quot;,&quot;salzlandkreis&quot;,&quot;schaumburg&quot;,&quot;schleswig-flensburg&quot;,&quot;schmalkalden-meiningen&quot;,&quot;schwabach, stadt&quot;,&quot;schwalm-eder-kreis&quot;,&quot;schwandorf&quot;,&quot;schwarzwald-baar-kreis&quot;,&quot;schweinfurt&quot;,&quot;schweinfurt, stadt&quot;,&quot;schwerin, stadt&quot;,&quot;schwäbisch hall&quot;,&quot;segeberg&quot;,&quot;siegen-wittgenstein&quot;,&quot;sigmaringen&quot;,&quot;soest&quot;,&quot;solingen, stadt&quot;,&quot;sonneberg&quot;,&quot;speyer, stadt&quot;,&quot;spree-neiße&quot;,&quot;st. wendel&quot;,&quot;stade&quot;,&quot;starnberg&quot;,&quot;steinburg&quot;,&quot;steinfurt&quot;,&quot;stendal&quot;,&quot;stormarn&quot;,&quot;straubing, stadt&quot;,&quot;straubing-bogen&quot;,&quot;stuttgart, stadt&quot;,&quot;städteregion aachen&quot;,&quot;suhl, stadt&quot;,&quot;sächsische schweiz-osterzgebirge&quot;,&quot;sömmerda&quot;,&quot;südliche weinstraße&quot;,&quot;südwestpfalz&quot;,&quot;teltow-fläming&quot;,&quot;tirschenreuth&quot;,&quot;traunstein&quot;,&quot;trier, stadt&quot;,&quot;trier-saarburg&quot;,&quot;tuttlingen&quot;,&quot;tübingen&quot;,&quot;uckermark&quot;,&quot;uelzen&quot;,&quot;ulm, stadt&quot;,&quot;unna&quot;,&quot;unstrut-hainich-kreis&quot;,&quot;unterallgäu&quot;,&quot;vechta&quot;,&quot;verden&quot;,&quot;viersen&quot;,&quot;vogelsbergkreis&quot;,&quot;vogtlandkreis&quot;,&quot;vorpommern-greifswald&quot;,&quot;vorpommern-rügen&quot;,&quot;vulkaneifel&quot;,&quot;waldeck-frankenberg&quot;,&quot;waldshut&quot;,&quot;warendorf&quot;,&quot;wartburgkreis&quot;,&quot;weiden in der oberpfalz, stadt&quot;,&quot;weilheim-schongau&quot;,&quot;weimar, stadt&quot;,&quot;weimarer land&quot;,&quot;weißenburg-gunzenhausen&quot;,&quot;werra-meißner-kreis&quot;,&quot;wesel&quot;,&quot;wesermarsch&quot;,&quot;westerwaldkreis&quot;,&quot;wetteraukreis&quot;,&quot;wiesbaden, stadt&quot;,&quot;wilhelmshaven, stadt&quot;,&quot;wittenberg&quot;,&quot;wittmund&quot;,&quot;wolfenbüttel&quot;,&quot;wolfsburg, stadt&quot;,&quot;worms, stadt&quot;,&quot;wunsiedel im fichtelgebirge&quot;,&quot;wuppertal, stadt&quot;,&quot;würzburg&quot;,&quot;würzburg, stadt&quot;,&quot;zollernalbkreis&quot;,&quot;zweibrücken, stadt&quot;,&quot;zwickau&quot;]},&quot;title&quot;:&quot;Kreis&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;1 000 Euro&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;},{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;1 000 Euro&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Bundesland&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Deutschland&quot;,&quot;Baden-Württemberg&quot;,&quot;Bayern&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hessen&quot;,&quot;Mecklenburg-Vorpommern&quot;,&quot;Niedersachsen&quot;,&quot;Nordrhein-Westfalen&quot;,&quot;Rheinland-Pfalz&quot;,&quot;Saarland&quot;,&quot;Sachsen&quot;,&quot;Sachsen-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thüringen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Region&quot;},{&quot;name&quot;:&quot;Kreis&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;stuttgart, stadt&quot;,&quot;böblingen&quot;,&quot;esslingen&quot;,&quot;göppingen&quot;,&quot;ludwigsburg&quot;,&quot;rems-murr-kreis&quot;,&quot;heilbronn, stadt&quot;,&quot;heilbronn&quot;,&quot;hohenlohekreis&quot;,&quot;schwäbisch hall&quot;,&quot;main-tauber-kreis&quot;,&quot;heidenheim&quot;,&quot;ostalbkreis&quot;,&quot;baden-baden, stadt&quot;,&quot;karlsruhe, stadt&quot;,&quot;karlsruhe&quot;,&quot;rastatt&quot;,&quot;heidelberg, stadt&quot;,&quot;mannheim, stadt&quot;,&quot;neckar-odenwald-kreis&quot;,&quot;rhein-neckar-kreis&quot;,&quot;pforzheim, stadt&quot;,&quot;calw&quot;,&quot;enzkreis&quot;,&quot;freudenstadt&quot;,&quot;freiburg im breisgau, stadt&quot;,&quot;breisgau-hochschwarzwald&quot;,&quot;emmendingen&quot;,&quot;ortenaukreis&quot;,&quot;rottweil&quot;,&quot;schwarzwald-baar-kreis&quot;,&quot;tuttlingen&quot;,&quot;konstanz&quot;,&quot;lörrach&quot;,&quot;waldshut&quot;,&quot;reutlingen&quot;,&quot;tübingen&quot;,&quot;zollernalbkreis&quot;,&quot;ulm, stadt&quot;,&quot;alb-donau-kreis&quot;,&quot;biberach&quot;,&quot;bodenseekreis&quot;,&quot;ravensburg&quot;,&quot;sigmaringen&quot;,&quot;ingolstadt, stadt&quot;,&quot;münchen, stadt&quot;,&quot;rosenheim, stadt&quot;,&quot;altötting&quot;,&quot;berchtesgadener land&quot;,&quot;bad tölz-wolfratshausen&quot;,&quot;dachau&quot;,&quot;ebersberg&quot;,&quot;eichstätt&quot;,&quot;erding&quot;,&quot;freising&quot;,&quot;fürstenfeldbruck&quot;,&quot;garmisch-partenkirchen&quot;,&quot;landsberg am lech&quot;,&quot;miesbach&quot;,&quot;mühldorf am inn&quot;,&quot;münchen&quot;,&quot;neuburg-schrobenhausen&quot;,&quot;pfaffenhofen an der ilm&quot;,&quot;rosenheim&quot;,&quot;starnberg&quot;,&quot;traunstein&quot;,&quot;weilheim-schongau&quot;,&quot;landshut, stadt&quot;,&quot;passau, stadt&quot;,&quot;straubing, stadt&quot;,&quot;deggendorf&quot;,&quot;freyung-grafenau&quot;,&quot;kelheim&quot;,&quot;landshut&quot;,&quot;passau&quot;,&quot;regen&quot;,&quot;rottal-inn&quot;,&quot;straubing-bogen&quot;,&quot;dingolfing-landau&quot;,&quot;amberg, stadt&quot;,&quot;regensburg, stadt&quot;,&quot;weiden in der oberpfalz, stadt&quot;,&quot;amberg-sulzbach&quot;,&quot;cham&quot;,&quot;neumarkt in der oberpfalz&quot;,&quot;neustadt an der waldnaab&quot;,&quot;regensburg&quot;,&quot;schwandorf&quot;,&quot;tirschenreuth&quot;,&quot;bamberg, stadt&quot;,&quot;bayreuth, stadt&quot;,&quot;coburg, stadt&quot;,&quot;hof, stadt&quot;,&quot;bamberg&quot;,&quot;bayreuth&quot;,&quot;coburg&quot;,&quot;forchheim&quot;,&quot;hof&quot;,&quot;kronach&quot;,&quot;kulmbach&quot;,&quot;lichtenfels&quot;,&quot;wunsiedel im fichtelgebirge&quot;,&quot;ansbach, stadt&quot;,&quot;erlangen, stadt&quot;,&quot;fürth, stadt&quot;,&quot;nürnberg, stadt&quot;,&quot;schwabach, stadt&quot;,&quot;ansbach&quot;,&quot;erlangen-höchstadt&quot;,&quot;fürth&quot;,&quot;nürnberger land&quot;,&quot;neustadt an der aisch-bad windsheim&quot;,&quot;roth&quot;,&quot;weißenburg-gunzenhausen&quot;,&quot;aschaffenburg, stadt&quot;,&quot;schweinfurt, stadt&quot;,&quot;würzburg, stadt&quot;,&quot;aschaffenburg&quot;,&quot;bad kissingen&quot;,&quot;rhön-grabfeld&quot;,&quot;haßberge&quot;,&quot;kitzingen&quot;,&quot;miltenberg&quot;,&quot;main-spessart&quot;,&quot;schweinfurt&quot;,&quot;würzburg&quot;,&quot;augsburg, stadt&quot;,&quot;kaufbeuren, stadt&quot;,&quot;kempten (allgäu), stadt&quot;,&quot;memmingen, stadt&quot;,&quot;aichach-friedberg&quot;,&quot;augsburg&quot;,&quot;dillingen an der donau&quot;,&quot;günzburg&quot;,&quot;neu-ulm&quot;,&quot;lindau (bodensee)&quot;,&quot;ostallgäu&quot;,&quot;unterallgäu&quot;,&quot;donau-ries&quot;,&quot;oberallgäu&quot;,&quot;berlin, stadt&quot;,&quot;brandenburg an der havel, stadt&quot;,&quot;cottbus, stadt&quot;,&quot;frankfurt (oder), stadt&quot;,&quot;potsdam, stadt&quot;,&quot;barnim&quot;,&quot;dahme-spreewald&quot;,&quot;elbe-elster&quot;,&quot;havelland&quot;,&quot;märkisch-oderland&quot;,&quot;oberhavel&quot;,&quot;oberspreewald-lausitz&quot;,&quot;oder-spree&quot;,&quot;ostprignitz-ruppin&quot;,&quot;potsdam-mittelmark&quot;,&quot;prignitz&quot;,&quot;spree-neiße&quot;,&quot;teltow-fläming&quot;,&quot;uckermark&quot;,&quot;bremen, stadt&quot;,&quot;bremerhaven, stadt&quot;,&quot;hamburg&quot;,&quot;darmstadt, stadt&quot;,&quot;frankfurt am main, stadt&quot;,&quot;offenbach am main, stadt&quot;,&quot;wiesbaden, stadt&quot;,&quot;bergstraße&quot;,&quot;darmstadt-dieburg&quot;,&quot;groß-gerau&quot;,&quot;hochtaunuskreis&quot;,&quot;main-kinzig-kreis&quot;,&quot;main-taunus-kreis&quot;,&quot;odenwaldkreis&quot;,&quot;offenbach&quot;,&quot;rheingau-taunus-kreis&quot;,&quot;wetteraukreis&quot;,&quot;gießen&quot;,&quot;lahn-dill-kreis&quot;,&quot;limburg-weilburg&quot;,&quot;marburg-biedenkopf&quot;,&quot;vogelsbergkreis&quot;,&quot;kassel, stadt&quot;,&quot;fulda&quot;,&quot;hersfeld-rotenburg&quot;,&quot;kassel&quot;,&quot;schwalm-eder-kreis&quot;,&quot;waldeck-frankenberg&quot;,&quot;werra-meißner-kreis&quot;,&quot;rostock, stadt&quot;,&quot;schwerin, stadt&quot;,&quot;mecklenburgische seenplatte&quot;,&quot;rostock&quot;,&quot;vorpommern-rügen&quot;,&quot;nordwestmecklenburg&quot;,&quot;vorpommern-greifswald&quot;,&quot;ludwigslust-parchim&quot;,&quot;braunschweig, stadt&quot;,&quot;salzgitter, stadt&quot;,&quot;wolfsburg, stadt&quot;,&quot;gifhorn&quot;,&quot;goslar&quot;,&quot;helmstedt&quot;,&quot;northeim&quot;,&quot;osterode am harz&quot;,&quot;peine&quot;,&quot;wolfenbüttel&quot;,&quot;göttingen&quot;,&quot;region hannover&quot;,&quot;diepholz&quot;,&quot;hameln-pyrmont&quot;,&quot;hildesheim&quot;,&quot;holzminden&quot;,&quot;nienburg (weser)&quot;,&quot;schaumburg&quot;,&quot;celle&quot;,&quot;cuxhaven&quot;,&quot;harburg&quot;,&quot;lüchow-dannenberg&quot;,&quot;lüneburg&quot;,&quot;osterholz&quot;,&quot;rotenburg (wümme)&quot;,&quot;heidekreis&quot;,&quot;stade&quot;,&quot;uelzen&quot;,&quot;verden&quot;,&quot;delmenhorst, stadt&quot;,&quot;emden, stadt&quot;,&quot;oldenburg (oldenburg), stadt&quot;,&quot;osnabrück, stadt&quot;,&quot;wilhelmshaven, stadt&quot;,&quot;ammerland&quot;,&quot;aurich&quot;,&quot;cloppenburg&quot;,&quot;emsland&quot;,&quot;friesland&quot;,&quot;grafschaft bentheim&quot;,&quot;leer&quot;,&quot;oldenburg&quot;,&quot;osnabrück&quot;,&quot;vechta&quot;,&quot;wesermarsch&quot;,&quot;wittmund&quot;,&quot;düsseldorf, stadt&quot;,&quot;duisburg, stadt&quot;,&quot;essen, stadt&quot;,&quot;krefeld, stadt&quot;,&quot;mönchengladbach, stadt&quot;,&quot;mülheim an der ruhr, stadt&quot;,&quot;oberhausen, stadt&quot;,&quot;remscheid, stadt&quot;,&quot;solingen, stadt&quot;,&quot;wuppertal, stadt&quot;,&quot;kleve&quot;,&quot;mettmann&quot;,&quot;rhein-kreis neuss&quot;,&quot;viersen&quot;,&quot;wesel&quot;,&quot;bonn, stadt&quot;,&quot;köln, stadt&quot;,&quot;leverkusen, stadt&quot;,&quot;städteregion aachen&quot;,&quot;düren&quot;,&quot;rhein-erft-kreis&quot;,&quot;euskirchen&quot;,&quot;heinsberg&quot;,&quot;oberbergischer kreis&quot;,&quot;rheinisch-bergischer kreis&quot;,&quot;rhein-sieg-kreis&quot;,&quot;bottrop, stadt&quot;,&quot;gelsenkirchen, stadt&quot;,&quot;münster, stadt&quot;,&quot;borken&quot;,&quot;coesfeld&quot;,&quot;recklinghausen&quot;,&quot;steinfurt&quot;,&quot;warendorf&quot;,&quot;bielefeld, stadt&quot;,&quot;gütersloh&quot;,&quot;herford&quot;,&quot;höxter&quot;,&quot;lippe&quot;,&quot;minden-lübbecke&quot;,&quot;paderborn&quot;,&quot;bochum, stadt&quot;,&quot;dortmund, stadt&quot;,&quot;hagen, stadt&quot;,&quot;hamm, stadt&quot;,&quot;herne, stadt&quot;,&quot;ennepe-ruhr-kreis&quot;,&quot;hochsauerlandkreis&quot;,&quot;märkischer kreis&quot;,&quot;olpe&quot;,&quot;siegen-wittgenstein&quot;,&quot;soest&quot;,&quot;unna&quot;,&quot;koblenz, stadt&quot;,&quot;ahrweiler&quot;,&quot;altenkirchen (westerwald)&quot;,&quot;bad kreuznach&quot;,&quot;birkenfeld&quot;,&quot;cochem-zell&quot;,&quot;mayen-koblenz&quot;,&quot;neuwied&quot;,&quot;rhein-hunsrück-kreis&quot;,&quot;rhein-lahn-kreis&quot;,&quot;westerwaldkreis&quot;,&quot;trier, stadt&quot;,&quot;bernkastel-wittlich&quot;,&quot;eifelkreis bitburg-prüm&quot;,&quot;vulkaneifel&quot;,&quot;trier-saarburg&quot;,&quot;frankenthal (pfalz), stadt&quot;,&quot;kaiserslautern, stadt&quot;,&quot;landau in der pfalz, stadt&quot;,&quot;ludwigshafen am rhein, stadt&quot;,&quot;mainz, stadt&quot;,&quot;neustadt an der weinstraße, stadt&quot;,&quot;pirmasens, stadt&quot;,&quot;speyer, stadt&quot;,&quot;worms, stadt&quot;,&quot;zweibrücken, stadt&quot;,&quot;alzey-worms&quot;,&quot;bad dürkheim&quot;,&quot;donnersbergkreis&quot;,&quot;germersheim&quot;,&quot;kaiserslautern&quot;,&quot;kusel&quot;,&quot;südliche weinstraße&quot;,&quot;rhein-pfalz-kreis&quot;,&quot;mainz-bingen&quot;,&quot;südwestpfalz&quot;,&quot;saarbrücken, regionalverband&quot;,&quot;merzig-wadern&quot;,&quot;neunkirchen&quot;,&quot;saarlouis&quot;,&quot;saarpfalz-kreis&quot;,&quot;st. wendel&quot;,&quot;chemnitz, stadt&quot;,&quot;erzgebirgskreis&quot;,&quot;mittelsachsen&quot;,&quot;vogtlandkreis&quot;,&quot;zwickau&quot;,&quot;dresden, stadt&quot;,&quot;bautzen&quot;,&quot;görlitz&quot;,&quot;meißen&quot;,&quot;sächsische schweiz-osterzgebirge&quot;,&quot;leipzig, stadt&quot;,&quot;leipzig&quot;,&quot;nordsachsen&quot;,&quot;dessau-roßlau, stadt&quot;,&quot;halle (saale), stadt&quot;,&quot;magdeburg, stadt&quot;,&quot;altmarkkreis salzwedel&quot;,&quot;anhalt-bitterfeld&quot;,&quot;börde&quot;,&quot;burgenlandkreis&quot;,&quot;harz&quot;,&quot;jerichower land&quot;,&quot;mansfeld-südharz&quot;,&quot;saalekreis&quot;,&quot;salzlandkreis&quot;,&quot;stendal&quot;,&quot;wittenberg&quot;,&quot;flensburg, stadt&quot;,&quot;kiel, stadt&quot;,&quot;lübeck, stadt&quot;,&quot;neumünster, stadt&quot;,&quot;dithmarschen&quot;,&quot;herzogtum lauenburg&quot;,&quot;nordfriesland&quot;,&quot;ostholstein&quot;,&quot;pinneberg&quot;,&quot;plön&quot;,&quot;rendsburg-eckernförde&quot;,&quot;schleswig-flensburg&quot;,&quot;segeberg&quot;,&quot;steinburg&quot;,&quot;stormarn&quot;,&quot;erfurt, stadt&quot;,&quot;gera, stadt&quot;,&quot;jena, stadt&quot;,&quot;suhl, stadt&quot;,&quot;weimar, stadt&quot;,&quot;eisenach, stadt&quot;,&quot;eichsfeld&quot;,&quot;nordhausen&quot;,&quot;wartburgkreis&quot;,&quot;unstrut-hainich-kreis&quot;,&quot;kyffhäuserkreis&quot;,&quot;schmalkalden-meiningen&quot;,&quot;gotha&quot;,&quot;sömmerda&quot;,&quot;hildburghausen&quot;,&quot;ilm-kreis&quot;,&quot;weimarer land&quot;,&quot;sonneberg&quot;,&quot;saalfeld-rudolstadt&quot;,&quot;saale-holzland-kreis&quot;,&quot;saale-orla-kreis&quot;,&quot;greiz&quot;,&quot;altenburger land&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Kreis&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-graphstepsize="null"
@@ -604,9 +624,9 @@ data-event-label="high"
 
   <div id="datatables">
 
-    <a href="https://DnsTestEnvironment.github.io/dns-data/de/headline/8-4-a.csv" class="btn btn-primary btn-download" download="indicator_8-4-a.csv" tabindex="0" role="button">Speichern der Headline im CSV-Format</a>
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/de/headline/8-4-a.csv" class="btn btn-primary btn-download" download="indicator_8-4-a.csv" tabindex="0" role="button">Speichern der Headline im CSV-Format</a>
 
-    <a href="https://DnsTestEnvironment.github.io/dns-data/de/data/8-4-a.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_8-4-a.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/de/data/8-4-a.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_8-4-a.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
@@ -648,26 +668,85 @@ data-event-label="high"
   <span id="table-alternative"></span>
 </div>
 <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab"  href="#chartview" aria-controls="chartview" role="tab" data-on="click"
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+      active
+    ">
+    <a
+      class="nav-link"
+      data-toggle="tab"
+      role="tab"
+      
+        id="tab-chartview"
+        href="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
- aria-describedby="table-alternative"><i class="fa fa-line-chart" aria-hidden="true"></i> <span class="hidden-xs" style="color:black">Grafik</span></a>
+
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Grafik</span></a>
   </li>
-  <li role="presentation" class="nav-item">
-    <a class="nav-link" data-toggle="tab" id="tab-tableview" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+      
+    ">
+    <a
+      class="nav-link"
+      data-toggle="tab"
+      role="tab"
+      
+        id="tab-tableview"
+        href="#tableview"
+        aria-controls="tableview"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
-><i class="fa fa-table" aria-hidden="true"></i> <span class="hidden-xs" style="color:black">Tabelle</span></a>
-  </li><li role="presentation" class="nav-item map" style="display:none">
-    <a data-no-disagg="true" class="nav-link" data-toggle="tab" id="tab-mapview" href="#mapview" aria-controls="mapview" role="tab" data-on="click"
+
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Tabelle</span></a>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      map
+      
+      
+    ">
+    <a
+      class="nav-link"
+      data-toggle="tab"
+      role="tab"
+      
+        id="tab-mapview"
+        href="#mapview"
+        aria-controls="mapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Map tab"
- aria-describedby="table-alternative"><i class="fa fa-map" aria-hidden="true"></i> <span class="hidden-xs"style="color:black">Karte</span></a>
-  </li></ul>
+
+        ><i class="fa fa-map" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Karte</span></a>
+  </li>
+  
+</ul>
 
     <div class="tab-content data-view">
   
@@ -688,6 +767,7 @@ data-event-label="Change to Map tab"
           <h4 id="chart-heading" class="chart-title">Bruttoinlandsprodukt je Einwohnerin und Einwohner</h4>
           <div id="chart" class="plot-container">
             
+              
 <canvas
     role="img"
     aria-labelledby="chart-heading"
@@ -736,14 +816,18 @@ opensdg.annotationPresets = {
         borderWidth: 1,
         label: {
             backgroundColor: 'white',
+            
             fontColor: 'black',
+            
         },
         // This "highContrast" overrides colors when in high-contrast mode.
         highContrast: {
             label: {
                 backgroundColor: 'black',
-                fontColor: 'white'
-            }
+                
+                fontColor: 'white',
+                
+            },
         },
         // This callback is used to generate a generic description for screenreaders.
         // This can be overridden to be a more specific string, eg:
@@ -786,9 +870,7 @@ opensdg.annotationPresets = {
         label: {
             position: 'top',
             content: translations.indicator.annotation_series_break,
-            xAdjust: +60,
         },
-
     },
 };
 
@@ -949,9 +1031,10 @@ opensdg.chartConfigAlter(function(config, info) {
 });
 </script>
 
+            
           </div>
           <div id="plotLegend"></div>
-          </u>
+          
 
 
 
@@ -971,10 +1054,8 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
-        <dt><u>Einheit</u>:</dt>
-        <dd>preisbereinigt, in 1&nbsp;000 Euro</dd>
-        
-
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -983,6 +1064,31 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
 
         
         <dt><u></u>:</dt>
@@ -996,8 +1102,8 @@ opensdg.chartConfigAlter(function(config, info) {
       <div id="chartSelectionDownload" class="clearfix">
         <button id="btnSave" title="" class='btn btn-primary btn-download'>
           Grafik als Bild speichern
-        </button>
-      </div>
+        </button><!-- 
+   --></div>
     </div>
 
 
@@ -1012,7 +1118,7 @@ opensdg.chartConfigAlter(function(config, info) {
         </div>
         <div id="selectionsTable"></div>
 <dl id="tableTargetLines" class="clearfix"></dl>
-</u>
+
 
 
 
@@ -1032,10 +1138,8 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
-        <dt><u>Einheit</u>:</dt>
-        <dd>preisbereinigt, in 1&nbsp;000 Euro</dd>
-        
-
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1044,6 +1148,31 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
 
         
         <dt><u></u>:</dt>
@@ -1064,7 +1193,7 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Karte wird geladen" />
 </div>
-</u>
+
 
 
 
@@ -1084,10 +1213,8 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
-        <dt><u>Einheit</u>:</dt>
-        <dd>preisbereinigt, in 1&nbsp;000 Euro</dd>
-        
-
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1096,6 +1223,31 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
 
         
         <dt><u></u>:</dt>
@@ -1358,7 +1510,7 @@ data-event-label="Change to indicator.sources tab"
               
 
               
-                <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
+                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
                   2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
@@ -1411,7 +1563,7 @@ data-event-label="Change to indicator.sources tab"
               
 
               
-                <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
+                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
                   2021-03-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
@@ -2634,11 +2786,11 @@ data-event-label="Change to indicator.sources tab"
   
 
 
-  <a class="btn btn-primary" href="http://prose.io/#DnsTestEnvironment/dns-data/edit/develop/data/indicator_8-4-a.csv">Daten bearbeiten</a>
+  <a class="btn btn-primary" href="http://prose.io/#DnsUpgradeEnvironment/dns-data/edit/develop/data/indicator_8-4-a.csv">Daten bearbeiten</a>
   
 
   
-  <a class="btn btn-primary" href="http://prose.io/#DnsTestEnvironment/dns-data/edit/develop/meta/8-4-a.md">Metadaten bearbeiten</a>
+  <a class="btn btn-primary" href="http://prose.io/#DnsUpgradeEnvironment/dns-data/edit/develop/meta/8-4-a.md">Metadaten bearbeiten</a>
   
 
   
@@ -2687,22 +2839,21 @@ data-event-label="Change to indicator.sources tab"
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
-<!-- Last check: 09.09.2021 -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -2731,115 +2882,15 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220307014608'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220509080511'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220307014608"></script><script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              showLine: domData.showline,
-              spanGaps: domData.spangaps,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-              graphStepsize: domData.graphstepsize,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: ',',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
-
+    <script src="/dns-indicators/assets/js/custom.js?v=20220509080511"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
-
-<script src="html2pdf.bundle.min.js"></script>
-<script src="/html2pdf/js/html2pdf.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
-<script type="text/javascript">
-  function generatePDF() {
-    // Choose the element that our invoice is rendered in.
-    var element = document.getElementById('chart-canvas');
-    var filename = chartInfo.indicatorId + '.png';
-    var options = {
-      // These options fix the height, width, and position.
-      margin: [20, 20, 20, 20],
-      filename: filename,
-      width: 500
-    };
-
-    // New Promise-based usage:
-    //html2pdf(element, options);
-    html2pdf(element, {
-      margin:       1,
-      filename:     'myfile.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { dpi: 192, letterRendering: true },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    });
-
-  }
-</script>
-
-
 
 
 </body>

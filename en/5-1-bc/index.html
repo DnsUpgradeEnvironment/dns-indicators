@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
-      <meta charset="utf-8">
+        <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-
-
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -14,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://DnsTestEnvironment.github.io/dns-data/en',
+  remoteDataBaseUrl: 'https://DnsUpgradeEnvironment.github.io/dns-data/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -105,7 +102,6 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
-
         
     <title>
         
@@ -137,10 +133,12 @@ var translations = {
 
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220307014608">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220509080511">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -160,15 +158,18 @@ layout-indicator
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
     
     This is a development website. We welcome your <a href="mailto:dns-indikatoren@destatis.de">feedback</a>.
+    
   </div>
 </div>
 
@@ -179,7 +180,7 @@ layout-indicator
 
     <div class="logo-and-mobile-widgets">
       <a class="navbar-brand" href="/dns-indicators/en/" id="home" onclick="updateVisitCountMinus()">
-    <img src="/dns-indicators/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+    <img src="/dns-indicators/assets/img/en/SDG_logo.png" alt="To main menu" />
 </a>
 
       <div class="mobile-widgets">
@@ -226,29 +227,21 @@ data-event-label="high"
         <button data-target="menu-mobile" aria-expanded="false">Menu</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/dns-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/reporting-status/">Summary</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/status/">Methodology</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/facts_publications/">Publications</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -258,14 +251,33 @@ data-event-label="high"
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/5-1-bc/" onclick="updateVisitCountMinus()"><span class="language-name">Deutsch</span>
+      <a class="language-toggle-link" href="/dns-indicators/5-1-bc/"><span class="language-name">Deutsch</span>
         <span class="language-abbreviation">de</span></a>
     </li></ul>
 </div>
 
 
 
-</li></ul>
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
 
     </li>
     <li id="searchToggle"
@@ -292,53 +304,45 @@ data-event-label="high"
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/dns-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Evaluation
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Evaluation
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/en/reporting-status/">Summary</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/status/">Methodology</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      About
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Useful information
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Useful information
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/facts_publications/">Publications</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link ">
     <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -348,20 +352,40 @@ data-event-label="high"
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/5-1-bc/" onclick="updateVisitCountMinus()"><span class="language-name">Deutsch</span>
+      <a class="language-toggle-link" href="/dns-indicators/5-1-bc/"><span class="language-name">Deutsch</span>
         <span class="language-abbreviation">de</span></a>
     </li></ul>
 </div>
 
 
 
-</li></ul>
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
 
     </nav>
   </div>
 
 </header>
 <div id="top" tabindex=-1></div>
+
 
 
 
@@ -419,7 +443,6 @@ data-event-label="high"
   <% if(units.length > 1) { %>
   
     <h4>Unit of measurement</h4>
-
     <fieldset>
       <legend class="sr-only">Unit of measurement</legend>
       <% _.each(units, function(unitsItem, index) { %>
@@ -427,8 +450,6 @@ data-event-label="high"
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
       <% }); %>
     </fieldset>
-
-
   
   <% } %>
   
@@ -436,9 +457,7 @@ data-event-label="high"
 
 <script type="text/template" id="series_template">
   
-    
-      <h4></h4>
-    
+    <h4></h4>
     <fieldset>
       <legend class="sr-only"></legend>
       <% _.each(serieses, function(seriesItem, index) { %>
@@ -454,15 +473,13 @@ data-event-label="high"
 <script>translations['data'] = {"0- to 2-year-olds":"0- to 2-year-olds","1 000":"1 000","1 000 eur":"1 000 €","1990 = 100":"1990 = 100","20 - 64 years":"20 to 64 years","2000 = 100":"2000 = 100","2005 = 100":"2005 = 100","2008 = 100":"2008 = 100","2015 = 100":"2015 = 100","2030 = 100":"2030 = 100","3- to 5-year-olds":"3- to 5-year-olds","60 - 64 years":"60 to 64 years","Bundesland":"Region","Series":"Time series","Year":"Year","a) 3- to 10-year-olds":"3- to 10-year-olds","a) criminal offences (overall)":"Criminal offences (overall)","a) drinking water and sanitation":"Drinking water and sanitation","a) final energy productivity":"Final energy productivity","a) germany (total)":"Germany","a) materially deprived persons":"Materially deprived persons","a) moving five-year average, referring to the middle year":"Moving five-year average, referring to the middle year","a) overweight":"Overweight without obese","a) pandemic prevention and reaction":"Pandemic prevention and reaction","a) rural and non-rural areas":"Rural and non-rural areas","a) sub-index forests":"Sub-index forests","a) time series":"Time series","a) total":"Total","a) total (moving four-year average)":"Total (moving four-year average)","adolescents (12 to 17 years)":"Adolescents (12 to 17 years)","adults (15 years and older)":"Adults (15 years and older)","age":"Age group","air pollutants":"Air pollutants","air pollutants overall":"Air pollutants overall","all line-based technologies":"All line-based technologies","area":"Area","b) 11- to 17-year-olds":"11- to 17-year-olds","b) calculated annual values":"Calculated annual values","b) containment of the covid-19 pandemic":"containment of the covid-19 pandemic","b) drinking water":"Drinking water","b) obese":"Obese","b) primary energy consumption":"Primary energy consumption","b) severely materially deprived persons":"Serverely materially deprived persons","b) students from other developing and emerging countries":"Students from other developing and emerging countries","b) sub-index settlements":"Sub-index settlements","b) target":"Target","b) target (max)":"Target","b) target (min)":"Target","baltic sea":"Baltic sea","bb":"Brandenburg","be":"Berlin","bn eur":"Bn EUR","bundesland":"Region","burglary in homes":"Burglary in homes","bw":"Baden-Wuerttemberg","by":"Bavaria","c) researchers from other developing and emerging countries":"Researchers from other developing and emerging countries","c) sanitation":"Sanitation","c) sub-index farmland":"Sub-index farmland","c) total":"Total","cable television (catv)":"Cable television (CATV)","calculation as net expenditure":"Calculation as net expenditure","calculation in grant equivalents":"Calculation in grant equivalents","civil service":"civil service","co2 emissions per mileage of motor vehicles of the public sector":"CO<sub>2</sub> emissions per mileage of motor vehicles of the public sector","consumption, investments and exports (price-adjusted)":"Consumption, investments and exports (price-adjusted)","criminal offences":"Criminal offences","d) students from ldcs":"Students from LDCs","d) sub-index inland waters":"Sub-index inland waters","data from bmel":"Data from BMEL","data from destatis":"Data from Destatis","dimension":"Time series","direct and indirect co2 emissions":"Direct and indirect CO2 emissions","direct and indirect energy consumption":"Direct and indirect energy consumption","direct and indirect raw material consumption":"Direct and indirect raw material consumption","display":"Display","e) researchers from ldcs":"Researchers from LDCs","e) sub-index coasts/seas":"Sub-index coasts/seas","economy":"Economy","emas organisational locations":"EMAS organisational locations","emas organisations":"EMAS organisations","employees in thousands":"Employees in thousands","eu-28":"EU-28","euro zone":"Euro zone","f) index overall":"Index overall","female":"Female","final energy consumption for the carriage of goods":"Final energy consumption for the carriage of goods","final energy consumption in passenger transport":"Final energy consumption in passenger transport","final energy consumption per passenger-kilometre":"Final energy consumption per passenger-kilometre","final energy consumption per tonne-kilometre":"Final energy consumption per tonne-kilometre","foreign school graduates":"Foreign school graduates","fraud":"Fraud","funding balance (share of gross domestic product (at current prices) in %)":"Funding balance (share of gross domestic product (at current prices))","german school graduates (share of all german leavers)":"German school graduates (share of all german leavers)","germany":"Germany","gini coefficient of equivalised disposable income":"Gini coefficient of equivalised disposable income","gini coefficient of equivalised income before social transfers":"Gini coefficient of equivalised income before social transfers","gini coefficient of market income":"Gini coefficient of market income","gini coefficient of wealth":"Gini coefficient of wealth","goods transport performance":"Goods transport performance","gross domestic produkt (price-adjusted) (year-on-year changes in %)":"Gross domestic produkt (price-adjusted) (year-on-year changes)","ha/d":"hectares per day","hb":"Bremen","he":"Hesse","hh":"Hamburg","imports from ldcs":"Imports from LDCs","imports of processed products from ldcs":"Imports of processed products from LDCs","in % of households":"in % of households","in relation to the middle and upper centers of the respective year":"In relation to the middle and upper centers of the respective year","in relation to the middle and upper centers of the year 2012":"In relation to the middle and upper centers of the year 2012","index/number":" ","kg/ha":"Kilograms per hectare","living space, industrial and commercial space (without mining land), public facilities":null,"m2/(inhabitant*a)":"Squaremeters per year","male":"Male","male and female":"Both sexes","men":"Men","mg/l":"Milligrams per litre","min.":"Minutes","mio.":"Millions","mio. eur":"Millions of euros","mv":"Mecklenburg Western Pomerania","nh3":"NH<sub>3</sub>","ni":"Lower Saxony","nmvoc":"NMVOC","non-rural areas":"Non-rural areas","north sea":"North sea","nox":"NO<sub>x</sub>","number":"Number","number of partner countries of german development cooperation whose rating has improved compared with 2012":"Number of partner countries of german development cooperation whose rating has improved compared with 2012","nw":"North Rhine-Westphalia","objects with digitalisat":"objects with digitalisat","other criminal offences":"Other criminal offences","partnership for sustainable textiles":"Partnership for sustainable textiles","passenger transport performance":"Passenger transport performance","per 100 000 inhabitants":"Per 100 000 inhabitants","percentage (%)":"Percentage","pm2.5":"PM<sub>2.5</sub>","proportion of msy examined in all managed stocks":"Proportion of MSY examined in all managed stocks","proportion of sustainable managed stocks in all msy examined stocks":"Proportion of sustainable managed stocks in all MSY examined stocks","pure fiber optic networks (fttb/h)":"Pure fiber optic networks (FTTB/H)","rating for germany":"Rating for germany","raw material input productivity":"Raw material input productivity","raw material use for consumption, investments and exports":"Raw material use for consumption, investments and exports","recycled paper bearing the blue angel label as a proportion of the total paper consumption of the federal administration":"Recycled paper bearing the blue angel label as a proportion of the total paper consumption of the federal administration","redd+":"REDD+","rp":"Rhineland Palatinate","rural areas":"Rural areas","sea":"Sea","serious and grievous bodily harm":"Serious and grievous bodily harm","sex":"Sex","sh":"Schleswig-Holstein","sl":"Saarland","sn":"Saxony","so2":"SO<sub>2</sub>","soil conservation":"Soil conservation","sports, leisure and recreation area, graveyard":"Sports, leisure and recreation area, graveyard","st":"Saxony-Anhalt","structural funding balance (share of gross domestic product (at current prices) in %)":"Structural funding balance (share of gross domestic product (at current prices))","tertiary education":"Tertiary education","tertiary or post-secondary non-tertiary education":"Total","th":"Thuringia","title":"Time series","total objects":"Total objects","total official development assistance regarding food security":"Total official development assistance regarding food security","transport area":"Transport area","typification":"Typification","unit":"Unit","women":"Women","year":"Year"};</script>
 
 
-
-<!-- Last check: 16.08.2021 -->
 <div class="heading goal-banner indicator goal-5">
   <div class="container">
     <div class="row">
       
       <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/dns-indicators/en/5" title="View this goal's indicator list" onclick="updateVisitCountMinus()">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/5.png" alt="Gender equality - Goal 5" id="goal-5" class="goal-icon-image goal-icon-image-"/>
+        <a href="/dns-indicators/en/5" title="View this goal's indicator list">
+          <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/5.png" alt="Gender equality - Goal 5" id="goal-5" class="goal-icon-image goal-icon-image-"/>
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
@@ -480,12 +497,13 @@ data-event-label="high"
   </div>
 </div>
 
+
 <div class="container">
   
 <ol class="breadcrumb">
   
-  <li><a href="/dns-indicators/en/" onclick="updateVisitCountMinus()">Home</a></li>
-  <li><a href="/dns-indicators/en/5" title="Achieve gender equality and empower all women and girls" onclick="updateVisitCountMinus()">Goal 5</a></li>
+  <li><a href="/dns-indicators/en/">Home</a></li>
+  <li><a href="/dns-indicators/en/5" title="Achieve gender equality and empower all women and girls">Goal 5</a></li>
   <li class="active">Indicator 5.1.bc</li>
   
 </ol>
@@ -520,7 +538,9 @@ data-event-label="high"
   
 <!--#8 addNavigationButtons---stop-------------------------------------->
 
+  
 </div>
+
 <div id="main-content" class="container goal-5" role="main">
   
 
@@ -559,8 +579,7 @@ data-event-label="high"
 </div>
 
 
-  <!-- Last check: 21.10.2021 -->
-
+  
 
 
 
@@ -575,6 +594,7 @@ data-event-label="high"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
+  data-graphtypes="null"
   data-geocoderegex=""
   data-showmap=""
   data-startvalues="[{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Time series&quot;},{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Target&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Economy&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;civil service&quot;}]"
@@ -615,9 +635,9 @@ data-event-label="high"
 
   <div id="datatables">
 
-    <a href="https://DnsTestEnvironment.github.io/dns-data/en/headline/5-1-bc.csv" class="btn btn-primary btn-download" download="indicator_5-1-bc.csv" tabindex="0" role="button">Download Headline CSV</a>
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/en/headline/5-1-bc.csv" class="btn btn-primary btn-download" download="indicator_5-1-bc.csv" tabindex="0" role="button">Download Headline CSV</a>
 
-    <a href="https://DnsTestEnvironment.github.io/dns-data/en/data/5-1-bc.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_5-1-bc.csv' tabindex='0' role='button'>Download Source CSV</a>
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/en/data/5-1-bc.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_5-1-bc.csv' tabindex='0' role='button'>Download Source CSV</a>
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
@@ -659,26 +679,85 @@ data-event-label="high"
   <span id="table-alternative"></span>
 </div>
 <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab"  href="#chartview" aria-controls="chartview" role="tab" data-on="click"
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+      active
+    ">
+    <a
+      class="nav-link"
+      data-toggle="tab"
+      role="tab"
+      
+        id="tab-chartview"
+        href="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
- aria-describedby="table-alternative"><i class="fa fa-line-chart" aria-hidden="true"></i> <span class="hidden-xs" style="color:black">Chart</span></a>
+
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Chart</span></a>
   </li>
-  <li role="presentation" class="nav-item">
-    <a class="nav-link" data-toggle="tab" id="tab-tableview" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+      
+    ">
+    <a
+      class="nav-link"
+      data-toggle="tab"
+      role="tab"
+      
+        id="tab-tableview"
+        href="#tableview"
+        aria-controls="tableview"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
-><i class="fa fa-table" aria-hidden="true"></i> <span class="hidden-xs" style="color:black">Table</span></a>
-  </li><li role="presentation" class="nav-item map" style="display:none">
-    <a data-no-disagg="true" class="nav-link" data-toggle="tab" id="tab-mapview" href="#mapview" aria-controls="mapview" role="tab" data-on="click"
+
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Table</span></a>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      map
+      
+      
+    ">
+    <a
+      class="nav-link"
+      data-toggle="tab"
+      role="tab"
+      
+        id="tab-mapview"
+        href="#mapview"
+        aria-controls="mapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Map tab"
- aria-describedby="table-alternative"><i class="fa fa-map" aria-hidden="true"></i> <span class="hidden-xs"style="color:black">Map</span></a>
-  </li></ul>
+
+        ><i class="fa fa-map" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Map</span></a>
+  </li>
+  
+</ul>
 
     <div class="tab-content data-view">
   
@@ -699,6 +778,7 @@ data-event-label="Change to Map tab"
           <h4 id="chart-heading" class="chart-title">Women on supervisory boards</h4>
           <div id="chart" class="plot-container">
             
+              
 <canvas
     role="img"
     aria-labelledby="chart-heading"
@@ -747,14 +827,18 @@ opensdg.annotationPresets = {
         borderWidth: 1,
         label: {
             backgroundColor: 'white',
+            
             fontColor: 'black',
+            
         },
         // This "highContrast" overrides colors when in high-contrast mode.
         highContrast: {
             label: {
                 backgroundColor: 'black',
-                fontColor: 'white'
-            }
+                
+                fontColor: 'white',
+                
+            },
         },
         // This callback is used to generate a generic description for screenreaders.
         // This can be overridden to be a more specific string, eg:
@@ -797,9 +881,7 @@ opensdg.annotationPresets = {
         label: {
             position: 'top',
             content: translations.indicator.annotation_series_break,
-            xAdjust: +60,
         },
-
     },
 };
 
@@ -937,7 +1019,7 @@ opensdg.chartConfigAlter(function(config, info) {
         options: {
             tooltips: {
                 intersect: false,
-                axis: 'x'
+                axis: 'x',
             },
         },
         plugins: [{
@@ -967,9 +1049,10 @@ opensdg.chartConfigAlter(function(config, info) {
 });
 </script>
 
+            
           </div>
           <div id="plotLegend"></div>
-          </u>
+          
 
 
 
@@ -989,10 +1072,8 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
-        <dt><u>Unit of measurement</u>:</dt>
-        <dd>Percentage for listed and fully co-determined companies; Specification: As of: January of the respective year</dd>
-        
-
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1001,6 +1082,31 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Comment</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of code <small>(data)</small></u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
 
         
         <dt><u></u>:</dt>
@@ -1014,8 +1120,8 @@ opensdg.chartConfigAlter(function(config, info) {
       <div id="chartSelectionDownload" class="clearfix">
         <button id="btnSave" title="" class='btn btn-primary btn-download'>
           Download Chart Image
-        </button>
-      </div>
+        </button><!-- 
+   --></div>
     </div>
 
 
@@ -1030,7 +1136,7 @@ opensdg.chartConfigAlter(function(config, info) {
         </div>
         <div id="selectionsTable"></div>
 <dl id="tableTargetLines" class="clearfix"></dl>
-</u>
+
 
 
 
@@ -1050,10 +1156,8 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
-        <dt><u>Unit of measurement</u>:</dt>
-        <dd>Percentage for listed and fully co-determined companies; Specification: As of: January of the respective year</dd>
-        
-
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1062,6 +1166,31 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Comment</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of code <small>(data)</small></u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
 
         
         <dt><u></u>:</dt>
@@ -1082,7 +1211,7 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
 </div>
-</u>
+
 
 
 
@@ -1102,10 +1231,8 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
-        <dt><u>Unit of measurement</u>:</dt>
-        <dd>Percentage for listed and fully co-determined companies; Specification: As of: January of the respective year</dd>
-        
-
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1114,6 +1241,31 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Comment</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of code <small>(data)</small></u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
 
         
         <dt><u></u>:</dt>
@@ -1376,7 +1528,7 @@ data-event-label="Change to indicator.sources tab"
               
 
               
-                <a href="https://github.com/DnsTestEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
+                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/f72ad64f6280dee307fa9b8113abb3e2fc724bc4" target="_blank">
                   2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -1429,7 +1581,7 @@ data-event-label="Change to indicator.sources tab"
               
 
               
-                <a href="https://github.com/DnsTestEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
+                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
                   2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -2980,11 +3132,11 @@ data-event-label="Change to indicator.sources tab"
   
 
 
-  <a class="btn btn-primary" href="http://prose.io/#DnsTestEnvironment/dns-data/edit/develop/data/indicator_5-1-bc.csv">Edit Data</a>
+  <a class="btn btn-primary" href="http://prose.io/#DnsUpgradeEnvironment/dns-data/edit/develop/data/indicator_5-1-bc.csv">Edit Data</a>
   
 
   
-  <a class="btn btn-primary" href="http://prose.io/#DnsTestEnvironment/dns-data/edit/develop/meta/5-1-bc.md">Edit Metadata</a>
+  <a class="btn btn-primary" href="http://prose.io/#DnsUpgradeEnvironment/dns-data/edit/develop/meta/5-1-bc.md">Edit Metadata</a>
   
 
   
@@ -3033,22 +3185,21 @@ data-event-label="Change to indicator.sources tab"
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
-<!-- Last check: 09.09.2021 -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -3077,115 +3228,15 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220307014608'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220509080511'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220307014608"></script><script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              showLine: domData.showline,
-              spanGaps: domData.spangaps,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-              graphStepsize: domData.graphstepsize,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: ',',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
-
+    <script src="/dns-indicators/assets/js/custom.js?v=20220509080511"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
-
-<script src="html2pdf.bundle.min.js"></script>
-<script src="/html2pdf/js/html2pdf.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
-<script type="text/javascript">
-  function generatePDF() {
-    // Choose the element that our invoice is rendered in.
-    var element = document.getElementById('chart-canvas');
-    var filename = chartInfo.indicatorId + '.png';
-    var options = {
-      // These options fix the height, width, and position.
-      margin: [20, 20, 20, 20],
-      filename: filename,
-      width: 500
-    };
-
-    // New Promise-based usage:
-    //html2pdf(element, options);
-    html2pdf(element, {
-      margin:       1,
-      filename:     'myfile.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { dpi: 192, letterRendering: true },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    });
-
-  }
-</script>
-
-
 
 
 </body>

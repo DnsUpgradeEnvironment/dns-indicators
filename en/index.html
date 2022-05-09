@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
-      <meta charset="utf-8">
+        <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-
-
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -14,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://DnsTestEnvironment.github.io/dns-data/en',
+  remoteDataBaseUrl: 'https://DnsUpgradeEnvironment.github.io/dns-data/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -105,7 +102,6 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
-
         
     <title>German Indicators For The Sustainable Development Goals</title>
 
@@ -132,10 +128,12 @@ var translations = {
 
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220307014608">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220509080511">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -155,15 +153,18 @@ layout-frontpage
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
     
     This is a development website. We welcome your <a href="mailto:dns-indikatoren@destatis.de">feedback</a>.
+    
   </div>
 </div>
 
@@ -174,7 +175,7 @@ layout-frontpage
 
     <div class="logo-and-mobile-widgets">
       <a class="navbar-brand" href="/dns-indicators/en/" id="home" onclick="updateVisitCountMinus()">
-    <img src="/dns-indicators/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+    <img src="/dns-indicators/assets/img/en/SDG_logo.png" alt="To main menu" />
 </a>
 
       <div class="mobile-widgets">
@@ -221,29 +222,21 @@ data-event-label="high"
         <button data-target="menu-mobile" aria-expanded="false">Menu</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/dns-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/reporting-status/">Summary</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/status/">Methodology</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/facts_publications/">Publications</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -253,14 +246,33 @@ data-event-label="high"
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/" onclick="updateVisitCountMinus()"><span class="language-name">Deutsch</span>
+      <a class="language-toggle-link" href="/dns-indicators/"><span class="language-name">Deutsch</span>
         <span class="language-abbreviation">de</span></a>
     </li></ul>
 </div>
 
 
 
-</li></ul>
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
 
     </li>
     <li id="searchToggle"
@@ -287,53 +299,45 @@ data-event-label="high"
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/dns-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Evaluation
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Evaluation
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/en/reporting-status/">Summary</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/status/">Methodology</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      About
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link">
-              <div class="btn-group menu-dropdown">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Useful information
-                      <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <ul class="dropdown-menu"><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Useful information
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/dns-indicators/en/facts_publications/">Publications</a>
-</li>
-</ul>
-              </div>
-          </li><li class="nav-link ">
+</li></ul>
+            </div>
+        </li><li class="nav-link ">
     <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -343,14 +347,33 @@ data-event-label="high"
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
   <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/" onclick="updateVisitCountMinus()"><span class="language-name">Deutsch</span>
+      <a class="language-toggle-link" href="/dns-indicators/"><span class="language-name">Deutsch</span>
         <span class="language-abbreviation">de</span></a>
     </li></ul>
 </div>
 
 
 
-</li></ul>
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
 
     </nav>
   </div>
@@ -360,13 +383,14 @@ data-event-label="high"
 
 
 
+
 <div id="main-content" class="container" role="main">
 
     
 
     
     
-    <h2 class="spacer medium">Indikatoren der Deutschen Nachhaltigkeitsstrategie</h2>
+    <h2 class="spacer medium">National Data for UN-SDGs</h2>
 
     
     <p class="spacer medium">Click on each goal, or <span id="jump-to-search"><a> search, </a></span> for German statistics for Sustainable Development Goal global indicators.</p>
@@ -376,7 +400,7 @@ data-event-label="high"
         <div class="row no-gutters">
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/1">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/1.png" id="goal-1" alt="No poverty - Goal 1" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/1.png" id="goal-1" alt="No poverty - Goal 1" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -384,7 +408,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/2">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/2.png" id="goal-2" alt="Zero hunger - Goal 2" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/2.png" id="goal-2" alt="Zero hunger - Goal 2" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -392,7 +416,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/3">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png" id="goal-3" alt="Good health and well-being - Goal 3" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/3.png" id="goal-3" alt="Good health and well-being - Goal 3" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -400,7 +424,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/4">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png" id="goal-4" alt="Quality education - Goal 4" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/4.png" id="goal-4" alt="Quality education - Goal 4" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -408,7 +432,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/5">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/5.png" id="goal-5" alt="Gender equality - Goal 5" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/5.png" id="goal-5" alt="Gender equality - Goal 5" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -416,7 +440,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/6">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/6.png" id="goal-6" alt="Clean water and sanitation - Goal 6" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/6.png" id="goal-6" alt="Clean water and sanitation - Goal 6" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         </div>
@@ -424,7 +448,7 @@ data-event-label="high"
         <div class="row no-gutters">
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/7">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/7.png" id="goal-7" alt="Affordable and clean energy - Goal 7" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/7.png" id="goal-7" alt="Affordable and clean energy - Goal 7" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -432,7 +456,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/8">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/8.png" id="goal-8" alt="Decent jobs and economic growth - Goal 8" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/8.png" id="goal-8" alt="Decent jobs and economic growth - Goal 8" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -440,7 +464,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/9">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/9.png" id="goal-9" alt="Industry, innovation and infrastructure - Goal 9" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/9.png" id="goal-9" alt="Industry, innovation and infrastructure - Goal 9" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -448,7 +472,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/10">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png" id="goal-10" alt="Reduced inequalities - Goal 10" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/10.png" id="goal-10" alt="Reduced inequalities - Goal 10" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -456,7 +480,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/11">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/11.png" id="goal-11" alt="Sustainable cities &amp; communities - Goal 11" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/11.png" id="goal-11" alt="Sustainable cities &amp; communities - Goal 11" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -464,7 +488,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/12">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png" id="goal-12" alt="Responsible consumption and production - Goal 12" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/12.png" id="goal-12" alt="Responsible consumption and production - Goal 12" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         </div>
@@ -472,7 +496,7 @@ data-event-label="high"
         <div class="row no-gutters">
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/13">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/13.png" id="goal-13" alt="Climate action - Goal 13" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/13.png" id="goal-13" alt="Climate action - Goal 13" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -480,7 +504,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/14">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/14.png" id="goal-14" alt="Life below water - Goal 14" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/14.png" id="goal-14" alt="Life below water - Goal 14" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -488,7 +512,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/15">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/15.png" id="goal-15" alt="Life on land - Goal 15" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/15.png" id="goal-15" alt="Life on land - Goal 15" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -496,7 +520,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/16">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/16.png" id="goal-16" alt="Peace and justice - strong institutions - Goal 16" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/16.png" id="goal-16" alt="Peace and justice - strong institutions - Goal 16" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -504,7 +528,7 @@ data-event-label="high"
         
             <div class="col-xs-4 col-md-2">
                 <a href="/dns-indicators/en/17">
-                  <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/17.png" id="goal-17" alt="Partnerships for the goals - Goal 17" class="goal-icon-image goal-icon-image-" />
+                  <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/17.png" id="goal-17" alt="Partnerships for the goals - Goal 17" class="goal-icon-image goal-icon-image-" />
               </a>
             </div>
         
@@ -512,13 +536,13 @@ data-event-label="high"
     
     
         <div class="col-xs-4 col-md-2">
-            <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/18.png" id="goal-18" alt="The Global Goals for Sustainable Development" class="goal-icon-image goal-icon-image-" />
+            <img src="https://SdgTestEnvironment.github.io/sdg-indicators/assets/img/goals/en/18.png" id="goal-18" alt="The Global Goals for Sustainable Development" class="goal-icon-image goal-icon-image-" />
         </div>
     
     </div>
     </div>
     <div class="zip-download-container">
-    <a href="https://DnsTestEnvironment.github.io/dns-data/en/zip/all_indicators.zip"
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/en/zip/all_indicators.zip"
        class="btn btn-primary btn-download" aria-describedby="zip-download-info">
         Download all data
     </a>
@@ -526,12 +550,13 @@ data-event-label="high"
         ZIP file - 1.8 MB
         
             <br>
-            Last modification of code <small>(data)</small> - Feb 16, 2022
+            Last modification of code <small>(data)</small> - May 09, 2022
         
     </div>
 </div>
 
 </div>
+
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
@@ -563,22 +588,21 @@ data-event-label="high"
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
-<!-- Last check: 09.09.2021 -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -598,115 +622,15 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220307014608'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220509080511'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220307014608"></script><script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              showLine: domData.showline,
-              spanGaps: domData.spangaps,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-              graphStepsize: domData.graphstepsize,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: ',',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
-
+    <script src="/dns-indicators/assets/js/custom.js?v=20220509080511"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
-
-<script src="html2pdf.bundle.min.js"></script>
-<script src="/html2pdf/js/html2pdf.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
-<script type="text/javascript">
-  function generatePDF() {
-    // Choose the element that our invoice is rendered in.
-    var element = document.getElementById('chart-canvas');
-    var filename = chartInfo.indicatorId + '.png';
-    var options = {
-      // These options fix the height, width, and position.
-      margin: [20, 20, 20, 20],
-      filename: filename,
-      width: 500
-    };
-
-    // New Promise-based usage:
-    //html2pdf(element, options);
-    html2pdf(element, {
-      margin:       1,
-      filename:     'myfile.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { dpi: 192, letterRendering: true },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    });
-
-  }
-</script>
-
-
 
 
 </body>
