@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://DnsUpgradeEnvironment.github.io/dns-data/en',
+  remoteDataBaseUrl: 'https://DnsUpgradeEnvironment.github.io/dns-data/de',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -38,7 +38,7 @@ var opensdg = {
     this.dataDisplayAlterations.push(callback);
   },
 
-  language: 'en',
+  language: 'de',
 };
 
 // For backwards compatibility, some of these might need to be global.
@@ -103,7 +103,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Navigation - German Indicators For The Sustainable Development Goals</title>
+    <title>Status Summary - German Indicators For The Sustainable Development Goals</title>
 
 
 
@@ -147,23 +147,23 @@ var translations = {
         
 
     </head>
-<body class="language-en
-layout-page
+<body class="language-de
+layout-status_summary
 ">
 <!-- <div class="container"> -->
 
 
 
-<script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
+<script>translations['header'] = {"alpha":"Alpha-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_address\">Kommentare</a>.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
 <div id="disclaimer">
   
 <div class="container">
   <div class="disclaimer-alert">
-    <strong class="phase-tag">Alpha</strong>
+    <strong class="phase-tag">Alpha-Version</strong>
     
-    This is a development website. We welcome your <a href="mailto:dns-indikatoren@destatis.de">feedback</a>.
+    Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href="mailto:dns-indikatoren@destatis.de">Kommentare</a>.
     
   </div>
 </div>
@@ -174,8 +174,8 @@ layout-page
   <div class="container">
 
     <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/dns-indicators/en/" id="home" onclick="updateVisitCountMinus()">
-    <img src="/dns-indicators/assets/img/en/dns_logo.png" alt="To main menu" />
+      <a class="navbar-brand" href="/dns-indicators/" id="home" onclick="updateVisitCountMinus()">
+    <img src="/dns-indicators/assets/img/de/dns_logo.png" alt="Zum Hauptinhalt springen" />
 </a>
 
       <div class="mobile-widgets">
@@ -201,11 +201,11 @@ data-event-label="high"
   
   <div class="btn-group language-toggle-dropdown ">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-de">
-            <a href="/dns-indicators/about_navigation/">
-              Deutsch
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
+      <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li class="language-option-en">
+            <a href="/dns-indicators/en/status_summary/">
+              English
             </a>
           </li></ul>
   </div>
@@ -219,23 +219,23 @@ data-event-label="high"
     <li id="menuToggle"
         aria-label=""
         aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
+        <button data-target="menu-mobile" aria-expanded="false">Menü</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/dns-indicators/en/">17 Goals</a>
+    <a href="/dns-indicators/">17 Ziele</a>
+</li><li class="nav-link active">
+    <a href="/dns-indicators/status_summary/">Übersicht</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/status_summary/">Summary</a>
+    <a href="/dns-indicators/status/">Methodik</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/status/">Methodology</a>
+    <a href="/dns-indicators/about/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
+    <a href="/dns-indicators/guidance/">Technische&nbspHinweise</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
+    <a href="/dns-indicators/facts_agenda/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
+    <a href="/dns-indicators/facts_publications/">Veröffentlichungen</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_publications/">Publications</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
+    <a href="/dns-indicators/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
 </li><li class="language-toggle-menu-header">
     
 
@@ -245,9 +245,9 @@ data-event-label="high"
 
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/about_navigation/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
+  <ul class="language-toggle-links"><li class="language-option-en">
+      <a class="language-toggle-link" href="/dns-indicators/en/status_summary/"><span class="language-name">English</span>
+        <span class="language-abbreviation">en</span></a>
     </li></ul>
 </div>
 
@@ -278,65 +278,65 @@ data-event-label="high"
     <li id="searchToggle"
         aria-label=""
         aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Search</button>
+        <button data-target="search-mobile" aria-expanded="false">Suche</button>
         <div id="search-mobile" class="menu-target">
-  <form action="/dns-indicators/en/search/">
-    <label class="sr-only" for="indicator_search-mobile">Search</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
-    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  <form action="/dns-indicators/search/">
+    <label class="sr-only" for="indicator_search-mobile">Suche</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Suche" /><!--
+    --><button aria-label="Suche" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
   </form>
 </div>
 
     </li>
 </ul>
       <div id="search" class="menu-target">
-  <form action="/dns-indicators/en/search/">
-    <label class="sr-only" for="indicator_search">Search</label>
-    <input type="text" name="q" id="indicator_search" title="Search" /><!--
-    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  <form action="/dns-indicators/search/">
+    <label class="sr-only" for="indicator_search">Suche</label>
+    <input type="text" name="q" id="indicator_search" title="Suche" /><!--
+    --><button aria-label="Suche" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
   </form>
 </div>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/">17 Goals</a>
+    <a href="/dns-indicators/">17 Ziele</a>
 </li><li class="nav-link">
             <div class="btn-group menu-dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Evaluation
+                    Bewertung
                     <i class="fa fa-chevron-down"></i>
                 </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/status_summary/">Summary</a>
+                <ul class="dropdown-menu"><li class="nav-link active">
+    <a href="/dns-indicators/status_summary/">Übersicht</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/status/">Methodology</a>
+    <a href="/dns-indicators/status/">Methodik</a>
 </li></ul>
             </div>
         </li><li class="nav-link">
             <div class="btn-group menu-dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About
+                    Über uns
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
+    <a href="/dns-indicators/about/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
+    <a href="/dns-indicators/guidance/">Technische&nbspHinweise</a>
 </li></ul>
             </div>
         </li><li class="nav-link">
             <div class="btn-group menu-dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Useful information
+                    Wissenswertes
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
+    <a href="/dns-indicators/facts_agenda/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
 </li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_publications/">Publications</a>
+    <a href="/dns-indicators/facts_publications/">Veröffentlichungen</a>
 </li></ul>
             </div>
         </li><li class="nav-link ">
-    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
+    <a href="/dns-indicators/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
 </li><li class="language-toggle-menu-header">
     
 
@@ -346,9 +346,9 @@ data-event-label="high"
 
   <div class="language-toggle-container">
   <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/about_navigation/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
+  <ul class="language-toggle-links"><li class="language-option-en">
+      <a class="language-toggle-link" href="/dns-indicators/en/status_summary/"><span class="language-name">English</span>
+        <span class="language-abbreviation">en</span></a>
     </li></ul>
 </div>
 
@@ -385,73 +385,29 @@ data-event-label="high"
 
 
 
+<div id="main-content" class="container newslist" role="main">
+  <div class="row">
+    <div class="col-md-9 push-md-3">
+      
+      <h1>Status Summary</h1>
+      
+      
 
-<div id="main-content" class="container" role="main">
-    <div>
-        <h1>Navigation</h1>
-        
-            <h2 id="layout-of-the-sdg-online-platform">Layout of the SDG online platform</h2>
-
-<p>The online platform comprises two components, namely the German set of indicators for the global sustainability goals (<a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/">Sustainable Development Goals</a>, SDGs) of the United Nations 2030 Agenda and the indicator set of the <a href="https://www.bundesregierung.de/breg-en/issues/sustainability/">German Sustainable Development Strategy</a> (Deutsche Nachhaltigkeitsstrategie, DNS). Since the German Sustainable Development Strategy is aimed at implementing the 2030 Agenda at the national level, indicators shared by both strategies are linked to each other on the platform.</p>
-
-<p>A direct link to the homepage of the DNS online platform can be found at the top right of this page next to the search field: <a href="https://sustainabledevelopment-deutschland.github.io/en"><img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS Wheel.png" alt="Wheel" /></a></p>
-
-<h2 id="structure-of-the-sdg-online-platform">Structure of the SDG online platform</h2>
-
-<p>TThe SDG online platform comprises goals, targets and related indicators (Fig. 1).</p>
-
-<p><br />
-<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/target_page.PNG" alt="Abbildung 1: Aufbau der Unterziel-Seiten" class="responsiveImg" /></p>
-
-<p style="text-align:center">
-<small> Fig. 1: Example of the structure of SDGs based on goal 11 “Sustainable Cities and Communities“ (as of July 2020)</small>
-</p>
-<p><br /></p>
-
-<h2 id="presentation-of-sdg-indicators">Presentation of SDG indicators</h2>
-
-<p>Each SDG indicator is displayed on a separate page. Depending on the indicator, different selection menus are shown on the left. The first selection menu contains all time series available for the indicator. In the sub-menus you can select various variable values depending on the data series - e.g. different age groups.</p>
-
-<p>The development of the time series is visualised in a chart. Click on the second tab next to “Chart“ to view, in a table, the data underlying the chart and all other data available from the selection menus (Fig. 2).</p>
-
-<p><br />
-<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/indicator_page.PNG" alt="Abbildung 2: Aufbau der Indikator-Seiten" class="responsiveImg" /></p>
-
-<p style="text-align:center">
-<small> Fig. 2: Example of the presentation of SDG indicators using indicator 11.7.1 (as of April 2020)</small>
-</p>
-<p><br /></p>
-
-<p>Below, there are green buttons that allow the data to be downloaded in CSV format and, in the case of the chart, also as a PNG file.</p>
-
-<h2 id="metadata-and-data-sources">Metadata and data sources</h2>
-
-<p>At the bottom of the indicator pages you can see the following three tabs: “National Metadata“, “Global Metadata“ and “Data Sources“.</p>
-
-<p>The “National Metadata“ tab provides a list of the national time series which correspond most closely to the global metadata. The national metadata sheet includes a comparison with the global requirements and related methodological and country-specific information.</p>
-
-<p>Each SDG indicator is managed by one or more custodian agencies. The custodian agencies, in consultation with the IAEG-SDGs, a statistical working group of the United Nations, determine the exact definition of and methodology for the respective indicator and publish these as global metadata. These can be found in the “Global metadata“ tab (Fig. 3). In addition to the indicator‘s detailed target, the <a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/">Tier classification</a> of the indicator is listed here as well.</p>
-
-<p>The “Data sources“ tab provides links to the organisation(s) that submitted the data for the time series and, where possible, also direct links to the relevant data sources.</p>
-
-<h2 id="comparison-of-sdg-and-dns-indicators">Comparison of SDG and DNS indicators</h2>
-
-<p>There are numerous overlaps between the indicators of the UN Sustainable Development Goals and the indicators of the German Sustainable Development Strategy (DNS).</p>
-
-<p>About half of the DNS- indicators are similar to or congruent with the SDG- indicators. Both sets of indicators are also structured according to the 17 goals of the United Nations 2030 Agenda, as the DNS represents the national implementation ofGerman Sustainable Development Strategy is aimed at implementing the global agenda. at the national level. More information on the DNSGerman strategy can be found in the “Useful information“ section „Interesting Facts“ andunder <a href="https://sustainabledevelopment-germany.github.io/en/sdg-indicators/facts_dns/">DNS</a>.</p>
-
-<p>However, there are also differences. The names of the DNS indicators and especially their numbering are not identical to those of the SDG indicators. If an SDG indicator is comparable to a DNS indicator, this is indicated by a button with a direct link to the respective indicator (Fig. 3).</p>
-
-<p><br />
-<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/navigation_dns.PNG" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg" /></p>
-
-<p style="text-align:center">
-<small> Fig. 3: Position of the direct link to similar or congruent indicators of the UN Sustainable Development Goals and the German Sustainable Development Strategy (as of July 2020)</small>
-</p>
-<p><br /></p>
-
-        
+      
+      
     </div>
+    
+    <div class="col-md-3 pull-md-9">
+      <aside id="sidebar">
+  <h4>Beiträge geordnet nach Kategorien</h4>
+  <ul>
+    
+  </ul>
+</aside>
+
+    </div>
+    
+  </div>
 </div>
 
 
@@ -461,23 +417,23 @@ data-event-label="high"
       <div class="col-xs-12">
         <div id="footerLinks">
           <ul>
-            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
+            <li><a href="https://open-sdg.org">Seite basiert auf Open SDG</a></li>
             
               <li>
                 
-                  <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                  <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
                 
                 </li>
               <li>
-                <a href="/dns-indicators/en/menu.twitterPath">general.twitter</a>
+                <a href="/dns-indicators/menu.twitterPath">general.twitter</a>
                 
                 </li>
               <li>
-                <a href="/dns-indicators/en/faq/">FAQ</a>
+                <a href="/dns-indicators/faq/">FAQ</a>
                 
                 </li>
               <li>
-                <a href="/dns-indicators/en/imprint/">Legal Notice</a>
+                <a href="/dns-indicators/imprint/">Im­pres­s­um</a>
                 
                 </li>
               
@@ -518,7 +474,7 @@ data-event-label="high"
     translations['general']['hide'] = '';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Search';</script>
+    translations['search']['search'] = 'Suche';</script>
 
 <script src='/dns-indicators/assets/js/sdg.js?v=20220509111417'></script>
 
