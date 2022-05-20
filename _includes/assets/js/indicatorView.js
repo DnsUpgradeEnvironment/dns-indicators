@@ -850,7 +850,10 @@ var indicatorView = function (model, options) {
   };
 
   this.createSelectionsTable = function(chartInfo) {
-    this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
+
+    var tableUnit =  '<br><small>' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + '</small>';
+
+    this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
     this.createTableTargetLines(chartInfo.graphAnnotations);
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
@@ -1035,7 +1038,7 @@ var indicatorView = function (model, options) {
     return false;
   }
 
-  this.createTable = function(table, indicatorId, el) {
+  this.createTable = function(table, tableUnit, indicatorId, el) {
 
     options = options || {};
     var that = this,
@@ -1050,7 +1053,7 @@ var indicatorView = function (model, options) {
         'width': '100%'
       });
 
-      currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle + tableUnit + '</caption>');
 
       var table_head = '<thead><tr>';
 
