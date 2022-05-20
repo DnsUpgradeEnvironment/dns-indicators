@@ -76,6 +76,8 @@
        background-color: white;//$c;
        border-bottom: 15px solid $c;
        border-top: 15px solid $c;//$dark-c;
+       padding-top: 0px;
+       padding-bottom: 0px;
      }
      &.underline{
        height: 5px;
@@ -83,6 +85,8 @@
      }
      &.titles{
        color: $dark-c;
+       padding-top: 0px;
+       padding-bottom: 0px;
      }
      &.heading.contrast-high {
          background: black;
