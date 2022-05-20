@@ -57,12 +57,25 @@
   {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
   {% for group in goal_indicators %}
     {% assign target = group.name | sdg_lookup %}
+    {% assign target_id = group.name %}
+    {% assign target_id_dashes = target_id | replace: ".", "-" %}
+
+    {% assign target_title_key = target_id | append: '-title' %}
+    {% assign target_title_key_dashes = target_id_dashes | append: '-title' %}
+    {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
+
+    {% assign size = target_id | size | minus: 2 %}
+    {% assign range_id = target_id | slice: 0, size | replace: "-", "." %}
+
+    {% assign range_title_key = range_id  | append: '-title' %}
+    {% assign target_range = t.dns_ranges[range_title_key] %}
+
     <div class="indicator-cards target goal-target col-md-6">
       <span class="indicator-card-number">
         <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
-        {{ target.number }}
+        {{ target_range }}
       </span>
-      {{ target.name }}
+      {{ target_title }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
@@ -79,16 +92,16 @@
       <div class="col-md-12 {{ tag_classes }} goal-indicator">
         {% if indicator.placeholder and indicator.placeholder != '' %}
         <span class="indicator-card-number">
-          {{ indicator.number }}
+          {{ indicator.indicator_display }}
         </span>
         {{ indicator.placeholder }}
         {% else %}
         <span class="indicator-card-number">
-          {{ indicator.number }}
+          {{ indicator.indicator_display }}
           <!--{% include components/reportingstatus/reporting-status-label.html indicator=indicator %}-->
         </span>
         <a href="{{ indicator.url }}">
-          {{ indicator.name }}
+          {{ indicator.indicator }}
         </a>
         {% include components/indicator/tags.html tags=indicator.tags %}
         {% endif %}
