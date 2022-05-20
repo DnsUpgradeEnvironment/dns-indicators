@@ -74,12 +74,12 @@
     {% assign range_id = target_id | slice: 0, size | replace: "-", "." %}
 
     {% assign range_title_key = range_id  | append: '-title' %}
-    {% assign target_range = page.t.dns_ranges[range_title_key] %}
+    {% assign target_range = site.t.dns_ranges[range_title_key] %}
 
     <div class="indicator-cards target goal-target col-md-6">
       <span class="indicator-card-number">
         <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
-        {{ target_id }}
+        {{ target_range }}
       </span>
       {{ target_title_key }}
     </div>
