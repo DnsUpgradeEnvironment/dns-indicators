@@ -3131,7 +3131,7 @@ var indicatorView = function (model, options) {
 
     view_obj.createSelectionsTable(args);
 
-    view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>","") + '<br><small>' +  args.selectedUnit + '</small>');
+    view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>","") +  this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit );
     view_obj.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
     view_obj.updateUnitElements(args.selectedUnit);
     view_obj.updateTimeSeriesAttributes(args.timeSeriesAttributes);
@@ -3907,8 +3907,7 @@ var indicatorView = function (model, options) {
   };
 
   this.createSelectionsTable = function(chartInfo) {
-    console.log("CI: ", chartInfo);
-    var tableUnit =  '<br><small>' + chartInfo.computation_units + '</small>';
+    var tableUnit =  '<br><small>' + this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit + '</small>';
 
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
