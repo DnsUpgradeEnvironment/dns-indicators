@@ -101,7 +101,7 @@
           <!--{% include components/reportingstatus/reporting-status-label.html indicator=indicator %}-->
         </span>
         <a href="{{ indicator.url }}">
-          {{ indicator.indicator }}
+          {{ indicator.indicator | get_indicator_name }}
         </a>
         {% include components/indicator/tags.html tags=indicator.tags %}
         {% endif %}
