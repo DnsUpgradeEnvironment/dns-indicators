@@ -850,9 +850,8 @@ var indicatorView = function (model, options) {
   };
 
   this.createSelectionsTable = function(chartInfo) {
-    var tableUnit =  '<br><small>' + this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit + '</small>';
 
-    this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
+    this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
     this.createTableTargetLines(chartInfo.graphAnnotations);
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
@@ -1037,7 +1036,7 @@ var indicatorView = function (model, options) {
     return false;
   }
 
-  this.createTable = function(table, tableUnit, indicatorId, el) {
+  this.createTable = function(table, indicatorId, el) {
 
     options = options || {};
     var that = this,
@@ -1052,7 +1051,7 @@ var indicatorView = function (model, options) {
         'width': '100%'
       });
 
-      currentTable.append('<caption>' + that._model.chartTitle + tableUnit + '</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
 
       var table_head = '<thead><tr>';
 
