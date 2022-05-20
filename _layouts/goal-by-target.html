@@ -6,13 +6,13 @@
 {% assign goal_number = page.sdg_goal %}
 {% assign goal_title_key = goal_number | append: '-title' %}
 {% assign goal_short_key = goal_number | append: '-short' %}
-{% assign goal_title = t.global_goals[goal_title_key] %}
-{% assign goal_short = t.dns_goals[goal_title_key] %}
+{% assign goal_title = page.t.global_goals[goal_title_key] %}
+{% assign goal_short = page.t.dns_goals[goal_title_key] %}
 
 <div class="container">
   {% include components/goal/breadcrumbs.html %}
   {% if site.create_goals.previous_next_links %}
-    {% include components/previous-next-links.html previous_label=page.t.goal.previous next_label=page.t.goal.next %}
+    {% include components/previous-next-links.html previous_label = page.t.goal.previous next_label = page.t.goal.next %}
   {% endif %}
 </div>
 
@@ -53,7 +53,7 @@
 
   <div class="visible-md-block visible-lg-block">
     <div class="col-md-6">
-      <h2>{{ page.t.general.targets }}</h2>
+      <h2>{{ page.t.general.dns_targets }}</h2>
     </div>
     <div class="col-md-6">
       <h2>{{ page.t.general.indicators }}</h2>
@@ -68,13 +68,13 @@
 
     {% assign target_title_key = target_id | append: '-title' %}
     {% assign target_title_key_dashes = target_id_dashes | append: '-title' %}
-    {% assign target_title = t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
+    {% assign target_title = page.t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] %}
 
     {% assign size = target_id | size | minus: 2 %}
     {% assign range_id = target_id | slice: 0, size | replace: "-", "." %}
 
     {% assign range_title_key = range_id  | append: '-title' %}
-    {% assign target_range = t.dns_ranges[range_title_key] %}
+    {% assign target_range = page.t.dns_ranges[range_title_key] %}
 
     <div class="indicator-cards target goal-target col-md-6">
       <span class="indicator-card-number">
