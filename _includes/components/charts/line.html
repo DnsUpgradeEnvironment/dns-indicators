@@ -17,6 +17,22 @@ opensdg.chartConfigAlter(function(config, info) {
                 intersect: false,
                 axis: 'x',
             },
+            plugins: {
+              subtitle: {
+                display: true,
+                text: 'Chart Subtitle',
+                color: 'blue',
+                font: {
+                  size: 12,
+                  family: 'tahoma',
+                  weight: 'normal',
+                  style: 'italic'
+                },
+                padding: {
+                  bottom: 10
+                }
+              }
+            },
         },
         plugins: [{
             beforeDatasetsDraw: function(chart) {
