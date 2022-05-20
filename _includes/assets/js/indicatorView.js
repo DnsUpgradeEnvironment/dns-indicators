@@ -569,6 +569,7 @@ var indicatorView = function (model, options) {
             display: true,
             text: 'Chart Title',
           },
+        },
         tooltips: {
           backgroundColor: 'rgba(0,0,0,0.7)',
           callbacks: {
