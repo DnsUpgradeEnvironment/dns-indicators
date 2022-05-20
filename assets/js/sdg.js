@@ -3554,6 +3554,26 @@ var indicatorView = function (model, options) {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Chart Title',
+          },
+          subtitle: {
+            display: true,
+            text: 'Chart Subtitle',
+            color: 'blue',
+            font: {
+              size: 12,
+              family: 'tahoma',
+              weight: 'normal',
+              style: 'italic'
+            },
+            padding: {
+              bottom: 10
+            }
+          }
+        },
         spanGaps: true,
         showLine: true, //chartInfo.showLine != "" ? chartInfo.showLine : true,
         scrollX: true,
