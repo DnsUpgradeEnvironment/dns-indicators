@@ -69,13 +69,13 @@
 
     {%- assign range_title_key = range_id  | append: '-title' -%}
     {%- assign target_range = t.dns_ranges[ range_title_key ] -%}
-    {%- assign target = t.dns_targets[ target_title_key }] -%}
+    {%- assign target = t.dns_targets[ target_title_key ] -%}
     <div class="indicator-cards target goal-target col-md-6">
       <span class="indicator-card-number">
         <label class="hidden-md hidden-lg"></label>
-        {{ target_title_key }}
+        {{ target_range }}
       </span>
-      {{ range_title_key }}
+      {{ target }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
