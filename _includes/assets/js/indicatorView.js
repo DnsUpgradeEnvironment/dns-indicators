@@ -70,7 +70,7 @@ var indicatorView = function (model, options) {
 
     view_obj.createSelectionsTable(args);
 
-    view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>","") +  this._model.selectedUnit );
+    view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>","") +  args.selectedUnit ? translations.t(args.selectedUnit) : args.measurementUnit );
     view_obj.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
     view_obj.updateUnitElements(args.selectedUnit);
     view_obj.updateTimeSeriesAttributes(args.timeSeriesAttributes);
