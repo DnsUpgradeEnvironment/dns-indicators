@@ -56,13 +56,13 @@
 
   {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
   {% for group in goal_indicators %}
-    {% assign target = group.name | sdg_lookup %}
+    {% assign x = group.name | sdg_lookup %}
     <div class="indicator-cards target goal-target col-md-6">
       <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
-        {{ target.number }}
+        <label class="hidden-md hidden-lg"></label>
+        {{ x.number }}
       </span>
-      {{ target.name }}
+      {{ x.name }}
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
@@ -85,7 +85,6 @@
         {% else %}
         <span class="indicator-card-number">
           {{ indicator.number }}
-          {% include components/reportingstatus/reporting-status-label.html indicator=indicator %}
         </span>
         <a href="{{ indicator.url }}">
           {{ indicator.name }}
