@@ -851,7 +851,7 @@ var indicatorView = function (model, options) {
 
   this.createSelectionsTable = function(chartInfo) {
 
-    var tableUnit =  '<br><small>' + chartInfo.footerFields[translations.indicator.unit_of_measurement] + '</small>';
+    var tableUnit =  '<br><small>' + chartInfo.computation_units + '</small>';
 
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
