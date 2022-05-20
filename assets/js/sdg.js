@@ -3907,7 +3907,7 @@ var indicatorView = function (model, options) {
   };
 
   this.createSelectionsTable = function(chartInfo) {
-
+    console.log("CI: ", chartInfo);
     var tableUnit =  '<br><small>' + chartInfo.computation_units + '</small>';
 
     this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
