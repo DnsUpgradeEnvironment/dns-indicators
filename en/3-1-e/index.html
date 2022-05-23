@@ -138,7 +138,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220523132417">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220523133857">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -179,7 +179,7 @@ layout-indicator
   <div class="container">
 
     <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/dns-indicators/en/" id="home">
+      <a class="navbar-brand" href="/dns-indicators/en/" id="home" onclick="updateVisitCountMinus()">
     <img src="/dns-indicators/assets/img/en/dns_logo.png" alt="To main menu" />
 </a>
 
@@ -587,14 +587,14 @@ data-event-label="high"
   data-showmap=""
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Overweight without obese&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Total&quot;},{&quot;field&quot;:&quot;Age group&quot;,&quot;value&quot;:&quot;3- to 10-year-olds&quot;},{&quot;field&quot;:&quot;Age group&quot;,&quot;value&quot;:&quot;11- to 17-year-olds&quot;}]"
   data-graphlimits="null"
-  data-stackeddisaggregation=""
+  data-stackeddisaggregation="Time series"
   data-showline="true"
   data-spangaps="true"
   data-graphannotations="null"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Overweight without obese&quot;,&quot;Obese&quot;,&quot;Total&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;age&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;3- to 10-year-olds&quot;,&quot;11- to 17-year-olds&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Overweight without obese&quot;,&quot;Obese&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;age&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;3- to 10-year-olds&quot;,&quot;11- to 17-year-olds&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-graphstepsize="null"
@@ -1505,7 +1505,7 @@ data-event-label="Change to indicator.sources tab"
               
 
               
-                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/8fd5bd210b3729f128fec712d9952695575cd4d7" target="_blank">
+                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/c74a26d8026a158b75c7c22b31d70d370738c740" target="_blank">
                   2022-05-23: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -1558,8 +1558,8 @@ data-event-label="Change to indicator.sources tab"
               
 
               
-                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/02c3bed61396013399007d015a93d8e3fffb58c0" target="_blank">
-                  2021-03-25: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+                <a href="https://github.com/DnsUpgradeEnvironment/dns-data/commit/c74a26d8026a158b75c7c22b31d70d370738c740" target="_blank">
+                  2022-05-23: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
 
@@ -2561,12 +2561,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220523132417'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220523133857'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220523132417"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220523133857"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
