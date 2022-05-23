@@ -5,7 +5,7 @@ opensdg.annotationPresets = {
         type: 'line',
         borderDash: [10, 5],
         borderWidth: 1,
-        drawTime: afterDraw,
+        //drawTime: afterDraw,
         label: {
             backgroundColor: 'white',
             {% if site.chartjs_3 %}
@@ -55,6 +55,7 @@ opensdg.annotationPresets = {
         borderWidth: 2,
         borderDash: [15, 10],
         borderColor: '#757575',
+        drawTime: afterDraw,
         label: {
             position: {% if site.chartjs_3 %}'end'{% else %}'right'{% endif %},
             content: translations.indicator.annotation_2030_target,
