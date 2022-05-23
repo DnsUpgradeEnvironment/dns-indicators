@@ -3453,6 +3453,9 @@ var indicatorView = function (model, options) {
     if (typeof chartTitle !== 'undefined') {
       $('.chart-title').text(chartTitle);
     }
+    if (typeof chartSubtitle !== 'undefined') {
+      $('.chart-subtitle').text(chartsubTitle);
+    }
   }
 
   this.updateSeriesAndUnitElements = function(selectedSeries, selectedUnit) {
