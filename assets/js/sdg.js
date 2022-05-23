@@ -2823,6 +2823,7 @@ function getTimeSeriesAttributes(rows) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
+    this.chartSubtitle = this.chartSubtitle;
   }
 
   this.updateChartType = function() {
@@ -3454,7 +3455,7 @@ var indicatorView = function (model, options) {
       $('.chart-title').text(chartTitle);
     }
     if (typeof chartSubtitle !== 'undefined') {
-      $('.chart-subtitle').text(chartsubTitle);
+      $('.chart-subtitle').text(chartSubtitle);
     }
   }
 
@@ -4117,7 +4118,7 @@ var indicatorView = function (model, options) {
         'width': '100%'
       });
 
-      currentTable.append('<caption>' + that._model.chartTitle + that._model.chartSubtitle + '</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle + ' ' + that._model.chartSubtitle + '</caption>');
 
       var table_head = '<thead><tr>';
 
