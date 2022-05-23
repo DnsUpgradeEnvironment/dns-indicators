@@ -135,6 +135,7 @@ var indicatorModel = function (options) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
+    this.chartSubtitle = this.chartSubtitle;
   }
 
   this.updateChartType = function() {
