@@ -7,11 +7,11 @@
 
     {% assign graph_template = 'components/charts/' | append: include.graph_type | append: '.html' %}
     {% assign graph_title = page.indicator.graph_titles.first.title | default: page.indicator.graph_title %}
-    {% assign graph_subtitle = page.indicator.graph_subtitles.first.title | default: page.indicator.graph_subtitle %}
+    {% assign graph_subtitle = page.indicator.graph_subtitle %}
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">{{ graph_title }}
+          <h4 id="chart-heading" class="chart-title">{{ graph_title }} 1234
             <small>Test {{ graph_subtitle }}</small>
           </h4>
           <div id="chart" class="plot-container">
