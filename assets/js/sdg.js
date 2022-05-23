@@ -3076,6 +3076,7 @@ var indicatorView = function (model, options) {
   this._legendElement = options.legendElement;
   this._precision = undefined;
   this._decimalSeparator = options.decimalSeparator;
+  this._chartSubtitle = options.chartSubtitle;
 
   var chartHeight = screen.height < options.maxChartHeight ? screen.height : options.maxChartHeight;
 
