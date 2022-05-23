@@ -29,7 +29,7 @@ var indicatorInit = function () {
                         shortIndicatorId: domData.id,
                         chartTitle: domData.charttitle,
                         chartTitles: domData.charttitles,
-                        chartSubtitle: domData.chartsubttitle,
+                        chartSubtitle: domData.chartsubtitle,
                         measurementUnit: domData.measurementunit,
                         xAxisLabel: domData.xaxislabel,
                         showData: domData.showdata,
