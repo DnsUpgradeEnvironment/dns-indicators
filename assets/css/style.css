@@ -4320,3 +4320,6 @@ body.contrast-high .navbar #menu .btn-group.menu-dropdown .dropdown-menu li a {
   color: black; }
   body.contrast-high .navbar #menu .btn-group.menu-dropdown .dropdown-menu li a:hover {
     text-decoration: underline; }
+
+.chart-subtitle {
+  margin-left: 20px; }
