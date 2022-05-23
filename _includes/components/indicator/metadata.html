@@ -62,12 +62,9 @@
         {% assign year_d = indicator_metadata.name | replace: '_a_', '_d_' %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
-          <td align="left" style="margin-bottom: 15px;">
-            <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
-          </td>
-          {% if page.indicator[year_b] %}
+          {% if page.indicator[year_d] %}
             <td align="left" style="margin-bottom: 15px;">
-              <p>{{ page.indicator[year_b] | markdownify }}</p>
+              <p>{{ page.indicator[year_d] | markdownify }}</p>
             </td>
           {% endif %}
           {% if page.indicator[year_c] %}
@@ -75,11 +72,14 @@
               <p>{{ page.indicator[year_c] | markdownify }}</p>
             </td>
           {% endif %}
-          {% if page.indicator[year_d] %}
+          {% if page.indicator[year_b] %}
             <td align="left" style="margin-bottom: 15px;">
-              <p>{{ page.indicator[year_d] | markdownify }}</p>
+              <p>{{ page.indicator[year_b] | markdownify }}</p>
             </td>
           {% endif %}
+          <td align="left" style="margin-bottom: 15px;">
+            <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
+          </td>
         </tr>
       {% elsif indicator_metadata.name contains "status_year_a"%}
         {% assign year_b = indicator_metadata.name | replace: '_a_', '_b_' %}
@@ -87,12 +87,9 @@
         {% assign year_d = indicator_metadata.name | replace: '_a_', '_d_' %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
-          <td align="left" style="padding-left: 0px;padding-right: 0px;">
-            <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] }}.png" alt="{{ page.indicator[indicator_metadata.name] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
-          </td>
-          {% if page.indicator[year_b] %}
+          {% if page.indicator[year_d] %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_b] }}.png" alt="{{  page.indicator[year_b] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_d] }}.png" alt="{{  page.indicator[year_d] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           {% endif %}
           {% if page.indicator[year_c] %}
@@ -100,11 +97,14 @@
               <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_c] }}.png" alt="{{  page.indicator[year_c] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           {% endif %}
-          {% if page.indicator[year_d] %}
+          {% if page.indicator[year_b] %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_d] }}.png" alt="{{  page.indicator[year_d] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_b] }}.png" alt="{{  page.indicator[year_b] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           {% endif %}
+          <td align="left" style="padding-left: 0px;padding-right: 0px;">
+            <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] }}.png" alt="{{ page.indicator[indicator_metadata.name] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+          </td>
         </tr>
 
       {% endif %}
