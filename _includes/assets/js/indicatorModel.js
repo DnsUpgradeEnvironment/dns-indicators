@@ -23,6 +23,7 @@ var indicatorModel = function (options) {
   this.shortIndicatorId = options.shortIndicatorId;
   this.chartTitle = options.chartTitle,
   this.chartTitles = options.chartTitles;
+  this.chartSubtitle = options.chartSubtitle;
   this.graphType = options.graphType;
   this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
@@ -336,6 +337,7 @@ var indicatorModel = function (options) {
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks),
       chartTitle: this.chartTitle,
+      chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),

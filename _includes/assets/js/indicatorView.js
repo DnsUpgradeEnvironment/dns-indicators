@@ -1055,7 +1055,7 @@ var indicatorView = function (model, options) {
         'width': '100%'
       });
 
-      currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle + that._model.chartSubtitle + '</caption>');
 
       var table_head = '<thead><tr>';
 
