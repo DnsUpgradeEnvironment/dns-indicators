@@ -11,7 +11,9 @@
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          
+
+          <h4 id="chart-heading" class="chart-title">{{ graph_title }}</h4>
+          <h4 id="chart-heading" class="chart-title">"Test 1234"}</h4>
           <div id="chart" class="plot-container">
             {% if site.chartjs_3 %}
               {% include components/charts/canvas.html %}
