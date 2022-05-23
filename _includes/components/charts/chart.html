@@ -14,6 +14,7 @@
 
           <h4 id="chart-heading" class="chart-title">{{ graph_title }}</h4>
           <h5 class="chart-subtitle">"Test 1234"</h5>
+          <h5 class="chart-subtitle">{{ graph_subtitle }}</h5>
           <div id="chart" class="plot-container">
             {% if site.chartjs_3 %}
               {% include components/charts/canvas.html %}
