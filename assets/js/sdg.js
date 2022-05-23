@@ -4119,7 +4119,7 @@ var indicatorView = function (model, options) {
         'width': '100%'
       });
 
-      currentTable.append('<caption>' + that._model.chartTitle + ' ' + that._model.measurementUnit + '</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle + ' <br><small>' + that._model.measurementUnit + '</small></caption>');
 
       var table_head = '<thead><tr>';
 
