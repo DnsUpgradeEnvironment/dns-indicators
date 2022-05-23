@@ -579,7 +579,7 @@ var indicatorView = function (model, options) {
           callbacks: {
             label: function(tooltipItems, data) {
               var label = data.datasets[tooltipItems.datasetIndex].label
-              label = label.replace('<sub>','').replace('</sub>','');
+              label = label;
               if (label.length > 45){
 
                 label = label.split(' ');
@@ -601,7 +601,7 @@ var indicatorView = function (model, options) {
             afterLabel: function(tooltipItems, data) {
 
               var label = data.datasets[tooltipItems.datasetIndex].label;
-              label = label.replace('<sub>','').replace('</sub>','');
+              label = label;
               if (label.length > 45){
                 label = label.split(' ');
                 var re = [];
