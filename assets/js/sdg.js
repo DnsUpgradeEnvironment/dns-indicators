@@ -2711,6 +2711,7 @@ function getTimeSeriesAttributes(rows) {
   this.shortIndicatorId = options.shortIndicatorId;
   this.chartTitle = options.chartTitle,
   this.chartTitles = options.chartTitles;
+  this.chartSubtitle = options.chartSubtitle;
   this.graphType = options.graphType;
   this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
@@ -3024,6 +3025,7 @@ function getTimeSeriesAttributes(rows) {
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks),
       chartTitle: this.chartTitle,
+      chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
@@ -4112,7 +4114,7 @@ var indicatorView = function (model, options) {
         'width': '100%'
       });
 
-      currentTable.append('<caption>' + that._model.chartTitle + '</caption>');
+      currentTable.append('<caption>' + that._model.chartTitle + that._model.chartSubtitle + '</caption>');
 
       var table_head = '<thead><tr>';
 
