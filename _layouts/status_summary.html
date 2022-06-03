@@ -4,6 +4,7 @@
 <div id="main-content" class="container reportingstatus" role="main">
 
   <h1>{{ page.t.summary.status_summary }}</h1>
+  <script>console.log("site: ", site)</script>
   {%- for goalreport in include.goals -%}
     {%- assign goal = goalreport.goal | strip | sdg_lookup -%}
     <div class="goal reporting-status-item">
@@ -16,6 +17,7 @@
             <h3 class="status-goal">
                 <a href="{{ goal.url }}">{{ goal.short }}</a>
             </h3>
+            <div class="divider"></div>
         </div>
         <br style="clear:both;">
     </div>
