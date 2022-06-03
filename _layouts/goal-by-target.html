@@ -56,7 +56,6 @@
 
   {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_id' %}
   {% for group in goal_indicators %}
-    {%- assign x = group.name | sdg_lookup -%}
     {%- assign target_id = group.name -%}
     {%- assign target_id_dashes = target_id | replace: ".", "-" -%}
 
