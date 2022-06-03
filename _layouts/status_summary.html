@@ -4,23 +4,13 @@
 <div id="main-content" class="container reportingstatus" role="main">
 
   <h1>{{ page.t.summary.status_summary }}</h1>
-  <script>console.log("site: ", site)</script>
-  {%- for goalreport in include.goals -%}
-    {%- assign goal = goalreport.goal | strip | sdg_lookup -%}
-    <div class="goal reporting-status-item">
-        <div class="frame goal-tiles">
-            <a href="{{ goal.url }}">
-            <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
-            </a>
-        </div>
-        <div class="details">
-            <h3 class="status-goal">
-                <a href="{{ goal.url }}">{{ goal.short }}</a>
-            </h3>
-            <div class="divider"></div>
-        </div>
-        <br style="clear:both;">
+  <div class="tab-content reporting-status-view">
+    <div role="tabpanel" class="tab-pane active" id="goalsview">
+      {% endif %}
+      {% include components/status/status-overall.html overall=reporting_data.overall title=page.t.summary.status_summary %}
+      {% include components/status/status-by-goal.html goals=reporting_data.goals title=summary.status_summary %}
+      {% if show_tabs %}
     </div>
-  {%- endfor -%}
+  </div>
 </div>
 {% include footer.html %}
