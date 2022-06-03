@@ -19,11 +19,13 @@
         <div class="divider"></div>
     </div>
 
-    {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_id' %}
+    {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_id' %}
     {%- for group in goal_indicators -%}
       {%- assign target_id = group.name -%}
       <h5> {{ target_id }}</h5>
     {%- endfor -%}
+
+
     <br style="clear:both;">
   </div>
 {%- endfor -%}
