@@ -24,6 +24,7 @@
       {%- assign target_id = group.name -%}
       <h5> {{ target_id }}</h5>
       {% for indicator in group.items %}
+        <h5> {{ indicator.indicator_name}}</h5>
         {% for single_indicator in (1..3) %}
           {% assign weather_active_key = "weather_active_" | append: single_indicator %} <!--weather_active_2-->
           {% assign single_indicator_key = "indicator_" | append: single_indicator %}  <!--indicator_2-->
@@ -51,7 +52,7 @@
               <!-- !!!!!!!!!!!!!!!!-->
             </table>
           {% endif %}
-        {% endfor %}  
+        {% endfor %}
       {% endfor %}
     {%- endfor -%}
 
