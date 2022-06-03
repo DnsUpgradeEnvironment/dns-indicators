@@ -1,22 +1,22 @@
 <!-- Count the non-empty histories (up to 2) -->
-{% assign n_histories = 0 %}
+{% assign n_weathers = 0 %}
 {% for i in (1..3) %}
-  {% assign hty_active = "history_active_" | append: i %}
-  {% if page.indicator[hty_active] == true %}
-    {% assign n_histories  = n_histories | plus: 1 %}
+  {% assign wth_active = "weather_active_" | append: i %}
+  {% if page.indicator[wth_active] == true %}
+    {% assign n_weathers  = n_weathers | plus: 1 %}
   {% endif %}
 {% endfor %}
 
-{% if n_histories > 0 %}
+{% if n_weathers > 0 %}
   <div class="row">
-  {% for i in (1..n_histories) %}
-    {% assign hty_active = "history_active_" | append: i %}
-    {% assign hty_scope = "history_" | append: i %}
+  {% for i in (1..n_weathers) %}
+    {% assign wth_active = "weather_active_" | append: i %}
+    {% assign wth_scope = "weather_" | append: i %}
     <div class="col-md-6">
-      {% if n_histories > 1 %}
+      {% if n_weathers > 1 %}
         <h4>{{ page.t.indicator.timeseries }} {{ i }}</h4>
       {% endif %}
-      {% include components/indicator/metadata.html scope=hty_scope %}
+      {% include components/indicator/metadata.html scope=wth_scope %}
     </div>
     {% endfor %}
   </div>
