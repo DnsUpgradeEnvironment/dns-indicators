@@ -13,49 +13,50 @@
         </a>
     </div>
     <div class="details">
-        <h3 class="status-goal">
-            <a href="{{ goal.url }}">{{ goal.short }}</a>
-        </h3>
-        <div class="divider"></div>
-    </div>
+      <h3 class="status-goal">
+          <a href="{{ goal.url }}">{{ goal.short }}</a>
+      </h3>
+      <div class="divider"></div>
 
-    {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_id' %}
-    {%- for group in goal_indicators -%}
-      {%- assign target_id = group.name -%}
-      <h5> {{ target_id }}</h5>
-      {% for indicator in group.items %}
-        <h5> {{ indicator.indicator_name}}</h5>
-        {% for single_indicator in (1..3) %}
-          {% assign weather_active_key = "weather_active_" | append: single_indicator %} <!--weather_active_2-->
-          {% assign single_indicator_key = "indicator_" | append: single_indicator %}  <!--indicator_2-->
-          {% assign idc_sort_order = indicator["indicator_sort_order"] %} <!--7-1-ab-->
-          {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
-          {% assign additional_cells = letters.size %}
-          {% if indicator[weather_active_key] == true %}
-            {% assign indicator_key = idc_sort_order | append: "_" | append: single_indicator %} <!--7-1-ab_2-->
-            <!--Check for multiple targets-->
-            {% assign target_key = single_indicator_key | append: "_target" %}  <!--indicator_2_target-->
-            {% assign target_year_key = target_key | append: "_year" %} <!--indicator_2_target_year-->
 
-            {% if indicator[target_key] %}
-              {% assign target_trans = 'single_target' %}
-            {% else %}
-              {% assign target_trans = 'multi_target' %}
+      {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_id' %}
+      {%- for group in goal_indicators -%}
+        {%- assign target_id = group.name -%}
+        <h5> {{ target_id }}</h5>
+        {% for indicator in group.items %}
+          <h5> {{ indicator.indicator_name}}</h5>
+          {% for single_indicator in (1..3) %}
+            {% assign weather_active_key = "weather_active_" | append: single_indicator %} <!--weather_active_2-->
+            {% assign single_indicator_key = "indicator_" | append: single_indicator %}  <!--indicator_2-->
+
+            {% assign idc_sort_order = indicator["indicator_sort_order"] %} <!--7-1-ab-->
+            {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
+            {% assign additional_cells = letters.size %}
+            {% if indicator[weather_active_key] == true %}
+              {% assign indicator_key = idc_sort_order | append: "_" | append: single_indicator %} <!--7-1-ab_2-->
+              <!--Check for multiple targets-->
+              {% assign target_key = single_indicator_key | append: "_target" %}  <!--indicator_2_target-->
+              {% assign target_year_key = target_key | append: "_year" %} <!--indicator_2_target_year-->
+
+              {% if indicator[target_key] %}
+                {% assign target_trans = 'single_target' %}
+              {% else %}
+                {% assign target_trans = 'multi_target' %}
+              {% endif %}
+              <table class="table table-hover tableresp">
+
+                <!-- INDICATOR !!!!!!!!!!!!!!!!-->
+                <tr>
+                  <th width="10%"> <div class=responsiveText>{{ t.weather.indicator }}</div> </th>
+                  <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
+                </tr>
+                <!-- !!!!!!!!!!!!!!!!-->
+              </table>
             {% endif %}
-            <table class="table table-hover tableresp">
-
-              <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-              <tr>
-                <th width="10%"> <div class=responsiveText>{{ t.weather.indicator }}</div> </th>
-                <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
-              </tr>
-              <!-- !!!!!!!!!!!!!!!!-->
-            </table>
-          {% endif %}
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
-    {%- endfor -%}
-
+      {%- endfor -%}
+    </div>
     <br style="clear:both;">
   </div> <!--class="goal"-->
 {%- endfor -%} <!--for goalreport in site.data.reporting.goals-->
