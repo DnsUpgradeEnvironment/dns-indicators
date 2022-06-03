@@ -1,7 +1,14 @@
 {% include head.html %}
 {% include header.html %}
 
+{% assign reporting_data = site.data.reporting %}
+
 <div id="main-content" class="container reportingstatus" role="main">
+  <ul class="nav nav-tabs reporting-status-view" role="tablist">
+      <li role="presentation" class="nav-item active">
+        <a class="nav-link" data-toggle="tab" href="#goalsview" aria-controls="goals" role="tab" {% include autotrack.html preset="tab_reporting_status_goals" category="Tab change" action="Change reporting status view" label="Change reporting status view to goals" %}>{{ page.t.status.reporting_status }}</a>
+      </li
+  </ul>
 
   <h1>{{ page.t.summary.status_summary }}</h1>
   <div class="tab-content reporting-status-view">
