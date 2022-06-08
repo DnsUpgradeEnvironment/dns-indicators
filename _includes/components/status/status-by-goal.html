@@ -33,11 +33,12 @@
               <!--Check for multiple targets-->
               {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
               {% assign target_year_key = target_key | append: "_year" %} <!--weather_indicator_2_target_year-->
+              {% assign test_target_key = target_key | append: "_1" %}  <!--weather_indicator_2_target_1-->
 
-              {% if indicator[target_key] %}
-                {% assign target_trans = 'single_target' %}
-              {% else %}
+              {% if indicator[test_target_key] %}
                 {% assign target_trans = 'multi_target' %}
+              {% else %}
+                {% assign target_trans = 'single_target' %}
               {% endif %}
               <table class="table table-hover tableresp">
 
