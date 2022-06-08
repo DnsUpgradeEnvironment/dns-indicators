@@ -51,16 +51,18 @@
                 {% if target_trans == 'single_target' %}
 
                   <!--Check for old targets-->
-                  {% assign old_target_key = target_key | append: '_old' %} <!--indicator_1_target_old-->
+                  {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_1_target_old-->
                   {% if indicator[old_target_key] %}
+                    <p> Yes</p>
                     {% assign cases = '_old,_new' | split: ',' %}
                   {% else %}
+                    <p> No</p>
                     {% assign cases = '' | split: ',' %}
                   {% endif %}
 
                   {% for case in cases %}
                     {% assign target_trans = target_trans | append: case %} <!--single_target_old-->
-                    {% assign target_key = target_key | append: case %} <!--indicator_1_target_old-->
+                    {% assign target_key = target_key | append: case %} <!--weather_indicator_1_target_old or weather_indicator_1_target-->
                     <!-- TARGET !!!!!!!!!!!!!!!!-->
                     <tr>
                       <th> <div class=responsiveText>1{{ page.t.weather.target_trans }}</div></th>
