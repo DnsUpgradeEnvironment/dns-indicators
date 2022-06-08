@@ -27,7 +27,7 @@
 
             {% assign idc_sort_order = indicator["indicator_sort_order"] %} <!--7-1-ab-->
             {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
-            {% assign additional_cells = letters.size %}
+
             {% if indicator[weather_active_key] == true %}
               {% assign indicator_key = idc_sort_order | append: "_" | append: single_indicator %} <!--7-1-ab_1-->
               <!--Check for multiple targets-->
@@ -49,7 +49,7 @@
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 {% if target_trans == 'single_target' %}
-
+                  {% assign additional_cells = letters.size %}
                   <!--Check for old targets-->
                   {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_1_target_old-->
                   {% if indicator[old_target_key] %}
@@ -150,6 +150,7 @@
                     {% endif %}
 
                     {% for case in cases %}
+                      {% assign additional_cells = letters.size %}
                       {% assign target_trans = 'multi_target_' | append: multi_target | append: case | replace: 'xx', '' %} <!--multi_target_3_old-->
                       {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %} <!--indicator_1_target_old-->
                       <!-- TARGET !!!!!!!!!!!!!!!!-->
