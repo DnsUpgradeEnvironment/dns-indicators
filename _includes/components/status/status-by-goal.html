@@ -134,7 +134,7 @@
                     </tr>
                     <!-- !!!!!!!!!!!!!!!!-->
                   {% endfor %} <!--for case in cases-->
-
+                <!-- ..........................................................................................................-->
                 {% elsif target_trans == 'multi_target' %}
                 {% assign target_year_to_compare_key = single_indicator_key | append: '_target_1_year' %} <!--weather_indicator_2_target_1_year-->
                   {% for multi_target in (1..3) %}
@@ -196,7 +196,7 @@
                       <!-- !!!!!!!!!!!!!!!!-->
                       <!-- ITEM !!!!!!!!!!!!!!!!-->
                       <tr>
-                        <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
+                        <th> <div class=responsiveText>{{target_year_to_compare_key}}{{ page.t.weather.status }}</div> </th>
                         {% for letter in letters %}
                           {% assign item_key = target_key | append:'_item_' | append: letter %}
                           {% assign year_key = target_key | append:'_year_' | append: letter %}
