@@ -53,20 +53,18 @@
                   <!--Check for old targets-->
                   {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_1_target_old-->
                   {% if indicator[old_target_key] %}
-                    <tr> <th> <div> Yes</div></th></tr>
                     {% assign cases = '_old,_new' | split: ',' %}
                   {% else %}
-                    <tr> <th> <div> No</div></th></tr>
-                    {% assign cases = 'x' | split: ',' %}
+                    {% assign cases = 'xx' | split: ',' %}
                   {% endif %}
 
                   {% for case in cases %}
-                    {% assign target_trans = target_trans | append: case | replace: 'x', '' %} <!--single_target_old-->
-                    {% assign target_key = target_key | append: case %} <!--weather_indicator_1_target_old or weather_indicator_1_target-->
+                    {% assign target_trans = target_trans | append: case | replace: 'xx', '' %} <!--single_target_old-->
+                    {% assign target_key = target_key | append: case | replace: 'xx', '' %} <!--weather_indicator_1_target_old or weather_indicator_1_target-->
                     <!-- TARGET !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>1{{ page.t.weather.target_trans }}</div></th>
-                      <td colspan="9"> <div class=responsiveText>2{{ indicator[target_key] }}</div> </td>
+                      <th> <div class=responsiveText>{{ page.t.weather.target_trans }}</div></th>
+                      <td colspan="9"> <div class=responsiveText>{{ taget_key }}{{ indicator[target_key] }}</div> </td>
                     </tr>
                     <!-- !!!!!!!!!!!!!!!!-->
                     <!-- YEAR !!!!!!!!!!!!!!!!-->
