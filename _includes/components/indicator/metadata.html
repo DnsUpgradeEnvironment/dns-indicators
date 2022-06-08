@@ -47,7 +47,7 @@
         </tr>
       {% endunless %}
 
-      {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "_target" and not indicator_metadata.name contains "_target_"%}
+      {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "_target" and indicator_metadata.name not contains "_target_"%}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
           <td colspan="9">
@@ -56,7 +56,7 @@
         </tr>
         {% endif %}
 
-      {% if indicator_metadata.name contains "year_" and indicator_metadata.name contains "_a"%}
+      {% if indicator_metadata.name contains "year_a" %}
         {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
         {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
         {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
