@@ -48,7 +48,7 @@
       {% endunless %}
 
       {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "_target" %}
-        {% unless indicator_metadata.name contains "_target_" or indicator_metadata.name contains "_year" or indicator_metadata.name contains "_item_" %}
+        {% unless indicator_metadata.name contains "_year" or indicator_metadata.name contains "_item_" %}
           <tr>
             <th scope="row">{{ metadata_label }} </th>
             <td colspan="9">
