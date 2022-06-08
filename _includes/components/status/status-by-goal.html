@@ -23,13 +23,13 @@
         {% for indicator in group.items %}
           {% for single_indicator in (1..3) %}
             {% assign weather_active_key = "weather_active_" | append: single_indicator %} <!--weather_active_2-->
-            {% assign single_indicator_key = "weather_indicator_" | append: single_indicator %}  <!--weather_indicator_2-->
+            {% assign single_indicator_key = "weather_indicator_" | append: single_indicator %}  <!--weather_indicator_1-->
 
             {% assign idc_sort_order = indicator["indicator_sort_order"] %} <!--7-1-ab-->
             {% assign letters = "i,h,g,f,e,d,c,b,a" | split: ',' %}
             {% assign additional_cells = letters.size %}
             {% if indicator[weather_active_key] == true %}
-              {% assign indicator_key = idc_sort_order | append: "_" | append: single_indicator %} <!--7-1-ab_2-->
+              {% assign indicator_key = idc_sort_order | append: "_" | append: single_indicator %} <!--7-1-ab_1-->
               <!--Check for multiple targets-->
               {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
               {% assign target_year_key = target_key | append: "_year" %} <!--weather_indicator_2_target_year-->
