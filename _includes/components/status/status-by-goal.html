@@ -45,7 +45,7 @@
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
                 <tr>
                   <th width="10%"> <div class=responsiveText>{{ page.t.weather.indicator }}</div> </th>
-                  <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ target_trans }}{{ indicator[single_indicator_key] }}</div></a> </th>
+                  <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 {% if target_trans == 'single_target' %}
@@ -71,7 +71,7 @@
                     <tr>
                       <th> <div class=responsiveText>3{{ page.t.weather.year }}</div> </th>
                       {% for letter in letters %}
-                        {% assign year_key = target_key | append:'_year_' | append: letter %}
+                        {% assign year_key = target_key | replace: '_target','' | append:'_year_' | append: letter %} <!--weather_indicator_1_old_year_a or weather_indicator_1_year_a-->
                         {% if indicator[year_key] %}
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
                             <td width="10%" align="center" class="hidden-xs"> <p><span class="responsiveText hidden-xs">4{{ indicator[year_key] }}</span></p> </td>
