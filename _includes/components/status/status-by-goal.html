@@ -3,7 +3,7 @@
 {%- for goalreport in include.goals -%}
   {%- assign goal_number = goalreport.goal -%} <!--7-->
   {%- assign goal_short_key = goal_number | append: '-short' -%} <!--7-short-->
-  {%- assign goal_short = t.global_goals[goal_short_key] -%} <!--Bezahlbare und saubere Energie-->
+  {%- assign goal_short = page.t.global_goals[goal_short_key] -%} <!--Bezahlbare und saubere Energie-->
 
   {%- assign goal = goalreport.goal | strip | sdg_lookup -%}
   <div class="goal reporting-status-item">
@@ -44,7 +44,7 @@
 
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
                 <tr>
-                  <th width="10%"> <div class=responsiveText>0{{ t.weather.indicator }}</div> </th>
+                  <th width="10%"> <div class=responsiveText>{{ page.t.weather.indicator }}</div> </th>
                   <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
