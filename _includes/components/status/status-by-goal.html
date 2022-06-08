@@ -156,7 +156,7 @@
                       {% assign target_key = target_key | append: case | replace: 'xx', '' %} <!--indicator_1_target_old-->
                       <!-- TARGET !!!!!!!!!!!!!!!!-->
                       <tr>
-                        <th> <div class=responsiveText>{{ page.t.weather[target_trans] }}</div></th>
+                        <th> <div class=responsiveText>{{target_trans}}{{ page.t.weather[target_trans] }}</div></th>
                         <td colspan="9"> <div class=responsiveText>{{ target_key}}{{ indicator[target_key] }}</div> </td>
                       </tr>
                       <!-- !!!!!!!!!!!!!!!!-->
