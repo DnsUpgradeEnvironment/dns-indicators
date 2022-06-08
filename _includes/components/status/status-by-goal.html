@@ -153,7 +153,7 @@
 
                     {% for case in cases %}
                       {% assign target_trans = 'multi_target_' | append: multi_target | append: case | replace: 'xx', '' %} <!--multi_target_3_old-->
-                      {% assign target_key = target_key | replace: '_old', '_new' | append: case | replace: 'xx', '' %} <!--indicator_1_target_old-->
+                      {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %} <!--indicator_1_target_old-->
                       <!-- TARGET !!!!!!!!!!!!!!!!-->
                       <tr>
                         <th> <div class=responsiveText>{{ page.t.weather[target_trans] }}</div></th>
