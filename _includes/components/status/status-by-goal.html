@@ -167,7 +167,7 @@
                           {% assign year_key = target_key | append:'_year_' | append: letter %}
                           {% if indicator[year_key] %}
                             <!--check if year is valid or not-->
-                            {% if multi_target > 1 and indicator[year_key] > indicator[target_year_1_key] %}
+                            {% if multi_target > 1 and indicator[year_key] >= indicator[target_year_1_key] %}
                               {% assign opacity = ' style="opacity: 0.2"' %}
                             {% else %}
                               {% assign opacity = '' %}
@@ -201,8 +201,14 @@
                         <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
                         {% for letter in letters %}
                           {% assign item_key = target_key | append:'_item_' | append: letter %}
+                          {% assign year_key = target_key | append:'_year_' | append: letter %}
+                          <!--check if year is valid or not-->
+                          {% if multi_target > 1 and indicator[year_key] >= indicator[target_year_1_key] %}
+                            {% assign opacity = ' style="opacity: 0.2"' %}
+                          {% else %}
+                            {% assign opacity = '' %}
+                          {% endif %}
                           {% if indicator[item_key] %}
-
                             {% if indicator[item_key] == 'Sonne' %}
                               {% assign status = page.t.weather['sonne'] %}
                             {% elsif indicator[item_key] == 'Leicht bewölkt' %}
