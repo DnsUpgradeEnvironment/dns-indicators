@@ -238,7 +238,7 @@
                       </tr>
                       <!-- !!!!!!!!!!!!!!!!-->
                     {% endfor %} <!--case-->
-                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | '_year' %} <!--weather_indicator_2_target_1_year-->
+                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
 
