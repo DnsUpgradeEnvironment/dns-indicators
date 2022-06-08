@@ -64,13 +64,13 @@
                     {% assign target_key = target_key | append: case %} <!--indicator_1_target_old-->
                     <!-- TARGET !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>1{{ t.weather.target_trans }}</div></th>
+                      <th> <div class=responsiveText>1{{ page.t.weather.target_trans }}</div></th>
                       <td colspan="9"> <div class=responsiveText>2{{ indicator[target_key] }}</div> </td>
                     </tr>
                     <!-- !!!!!!!!!!!!!!!!-->
                     <!-- YEAR !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>3{{ t.general.year }}</div> </th>
+                      <th> <div class=responsiveText>3{{ page.t.general.year }}</div> </th>
                       {% for letter in letters %}
                         {% assign year_key = target_key | append:'_year_' | append: letter %}
                         {% if indicator[year_key] %}
@@ -99,19 +99,19 @@
                     <!-- !!!!!!!!!!!!!!!!-->
                     <!-- ITEM !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>6{{ t.general.status }}</div> </th>
+                      <th> <div class=responsiveText>6{{ page.t.general.status }}</div> </th>
                       {% for letter in letters %}
                         {% assign item_key = target_key | append:'_item_' | append: letter %}
                         {% if indicator[item_key] %}
 
                           {% if indicator[item_key] == 'Sonne' %}
-                            {% assign status = t.weather['sonne'] %}
+                            {% assign status = page.t.weather['sonne'] %}
                           {% elsif indicator[item_key] == 'Leicht bewölkt' %}
-                            {% assign status = t.weather['leicht bewölkt'] %}
+                            {% assign status = page.t.weather['leicht bewölkt'] %}
                           {% elsif indicator[item_key] == 'Wolke' %}
-                            {% assign status = t.weather['wolke'] %}
+                            {% assign status = page.t.weather['wolke'] %}
                           {% elsif indicator[item_key] == 'Blitz' %}
-                            {% assign status = t.weather['blitz'] %}
+                            {% assign status = page.t.weather['blitz'] %}
                           {% endif %}
 
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
@@ -120,7 +120,7 @@
                             <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">8<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}"/></a> </td>
                           {% endif %}
                         {% elsif j == 'a' %}
-                            <td width="10%" align="center"><p><span class="responsiveText">9{{ t.weather.no_assessment }}</span></p></td>
+                            <td width="10%" align="center"><p><span class="responsiveText">9{{ page.t.weather.no_assessment }}</span></p></td>
                         {% endif %}
                       {% endfor %}
 
@@ -156,13 +156,13 @@
                       {% assign target_key = target_key | append: case %} <!--indicator_1_target_old-->
                       <!-- TARGET !!!!!!!!!!!!!!!!-->
                       <tr>
-                        <th> <div class=responsiveText>10{{ t.weather.target_trans }}</div></th>
+                        <th> <div class=responsiveText>10{{ page.t.weather.target_trans }}</div></th>
                         <td colspan="9"> <div class=responsiveText>11{{ indicator[target_key] }}</div> </td>
                       </tr>
                       <!-- !!!!!!!!!!!!!!!!-->
                       <!-- YEAR !!!!!!!!!!!!!!!!-->
                       <tr>
-                        <th> <div class=responsiveText>12{{ t.general.year }}</div> </th>
+                        <th> <div class=responsiveText>12{{ page.t.general.year }}</div> </th>
                         {% for letter in letters %}
                           {% assign year_key = target_key | append:'_year_' | append: letter %}
                           {% if indicator[year_key] %}
@@ -198,19 +198,19 @@
                       <!-- !!!!!!!!!!!!!!!!-->
                       <!-- ITEM !!!!!!!!!!!!!!!!-->
                       <tr>
-                        <th> <div class=responsiveText>15{{ t.general.status }}</div> </th>
+                        <th> <div class=responsiveText>15{{ page.t.general.status }}</div> </th>
                         {% for letter in letters %}
                           {% assign item_key = target_key | append:'_item_' | append: letter %}
                           {% if indicator[item_key] %}
 
                             {% if indicator[item_key] == 'Sonne' %}
-                              {% assign status = t.weather['sonne'] %}
+                              {% assign status = page.t.weather['sonne'] %}
                             {% elsif indicator[item_key] == 'Leicht bewölkt' %}
-                              {% assign status = t.weather['leicht bewölkt'] %}
+                              {% assign status = page.t.weather['leicht bewölkt'] %}
                             {% elsif indicator[item_key] == 'Wolke' %}
-                              {% assign status = t.weather['wolke'] %}
+                              {% assign status = page.t.weather['wolke'] %}
                             {% elsif indicator[item_key] == 'Blitz' %}
-                              {% assign status = t.weather['blitz'] %}
+                              {% assign status = page.t.weather['blitz'] %}
                             {% endif %}
 
                             {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
@@ -219,7 +219,7 @@
                               <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">17<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}" {{ opacity }}/></a> </td>
                             {% endif %}
                           {% elsif j == 'a' %}
-                              <td width="10%" align="center"><p><span class="responsiveText">18{{ t.weather.no_assessment }}</span></p></td>
+                              <td width="10%" align="center"><p><span class="responsiveText">18{{ page.t.weather.no_assessment }}</span></p></td>
                           {% endif %}
                         {% endfor %}
 
