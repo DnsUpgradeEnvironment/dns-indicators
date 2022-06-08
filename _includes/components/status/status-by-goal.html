@@ -69,7 +69,7 @@
                     <!-- !!!!!!!!!!!!!!!!-->
                     <!-- YEAR !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>3{{ page.t.general.year }}</div> </th>
+                      <th> <div class=responsiveText>3{{ page.t.weather.year }}</div> </th>
                       {% for letter in letters %}
                         {% assign year_key = target_key | append:'_year_' | append: letter %}
                         {% if indicator[year_key] %}
@@ -98,7 +98,7 @@
                     <!-- !!!!!!!!!!!!!!!!-->
                     <!-- ITEM !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>6{{ page.t.general.status }}</div> </th>
+                      <th> <div class=responsiveText>6{{ page.t.weather.status }}</div> </th>
                       {% for letter in letters %}
                         {% assign item_key = target_key | append:'_item_' | append: letter %}
                         {% if indicator[item_key] %}
@@ -148,13 +148,13 @@
                       <tr> <th> <div> Yes</div></th></tr>
                       {% assign cases = '_old,_new' | split: ',' %}
                     {% else %}
-                      <tr> <th> <div> No</div></th></tr>
-                      {% assign cases = '' | split: ',' %}
+                      <tr> <th> <div> {{ old_target_key}}</div></th></tr>
+                      {% assign cases = 'xx' | split: ',' %}
                     {% endif %}
 
                     {% for case in cases %}
-                      {% assign target_trans = target_trans | append: case %} <!--multi_target_3_old-->
-                      {% assign target_key = target_key | append: case %} <!--indicator_1_target_old-->
+                      {% assign target_trans = target_trans | append: case | replace: 'xx', '' %} <!--multi_target_3_old-->
+                      {% assign target_key = target_key | append: case | replace: 'xx', '' %} <!--indicator_1_target_old-->
                       <!-- TARGET !!!!!!!!!!!!!!!!-->
                       <tr>
                         <th> <div class=responsiveText>10{{ page.t.weather.target_trans }}</div></th>
