@@ -157,7 +157,7 @@
                       <!-- TARGET !!!!!!!!!!!!!!!!-->
                       <tr>
                         <th> <div class=responsiveText>{{ page.t.weather[target_trans] }}</div></th>
-                        <td colspan="9"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                        <td colspan="9"> <div class=responsiveText>{{ target_key}}{{ indicator[target_key] }}</div> </td>
                       </tr>
                       <!-- !!!!!!!!!!!!!!!!-->
                       <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -167,7 +167,7 @@
                           {% assign year_key = target_key | append:'_year_' | append: letter %}
                           {% if indicator[year_key] %}
                             <!--check if year is valid or not-->
-                            {% if multi_target > 1 and indicator[year_key] >= indicator[target_year_1_key] %}
+                            {% if multi_target > 1 and indicator[year_key] < indicator[target_year_1_key] %}
                               {% assign opacity = ' style="opacity: 0.2"' %}
                             {% else %}
                               {% assign opacity = '' %}
@@ -203,7 +203,7 @@
                           {% assign item_key = target_key | append:'_item_' | append: letter %}
                           {% assign year_key = target_key | append:'_year_' | append: letter %}
                           <!--check if year is valid or not-->
-                          {% if multi_target > 1 and indicator[year_key] >= indicator[target_year_1_key] %}
+                          {% if multi_target > 1 and indicator[year_key] < indicator[target_year_1_key] %}
                             {% assign opacity = ' style="opacity: 0.2"' %}
                           {% else %}
                             {% assign opacity = '' %}
