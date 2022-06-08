@@ -47,7 +47,7 @@
         </tr>
       {% endunless %}
 
-      {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "weather_target" %}
+      {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "_target" %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
           <td colspan="9">
@@ -56,10 +56,10 @@
         </tr>
         {% endif %}
 
-      {% if indicator_metadata.name contains "year_a" %}
-        {% assign year_b = indicator_metadata.name | replace: '_a_', '_b_' %}
-        {% assign year_c = indicator_metadata.name | replace: '_a_', '_c_' %}
-        {% assign year_d = indicator_metadata.name | replace: '_a_', '_d_' %}
+      {% if indicator_metadata.name contains "year_" and indicator_metadata.name contains "_a"%}
+        {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
+        {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
+        {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
           {% if page.indicator[year_d] %}
@@ -81,10 +81,10 @@
             <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
           </td>
         </tr>
-      {% elsif indicator_metadata.name contains "status_year_a"%}
-        {% assign year_b = indicator_metadata.name | replace: '_a_', '_b_' %}
-        {% assign year_c = indicator_metadata.name | replace: '_a_', '_c_' %}
-        {% assign year_d = indicator_metadata.name | replace: '_a_', '_d_' %}
+      {% elsif indicator_metadata.name contains "item_a"%}
+        {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
+        {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
+        {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
           {% if page.indicator[year_d] %}
