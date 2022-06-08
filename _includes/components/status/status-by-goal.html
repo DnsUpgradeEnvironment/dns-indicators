@@ -57,11 +57,11 @@
                     {% assign cases = '_old,_new' | split: ',' %}
                   {% else %}
                     <tr> <th> <div> No</div></th></tr>
-                    {% assign cases = '' | split: ',' %}
+                    {% assign cases = 'x' | split: ',' %}
                   {% endif %}
 
                   {% for case in cases %}
-                    {% assign target_trans = target_trans | append: case %} <!--single_target_old-->
+                    {% assign target_trans = target_trans | append: case | replace: 'x', '' %} <!--single_target_old-->
                     {% assign target_key = target_key | append: case %} <!--weather_indicator_1_target_old or weather_indicator_1_target-->
                     <!-- TARGET !!!!!!!!!!!!!!!!-->
                     <tr>
@@ -147,8 +147,10 @@
                     <!--Check for old targets-->
                     {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_2_target_3_old-->
                     {% if indicator[old_target_key] %}
+                      <tr> <th> <div> Yes</div></th></tr>
                       {% assign cases = '_old,_new' | split: ',' %}
                     {% else %}
+                      <tr> <th> <div> No</div></th></tr>
                       {% assign cases = '' | split: ',' %}
                     {% endif %}
 
