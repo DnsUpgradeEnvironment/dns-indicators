@@ -49,12 +49,14 @@
 
       {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "_target" %}
         {% unless indicator_metadata.name contains "_year" or indicator_metadata.name contains "_item_" %}
-          <tr>
-            <th scope="row">{{ page.t.metadata[indicator_metadata.name] }} </th>
-            <td colspan="9">
-              {{ page.indicator[indicator_metadata.name] | markdownify }}
-            </td>
-          </tr>
+          {% unless indicator_metadata.name contains '_target_'}
+            <tr>
+              <th scope="row">{{ page.t.metadata[indicator_metadata.name] }} </th>
+              <td colspan="9">
+                {{ page.indicator[indicator_metadata.name] | markdownify }}
+              </td>
+            </tr>
+          {% endunless %}
         {% endunless %}
       {% endif %}
 
