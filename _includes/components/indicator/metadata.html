@@ -61,7 +61,7 @@
       {% endif %}
 
       {% if indicator_metadata.name contains "year_a" %}
-        {% unless indicator_metadata.name contains "target_2" or indicator_metadata.name contains "target_3" or indicator_metadata.name contains "target_4" %}
+        {% unless indicator_metadata.name contains "target_2" or indicator_metadata.name contains "target_3" or indicator_metadata.name contains "target_4" or indicator_metadata.name contains "_old" %}
           {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
           {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
           {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
