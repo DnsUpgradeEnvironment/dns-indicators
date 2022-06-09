@@ -2,7 +2,7 @@
   {% for indicator_metadata in site.data.schema %}
     {%- assign metadata_label = indicator_metadata.name | translate_metadata_field -%}
     {% if indicator_metadata.field.scope == include.scope %}
-      {% if site.hide_empty_metadata %}
+      {% if site.hide_empty_metadata and indicator_metadata.name not contains '_item_a' %}
         {% unless page.indicator[indicator_metadata.name] and page.indicator[indicator_metadata.name] != '' %}
           {% continue %}
         {% endunless %}
