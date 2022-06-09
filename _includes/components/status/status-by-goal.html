@@ -63,8 +63,8 @@
                     {% assign target_key = target_key | append: case | replace: 'xx', '' %} <!--weather_indicator_1_target_old or weather_indicator_1_target-->
                     <!-- TARGET !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>{{ page.t.weather.target_trans }}</div></th>
-                      <td colspan="9"> <div class=responsiveText>{{ taget_key }}{{ indicator[target_key] }}</div> </td>
+                      <th> <div class=responsiveText>{{ page.t.weather[target_trans] }}</div></th>
+                      <td colspan="9"> <div class=responsiveText>{{ target_key }}{{ indicator[target_key] }}</div> </td>
                     </tr>
                     <!-- !!!!!!!!!!!!!!!!-->
                     <!-- YEAR !!!!!!!!!!!!!!!!-->
