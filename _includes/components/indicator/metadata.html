@@ -61,30 +61,32 @@
       {% endif %}
 
       {% if indicator_metadata.name contains "year_a" %}
-        {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
-        {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
-        {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
-        <tr>
-          <th scope="row">{{ page.t.metadata_fields[metadata_label] }} </th>
-          {% if page.indicator[year_d] %}
+        {% unless indicator_metadata.name contains "target_2" or indicator_metadata.name contains "target_3" or indicator_metadata.name contains "target_4" %}
+          {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
+          {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
+          {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
+          <tr>
+            <th scope="row">{{ page.t.metadata_fields[metadata_label] }} </th>
+            {% if page.indicator[year_d] %}
+              <td align="left" style="margin-bottom: 15px;">
+                <p>{{ page.indicator[year_d] | markdownify }}</p>
+              </td>
+            {% endif %}
+            {% if page.indicator[year_c] %}
+              <td align="left" style="margin-bottom: 15px;">
+                <p>{{ page.indicator[year_c] | markdownify }}</p>
+              </td>
+            {% endif %}
+            {% if page.indicator[year_b] %}
+              <td align="left" style="margin-bottom: 15px;">
+                <p>{{ page.indicator[year_b] | markdownify }}</p>
+              </td>
+            {% endif %}
             <td align="left" style="margin-bottom: 15px;">
-              <p>{{ page.indicator[year_d] | markdownify }}</p>
+              <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
             </td>
-          {% endif %}
-          {% if page.indicator[year_c] %}
-            <td align="left" style="margin-bottom: 15px;">
-              <p>{{ page.indicator[year_c] | markdownify }}</p>
-            </td>
-          {% endif %}
-          {% if page.indicator[year_b] %}
-            <td align="left" style="margin-bottom: 15px;">
-              <p>{{ page.indicator[year_b] | markdownify }}</p>
-            </td>
-          {% endif %}
-          <td align="left" style="margin-bottom: 15px;">
-            <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
-          </td>
-        </tr>
+          </tr>
+        {% endunless %}
       {% elsif indicator_metadata.name contains "item_a"%}
         {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
         {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
