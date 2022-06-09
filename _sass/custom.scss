@@ -5,6 +5,11 @@
  * a similarly named file for custom styles.
  */
 
+ span.small {
+   font-size: 10px;
+   opacity: 0.5;
+ }
+
  //---status summary---start------------------------
 .frameStatus {
     width: 20%;
