@@ -59,7 +59,7 @@
                   {% endif %}
 
                   {% for case in cases %}
-                    {% assign target_trans = target_trans | append: case | replace: 'xx', '' %} <!--single_target_old-->
+                    {% assign target_trans = 'single_target_' | append: case | replace: 'xx', '' %}  <!--single_target_old-->
                     {% assign target_key = target_key | append: case | replace: 'xx', '' %} <!--weather_indicator_1_target_old or weather_indicator_1_target-->
                     <!-- TARGET !!!!!!!!!!!!!!!!-->
                     <tr>
