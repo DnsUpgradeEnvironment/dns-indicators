@@ -119,14 +119,14 @@
             {% endif %}
           {% endfor %}
         {% else %} <!--Single target-->
-          {% unless indicator_metadata.name contains "_target_" %}
+          {% unless indicator_metadata.name contains "_target_"  indicator_metadata.name contains "_old"%}
             {% assign item_a = indicator_metadata.name %}
             {% assign item_b = indicator_metadata.name | replace: '_a', '_b' %}
             {% assign item_c = indicator_metadata.name | replace: '_a', '_c' %}
             {% assign item_d = indicator_metadata.name | replace: '_a', '_d' %}
           {% endunless %}
         {% endif %}
-        {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" %}
+        {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_old" %}
           <tr id="items">
             <th scope="row">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
             {% if page.indicator[item_d] %}
