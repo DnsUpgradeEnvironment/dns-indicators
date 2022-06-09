@@ -3,7 +3,7 @@
     {%- assign metadata_label = indicator_metadata.name | translate_metadata_field -%}
     {% if indicator_metadata.field.scope == include.scope %}
       {% if site.hide_empty_metadata %}
-        {% unless page.indicator[indicator_metadata.name] and (page.indicator[indicator_metadata.name] != '' or indicator_metadata.name contains '_item_a') %}
+        {% unless (page.indicator[indicator_metadata.name] and page.indicator[indicator_metadata.name] != '') or indicator_metadata.name contains '_item_a' %}
           {% continue %}
         {% endunless %}
       {% endif %}
@@ -51,7 +51,7 @@
         {% unless indicator_metadata.name contains "_year" or indicator_metadata.name contains "_item_" %}
           {% unless indicator_metadata.name contains '_target_' %}
             <tr>
-              <th scope="row">{{ page.t.metadata_fields[metadata_label] }} </th>
+              <th scope="row">{{ indicator_metadata.name }} </th>
               <td colspan="9">
                 {{ page.indicator[indicator_metadata.name] | markdownify }}
               </td>
