@@ -119,7 +119,7 @@
             {% endif %}
           {% endfor %}
         {% else %} <!--Single target-->
-          {% unless indicator_metadata.name contains "_target_"  indicator_metadata.name contains "_old"%}
+          {% unless indicator_metadata.name contains "_target_" or indicator_metadata.name contains "_old"%}
             {% assign item_a = indicator_metadata.name %}
             {% assign item_b = indicator_metadata.name | replace: '_a', '_b' %}
             {% assign item_c = indicator_metadata.name | replace: '_a', '_c' %}
