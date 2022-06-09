@@ -51,7 +51,7 @@
         {% unless indicator_metadata.name contains "_year" or indicator_metadata.name contains "_item_" %}
           {% unless indicator_metadata.name contains '_target_' %}
             <tr>
-              <th scope="row">{{ indicator_metadata.name }} </th>
+              <th scope="row">{{ page.t.metadata_fields[metadata_label] }} </th>
               <td colspan="9">
                 {{ page.indicator[indicator_metadata.name] | markdownify }}
               </td>
@@ -87,29 +87,57 @@
             </td>
           </tr>
         {% endunless %}
-      {% elsif indicator_metadata.name contains "item_a"%}
-        {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
-        {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
-        {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
+      {% elsif indicator_metadata.name contains "item_a" %}
+        {% if indicator_metadata.name contains "_target_1" %}
+          {% assign item_a = '' %}
+          {% assign item_b = '' %}
+          {% assign item_c = '' %}
+          {% assign item_d = '' %}
+          {% for target in (1..4) %}
+            {% assign target_year_key = indicator_metadata | replace: '1_item_a', '' | append: target | append: '_year' %} <!--weather_indicator_(1...3)_target_(1...4)_year-->
+            {% assign year_a_key = target_year_key | append: '_a' %} <!--weather_indicator_(1...3)_target_(1...4)_year_a-->
+            {% assign year_b_key = target_year_key | append: '_b' %} <!--weather_indicator_(1...3)_target_(1...4)_year_b-->
+            {% assign year_c_key = target_year_key | append: '_c' %} <!--weather_indicator_(1...3)_target_(1...4)_year_c-->
+            {% assign year_d_key = target_year_key | append: '_d' %} <!--weather_indicator_(1...3)_target_(1...4)_year_d-->
+            {% if item_a == '' and page.indicator[year_a_key] <= page.indicator[target_year_key] %}
+              {% assign item_a = year_a_key | replace: 'year', 'item' %}
+            {% endif %}
+            {% if item_b == '' and page.indicator[year_b_key] <= page.indicator[target_year_key] %}
+              {% assign item_b = year_b_key | replace: 'year', 'item' %}
+            {% endif %}
+            {% if item_c == '' and page.indicator[year_c_key] <= page.indicator[target_year_key] %}
+              {% assign item_c = year_c_key | replace: 'year', 'item' %}
+            {% endif %}
+            {% if item_d == '' and page.indicator[year_d_key] <= page.indicator[target_year_key] %}
+              {% assign item_d = year_d_key | replace: 'year', 'item' %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% unless indicator_metadata.name contains "_target_" %}
+          {% assign item_a = indicator_metadata.name %}
+          {% assign item_b = indicator_metadata.name | replace: '_a', '_b' %}
+          {% assign item_c = indicator_metadata.name | replace: '_a', '_c' %}
+          {% assign item_d = indicator_metadata.name | replace: '_a', '_d' %}
+        {% endunless %}
         <tr>
           <th scope="row">{{ metadata_label }} </th>
-          {% if page.indicator[year_d] %}
+          {% if page.indicator[item_d] %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_d] }}.png" alt="{{  page.indicator[year_d] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_d] }}.png" alt="{{  page.indicator[item_d] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           {% endif %}
-          {% if page.indicator[year_c] %}
+          {% if page.indicator[item_c] %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_c] }}.png" alt="{{  page.indicator[year_c] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_c] }}.png" alt="{{  page.indicator[item_c] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           {% endif %}
-          {% if page.indicator[year_b] %}
+          {% if page.indicator[item_b] %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[year_b] }}.png" alt="{{  page.indicator[year_b] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_b] }}.png" alt="{{  page.indicator[item_b] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           {% endif %}
           <td align="left" style="padding-left: 0px;padding-right: 0px;">
-            <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[indicator_metadata.name] }}.png" alt="{{ page.indicator[indicator_metadata.name] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+            <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_a] }}.png" alt="{{ page.indicator[item_a] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
           </td>
         </tr>
 
