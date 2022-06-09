@@ -16,35 +16,37 @@
         {% endif %}
       {% endif %}
 
-
-
       {% unless var == 'dontShow' or indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text" %}
-        <tr id="everythingElse">
-          <th scope="row">{{ metadata_label }} </th>
-          <td>
-            {% if indicator_metadata.name contains "_url" or indicator_metadata.name contains "_link" %}
-              {% assign url_text_name = indicator_metadata.name | replace_first:'_url','_url_text'  %}
-              {% assign url_text_name = url_text_name | replace_first:'_link','_link_text'  %}
-              {% assign url_text = page.indicator[url_text_name] %}
-              {% unless url_text %}
-                {% assign url_text = 'Link' %}
-              {% endunless %}
+        {% if indicator_metadata.field.scope != 'content' %}
+          <tr id="everythingElse">
+            <th scope="row">{{ metadata_label }} </th>
+            <td>
+              {% if indicator_metadata.name contains "_url" or indicator_metadata.name contains "_link" %}
+                {% assign url_text_name = indicator_metadata.name | replace_first:'_url','_url_text'  %}
+                {% assign url_text_name = url_text_name | replace_first:'_link','_link_text'  %}
+                {% assign url_text = page.indicator[url_text_name] %}
+                {% unless url_text %}
+                  {% assign url_text = 'Link' %}
+                {% endunless %}
 
-              {% if page.indicator[indicator_metadata.name] contains "http" or page.indicator[indicator_metadata.name] contains "mailto" %}
-                <a href="{{ page.indicator[indicator_metadata.name] }}" target="_blank">
-                  {{ url_text }} <span class="visuallyhidden">{{ page.t.general.opens_new_window }}</span>
-                </a>
+                {% if page.indicator[indicator_metadata.name] contains "http" or page.indicator[indicator_metadata.name] contains "mailto" %}
+                  <a href="{{ page.indicator[indicator_metadata.name] }}" target="_blank">
+                    {{ url_text }} <span class="visuallyhidden">{{ page.t.general.opens_new_window }}</span>
+                  </a>
+                {% endif %}
+
+              {% elsif indicator_metadata.field.element == 'multiselect' %}
+                {% for item in page.indicator[indicator_metadata.name] %}
+                  {{ item | t }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+              {% else %}
+                {{ page.indicator[indicator_metadata.name] | markdownify }}
               {% endif %}
-
-            {% elsif indicator_metadata.field.element == 'multiselect' %}
-              {% for item in page.indicator[indicator_metadata.name] %}
-                {{ item | t }}{% unless forloop.last %}, {% endunless %}
-              {% endfor %}
-            {% else %}
-              {{ page.indicator[indicator_metadata.name] | markdownify }}
-            {% endif %}
-          </td>
-        </tr>
+            </td>
+          </tr>
+        {% else %} <!-- case: content -->
+          <p> {{ meta[indicator_metadata.name] | t | markdownify }} </p>
+        {% endif %}
       {% endunless %}
 
       {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "_target" %}
