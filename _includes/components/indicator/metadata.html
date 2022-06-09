@@ -65,7 +65,7 @@
         {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
         {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
         <tr>
-          <th scope="row">{{ metadata_label }} </th>
+          <th scope="row">{{ page.t.metadata_fields[metadata_label] }} </th>
           {% if page.indicator[year_d] %}
             <td align="left" style="margin-bottom: 15px;">
               <p>{{ page.indicator[year_d] | markdownify }}</p>
