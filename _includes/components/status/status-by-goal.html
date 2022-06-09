@@ -158,10 +158,10 @@
                         <th>
                           <div class=responsiveText>{{ page.t.weather[target_trans] }}
                             {% if target_trans contains '_old' %}
-                            {% assign old_date_key = target_key | append: '_date' %}
+                              {% assign old_date_key = target_key | append: '_date' %}
                               <span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
                             {% elsif target_trans contains '_new' %}
-                            {% assign new_date_key = target_key | append: '_date' %}
+                              {% assign new_date_key = target_key | append: '_date' %}
                               <span class="small">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
                             {% endif %}
                           </div>
