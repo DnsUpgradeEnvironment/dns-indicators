@@ -53,7 +53,7 @@
         {% unless indicator_metadata.name contains "_year" or indicator_metadata.name contains "_item_" %}
           {% unless indicator_metadata.name contains '_target_' %}
             <tr id="indAndtarg">
-              <th scope="row">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
+              <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
               <td colspan="9">
                 {{ page.indicator[indicator_metadata.name] | markdownify }}
               </td>
@@ -68,7 +68,7 @@
           {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
           {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
           <tr id="years">
-            <th scope="row">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
+            <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
             {% if page.indicator[year_d] %}
               <td align="left" style="margin-bottom: 15px;">
                 <p>{{ page.indicator[year_d] | markdownify }}</p>
@@ -130,7 +130,7 @@
         {% endif %}
         {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_old" %}
           <tr id="items">
-            <th scope="row">{{indicator_metadata.name}} {{ page.t.metadata_fields[indicator_metadata.name] }} </th>
+            <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
             {% if page.indicator[item_d] %}
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
                 <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_d] }}.png" alt="{{  page.indicator[item_d] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
