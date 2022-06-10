@@ -87,7 +87,7 @@
             <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
           </td>
         </tr>
-      {% elsif indicator_metadata.name contains "item_a" %}
+      {% elsif indicator_metadata.name contains "item_a" %}  weather_indicator_2_target_1_item_a:
         {% if indicator_metadata.name contains "_target_1" %} <!--Multiple targets-->
           {% assign item_a = '' %}
           {% assign item_b = '' %}
@@ -133,21 +133,21 @@
             <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
             {% if page.indicator[item_d] %}
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_d] }}.png" alt="{{  page.indicator[item_d] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ item_d }}<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_d] }}.png" alt="{{  page.indicator[item_d] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
               </td>
             {% endif %}
             {% if page.indicator[item_c] %}
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_c] }}.png" alt="{{  page.indicator[item_c] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ item_c }}<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_c] }}.png" alt="{{  page.indicator[item_c] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
               </td>
             {% endif %}
             {% if page.indicator[item_b] %}
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_b] }}.png" alt="{{  page.indicator[item_b] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ item_b }}<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{  page.indicator[item_b] }}.png" alt="{{  page.indicator[item_b] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
               </td>
             {% endif %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_a] }}.png" alt="{{ page.indicator[item_a] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ ">{{ item_a }}<img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_a] }}.png" alt="{{ page.indicator[item_a] | markdownify }}" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           </tr>
         {% endunless %}
