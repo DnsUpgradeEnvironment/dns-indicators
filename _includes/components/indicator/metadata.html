@@ -93,10 +93,10 @@
           {% assign item_b = '' %}
           {% assign item_c = '' %}
           {% assign item_d = '' %}
-          {% assign year_a_key = indicator_metadata.name | replace: 'target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_a' %} <!--weather_indicator_(1...3)_year_a-->
-          {% assign year_b_key = indicator_metadata.name | replace: 'target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_b' %} <!--weather_indicator_(1...3)_year_b-->
-          {% assign year_c_key = indicator_metadata.name | replace: 'target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_c' %} <!--weather_indicator_(1...3)_year_c-->
-          {% assign year_d_key = indicator_metadata.name | replace: 'target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_d' %} <!--weather_indicator_(1...3)_year_d-->
+          {% assign year_a_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_a' %} <!--weather_indicator_(1...3)_year_a-->
+          {% assign year_b_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_b' %} <!--weather_indicator_(1...3)_year_b-->
+          {% assign year_c_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_c' %} <!--weather_indicator_(1...3)_year_c-->
+          {% assign year_d_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_d' %} <!--weather_indicator_(1...3)_year_d-->
 
           {% for target in (1..4) %}
             {% assign target_year_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_year' %} <!--weather_indicator_(1...3)_target_(1...4)_year-->
