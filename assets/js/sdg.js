@@ -4246,6 +4246,7 @@ var indicatorInit = function () {
                         shortIndicatorId: domData.id,
                         chartTitle: domData.charttitle,
                         chartTitles: domData.charttitles,
+                        chartSubtitle: domData.chartsubtitle,
                         measurementUnit: domData.measurementunit,
                         xAxisLabel: domData.xaxislabel,
                         showData: domData.showdata,
@@ -4254,6 +4255,8 @@ var indicatorInit = function () {
                         startValues: domData.startvalues,
                         graphLimits: domData.graphlimits,
                         stackedDisaggregation: domData.stackeddisaggregation,
+                        showLine: domData.showline,
+                        spanGaps: domData.spangaps,
                         graphAnnotations: domData.graphannotations,
                         graphTargetLines: domData.graphtargetlines,
                         graphSeriesBreaks: domData.graphseriesbreaks,
@@ -4261,6 +4264,7 @@ var indicatorInit = function () {
                         dataSchema: domData.dataschema,
                         compositeBreakdownLabel: domData.compositebreakdownlabel,
                         precision: domData.precision,
+                        graphStepsize: domData.graphstepsize,
                     });
                     var view = new indicatorView(model, {
                         rootElement: '#indicatorData',
