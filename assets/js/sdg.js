@@ -3933,7 +3933,7 @@ var indicatorView = function (model, options) {
     $targetLines.empty();
     targetLines.forEach(function(targetLine) {
       var targetLineLabel = targetLine.label.content;
-      var targetLineValue = targetLine.value;
+      var targetLineValue = String(targetLine.value);
       if (!targetLineLabel) {
         targetLineLabel = opensdg.annotationPresets.target_line.label.content;
       }
