@@ -386,7 +386,7 @@ var indicatorView = function (model, options) {
     }
     // Now apply our custom decimal separator if needed.
     if (view_obj._decimalSeparator) {
-      altered = altered.toString().replace('.', ',');
+      altered = altered.toString().replace('.', view_obj._decimalSeparator);
     }
     return altered;
   }
@@ -878,7 +878,7 @@ var indicatorView = function (model, options) {
         targetLineLabel = opensdg.annotationPresets.target_line.label.content;
       }
       if (view_obj._decimalSeparator) {
-        targetLineValue = targetLineValue.replace('.', view_obj._decimalSeparator);
+        targetLineValue = targetLineValue.replace('.', ',');
       }
       $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLine.value + '</dd>');
     });
