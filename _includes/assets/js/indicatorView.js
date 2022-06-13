@@ -386,7 +386,7 @@ var indicatorView = function (model, options) {
     }
     // Now apply our custom decimal separator if needed.
     if (view_obj._decimalSeparator) {
-      altered = altered.toString().replace('.', view_obj._decimalSeparator);
+      altered = altered.toString().replace('.', ',');
     }
     return altered;
   }
