@@ -2,11 +2,9 @@ opensdg.annotationPresets = {
     common: {
         // This "common" preset is applied to all annotations automatically.
         borderColor: '#949494',
-        drawTime: 'afterDraw',
         type: 'line',
         borderDash: [10, 5],
         borderWidth: 1,
-        //drawTime: afterDraw,
         label: {
             backgroundColor: 'white',
             {% if site.chartjs_3 %}
