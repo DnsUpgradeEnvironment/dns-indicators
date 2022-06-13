@@ -876,7 +876,13 @@ var indicatorView = function (model, options) {
       if (!targetLineLabel) {
         targetLineLabel = opensdg.annotationPresets.target_line.label.content;
       }
-      $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLine.value + '</dd>');
+
+      if (view_obj._decimalSeparator) {
+        $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLine.value.replace('.', view_obj._decimalSeparator) + '</dd>');
+      }
+      else {
+        $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLine.value + '</dd>');
+      }
     });
     if (targetLines.length === 0) {
       $targetLines.hide();
