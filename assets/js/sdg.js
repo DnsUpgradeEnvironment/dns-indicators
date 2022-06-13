@@ -4260,7 +4260,7 @@ var indicatorInit = function () {
                     var view = new indicatorView(model, {
                         rootElement: '#indicatorData',
                         legendElement: '#plotLegend',
-                        decimalSeparator: ':',
+                        decimalSeparator: '',
                         maxChartHeight: 420,
                         tableColumnDefs: [
                             { maxCharCount: 25 }, // nowrap
