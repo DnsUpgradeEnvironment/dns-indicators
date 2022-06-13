@@ -880,7 +880,7 @@ var indicatorView = function (model, options) {
       if (view_obj._decimalSeparator) {
         targetLineValue = targetLineValue.replace('.', ',');
       }
-      $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLine.value + '</dd>');
+      $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLineValue + '</dd>');
     });
     if (targetLines.length === 0) {
       $targetLines.hide();
