@@ -3938,7 +3938,7 @@ var indicatorView = function (model, options) {
         targetLineLabel = opensdg.annotationPresets.target_line.label.content;
       }
       if (view_obj._decimalSeparator) {
-        targetLineValue = targetLineValue.replace('.', view_obj._decimalSeparator);
+        targetLineValue = targetLineValue.replace('.', ',');
       }
       $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + targetLine.value + '</dd>');
     });
