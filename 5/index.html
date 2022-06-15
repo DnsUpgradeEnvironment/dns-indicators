@@ -129,12 +129,11 @@ var translations = {
 
         
         
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220615085446">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220615090601">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -149,7 +148,7 @@ var translations = {
 
     </head>
 <body class="language-de
-layout-goal-bootstrap5
+layout-goal-by-target
 ">
 <!-- <div class="container"> -->
 
@@ -157,9 +156,9 @@ layout-goal-bootstrap5
 
 <script>translations['header'] = {"alpha":"Alpha-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_address\">Kommentare</a>.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
 <div id="disclaimer">
-    
+  
 <div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha-Version</strong>
@@ -171,88 +170,214 @@ layout-goal-bootstrap5
 
 </div>
 
-<header role="banner" class="">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/dns-indicators/" id="home">
+<header role="banner" class="header-default">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/dns-indicators/" id="home">
     <img src="/dns-indicators/assets/img/de/dns_logo.png" alt="Zum Hauptinhalt springen" />
 </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/dns-indicators/">17 Ziele</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-status-title" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Bewertung
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-status-title"><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/status_summary/">Übersicht</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/status/">Methodik</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Über uns
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/about/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/guidance/">Technische&nbspHinweise</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Wissenswertes
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/facts_agenda/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/facts_publications/">Veröffentlichungen</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/dns-indicators/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li></ul>
-    
-                </div>
-                <div class="header-search-bar">
-                    <form class="align-self-lg-end" id="search" action="/dns-indicators/search/">
-    <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Suche</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Suche">
-        <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Suche" id="search-btn" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </span>
-    </div>
-</form>
+      <div class="mobile-widgets">
+    <ul id='accessibility-nav' class='contrast-switcher'>
+        
 
-                </div>
-                <div class="header-toggles d-flex">
-
-
-
-
-
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/dns-indicators/en/5/">
-                English
-            </a>
-        </li></ul>
-</div>
-
-<a title="" aria-label=""
-    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
->A</a>
-                </div>
-            </div>
-        </nav>
+
+        >A</a>
+    </li>
+
+
+    </ul><div class="language-toggle-mobile">
+        <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
+      <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li class="language-option-en">
+            <a href="/dns-indicators/en/5/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+    </div></div>
     </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+      <ul class="top-level">
+    <li id="menuToggle"
+        aria-label=""
+        aria-haspopup="true">
+        <button data-target="menu-mobile" aria-expanded="false">Menü</button>
+        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/dns-indicators/">17 Ziele</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/status_summary/">Übersicht</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/status/">Methodik</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/about/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/guidance/">Technische&nbspHinweise</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/facts_agenda/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/facts_publications/">Veröffentlichungen</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  <i class="fa fa-globe language-toggle-globe-links"></i>
+  <ul class="language-toggle-links"><li class="language-option-en">
+      <a class="language-toggle-link" href="/dns-indicators/en/5/"><span class="language-name">English</span>
+        <span class="language-abbreviation">en</span></a>
+    </li></ul>
+</div>
+
+
+
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+    </li>
+    <li id="searchToggle"
+        aria-label=""
+        aria-haspopup="true">
+        <button data-target="search-mobile" aria-expanded="false">Suche</button>
+        <div id="search-mobile" class="menu-target">
+  <form action="/dns-indicators/search/">
+    <label class="sr-only" for="indicator_search-mobile">Suche</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Suche" /><!--
+    --><button aria-label="Suche" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+    </li>
+</ul>
+      <div id="search" class="menu-target">
+  <form action="/dns-indicators/search/">
+    <label class="sr-only" for="indicator_search">Suche</label>
+    <input type="text" name="q" id="indicator_search" title="Suche" /><!--
+    --><button aria-label="Suche" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/dns-indicators/">17 Ziele</a>
+</li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bewertung
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
+    <a href="/dns-indicators/status_summary/">Übersicht</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/status/">Methodik</a>
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Über uns
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
+    <a href="/dns-indicators/about/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/guidance/">Technische&nbspHinweise</a>
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Wissenswertes
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
+    <a href="/dns-indicators/facts_agenda/">Die&nbspDNS&#8209;Online&nbspPlattform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/facts_publications/">Veröffentlichungen</a>
+</li></ul>
+            </div>
+        </li><li class="nav-link ">
+    <a href="/dns-indicators/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  <i class="fa fa-globe language-toggle-globe-links"></i>
+  <ul class="language-toggle-links"><li class="language-option-en">
+      <a class="language-toggle-link" href="/dns-indicators/en/5/"><span class="language-name">English</span>
+        <span class="language-abbreviation">en</span></a>
+    </li></ul>
+</div>
+
+
+
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+    </nav>
+  </div>
+
 </header>
 <div id="top" tabindex=-1></div>
 
@@ -260,267 +385,227 @@ data-event-label="high"
 
 
 
-<div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/dns-indicators/">Start</a>
-        </li>
-        <li class="breadcrumb-item active">Ziel 5</li>
-        
-    </ol>
-</nav>
-  
-</div>
-
-<div class="heading goal-banner goal-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-tiles">
-                <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" id="goal-5" class="goal-icon-image goal-icon-image-" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-                <h1>Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen</h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div id="main-content" class="container" role="main">
-
-  
-
-
-
-  <div class="container g-0">
-    <h2 class="goal-page-heading"></h2>
-
-    
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Unterziel</span> 5.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">global_targets.5-1-title</span>
-          </div>
+<div class="heading  goal-banner goal-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" id="goal-5" class="goal-icon-image goal-icon-image-" />
       </div>
-        
-
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indikator</span> 5.1.a</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/dns-indicators/5-1-a">Verdienstabstand zwischen Frauen und Männern</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">Daten verfügbar</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indikator</span> 5.1.bc</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/dns-indicators/5-1-bc">Frauen in Führungspositionen in der Wirtschaft sowie im öffentlichen Dienst des Bundes</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">Daten verfügbar</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indikator</span> 5.1.d</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/dns-indicators/5-1-d">Väterbeteiligung beim Elterngeld</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">Daten verfügbar</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indikator</span> 5.1.e</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/dns-indicators/5-1-e">Berufliche Qualifizierung von Frauen und Mädchen durch deutsche entwicklungspolitische Zusammenarbeit</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">Daten verfügbar</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
+      <div class="col-xs-8 col-md-9 col-lg-10 goal-5">
+        <h1>
+          <span class="hidden-sm hidden-md hidden-lg titles goal-5">Ziel 5: </span>
+          <span class="hidden-xs titles goal-5"> Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen </span>
+        </h1>
+      </div>
     </div>
+  </div>
+</div>
+<!--<div class="underline goal-5">-->
+</div>
+
+
+<div class="container">
+  <ol class="breadcrumb">
+  
+  <li><a href="/dns-indicators/">Start</a></li>
+  <li class="active">Ziel 5</li>
+  
+</ol>
+
+  
+</div>
+
+<div id="main-content" class="container goal-indicators goal-5 goal-by-target" role="main">
+
+  
+
+
+
+  
+
+  <div class="col-xs-3 col-md-3 col-lg-4">
+    <a href="/dns-indicators//4" class="btn btn-primary btn-block goal-5 navigation-btn" role="button">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Vorheriges Ziel</b>
+    </a>
+  </div>
+
+  <div class="col-xs-6 col-md-6 col-lg-4">
+    <a href="https://sustainabledevelopment-deutschland.github.io//5" class="btn btn-primary btn-block goal-5 navigation-btn" title="" role="button">
+      <b class="btn-label hidden-sm hidden-xs">Nationale Indikatoren zu Ziel 5 </b><b class="btn-label visible-sm visible-xs">Ziel 5 - National</b>
+    </a>
+  </div>
+
+  <div class="col-xs-3 col-md-3 col-lg-4">
+    <a href="/dns-indicators//6" class="btn btn-primary btn-block goal-5 navigation-btn" role="button">
+      <b class="btn-label hidden-sm hidden-xs">Nächstes Ziel</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </a>
   </div>
 
 
 
-<footer role="contentinfo">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div id="footerLinks">
-                    <ul>
-                        <li>
-                            <a href="https://open-sdg.org">Seite basiert auf Open SDG</a>
-                        </li>
-                        
-                        <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
-                            
-                        </li>
-                        <li>
-                            <a href="/dns-indicators/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                            
-                        </li>
-                        <li>
-                            <a href="/dns-indicators/imprint/">Im­pres­s­um</a>
-                            
-                        </li>
-                        
-                        
-                        </ul>
-                </div>
-            </div>
-        </div>
-        
+  <div class="visible-md-block visible-lg-block">
+    <div class="col-md-6">
+      <h2>Indikatorenbereiche und Postulate</h2>
     </div>
+    <div class="col-md-6">
+      <h2>Indikatoren</h2>
+    </div>
+  </div>
+
+  
+  <div class="indicator-cards target goal-target col-md-6">
+      <span class="indicator-card-number">
+        <label class="hidden-md hidden-lg"></label>
+        Gleichstellung
+      </span>
+      Gleichstellung und partnerschaftliche Aufgabenteilung fördern
+    </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
+    
+
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        
+        <span class="indicator-card-number">
+          5.1.a
+        </span>
+        <a href="/dns-indicators/5-1-a">
+          Verdienstabstand zwischen Frauen und Männern
+        </a>
+        
+
+
+
+
+
+        
+      </div>
+    
+
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        
+        <span class="indicator-card-number">
+          5.1.b, c
+        </span>
+        <a href="/dns-indicators/5-1-bc">
+          Frauen in Führungspositionen in der Wirtschaft sowie im öffentlichen Dienst des Bundes
+        </a>
+        
+
+
+
+
+
+        
+      </div>
+    
+
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        
+        <span class="indicator-card-number">
+          5.1.d
+        </span>
+        <a href="/dns-indicators/5-1-d">
+          Väterbeteiligung beim Elterngeld
+        </a>
+        
+
+
+
+
+
+        
+      </div>
+    
+    </div>
+  <div class="indicator-cards target goal-target col-md-6">
+      <span class="indicator-card-number">
+        <label class="hidden-md hidden-lg"></label>
+        Gleichstellung
+      </span>
+      Wirtschaftliche Teilhabe von Frauen global stärken
+    </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
+    
+
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        
+        <span class="indicator-card-number">
+          5.1.e
+        </span>
+        <a href="/dns-indicators/5-1-e">
+          Berufliche Qualifizierung von Frauen und Mädchen durch deutsche entwicklungspolitische Zusammenarbeit
+        </a>
+        
+
+
+
+
+
+        
+      </div>
+    
+    </div>
+  
+</div>
+
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="footerLinks">
+          <ul>
+            <li><a href="https://open-sdg.org">Seite basiert auf Open SDG</a></li>
+            
+              <li>
+                
+                  <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                
+                </li>
+              <li>
+                <a href="/dns-indicators/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                
+                </li>
+              <li>
+                <a href="/dns-indicators/imprint/">Im­pres­s­um</a>
+                
+                </li>
+              
+            
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -541,12 +626,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220615085446'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220615090601'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220615085446"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220615090601"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

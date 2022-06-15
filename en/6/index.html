@@ -129,12 +129,11 @@ var translations = {
 
         
         
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220615085446">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220615090601">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -149,7 +148,7 @@ var translations = {
 
     </head>
 <body class="language-en
-layout-goal-bootstrap5
+layout-goal-by-target
 ">
 <!-- <div class="container"> -->
 
@@ -157,9 +156,9 @@ layout-goal-bootstrap5
 
 <script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-    
+  
 <div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
@@ -171,88 +170,214 @@ layout-goal-bootstrap5
 
 </div>
 
-<header role="banner" class="">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/dns-indicators/en/" id="home">
+<header role="banner" class="header-default">
+  <div class="container">
+
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/dns-indicators/en/" id="home">
     <img src="/dns-indicators/assets/img/en/dns_logo.png" alt="To main menu" />
 </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-flex flex-wrap w-100 justify-content-between">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/dns-indicators/en/">17 Goals</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-status-title" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Evaluation
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-status-title"><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/en/status_summary/">Summary</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/en/status/">Methodology</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    About
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Useful information
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/dns-indicators/en/facts_publications/">Publications</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li></ul>
-    
-                </div>
-                <div class="header-search-bar">
-                    <form class="align-self-lg-end" id="search" action="/dns-indicators/en/search/">
-    <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
-        <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </span>
-    </div>
-</form>
+      <div class="mobile-widgets">
+    <ul id='accessibility-nav' class='contrast-switcher'>
+        
 
-                </div>
-                <div class="header-toggles d-flex">
-
-
-
-
-
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
-            <a class="language-toggle-link" href="/dns-indicators/6/">
-                Deutsch
-            </a>
-        </li></ul>
-</div>
-
-<a title="" aria-label=""
-    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
->A</a>
-                </div>
-            </div>
-        </nav>
+
+        >A</a>
+    </li>
+
+
+    </ul><div class="language-toggle-mobile">
+        <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown ">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
+      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
+    <ul class="dropdown-menu"><li class="language-option-de">
+            <a href="/dns-indicators/6/">
+              Deutsch
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+    </div></div>
     </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+      <ul class="top-level">
+    <li id="menuToggle"
+        aria-label=""
+        aria-haspopup="true">
+        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
+        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/dns-indicators/en/">17 Goals</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/status_summary/">Summary</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/status/">Methodology</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/facts_publications/">Publications</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  <i class="fa fa-globe language-toggle-globe-links"></i>
+  <ul class="language-toggle-links"><li class="language-option-de">
+      <a class="language-toggle-link" href="/dns-indicators/6/"><span class="language-name">Deutsch</span>
+        <span class="language-abbreviation">de</span></a>
+    </li></ul>
+</div>
+
+
+
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+    </li>
+    <li id="searchToggle"
+        aria-label=""
+        aria-haspopup="true">
+        <button data-target="search-mobile" aria-expanded="false">Search</button>
+        <div id="search-mobile" class="menu-target">
+  <form action="/dns-indicators/en/search/">
+    <label class="sr-only" for="indicator_search-mobile">Search</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
+    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+    </li>
+</ul>
+      <div id="search" class="menu-target">
+  <form action="/dns-indicators/en/search/">
+    <label class="sr-only" for="indicator_search">Search</label>
+    <input type="text" name="q" id="indicator_search" title="Search" /><!--
+    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+    <a href="/dns-indicators/en/">17 Goals</a>
+</li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Evaluation
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
+    <a href="/dns-indicators/en/status_summary/">Summary</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/status/">Methodology</a>
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
+    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
+</li></ul>
+            </div>
+        </li><li class="nav-link">
+            <div class="btn-group menu-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Useful information
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu"><li class="nav-link ">
+    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
+</li><li class="nav-link ">
+    <a href="/dns-indicators/en/facts_publications/">Publications</a>
+</li></ul>
+            </div>
+        </li><li class="nav-link ">
+    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li><li class="language-toggle-menu-header">
+    
+
+
+
+
+
+  <div class="language-toggle-container">
+  <i class="fa fa-globe language-toggle-globe-links"></i>
+  <ul class="language-toggle-links"><li class="language-option-de">
+      <a class="language-toggle-link" href="/dns-indicators/6/"><span class="language-name">Deutsch</span>
+        <span class="language-abbreviation">de</span></a>
+    </li></ul>
+</div>
+
+
+
+</li>
+
+
+
+    <li class="nav-link contrast contrast-high contrast-type-single">
+        <a title=""
+           aria-label=""
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
+</ul>
+
+    </nav>
+  </div>
+
 </header>
 <div id="top" tabindex=-1></div>
 
@@ -260,241 +385,205 @@ data-event-label="high"
 
 
 
+<div class="heading  goal-banner goal-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/6.png" alt="Clean water and sanitation - Goal 6" id="goal-6" class="goal-icon-image goal-icon-image-" />
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10 goal-6">
+        <h1>
+          <span class="hidden-sm hidden-md hidden-lg titles goal-6">Goal 6: </span>
+          <span class="hidden-xs titles goal-6"> Ensure availability and sustainable management of water and sanitation for all </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="underline goal-6">-->
+</div>
+
+
 <div class="container">
-  <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item" >
-            <a href="/dns-indicators/en/">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Goal 6</li>
-        
-    </ol>
-</nav>
+  <ol class="breadcrumb">
+  
+  <li><a href="/dns-indicators/en/">Home</a></li>
+  <li class="active">Goal 6</li>
+  
+</ol>
+
   
 </div>
 
-<div class="heading goal-banner goal-6">
-    <div class="container">
-        <div class="row">
-            <div class="col-4 col-md-3 col-lg-2 goal-tiles">
-                <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/6.png" alt="Clean water and sanitation - Goal 6" id="goal-6" class="goal-icon-image goal-icon-image-" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-                <h1>Ensure availability and sustainable management of water and sanitation for all</h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container goal-indicators goal-6 goal-by-target" role="main">
 
   
 
 
 
-  <div class="container g-0">
-    <h2 class="goal-page-heading"></h2>
+  
 
-    
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 6.1</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">global_targets.6-1-title</span>
-          </div>
-      </div>
-        
+  <div class="col-xs-3 col-md-3 col-lg-4">
+    <a href="/dns-indicators//5" class="btn btn-primary btn-block goal-6 navigation-btn" role="button">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous goal</b>
+    </a>
+  </div>
 
-          
-          
-          
-          
+  <div class="col-xs-6 col-md-6 col-lg-4">
+    <a href="https://sustainabledevelopment-deutschland.github.io//6" class="btn btn-primary btn-block goal-6 navigation-btn" title="" role="button">
+      <b class="btn-label hidden-sm hidden-xs">National indicators on Goal 6 </b><b class="btn-label visible-sm visible-xs">Goal 6 - National</b>
+    </a>
+  </div>
 
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 6.1.a</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/dns-indicators/en/6-1-a">Phosphorous in flowing waters</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported online</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 6.1.b</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/dns-indicators/en/6-1-b">Nitrate in groundwater</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported online</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-      
-      <div class="row align-items-start goal-target">
-          <div class="col-auto goal-page-target-number">
-            <h3 class="goal-target">
-              <span class="target-number"><span class="visually-hidden">Target</span> 6.2</span>
-            </h3>
-          </div>
-          <div class="col goal-page-target-name">
-            <span class="target-name">global_targets.6-2-title</span>
-          </div>
-      </div>
-        
-
-          
-          
-          
-          
-
-          <div class="row align-items-start goal-indicator">
-          
-            <div class="col-auto goal-page-indicator-number">
-              <h4>
-                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 6.2.ab</span>
-              </h4>
-            </div>
-            <div class="col goal-page-indicator-name">
-              
-              <span class="indicator-name"><a href="/dns-indicators/en/6-2-ab">Development cooperation for drinking water and sanitation</a></span>
-              
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported online</span>
-</span>
-
-
-        </li></ul>
-
-
-            </div>
-            
-            
-          </div>
-        
-        <hr class="goal-page-target-rule" />
-    
-    </div>
+  <div class="col-xs-3 col-md-3 col-lg-4">
+    <a href="/dns-indicators//7" class="btn btn-primary btn-block goal-6 navigation-btn" role="button">
+      <b class="btn-label hidden-sm hidden-xs">Next goal</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </a>
   </div>
 
 
 
-<footer role="contentinfo">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div id="footerLinks">
-                    <ul>
-                        <li>
-                            <a href="https://open-sdg.org">Built using Open SDG</a>
-                        </li>
-                        
-                        <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
-                            
-                        </li>
-                        <li>
-                            <a href="/dns-indicators/en/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                            
-                        </li>
-                        <li>
-                            <a href="/dns-indicators/en/imprint/">Legal Notice</a>
-                            
-                        </li>
-                        
-                        
-                        </ul>
-                </div>
-            </div>
-        </div>
-        
+  <div class="visible-md-block visible-lg-block">
+    <div class="col-md-6">
+      <h2>Range of indicators and postulates</h2>
     </div>
+    <div class="col-md-6">
+      <h2>Indicators</h2>
+    </div>
+  </div>
+
+  
+  <div class="indicator-cards target goal-target col-md-6">
+      <span class="indicator-card-number">
+        <label class="hidden-md hidden-lg"></label>
+        Water quality
+      </span>
+      Reducing the pollution of water with substances
+    </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
+    
+
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        
+        <span class="indicator-card-number">
+          6.1.a
+        </span>
+        <a href="/dns-indicators/en/6-1-a">
+          Phosphorous in flowing waters
+        </a>
+        
+
+
+
+
+
+        
+      </div>
+    
+
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        
+        <span class="indicator-card-number">
+          6.1.b
+        </span>
+        <a href="/dns-indicators/en/6-1-b">
+          Nitrate in groundwater
+        </a>
+        
+
+
+
+
+
+        
+      </div>
+    
+    </div>
+  <div class="indicator-cards target goal-target col-md-6">
+      <span class="indicator-card-number">
+        <label class="hidden-md hidden-lg"></label>
+        Drinking water and sanitation
+      </span>
+      Better access to drinking water and sanitation worldwide, higher (safer) quality sanitation worldwide, higher (safer) quality
+    </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
+    
+
+      
+      
+      
+
+      <div class="col-md-12  goal-indicator">
+        
+        <span class="indicator-card-number">
+          6.2.a, b
+        </span>
+        <a href="/dns-indicators/en/6-2-ab">
+          Development cooperation for drinking water and sanitation
+        </a>
+        
+
+
+
+
+
+        
+      </div>
+    
+    </div>
+  
+</div>
+
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="footerLinks">
+          <ul>
+            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
+            
+              <li>
+                
+                  <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                
+                </li>
+              <li>
+                <a href="/dns-indicators/en/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                
+                </li>
+              <li>
+                <a href="/dns-indicators/en/imprint/">Legal Notice</a>
+                
+                </li>
+              
+            
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -515,12 +604,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220615085446'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220615090601'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220615085446"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220615090601"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
