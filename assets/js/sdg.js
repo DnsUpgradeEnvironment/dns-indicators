@@ -3578,6 +3578,19 @@ function generateChartLegend(chart) {
             content: translations.indicator.annotation_series_break,
         },
     },
+    error_bar: {
+        mode: 'vertical',
+        borderDash: [2, 2],
+        borderColor: 'blue',
+        xMin: 0,
+        xMax: 0,
+        yMin: 15000,
+        yMax: 25000,
+        label: {
+            position: 'top',
+            content: translations.indicator.annotation_series_break,
+        },
+    },
 };
 
 opensdg.chartTypes = opensdg.chartTypes || {};
