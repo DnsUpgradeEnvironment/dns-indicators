@@ -3516,6 +3516,7 @@ function generateChartLegend(chart) {
     common: {
         // This "common" preset is applied to all annotations automatically.
         borderColor: '#949494',
+        drawTime: 'afterDraw',
         type: 'line',
         borderDash: [10, 5],
         borderWidth: 1,
