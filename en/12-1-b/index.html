@@ -134,11 +134,12 @@ var translations = {
 
         
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220615023141">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220615075707">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -153,7 +154,7 @@ var translations = {
 
     </head>
 <body class="language-en
-layout-indicator
+layout-indicator-bootstrap5
 ">
 <!-- <div class="container"> -->
 
@@ -161,9 +162,9 @@ layout-indicator
 
 <script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  
+    
 <div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
@@ -175,214 +176,88 @@ layout-indicator
 
 </div>
 
-<header role="banner" class="header-default">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/dns-indicators/en/" id="home">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/dns-indicators/en/" id="home">
     <img src="/dns-indicators/assets/img/en/dns_logo.png" alt="To main menu" />
 </a>
 
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-de">
-            <a href="/dns-indicators/12-1-b/">
-              Deutsch
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/dns-indicators/en/">17 Goals</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/status_summary/">Summary</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/status/">Methodology</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_publications/">Publications</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/12-1-b/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
-</div>
-
-
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Search</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/dns-indicators/en/search/">
-    <label class="sr-only" for="indicator_search-mobile">Search</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
-    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <div id="search" class="menu-target">
-  <form action="/dns-indicators/en/search/">
-    <label class="sr-only" for="indicator_search">Search</label>
-    <input type="text" name="q" id="indicator_search" title="Search" /><!--
-    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/">17 Goals</a>
-</li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/">17 Goals</a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-status-title" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Evaluation
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/status_summary/">Summary</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/status/">Methodology</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-status-title"><li class=" ">
+    <a class="dropdown-item" href="/dns-indicators/en/status_summary/">Summary</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/dns-indicators/en/status/">Methodology</a>
 </li></ul>
-            </div>
-        </li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     About
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
+    <a class="dropdown-item" href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
 </li></ul>
-            </div>
-        </li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Useful information
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_publications/">Publications</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
+    <a class="dropdown-item" href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/dns-indicators/en/facts_publications/">Publications</a>
 </li></ul>
-            </div>
-        </li><li class="nav-link ">
-    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="language-toggle-menu-header">
+            </li><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li></ul>
     
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/dns-indicators/en/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
 
 
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/12-1-b/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/dns-indicators/12-1-b/">
+                Deutsch
+            </a>
+        </li></ul>
 </div>
 
-
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+<a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </nav>
-  </div>
-
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
 
@@ -473,70 +348,51 @@ data-event-label="high"
 <script>translations['data'] = {"0- to 2-year-olds":"0- to 2-year-olds","1 000":"1 000","1 000 eur":"1 000 €","1990 = 100":"1990 = 100","20 - 64 years":"20 to 64 years","2000 = 100":"2000 = 100","2005 = 100":"2005 = 100","2008 = 100":"2008 = 100","2015 = 100":"2015 = 100","2030 = 100":"2030 = 100","3- to 5-year-olds":"3- to 5-year-olds","60 - 64 years":"60 to 64 years","Bundesland":"Region","Series":"Time series","Year":"Year","a) 3- to 10-year-olds":"3- to 10-year-olds","a) criminal offences (overall)":"Criminal offences (overall)","a) drinking water and sanitation":"Drinking water and sanitation","a) final energy productivity":"Final energy productivity","a) germany (total)":"Germany","a) materially deprived persons":"Materially deprived persons","a) moving five-year average, referring to the middle year":"Moving five-year average, referring to the middle year","a) overweight":"Overweight without obese","a) pandemic prevention and reaction":"Pandemic prevention and reaction","a) rural and non-rural areas":"Rural and non-rural areas","a) sub-index forests":"Sub-index forests","a) time series":"Time series","a) total":"Total","a) total (moving four-year average)":"Total (moving four-year average)","adolescents (12 to 17 years)":"Adolescents (12 to 17 years)","adults (15 years and older)":"Adults (15 years and older)","age":"Age group","air pollutants":"Air pollutants","air pollutants overall":"Air pollutants overall","all line-based technologies":"All line-based technologies","area":"Area","b) 11- to 17-year-olds":"11- to 17-year-olds","b) calculated annual values":"Calculated annual values","b) containment of the covid-19 pandemic":"containment of the covid-19 pandemic","b) drinking water":"Drinking water","b) obese":"Obese","b) primary energy consumption":"Primary energy consumption","b) severely materially deprived persons":"Serverely materially deprived persons","b) students from other developing and emerging countries":"Students from other developing and emerging countries","b) sub-index settlements":"Sub-index settlements","b) target":"Target","b) target (max)":"Target","b) target (min)":"Target","baltic sea":"Baltic sea","bb":"Brandenburg","be":"Berlin","bn eur":"Bn EUR","bundesland":"Region","burglary in homes":"Burglary in homes","bw":"Baden-Wuerttemberg","by":"Bavaria","c) researchers from other developing and emerging countries":"Researchers from other developing and emerging countries","c) sanitation":"Sanitation","c) sub-index farmland":"Sub-index farmland","c) total":"Total","cable television (catv)":"Cable television (CATV)","calculation as net expenditure":"Calculation as net expenditure","calculation in grant equivalents":"Calculation in grant equivalents","civil service":"civil service","co2 emissions per mileage of motor vehicles of the public sector":"CO<sub>2</sub> emissions per mileage of motor vehicles of the public sector","consumption, investments and exports (price-adjusted)":"Consumption, investments and exports (price-adjusted)","criminal offences":"Criminal offences","d) students from ldcs":"Students from LDCs","d) sub-index inland waters":"Sub-index inland waters","data from bmel":"Data from BMEL","data from destatis":"Data from Destatis","dimension":"Time series","direct and indirect co2 emissions":"Direct and indirect CO2 emissions","direct and indirect energy consumption":"Direct and indirect energy consumption","direct and indirect raw material consumption":"Direct and indirect raw material consumption","display":"Display","e) researchers from ldcs":"Researchers from LDCs","e) sub-index coasts/seas":"Sub-index coasts/seas","economy":"Economy","emas organisational locations":"EMAS organisational locations","emas organisations":"EMAS organisations","employees in thousands":"Employees in thousands","eu-28":"EU-28","euro zone":"Euro zone","f) index overall":"Index overall","female":"Female","final energy consumption for the carriage of goods":"Final energy consumption for the carriage of goods","final energy consumption in passenger transport":"Final energy consumption in passenger transport","final energy consumption per passenger-kilometre":"Final energy consumption per passenger-kilometre","final energy consumption per tonne-kilometre":"Final energy consumption per tonne-kilometre","foreign school graduates":"Foreign school graduates","fraud":"Fraud","funding balance (share of gross domestic product (at current prices) in %)":"Funding balance (share of gross domestic product (at current prices))","german school graduates (share of all german leavers)":"German school graduates (share of all german leavers)","germany":"Germany","gini coefficient of equivalised disposable income":"Gini coefficient of equivalised disposable income","gini coefficient of equivalised income before social transfers":"Gini coefficient of equivalised income before social transfers","gini coefficient of market income":"Gini coefficient of market income","gini coefficient of wealth":"Gini coefficient of wealth","goods transport performance":"Goods transport performance","gross domestic produkt (price-adjusted) (year-on-year changes in %)":"Gross domestic produkt (price-adjusted) (year-on-year changes)","ha/d":"hectares per day","hb":"Bremen","he":"Hesse","hh":"Hamburg","imports from ldcs":"Imports from LDCs","imports of processed products from ldcs":"Imports of processed products from LDCs","in % of households":"in % of households","in relation to the middle and upper centers of the respective year":"In relation to the middle and upper centers of the respective year","in relation to the middle and upper centers of the year 2012":"In relation to the middle and upper centers of the year 2012","index/number":" ","kg/ha":"Kilograms per hectare","living space, industrial and commercial space (without mining land), public facilities":null,"m2/(inhabitant*a)":"Squaremeters per year","male":"Male","male and female":"Both sexes","men":"Men","mg/l":"Milligrams per litre","min.":"Minutes","mio.":"Millions","mio. eur":"Millions of euros","mv":"Mecklenburg Western Pomerania","nh3":"NH<sub>3</sub>","ni":"Lower Saxony","nmvoc":"NMVOC","non-rural areas":"Non-rural areas","north sea":"North sea","nox":"NO<sub>x</sub>","number":"Number","number of partner countries of german development cooperation whose rating has improved compared with 2012":"Number of partner countries of german development cooperation whose rating has improved compared with 2012","nw":"North Rhine-Westphalia","objects with digitalisat":"objects with digitalisat","other criminal offences":"Other criminal offences","partnership for sustainable textiles":"Partnership for sustainable textiles","passenger transport performance":"Passenger transport performance","per 100 000 inhabitants":"Per 100 000 inhabitants","percentage (%)":"Percentage","pm2.5":"PM<sub>2.5</sub>","proportion of msy examined in all managed stocks":"Proportion of MSY examined in all managed stocks","proportion of sustainable managed stocks in all msy examined stocks":"Proportion of sustainable managed stocks in all MSY examined stocks","pure fiber optic networks (fttb/h)":"Pure fiber optic networks (FTTB/H)","rating for germany":"Rating for germany","raw material input productivity":"Raw material input productivity","raw material use for consumption, investments and exports":"Raw material use for consumption, investments and exports","recycled paper bearing the blue angel label as a proportion of the total paper consumption of the federal administration":"Recycled paper bearing the blue angel label as a proportion of the total paper consumption of the federal administration","redd+":"REDD+","rp":"Rhineland Palatinate","rural areas":"Rural areas","sea":"Sea","serious and grievous bodily harm":"Serious and grievous bodily harm","sex":"Sex","sh":"Schleswig-Holstein","sl":"Saarland","sn":"Saxony","so2":"SO<sub>2</sub>","soil conservation":"Soil conservation","sports, leisure and recreation area, graveyard":"Sports, leisure and recreation area, graveyard","st":"Saxony-Anhalt","structural funding balance (share of gross domestic product (at current prices) in %)":"Structural funding balance (share of gross domestic product (at current prices))","tertiary education":"Tertiary education","tertiary or post-secondary non-tertiary education":"Total","th":"Thuringia","timeseries":"Time series","title":"Time series","total":"Total","total objects":"Total objects","total official development assistance regarding food security":"Total official development assistance regarding food security","transport area":"Transport area","typification":"Typification","unit":"Unit","women":"Women","year":"Year"};</script>
 
 
-<div class="heading goal-banner indicator goal-12">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/dns-indicators/en/12" title="View this goal's indicator list">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png" alt="Responsible consumption and production - Goal 12" id="goal-12" class="goal-icon-image goal-icon-image-"/>
-        </a>
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1>
-            
-              <h1 class="titles goal-12" title="Section: Responsible consumption">
-                Responsible consumption – <i title="Postulate: Making consumption environmentally and socially compatible">Konsum umwelt- und sozialverträglich gestalten</i>
-              </h1>
-              <h2 class="titles goal-12">Indicator 12.1.b: Energy consumption and CO<sub>2</sub> emissions from consumption</h2>
-            
-            <!--<span class="lead-copy">Energy consumption and CO<sub>2</sub> emissions from consumption</span>-->
-          </h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <div class="container">
   
-<ol class="breadcrumb">
-  
-  <li><a href="/dns-indicators/en/">Home</a></li>
-  <li><a href="/dns-indicators/en/12" title="Ensure sustainable consumption and production patterns">Goal 12</a></li>
-  <li class="active">Indicator 12.1.b</li>
-  
-</ol>
+<nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item">
+            <a href="/dns-indicators/en/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/dns-indicators/en/12" title="Ensure sustainable consumption and production patterns">Goal 12</a>
+        </li>
+        <li class="breadcrumb-item active">Indicator 12.1.b</li>
+        
+    </ol>
+</nav>
 
-
-  
-<!---
-
--->
-<!---Indicator page-->
-<!---3 Btns if there is a corresponding Indicator-->
-
-  
-    <div class="col-xs-6 col-md-6 col-lg-6">
-      <a href="/dns-indicators/en/12-1-a" class="btn btn-primary btn-block goal-12 navigation-btn" role="button">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous indicator </b>
-      </a>
-    </div>
-
-    <div class="col-xs-6 col-md-6 col-lg-6">
-      <a href="/dns-indicators/en/12-2-a" class="btn btn-primary btn-block goal-12 navigation-btn" role="button">
-        <b class="btn-label hidden-sm hidden-xs">Next indicator </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  
-<!--#8 addNavigationButtons---stop-------------------------------------->
 
   
 </div>
-
+<div class="heading goal-banner indicator goal-12">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/dns-indicators/en/12" title="View this goal's indicator list">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png"
+                        alt="Responsible consumption and production - Goal 12"
+                        id="goal-12"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+            
+                <div>
+                    <h1>
+                        
+                        Indicator 12.1.b
+                        
+                        <span class="lead-copy">Energy consumption and CO<sub>2</sub> emissions from consumption</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="main-content" class="container goal-12" role="main">
   
 
@@ -597,7 +453,6 @@ data-event-label="high"
   data-country="Germany"
   data-charttitle="Energy consumption and CO<sub>2</sub> emissions by households"
   data-charttitles="null"
-  data-chartsubtitle=""
   data-measurementunit="2005=100"
   data-xaxislabel=""
   data-showdata="true"
@@ -608,8 +463,6 @@ data-event-label="high"
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Direct and indirect raw material consumption&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Direct and indirect energy consumption&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Direct and indirect CO2 emissions&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
   data-graphannotations="null"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
@@ -617,10 +470,9 @@ data-event-label="high"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;2010 = 100&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;title&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Direct and indirect raw material consumption&quot;,&quot;Direct and indirect energy consumption&quot;,&quot;Direct and indirect CO2 emissions&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
-  data-graphstepsize="null"
 >
   
-  <span role="status" class="sr-only" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -681,97 +533,94 @@ data-event-label="high"
 
   <p class="async-loading" data-img="/dns-indicators/assets/img/loading-small.gif"></p>
 
-  <div class="async-loaded spacer medium" style="display:none;">
+  <div class="async-loaded mt-4" style="display:none;">
 
     <div style="display: none;">
-  <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-      active
-    ">
-    <a
-      class="nav-link"
-      data-toggle="tab"
-      role="tab"
-      
-        id="tab-chartview"
-        href="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+    <span id="table-alternative"></span>
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></a>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-      
-    ">
-    <a
-      class="nav-link"
-      data-toggle="tab"
-      role="tab"
-      
-        id="tab-tableview"
-        href="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></a>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      map
-      
-      
-    ">
-    <a
-      class="nav-link"
-      data-toggle="tab"
-      role="tab"
-      
-        id="tab-mapview"
-        href="#mapview"
-        aria-controls="mapview"
-        data-no-disagg="true"
-        data-on="click"
+        
+      >Table</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        map
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-mapview"
+          data-bs-target="#mapview"
+          aria-controls="mapview"
+          data-no-disagg="true"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Map tab"
 
-        ><i class="fa fa-map" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Map</span></a>
-  </li>
-  
-</ul>
-
-    <div class="tab-content data-view">
-  
-    
-      <div role="tabpanel" class="tab-pane active" id="chartview">
         
+      >Map</button>
+    </li>
+    
+  </ul>
+  
+    <div class="tab-content data-view">
+    
+      
+        <div role="tabpanel" class="tab-pane active" id="chartview">
+          
 
     <div id="dataset-size-warning" style="display:none" role="alert">
       <i class="fa fa-bolt"><span class="sr-only"></span></i>
@@ -789,290 +638,12 @@ data-event-label="Change to Map tab"
           <h5 class="chart-subtitle">2005=100</h5>
           <div id="chart" class="plot-container">
             
-              
-<canvas
+              <canvas
     role="img"
     aria-labelledby="chart-heading"
     aria-describedby="table-alternative chart-annotations"
     tabindex="0"
  ></canvas>
-
-<script>
-// Add a chart alteration to support the chart_graph_limits metadata field.
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphLimits && Object.keys(info.graphLimits).length > 0) {
-    var overrides = {
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              min: info.graphLimits.minimum,
-              max: info.graphLimits.maximum,
-            }
-          }]
-        }
-      }
-    }
-    // Add these overrides onto the normal config.
-    $.extend(true, config, overrides);
-  }
-  else {
-    // Otherwise remove any min/max that may be there.
-    try {
-      delete config.options.scales.yAxes[0].ticks.min;
-      delete config.options.scales.yAxes[0].ticks.max;
-    }
-    catch(e) {}
-  }
-});
-</script>
-
-<span style="display: none;" id="chart-annotations" role="status"></span>
-<script>
-opensdg.annotationPresets = {
-    common: {
-        // This "common" preset is applied to all annotations automatically.
-        borderColor: '#949494',
-        type: 'line',
-        borderDash: [10, 5],
-        borderWidth: 1,
-        label: {
-            backgroundColor: 'white',
-            
-            fontColor: 'black',
-            
-        },
-        // This "highContrast" overrides colors when in high-contrast mode.
-        highContrast: {
-            label: {
-                backgroundColor: 'black',
-                
-                fontColor: 'white',
-                
-            },
-        },
-        // This callback is used to generate a generic description for screenreaders.
-        // This can be overridden to be a more specific string, eg:
-        //
-        //     description: 'Chart annotation showing a 2030 target of 15%'
-        //
-        description: function() {
-            var descriptionParts = [translations.indicator.chart_annotation];
-            if (this.label && this.label.content) {
-                descriptionParts.push(translations.t(this.label.content));
-            }
-            else {
-                // If there is no label, just specify whether it is a box or line.
-                if (this.type == 'line') {
-                    descriptionParts.push(this.mode + ' line');
-                }
-                if (this.type == 'box') {
-                    descriptionParts.push('box');
-                }
-            }
-            if (typeof this.value !== 'undefined') {
-                descriptionParts.push(this.value);
-            }
-            return descriptionParts.join(': ');
-        },
-    },
-    target_line: {
-        mode: 'horizontal',
-        borderWidth: 2,
-        borderDash: [15, 10],
-        borderColor: '#757575',
-        label: {
-            position: 'right',
-            content: translations.indicator.annotation_2030_target,
-        },
-    },
-    series_break: {
-        mode: 'vertical',
-        borderDash: [2, 2],
-        label: {
-            position: 'top',
-            content: translations.indicator.annotation_series_break,
-        },
-    },
-};
-
-// Add a chart alteration to support the chart_annotations metadata field.
-opensdg.chartConfigAlter(function(config, info) {
-    if (info.graphAnnotations && info.graphAnnotations.length > 0) {
-        // Apply some helpers/fixes to the annotations.
-        var annotations = info.graphAnnotations.map(function(annotationOverrides) {
-            var annotation = {};
-            // Apply the "common" preset.
-            if (opensdg.annotationPresets.common) {
-                $.extend(true, annotation, opensdg.annotationPresets.common);
-            }
-            // Apply any specified presets.
-            if (annotationOverrides.preset) {
-                var preset = annotationOverrides.preset;
-                if (opensdg.annotationPresets[preset]) {
-                    $.extend(true, annotation, opensdg.annotationPresets[preset]);
-                }
-            }
-            // Now add any more annotation config.
-            $.extend(true, annotation, annotationOverrides);
-            // Default to horizontal lines.
-            if (!annotation.mode && annotation.type === 'line') {
-                annotation.mode = 'horizontal';
-            }
-            // Provide the obscure scaleID properties on user's behalf.
-            if (!annotation.scaleID && annotation.type === 'line') {
-                if (annotation.mode === 'horizontal') {
-                    annotation.scaleID = 'y-axis-0';
-                }
-                if (annotation.mode === 'vertical') {
-                    annotation.scaleID = 'x-axis-0';
-                }
-            }
-            if (!annotation.xScaleID && annotation.type === 'box') {
-                annotation.xScaleID = 'x-axis-0';
-            }
-            if (!annotation.yScaleID && annotation.type === 'box') {
-                annotation.yScaleID = 'y-axis-0';
-            }
-            // Provide the "enabled" label property on the user's behalf.
-            if (annotation.label && annotation.label.content) {
-                annotation.label.enabled = true;
-            }
-            // Translate any label content.
-            if (annotation.label && annotation.label.content) {
-                annotation.label.content = translations.t(annotation.label.content);
-            }
-            // Save some original values for later used when contrast mode is switched.
-            if (typeof annotation.defaultContrast === 'undefined') {
-                annotation.defaultContrast = {};
-                if (annotation.borderColor) {
-                    annotation.defaultContrast.borderColor = annotation.borderColor;
-                }
-                if (annotation.backgroundColor) {
-                    annotation.defaultContrast.backgroundColor = annotation.backgroundColor;
-                }
-                if (annotation.label) {
-                    annotation.defaultContrast.label = {};
-                    if (annotation.label.fontColor) {
-                        annotation.defaultContrast.label.fontColor = annotation.label.fontColor;
-                    }
-                    if (annotation.label.backgroundColor) {
-                        annotation.defaultContrast.label.backgroundColor = annotation.label.backgroundColor;
-                    }
-                }
-            }
-            return annotation;
-        });
-        if (annotations.length > 0) {
-            var overrides = {
-                options: {
-                    annotation: {
-                        drawTime: 'beforeDatasetsDraw',
-                        annotations: annotations
-                    }
-                }
-            };
-            // Add these overrides onto the normal config.
-            $.extend(true, config, overrides);
-
-            // Update the chart annotations element.
-            var descriptions = annotations.map(function(annotation) {
-                var description = '';
-                if (annotation.description) {
-                    if (typeof annotation.description === 'function') {
-                        description = annotation.description.call(annotation);
-                    }
-                    else {
-                        description = translations.t(annotation.description);
-                    }
-                }
-                return description;
-            }).filter(function(description) { return description != ''; });
-
-            var currentDescription = $('#chart-annotations').text();
-            var newDescription = descriptions.join('. ');
-            if (currentDescription != newDescription) {
-                $('#chart-annotations').text(newDescription);
-            }
-        }
-    }
-    else if (config.options && config.options.annotation) {
-        delete config.options.annotation;
-    }
-});
-</script>
-
-<script>
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
-    var overrides = {
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              stepSize: info.graphStepsize.step,
-            }
-          }]
-        }
-      }
-    }
-    // Add these overrides onto the normal config.
-    $.extend(true, config, overrides);
-  }
-});
-</script>
-
-
-<script>
-// For line charts, add the vertical line hover functionality.
-opensdg.chartConfigAlter(function(config, info) {
-    var overrides = {
-        options: {
-            tooltips: {
-                intersect: false,
-                axis: 'x',
-            },
-        },
-        plugins: [{
-            beforeDatasetsDraw: function(chart) {
-                if (chart.tooltip._active && chart.tooltip._active.length) {
-                    var activePoint = chart.tooltip._active[0],
-                        ctx = chart.ctx,
-                        x = activePoint.tooltipPosition().x,
-                        topY = chart.scales['y-axis-0'].top,
-                        bottomY = chart.scales['y-axis-0'].bottom;
-
-                    // draw line
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.moveTo(x, topY);
-                    ctx.lineTo(x, bottomY);
-                    ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#757575';
-                    ctx.stroke();
-                    ctx.restore();
-                }
-            },
-            subtitle: {
-              display: true,
-              text: 'Chart Subtitle',
-              color: 'blue',
-              font: {
-                size: 12,
-                family: 'tahoma',
-                weight: 'normal',
-                style: 'italic'
-              },
-              padding: {
-                bottom: 10
-              }
-            }
-        }],
-    };
-    // Add these overrides onto the normal config, and return it.
-    $.extend(true, config, overrides);
-});
-</script>
 
             
           </div>
@@ -1151,15 +722,15 @@ opensdg.chartConfigAlter(function(config, info) {
 
 
 
-      </div>
-    
-  
-    
-      <div role="tabpanel" class="tab-pane " id="tableview">
-        <div style="display: none;">
-          <span id="column-sort-info"></span>
         </div>
-        <div id="selectionsTable"></div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="tableview">
+          <div style="display: none;">
+            <span id="column-sort-info"></span>
+          </div>
+          <div id="selectionsTable"></div>
 <dl id="tableTargetLines" class="clearfix"></dl>
 
 
@@ -1226,12 +797,12 @@ opensdg.chartConfigAlter(function(config, info) {
 
 <div id="tableSelectionDownload" class="clearfix"></div>
 
-      </div>
+        </div>
+      
     
-  
-    
-      <div role="tabpanel" class="tab-pane " id="mapview" class="map">
-        
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
 <h4 id="map-heading" class="chart-title">Energy consumption and CO<sub>2</sub> emissions by households</h4>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
@@ -1300,108 +871,125 @@ opensdg.chartConfigAlter(function(config, info) {
 </div>
 
 
-      </div>
+        </div>
+      
     
+  </div>
   
-</div>
-
 
   </div>
 
 </section>
 
   
-  <ul class="nav nav-tabs spacer medium" role="tablist">
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+  <div class="mt-4">
+<ul class="nav nav-tabs" role="tablist">
+    
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link active"
+                data-bs-toggle="tab"
+                id="tab-national"
+                data-bs-target="#national"
+                aria-controls="national"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.details tab"
->Details</a>
-  </li>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item ">
-    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
+            >Details</button>
+        </li>
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link "
+                data-bs-toggle="tab"
+                id="tab-content"
+                data-bs-target="#content"
+                aria-controls="content"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.contentAndProgress tab"
->Content and progress</a>
-  </li>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item ">
-    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
+            >Content and progress</button>
+        </li>
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link "
+                data-bs-toggle="tab"
+                id="tab-history_1"
+                data-bs-target="#history_1"
+                aria-controls="history_1"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.history tab"
->Indicator status summary</a>
-  </li>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item ">
-    <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+            >Indicator status summary</button>
+        </li>
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link "
+                data-bs-toggle="tab"
+                id="tab-sources"
+                data-bs-target="#sources"
+                aria-controls="sources"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.sources tab"
->Sources</a>
-  </li>
 
-
-  
-  <li role="presentation" class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Edit</a>
-  </li>
-  
+            >Sources</button>
+        </li>
+    
+    
+    
+        <li role="presentation" class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab">Edit</a>
+        </li>
+    
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, i.e. a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, i.e. a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-        <table class="table">
+                <table class="table">
   
   
   
@@ -2404,21 +1992,17 @@ data-event-label="Change to indicator.sources tab"
   
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
-        <table class="table">
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table">
   
   
   
@@ -3236,42 +2820,827 @@ data-event-label="Change to indicator.sources tab"
   
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="history_1">
-      <article>
-        <p>The synoptic table provides information about the evaluation of the indicator for Germany in previous years. It shows if the weather symbol assigned to an indicator was rather stable or volatile in the past years. <i>(Evaluation of the indicator report 2018)</i></p>
-
-        <!-- Count the non-empty histories (up to 2) -->
-
-
-
-
-
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="history_1">
+            <article>
+                <p>The synoptic table provides information about the evaluation of the indicator for Germany in previous years. It shows if the weather symbol assigned to an indicator was rather stable or volatile in the past years. <i>(Evaluation of the indicator report 2018)</i></p>
+
+                <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+            </article>
+        </div>
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -4168,13 +4537,13 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
-  <div role="tabpanel" class="tab-pane" id="edit">
-    <div class="edit-container">
+    
+        <div role="tabpanel" class="tab-pane" id="edit">
+            <div class="edit-container">
   
   
 
@@ -4193,11 +4562,11 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
-  </div>
+        </div>
+    
+</div>
   
 </div>
-
-
   </div>
 </div>
 
@@ -4205,46 +4574,48 @@ data-event-label="Change to indicator.sources tab"
 
 
 <footer role="contentinfo">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
-            
-              <li>
-                
-                  <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
-                
-                </li>
-              <li>
-                <a href="/dns-indicators/en/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                
-                </li>
-              <li>
-                <a href="/dns-indicators/en/imprint/">Legal Notice</a>
-                
-                </li>
-              
-            
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            
+                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/dns-indicators/en/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            <a href="/dns-indicators/en/imprint/">Legal Notice</a>
+                            
+                        </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
         </div>
-      </div>
+        
     </div>
-    
-  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -4274,12 +4645,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220615023141'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220615075707'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220615023141"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220615075707"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
