@@ -41,10 +41,6 @@ var opensdg = {
   language: 'en',
 };
 
-// For backwards compatibility, some of these might need to be global.
-// @TODO: Remove these eventually.
-var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
-
 </script>
 
         <script>
@@ -123,22 +119,18 @@ var translations = {
         <script src="/dns-indicators/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        
-
-
-
-
-<link rel="shortcut icon" type="image/ico" href="/dns-indicators/assets/img/favicons/favicon.ico">
-<link rel="icon" type="image/png" href="/dns-indicators/assets/img/favicons/favicon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/dns-indicators/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dns-indicators/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dns-indicators/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/dns-indicators/assets/img/favicons/favicon.ico" />
 
 
         
-        
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220622023351">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220622145427">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -157,13 +149,11 @@ layout-indicator
 ">
 <!-- <div class="container"> -->
 
-
-
 <script>translations['header'] = {"alpha":"Alpha","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  
+    
 <div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
@@ -175,145 +165,30 @@ layout-indicator
 
 </div>
 
-<header role="banner" class="header-default">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/dns-indicators/en/" id="home">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/dns-indicators/en/" id="home">
     <img src="/dns-indicators/assets/img/en/dns_logo.png" alt="To main menu" />
 </a>
 
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-de">
-            <a href="/dns-indicators/9-1-b/">
-              Deutsch
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/dns-indicators/en/">17 Goals</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/status_summary/">Summary</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/status/">Methodology</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_publications/">Publications</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/9-1-b/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
-</div>
-
-
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Search</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/dns-indicators/en/search/">
-    <label class="sr-only" for="indicator_search-mobile">Search</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
-    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <div id="search" class="menu-target">
-  <form action="/dns-indicators/en/search/">
-    <label class="sr-only" for="indicator_search">Search</label>
-    <input type="text" name="q" id="indicator_search" title="Search" /><!--
-    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/">17 Goals</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/">17 Goals</a>
 </li><li class="nav-link">
             <div class="btn-group menu-dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Evaluation
                     <i class="fa fa-chevron-down"></i>
                 </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/status_summary/">Summary</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/status/">Methodology</a>
+                <ul class="dropdown-menu"><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/status_summary/">Summary</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/status/">Methodology</a>
 </li></ul>
             </div>
         </li><li class="nav-link">
@@ -322,10 +197,10 @@ data-event-label="high"
                     About
                     <i class="fa fa-chevron-down"></i>
                 </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
+                <ul class="dropdown-menu"><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/about/">DNS&nbsponline&nbspplatform</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/guidance/">Technical&nbspinstructions</a>
 </li></ul>
             </div>
         </li><li class="nav-link">
@@ -334,14 +209,14 @@ data-event-label="high"
                     Useful information
                     <i class="fa fa-chevron-down"></i>
                 </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/dns-indicators/en/facts_publications/">Publications</a>
+                <ul class="dropdown-menu"><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/facts_agenda/">DNS&nbsponline&nbspplatform</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/facts_publications/">Publications</a>
 </li></ul>
             </div>
-        </li><li class="nav-link ">
-    <a href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
+        </li><li class="nav-item ">
+    <a class="nav-link" href="/dns-indicators/en/menu.pathToSdg"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/SDG Wheel_Transparent.png" title="Click here to get to the SDG indicators page" alt="Link SDG" style="width:24px;height:24px;"/></a>
 </li><li class="language-toggle-menu-header">
     
 
@@ -349,44 +224,77 @@ data-event-label="high"
 
 
 
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/dns-indicators/9-1-b/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/dns-indicators/9-1-b/">
+                Deutsch
+            </a>
+        </li></ul>
 </div>
-
 
 
 </li>
 
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+<a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
+>A</a>
 
 </ul>
 
-    </nav>
-  </div>
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/dns-indicators/en/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
 
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/dns-indicators/9-1-b/">
+                Deutsch
+            </a>
+        </li></ul>
+</div>
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/dns-indicators/9-1-b/">
+                Deutsch
+            </a>
+        </li></ul>
+</div></span><a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
-
-
 
 
 
@@ -395,9 +303,6 @@ data-event-label="high"
     <div class="variable-selector
       <% if(allowedFields.indexOf(fieldItem.field) == -1) { %> disallowed <% }%>
       <% if (typeof childFields !== 'undefined' && childFields.indexOf(fieldItem.field) !== -1) { %> child <% }%>
-      <% // @deprecated start %>
-      <% if (typeof childFields === 'undefined' && allowedFields.indexOf(fieldItem.field) == -1) { %> child <% }%>
-      <% // @deprecated end %>
       "
       data-field="<%=fieldItem.field%>"
     >
@@ -477,12 +382,15 @@ data-event-label="high"
   <div class="container">
     <div class="row">
       
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
         <a href="/dns-indicators/en/9" title="View this goal's indicator list">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" id="goal-9" class="goal-icon-image goal-icon-image-"/>
+          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/9.png"
+              alt="Industry, innovation and infrastructure - Goal 9"
+              id="goal-9"
+              class="goal-icon-image goal-icon-image-" />
         </a>
       </div>
-      <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
+      <div class="col-8 col-md-9 col-lg-10 indicator-details">
       
         <div>
           <h1>
@@ -492,7 +400,6 @@ data-event-label="high"
               </h1>
               <h2 class="titles goal-9">Indicator 9.1.b: xxx</h2>
             
-            <!--<span class="lead-copy">xxx</span>-->
           </h1>
         </div>
       </div>
@@ -503,13 +410,19 @@ data-event-label="high"
 
 <div class="container">
   
-<ol class="breadcrumb">
-  
-  <li><a href="/dns-indicators/en/">Home</a></li>
-  <li><a href="/dns-indicators/en/9" title="Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation">Goal 9</a></li>
-  <li class="active">Indicator 9.1.b</li>
-  
-</ol>
+<nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item">
+            <a href="/dns-indicators/en/">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/dns-indicators/en/9" title="Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation">Goal 9</a>
+        </li>
+        <li class="breadcrumb-item active">Indicator 9.1.b</li>
+        
+    </ol>
+</nav>
 
 
   
@@ -520,15 +433,15 @@ data-event-label="high"
 <!---3 Btns if there is a corresponding Indicator-->
 
   
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col d-grid gap-2">
       <a href="/dns-indicators/en/9-1-a" class="btn btn-primary btn-block goal-9 navigation-btn" role="button">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous indicator </b>
+        <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label d-none d-sm-block">Previous indicator </b>
       </a>
     </div>
 
-    <div class="col-xs-6 col-md-6 col-lg-6">
+    <div class="col d-grid gap-2">
       <a href="/dns-indicators/en/10-1-a" class="btn btn-primary btn-block goal-9 navigation-btn" role="button">
-        <b class="btn-label hidden-sm hidden-xs">Next indicator </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <b class="btn-label d-none d-sm-block">Next indicator </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
   
@@ -579,7 +492,6 @@ data-event-label="high"
   data-geocoderegex=""
   data-showmap=""
   data-startvalues="[{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Time series&quot;},{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Target&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;All line-based technologies&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Pure fiber optic networks (FTTB/H)&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Cable television (CATV)&quot;}]"
-  data-graphlimits="null"
   data-stackeddisaggregation=""
   data-showline="true"
   data-spangaps="true"
@@ -593,7 +505,7 @@ data-event-label="high"
   data-graphstepsize="null"
 >
   
-  <span role="status" class="sr-only" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -612,40 +524,23 @@ data-event-label="high"
     
 
 
+
+
 <div id="headlineTable">
 
   <div id="datatables">
 
-    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/en/headline/9-1-b.csv" class="btn btn-primary btn-download" download="indicator_9-1-b.csv" tabindex="0" role="button">Download Headline CSV</a>
+    
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/en/data/9-1-b.csv" class="btn btn-primary btn-download" download='indicator_9-1-b.csv' tabindex='0' role='button'>Download Source CSV</a>
 
-    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/en/data/9-1-b.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_9-1-b.csv' tabindex='0' role='button'>Download Source CSV</a>
+    <p class="no-js-disaggregation-hint"></p>
 
-    <h3>Headline data</h3>
-    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption></caption>
-      <thead>
-        
-      </thead>
-      <tbody>
-        
-      </tbody>
-    </table>
+    
+    <h3></h3>
+    
   </div>
 
-  <div id="datatableFooter">
-    
-    <p>Source: Breitbandatlas - Federal Ministry of Transport and Digital Infrastructure</p>
-    
-    
-    <p>Geographical Area: Germany</p>
-    
-    
-    <p>Unit of measurement: </p>
-    
-    
-    <p>Comment: </p>
-    
-  </div>
+  
 
 </div>
 
@@ -654,10 +549,10 @@ data-event-label="high"
 
   <p class="async-loading" data-img="/dns-indicators/assets/img/loading-small.gif"></p>
 
-  <div class="async-loaded spacer medium" style="display:none;">
+  <div class="async-loaded mt-4" style="display:none;">
 
     <div style="display: none;">
-  <span id="table-alternative"></span>
+    <span id="table-alternative"></span>
 </div>
 <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
   
@@ -666,15 +561,15 @@ data-event-label="high"
       nav-item
       
       
-      active
     ">
-    <a
-      class="nav-link"
-      data-toggle="tab"
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
       role="tab"
+      type="button"
       
         id="tab-chartview"
-        href="#chartview"
+        data-bs-target="#chartview"
         aria-controls="chartview"
         aria-describedby="table-alternative"
         data-on="click"
@@ -684,7 +579,7 @@ data-event-label="Change to Chart tab"
 
         ><i class="fa fa-line-chart" aria-hidden="true"></i>
       
-    <span class="hidden-xs" style="color:black">Chart</span></a>
+    <span class="hidden-xs" style="color:black">Chart</span></button>
   </li>
   
   <li role="presentation"
@@ -692,15 +587,15 @@ data-event-label="Change to Chart tab"
       nav-item
       
       
-      
     ">
-    <a
-      class="nav-link"
-      data-toggle="tab"
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
       role="tab"
+      type="button"
       
         id="tab-tableview"
-        href="#tableview"
+        data-bs-target="#tableview"
         aria-controls="tableview"
         data-on="click"
 data-event-category="Tab change"
@@ -709,7 +604,7 @@ data-event-label="Change to Table tab"
 
         ><i class="fa fa-table" aria-hidden="true"></i>
       
-    <span class="hidden-xs" style="color:black">Table</span></a>
+    <span class="hidden-xs" style="color:black">Table</span></button>
   </li>
   
   <li role="presentation"
@@ -717,15 +612,15 @@ data-event-label="Change to Table tab"
       nav-item
       map
       
-      
     ">
-    <a
-      class="nav-link"
-      data-toggle="tab"
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
       role="tab"
+      type="button"
       
         id="tab-mapview"
-        href="#mapview"
+        data-bs-target="#mapview"
         aria-controls="mapview"
         data-no-disagg="true"
         data-on="click"
@@ -735,16 +630,16 @@ data-event-label="Change to Map tab"
 
         ><i class="fa fa-map" aria-hidden="true"></i>
       
-    <span class="hidden-xs" style="color:black">Map</span></a>
+    <span class="hidden-xs" style="color:black">Map</span></button>
   </li>
   
 </ul>
 
     <div class="tab-content data-view">
-  
     
-      <div role="tabpanel" class="tab-pane active" id="chartview">
-        
+      
+        <div role="tabpanel" class="tab-pane active" id="chartview">
+          
 
     <div id="dataset-size-warning" style="display:none" role="alert">
       <i class="fa fa-bolt"><span class="sr-only"></span></i>
@@ -752,316 +647,18 @@ data-event-label="Change to Map tab"
     </div>
 
     
-    
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-
           <h4 id="chart-heading" class="chart-title"></h4>
-          <h5 class="chart-subtitle"></h5>
           <div id="chart" class="plot-container">
-            
-              
-<canvas
+            <canvas
     role="img"
     aria-labelledby="chart-heading"
     aria-describedby="table-alternative chart-annotations"
     tabindex="0"
  ></canvas>
 
-<script>
-// Add a chart alteration to support the chart_graph_limits metadata field.
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphLimits && Object.keys(info.graphLimits).length > 0) {
-    var overrides = {
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              min: info.graphLimits.minimum,
-              max: info.graphLimits.maximum,
-            }
-          }]
-        }
-      }
-    }
-    // Add these overrides onto the normal config.
-    $.extend(true, config, overrides);
-  }
-  else {
-    // Otherwise remove any min/max that may be there.
-    try {
-      delete config.options.scales.yAxes[0].ticks.min;
-      delete config.options.scales.yAxes[0].ticks.max;
-    }
-    catch(e) {}
-  }
-});
-</script>
-
-<span style="display: none;" id="chart-annotations" role="status"></span>
-<script>
-opensdg.annotationPresets = {
-    common: {
-        // This "common" preset is applied to all annotations automatically.
-        borderColor: '#949494',
-        drawTime: 'afterDraw',
-        type: 'line',
-        borderDash: [10, 5],
-        borderWidth: 1,
-        label: {
-            backgroundColor: 'white',
-            
-            fontColor: 'black',
-            
-        },
-        // This "highContrast" overrides colors when in high-contrast mode.
-        highContrast: {
-            label: {
-                backgroundColor: 'black',
-                
-                fontColor: 'white',
-                
-            },
-        },
-        // This callback is used to generate a generic description for screenreaders.
-        // This can be overridden to be a more specific string, eg:
-        //
-        //     description: 'Chart annotation showing a 2030 target of 15%'
-        //
-        description: function() {
-            var descriptionParts = [translations.indicator.chart_annotation];
-            if (this.label && this.label.content) {
-                descriptionParts.push(translations.t(this.label.content));
-            }
-            else {
-                // If there is no label, just specify whether it is a box or line.
-                if (this.type == 'line') {
-                    descriptionParts.push(this.mode + ' line');
-                }
-                if (this.type == 'box') {
-                    descriptionParts.push('box');
-                }
-            }
-            if (typeof this.value !== 'undefined') {
-                descriptionParts.push(this.value);
-            }
-            return descriptionParts.join(': ');
-        },
-    },
-    target_line: {
-        mode: 'horizontal',
-        borderWidth: 2,
-        borderDash: [15, 10],
-        borderColor: '#757575',
-        label: {
-            position: 'right',
-            content: translations.indicator.annotation_2030_target,
-        },
-    },
-    series_break: {
-        mode: 'vertical',
-        borderDash: [2, 2],
-        label: {
-            position: 'top',
-            content: translations.indicator.annotation_series_break,
-        },
-    },
-    error_bar: {
-        mode: 'vertical',
-        borderDash: [2, 2],
-        borderColor: 'blue',
-        xMin: 0,
-        xMax: 0,
-        yMin: 15000,
-        yMax: 25000,
-        label: {
-            position: 'top',
-            content: translations.indicator.annotation_series_break,
-        },
-    },
-};
-
-// Add a chart alteration to support the chart_annotations metadata field.
-opensdg.chartConfigAlter(function(config, info) {
-    if (info.graphAnnotations && info.graphAnnotations.length > 0) {
-        // Apply some helpers/fixes to the annotations.
-        var annotations = info.graphAnnotations.map(function(annotationOverrides) {
-            var annotation = {};
-            // Apply the "common" preset.
-            if (opensdg.annotationPresets.common) {
-                $.extend(true, annotation, opensdg.annotationPresets.common);
-            }
-            // Apply any specified presets.
-            if (annotationOverrides.preset) {
-                var preset = annotationOverrides.preset;
-                if (opensdg.annotationPresets[preset]) {
-                    $.extend(true, annotation, opensdg.annotationPresets[preset]);
-                }
-            }
-            // Now add any more annotation config.
-            $.extend(true, annotation, annotationOverrides);
-            // Default to horizontal lines.
-            if (!annotation.mode && annotation.type === 'line') {
-                annotation.mode = 'horizontal';
-            }
-            // Provide the obscure scaleID properties on user's behalf.
-            if (!annotation.scaleID && annotation.type === 'line') {
-                if (annotation.mode === 'horizontal') {
-                    annotation.scaleID = 'y-axis-0';
-                }
-                if (annotation.mode === 'vertical') {
-                    annotation.scaleID = 'x-axis-0';
-                }
-            }
-            if (!annotation.xScaleID && annotation.type === 'box') {
-                annotation.xScaleID = 'x-axis-0';
-            }
-            if (!annotation.yScaleID && annotation.type === 'box') {
-                annotation.yScaleID = 'y-axis-0';
-            }
-            // Provide the "enabled" label property on the user's behalf.
-            if (annotation.label && annotation.label.content) {
-                annotation.label.enabled = true;
-            }
-            // Translate any label content.
-            if (annotation.label && annotation.label.content) {
-                annotation.label.content = translations.t(annotation.label.content);
-            }
-            // Save some original values for later used when contrast mode is switched.
-            if (typeof annotation.defaultContrast === 'undefined') {
-                annotation.defaultContrast = {};
-                if (annotation.borderColor) {
-                    annotation.defaultContrast.borderColor = annotation.borderColor;
-                }
-                if (annotation.backgroundColor) {
-                    annotation.defaultContrast.backgroundColor = annotation.backgroundColor;
-                }
-                if (annotation.label) {
-                    annotation.defaultContrast.label = {};
-                    if (annotation.label.fontColor) {
-                        annotation.defaultContrast.label.fontColor = annotation.label.fontColor;
-                    }
-                    if (annotation.label.backgroundColor) {
-                        annotation.defaultContrast.label.backgroundColor = annotation.label.backgroundColor;
-                    }
-                }
-            }
-            return annotation;
-        });
-        if (annotations.length > 0) {
-            var overrides = {
-                options: {
-                    annotation: {
-                        drawTime: 'beforeDatasetsDraw',
-                        annotations: annotations
-                    }
-                }
-            };
-            // Add these overrides onto the normal config.
-            $.extend(true, config, overrides);
-
-            // Update the chart annotations element.
-            var descriptions = annotations.map(function(annotation) {
-                var description = '';
-                if (annotation.description) {
-                    if (typeof annotation.description === 'function') {
-                        description = annotation.description.call(annotation);
-                    }
-                    else {
-                        description = translations.t(annotation.description);
-                    }
-                }
-                return description;
-            }).filter(function(description) { return description != ''; });
-
-            var currentDescription = $('#chart-annotations').text();
-            var newDescription = descriptions.join('. ');
-            if (currentDescription != newDescription) {
-                $('#chart-annotations').text(newDescription);
-            }
-        }
-    }
-    else if (config.options && config.options.annotation) {
-        delete config.options.annotation;
-    }
-});
-</script>
-
-<script>
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
-    var overrides = {
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              stepSize: info.graphStepsize.step,
-            }
-          }]
-        }
-      }
-    }
-    // Add these overrides onto the normal config.
-    $.extend(true, config, overrides);
-  }
-});
-</script>
-
-
-<script>
-// For line charts, add the vertical line hover functionality.
-opensdg.chartConfigAlter(function(config, info) {
-    var overrides = {
-        options: {
-            tooltips: {
-                intersect: false,
-                axis: 'x',
-            },
-        },
-        plugins: [{
-            beforeDatasetsDraw: function(chart) {
-                if (chart.tooltip._active && chart.tooltip._active.length) {
-                    var activePoint = chart.tooltip._active[0],
-                        ctx = chart.ctx,
-                        x = activePoint.tooltipPosition().x,
-                        topY = chart.scales['y-axis-0'].top,
-                        bottomY = chart.scales['y-axis-0'].bottom;
-
-                    // draw line
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.moveTo(x, topY);
-                    ctx.lineTo(x, bottomY);
-                    ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#757575';
-                    ctx.stroke();
-                    ctx.restore();
-                }
-            },
-            subtitle: {
-              display: true,
-              text: 'Chart Subtitle',
-              color: 'blue',
-              font: {
-                size: 12,
-                family: 'tahoma',
-                weight: 'normal',
-                style: 'italic'
-              },
-              padding: {
-                bottom: 10
-              }
-            }
-        }],
-    };
-    // Add these overrides onto the normal config, and return it.
-    $.extend(true, config, overrides);
-});
-</script>
-
-            
           </div>
           <div id="plotLegend"></div>
           
@@ -1126,21 +723,21 @@ opensdg.chartConfigAlter(function(config, info) {
       <div id="chartSelectionDownload" class="clearfix">
         <button id="btnSave" title="" class='btn btn-primary btn-download'>
           Download Chart Image
-        </button>
-      </div>
+        </button><!-- 
+   --></div>
     </div>
 
 
 
-      </div>
-    
-  
-    
-      <div role="tabpanel" class="tab-pane " id="tableview">
-        <div style="display: none;">
-          <span id="column-sort-info"></span>
         </div>
-        <div id="selectionsTable"></div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="tableview">
+          <div style="display: none;">
+            <span id="column-sort-info"></span>
+          </div>
+          <div id="selectionsTable"></div>
 <dl id="tableTargetLines" class="clearfix"></dl>
 
 
@@ -1201,13 +798,13 @@ opensdg.chartConfigAlter(function(config, info) {
 
 <div id="tableSelectionDownload" class="clearfix"></div>
 
-      </div>
+        </div>
+      
     
-  
-    
-      <div role="tabpanel" class="tab-pane " id="mapview" class="map">
-        
-<h4 id="map-heading" class="chart-title"></h4>
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
+<h4 id="map-heading" class="map-title"></h4>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
 </div>
@@ -1269,98 +866,115 @@ opensdg.chartConfigAlter(function(config, info) {
 </div>
 
 
-      </div>
+        </div>
+      
     
+  </div>
   
-</div>
-
 
   </div>
 
 </section>
 
   
-  <ul class="nav nav-tabs spacer medium" role="tablist">
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
+  <div class="mt-4">
+<ul class="nav nav-tabs" role="tablist">
+    
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link active"
+                data-bs-toggle="tab"
+                id="tab-national"
+                data-bs-target="#national"
+                aria-controls="national"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.details tab"
->Details</a>
-  </li>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item ">
-    <a class="nav-link" data-toggle="tab" id="tab-content" href="#content" aria-controls="content" role="tab" data-on="click"
+            >Details</button>
+        </li>
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link "
+                data-bs-toggle="tab"
+                id="tab-content"
+                data-bs-target="#content"
+                aria-controls="content"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.contentAndProgress tab"
->Content and progress</a>
-  </li>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item ">
-    <a class="nav-link" data-toggle="tab" id="tab-history_1" href="#history_1" aria-controls="history_1" role="tab" data-on="click"
+            >Content and progress</button>
+        </li>
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link "
+                data-bs-toggle="tab"
+                id="tab-history_1"
+                data-bs-target="#history_1"
+                aria-controls="history_1"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.history tab"
->Indicator status summary</a>
-  </li>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  <li role="presentation" class="nav-item ">
-    <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
+            >Indicator status summary</button>
+        </li>
+    
+        
+        
+        
+        
+        <li role="presentation" class="nav-item">
+            <button
+                type="button"
+                class="nav-link "
+                data-bs-toggle="tab"
+                id="tab-sources"
+                data-bs-target="#sources"
+                aria-controls="sources"
+                role="tab"
+                data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.sources tab"
->Sources</a>
-  </li>
 
-
-  
-  <li role="presentation" class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Edit</a>
-  </li>
-  
+            >Sources</button>
+        </li>
+    
+    
+    
+        <li role="presentation" class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab">Edit</a>
+        </li>
+    
 </ul>
 
 <div class="tab-content">
   
-    
-    
-    
-    
     
     
     
@@ -2380,10 +1994,6 @@ data-event-label="Change to indicator.sources tab"
     
     
     
-    
-    
-    
-    
     <div role="tabpanel" class="tab-pane " id="content">
       <article>
         
@@ -3212,10 +2822,6 @@ data-event-label="Change to indicator.sources tab"
     
     
     
-    
-    
-    
-    
     <div role="tabpanel" class="tab-pane " id="history_1">
       <article>
         <p>The synoptic table provides information about the evaluation of the indicator for Germany in previous years. It shows if the weather symbol assigned to an indicator was rather stable or volatile in the past years. <i>(Evaluation of the indicator report 2018)</i></p>
@@ -3228,10 +2834,6 @@ data-event-label="Change to indicator.sources tab"
 
       </article>
     </div>
-    
-    
-    
-    
     
     
     
@@ -4175,8 +3777,8 @@ data-event-label="Change to indicator.sources tab"
     
   
   
-  <div role="tabpanel" class="tab-pane" id="edit">
-    <div class="edit-container">
+    <div role="tabpanel" class="tab-pane" id="edit">
+      <div class="edit-container">
   
   
 
@@ -4195,59 +3797,57 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
-  </div>
+    </div>
   
 </div>
 
-
+</div>
   </div>
 </div>
 
+  <a href="#top"></a>
 </div>
-
 
 <footer role="contentinfo">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
-            
-              <li>
-                
-                  <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
-                
-                </li>
-              <li>
-                <a href="/dns-indicators/en/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                
-                </li>
-              <li>
-                <a href="/dns-indicators/en/imprint/">Legal Notice</a>
-                
-                </li>
-              
-            
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            
+                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/dns-indicators/en/menu.twitterPath"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            <a href="/dns-indicators/en/imprint/">Legal Notice</a>
+                            
+                        </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
         </div>
-      </div>
+        
     </div>
-    
-  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -4276,12 +3876,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220622023351'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220622145427'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220622023351"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220622145427"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -4289,4 +3889,3 @@ data-event-label="Change to indicator.sources tab"
 
 </body>
 </html>
-
