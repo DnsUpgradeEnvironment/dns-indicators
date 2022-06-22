@@ -7,7 +7,7 @@
     {% assign sources_list = sources_list | push: src_org_translated  %}
   {% endif %}
 {% endfor %}
-{% assign uniqSources = sources_list | uniq | join: "; " %}
+{% assign uniqSources = sources_list | uniq | join: ", " %}
 
 <div id="{{ include.footerId | default: 'selectionChartFooter' }}" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
@@ -44,12 +44,12 @@
         {% if page.indicator.footer_fields and page.indicator.footer_fields.size > 0 %}
         {% for footer_field in page.indicator.footer_fields %}
         <dt
-          data-for-series={{ footer_field.series | jsonify }}
-          data-for-unit={{ footer_field.unit | jsonify }}
         ><u>{{ footer_field.label | t }}</u>:</dt>
+          data-for-series={{ footer_field.series | default: "" | jsonify }}
+          data-for-unit={{ footer_field.unit | default: "" | jsonify }}
         <dd
-          data-for-series={{ footer_field.series | jsonify }}
-          data-for-unit={{ footer_field.unit | jsonify }}
+          data-for-series={{ footer_field.series | default: "" | jsonify }}
+          data-for-unit={{ footer_field.unit | default: "" | jsonify }}
         >{{ footer_field.value | t  }}</dd>
         {% endfor %}
         {% endif %}

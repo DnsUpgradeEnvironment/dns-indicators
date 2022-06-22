@@ -49,13 +49,16 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks) {
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars) {
   var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
   if (graphTargetLines) {
     annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
   }
   if (graphSeriesBreaks) {
     annotations = annotations.concat(getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries));
+  }
+  if (graphErrorBars) {
+    annotations = annotations.concat(getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries));
   }
   return annotations;
 }
@@ -72,7 +75,20 @@ function getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries) {
     targetLine.label = { content: targetLine.label_content };
     return targetLine;
   });
+}
 
+/**
+ * @param {Array} graphErrorBars Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphErrorBars, selectedUnit, selectedSeries).map(function(errorBar) {
+    errorBar.preset = 'error_bar';
+    errorBar.label = { content: errorBar.label_content };
+    return errorBar;
+  });
 }
 
 /**
@@ -101,7 +117,6 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  * @return {Array} Datasets suitable for Chart.js
  */
 function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
-  //console.log("combinations: ", combinations)
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;
@@ -435,5 +450,4 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
    */
   function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
     return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
-
 }
