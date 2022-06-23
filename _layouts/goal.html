@@ -10,7 +10,7 @@
   {% endif %}
 </div>
 
-<div id="main-content" class="container" role="main">
+<div id="main-content" class="container goal-indicators goal-{{ page.goal.number }} goal-by-target" role="main">
 
   {% include components/goal/goal-content.html content=content %}
 
@@ -72,9 +72,8 @@
       {%- assign range_title_key = range_id  | append: '-title' -%}
       {%- assign target_range = page.t.dns_ranges[ range_title_key ] -%}
       {%- assign target = page.t.dns_targets[ target_title_key ] -%}
-
       <div class="row">
-        <div class="col indicator-cards no-gutters">
+        <div class="col indicator-cards target goal-target no-gutters">
           <span class="indicator-card-number" style="padding-bottom: 7px;">
             {{ target_range }}
           </span>
