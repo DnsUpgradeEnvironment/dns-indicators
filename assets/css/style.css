@@ -1357,12 +1357,12 @@ body.contrast-high div#serieses {
 .tags .tag {
   padding: 4px;
   font-size: 12px;
-  color: #0b0c0c;
+  color: white;
   border: 1px solid transparent;
-  background: #ffdc8e;
+  background: #707071;
   white-space: nowrap; }
   .tags .tag a {
-    color: #0b0c0c;
+    color: white;
     text-decoration: underline; }
 
 .status {
@@ -2141,6 +2141,20 @@ body.contrast-high.layout-goals #main-content .goal-tiles .global-goals-extra-ic
 
 #embeddedmapview h3 {
   text-align: center; }
+
+#mapview .btn-download {
+  margin-right: 10px; }
+
+body.contrast-high #main-content #map .leaflet-control-zoomhome-in,
+body.contrast-high #main-content #map .leaflet-control-zoomhome-out,
+body.contrast-high #main-content #map .leaflet-control-zoomhome-home,
+body.contrast-high #main-content #map .leaflet-control-fullscreen-button,
+body.contrast-high #main-content #map .leaflet-control-timecontrol,
+body.contrast-high #main-content #map .selection-name span,
+body.contrast-high #main-content #map .selection-value span,
+body.contrast-high #main-content #map .selection-close,
+body.contrast-high #main-content #map .disaggregation-controls {
+  color: black; }
 
 .cookie-settings {
   cursor: pointer;
