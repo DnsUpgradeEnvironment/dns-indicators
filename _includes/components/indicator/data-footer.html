@@ -44,9 +44,9 @@
         {% if page.indicator.footer_fields and page.indicator.footer_fields.size > 0 %}
         {% for footer_field in page.indicator.footer_fields %}
         <dt
-        ><u>{{ footer_field.label | t }}</u>:</dt>
           data-for-series={{ footer_field.series | default: "" | jsonify }}
           data-for-unit={{ footer_field.unit | default: "" | jsonify }}
+        ><u>{{ footer_field.label | t }}</u>:</dt>
         <dd
           data-for-series={{ footer_field.series | default: "" | jsonify }}
           data-for-unit={{ footer_field.unit | default: "" | jsonify }}
