@@ -59,7 +59,7 @@
 
     {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_id' %}
     {% for group in goal_indicators %}
-      {% assign target = group.name | sdg_lookup %}
+      {% assign target = group.name %}
 
       {%- assign target_id_dashes = target | replace: ".", "-" -%}
 
@@ -114,7 +114,9 @@
                 <span class="indicator-name">{{ indicator.placeholder }}</span>
                 {% else %}
                 <span class="indicator-name"><a href="{{ indicator.url }}">{{ indicator.name }}</a></span>
-                {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
+                {% comment %}
+                  {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
+                {% endcomment %}
               </div>
               {% if indicator_has_progress %}
               <div class="col-lg-1 goal-page-indicator-progress">
