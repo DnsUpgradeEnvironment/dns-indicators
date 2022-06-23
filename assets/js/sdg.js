@@ -1269,7 +1269,6 @@ function getMatchesByUnitSeries(items, selectedUnit, selectedSeries) {
   return matches;
 }
 
-  var arrayMove = deprecated('utils.arrayMove');
   /**
  * Model helper functions related to units.
  */
@@ -2003,13 +2002,9 @@ function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
  * @param {Array} allTypes Objects containing 'unit', 'series', and 'type'
  * @param {String} selectedUnit
  * @param {String} selectedSeries
- * @param {Boolean} chartjs3
  * @return {String} Updated type
  */
-function getChartType(currentType, allTypes, selectedUnit, selectedSeries, chartjs3) {
-  if (!chartjs3) {
-    return currentType;
-  }
+function getChartType(currentType, allTypes, selectedUnit, selectedSeries) {
   if (!currentType) {
     currentType = 'line';
   }
@@ -2419,8 +2414,8 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
     pointBorderColor: getHeadlineColor(),
     pointBackgroundColor: getHeadlineColor(),
     borderWidth: 4,
-    headline: false,
-    pointStyle: 'circle',
+    headline: true,
+    pointStyle: 'rect',
     data: prepareDataForDataset(years, rows),
     showLine: showLine,
     spanGaps: spanGaps,
@@ -2617,9 +2612,7 @@ function getTimeSeriesAttributes(rows) {
     GEOCODE_COLUMN: GEOCODE_COLUMN,
     YEAR_COLUMN: YEAR_COLUMN,
     VALUE_COLUMN: VALUE_COLUMN,
-    SERIES_TOGGLE: SERIES_TOGGLE,
     GRAPH_TITLE_FROM_SERIES: GRAPH_TITLE_FROM_SERIES,
-    CHARTJS_3: CHARTJS_3,
     convertJsonFormatToRows: convertJsonFormatToRows,
     getUniqueValuesByProperty: getUniqueValuesByProperty,
     dataHasUnits: dataHasUnits,
@@ -2665,8 +2658,6 @@ function getTimeSeriesAttributes(rows) {
     inputEdges: inputEdges,
     getTimeSeriesAttributes: getTimeSeriesAttributes,
     inputData: inputData,
-    // Backwards compatibility.
-    footerFields: deprecated('helpers.footerFields'),
   }
 })();
 
