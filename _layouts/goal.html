@@ -57,10 +57,9 @@
       </div>
     </div>
 
-    {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_name' %}
+    {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_id' %}
     {% for group in goal_indicators %}
       {% assign target = group.name %}
-
       {%- assign target_id_dashes = target | replace: ".", "-" -%}
 
       {%- assign target_title_key = target | append: '-title' -%}
@@ -77,7 +76,9 @@
       <div class="row">
         <div class="col indicator-cards no-gutters">
           <span class="indicator-card-number" style="padding-bottom: 8px;">
-            {{ target_range }}
+            {{ target_id_dashes }}
+            {{ target_title_key }}
+            {{ target_title }}
           </span>
           <p>
             {{ target }}
