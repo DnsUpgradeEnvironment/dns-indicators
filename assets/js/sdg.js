@@ -2419,7 +2419,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
     pointBackgroundColor: getHeadlineColor(),
     borderWidth: 4,
     headline: true,
-    pointStyle: 'rect',
+    pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
     showLine: showLine,
     spanGaps: spanGaps,
