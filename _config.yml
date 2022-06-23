@@ -35,6 +35,10 @@ create_goals:
   layout: goal-by-target
 create_pages: true
 
+frontpage_goals_grid:
+    title: frontpage.heading
+    description: frontpage.instructions
+
 
 analytics:
   ga_prod: ''
@@ -82,8 +86,8 @@ collections:
 
 # The list of languages that are translated. The first one is the default.
 languages:
-    - de
-    - en
+  - de
+  - en
 
 # Menu
 menu:
