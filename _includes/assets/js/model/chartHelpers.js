@@ -19,13 +19,9 @@ function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
  * @param {Array} allTypes Objects containing 'unit', 'series', and 'type'
  * @param {String} selectedUnit
  * @param {String} selectedSeries
- * @param {Boolean} chartjs3
  * @return {String} Updated type
  */
-function getChartType(currentType, allTypes, selectedUnit, selectedSeries, chartjs3) {
-  if (!chartjs3) {
-    return currentType;
-  }
+function getChartType(currentType, allTypes, selectedUnit, selectedSeries) {
   if (!currentType) {
     currentType = 'line';
   }
@@ -435,8 +431,8 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
     pointBorderColor: getHeadlineColor(),
     pointBackgroundColor: getHeadlineColor(),
     borderWidth: 4,
-    headline: false,
-    pointStyle: 'circle',
+    headline: true,
+    pointStyle: 'rect',
     data: prepareDataForDataset(years, rows),
     showLine: showLine,
     spanGaps: spanGaps,
