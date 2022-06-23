@@ -151,7 +151,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     getTooltipContent: function(feature) {
       var tooltipContent = feature.properties.name;
       var tooltipData = this.getData(feature.properties);
-      if (tooltipData) {
+      if (typeof tooltipData === 'number') {
         tooltipContent += ': ' + this.alterData(tooltipData);
       }
       return tooltipContent;
@@ -263,10 +263,14 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     // Get the data from a feature's properties, according to the current year.
     getData: function(props) {
-      if (props.values && props.values.length && props.values[this.currentDisaggregation][this.currentYear]) {
-        return opensdg.dataRounding(props.values[this.currentDisaggregation][this.currentYear]);
+      var ret = false;
+      if (props.values && props.values.length) {
+        var value = props.values[this.currentDisaggregation][this.currentYear];
+        if (typeof value === 'number') {
+          ret = opensdg.dataRounding(value);
+        }
       }
-      return false;
+      return ret;
     },
 
     // Choose a color for a GeoJSON feature.
@@ -2654,7 +2658,6 @@ function getTimeSeriesAttributes(rows) {
     getGraphLimits: getGraphLimits,
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,
-    getGraphStepsize: getGraphStepsize,
     inputEdges: inputEdges,
     getTimeSeriesAttributes: getTimeSeriesAttributes,
     inputData: inputData,
@@ -5224,7 +5227,7 @@ $(function() {
         var color = '#FFFFFF';
         var percentage, valueStatus;
         var templateToUse = selectionTplHighValue;
-        if (value) {
+        if (typeof value === 'number') {
           color = plugin.colorScale(value).hex();
           valueStatus = 'has-value';
           var fraction = (value - valueRange[0]) / (valueRange[1] - valueRange[0]);
@@ -5242,7 +5245,7 @@ $(function() {
           name: selection.feature.properties.name,
           valueStatus: valueStatus,
           percentage: percentage,
-          value: plugin.alterData(opensdg.dataRounding(value)),
+          value: plugin.alterData(value),
           color: color,
         });
       }).join('');
