@@ -79,9 +79,10 @@
             {{ range_title_key }}
             {{ target_range }}
           </span>
-          <p>
+          <span>
+            {{ target_title_key }}
             {{ target_title }}
-          </p>
+          </span>
         </div>
 
         <div class="col indicator-cards no-gutters">
@@ -107,10 +108,10 @@
               </span>
               {{ indicator.placeholder }}
               {% else %}
-              <span class="indicator-card-number">
+              <span class="indicator-card-number" >
                 {{ indicator.indicator_display }}
               </span>
-              <a href="{{ indicator.url }}" style="padding-left: 0px">
+              <a href="{{ indicator.url }}" >
                 {{ indicator.name }}
               </a>
               {% endif %}
