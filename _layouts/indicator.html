@@ -11,8 +11,10 @@
 
 <div class="container">
   {% include components/indicator/breadcrumbs.html %}
-  <div class="row">
-    {% include components/indicator/navigationbuttons.html %}
+  <div class="container">
+    <div class="row justify-content-md-center">
+      {% include components/indicator/navigationbuttons.html %}
+    </div>
   </div>
   {% if site.create_indicators.previous_next_links %}
     {% include components/previous-next-links.html previous_label=page.t.indicator.previous next_label=page.t.indicator.next %}
