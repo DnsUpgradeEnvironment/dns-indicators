@@ -1,12 +1,12 @@
 {% include head.html %}
 {% include header.html %}
 
-{% include bootstrap5/components/goal/header.html %}
+{% include components/goal/header.html %}
 
 <div class="container">
-  {% include bootstrap5/components/goal/breadcrumbs.html %}
+  {% include components/goal/breadcrumbs.html %}
   {% if site.create_goals.previous_next_links %}
-    {% include bootstrap5/components/previous-next-links.html previous_label=page.t.goal.previous next_label=page.t.goal.next %}
+    {% include components/previous-next-links.html previous_label=page.t.goal.previous next_label=page.t.goal.next %}
   {% endif %}
 </div>
 
@@ -100,7 +100,7 @@
                 <span class="indicator-name">{{ indicator.placeholder }}</span>
                 {% else %}
                 <span class="indicator-name"><a href="{{ indicator.url }}">{{ indicator.name }}</a></span>
-                {% include bootstrap5/components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
+                {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
               </div>
               {% if indicator_has_progress %}
               <div class="col-lg-1 goal-page-indicator-progress">
