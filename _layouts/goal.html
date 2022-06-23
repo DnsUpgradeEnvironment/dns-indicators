@@ -104,28 +104,23 @@
               {% if indicator.placeholder and indicator.placeholder != '' %}
               <span class="indicator-card-number">
                 {{ indicator.number }}
+                {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
               </span>
-              <div class="col goal-page-indicator-name">
-                {% if indicator.placeholder and indicator.placeholder != '' %}
-                <span class="indicator-name">{{ indicator.placeholder }}</span>
-                {% else %}
-                <span class="indicator-name"><a href="{{ indicator.url }}">{{ indicator.name }}</a></span>
-                {% comment %}
-                  {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
-                {% endcomment %}
-              </div>
-              {% if indicator_has_progress %}
-              <div class="col-lg-1 goal-page-indicator-progress">
-                <span class="visually-hidden">{{ site.progress_status.status_heading | t }}</span>
-                {% include components/progress/progress-status.html indicator=indicator %}
-              </div>
-              {% endif %}
+              {{ indicator.placeholder }}
+              {% else %}
+              <span class="indicator-card-number">
+                {{ indicator.number }}
+                {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
+              </span>
+              <a href="{{ indicator.url }}" style="padding-left: 0px">
+                {{ indicator.name }}
+              </a>
               {% endif %}
             </div>
           {% endfor %}
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</div>
 {% include footer.html %}
