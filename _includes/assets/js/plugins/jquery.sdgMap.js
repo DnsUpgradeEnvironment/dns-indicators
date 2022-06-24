@@ -425,7 +425,7 @@
         plugin.setColorScale();
 
         plugin.years = _.uniq(availableYears).sort();
-        plugin.currentYear = plugin.years.slice(-1)[0];
+        plugin.currentYear = plugin.years[0];
 
         // And we can now update the colors.
         plugin.updateColors();
