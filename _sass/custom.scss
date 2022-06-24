@@ -548,4 +548,15 @@ body.contrast-high {
 
 
 
-.dropdown-menu li{ position: relative;}
+//.dropdown-menu li{ position: relative;}
+
+// for multiple levels of dropdowns
+.dropdown-submenu {
+  position: relative;
+}
+
+
+.dropdown-menu li:hover > ul
+{
+    position: relative;
+}
