@@ -567,4 +567,8 @@ body.contrast-high {
     /* On hover, display the next level's menu */
     display: inline;
     position: relative;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    margin-left: 0px;
 }
