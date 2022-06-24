@@ -4316,7 +4316,7 @@ function alterDataDisplay(value, info, context) {
     if (OPTIONS.decimalSeparator) {
       if (value > 999 || value < -999) {
         tempAltered = altered.toString().replace('.', 'deicmalSeperatorPlaceholder');
-        altered = tempAltered.replace(',','.')
+        altered = tempAltered.replace(',','.');
         altered = altered.replace('deicmalSeperatorPlaceholder', OPTIONS.decimalSeparator);
       }
       else {
@@ -4324,7 +4324,7 @@ function alterDataDisplay(value, info, context) {
       }
     }
     // if there is a ',' - thousands seperator, replace it by a '.'
-    if (!OPTIONS.decimalSeparator && value > 999 || value < -999) {
+    if (!OPTIONS.decimalSeparator && (value > 999 || value < -999)) {
         altered = altered.toString().replace(',', '.');
     }
     return altered;
