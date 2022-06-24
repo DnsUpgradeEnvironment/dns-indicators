@@ -209,6 +209,7 @@ graph_color_number: 9
 
 # Mapping
 map_options:
+  disaggregation_controls: true
   # Control the limits on zooming in/out in the map:
   minZoom: 5
   maxZoom: 10
