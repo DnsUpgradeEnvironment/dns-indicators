@@ -35,7 +35,7 @@ function alterDataDisplay(value, info, context) {
         //altered = altered.replace('deicmalSeperatorPlaceholder', OPTIONS.decimalSeparator);
         var beforeSeparator = Math.floor(value/1000);
         var afterSeparator = value%1000;
-        altered = beforeSeparator.toString() + ";" + afterSeparator.tostring();
+        altered = beforeSeparator.toString() + ";" + afterSeparator.toString();
       }
       else {
         altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
