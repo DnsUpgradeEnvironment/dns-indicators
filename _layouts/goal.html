@@ -74,12 +74,14 @@
       {%- assign target = page.t.dns_targets[ target_title_key ] -%}
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <span class="indicator-card-number" style="padding-bottom: 7px;">
-            {{ target_range }}
-          </span>
-          <p>
-            {{ target }}
-          </p>
+          <div class="row" style="margin-bottom: 25px;">
+            <span class="indicator-card-number" style="padding-bottom: 1px;">
+              {{ target_range }}
+            </span>
+            <p>
+              {{ target }}
+            </p>
+          </div>
         </div>
 
         <div class="col indicator-cards no-gutters">
