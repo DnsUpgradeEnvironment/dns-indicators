@@ -3671,5 +3671,8 @@ body.contrast-high .navbar #menu .btn-group.menu-dropdown .dropdown-menu li a {
   .layout-status_summary.contrast-high #main-content .statuses .status.notstarted {
     border: 1px solid white !important; }
 
-.dropdown-menu li {
+.dropdown-submenu {
+  position: relative; }
+
+.dropdown-menu li:hover > ul {
   position: relative; }
