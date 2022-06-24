@@ -5269,6 +5269,7 @@ $(function() {
     return new L.Control.SelectionLegend(plugin);
   };
 }());
+
 /*
  * Leaflet year Slider.
  *
