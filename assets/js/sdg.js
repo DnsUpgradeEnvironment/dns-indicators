@@ -4314,7 +4314,18 @@ function alterDataDisplay(value, info, context) {
     }
     // Now apply our custom decimal separator if needed.
     if (OPTIONS.decimalSeparator) {
+      if (value > 999 || value < -999) {
+        tempAltered = altered.toString().replace('.', 'deicmalSeperatorPlaceholder');
+        altered = tempAltered.replace(',','.')
+        altered = altered.replace('deicmalSeperatorPlaceholder', OPTIONS.decimalSeparator);
+      }
+      else {
         altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
+      }
+    }
+    // if there is a ',' - thousands seperator, replace it by a '.'
+    if (!OPTIONS.decimalSeparator && value > 999 || value < -999) {
+        altered = altered.toString().replace(',', '.');
     }
     return altered;
 }
