@@ -3902,6 +3902,7 @@ opensdg.chartTypes.base = function(info) {
 
     // Add these overrides onto the normal config, and return it.
     _.merge(config, overrides);
+    console.log('CONFIG: ', config);
     return config;
 }
 
