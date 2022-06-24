@@ -205,7 +205,8 @@ custom_js:
 graph_color_set: 'goal'
 graph_color_number: 9
 
-
+disclaimer:
+  phase: beta
 
 # Mapping
 map_options:
