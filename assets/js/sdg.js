@@ -3623,9 +3623,9 @@ opensdg.chartTypes.base = function(info) {
                     suggestedMin: 0,
                     ticks: {
                         color: tickColor,
-                        callback: function (value) {
-                            return alterDataDisplay(value, undefined, 'chart y-axis tick');
-                        },
+                        // callback: function (value) {
+                        //     return alterDataDisplay(value, undefined, 'chart y-axis tick');
+                        // },
                     },
                     title: {
                         display: MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit,
@@ -3728,7 +3728,7 @@ opensdg.chartTypes.base = function(info) {
         }
         catch (e) { }
     }
-    
+
     if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
       var overrides = {
         options: {
