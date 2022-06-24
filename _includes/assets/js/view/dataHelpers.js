@@ -30,9 +30,12 @@ function alterDataDisplay(value, info, context) {
     // Now apply our custom decimal separator if needed.
     if (OPTIONS.decimalSeparator) {
       if (value > 999 || value < -999) {
-        altered = altered.toString().replace('.', 'deicmalSeperatorPlaceholder');
-        altered = altered.replace(',','.');
-        altered = altered.replace('deicmalSeperatorPlaceholder', OPTIONS.decimalSeparator);
+        //altered = altered.toString().replace('.', 'deicmalSeperatorPlaceholder');
+        //altered = altered.replace(',','.');
+        //altered = altered.replace('deicmalSeperatorPlaceholder', OPTIONS.decimalSeparator);
+        var beforeSeparator = Math.floor(value/1000);
+        var afterSeparator = value%1000;
+        altered = beforeSeparator.toString() + ";" + afterSeparator.tostring();
       }
       else {
         altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
