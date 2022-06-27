@@ -68,11 +68,11 @@
                         {% if target_trans contains '_old' %}
                           {% assign opacity = ' style="opacity: 0.2"' %}
                           {% assign old_date_key = target_key | append: '_date' %}
-                          <span class="small">({{ page.t.weather.old_pretext }} <br>{{ indicator[old_date_key] }})</span>
+                          <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
                         {% elsif target_trans contains '_new' %}
                           {% assign opacity = '' %}
                           {% assign new_date_key = target_key | append: '_date' %}
-                          <span class="small">({{ page.t.weather.new_pretext }} <br>{{ indicator[new_date_key] }})</span>
+                          <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
                         {% endif %}
                         </div>
                       </th>
@@ -171,10 +171,10 @@
                           <div class=responsiveText>{{ page.t.weather[target_trans] }}
                             {% if target_trans contains '_old' %}
                               {% assign old_date_key = target_key | append: '_date' %}
-                              <span class="small">({{ page.t.weather.old_pretext }} <br>{{ indicator[old_date_key] }})</span>
+                              <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
                             {% elsif target_trans contains '_new' %}
                               {% assign new_date_key = target_key | append: '_date' %}
-                              <span class="small">({{ page.t.weather.new_pretext }} <br>{{ indicator[new_date_key] }})</span>
+                              <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
                             {% endif %}
                           </div>
                         </th>
