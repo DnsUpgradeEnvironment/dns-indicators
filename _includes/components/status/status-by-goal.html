@@ -61,13 +61,16 @@
                   {% for case in cases %}
                     {% assign target_trans = 'single_target' | append: case | replace: 'xx', '' %}  <!--single_target_old-->
                     {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %}  <!--weather_indicator_1_target_old or weather_indicator_1_target-->
+
                     <!-- TARGET !!!!!!!!!!!!!!!!-->
                     <tr>
                       <th>
                         <div class=responsiveText>{{ page.t.weather[target_trans] }}
                         {% if target_trans contains '_old' %}
-                          <span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
+                          {% assign opacity = ' style="opacity: 0.2"' %}
+                          <span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }}) {{ old_date_key }}</span>
                         {% elsif target_trans contains '_new' %}
+                          {% assign opacity = '' %}
                           {% assign new_date_key = target_key | append: '_date' %}
                           <span class="small">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
                         {% endif %}
@@ -83,9 +86,9 @@
                         {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %} <!--weather_indicator_1_year_a-->
                         {% if indicator[year_key] %}
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
-                            <td width="10%" align="center" class="hidden-xs"> <p><span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
+                            <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}<span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
                           {% else %}
-                            <td width="10%" align="center"> <p><span class="responsiveText">{{ indicator[year_key] }}</span></p> </td>
+                            <td width="10%" align="center"> <p {{ opacity }}<span class="responsiveText">{{ indicator[year_key] }}</span></p> </td>
                           {% endif %}
 
                           {% assign additional_cells = additional_cells | minus: 1 %}
@@ -123,9 +126,9 @@
                           {% endif %}
 
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
-                            <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ status }}" class="responsiveWeather hidden-xs" title="{{ status }}"/></a> </td>
+                            <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ status }}" class="responsiveWeather hidden-xs" title="{{ status }}" {{ opacity }}/></a> </td>
                           {% else %}
-                            <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}"/></a> </td>
+                            <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}" {{ opacity }}/></a> </td>
                           {% endif %}
                         {% elsif j == 'a' %}
                             <td width="10%" align="center"><p><span class="responsiveText">{{ page.t.weather.no_assessment }}</span></p></td>
@@ -168,7 +171,7 @@
                           <div class=responsiveText>{{ page.t.weather[target_trans] }}
                             {% if target_trans contains '_old' %}
                               {% assign old_date_key = target_key | append: '_date' %}
-                              <span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }}) {{ old_date_key }}</span>
+                              <span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
                             {% elsif target_trans contains '_new' %}
                               {% assign new_date_key = target_key | append: '_date' %}
                               <span class="small">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
