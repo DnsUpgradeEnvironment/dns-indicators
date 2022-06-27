@@ -173,6 +173,7 @@ footer_fields:
     label: metadata_fields.computation_units
     value: data.number
 
+
 series_toggle: true
 graph_title_from_series: true
 decimal_separator: ','
