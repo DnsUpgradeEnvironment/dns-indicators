@@ -3736,11 +3736,11 @@ opensdg.chartTypes.base = function(info) {
       var overrides = {
         options: {
           scales: {
-            yAxes: [{
+            y: {
               ticks: {
                 stepSize: info.graphStepsize.step,
               }
-            }]
+            }
           }
         }
       }
