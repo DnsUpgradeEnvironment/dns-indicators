@@ -26,7 +26,7 @@
             {% assign single_indicator_key = "weather_indicator_" | append: single_indicator %}  <!--weather_indicator_1-->
 
             {% assign idc_sort_order = indicator["indicator_sort_order"] %} <!--7-1-ab-->
-            {% assign letters = "h,g,f,e,d,c,b,a" | split: ',' %}
+            {% assign letters = "g,f,e,d,c,b,a" | split: ',' %}
 
             {% if indicator[weather_active_key] == true %}
               <!--Check for multiple targets-->
