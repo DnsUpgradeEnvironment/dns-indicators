@@ -7,6 +7,7 @@ var indicatorView = function (model, options) {
         OPTIONS = options;
 
     var helpers = {% include assets/js/view/helpers.js %}
+    VIEW.helpers = helpers;
 
     VIEW._chartInstance = undefined;
     VIEW._tableColumnDefs = OPTIONS.tableColumnDefs;
@@ -82,6 +83,16 @@ var indicatorView = function (model, options) {
 
         if (args.hasGeoData && args.showMap) {
             VIEW._mapView = new mapView();
+            VIEW._mapView.initialise(
+                args.indicatorId,
+                args.precision,
+                args.precisionItems,
+                OPTIONS.decimalSeparator,
+                args.dataSchema,
+                VIEW.helpers,
+                MODEL.helpers,
+                args.chartTitles,
+            );
             VIEW._mapView.initialise(args.indicatorId, args.precision, OPTIONS.decimalSeparator, args.dataSchema);
         }
     });

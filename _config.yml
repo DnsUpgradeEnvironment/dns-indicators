@@ -191,8 +191,9 @@ plugins:
 
 
 # Use a remote Jekyll theme.
-#remote_theme: brockfanning/open-sdg@map-disaggregation-index-bug
-remote_theme: open-sdg/open-sdg@2.0.0-beta2
+remote_theme: brockfanning/open-sdg@map-series-unit-behaviors
+#remote_theme: open-sdg/open-sdg@2.0.0-beta2
+
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns
