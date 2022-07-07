@@ -101,7 +101,6 @@ var indicatorView = function (model, options) {
                 MODEL.helpers,
                 args.chartTitles,
             );
-            VIEW._mapView.initialise(args.indicatorId, args.precision, OPTIONS.decimalSeparator, args.dataSchema);
         }
     });
 
