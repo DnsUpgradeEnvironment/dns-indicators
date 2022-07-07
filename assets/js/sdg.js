@@ -2719,7 +2719,6 @@ function getTimeSeriesAttributes(rows) {
   }
 })();
 
-  this.helpers = helpers;
 
   // events:
   this.onDataComplete = new event(this);
@@ -3716,7 +3715,7 @@ opensdg.chartTypes.base = function(info) {
                     callbacks: {
                         label: function (tooltipItem) {
 
-                          var label =  tooltipItem.dataset.label;
+                          var label =  translations.t(tooltipItem.dataset.label);
                           label = label.replace('<sub>','').replace('</sub>','');
                           if (label.length > 45){
 
@@ -4657,7 +4656,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 MODEL.helpers,
                 args.chartTitles,
             );
-            VIEW._mapView.initialise(args.indicatorId, args.precision, OPTIONS.decimalSeparator, args.dataSchema);
         }
     });
 
@@ -4731,7 +4729,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
             fieldGroupElement.attr('data-has-data', fieldGroup.hasData);
             var fieldGroupButton = fieldGroupElement.find('> button'),
                 describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
-                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '.');
+                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
             if (!fieldGroup.hasData && !describedByCurrent.includes(noDataHintId)) {
                 fieldGroupButton.attr('aria-describedby', describedByCurrent + ' ' + noDataHintId);
             }
