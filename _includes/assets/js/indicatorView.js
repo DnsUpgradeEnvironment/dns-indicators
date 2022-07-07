@@ -101,7 +101,6 @@ var indicatorView = function (model, options) {
                 MODEL.helpers,
                 args.chartTitles,
             );
-            VIEW._mapView.initialise(args.indicatorId, args.precision, OPTIONS.decimalSeparator, args.dataSchema);
         }
     });
 
@@ -175,7 +174,7 @@ var indicatorView = function (model, options) {
             fieldGroupElement.attr('data-has-data', fieldGroup.hasData);
             var fieldGroupButton = fieldGroupElement.find('> button'),
                 describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
-                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '.');
+                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
             if (!fieldGroup.hasData && !describedByCurrent.includes(noDataHintId)) {
                 fieldGroupButton.attr('aria-describedby', describedByCurrent + ' ' + noDataHintId);
             }
