@@ -77,7 +77,7 @@ opensdg.chartTypes.base = function(info) {
                     callbacks: {
                         label: function (tooltipItem) {
 
-                          var label =  tooltipItem.dataset.label;
+                          var label =  translations.t(tooltipItem.dataset.label);
                           label = label.replace('<sub>','').replace('</sub>','');
                           if (label.length > 45){
 
