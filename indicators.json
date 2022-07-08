@@ -95,7 +95,7 @@
         },
         {
           "id": "3-2-b",
-          "title": "Anteil der Bevölkerung mit erhöhter PM<sub>10</sub>-Feinstaubexposition",
+          "title": "Anteil der Bevölkerung mit erhöhter PM10-Feinstaubexposition",
           "description": "",
           "keywords": "",
           "href": "/dns-indicators/3-2-b",
@@ -239,7 +239,7 @@
         },
         {
           "id": "7-2-b",
-          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch!!",
+          "title": "Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch",
           "description": "",
           "keywords": "",
           "href": "/dns-indicators/7-2-b",
@@ -407,7 +407,7 @@
         },
         {
           "id": "11-2-c",
-          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln<br><br>",
+          "title": "Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln",
           "description": "",
           "keywords": "",
           "href": "/dns-indicators/11-2-c",
@@ -447,7 +447,7 @@
         },
         {
           "id": "12-1-b",
-          "title": "Globale Umweltinanspruchnahme des Konsums privater Haushalte",
+          "title": "Globale Umweltinanspruchnahme durch den Konsum privater Haushalte",
           "description": "",
           "keywords": "",
           "href": "/dns-indicators/12-1-b",
@@ -591,7 +591,7 @@
         
         {
           "id": "17-1-a",
-          "title": "Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen<br><br>",
+          "title": "Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen",
           "description": "",
           "keywords": "",
           "href": "/dns-indicators/17-1-a",
@@ -599,7 +599,7 @@
         },
         {
           "id": "17-2-a",
-          "title": "Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr<br><br>",
+          "title": "Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr",
           "description": "",
           "keywords": "",
           "href": "/dns-indicators/17-2-a",

@@ -130,7 +130,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708120552">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708125521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -417,6 +417,12 @@ data-event-label="high"
     </div>
 
     
+    <div class="col-md-auto">
+      <a href="https://sdg-indikatoren.de/en/" class="btn btn-primary btn-block goal-3 navigation-btn" title="" role="button">
+        <b class="btn-label d-none d-md-block">Corresponding global indicator  </b><b class="btn-label d-block d-md-none">Indicator </b>
+      </a>
+    </div>
+    
 
     <div class="col d-grid gap-2">
       <a href="/dns-indicators/en/3-2-b" class="btn btn-primary btn-block goal-3 navigation-btn text-nowrap" role="button">
@@ -443,12 +449,11 @@ data-event-label="high"
     <div>
   <div class="my-header">
     <h3>
-      <a href="https://sustainabledevelopment-deutschland.github.io/en/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" title="If the trend continues, the target value will be met or the difference between the target value and the current value will be less than 5&nbsp;%" alt="Weathersymbol" />
+      <a href="https://dnsTestEnvironment.github.io/dns-indicators/en/status"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" title="Text will follow soon" alt="Wettersymbol" />
       </a>
     </h3>
   </div>
   <div class="my-header-note">
-    <span> (Evaluation of the year 2018 as reporting year from indicator report 2021)</span>
   </div>
 </div>
 
@@ -469,19 +474,19 @@ data-event-label="high"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit="2005 = 100"
+  data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap=""
-  data-startvalues="[{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Time series&quot;},{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Target&quot;},{&quot;field&quot;:&quot;Air pollutants&quot;,&quot;value&quot;:&quot;Air pollutants overall&quot;},{&quot;field&quot;:&quot;Air pollutants&quot;,&quot;value&quot;:&quot;SO&lt;sub&gt;2&lt;/sub&gt;&quot;},{&quot;field&quot;:&quot;Air pollutants&quot;,&quot;value&quot;:&quot;NO&lt;sub&gt;x&lt;/sub&gt;&quot;},{&quot;field&quot;:&quot;Air pollutants&quot;,&quot;value&quot;:&quot;NH&lt;sub&gt;3&lt;/sub&gt;&quot;},{&quot;field&quot;:&quot;Air pollutants&quot;,&quot;value&quot;:&quot;NMVOC&quot;},{&quot;field&quot;:&quot;Air pollutants&quot;,&quot;value&quot;:&quot;PM&lt;sub&gt;2.5&lt;/sub&gt;&quot;}]"
+  data-showmap="false"
+  data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-graphannotations="null"
+  data-showline="false"
+  data-spangaps="false"
+  data-graphannotations="[{&quot;value&quot;:55.0,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;},&quot;preset&quot;:&quot;target_line&quot;}]"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
@@ -593,32 +598,6 @@ data-event-label="Change to Table tab"
     <span class="hidden-xs" style="color:black">Table</span></button>
   </li>
   
-  <li role="presentation"
-    class="
-      nav-item
-      map
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-mapview"
-        data-bs-target="#mapview"
-        aria-controls="mapview"
-        data-no-disagg="true"
-        data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Map tab"
-
-        ><i class="fa fa-map" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Map</span></button>
-  </li>
-  
 </ul>
 
     <div class="tab-content data-view">
@@ -655,11 +634,6 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>German Environment Agency</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
@@ -667,13 +641,7 @@ data-event-label="Change to Map tab"
         
 
         
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
 
-        
-        <dt><u>Comment</u>:</dt>
-        <dd>Sulphur dioxide (SO<sub>2</sub>), nitrogen oxides (NO<sub>x</sub>), ammonia (NH<sub>3</sub>), volatile organic compounds (NMVOC) and particulate matter (PM<sub>2.5</sub>), average index of measurements</dd>
         
 
         
@@ -705,7 +673,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -739,11 +707,6 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>German Environment Agency</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
@@ -751,13 +714,7 @@ data-event-label="Change to Map tab"
         
 
         
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
 
-        
-        <dt><u>Comment</u>:</dt>
-        <dd>Sulphur dioxide (SO<sub>2</sub>), nitrogen oxides (NO<sub>x</sub>), ammonia (NH<sub>3</sub>), volatile organic compounds (NMVOC) and particulate matter (PM<sub>2.5</sub>), average index of measurements</dd>
         
 
         
@@ -789,86 +746,12 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
-
-        </div>
-      
-    
-      
-        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
-          
-<h4 id="map-heading" class="map-title">Emissions of air pollutants</h4>
-<div id="map" aria-describedby="table-alternative">
-  <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
-</div>
-
-
-
-
-<div id="mapFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>German Environment Agency</dd>
-        
-
-        
-        <dt><u>Geographical Area</u>:</dt>
-        <dd>Germany</dd>
-        
-
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
-
-        
-        <dt><u>Comment</u>:</dt>
-        <dd>Sulphur dioxide (SO<sub>2</sub>), nitrogen oxides (NO<sub>x</sub>), ammonia (NH<sub>3</sub>), volatile organic compounds (NMVOC) and particulate matter (PM<sub>2.5</sub>), average index of measurements</dd>
-        
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ><u>Comment</u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ><u>Last modification of code <small>(data)</small></u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
-
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
-        
-    <dl>
-</div>
-
 
         </div>
       
@@ -1033,7 +916,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>The indicator presents the mean value of the indices of national emissions for the five air pollutants sulphur dioxide (SO<sub>2</sub>), nitrogen oxides (NO<sub>x</sub>), ammonia (NH<sub>3</sub>), volatile organic compounds (NMVOC) and particulate matter (PM<sub>2,5</sub>).</p>
+                <p>The indicator constitutes the mean value of the indices of national emissions of the five air pollutants sulphur dioxide (SO2), nitrogen oxides (NOx), ammonia (NH3), non-methane volatile organic compounds (NMVOCs) and particulate matter (PM2.5).</p>
 
               
             </td>
@@ -1075,7 +958,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>Air pollutants do not only impair human health, but also ecosystems and biodiversity. Therefore, emissions of air pollutants should be reduced by 45 % by 2030 compared to 2005. To represent the development of health-relevant as well as ecosystem pollution, German emissions of SO<sub>2</sub>, NO<sub>x</sub>, NH<sub>3</sub>, NMVOC and PM<sub>2,5</sub> have been summarised into a single indicator.</p>
+                <p>Air pollutants impair not only human health but also ecosystems and biodiversity. The aim for 2030 is therefore to reduce the volume of air pollutants by 45% of their 2005 level. To make it possible to portray the development of pressure on both health and the ecosystem, German emissions of SO2, NOx, NH3, NMVOCs and PM2.5 have been combined into a single indicator.</p>
 
               
             </td>
@@ -1102,7 +985,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Data state </th>
             <td>
               
-                <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+                <p>The data published in the indicator report 2021 is as of 31.12.2020. The data shown on the DNS-Online-Platform is updated regularly, so that more current data may be available online than published in the indicator report 2021.</p>
 
               
             </td>
@@ -1935,7 +1818,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2021</i><br /><br />In accordance with the European Union’s National Emission Ceilings (NEC) Directive negotiated at European level, Germany is required to reduce emissions of individual air pollutants by 2030 as follows: SO<sub>2</sub> by 58 %, NO<sub>x</sub> by 65 %, NH<sub>3</sub> by 29 %, NMVOC by 28 % and PM<sub>2,5</sub> by 43 %. On this basis, the German Environment Agency calculated an unweighted arithmetic mean of the individual reductions of the above air pollutants as a joint target value. The individual rates of change of the single air pollutants are offset equally against one another. This means that irrespective of the separate reduction targets under the NEC Directive, increasing emissions of individual pollutants can be compensated for in this indicator by reducing the emissions of other pollutants.<br /><br /><br /><br />The data are computed annually by the German Environment Agency using various sources. They serve as a basis for the reporting obligation pursuant to the Geneva Convention (CLRTAP) and the NEC Directive. The data are further processed within the context of the Federal Statistical Office’s Environmental-Economic Accounts. As a result, emissions are published according to various production sectors and households along with other emitters.<br /><br /><br /><br />Emissions of air pollutants overall fell by 17.5 % until 2016 from 2005. The indicator thus moved in the intended direction but will not reach the target for 2030 if the development remains the same. Emissions of individual pollutants changed to varying degrees in the period from 2005 to 2016.<br /><br /><br /><br />Emissions of volatile organic compounds (NMVOC), which are primarily due to the industrial use of solvents, were significantly reduced by 20.5 % during the specified period. Consequently, the targeted reduction of 28 % can be achieved by 2030.<br /><br /><br /><br />In the specified period emissions of particulate matter (PM<sub>2,5</sub>) have been reduced by 25.3 %. If this annual trend continues, the set reduction target will be reached. At 26.4 %, the largest proportion of PM<sub>2,5</sub> emissions originated from households and small consumers and was caused in particular by heat generation in 2016. The transport sector accounted for 24.8 % of PM<sub>2,5</sub> emissions in the same year.<br /><br /><br /><br />Emissions of nitrogen oxides (NO<sub>x</sub>) were reduced by 22.9 % until 2016, hence going in the intended direction. However, the average reduction of the last few years will not be sufficient to achieve the target. In 2016 the main share of nitrogen oxides was emitted mainly by transport and the energy sector.<br /><br /><br /><br />Emissions of sulphur dioxide (SO<sub>2</sub>), which are mainly generated in the energy sector, decreased by 24.8 % in the specified period. Although these emissions went down as intended, the average reduction achieved in recent years will not be sufficient to achieve the set goal.<br /><br /><br /><br />Following a prolonged period of stagnation, emissions of ammonia increased by a total of 6.0 % between 2005 and 2016, and therefore contrary to the intended direction. The increase can be attributed primarily to the distribution of residues from the fermentation of fuel crops. According to calculations by the German Environment Agency, 95.0 % of all domestic ammonia emissions in 2016 originated from agricultural production, and from livestock farming in particular.</p>
+          <p> <p><i>Text from the Indicator Report 2021</i>Germany has made a commitment to the European Union to reduce emissions of air pollutants by 2030 as follows: Sulphur dioxide by 58%, nitrogen oxides by 65%, ammonia by 29%, volatile organic compounds by 28% and particulate matter by 43%. On this basis, the Federal Environment Agency calculated a non-weighted, arithmetic mean of the individual reductions in the specified air pollutants as a target. The rates of change in the individual air pollutants are offset equally against one another. Notwithstanding the separate reduction targets, this means that increasing emissions of individual pollutants covered by this indicator may be offset by higher reductions in the emissions of other pollutants.<br />The data are computed annually by the Federal Environment Agency from various sources. They serve as a basis for the reporting obligation under the Geneva Convention on Long-Range Transboundary Air Pollution (CLRTAP) and the National Emission Ceilings (NEC) Directive. The data undergo further analysis as part of the environmental economic accounting performed by the Federal Statistical Office. The emissions, for instance, are broken down by origin into various branches of economic activity and private households.<br />Overall emissions of air pollutants fell by 24.7% from 2005 to 2018. The indicator has thus moved in the desired direction, and the target for 2030 will be achieved if the trend is maintained. Emissions of individual pollutants changed to varying degrees, however, in the period from 2005 to 2018.<br />Emissions of non-methane volatile organic compounds (NMVOC)s, which are primarily due to the industrial use of solvents, were reduced by a significant 24.6% during that period. This means that the targeted reduction of 28% by 2030 is achievable.<br />Emissions of particulate matter (PM2.5) fell by 31.5% in the aforesaid period. If the annual average trend were maintained, the set reduction target would be achieved for these emissions too. The largest source of particulate emissions in 2018 was industry, which accounted for 29.3% of the total. Households and small-scale consumers discharged 24.1%, chiefly from heating systems. Transport accounted for 25.5% of particulate emissions, which was 10.6 percentage points down on 2005.<br />Emissions of nitrogen oxides (NOxx) fell by 27.0% from 2005 to 2018 and so are heading in the desired direction. The average reduction of the past few years, however, would not suffice to meet the target. The majority of nitrogen oxides emitted in 2018 came from transport and the energy industry.<br />Emissions of sulphur dioxide (SO2), which are mainly discharged by the energy industry, fell by 39.5% in the reference period. This trend has moved in the right direction. The average reduction of the past few years would be sufficient to meet the target.<br />Emissions of ammonia (NH3) declined by 0.8% from 2005 to 2018 and remain persistently high. This stagnation is mainly due to the spreading of fermentation residues from fuel crops. According to calculations by the Federal Environment Agency, 95.3% of all national ammonia emissions in 2018 originated from agricultural production, particularly livestock farming.</p>
  </p>
         
       
@@ -2745,22 +2628,6 @@ data-event-label="Change to indicator.sources tab"
 
 
 
-
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
-        
-        <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
   <div class="row">
   
     
@@ -2794,712 +2661,32 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Indicator </th>
+              <td colspan="9">
+                <p>3.2.a Emissionen von Luftschadstoffen</p>
+
+              </td>
+            </tr>
+          
+        
+      
+
+      
+
+    
   
       
         
@@ -3509,19 +2696,130 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/en"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/uba.png" alt=" German Environment Agency (UBA)" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
 
-              
+      
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Target </th>
+              <td colspan="9">
+                <p>Reduktion der Emissionen des Jahres 2005 auf 55 % (ungewichtetes Mittel der fünf Schadstoffe) bis 2030</p>
+
+              </td>
+            </tr>
+          
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+        
+        
+        
+        <tr id="years">
+          <th scope="row" style="padding-right: 10px;">Year </th>
+          
+            <td align="left" style="margin-bottom: 15px;">
+              <p><p>2017</p>
+</p>
+            </td>
+          
+          
+            <td align="left" style="margin-bottom: 15px;">
+              <p><p>2018</p>
+</p>
+            </td>
+          
+          
+            <td align="left" style="margin-bottom: 15px;">
+              <p><p>2019</p>
+</p>
+            </td>
+          
+          <td align="left" style="margin-bottom: 15px;">
+            <p><p>2020</p>
+</p>
+          </td>
+        </tr>
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+         <!--Single target-->
+          
+        
+        
+          <tr id="items">
+            <th scope="row" style="padding-right: 10px;">Evaluation </th>
+            
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              </td>
+            
+            
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              </td>
+            
+            
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              </td>
+            
+            <td align="left" style="padding-left: 0px;padding-right: 0px;">
+              <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           </tr>
         
       
 
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
       
 
       
@@ -3538,32 +2836,7 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-
-      
-
-    
-  
-      
         
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>German Environment Agency (UBA)</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
       
 
       
@@ -3578,28 +2851,162 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
 
-                
-                  <a href="https://www.umweltbundesamt.de/bild/index-der-luftschadstoff-emissionen" target="_blank">
-                     <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                
-
-              
-            </td>
-          </tr>
+      
         
       
 
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
       
 
       
@@ -3627,6 +3034,967 @@ data-event-label="Change to indicator.sources tab"
       
         
           
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -3684,6 +4052,22 @@ data-event-label="Change to indicator.sources tab"
     </div>
     
   </div>
+
+
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
 
 
       </article>
@@ -3764,15 +4148,8 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
@@ -3790,12 +4167,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220708120552'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220708125521'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220708120552"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220708125521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

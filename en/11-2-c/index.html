@@ -130,7 +130,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708120552">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708125521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -372,7 +372,7 @@ data-event-label="high"
           <h1>
             
               <h1 class="titles goal-11" title="Section: Mobility">
-                Mobility – <i title="Postulate: Guaranteeing mobility – Protecting the environment">Guaranteeing mobility – Protecting the environment</i>
+                Mobility – <i title="Postulate: Guaranteeing mobility – protecting the environment">Guaranteeing mobility – protecting the environment</i>
               </h1>
               <h2 class="titles goal-11">Indicator 11.2.c: Accessibility of medium-sized and large cities by public transport</h2>
             
@@ -449,7 +449,10 @@ data-event-label="high"
     <div>
   <div class="my-header">
     <h3>
+      &lt;/a&gt;
     </h3>
+  </div>
+  <div class="my-header-note">
   </div>
 </div>
 
@@ -466,22 +469,22 @@ data-event-label="high"
   data-indicatorid='indicator_11-2-c'
   data-id="11-2-c"
   data-country="Germany"
-  data-charttitle="Travel time by public transport to the nearest medium-sized or large city"
+  data-charttitle="Travel times by public transport to nearest medium-sized or major city"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit="Minutes"
+  data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="true"
-  data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;In relation to the middle and upper centers of the respective year&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;In relation to the middle and upper centers of the year 2012&quot;}]"
+  data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
+  data-showline="false"
+  data-spangaps="false"
   data-graphannotations="null"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
@@ -637,7 +640,7 @@ data-event-label="Change to Map tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Travel time by public transport to the nearest medium-sized or large city</h4>
+          <h4 id="chart-heading" class="chart-title">Travel times by public transport to nearest medium-sized or major city</h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -656,20 +659,12 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR)</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
         <dd>Germany</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -703,7 +698,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -737,20 +732,12 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR)</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
         <dd>Germany</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -784,7 +771,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -797,7 +784,7 @@ data-event-label="Change to Map tab"
       
         <div role="tabpanel" class="tab-pane " id="mapview" class="map">
           
-<h4 id="map-heading" class="map-title">Travel time by public transport to the nearest medium-sized or large city</h4>
+<h4 id="map-heading" class="map-title">Travel times by public transport to nearest medium-sized or major city</h4>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
 </div>
@@ -809,20 +796,12 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR)</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
         <dd>Germany</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -856,7 +835,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -1025,7 +1004,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>The indicator shows the population-weighted average travel time by public transport to the nearest medium-sized or large city.</p>
+                <p>The indicator shows population-weighted average travel times to the nearest medium-sized or major city by public transport.</p>
 
               
             </td>
@@ -1067,7 +1046,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>Mobility is a key factor in enabling people’s social participation. Accordingly, spatial develop-ment and transportation should be designed to provide good mobility services and suitable connections to medium-sized or large cities for the entire population. Therefore, the target of the Federal Government is to shorten the average travel time by public transport to the nearest medium-sized or large city.</p>
+                <p>Mobility is a key factor in enabling people to participate in society. Accordingly, urban development and transport should be designed to provide good mobility services and suitable connections to medium-sized or major cities for the entire population. Therefore, the goal of the German Government is to shorten the average amount of time it takes people to travel to their nearest medium-sized or major city by public transport.</p>
 
               
             </td>
@@ -1094,7 +1073,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Data state </th>
             <td>
               
-                <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+                <p>The data published in the indicator report 2021 is as of 31.12.2020. The data shown on the DNS-Online-Platform is updated regularly, so that more current data may be available online than published in the indicator report 2021.</p>
 
               
             </td>
@@ -1927,7 +1906,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2021</i><br /><br />The indicator is computed by the Federal Institute for Research on Building, Urban Affairs and Spatial Development. Means of public transport are defined as those transport services that can be used by anyone on payment of the relevant fees. Flexible forms of operation, such as on-call buses that operate on demand without fixed stopping points and timetables, are therefore not taken into account.<br /><br /><br /><br />The data basis comprises schedule data of the Deutsche Bahn, transport associations along with numerous other timetables. With the help of the timetable data, the travel times to the nearest medium-sized or large city during peak morning traffic times were determined for approximately 250,000 stops. This time period is defined differently in the two reference years. Whereas connections with an arrival time between 6:00 a.m. and 9:00 a.m. were taken into account in 2012, only those with arrival times between 8:00 a.m. and 12:00 noon were included in 2016.<br /><br /><br /><br />Since not all local transport schedules were fully integrated into the database used, the values for 2012 and 2016 are not fully comparable. The frequency of a transport service to the nearest medium-sized or large city is similarly disregarded as is the travel time to and from the stop. Furthermore, this indicator is based on the timetable data – which means that delays or even cancellations are not taken into account.<br /><br /><br /><br />The classification of a location as a medium-sized or large city is determined according to the availability of goods, services and infrastructure at that location that are not available in the surrounding smaller places. These include, among other things, specialist medical practices, hospitals, cultural facilities as well as secondary schools and institutions of higher education.<br /><br /><br /><br />In each medium-sized or large city, especially in major cities, only one destination point (city centre) was determined. The destination stops were selected within a radius of one kilometre around the destination point, and the fastest connection from the starting stop to the destination was searched for. With the help of small-area population data from the Federal Statistical Office, a population-weighted average value of the travel time for Germany was then determined.<br /><br /><br /><br />The indicator is related to the United Nations indicator 11.2.1 “Access to public transport”. Germany reports, based on data from the German Mobility Panel, the proportion of the population living within ten minutes of a public stop. Based on these data, around 94 % of the population had access to public transport in 2017.<br /><br /><br /><br />The indicator values available for 2012 and 2016 show that the population-weighted average travel time to the nearest medium-sized or large city has declined from 23.5 to 22.4 minutes during this period. This corresponds to a reduction of 4.7 %. It is not possible to determine the extent to which the previously described methodological changes or re-designation of medium-sized cities are also responsible for the decrease. However, the number of medium-sized or large cities increased from 1,010 in 2012 to 1,069.</p>
+          <p> <p><i>Text from the Indicator Report 2021</i>The indicator is computed by the Federal Institute for Research on Building, Urban Affairs and Spatial Development. Public means of transport are defined as transport services that anyone can use on payment of the relevant fees. Flexible forms of operation, such as on-call buses that operate on demand without fixed stopping points and timetables, are not taken into account.<br />Comparing the indicator values for 2012 and 2018 shows that the population-weighted average travel time to the nearest medium-sized or major city fell from 23.5 to 21.9 minutes during that period. This equates to a reduction of 6.9%.<br />However, the number of medium-sized and major cities grew from 1,010 in 2012 to 1,109 in 2018. Much of this growth can be traced to the designation of additional urban centres as medium-sized cities in Bavaria.<br />It is beyond the purview of this report to assess whether that change of status reflects an actual improvement in the provision available in those cities. Nonetheless, the increase in medium-sized and major cities notably helped reduce the average travel time required to reach one.<br />If the average travel time for each reporting year is calculated on the basis of only those intermediate and major cities which existed in 2012, it is found to have decreased from 23.5 minutes in 2012 to 22.5 minutes in 2018. This equates to a reduction in travel time of only 4.3% in relation to 2012.<br />The data for these calculations were taken from the timetables of Deutsche Bahn, various networks and numerous other transport providers. With the help of the timetable data, the travel times to the nearest intermediate or major city during peak morning traffic times were determined for some 258,000 stops. This period is defined differently across the reporting years. Whereas connections with arrival times between 6 a.m. and 9 a.m. were taken into account in 2012, the figures for 2016 and 2018 refer to connections with arrival times between 8 a.m and 12 noon.<br />Not least because not all local transport schedules had been fully incorporated into the database used, the values for the different reporting years cannot be compared without caveats. Therefore, the frequency of transport services to the nearest intermediate or major city is ignored, as is travel time to and from the stopping point. Furthermore, this indicator is based on timetable data – which means that delays or even cancellations are not taken into account.<br />The classification of an urban centre as a medium-size or major city is determined according to the availability of goods, services and infrastructure that are not available in the surrounding regional towns. These include, among other things, specialist medical practices, hospitals, cultural facilities as well as secondary schools and institutions of higher education. In each intermediate or major city, especially in large cities, only one location in the city centre was designated as the destination. The destination stops were selected within a radius of one kilometre around that destination point, and the quickest connection from each departure stop to that point was sought. A population-weighted average value of the travel time for Germany was then determined with the help of small-scale population data from the Federal Statistical Office.</p>
  </p>
         
       
@@ -2737,22 +2716,6 @@ data-event-label="Change to indicator.sources tab"
 
 
 
-
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
-        
-        <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
   <div class="row">
   
     
@@ -2786,713 +2749,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
       
         
       
@@ -3501,19 +2757,19 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/bbsr.png" alt=" Federal Institute for Research on Building, Urban Affairs and Spatial Development" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
 
-              
-            </td>
-          </tr>
-        
       
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Indicator </th>
+              <td colspan="9">
+                <p>11.2.c Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln</p>
 
+              </td>
+            </tr>
+          
+        
       
 
       
@@ -3530,32 +2786,17 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-
-      
-
-    
-  
-      
         
-      
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Target </th>
+              <td colspan="9">
+                <p>Verringerung der durchschnittlichen Reisezeit mit öffentlichen Verkehrsmitteln</p>
 
-      
-      
-
-      
+              </td>
+            </tr>
+          
         
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Federal Institute for Research on Building, Urban Affairs and Spatial Development</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
       
 
       
@@ -3586,6 +2827,1006 @@ data-event-label="Change to indicator.sources tab"
       
         
           
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -3643,6 +3884,22 @@ data-event-label="Change to indicator.sources tab"
     </div>
     
   </div>
+
+
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
 
 
       </article>
@@ -3749,12 +4006,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220708120552'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220708125521'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220708120552"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220708125521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

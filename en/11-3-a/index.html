@@ -130,7 +130,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708120552">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708125521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -449,12 +449,10 @@ data-event-label="high"
     <div>
   <div class="my-header">
     <h3>
-      <a href="https://sustainabledevelopment-deutschland.github.io/en/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" title="If the trend continues, the target value will be met or the difference between the target value and the current value will be less than 5&nbsp;%" alt="Weathersymbol" />
-      </a>
+      &lt;/a&gt;
     </h3>
   </div>
   <div class="my-header-note">
-    <span> (Evaluation of the year 2019 as reporting year from indicator report 2021)</span>
   </div>
 </div>
 
@@ -471,22 +469,22 @@ data-event-label="high"
   data-indicatorid='indicator_11-3-a'
   data-id="11-3-a"
   data-country="Germany"
-  data-charttitle="Proportion of people in households that spend more than 40&nbsp;% of their disposable income on housing"
+  data-charttitle="Proportion of people living in households where more than 40% of disposable income is spent on housing"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit="Percent"
+  data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap=""
-  data-startvalues="[{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Time series&quot;},{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Target&quot;}]"
+  data-showmap="false"
+  data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
+  data-showline="false"
+  data-spangaps="false"
   data-graphannotations="null"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
@@ -599,32 +597,6 @@ data-event-label="Change to Table tab"
     <span class="hidden-xs" style="color:black">Table</span></button>
   </li>
   
-  <li role="presentation"
-    class="
-      nav-item
-      map
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-mapview"
-        data-bs-target="#mapview"
-        aria-controls="mapview"
-        data-no-disagg="true"
-        data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Map tab"
-
-        ><i class="fa fa-map" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Map</span></button>
-  </li>
-  
 </ul>
 
     <div class="tab-content data-view">
@@ -642,7 +614,7 @@ data-event-label="Change to Map tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Proportion of people in households that spend more than 40&nbsp;% of their disposable income on housing</h4>
+          <h4 id="chart-heading" class="chart-title">Proportion of people living in households where more than 40% of disposable income is spent on housing</h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -661,11 +633,6 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Federal Statistical Office (Destatis)</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
@@ -673,13 +640,7 @@ data-event-label="Change to Map tab"
         
 
         
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
 
-        
-        <dt><u>Comment</u>:</dt>
-        <dd>2018 provisional data</dd>
         
 
         
@@ -711,7 +672,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -745,11 +706,6 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Federal Statistical Office (Destatis)</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
@@ -757,13 +713,7 @@ data-event-label="Change to Map tab"
         
 
         
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
 
-        
-        <dt><u>Comment</u>:</dt>
-        <dd>2018 provisional data</dd>
         
 
         
@@ -795,86 +745,12 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
-
-        </div>
-      
-    
-      
-        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
-          
-<h4 id="map-heading" class="map-title">Proportion of people in households that spend more than 40&nbsp;% of their disposable income on housing</h4>
-<div id="map" aria-describedby="table-alternative">
-  <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
-</div>
-
-
-
-
-<div id="mapFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Federal Statistical Office (Destatis)</dd>
-        
-
-        
-        <dt><u>Geographical Area</u>:</dt>
-        <dd>Germany</dd>
-        
-
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
-
-        
-        <dt><u>Comment</u>:</dt>
-        <dd>2018 provisional data</dd>
-        
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ><u>Comment</u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ><u>Last modification of code <small>(data)</small></u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
-
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
-        
-    <dl>
-</div>
-
 
         </div>
       
@@ -1039,7 +915,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>The indicator shows the share of people who live in households that spend more than 40 % of their disposable household income on housing. Housing expenditure includes net rent, heating expenses, incidental rental expenses, energy costs and expenditure on water supply as well as value-maintaining investments and interest payments on loans in the case of residential ownership.</p>
+                <p>The indicator shows the share of people living in households where more than 40% of disposable household income is spent on housing. Housing costs comprise rent and ancillary charges, energy costs and water bills as well as, in the case of home ownership, investments to maintain the value of a property and interest payments on associated loans.</p>
 
               
             </td>
@@ -1081,7 +957,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>High housing costs place restrictions on households with regard to their other consumption choices. Housing expenditure that amounts to more than 40 % of disposable household income is considered to be an overload. The proportion of people who live in households that spend more than 40 % of their disposable household income on housing is therefore to be reduced to 13 % by 2030.</p>
+                <p>High housing costs place restrictions on households with regard to their other consumption choices. Housing expenses amounting to more than 40% of disposable household income are considered to be excessive. The share of people who live in households where more than 40% of disposable household income is spent on housing is therefore to be reduced to 13% by 2030.</p>
 
               
             </td>
@@ -1108,7 +984,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Data state </th>
             <td>
               
-                <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+                <p>The data published in the indicator report 2021 is as of 31.12.2020. The data shown on the DNS-Online-Platform is updated regularly, so that more current data may be available online than published in the indicator report 2021.</p>
 
               
             </td>
@@ -1941,7 +1817,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2021</i><br /><br />The initial data for the indicator originate from the Europe-wide harmonised statistics on income and living conditions (EU-SILC). The indicator expresses expenditure on housing relative to disposable household income. In case a household is in receipt of housing allowance or comparable social benefits such as payments for accommodation and heating from basic security benefits, these are also included in the calculation of the indicator. These social benefits are not added to the income, but are deducted from the housing costs so that the burden of housing costs of households that rely on housing-related social benefits is reduced or approaches zero.<br /><br /><br /><br />The purchase of an owner-occupied property is not included in the expenditure on housing. Other spending on measures to enhance the value of a property should not be taken into account either. However, it is not always possible to clearly differentiate between these and value-maintaining expenditures that are considered as housing expenditure. Therefore, some simplifying assumptions must be made. Moreover, the indicator also does not take into account any additional expenditure associated with the place of residence. For instance, expenditure on travelling from the place of residence to the workplace is not taken into account, although it is possible that the threshold of 40 % is not reached only due to the fact that the place of residence is far away from work.<br /><br /><br /><br />By defining the threshold value as “40 % of disposable household income”, the indicator provides no information about average housing costs. If clusters emerge close to this threshold, they can cause major changes in the indicator over time even if there is only a small change in the ratio of income and housing expenditure. <br /><br /><br /><br />The indicator increased from 14.5 % in 2010 to a relatively constant 16 % during the period from 2011 until 2016. In 2017, it decreased to the initial value of 14.5 %. However, due to statistical uncertainties this cannot be considered a statistically significant change, but constitutes more of a continuation at a similar level. Based on the current trend, it is therefore not (yet) possible to determine whether there is any movement in the direction of the set target.<br /><br /><br /><br />With regard to the actual housing situation and disposable income, the indicator provides only a limited amount of information. After all, the calculation method also declares high-income households with a high housing expenditure as being overburdened. However, the data do indicate that considerably more households with a low income are above the 40 % threshold. Separate analysis of the population at risk of poverty, i.e. of those people who have less than 60 % of the median equivalised income of the population, also shows that the share of people overburdened by housing costs is closely related to income. Among those at risk of poverty, the proportion of people overburdened by housing costs rose from 42.2 % (2010) to 54.4 % (2014). In the following three years, this share declined slightly and stood at 48.5 % in 2017. The proportion of people not considered to be at risk of poverty who were overburdened by housing costs was considerably lower and also relatively constant over time (starting value in 2010: 9.4 %, peak in 2011: 10.5 %, lowest value in 2017: 7.9 %).</p>
+          <p> <p><i>Text from the Indicator Report 2021</i>The data used for this indicator come from the harmonised European statistics on income and living conditions (EU‑SILC). The indicator expresses housing costs relative to disposable household income. If a household is receiving housing benefits or comparable social benefits, such as social-security payments for accommodation and heating, these are also included in the calculations. These social benefits are not added to the income amount but are deducted from the housing costs, so that the burden of housing expenses on households that rely on housing-related social benefits is reduced or almost nullified.<br />The purchase of owner-occupied property is not included in housing costs. Other spending on measures to enhance the value of a property is not taken into account either – though it is not always possible to clearly differentiate such spending from value-maintaining expenditure, which does count as part of housing costs. In such cases, established assumptions are applied to simplify the calculation. Nor does the indicator take into account any additional costs associated with the geographical location. For instance, expenditure on travel from a person’s place of residence to their workplace is not taken into account, although it is possible that the long commuting distance is the only reason that their housing costs remain below the 40% threshold.<br />By defining the threshold value as 40% of disposable household income, the indicator provides no information about average housing costs in absolute terms. If clusters emerge close to the threshold, even small alterations in the ratio of income to housing costs can cause major changes in the indicator. The indicator rose from 14.5% in 2010 to a relatively constant 16% from 2011 to 2016. In 2017, it went back down to the starting rate of 14.5%, before reducing further in 2018, to 14.2%, and yet further in 2019, when it reached 13.9%. The value is therefore lower than the level it started at in 2010. If the average trend recorded over the last five years continued, the goal set for 2030 would be achieved.<br />With regard to the actual housing situation and disposable income, the indicator provides only a limited amount of meaningful information. After all, the calculation method means that households with high incomes and high expenditure on housing also appear to be overburdened. Meanwhile, the data show that it is people at risk of poverty – that is, those with less than 60% of the median equivalised income for the population – who are particularly affected by excessive housing costs. Some 42.2% of people at risk of poverty were overburdened by housing costs in 2010, rising to 54.4% by 2014. That figure then sank to 48.3% by 2019. In contrast, excessive housing costs affected a markedly smaller proportion of people considered not at risk of poverty. The 2019 figure of 8.0% was lower than the 9.4% recorded in 2010 and peak of 10.5% reached in 2011.</p>
  </p>
         
       
@@ -2751,22 +2627,6 @@ data-event-label="Change to indicator.sources tab"
 
 
 
-
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
-        
-        <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
   <div class="row">
   
     
@@ -2800,713 +2660,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
       
         
       
@@ -3515,19 +2668,19 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/destatis.png" alt=" Federal Statistical Office" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
 
-              
-            </td>
-          </tr>
-        
       
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Indicator </th>
+              <td colspan="9">
+                <p>11.3 Überlastung durch Wohnkosten</p>
 
+              </td>
+            </tr>
+          
+        
       
 
       
@@ -3544,68 +2697,17 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-
-      
-
-    
-  
-      
         
-      
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Target </th>
+              <td colspan="9">
+                <p>Senkung des Anteils der überlasteten Personen an der Bevölkerung auf 13 % bis 2030</p>
 
-      
-      
-
-      
+              </td>
+            </tr>
+          
         
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Federal Statistical Office</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                  <a href="https://www.destatis.de/Europa/DE/Thema/BevoelkerungSoziales/SozialesLebensbedingungen/SozialesLebensbedingungen.html" target="_blank">
-                     <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
       
 
       
@@ -3633,6 +2735,1009 @@ data-event-label="Change to indicator.sources tab"
       
         
           
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -3690,6 +3795,22 @@ data-event-label="Change to indicator.sources tab"
     </div>
     
   </div>
+
+
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
 
 
       </article>
@@ -3771,15 +3892,6 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
@@ -3796,12 +3908,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220708120552'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220708125521'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220708120552"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220708125521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

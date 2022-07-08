@@ -130,7 +130,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708120552">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708125521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -449,12 +449,11 @@ data-event-label="high"
     <div>
   <div class="my-header">
     <h3>
-      <a href="https://sustainabledevelopment-deutschland.github.io/en/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" title="If the trend continues, the target value will be met or the difference between the target value and the current value will be less than 5&nbsp;%" alt="Weathersymbol" />
+      <a href="https://dnsTestEnvironment.github.io/dns-indicators/en/status"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Wolke.png" title="Text will follow soon" alt="Wettersymbol" />
       </a>
     </h3>
   </div>
   <div class="my-header-note">
-    <span> (Evaluation of the development of Germany in the reporting year 2019 - from indicator report 2021)</span>
   </div>
 </div>
 
@@ -471,22 +470,22 @@ data-event-label="high"
   data-indicatorid='indicator_7-2-a'
   data-id="7-2-a"
   data-country="Germany"
-  data-charttitle="Generation of renewable energies relative to gross final energy consumption"
+  data-charttitle="Generation of renewable energies as a share of gross final energy consumption"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit="Percentage share"
+  data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="true"
-  data-startvalues="[{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Time series&quot;},{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Target&quot;},{&quot;field&quot;:&quot;Region&quot;,&quot;value&quot;:&quot;Germany&quot;}]"
-  data-graphlimits="null"
+  data-startvalues="null"
+  data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:70.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
+  data-showline="false"
+  data-spangaps="false"
   data-graphannotations="null"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
@@ -532,7 +531,7 @@ data-event-label="high"
     
     <h3></h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Generation of renewable energies relative to gross final energy consumption</caption>
+      <caption>Generation of renewable energies as a share of gross final energy consumption</caption>
       <thead>
         
         
@@ -830,16 +829,12 @@ data-event-label="high"
   
   <div id="datatableFooter">
     
-    <p>Source: Working Group on Renewable Energies Statistics, Federal Ministry for Economic Affairs and Energy</p>
+    <p>Source: <a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html">Working Group on Renewable Energy Statistics</a></p>
     
     
     <p>Geographical Area: Germany</p>
     
     
-    <p>Unit of measurement: Percentage share</p>
-    
-    
-    <p>Comment: </p>
     
   </div>
   
@@ -952,7 +947,7 @@ data-event-label="Change to Map tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Generation of renewable energies relative to gross final energy consumption</h4>
+          <h4 id="chart-heading" class="chart-title">Generation of renewable energies as a share of gross final energy consumption</h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -974,7 +969,7 @@ data-event-label="Change to Map tab"
           
           <dt><u>Sources</u>:</dt>
           
-        <dd>Working Group on Renewable Energies Statistics, Federal Ministry for Economic Affairs and Energy, LAK Energiebilanzen</dd>
+        <dd><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html">Working Group on Renewable Energy Statistics</a>, <a href="http://www.lak-energiebilanzen.de/">LAK Energiebilanzen</a>, <a href="https://www.bmwi.de/Navigation/EN/Home/home.html">Federal Ministry for Economic Affairs and Climate Action</a></dd>
         
 
         
@@ -982,9 +977,6 @@ data-event-label="Change to Map tab"
         <dd>Germany</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1018,7 +1010,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -1055,7 +1047,7 @@ data-event-label="Change to Map tab"
           
           <dt><u>Sources</u>:</dt>
           
-        <dd>Working Group on Renewable Energies Statistics, Federal Ministry for Economic Affairs and Energy, LAK Energiebilanzen</dd>
+        <dd><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html">Working Group on Renewable Energy Statistics</a>, <a href="http://www.lak-energiebilanzen.de/">LAK Energiebilanzen</a>, <a href="https://www.bmwi.de/Navigation/EN/Home/home.html">Federal Ministry for Economic Affairs and Climate Action</a></dd>
         
 
         
@@ -1063,9 +1055,6 @@ data-event-label="Change to Map tab"
         <dd>Germany</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1099,7 +1088,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -1112,7 +1101,7 @@ data-event-label="Change to Map tab"
       
         <div role="tabpanel" class="tab-pane " id="mapview" class="map">
           
-<h4 id="map-heading" class="map-title">Generation of renewable energies relative to gross final energy consumption</h4>
+<h4 id="map-heading" class="map-title">Generation of renewable energies as a share of gross final energy consumption</h4>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
 </div>
@@ -1127,7 +1116,7 @@ data-event-label="Change to Map tab"
           
           <dt><u>Sources</u>:</dt>
           
-        <dd>Working Group on Renewable Energies Statistics, Federal Ministry for Economic Affairs and Energy, LAK Energiebilanzen</dd>
+        <dd><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html">Working Group on Renewable Energy Statistics</a>, <a href="http://www.lak-energiebilanzen.de/">LAK Energiebilanzen</a>, <a href="https://www.bmwi.de/Navigation/EN/Home/home.html">Federal Ministry for Economic Affairs and Climate Action</a></dd>
         
 
         
@@ -1135,9 +1124,6 @@ data-event-label="Change to Map tab"
         <dd>Germany</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -1171,7 +1157,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -1340,7 +1326,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>The indicator expresses the generation of renewable energies relative to gross final energy consumption. Gross final energy consumption covers energy consumption by end consumers and transmission losses as well as the self-consumption of the energy generation sector.</p>
+                <p>The indicator shows the energy generated from renewable sources as a percentage of gross final energy consumption. Gross final energy consumption encompasses the energy used by final consumers, transmission losses and the energy generation sectors’ own energy consumption.</p>
 
               
             </td>
@@ -1382,7 +1368,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>The reserves of fossil fuels such as oil and gas are limited, and their use is associated with greenhouse gas emissions. Switching to renewable energies (natural energy sources that constantly regenerate) serves to reduce energy-related emissions and hence the extent of climate change. In addition, dependency on energy imports and the consumption of resources is reduced as well as technical innovations are promoted. For this reason, the goal of the Federal Government is to increase the share of renewable energy in gross final energy consumption to 18 % by 2020, to 30 % by 2030 and to 60 % by 2050</p>
+                <p>Reserves of fossil fuels such as oil and gas are limited. Their use, moreover, entails the emission of greenhouse gases. Switching to renewables, natural energy sources that constantly regenerate, serves to reduce energy-related emissions and hence the extent of climate change. In addition, it reduces dependence on energy imports and consumption of resources and promotes technological innovation. For this reason, the target of the German Government is to increase the share of renewable energy in gross final energy consumption to 18% by 2020, to 30% by 2030, to 45% by 2040 and to 60% by 2050.</p>
 
               
             </td>
@@ -1409,7 +1395,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Data state </th>
             <td>
               
-                <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+                <p>The data published in the indicator report 2021 is as of 31.12.2020. The data shown on the DNS-Online-Platform is updated regularly, so that more current data may be available online than published in the indicator report 2021.</p>
 
               
             </td>
@@ -2242,7 +2228,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2021</i><br /><br />For this indicator, the energy generated from renewable sources (including hydropower, wind power on land and at sea, solar energy and geothermal energy, biomass or biogenic waste) is expressed relative to all energy sources consumed in Germany. In addition to renewable energy, this also includes imported electricity and fossil fuels such as lignite and hard coal, oil and gas. Another characteristic of the indicator is that energy consumption is taken into account in all areas of application. This includes its use in the form of mechanical energy, as electric power, heat or fuel in the transport sector.<br /><br /><br /><br />The indicator is calculated by the Working Group on Renewable Energies Statistics (AGEE-Stat), but without taking into account the calculation rules pursuant to the EU Renewable Energy Directive (Directive 2009/28/EC), which applies an average value across several years for hydropower and wind power due to their annually varying supply. Instead, the actually generated electricity quantities (of wind power and hydropower) are taken into account for this report (energy concept of the Federal Government).<br /><br /><br /><br />Concerning the methodology for calculating the indicator, it should be noted that imports and exports of electricity are not fully included in the final energy consumption of renewable energy sources, whereas they are included in the gross final energy consumption. In this respect, the indicator can over- or underestimate the share of renewable energies in gross final energy consumption depending on the foreign trade balance. A positive net export balance of electricity – as has been the case since 2001 – would thus mean that the actual share of renewable energies would be lower than shown by the indicator.<br /><br /><br /><br />Between 1990 and 2017, the share of renewable energy in final gross energy consumption rose from 2.0 % to 15.6 %. If the trend continues at the average pace seen in the past few years, the goal for 2020 will not be achieved. The use of renewable energies varies significantly depending on the sector. 51.6 % of the total energy produced from renewable energies in 2017 was used for electricity generation, 40.2 % for heat generation and 8.2 % for biogenic fuels. Biomass with a share of 54.5 % and wind power with a share of 25.2 % of all renewable sources played the most important role as energy sources.<br /><br /><br /><br />The indicator has cross-references to indicators <a href="https://sustainabledevelopment-deutschland.github.io/3-2-a/">3.2.a</a> “Emissions of air pollutants”, <a href="https://sustainabledevelopment-deutschland.github.io/7-2-b/">7.2.b</a> “Share of electricity from renewable energy sources in electricity consumption” and <a href="https://sustainabledevelopment-deutschland.github.io/13-1-a/">13.1.a</a> “Greenhouse gas emissions”.</p>
+          <p> <p><i>Text from the Indicator Report 2021</i>For this indicator, the electricity generated from renewable sources, which include hydro power, onshore and offshore wind power and solar power, the heat generated from sources such as geothermal energy, biomass and biogenic waste and the consumption of regenerative motor fuels are presented as a percentage of the energy generated from all sources that is consumed in Germany. Besides renewables, these sources also include imported electricity and fossil fuels such as coal and lignite, oil and gas.<br />The indicator is calculated by AGEE-Stat, the Working Group on Renewable Energy Statistics. In contrast to the reporting under the Renewable Energy Directive of the European Union (Directive 2009/28/EC), uses an average value for hydro and wind power over several years to smoothen the effects of varying supply, this indicator takes account of the volumes of electricity actually generated from wind and hydro power (German Government Energy Concept).<br />With regard to the method used to calculate the indicator, it should be noted that imports and exports of electricity are not included in full in the consumption of energy from renewable sources, whereas they are factored into gross final energy consumption. Accordingly, the indicator may overstate or understate the ratio of energy from renewable sources to gross final energy consumption, depending on the balance of trade. If there were an export surplus for electricity – as has been the case since 2001 – the actual percentage of renewables in the energy mix would be lower than the level represented by the indicator.<br />Between 2005 and 2019, the share of renewable energy in gross final energy consumption rose from 7.1% to 17.7%. If the trend continues at the average pace seen in the past few years, the goal for 2020 will be achieved.<br />The use of renewables varies widely between sectors. In 2019, the share accounted for 42.0% of gross electricity generation, 15.0% of final energy consumption for heating and cooling and 5.6% in the transport sector. Among renewable energies, biomass, with a share of 58.8% and wind power, which accounts for 24.1%, play the greatest part in primary energy consumption.<br />The indicator has dependencies with indicator 13.1.a (Greenhouse gas emissions), as well as with indicators 3.2.a (Emissions of air pollutants) and 7.2.b (Share of electricity from renewable energies in gross electricity consumption).</p>
  </p>
         
       
@@ -3127,7 +3113,7 @@ data-event-label="Change to indicator.sources tab"
             <tr id="indAndtarg">
               <th scope="row" style="padding-right: 10px;">Target </th>
               <td colspan="9">
-                <p>100% bis 2030</p>
+                <p>Anstieg auf 18 % bis 2020, auf 30 % bis 2030, auf 45 % bis 2040 und auf 60 % bis 2050</p>
 
               </td>
             </tr>
@@ -3310,6 +3296,85 @@ data-event-label="Change to indicator.sources tab"
           
       
         
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+          
+        
+      
+
+      
+
+    
+  
+      
+        
       
 
       
@@ -3339,7 +3404,189 @@ data-event-label="Change to indicator.sources tab"
 
       
         
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
           
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+          
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
         
       
 
@@ -3473,6 +3720,72 @@ data-event-label="Change to indicator.sources tab"
   
       
         
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
       
 
       
@@ -3481,6 +3794,8 @@ data-event-label="Change to indicator.sources tab"
       
 
       
+        
+          
         
       
 
@@ -3498,8 +3813,6 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          
         
       
 
@@ -3525,32 +3838,6 @@ data-event-label="Change to indicator.sources tab"
           
         
         
-          <tr id="items">
-            <th scope="row" style="padding-right: 10px;">Evaluation </th>
-            
-              <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Leicht bewölkt.png" alt="<p>Leicht bewölkt</p>
-" class="responsiveWeather" title="x" style="border: transparent"/></a>
-              </td>
-            
-            
-              <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Leicht bewölkt.png" alt="<p>Leicht bewölkt</p>
-" class="responsiveWeather" title="x" style="border: transparent"/></a>
-              </td>
-            
-            
-              <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Leicht bewölkt.png" alt="<p>Leicht bewölkt</p>
-" class="responsiveWeather" title="x" style="border: transparent"/></a>
-              </td>
-            
-            <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Blitz.png" alt="<p>Blitz</p>
-" class="responsiveWeather" title="x" style="border: transparent"/></a>
-            </td>
-          </tr>
-        
       
 
     
@@ -3657,233 +3944,6 @@ data-event-label="Change to indicator.sources tab"
 
     
   
-      
-        
-      
-
-      
-      
-
-      
-
-      
-        
-      
-
-      
-
-    
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
       
         
           
@@ -5425,7 +5485,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row"> </th>
             <td>
               
-                <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/ageestat.png" alt=" Working Group on Renewable Energies Statistics, Federal Ministry for Economic Affairs and Energy" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
+                <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html"><img src="ttps://g205sdgs.github.io/sdg-indicators/public/logosEn/ageestat.png" alt="Working Group on Renewable Energy Statistics" title=" Click here to visit the homepage of the organizationWorking Group on Renewable Energy Statistics" style="height:60px; width:148px; border: transparent" /></a></p>
 
               
             </td>
@@ -5467,7 +5527,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Organisation </th>
             <td>
               
-                <p>Working Group on Renewable Energies Statistics, Federal Ministry for Economic Affairs and Energy</p>
+                <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html">Working Group on Renewable Energy Statistics</a></p>
 
               
             </td>
@@ -5501,7 +5561,7 @@ data-event-label="Change to indicator.sources tab"
 
                 
                   <a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Zeitreihen/zeitreihen.html" target="_blank">
-                     <span class="visuallyhidden">opens in a new window</span>
+                    Development of renewable energies in Germany <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
 
@@ -5519,7 +5579,19 @@ data-event-label="Change to indicator.sources tab"
   
       
         
-          
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+    
+  
       
         
           
@@ -6359,7 +6431,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row"> </th>
             <td>
               
-                <p><a href="http://www.lak-energiebilanzen.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/lakeb.png" alt=" Länderarbeitskreis Energiebilanzen" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
+                <p><a href="http://www.lak-energiebilanzen.de/"><img src="ttps://g205sdgs.github.io/sdg-indicators/public/logosEn/lakeb.png" alt="LAK Energiebilanzen" title=" Click here to visit the homepage of the organizationLAK Energiebilanzen" style="height:60px; width:148px; border: transparent" /></a></p>
 
               
             </td>
@@ -6401,7 +6473,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Organisation </th>
             <td>
               
-                <p>Länderarbeitskreis Energiebilanzen</p>
+                <p><a href="http://www.lak-energiebilanzen.de/">Länderarbeitskreis Energiebilanzen</a></p>
 
               
             </td>
@@ -6434,10 +6506,920 @@ data-event-label="Change to indicator.sources tab"
                 
 
                 
-                  <a href="http://www.lak-energiebilanzen.de/eingabe-dynamisch/?a=i290" target="_blank">
-                     <span class="visuallyhidden">opens in a new window</span>
+                  <a href="https://www.lak-energiebilanzen.de/eingabe-dynamisch/?a=i200" target="_blank">
+                    Energy indicators: Renewable energy sources (only available in German) <span class="visuallyhidden">opens in a new window</span>
                   </a>
                 
+
+              
+            </td>
+          </tr>
+        
+      
+
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+    
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+        <h4>Source 3</h4>
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+
+      
+      
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row"> </th>
+            <td>
+              
+                <p><a href="https://www.bmwi.de/Navigation/EN/Home/home.html"><img src="ttps://g205sdgs.github.io/sdg-indicators/public/logosEn/bmwk.png" alt="Federal Ministry for Economic Affairs and Climate Action" title=" Click here to visit the homepage of the organizationFederal Ministry for Economic Affairs and Climate Action" style="height:60px; width:148px; border: transparent" /></a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.bmwi.de/Navigation/EN/Home/home.html">Federal Ministry for Economic Affairs and Climate Action</a></p>
 
               
             </td>
@@ -6469,19 +7451,6 @@ data-event-label="Change to indicator.sources tab"
       
         
           
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -6623,12 +7592,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220708120552'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220708125521'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220708120552"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220708125521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

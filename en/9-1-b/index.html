@@ -103,7 +103,7 @@ var translations = {
         
         Indicator 9.1.b -
         
-        xxx - German Indicators For The Sustainable Development Goals
+        Rollout of broadband - German Indicators For The Sustainable Development Goals
     </title>
 
 
@@ -130,7 +130,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708120552">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708125521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -372,9 +372,9 @@ data-event-label="high"
           <h1>
             
               <h1 class="titles goal-9" title="Section: Innovation">
-                Innovation – <i title="Postulate: Shaping the future with new solutions">Shaping the future with new solutions</i>
+                Innovation – <i title="Postulate: Shaping the future sustainably with new solutions">Shaping the future sustainably with new solutions</i>
               </h1>
-              <h2 class="titles goal-9">Indicator 9.1.b: xxx</h2>
+              <h2 class="titles goal-9">Indicator 9.1.b: Rollout of broadband</h2>
             
           </h1>
         </div>
@@ -417,6 +417,12 @@ data-event-label="high"
     </div>
 
     
+    <div class="col-md-auto">
+      <a href="https://sdg-indikatoren.de/en/17-6-1" class="btn btn-primary btn-block goal-9 navigation-btn" title="" role="button">
+        <b class="btn-label d-none d-md-block">Corresponding global indicator 17.6.1 </b><b class="btn-label d-block d-md-none">Indicator 17.6.1</b>
+      </a>
+    </div>
+    
 
     <div class="col d-grid gap-2">
       <a href="/dns-indicators/en/10-1-a" class="btn btn-primary btn-block goal-9 navigation-btn text-nowrap" role="button">
@@ -443,7 +449,10 @@ data-event-label="high"
     <div>
   <div class="my-header">
     <h3>
+      &lt;/a&gt;
     </h3>
+  </div>
+  <div class="my-header-note">
   </div>
 </div>
 
@@ -460,7 +469,7 @@ data-event-label="high"
   data-indicatorid='indicator_9-1-b'
   data-id="9-1-b"
   data-country="Germany"
-  data-charttitle=""
+  data-charttitle="Broadband availability in Germany"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
@@ -470,12 +479,12 @@ data-event-label="high"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap=""
-  data-startvalues="[{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Time series&quot;},{&quot;field&quot;:&quot;Display&quot;,&quot;value&quot;:&quot;Target&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;All line-based technologies&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Pure fiber optic networks (FTTB/H)&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Cable television (CATV)&quot;}]"
+  data-showmap="false"
+  data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
+  data-showline="false"
+  data-spangaps="false"
   data-graphannotations="null"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
@@ -588,32 +597,6 @@ data-event-label="Change to Table tab"
     <span class="hidden-xs" style="color:black">Table</span></button>
   </li>
   
-  <li role="presentation"
-    class="
-      nav-item
-      map
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-mapview"
-        data-bs-target="#mapview"
-        aria-controls="mapview"
-        data-no-disagg="true"
-        data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Map tab"
-
-        ><i class="fa fa-map" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Map</span></button>
-  </li>
-  
 </ul>
 
     <div class="tab-content data-view">
@@ -631,7 +614,7 @@ data-event-label="Change to Map tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title"></h4>
+          <h4 id="chart-heading" class="chart-title">Broadband availability in Germany</h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -649,11 +632,6 @@ data-event-label="Change to Map tab"
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
-        
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Breitbandatlas - Federal Ministry of Transport and Digital Infrastructure</dd>
         
 
         
@@ -694,7 +672,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -728,11 +706,6 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Breitbandatlas - Federal Ministry of Transport and Digital Infrastructure</dd>
-        
 
         
         <dt><u>Geographical Area</u>:</dt>
@@ -772,80 +745,12 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
+        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
         
     <dl>
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
-
-        </div>
-      
-    
-      
-        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
-          
-<h4 id="map-heading" class="map-title"></h4>
-<div id="map" aria-describedby="table-alternative">
-  <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Loading map" />
-</div>
-
-
-
-
-<div id="mapFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-          
-          <dt><u>Source</u>:</dt>
-          
-        <dd>Breitbandatlas - Federal Ministry of Transport and Digital Infrastructure</dd>
-        
-
-        
-        <dt><u>Geographical Area</u>:</dt>
-        <dd>Germany</dd>
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ><u>Comment</u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ><u>Last modification of code <small>(data)</small></u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
-
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2021</dd>
-        
-    <dl>
-</div>
-
 
         </div>
       
@@ -1010,7 +915,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Definition<small> (Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>xxx</p>
+                <p>The indicator shows the development of broadband availability for households in Germany in terms of the technology installed, with separate figures for gigabit connections (≥ 1,000 Mbps) using fully fibre-optic networks (FTTB/H), cable television (CATV) and other types of wired technology.</p>
 
               
             </td>
@@ -1052,7 +957,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Target and intention <small>(Text from the Indicator Report 2021)</small> </th>
             <td>
               
-                <p>xxx</p>
+                <p>The nationwide roll-out of gigabit networks by 2025 is one of the German Government’s key objectives. In addition to enhancing international competitiveness, the expansion of broadband availability with gigabit speeds is intended to facilitate the convergence of living standards across Germany. To achieve these aims, the predominantly private sector roll-out is to be supported by public funding schemes in unprofitable areas.</p>
 
               
             </td>
@@ -1079,7 +984,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Data state </th>
             <td>
               
-                <p>Der Indikatorenbericht 2021 hat den Datenstand 31.12.2020. Die Daten auf der DNS-Online Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im Indikatorenbericht 2021 veröffentlicht.</p>
+                <p>The data published in the indicator report 2021 is as of 31.12.2020. The data shown on the DNS-Online-Platform is updated regularly, so that more current data may be available online than published in the indicator report 2021.</p>
 
               
             </td>
@@ -1912,7 +1817,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i>Text from the Indicator Report 2021</i><br /><br />xxx</p>
+          <p> <p><i>Text from the Indicator Report 2021</i>The indicator measures the availability of broadband to households in Germany at downstream speeds of at least 1,000 Mbps, or one gigabit per second, using wired technology – fibre optics (FTTB/H) and cable television (CATV). The figures are collated on behalf of the Federal Ministry of Transport and Digital Infrastructure and published on the Government’s Broadband Atlas.<br />As of the middle of 2020, fully fibre-optic internet connections (FTTB/H) capable of more than 1,000 Mbps were available in 13.8% of households in Germany. Between 2015 and 2020, the availability of 1,000 Mbps FTTB/H broadband rose by 7.1 percentage points. In other words, it more than doubled, increasing by +105.9%. From the end of 2018 to the middle of 2020, the proportion of households with equally rapid connections using CATV grew from 23.7 to 50.2%. This is also more than double, equating to a +111.8% increase. Altogether, 55.9% of households had gigabit-capable connections available as of mid-2020.<br />Within the country, availability can be seen to vary depending on the region. For all technologies, the provision of gigabit broadband is concentrated particularly in urban areas, where some 74.6% of households had gigabit-speed internet access as of 2020. That figure is markedly lower for areas of a rural character, at 16.7% in 2020. To consider the distribution of the different technologies, 70.7% of urban and 7.8% of rural households had gigabit connections via CATV in mid-2020, while gigabit-capable fibre broadband was available to 17.6% of households in urban areas and 8.9% of those in rural areas. Rural locations are thus predominantly supplied with gigabit speeds via fibre-optic networks, while urban areas rely more on CATV.<br />Differences in availability between urban and more rural areas are also discernible among the Länder. Of all the Länder that are not city states, Schleswig-Holstein has the highest level of gigabit-speed provision using any technology in 2020, at 74.0% of all households, followed by North Rhine-Westphalia on 62.0%. At the other end of the scale, 12% of households in Saxony-Anhalt can say the same, with Brandenburg the next-lowest at 22.1%. In contrast, provision of gigabit-speed broadband is markedly higher than 90% in the three city states, Berlin, Bremen and Hamburg.<br />Various sources are used to calculate these data. Alongside the digital landscape model produced by the Federal Agency for Cartography and Geodesy and OpenStreetMap, more than 500 telecommunications companies in Germany are surveyed about their current provision. To preserve the companies’ business and trade secrets, the resultant data are aggregated into a grid of 250-metre by 250-metre cells and grouped according to seven classes of broadband. Although full-fibre networks with speeds of over 1,000 Mbps have been included in observations since the end of 2015, that class has only been studied in detail since the end of 2018 in light of the latest technological advances.<br />Methodologically, it should be noted that the telecom companies provide their data on broadband availability on a voluntary basis, as there is no legal framework. Furthermore, the figures for availability refer to the technology that telecom companies have installed, as opposed to the actually usable broadband capacity in the area. Additional information on broadband measurement can be found in the annual report of the Bundesnetzagentur, Germany’s federal networks agency.</p>
  </p>
         
       
@@ -2722,22 +2627,6 @@ data-event-label="Change to indicator.sources tab"
 
 
 
-
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
-        
-        <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
   <div class="row">
   
     
@@ -2771,713 +2660,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
       
         
       
@@ -3486,19 +2668,19 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.bmvi.de/EN/Home/home.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logosEn/bmvi.png" alt=" Federal Ministry of Transport and Digital Infrastructure" title="Click here to visit the homepage of the organization" style="border: transparent" /></a></p>
 
-              
-            </td>
-          </tr>
-        
       
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Indicator </th>
+              <td colspan="9">
+                <p>9.1.b Breitbandausbau – Anteil der Haushalte mit Zugang zu Gigabit-Breitbandversorgung</p>
 
+              </td>
+            </tr>
+          
+        
       
 
       
@@ -3515,68 +2697,17 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-
-      
-
-    
-  
-      
         
-      
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Target </th>
+              <td colspan="9">
+                <p>Flächendeckender Aufbau von Gigabitnetzen bis 2025</p>
 
-      
-      
-
-      
+              </td>
+            </tr>
+          
         
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Federal Ministry of Transport and Digital Infrastructure</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                  <a href="https://www.bmvi.de/DE/Themen/Digitales/Breitbandausbau/Breitbandatlas-Karte/start.html" target="_blank">
-                     <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
       
 
       
@@ -3604,6 +2735,1009 @@ data-event-label="Change to indicator.sources tab"
       
         
           
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -3661,6 +3795,22 @@ data-event-label="Change to indicator.sources tab"
     </div>
     
   </div>
+
+
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
 
 
       </article>
@@ -3742,15 +3892,6 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
@@ -3767,12 +3908,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220708120552'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220708125521'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220708120552"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220708125521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

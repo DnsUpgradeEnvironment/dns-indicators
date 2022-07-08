@@ -130,7 +130,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708120552">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708125521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -372,7 +372,7 @@ data-event-label="high"
           <h1>
             
               <h1 class="titles goal-3" title="Bereich: Globale Gesundheit">
-                Globale Gesundheit – <i title="Postulat: "></i>
+                Globale Gesundheit – <i title="Postulat: Globale Gesundheitsarchitektur stärken">Globale Gesundheitsarchitektur stärken</i>
               </h1>
               <h2 class="titles goal-3">Indikator 3.3: Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion</h2>
             
@@ -417,6 +417,12 @@ data-event-label="high"
     </div>
 
     
+    <div class="col-md-auto">
+      <a href="https://sdg-indikatoren.de//" class="btn btn-primary btn-block goal-3 navigation-btn" title="" role="button">
+        <b class="btn-label d-none d-md-block">Verwandter globaler Indikator  </b><b class="btn-label d-block d-md-none">Indikator </b>
+      </a>
+    </div>
+    
 
     <div class="col d-grid gap-2">
       <a href="/dns-indicators//4-1-a" class="btn btn-primary btn-block goal-3 navigation-btn text-nowrap" role="button">
@@ -443,12 +449,11 @@ data-event-label="high"
     <div>
   <div class="my-header">
     <h3>
-      <a href="https://sustainabledevelopment-deutschland.github.io/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" title="Bei Fortsetzung der Entwicklung beträgt die Abweichung vom Zielwert weniger als 5&nbsp;% der Differenz zwischen Zielwert und aktuellem Wert" alt="Weathersymbol" />
+      <a href="https:/dnsTestEnvironment.github.io/dns-indicators/status"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Wolke.png" title="Text will follow soon" alt="Wettersymbol" />
       </a>
     </h3>
   </div>
   <div class="my-header-note">
-    <span> (Bewertung des Bezugsjahres 2020 aus dem Indikatorenbericht 2021)</span>
   </div>
 </div>
 
@@ -469,19 +474,19 @@ data-event-label="high"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit="in Millionen Euro"
+  data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap=""
-  data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;a) Pandemieprävention und -reaktion&quot;},{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;b) Eindämmung der COVID-19-Pandemie&quot;}]"
+  data-showmap="false"
+  data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-graphannotations="null"
+  data-showline="false"
+  data-spangaps="false"
+  data-graphannotations="[{&quot;value&quot;:272.54,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;},&quot;preset&quot;:&quot;target_line&quot;}]"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
@@ -593,32 +598,6 @@ data-event-label="Change to Table tab"
     <span class="hidden-xs" style="color:black">Tabelle</span></button>
   </li>
   
-  <li role="presentation"
-    class="
-      nav-item
-      map
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-mapview"
-        data-bs-target="#mapview"
-        aria-controls="mapview"
-        data-no-disagg="true"
-        data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Map tab"
-
-        ><i class="fa fa-map" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Karte</span></button>
-  </li>
-  
 </ul>
 
     <div class="tab-content data-view">
@@ -655,11 +634,6 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Datenquellen</u>:</dt>
-          
-        <dd>Auswärtiges Amt, Bundesministerium für Bildung und Forschung, Bundesministerium für Gesundheit, Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</dd>
-        
 
         
         <dt><u>Geographische Abdeckung</u>:</dt>
@@ -667,13 +641,7 @@ data-event-label="Change to Map tab"
         
 
         
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
 
-        
-        <dt><u>Anmerkung</u>:</dt>
-        <dd>Alle Daten vorläufig</dd>
         
 
         
@@ -705,7 +673,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -739,11 +707,6 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Datenquellen</u>:</dt>
-          
-        <dd>Auswärtiges Amt, Bundesministerium für Bildung und Forschung, Bundesministerium für Gesundheit, Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</dd>
-        
 
         
         <dt><u>Geographische Abdeckung</u>:</dt>
@@ -751,13 +714,7 @@ data-event-label="Change to Map tab"
         
 
         
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
 
-        
-        <dt><u>Anmerkung</u>:</dt>
-        <dd>Alle Daten vorläufig</dd>
         
 
         
@@ -789,86 +746,12 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2022</dd>
         
     <dl>
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
-
-        </div>
-      
-    
-      
-        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
-          
-<h4 id="map-heading" class="map-title">Ausgaben bzw. Zusagen zur globalen Pandemieprävention und -reaktion</h4>
-<div id="map" aria-describedby="table-alternative">
-  <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Karte wird geladen" />
-</div>
-
-
-
-
-<div id="mapFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-          
-          <dt><u>Datenquellen</u>:</dt>
-          
-        <dd>Auswärtiges Amt, Bundesministerium für Bildung und Forschung, Bundesministerium für Gesundheit, Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</dd>
-        
-
-        
-        <dt><u>Geographische Abdeckung</u>:</dt>
-        <dd>Deutschland</dd>
-        
-
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
-
-        
-        <dt><u>Anmerkung</u>:</dt>
-        <dd>Alle Daten vorläufig</dd>
-        
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
-
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
-        
-    <dl>
-</div>
-
 
         </div>
       
@@ -1935,7 +1818,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2021</i><br /><br />Die Daten des Indikators stammen aus Sonderauswertungen der entsprechenden Haushaltstitel bzw. der Verpflichtungsermächtigungen des Auswärtigen Amtes, des Bundesministeriums für Bildung und Forschung, des Bundesministeriums für Gesundheit und des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung. In den Auswertungen wurden Programme berücksichtigt, wenn diese in der Zielsetzung direkt zum Bereich Pandemieprävention und -reaktion zuzurechnen sind oder diese primär auf die Verbesserung relevanter Kapazitäten in der Gesundheitsversorgung abzielen. Die Programme umfassen dabei u. a. die Bereiche Pandemieprävention und -reaktion der Weltgesundheitsorganisation (WHO), Sanitärwesen, One Health (ein ganzheitlicher Ansatz, der die Verbindung der Gesundheit von Mensch, Tier und Umwelt anerkennt), Impfinfrastruktur sowie Forschung und Entwicklung sowohl im Ausland als auch im Inland, sofern die Ergebnisse und Innovationen auch Ländern des Globalen Süden zu Gute kommen. Zudem wurden zusätzlich Programme betrachtet, die als Reaktion auf die COVID-19-Pandemie gestartet wurden. Diese umfassen Programme und Aktivitäten der WHO, humanitäre Hilfe, Impfstoffentwicklung, Krisenreaktion sowie Soforthilfen und -kredite für die Reaktion des Gesundheitssektors in Ländern des Globalen Südens. Laut Definition sind die Ausgaben bzw. Zusagen in Reaktion auf die COVID-19-Pandemie vom Indikator ausgenommen und getrennt dargestellt.<br /><br />Bei den Zahlen ist zu beachten, dass eine genaue inhaltliche Abgrenzung von Programmen nicht abschließend möglich ist, da das Themenfeld umfassende Querverbindungen zu einer Vielzahl von weiteren Gesundheitsbereichen besitzt. Somit wird bei dem Indikator eine Bandbreite an Programmen berücksichtigt, wie z. B. der Beitrag Deutschlands an die WHO für dessen Notfallprogramm bzw. zur flexiblen Anschubfinanzierung von Krisenreaktionen in akuten Gesundheitsnotlagen (Contingency Fund for Emergencies), eine Impfprogrammförderung zur Reduktion von Kindersterblichkeit in der ostafrikanischen Gemeinschaft, die Verbesserung der Trinkwasser- und Sanitärversorgung in Burkina Faso sowie eine Sicherheitskooperation für biologische Bedrohungen. Neben der inhaltlichen Schwerpunktsetzung ist zu beachten, dass ein Teil der Programme allgemein auf die Stärkung globaler Koordinierungs- und Organisationskapazitäten abzielt und damit nicht ausschließlich Ländern des Globalen Südens zukommt.<br /><br />Des Weiteren können präventive und reaktive Maßnahmen nicht genau abgegrenzt werden. So können einerseits präventive Kapazitätsstärkung die Reaktion auf eine pandemische Lage unterstützen und andererseits reaktive Maßnahmen einen Beitrag zur langfristigen Kapazitätsstärkung leisten. Um einen Ausreißer in den Zahlen zu vermeiden, der sich aus der Reaktion auf die COVID-19-Pandemie ergibt, sind diese Ausgaben bzw. Zusagen nicht Teil des Indikators, sondern getrennt als Information in der Grafik ausgewiesen.<br /><br />Die dargestellten Ausgaben bzw. Zusagen sagen zudem nichts über den Erfolg der Programme aus. Der Indikator stellt einen monetären Beitrag Deutschlands zur Pandemieprävention und -reaktion dar. Zur Wirkung der Beiträge wäre eine weitergehende Evaluierung notwendig. Unter Berücksichtigung der oben genannten Einschränkungen bilden die ermittelten Zahlen daher keinesfalls die deutschen Ausgaben bzw. Zusagen vollständig ab, welche einen gegebenenfalls mittelbaren Einfluss auf das Themenfeld haben.<br /><br />Zwischen den Jahren 2015 bis 2020 stiegen die Ausgaben bzw. Zusagen zur Pandemieprävention und -reaktion von 137,9 Millionen Euro auf 353,1 Millionen Euro (vorläufige Daten). Dies ist eine Steigerung um durchschnittlich 43,1 Millionen Euro der letzten fünf jährlichen Veränderungen. Bei Fortsetzung dieser Entwicklung würde das angestrebte Ziel, Deutschlands Beitrag bis 2030 substantiell gegenüber dem Jahr 2019 zu steigern, erreicht werden. Die Grafik verdeutlicht ebenfalls die sprunghafte Steigerung der Ausgaben bzw. Zusagen zur Eindämmung der COVID-19-Pandemie in Höhe von 635,2 Millionen Euro im Jahr 2020.</p>
+          <p> <p><i>Text aus dem Indikatorenbericht 2021</i>Die Daten des Indikators stammen aus Sonderauswertungen der entsprechenden Haushaltstitel bzw. der Verpflichtungsermächtigungen des Auswärtigen Amtes, des Bundesministeriums für Bildung und Forschung, des Bundesministeriums für Gesundheit und des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung. In den Auswertungen wurden Programme berücksichtigt, wenn diese in der Zielsetzung direkt zum Bereich Pandemieprävention und -reaktion zuzurechnen sind oder diese primär auf die Verbesserung relevanter Kapazitäten in der Gesundheitsversorgung abzielen. Die Programme umfassen dabei u. a. die Bereiche Pandemieprävention und -reaktion der Weltgesundheitsorganisation (WHO), Sanitärwesen, One Health (ein ganzheitlicher Ansatz, der die Verbindung der Gesundheit von Mensch, Tier und Umwelt anerkennt), Impfinfrastruktur sowie Forschung und Entwicklung sowohl im Ausland als auch im Inland, sofern die Ergebnisse und Innovationen auch Ländern des Globalen Süden zu Gute kommen. Zudem wurden zusätzlich Programme betrachtet, die als Reaktion auf die COVID-19-Pandemie gestartet wurden. Diese umfassen Programme und Aktivitäten der WHO, humanitäre Hilfe, Impfstoffentwicklung, Krisenreaktion sowie Soforthilfen und -kredite für die Reaktion des Gesundheitssektors in Ländern des Globalen Südens. Laut Definition sind die Ausgaben bzw. Zusagen in Reaktion auf die COVID-19-Pandemie vom Indikator ausgenommen und getrennt dargestellt.<br />Bei den Zahlen ist zu beachten, dass eine genaue inhaltliche Abgrenzung von Programmen nicht abschließend möglich ist, da das Themenfeld umfassende Querverbindungen zu einer Vielzahl von weiteren Gesundheitsbereichen besitzt. Somit wird bei dem Indikator eine Bandbreite an Programmen berücksichtigt, wie z. B. der Beitrag Deutschlands an die WHO für dessen Notfallprogramm bzw. zur flexiblen Anschubfinanzierung von Krisenreaktionen in akuten Gesundheitsnotlagen (Contingency Fund for Emergencies), eine Impfprogrammförderung zur Reduktion von Kindersterblichkeit in der ostafrikanischen Gemeinschaft, die Verbesserung der Trinkwasser- und Sanitärversorgung in Burkina Faso sowie eine Sicherheitskooperation für biologische Bedrohungen. Neben der inhaltlichen Schwerpunktsetzung ist zu beachten, dass ein Teil der Programme allgemein auf die Stärkung globaler Koordinierungs- und Organisationskapazitäten abzielt und damit nicht ausschließlich Ländern des Globalen Südens zukommt.<br />Des Weiteren können präventive und reaktive Maßnahmen nicht genau abgegrenzt werden. So können einerseits präventive Kapazitätsstärkung die Reaktion auf eine pandemische Lage unterstützen und andererseits reaktive Maßnahmen einen Beitrag zur langfristigen Kapazitätsstärkung leisten. Um einen Ausreißer in den Zahlen zu vermeiden, der sich aus der Reaktion auf die COVID-19-Pandemie ergibt, sind diese Ausgaben bzw. Zusagen nicht Teil des Indikators, sondern getrennt als Information in der Grafik ausgewiesen.<br />Die dargestellten Ausgaben bzw. Zusagen sagen zudem nichts über den Erfolg der Programme aus. Der Indikator stellt einen monetären Beitrag Deutschlands zur Pandemieprävention und -reaktion dar. Zur Wirkung der Beiträge wäre eine weitergehende Evaluierung notwendig. Unter Berücksichtigung der oben genannten Einschränkungen bilden die ermittelten Zahlen daher keinesfalls die deutschen Ausgaben bzw. Zusagen vollständig ab, welche einen gegebenenfalls mittelbaren Einfluss auf das Themenfeld haben.<br />Zwischen den Jahren 2015 bis 2020 stiegen die Ausgaben bzw. Zusagen zur Pandemieprävention und -reaktion von 137,9 Millionen Euro auf 353,1 Millionen Euro (vorläufige Daten). Dies ist eine Steigerung um durchschnittlich 43,1 Millionen Euro der letzten fünf jährlichen Veränderungen. Bei Fortsetzung dieser Entwicklung würde das angestrebte Ziel, Deutschlands Beitrag bis 2030 substantiell gegenüber dem Jahr 2019 zu steigern, erreicht werden. Die Grafik verdeutlicht ebenfalls die sprunghafte Steigerung der Ausgaben bzw. Zusagen zur Eindämmung der C</p>
  </p>
         
       
@@ -2745,30 +2628,12 @@ data-event-label="Change to indicator.sources tab"
 
 
 
-
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
-        
-        <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
   <div class="row">
   
     
     
     <div class="col-md-6">
       
-        <h4>Datenquelle 1</h4>
-      
       <table class="table">
   
   
@@ -2796,712 +2661,32 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Indikator </th>
+              <td colspan="9">
+                <p>3.3 Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion</p>
+
+              </td>
+            </tr>
+          
+        
+      
+
+      
+
+    
   
       
         
@@ -3511,19 +2696,110 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.auswaertiges-amt.de/de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/aa.png" alt=" Auswärtiges Amt (AA)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
 
-              
+      
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Ziel </th>
+              <td colspan="9">
+                <p>Steigerung der Ausgaben bis 2030</p>
+
+              </td>
+            </tr>
+          
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+        
+        
+        
+        <tr id="years">
+          <th scope="row" style="padding-right: 10px;">Jahr </th>
+          
+          
+          
+            <td align="left" style="margin-bottom: 15px;">
+              <p><p>2020</p>
+</p>
+            </td>
+          
+          <td align="left" style="margin-bottom: 15px;">
+            <p><p>2021</p>
+</p>
+          </td>
+        </tr>
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+         <!--Single target-->
+          
+        
+        
+          <tr id="items">
+            <th scope="row" style="padding-right: 10px;">Bewertung </th>
+            
+            
+            
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              </td>
+            
+            <td align="left" style="padding-left: 0px;padding-right: 0px;">
+              <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Wolke.png" alt="<p>Wolke</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           </tr>
         
       
 
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
       
 
       
@@ -3540,32 +2816,7 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-
-      
-
-    
-  
-      
         
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Auswärtiges Amt (AA)</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
       
 
       
@@ -3596,883 +2847,408 @@ data-event-label="Change to indicator.sources tab"
       
         
           
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-    
-    
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 2</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
       
         
-      
-
-      
-      
-
+          
       
         
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.bmbf.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/bmbf.png" alt=" Bundesministerium für Bildung und Forschung (BMBF)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
+          
       
         
-      
-
-      
-      
-
-      
-
-      
-
-      
-
-    
-  
+          
       
         
-      
-
-      
-      
-
+          
       
         
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Bundesministerium für Bildung und Forschung (BMBF)</p>
-
-              
-            </td>
-          </tr>
+          
+      
         
+          
       
-
+        
+          
       
-
+        
+          
       
-
-    
-  
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
       
         
           
@@ -4537,17 +3313,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-</table>
-
-    </div>
-    
-    
-    
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 3</h4>
-      
-      <table class="table">
   
   
   
@@ -5102,1191 +3867,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.bundesgesundheitsministerium.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/bmfg.png" alt=" Bundesministerium für Gesundheit (BMG)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
-      
-        
-      
-
-      
-      
-
-      
-
-      
-
-      
-
-    
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Bundesministerium für Gesundheit (BMG)</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-    
-    
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 4</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/de/index.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/bmz.png" alt=" Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
-      
-        
-      
-
-      
-      
-
-      
-
-      
-
-      
-
-    
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
   
   
   
@@ -6312,6 +3892,22 @@ data-event-label="Change to indicator.sources tab"
     </div>
     
   </div>
+
+
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
 
 
       </article>
@@ -6392,15 +3988,8 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
@@ -6418,12 +4007,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220708120552'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220708125521'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220708120552"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220708125521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

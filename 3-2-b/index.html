@@ -103,7 +103,7 @@ var translations = {
         
         Indikator 3.2.b -
         
-        Anteil der Bevölkerung mit erhöhter PM&lt;sub&gt;10&lt;/sub&gt;-Feinstaubexposition - German Indicators For The Sustainable Development Goals
+        Anteil der Bevölkerung mit erhöhter PM10-Feinstaubexposition - German Indicators For The Sustainable Development Goals
     </title>
 
 
@@ -130,7 +130,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708120552">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220708125521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -372,9 +372,9 @@ data-event-label="high"
           <h1>
             
               <h1 class="titles goal-3" title="Bereich: Luftbelastung">
-                Luftbelastung – <i title="Postulat: "></i>
+                Luftbelastung – <i title="Postulat: Gesunde Umwelt erhalten">Gesunde Umwelt erhalten</i>
               </h1>
-              <h2 class="titles goal-3">Indikator 3.2.b: Anteil der Bevölkerung mit erhöhter PM<sub>10</sub>-Feinstaubexposition</h2>
+              <h2 class="titles goal-3">Indikator 3.2.b: Anteil der Bevölkerung mit erhöhter PM10-Feinstaubexposition</h2>
             
           </h1>
         </div>
@@ -449,12 +449,11 @@ data-event-label="high"
     <div>
   <div class="my-header">
     <h3>
-      <a href="https://sustainabledevelopment-deutschland.github.io/status/"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" title="Bei Fortsetzung der Entwicklung beträgt die Abweichung vom Zielwert weniger als 5&nbsp;% der Differenz zwischen Zielwert und aktuellem Wert" alt="Weathersymbol" />
+      <a href="https:/dnsTestEnvironment.github.io/dns-indicators/status"><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/Sonne.png" title="Text will follow soon" alt="Wettersymbol" />
       </a>
     </h3>
   </div>
   <div class="my-header-note">
-    <span> (Bewertung des Bezugsjahres 2018 aus dem Indikatorenbericht 2021)</span>
   </div>
 </div>
 
@@ -471,23 +470,23 @@ data-event-label="high"
   data-indicatorid='indicator_3-2-b'
   data-id="3-2-b"
   data-country="Deutschland"
-  data-charttitle="Feinstaubexposition (PM<sub>10</sub>) oberhalb des WHO-Richtwertes von mindestens 20 µg pro m<sup>3</sup> Luft im Jahresdurchschnitt"
+  data-charttitle="Feinstaubexposition (PM10) oberhalb des WHO-Richtwertes von mindestens 20 µg pro m3 Luft im Jahresdurchschnitt"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit="Bevölkerung, in Millionen"
+  data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap=""
-  data-startvalues="[{&quot;field&quot;:&quot;Anzeigen&quot;,&quot;value&quot;:&quot;Zeitreihe&quot;},{&quot;field&quot;:&quot;Anzeigen&quot;,&quot;value&quot;:&quot;Ziel&quot;}]"
+  data-showmap="false"
+  data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-graphannotations="null"
+  data-showline="false"
+  data-spangaps="false"
+  data-graphannotations="[{&quot;value&quot;:0.0,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;},&quot;preset&quot;:&quot;target_line&quot;}]"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
@@ -599,32 +598,6 @@ data-event-label="Change to Table tab"
     <span class="hidden-xs" style="color:black">Tabelle</span></button>
   </li>
   
-  <li role="presentation"
-    class="
-      nav-item
-      map
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-mapview"
-        data-bs-target="#mapview"
-        aria-controls="mapview"
-        data-no-disagg="true"
-        data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Map tab"
-
-        ><i class="fa fa-map" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Karte</span></button>
-  </li>
-  
 </ul>
 
     <div class="tab-content data-view">
@@ -642,7 +615,7 @@ data-event-label="Change to Map tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Feinstaubexposition (PM<sub>10</sub>) oberhalb des WHO-Richtwertes von mindestens 20 µg pro m<sup>3</sup> Luft im Jahresdurchschnitt</h4>
+          <h4 id="chart-heading" class="chart-title">Feinstaubexposition (PM10) oberhalb des WHO-Richtwertes von mindestens 20 µg pro m3 Luft im Jahresdurchschnitt</h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -661,20 +634,12 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Datenquellen</u>:</dt>
-          
-        <dd>Umweltbundesamt, Weltgesundheitsorganisation</dd>
-        
 
         
         <dt><u>Geographische Abdeckung</u>:</dt>
         <dd>Deutschland</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -708,7 +673,7 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2022</dd>
         
     <dl>
 </div>
@@ -742,20 +707,12 @@ data-event-label="Change to Map tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-          <dt><u>Datenquellen</u>:</dt>
-          
-        <dd>Umweltbundesamt, Weltgesundheitsorganisation</dd>
-        
 
         
         <dt><u>Geographische Abdeckung</u>:</dt>
         <dd>Deutschland</dd>
         
 
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
         
 
         
@@ -789,83 +746,12 @@ data-event-label="Change to Map tab"
 
         
         <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2022</dd>
         
     <dl>
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
-
-        </div>
-      
-    
-      
-        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
-          
-<h4 id="map-heading" class="map-title">Feinstaubexposition (PM<sub>10</sub>) oberhalb des WHO-Richtwertes von mindestens 20 µg pro m<sup>3</sup> Luft im Jahresdurchschnitt</h4>
-<div id="map" aria-describedby="table-alternative">
-  <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Karte wird geladen" />
-</div>
-
-
-
-
-<div id="mapFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-          
-          <dt><u>Datenquellen</u>:</dt>
-          
-        <dd>Umweltbundesamt, Weltgesundheitsorganisation</dd>
-        
-
-        
-        <dt><u>Geographische Abdeckung</u>:</dt>
-        <dd>Deutschland</dd>
-        
-
-        
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-        <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
-
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2021</dd>
-        
-    <dl>
-</div>
-
 
         </div>
       
@@ -1030,7 +916,7 @@ data-event-label="Change to indicator.sources tab"
             <th scope="row">Definition <small><br>(Text aus dem Indikatoren&shy;bericht 2021)</small> </th>
             <td>
               
-                <p>Der Indikator zeigt die Anzahl an Personen, die an ihrem Wohnort im Jahresmittel einer Exposition von mehr als 20 Mikrogramm (µg) Feinstaub PM<sub>10</sub> (Staubteilchen mit einem Durchmesser kleiner 10 Mikrometer) pro Kubikmeter (m³) Luft ausgesetzt waren (nur Hintergrundbelastungen, ohne lokale Quellen).</p>
+                <p>Der Indikator zeigt die Anzahl an Personen, die an ihrem Wohnort im Jahresmittel einer Exposition von mehr als 20 Mikrogramm (µg) Feinstaub PM10 (Staubteilchen mit einem Durchmesser kleiner 10 Mikrometer) pro Kubikmeter (m³) Luft ausgesetzt waren (nur Hintergrundbelastungen, ohne lokale Quellen).</p>
 
               
             </td>
@@ -1932,7 +1818,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i> Text aus dem Indikatorenbericht 2021</i><br /><br />Als direkte Quellen von Feinstaub gelten die industrielle Erzeugung von Energie und Wärme, die Landwirtschaft, der Straßenverkehr und das Heizen, insbesondere mit festen Brennstoffen wie z. B. Holz in privaten Kaminen oder Kaminöfen, usw. Feinstaub kann jedoch auch durch sekundäre Partikelbildung infolge chemischer Reaktionen von Vorläufersubstanzen wie z. B. Schwefel- und Stickstoffoxiden, Ammoniak oder Kohlenwasserstoffen entstehen.<br /><br />Der in der Luft enthaltene Feinstaub (PM<sub>10</sub>) wird an insgesamt mehr als 370 Luftmessstationen sowohl in Ballungsgebieten als auch in ländlichen Regionen in Deutschland erfasst. Für den Indikator werden aus methodischen Gründen nur diejenigen Messstationen berücksichtigt, die keinem direkten Feinstaubausstoß aus dem Verkehr oder anderen bedeutsamen lokalen Quellen ausgesetzt sind, da diese nur die punktuell erhöhte („Hot Spots“) und nicht die großflächige Belastung der Luft mit Feinstaub abbilden. Aus einer Kombination von Modellergebnissen mit den erhobenen Messdaten zur sogenannten Hintergrundbelastung wird die Feinstaubkonzentration für die gesamte Fläche Deutschlands ermittelt. In Kombination mit räumlichen Informationen zur Bevölkerungsverteilung lässt sich so die Anzahl der Personen bestimmen, die im Jahresmittel an ihrem Wohnort einer Feinstaubbelastung von mehr als 20 Mikrogramm pro Kubikmeter Luft ausgesetzt sind. Da die Modellrechnung nur diejenigen Messstationen einbezieht, die keinem direkten Feinstaubausstoß aus lokalen Quellen ausgesetzt sind, kann davon ausgegangen werden, dass der Indikator die tatsächliche Anzahl an Personen mit einer Feinstaubexposition über dem Richtwert der Weltgesundheitsorganisation unterschätzt.<br /><br />Somit bildet der Indikator keine flächendeckende Einhaltung des Richtwertes ab, sondern eine auf die Wohnorte der Bevölkerung abseits starker Emissionsquellen für Feinstaub bezogene Einhaltung. Er gibt weder einen Hinweis auf die Höhe der Exposition der Bevölkerung insgesamt noch auf deren Variation im Jahresverlauf. Nicht gesondert betrachtet werden durch diesen Indikator zudem die Belastungen durch kleinere Feinstaubpartikel (PM<sub>2,5</sub> und PM<sub>0,1</sub>).<br /><br />Die Feinstaubexposition mit PM<sub>10</sub> ist im Zeitraum von 2007 bis 2018 deutlich gesunken. Während im Jahr 2007 die durchschnittliche bevölkerungsgewichtete Feinstaubbelastung noch bei 18,9 Mikrogramm pro Kubikmeter Luft lag, betrug sie im Jahr 2018 nur noch etwa 15,4 Mikrogramm pro Kubikmeter. Im gleichen Zeitraum ist auch die Anzahl der Personen deutlich zurückgegangen, die im Jahresmittel an ihrem Wohnort einer Feinstaubbelastung von mehr als 20 Mikrogramm PM<sub>10</sub> pro Kubikmeter Luft ausgesetzt war: Im Jahr 2007 waren es 29,7 Millionen Personen, im Jahr 2018 noch rund 2,9 Millionen Personen.<br /><br />Dabei hat auch das Wetter einen Einfluss auf die gemessene Feinstaubbelastung. Ein Teil des starken Rückgangs ab 2011 beruht vermutlich darauf, dass in den letzten Jahren vergleichsweise wenig austauscharme Wetterlagen in den Wintermonaten auftraten, wobei dieser Effekt seit dem Jahr 2015 stagniert. Je nach Windstärke, -richtung und Lufttemperatur kann Feinstaub einerseits über die Luftströmungen in andere Regionen und Länder transportiert werden oder sich andererseits, bei austauscharmen Wetterlagen, am Ort seiner Entstehung anreichern.<br /><br />Wenn sich die durchschnittliche Entwicklung der letzten Jahre weiter fortsetzt, kann das Ziel, die Bevölkerung flächendeckend einer Feinstaubexposition von unter 20 Mikrogramm PM<sub>10</sub> pro Kubikmeter Luft im Jahresmittel auszusetzen, voraussichtlich erreicht werden.</p>
+          <p> <p><i>Text aus dem Indikatorenbericht 2021</i>Als direkte Quellen von Feinstaub gelten die industrielle Erzeugung von Energie und Wärme, die Landwirtschaft, der Straßenverkehr und das Heizen, insbesondere mit festen Brennstoffen wie z. B. Holz in privaten Kaminen oder Kaminöfen, usw. Feinstaub kann jedoch auch durch sekundäre Partikelbildung infolge chemischer Reaktionen von Vorläufersubstanzen wie z. B. Schwefel- und Stickstoffoxiden, Ammoniak oder Kohlenwasserstoffen entstehen.<br />Der in der Luft enthaltene Feinstaub (PM10) wird an insgesamt mehr als 370 Luftmessstationen sowohl in Ballungsgebieten als auch in ländlichen Regionen in Deutschland erfasst. Für den Indikator werden aus methodischen Gründen nur diejenigen Messstationen berücksichtigt, die keinem direkten Feinstaubausstoß aus dem Verkehr oder anderen bedeutsamen lokalen Quellen ausgesetzt sind, da diese nur die punktuell erhöhte („Hot Spots“) und nicht die großflächige Belastung der Luft mit Feinstaub abbilden. Aus einer Kombination von Modellergebnissen mit den erhobenen Messdaten zur sogenannten Hintergrundbelastung wird die Feinstaubkonzentration für die gesamte Fläche Deutschlands ermittelt. In Kombination mit räumlichen Informationen zur Bevölkerungsverteilung lässt sich so die Anzahl der Personen bestimmen, die im Jahresmittel an ihrem Wohnort einer Feinstaubbelastung von mehr als 20 Mikrogramm pro Kubikmeter Luft ausgesetzt sind. Da die Modellrechnung nur diejenigen Messstationen einbezieht, die keinem direkten Feinstaubausstoß aus lokalen Quellen ausgesetzt sind, kann davon ausgegangen werden, dass der Indikator die tatsächliche Anzahl an Personen mit einer Feinstaubexposition über dem Richtwert der Weltgesundheitsorganisation unterschätzt.<br />Somit bildet der Indikator keine flächendeckende Einhaltung des Richtwertes ab, sondern eine auf die Wohnorte der Bevölkerung abseits starker Emissionsquellen für Feinstaub bezogene Einhaltung. Er gibt weder einen Hinweis auf die Höhe der Exposition der Bevölkerung insgesamt noch auf deren Variation im Jahresverlauf. Nicht gesondert betrachtet werden durch diesen Indikator zudem die Belastungen durch kleinere Feinstaubpartikel (PM2,5 und PM0,1).<br />Die Feinstaubexposition mit PM10 ist im Zeitraum von 2007 bis 2018 deutlich gesunken. Während im Jahr 2007 die durchschnittliche bevölkerungsgewichtete Feinstaubbelastung noch bei 18,9 Mikrogramm pro Kubikmeter Luft lag, betrug sie im Jahr 2018 nur noch etwa 15,4 Mikrogramm pro Kubikmeter. Im gleichen Zeitraum ist auch die Anzahl der Personen deutlich zurückgegangen, die im Jahresmittel an ihrem Wohnort einer Feinstaubbelastung von mehr als 20 Mikrogramm PM10 pro Kubikmeter Luft ausgesetzt war: Im Jahr 2007 waren es 29,7 Millionen Personen, im Jahr 2018 noch rund 2,9 Millionen Personen.<br />Dabei hat auch das Wetter einen Einfluss auf die gemessene Feinstaubbelastung. Ein Teil des starken Rückgangs ab 2011 beruht vermutlich darauf, dass in den letzten Jahren vergleichsweise wenig austauscharme Wetterlagen in den Wintermonaten auftraten, wobei dieser Effekt seit dem Jahr 2015 stagniert. Je nach Windstärke, -richtung und Lufttemperatur kann Feinstaub einerseits über die Luftströmungen in andere Regionen und Länder transportiert werden oder sich andererseits, bei austauscharmen Wetterlagen, am Ort seiner Entstehung anreichern.<br />Wenn sich die durchschnittliche Entwicklung der letzten Jahre weiter fortsetzt, kann das Ziel, die Bevölkerung flächendeckend einer Feinstaubexposition von unter 20 Mikrogramm PM10 pro Kubikmeter Luft im Jahresmittel auszusetzen, voraussichtlich erreicht werden.</p>
  </p>
         
       
@@ -2742,30 +2628,12 @@ data-event-label="Change to indicator.sources tab"
 
 
 
-
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
-        
-        <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
   <div class="row">
   
     
     
     <div class="col-md-6">
       
-        <h4>Datenquelle 1</h4>
-      
       <table class="table">
   
   
@@ -2793,712 +2661,32 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Indikator </th>
+              <td colspan="9">
+                <p>3.2.b Anteil der Bevölkerung mit erhöhter PM10-Feinstaubexposition</p>
+
+              </td>
+            </tr>
+          
+        
+      
+
+      
+
+    
   
       
         
@@ -3508,19 +2696,130 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/uba.png" alt=" Umweltbundesamt (UBA)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
 
-              
+      
+        
+          
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">Ziel </th>
+              <td colspan="9">
+                <p>Erreichung des Feinstaub- WHO-Richtwerts von 20 Mikrogramm/Kubikmeter für  PM10 im Jahresmittel möglichst flächendeckend bis 2030</p>
+
+              </td>
+            </tr>
+          
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+        
+        
+        
+        <tr id="years">
+          <th scope="row" style="padding-right: 10px;">Jahr </th>
+          
+            <td align="left" style="margin-bottom: 15px;">
+              <p><p>2017</p>
+</p>
+            </td>
+          
+          
+            <td align="left" style="margin-bottom: 15px;">
+              <p><p>2018</p>
+</p>
+            </td>
+          
+          
+            <td align="left" style="margin-bottom: 15px;">
+              <p><p>2019</p>
+</p>
+            </td>
+          
+          <td align="left" style="margin-bottom: 15px;">
+            <p><p>2020</p>
+</p>
+          </td>
+        </tr>
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+         <!--Single target-->
+          
+        
+        
+          <tr id="items">
+            <th scope="row" style="padding-right: 10px;">Bewertung </th>
+            
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              </td>
+            
+            
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              </td>
+            
+            
+              <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
+              </td>
+            
+            <td align="left" style="padding-left: 0px;padding-right: 0px;">
+              <a href=" /dns-indicators/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/Sonne.png" alt="<p>Sonne</p>
+" class="responsiveWeather" title="x" style="border: transparent"/></a>
             </td>
           </tr>
         
       
 
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
       
 
       
@@ -3537,68 +2836,7 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-
-      
-
-    
-  
-      
         
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Umweltbundesamt (UBA)</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      
-
-      
-
-    
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                  <a href="https://www.umweltbundesamt.de/daten/umwelt-gesundheit/gesundheitsrisiken-der-bevoelkerung-durch-feinstaub#textpart-2" target="_blank">
-                    Gesundheitsrisiken durch Feinstaub <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
       
 
       
@@ -3615,858 +2853,7 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-
-      
-
-    
-  
-      
         
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</table>
-
-    </div>
-    
-    
-    
-    <div class="col-md-6">
-      
-        <h4>Datenquelle 2</h4>
-      
-      <table class="table">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-
-      
-      
-
-      
-        
-          <tr id="everythingElse">
-            <th scope="row"> </th>
-            <td>
-              
-                <p><a href="http://www.euro.who.int/de/home"><img src="https://g205sdgs.github.io/sdg-indicators/public/logos/who.png" alt=" Weltgesundheitsorganisation (WHO)" title="Klicken Sie hier um zu der Homepage der Organisation zu gelangen" style="border: transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
       
 
       
@@ -4483,6 +2870,8 @@ data-event-label="Change to indicator.sources tab"
       
 
       
+        
+      
 
       
 
@@ -4496,19 +2885,128 @@ data-event-label="Change to indicator.sources tab"
       
 
       
-        
-          <tr id="everythingElse">
-            <th scope="row">Organisation </th>
-            <td>
-              
-                <p>Weltgesundheitsorganisation (WHO)</p>
 
-              
-            </td>
-          </tr>
+      
         
       
 
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
+      
+
+      
+
+    
+  
+      
+        
+      
+
+      
+      
+
+      
+
+      
+        
       
 
       
@@ -4539,6 +3037,976 @@ data-event-label="Change to indicator.sources tab"
       
         
           
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -4584,6 +4052,22 @@ data-event-label="Change to indicator.sources tab"
     </div>
     
   </div>
+
+
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
 
 
       </article>
@@ -4664,15 +4148,8 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
@@ -4690,12 +4167,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220708120552'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220708125521'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220708120552"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220708125521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
