@@ -111,13 +111,9 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.mapLayers = [];
     this.indicatorId = options.indicatorId;
     this._precision = options.precision;
-    this.precisionItems = options.precisionItems;
     this._decimalSeparator = options.decimalSeparator;
     this.currentDisaggregation = 0;
     this.dataSchema = options.dataSchema;
-    this.viewHelpers = options.viewHelpers;
-    this.modelHelpers = options.modelHelpers;
-    this.chartTitles = options.chartTitles;
 
     // Require at least one geoLayer.
     if (!options.mapLayers || !options.mapLayers.length) {
@@ -145,47 +141,6 @@ opensdg.autotrack = function(preset, category, action, label) {
   }
 
   Plugin.prototype = {
-
-    // Update title.
-    updateTitle: function() {
-      if (!this.modelHelpers) {
-        return;
-      }
-      var currentSeries = this.disaggregationControls.getCurrentSeries(),
-          currentUnit = this.disaggregationControls.getCurrentUnit(),
-          newTitle = null;
-      if (this.modelHelpers.GRAPH_TITLE_FROM_SERIES) {
-        newTitle = currentSeries;
-      }
-      else {
-        var currentTitle = $('#map-heading').text();
-        newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
-      }
-      if (newTitle) {
-        $('#map-heading').text(newTitle);
-      }
-    },
-
-    // Update footer fields.
-    updateFooterFields: function() {
-      if (!this.viewHelpers) {
-        return;
-      }
-      var currentSeries = this.disaggregationControls.getCurrentSeries(),
-          currentUnit = this.disaggregationControls.getCurrentUnit();
-      this.viewHelpers.updateSeriesAndUnitElements(currentSeries, currentUnit);
-      this.viewHelpers.updateUnitElements(currentUnit);
-    },
-
-    // Update precision.
-    updatePrecision: function() {
-      if (!this.modelHelpers) {
-        return;
-      }
-      var currentSeries = this.disaggregationControls.getCurrentSeries(),
-          currentUnit = this.disaggregationControls.getCurrentUnit();
-      this._precision = this.modelHelpers.getPrecision(this.precisionItems, currentUnit, currentSeries);
-    },
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
@@ -530,9 +485,6 @@ opensdg.autotrack = function(preset, category, action, label) {
         // Add the disaggregation controls.
         plugin.disaggregationControls = L.Control.disaggregationControls(plugin);
         plugin.map.addControl(plugin.disaggregationControls);
-        plugin.updateTitle();
-        plugin.updateFooterFields();
-        plugin.updatePrecision();
 
         // Add the search feature.
         plugin.searchControl = new L.Control.SearchAccessible({
@@ -630,12 +582,6 @@ opensdg.autotrack = function(preset, category, action, label) {
         $('#tab-mapview').parent().click(finalMapPreparation);
       }
       function finalMapPreparation() {
-        // Update the series/unit stuff in case it changed
-        // while on the chart/table.
-        plugin.updateTitle();
-        plugin.updateFooterFields();
-        plugin.updatePrecision();
-        // Delay other things to give time for browser to do stuff.
         setTimeout(function() {
           $('#map #loader-container').hide();
           // Leaflet needs "invalidateSize()" if it was originally rendered in a
@@ -3084,19 +3030,15 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles) {
+  this.initialise = function(indicatorId, precision, decimalSeparator, dataSchema) {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
       mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":10,"tileURL":"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w","attribution":"<a href=\"https://www.openstreetmap.org/copyright\">&copy; OpenStreetMap</a> contributors |<br class=\"visible-xs\"> <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2022</a> |<br class=\"hidden-lg\"> <a href=\"https://www.destatis.de/DE/Home/_inhalt.html\">&copy; Statistisches Bundesamt (Destatis), 2022</a>"},"colorRange":["#F6E8EC","#E3BAC6","#D18CA1","#BE5E7B","#AB3055","#A21942","#821435","#610F28","#410A1A","#20050D"],"noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"color":"#888","fillOpacity":0.7},"styleHighlighted":{"weight":1,"opacity":1,"color":"#111","fillOpacity":0.7},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":55}},
       mapLayers: [{"subfolder":"regions","label":"Region","min_zoom":0,"max_zoom":20,"staticBorders":true}],
       precision: precision,
-      precisionItems: precisionItems,
       decimalSeparator: decimalSeparator,
       dataSchema: dataSchema,
-      viewHelpers: viewHelpers,
-      modelHelpers: modelHelpers,
-      chartTitles: chartTitles,
     });
   };
 };
@@ -4730,7 +4672,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
             fieldGroupElement.attr('data-has-data', fieldGroup.hasData);
             var fieldGroupButton = fieldGroupElement.find('> button'),
                 describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
-                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
+                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '.');
             if (!fieldGroup.hasData && !describedByCurrent.includes(noDataHintId)) {
                 fieldGroupButton.attr('aria-describedby', describedByCurrent + ' ' + noDataHintId);
             }
@@ -5868,7 +5810,7 @@ $(function() {
                     label.prepend(input);
                     fieldset.append(label);
                     input.addEventListener('change', function(e) {
-                        that.currentDisaggregation = that.getSelectedDisaggregationIndex(seriesColumn, series);
+                        that.currentDisaggregation = that.getSelectedDisaggregationIndex();
                         that.updateForm();
                     });
                 });
@@ -5894,7 +5836,7 @@ $(function() {
                         label.prepend(input);
                         fieldset.append(label);
                         input.addEventListener('change', function(e) {
-                            that.currentDisaggregation = that.getSelectedDisaggregationIndex(unitsColumn, unit);
+                            that.currentDisaggregation = that.getSelectedDisaggregationIndex();
                             that.updateForm();
                         });
                     }
@@ -5924,7 +5866,7 @@ $(function() {
                             label.prepend(input);
                             fieldset.append(label);
                             input.addEventListener('change', function(e) {
-                                that.currentDisaggregation = that.getSelectedDisaggregationIndex(field, value);
+                                that.currentDisaggregation = that.getSelectedDisaggregationIndex();
                                 that.updateForm();
                             });
                         }
@@ -5948,14 +5890,11 @@ $(function() {
             });
             applyButton.addEventListener('click', function(e) {
                 that.plugin.currentDisaggregation = that.currentDisaggregation;
-                that.plugin.updatePrecision();
                 that.plugin.setColorScale();
                 that.plugin.updateColors();
                 that.plugin.updateTooltips();
                 that.plugin.selectionLegend.resetSwatches();
                 that.plugin.selectionLegend.update();
-                that.plugin.updateTitle();
-                that.plugin.updateFooterFields();
                 that.updateList();
                 $('.disaggregation-form-outer').toggle();
             });
@@ -6063,7 +6002,7 @@ $(function() {
             return allDisaggregations;
         },
 
-        getSelectedDisaggregationIndex: function(changedKey, newValue) {
+        getSelectedDisaggregationIndex: function() {
             for (var i = 0; i < this.disaggregations.length; i++) {
                 var disaggregation = this.disaggregations[i],
                     keys = Object.keys(disaggregation),
@@ -6071,9 +6010,8 @@ $(function() {
                 for (var j = 0; j < keys.length; j++) {
                     var key = keys[j],
                         inputName = 'map-' + key,
-                        $inputElement = $('input[name="' + inputName + '"]:checked'),
-                        selection = $inputElement.val();
-                    if ($inputElement.length > 0 && selection !== disaggregation[key]) {
+                        selection = $('input[name="' + inputName + '"]:checked').val();
+                    if (selection !== disaggregation[key]) {
                         matchesSelections = false;
                         break;
                     }
@@ -6082,18 +6020,6 @@ $(function() {
                     return i;
                 }
             }
-            // If we are still here, it means that a recent change
-            // has resulted in an illegal combination. In this case
-            // we look at the recently-changed key and its value,
-            // and we pick the first disaggregation that matches.
-            for (var i = 0; i < this.disaggregations.length; i++) {
-                var disaggregation = this.disaggregations[i],
-                    keys = Object.keys(disaggregation);
-                if (keys.includes(changedKey) && disaggregation[changedKey] === newValue) {
-                    return i;
-                }
-            }
-            // If we are still here, something went wrong.
             throw('Could not find match');
         },
 
