@@ -186,10 +186,9 @@
                       <!-- YEAR !!!!!!!!!!!!!!!!-->
                       <tr>
                         <th> <div class=responsiveText>{{ page.t.weather.year }}</div> </th>
-                        {% assign position = 0 %}
                         {% for letter in letters %}
                           {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
-                          {% assign current_target_year_key = 'weather_indicator_' | append: single_indicator | append:'_target_' | append: position | append: '_year' %}
+                          {% assign current_target_year_key = 'weather_indicator_' | append: single_indicator | append:'_target_' | append: multi_target | append: '_year' %}
                           {% if indicator[year_key] %}
                             <!--check if year is valid or not-->
                             {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or (indicator[year_key] > indicator[current_target_year_key]) or case == '_old' %}
@@ -205,7 +204,6 @@
                             {% endif %}
 
                             {% assign additional_cells = additional_cells | minus: 1 %}
-                            {% assign position = position | plus: 1 %}
                           {% endif %}
                         {% endfor %}
                         {% if additional_cells == letters.size %}
