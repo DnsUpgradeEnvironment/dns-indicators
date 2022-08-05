@@ -71,8 +71,8 @@
                           <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
                         {% elsif target_trans contains '_new' %}
                           {% assign opacity = '' %}
-                          {% assign new_date_key = target_key | append: '_date' %}
-                          <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
+                          <!--{% assign new_date_key = target_key | append: '_date' %}-->
+                          <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[old_date_key] }})</span>
                         {% endif %}
                         </div>
                       </th>
@@ -173,8 +173,8 @@
                               {% assign old_date_key = target_key | append: '_date' %}
                               <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
                             {% elsif target_trans contains '_new' %}
-                              {% assign new_date_key = target_key | append: '_date' %}
-                              <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
+                              <!--{% assign new_date_key = target_key | append: '_date' %}-->
+                              <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[old_date_key] }})</span>
                             {% endif %}
                           </div>
                         </th>
