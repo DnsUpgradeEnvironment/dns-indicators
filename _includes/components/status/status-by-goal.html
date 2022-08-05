@@ -199,9 +199,11 @@
                               {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or case == '_old' %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
                               {% else %}
-                                {% unless indicator[year_key] > indicator[current_target_year_key] %}
+                                {% if indicator[year_key] > indicator[current_target_year_key] %}
+                                  {% assign opacity = ' style="opacity: 0.2"' %}
+                                {% else %}
                                   {% assign opacity = '' %}
-                                {% endunless %}
+                                {% endif %}
                               {% endif %}
 
                               {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
@@ -272,7 +274,7 @@
                       <!-- !!!!!!!!!!!!!!!!-->
                       {% endfor %} <!--case-->
                     {% endif %}
-                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
+                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_x_year-->
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
 
