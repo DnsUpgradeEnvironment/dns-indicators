@@ -154,7 +154,7 @@
                   {% for multi_target in (1..4) %}
                     {% assign test_target_key = test_target_key | replace: 'target_1', 'target_' | append: multitarget %}  <!--weather_indicator_2_target_1-->
 
-                    {% if indicator[test_target_key] %}
+                    <!--{% if indicator[test_target_key] %}-->
 
 
                       {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
@@ -185,7 +185,7 @@
                               {% endif %}
                             </div>
                           </th>
-                          <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                          <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}test_target_key</div> </td>
                         </tr>
                         <!-- !!!!!!!!!!!!!!!!-->
                         <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -273,8 +273,8 @@
                         </tr>
                       <!-- !!!!!!!!!!!!!!!!-->
                       {% endfor %} <!--case-->
-                    {% endif %}
-                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_x_year-->
+                      <!-- {% endif %}-->
+                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
 
@@ -291,5 +291,3 @@
     <br style="clear:both;">
   </div> <!--class="goal"-->
 {%- endfor -%} <!--for goalreport in site.data.reporting.goals-->
-
-{% include footer.html %}
