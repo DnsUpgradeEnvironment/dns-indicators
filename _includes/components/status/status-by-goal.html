@@ -44,7 +44,7 @@
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
                 <tr>
                   <th width="10%"> <div class=responsiveText>{{ page.t.weather.indicator }}</div> </th>
-                  <th colspan="9"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
+                  <th colspan="9" style="padding-left: 50px"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}/{{ idc_sort_order }}/ "><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 {% if target_trans == 'single_target' %}
@@ -76,7 +76,7 @@
                         {% endif %}
                         </div>
                       </th>
-                      <td colspan="9"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                      <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
                     </tr>
                     <!-- !!!!!!!!!!!!!!!!-->
                     <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -178,7 +178,7 @@
                             {% endif %}
                           </div>
                         </th>
-                        <td colspan="9"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                        <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
                       </tr>
                       <!-- !!!!!!!!!!!!!!!!-->
                       <!-- YEAR !!!!!!!!!!!!!!!!-->
