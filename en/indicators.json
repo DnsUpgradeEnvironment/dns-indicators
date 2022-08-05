@@ -2,7 +2,7 @@
   {
     "goal": {
       "id": "1",
-      "title": "End poverty in all its forms everywhere",
+      "title": "global_goals.1-title",
       "indicators": [
         
         {
@@ -18,7 +18,7 @@
   {
     "goal": {
       "id": "2",
-      "title": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
+      "title": "global_goals.2-title",
       "indicators": [
         
         {
@@ -50,7 +50,7 @@
   {
     "goal": {
       "id": "3",
-      "title": "Ensure healthy lives and promote well-being for all at all ages",
+      "title": "global_goals.3-title",
       "indicators": [
         
         {
@@ -114,7 +114,7 @@
   {
     "goal": {
       "id": "4",
-      "title": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+      "title": "global_goals.4-title",
       "indicators": [
         
         {
@@ -146,7 +146,7 @@
   {
     "goal": {
       "id": "5",
-      "title": "Achieve gender equality and empower all women and girls",
+      "title": "global_goals.5-title",
       "indicators": [
         
         {
@@ -186,7 +186,7 @@
   {
     "goal": {
       "id": "6",
-      "title": "Ensure availability and sustainable management of water and sanitation for all",
+      "title": "global_goals.6-title",
       "indicators": [
         
         {
@@ -218,7 +218,7 @@
   {
     "goal": {
       "id": "7",
-      "title": "Ensure access to affordable, reliable, sustainable and modern energy for all",
+      "title": "global_goals.7-title",
       "indicators": [
         
         {
@@ -250,7 +250,7 @@
   {
     "goal": {
       "id": "8",
-      "title": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
+      "title": "global_goals.8-title",
       "indicators": [
         
         {
@@ -314,7 +314,7 @@
   {
     "goal": {
       "id": "9",
-      "title": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+      "title": "global_goals.9-title",
       "indicators": [
         
         {
@@ -338,7 +338,7 @@
   {
     "goal": {
       "id": "10",
-      "title": "Reduce inequality within and among countries",
+      "title": "global_goals.10-title",
       "indicators": [
         
         {
@@ -362,7 +362,7 @@
   {
     "goal": {
       "id": "11",
-      "title": "Make cities and human settlements inclusive, safe, resilient and sustainable",
+      "title": "global_goals.11-title",
       "indicators": [
         
         {
@@ -434,7 +434,7 @@
   {
     "goal": {
       "id": "12",
-      "title": "Ensure sustainable consumption and production patterns",
+      "title": "global_goals.12-title",
       "indicators": [
         
         {
@@ -474,7 +474,7 @@
   {
     "goal": {
       "id": "13",
-      "title": "Take urgent action to combat climate change and its impacts",
+      "title": "global_goals.13-title",
       "indicators": [
         
         {
@@ -498,7 +498,7 @@
   {
     "goal": {
       "id": "14",
-      "title": "Conserve and sustainably use the oceans, seas and marine resources for sustainable development",
+      "title": "global_goals.14-title",
       "indicators": [
         
         {
@@ -522,7 +522,7 @@
   {
     "goal": {
       "id": "15",
-      "title": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
+      "title": "global_goals.15-title",
       "indicators": [
         
         {
@@ -554,7 +554,7 @@
   {
     "goal": {
       "id": "16",
-      "title": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
+      "title": "global_goals.16-title",
       "indicators": [
         
         {
@@ -586,7 +586,7 @@
   {
     "goal": {
       "id": "17",
-      "title": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
+      "title": "global_goals.17-title",
       "indicators": [
         
         {
