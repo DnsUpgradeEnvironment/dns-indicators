@@ -48,7 +48,7 @@
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 {% if target_trans == 'single_target' %}
-                  {% assign additional_cells = letters.size %}
+
                   <!--Check for old targets-->
                   {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_1_target_old-->
                   {% if indicator[old_target_key] %}
@@ -58,6 +58,7 @@
                   {% endif %}
 
                   {% for case in cases %}
+                    {% assign additional_cells = letters.size %}
                     {% assign target_trans = 'single_target' | append: case | replace: 'xx', '' %}  <!--single_target_old-->
                     {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %}  <!--weather_indicator_1_target_old or weather_indicator_1_target-->
 
