@@ -196,10 +196,12 @@
                             {% assign current_target_year_key = 'weather_indicator_' | append: single_indicator | append:'_target_' | append: multi_target | append: '_year' %}
                             {% if indicator[year_key] %}
                               <!--check if year is valid or not-->
-                              {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or (indicator[year_key] > indicator[current_target_year_key]) or case == '_old' %}
+                              {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or case == '_old' %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
                               {% else %}
-                                {% assign opacity = '' %}
+                                {% unless indicator[year_key] > indicator[current_target_year_key] %}
+                                  {% assign opacity = '' %}
+                                {% endunless %}
                               {% endif %}
 
                               {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
@@ -267,9 +269,9 @@
                             {% endif %}
                           {% endfor %}
                         </tr>
-                      {% endif %}
                       <!-- !!!!!!!!!!!!!!!!-->
-                    {% endfor %} <!--case-->
+                      {% endfor %} <!--case-->
+                    {% endif %}
                     {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
