@@ -152,13 +152,10 @@
                 {% elsif target_trans == 'multi_target' %}
                 {% assign target_year_to_compare_key = single_indicator_key | append: '_target_1_year' %} <!--weather_indicator_2_target_1_year-->
                   {% for multi_target in (1..4) %}
-                    {% assign test_target_key = test_target_key | replace: 'target_1', 'target_' | append: multitarget %}  <!--weather_indicator_2_target_1-->
+                    {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
+                    {% assign target_key = target_key | append: '_' | append: multi_target %}  <!--weather_indicator_2_target_3-->
 
-                    <!--{% if indicator[test_target_key] %}-->
-
-
-                      {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
-                      {% assign target_key = target_key | append: '_' | append: multi_target %}  <!--weather_indicator_2_target_3-->
+                    {% if incicator[target_key] %}
 
                       <!--Check for old targets-->
                       {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_2_target_3_old-->
@@ -185,7 +182,7 @@
                               {% endif %}
                             </div>
                           </th>
-                          <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}test_target_key</div> </td>
+                          <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
                         </tr>
                         <!-- !!!!!!!!!!!!!!!!-->
                         <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -196,14 +193,10 @@
                             {% assign current_target_year_key = 'weather_indicator_' | append: single_indicator | append:'_target_' | append: multi_target | append: '_year' %}
                             {% if indicator[year_key] %}
                               <!--check if year is valid or not-->
-                              {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or case == '_old' %}
+                              {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or (indicator[year_key] > indicator[current_target_year_key]) or case == '_old' %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
                               {% else %}
-                                {% if indicator[year_key] > indicator[current_target_year_key] %}
-                                  {% assign opacity = ' style="opacity: 0.2"' %}
-                                {% else %}
-                                  {% assign opacity = '' %}
-                                {% endif %}
+                                {% assign opacity = '' %}
                               {% endif %}
 
                               {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
@@ -271,10 +264,10 @@
                             {% endif %}
                           {% endfor %}
                         </tr>
-                      <!-- !!!!!!!!!!!!!!!!-->
+                        <!-- !!!!!!!!!!!!!!!!-->
                       {% endfor %} <!--case-->
-                      <!-- {% endif %}-->
-                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
+                      {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
+                    {% endif %}
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
 
@@ -291,3 +284,5 @@
     <br style="clear:both;">
   </div> <!--class="goal"-->
 {%- endfor -%} <!--for goalreport in site.data.reporting.goals-->
+
+{% include footer.html %}
