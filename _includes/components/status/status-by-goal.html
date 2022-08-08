@@ -149,7 +149,7 @@
                   {% endfor %} <!--for case in cases-->
                 <!-- ..........................................................................................................-->
                 {% elsif target_trans == 'multi_target' %}
-                {% assign priveous_target_year_key = single_indicator_key | append: '_target_1_year' %} <!--weather_indicator_2_target_1_year-->
+                {% assign previous_target_year_key = single_indicator_key | append: '_target_1_year' %} <!--weather_indicator_2_target_1_year-->
                   {% for multi_target in (1..4) %}
                     {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
                     {% assign target_key = target_key | append: '_' | append: multi_target %}  <!--weather_indicator_2_target_3-->
@@ -193,7 +193,7 @@
                             {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
                             {% if indicator[year_key] %}
                               <!--check if year is valid or not-->
-                              {% if (multi_target > 1 and indicator[year_key] <= indicator[priveous_target_year_key]) or case == '_old' %}
+                              {% if (multi_target > 1 and indicator[year_key] <= indicator[previous_target_year_key]) or case == '_old' %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
                               {% elsif (indicator[year_key] > indicator[target_year_key]) %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
@@ -202,9 +202,9 @@
                               {% endif %}
 
                               {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
-                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}{{priveous_target_year_key}}</span></p> </td>
+                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}{{previous_target_year_key}}</span></p> </td>
                               {% else %}
-                                <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}{{priveous_target_year_key}}</span></p> </td>
+                                <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}{{previous_target_year_key}}</span></p> </td>
                               {% endif %}
 
                               {% assign additional_cells = additional_cells | minus: 1 %}
@@ -231,9 +231,9 @@
                             {% assign item_key = target_key | append:'_item_' | append: letter %}
                             {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
                             <!--check if year is valid or not-->
-                            {% if (multi_target > 1 and indicator[year_key] <= indicator[priveous_target_year_key]) or case == '_old' %}
+                            {% if (multi_target > 1 and indicator[year_key] <= indicator[previous_target_year_key]) or case == '_old' %}
                               {% assign opacity = ' style="opacity: 0.2"' %}
-                            {% elsif (indicator[year_key] > indicator[priveous_target_year_key] and indicator[year_key] > indicator[target_year_key]) %}
+                            {% elsif (indicator[year_key] > indicator[previous_target_year_key] and indicator[year_key] > indicator[target_year_key]) %}
                               {% assign opacity = ' style="opacity: 0.2"' %}
                             {% else %}
                               {% assign opacity = '' %}
@@ -272,9 +272,9 @@
                         <!-- !!!!!!!!!!!!!!!!-->
                       {% endif %}
                     {% endfor %} <!--case-->
-                    {% assign priveous_target_year_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
+                    {% assign previous_target_year_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
                     {% if case = '_new' %}
-                      {% assign priveous_target_year_key = priveous_target_year_key | replace '_year', '_new_year' %}
+                      {% assign previous_target_year_key = previous_target_year_key | replace: '_year', '_new_year' %}
                     {% endif %}
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
