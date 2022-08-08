@@ -177,7 +177,7 @@
                         <!-- TARGET !!!!!!!!!!!!!!!!-->
                         <tr>
                           <th>
-                            <div class=responsiveText>{{ page.t.weather[target_trans] }}{{last_case}}
+                            <div class=responsiveText>{{ page.t.weather[target_trans] }} - {{last_case}} - {{previous_target_year_key}}
                               {% if target_trans contains '_old' %}
                                 {% assign old_date_key = target_key | append: '_date' %}
                                 <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
@@ -207,9 +207,9 @@
                               {% endif %}
 
                               {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
-                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}{{previous_target_year_key}}</span></p> </td>
+                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
                               {% else %}
-                                <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}{{previous_target_year_key}}</span></p> </td>
+                                <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}</span></p> </td>
                               {% endif %}
 
                               {% assign additional_cells = additional_cells | minus: 1 %}
