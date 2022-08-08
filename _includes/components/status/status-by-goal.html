@@ -155,7 +155,7 @@
                     {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
                     {% assign target_key = target_key | append: '_' | append: multi_target %}  <!--weather_indicator_2_target_3-->
 
-                    {% if incicator[target_key] %}
+                    <!--{% if incicator[target_key] %}
 
                       <!--Check for old targets-->
                       {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_2_target_3_old-->
@@ -267,7 +267,8 @@
                         <!-- !!!!!!!!!!!!!!!!-->
                       {% endfor %} <!--case-->
                       {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
-                    {% endif %}
+
+                    <!--{% endif %}-->
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
 
