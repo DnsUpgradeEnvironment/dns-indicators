@@ -153,6 +153,7 @@
                   {% for multi_target in (1..4) %}
                     {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
                     {% assign target_key = target_key | append: '_' | append: multi_target %}  <!--weather_indicator_2_target_3-->
+                    {% assign target_year_key = target_key | append: "_year" %} <!--weather_indicator_2_target_3_year-->
 
                     <!--Check for old targets-->
                     {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_2_target_3_old-->
