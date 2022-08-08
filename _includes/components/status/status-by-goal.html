@@ -166,6 +166,7 @@
                       {% assign additional_cells = letters.size %}
                       {% assign target_trans = 'multi_target_' | append: multi_target | append: case | replace: 'xx', '' %} <!--multi_target_3_old-->
                       {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %} <!--indicator_1_target_3_old-->
+
                       {% if indicator[target_key] %}
                         {% assign x = "Yes" %}
 
@@ -265,9 +266,9 @@
                           {% endfor %}
                         </tr>
                         <!-- !!!!!!!!!!!!!!!!-->
-                      {% endfor %} <!--case-->
-                      {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
-                    {% endif %}
+                      {% endif %}
+                    {% endfor %} <!--case-->
+                    {% assign target_year_to_compare_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
 
