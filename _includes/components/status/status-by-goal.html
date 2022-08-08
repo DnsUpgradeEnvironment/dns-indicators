@@ -195,11 +195,7 @@
                               <!--check if year is valid or not-->
                               {% if (multi_target > 1 and indicator[year_key] <= indicator[priveous_target_year_key]) or case == '_old' %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
-                              {% else %}
-                                {% assign opacity = '' %}
-                              {% endif %}
-
-                              {% if (indicator[year_key] > indicator[target_year_key]) %}
+                              {% elsif (indicator[year_key] > indicator[target_year_key]) %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
                               {% else %}
                                 {% assign opacity = '' %}
@@ -240,7 +236,7 @@
                             {% else %}
                               {% assign opacity = '' %}
                             {% endif %}
-                            
+
                             {% if (indicator[year_key] > indicator[target_year_key]) %}
                               {% assign opacity = ' style="opacity: 0.2"' %}
                             {% else %}
