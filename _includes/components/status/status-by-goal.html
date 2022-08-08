@@ -163,10 +163,15 @@
                       {% assign cases = 'xx' | split: ',' %}
                     {% endif %}
 
+                    {% assign last_case = '' %}
                     {% for case in cases %}
                       {% assign additional_cells = letters.size %}
                       {% assign target_trans = 'multi_target_' | append: multi_target | append: case | replace: 'xx', '' %} <!--multi_target_3_old-->
                       {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %} <!--indicator_1_target_3_old-->
+
+                      {% if last_case == '_new' %}
+                        {% assign previous_target_year_key = previous_target_year_key | replace: '_year', '_new_year' %}
+                      {% endif %}
 
                       {% if indicator[target_key] %}
                         <!-- TARGET !!!!!!!!!!!!!!!!-->
@@ -271,11 +276,11 @@
                         </tr>
                         <!-- !!!!!!!!!!!!!!!!-->
                       {% endif %}
+                      {% assign last_case = case %}
                     {% endfor %} <!--case-->
+
                     {% assign previous_target_year_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
-                    {% if case == '_new' %}
-                      {% assign previous_target_year_key = previous_target_year_key | replace: '_year', '_new_year' %}
-                    {% endif %}
+
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
 
