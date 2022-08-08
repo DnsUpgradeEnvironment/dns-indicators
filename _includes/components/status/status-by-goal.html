@@ -169,15 +169,11 @@
                       {% assign target_trans = 'multi_target_' | append: multi_target | append: case | replace: 'xx', '' %} <!--multi_target_3_old-->
                       {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %} <!--indicator_1_target_3_old-->
 
-                      {% if last_case == '_new' %}
-                        {% assign previous_target_year_key = previous_target_year_key | replace: '_year', '_new_year' %}
-                      {% endif %}
-
                       {% if indicator[target_key] %}
                         <!-- TARGET !!!!!!!!!!!!!!!!-->
                         <tr>
                           <th>
-                            <div class=responsiveText>{{ page.t.weather[target_trans] }} - {{last_case}} - {{previous_target_year_key}}
+                            <div class=responsiveText>{{ page.t.weather[target_trans] }} - {{previous_target_year_key}}
                               {% if target_trans contains '_old' %}
                                 {% assign old_date_key = target_key | append: '_date' %}
                                 <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
@@ -276,10 +272,13 @@
                         </tr>
                         <!-- !!!!!!!!!!!!!!!!-->
                       {% endif %}
-                      {% assign last_case = case %}
                     {% endfor %} <!--case-->
 
                     {% assign previous_target_year_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
+                    {% assign previous_target_new_year_key = previous_target_year_key | replace: '_year', '_new_year' %}
+                    {% if indicator[previous_target_new_year_key] %}
+                      {% assign previous_target_year_key = previous_target_new_year_key %} <!--weather_indicator_2_target_1_new_year-->
+                    {% endif%}
 
                   {% endfor %} <!--multi_target-->
                 {% endif %} <!-- target_trans == 'single_target' -->
