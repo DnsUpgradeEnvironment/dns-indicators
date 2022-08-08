@@ -193,14 +193,20 @@
                             {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
                             {% if indicator[year_key] %}
                               <!--check if year is valid or not-->
-                              {% if (multi_target > 1 and indicator[year_key] <= indicator[priveous_target_year_key]) or (indicator[year_key] > indicator[target_year_key]) or case == '_old' %}
+                              {% if (multi_target > 1 and indicator[year_key] <= indicator[priveous_target_year_key]) or case == '_old' %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
                               {% else %}
                                 {% assign opacity = '' %}
                               {% endif %}
 
+                              {% if (indicator[year_key] > indicator[target_year_key]) %}
+                                {% assign x = "Yes" %}
+                              {% else %}
+                                {% assign x = "<!-- NOTE:  -->" %}
+                              {% endif %}
+
                               {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
-                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}{{ indicator[target_year_key] }}</span></p> </td>
+                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}{{ indicator[target_year_key] }}{{ x }}</span></p> </td>
                               {% else %}
                                 <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}{{ indicator[target_year_key] }}</span></p> </td>
                               {% endif %}
@@ -229,7 +235,7 @@
                             {% assign item_key = target_key | append:'_item_' | append: letter %}
                             {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
                             <!--check if year is valid or not-->
-                            {% if multi_target > 1 and indicator[year_key] <= indicator[priveous_target_year_key] or case == '_old' %}
+                            {% if multi_target > 1 and indicator[year_key] <= indicator[priveous_target_year_key] or (indicator[year_key] > indicator[target_year_key]) or case == '_old' %}
                               {% assign opacity = ' style="opacity: 0.2"' %}
                             {% else %}
                               {% assign opacity = '' %}
