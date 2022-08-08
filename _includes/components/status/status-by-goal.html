@@ -74,6 +74,8 @@
                           {% assign opacity = '' %}
                           <!--{% assign new_date_key = target_key | append: '_date' %}-->
                           <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[old_date_key] }})</span>
+                        {% else %}
+                          {% assign opacity = '' %}
                         {% endif %}
                         </div>
                       </th>
