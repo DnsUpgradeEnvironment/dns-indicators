@@ -273,7 +273,7 @@
                       {% endif %}
                     {% endfor %} <!--case-->
                     {% assign priveous_target_year_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
-                    {% fi case = '_new' %}
+                    {% if case = '_new' %}
                       {% assign priveous_target_year_key = priveous_target_year_key | replace '_year', '_new_year' %}
                     {% endif %}
                   {% endfor %} <!--multi_target-->
