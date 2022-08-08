@@ -168,12 +168,10 @@
                       {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %} <!--indicator_1_target_3_old-->
 
                       {% if indicator[target_key] %}
-                        {% assign x = "Yes" %}
-
                         <!-- TARGET !!!!!!!!!!!!!!!!-->
                         <tr>
                           <th>
-                            <div class=responsiveText>{{ page.t.weather[target_trans] }} {{ x }}
+                            <div class=responsiveText>{{ page.t.weather[target_trans] }}
                               {% if target_trans contains '_old' %}
                                 {% assign old_date_key = target_key | append: '_date' %}
                                 <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
@@ -194,16 +192,16 @@
                             {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
                             {% if indicator[year_key] %}
                               <!--check if year is valid or not-->
-                              {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or case == '_old' %}
+                              {% if (multi_target > 1 and indicator[year_key] <= indicator[target_year_to_compare_key]) or (indicator[year_key] < indicator[target_year_key]) or case == '_old' %}
                                 {% assign opacity = ' style="opacity: 0.2"' %}
                               {% else %}
                                 {% assign opacity = '' %}
                               {% endif %}
 
                               {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
-                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
+                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}{{ indicator[target_year_key] }}</span></p> </td>
                               {% else %}
-                                <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}</span></p> </td>
+                                <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}{{ target_year_key }}</span></p> </td>
                               {% endif %}
 
                               {% assign additional_cells = additional_cells | minus: 1 %}
