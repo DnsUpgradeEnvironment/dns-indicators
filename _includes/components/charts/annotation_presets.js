@@ -25,7 +25,7 @@ opensdg.annotationPresets = {
         description: function() {
             var descriptionParts = [translations.indicator.chart_annotation];
             if (this.label && this.label.content) {
-                descriptionParts.push(translations.t(this.label.content));
+                descriptionParts.push(translations.t(this.label.content) + ': ' + this.value);
             }
             else {
                 // If there is no label, just specify whether it is a box or line.
