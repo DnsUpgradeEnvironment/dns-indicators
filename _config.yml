@@ -274,17 +274,25 @@ map_options:
 
 
 map_layers:
-  - min_zoom: 4.5
+  -
+    # The subfolder under 'geojson' in the data repository holding the GeoJSON files:
+    subfolder: boundaries
+    # The label to use in the "Download GeoJSON" button:
+    label: Region
+    # The minimum zoom at which this layer should be visible.
+    min_zoom: 4.5
+    # The maximum zoom at which this layer should be visible.
     max_zoom: 7.5
-    geojson_file: boundaries.geojson
-    name_property: GEN
-    id_property: AGS
-    output_subfolder: regions
-    filename_prefix: indicator_
+    # Whether or not these boundaries should display statically on lower layers.
     staticBorders: true
-  - min_zoom: 8
+  -
+    # The subfolder under 'geojson' in the data repository holding the GeoJSON files:
+    subfolder: boundariesKrs
+    # The label to use in the "Download GeoJSON" button:
+    label: Kreis
+    # The minimum zoom at which this layer should be visible.
+    min_zoom: 8
+    # The maximum zoom at which this layer should be visible.
     max_zoom: 11
-    geojson_file: boundariesKrs.geojson
-    nameProperty: GEN
-    idProperty: ARS
+    # Whether or not these boundaries should display statically on lower layers.
     staticBorders: true
