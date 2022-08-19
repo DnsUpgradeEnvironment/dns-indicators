@@ -5708,7 +5708,7 @@ $(function() {
     }
   });
 }());
-/*
+*
  * Leaflet disaggregation controls.
  *
  * This is a Leaflet control designed replicate the disaggregation
