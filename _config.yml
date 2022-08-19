@@ -272,7 +272,6 @@ map_options:
 
 
 
-
 map_layers:
   -
     # The subfolder under 'geojson' in the data repository holding the GeoJSON files:
