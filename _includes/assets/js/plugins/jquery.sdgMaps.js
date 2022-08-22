@@ -114,6 +114,7 @@
     // Update title.
     updateTitle: function() {
       if (!this.modelHelpers) {
+        console.log("No modelHelpers");
         return;
       }
       var currentSeries = this.disaggregationControls.getCurrentSeries(),
