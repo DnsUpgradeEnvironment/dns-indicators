@@ -2759,7 +2759,7 @@ function getTimeSeriesAttributes(rows) {
   this.graphType = options.graphType;
   this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
-//  this.xAxisLabel = options.xAxisLabel;
+  this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
   this.showData = options.showData;
   this.selectedFields = [];
@@ -3102,7 +3102,7 @@ var mapView = function () {
     $('#map').sdgMap({
       indicatorId: indicatorId,
       mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":10,"tileURL":"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w","attribution":"<a href=\"https://www.openstreetmap.org/copyright\">&copy; OpenStreetMap</a> contributors |<br class=\"visible-xs\"> <a href=\"https://www.bkg.bund.de\">&copy; GeoBasis-De / BKG 2022</a> |<br class=\"hidden-lg\"> <a href=\"https://www.destatis.de/DE/Home/_inhalt.html\">&copy; Statistisches Bundesamt (Destatis), 2022</a>"},"colorRange":["#F6E8EC","#E3BAC6","#D18CA1","#BE5E7B","#AB3055","#A21942","#821435","#610F28","#410A1A","#20050D"],"noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"color":"#888","fillOpacity":0.7},"styleHighlighted":{"weight":1,"opacity":1,"color":"#111","fillOpacity":0.7},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":55}},
-      mapLayers: [{"subfolder":"boundaries","label":"Region","min_zoom":4.5,"max_zoom":7.5,"staticBorders":true},{"subfolder":"boundariesKrs","label":"Kreis","min_zoom":8,"max_zoom":11,"staticBorders":true}],
+      mapLayers: [{"min_zoom":4.5,"max_zoom":7.5,"staticBorders":true,"subfolder":"boundaries","label":"indicator.map"},{"min_zoom":8,"max_zoom":11,"staticBorders":false,"subfolder":"RboundariesKrs","label":"??"}],
       precision: precision,
       precisionItems: precisionItems,
       decimalSeparator: decimalSeparator,
@@ -3503,6 +3503,7 @@ function createPlot(chartInfo) {
     else {
         updateHeadlineColor('default', chartConfig);
     }
+    refreshChartLineWrapping(chartConfig);
 
     VIEW._chartInstance = new Chart($(OPTIONS.rootElement).find('canvas'), chartConfig);
     $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
@@ -3530,6 +3531,7 @@ function createPlot(chartInfo) {
     }
 
     alterChartConfig(updatedConfig, chartInfo);
+    refreshChartLineWrapping(updatedConfig);
     VIEW._chartInstance.config.type = updatedConfig.type;
     VIEW._chartInstance.data.datasets = updatedConfig.data.datasets;
     VIEW._chartInstance.data.labels = updatedConfig.data.labels;
@@ -3580,6 +3582,41 @@ function generateChartLegend(chart) {
     });
     text.push('</ul>');
     return text.join('');
+}
+
+/**
+ * @param {Object} chartConfig
+ */
+function refreshChartLineWrapping(chartConfig) {
+    var yAxisLimit = 40,
+        wrappedYAxis = strToArray(chartConfig.options.scales.y.title.text, yAxisLimit);
+    chartConfig.options.scales.y.title.text = wrappedYAxis;
+}
+
+/**
+ * @param {String} str
+ * @param {Number} limit
+ * @returns {Array} The string divided into an array for line wrapping.
+ */
+function strToArray (str, limit) {
+    var words = str.split(' '),
+        aux = [],
+        concat = [];
+
+    for (var i = 0; i < words.length; i++) {
+        concat.push(words[i]);
+        var join = concat.join(' ');
+        if (join.length > limit) {
+            aux.push(join);
+            concat = [];
+        }
+    }
+
+    if (concat.length) {
+        aux.push(concat.join(' ').trim());
+    }
+
+    return aux;
 }
 
   opensdg.annotationPresets = {
