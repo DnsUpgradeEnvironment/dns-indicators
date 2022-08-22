@@ -280,5 +280,5 @@ map_layers:
   - min_zoom: 8
     max_zoom: 11
     staticBorders: false
-    subfolder: RboundariesKrs
+    subfolder: boundariesKrs
     label: ??
