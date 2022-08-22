@@ -5745,6 +5745,12 @@ $(function() {
     }
   });
 }());
+/*
+ * Leaflet disaggregation controls.
+ *
+ * This is a Leaflet control designed replicate the disaggregation
+ * controls that are in the sidebar for tables and charts.
+ */
 (function () {
     "use strict";
 
@@ -5884,9 +5890,7 @@ $(function() {
                         definition = L.DomUtil.create('dd', 'disaggregation-definition'),
                         container = L.DomUtil.create('div', 'disaggregation-container'),
                         field = disaggregation.field;
-                    //title.innerHTML = translations.t(key);
                     title.innerHTML = field;
-                    //var disaggregationValue = translations.t(currentDisaggregation[key]);
                     var disaggregationValue = currentDisaggregation[field];
                     if (disaggregationValue !== '') {
                         definition.innerHTML = disaggregationValue;
@@ -5927,7 +5931,7 @@ $(function() {
                     label.prepend(input);
                     fieldset.append(label);
                     input.addEventListener('change', function(e) {
-                        that.currentDisaggregation = that.getSelectedDisaggregationIndex();
+                        that.currentDisaggregation = that.getSelectedDisaggregationIndex(seriesColumn, series);
                         that.updateForm();
                     });
                 });
@@ -5953,7 +5957,7 @@ $(function() {
                         label.prepend(input);
                         fieldset.append(label);
                         input.addEventListener('change', function(e) {
-                            that.currentDisaggregation = that.getSelectedDisaggregationIndex();
+                            that.currentDisaggregation = that.getSelectedDisaggregationIndex(unitsColumn, unit);
                             that.updateForm();
                         });
                     }
@@ -5983,7 +5987,7 @@ $(function() {
                             label.prepend(input);
                             fieldset.append(label);
                             input.addEventListener('change', function(e) {
-                                that.currentDisaggregation = that.getSelectedDisaggregationIndex();
+                                that.currentDisaggregation = that.getSelectedDisaggregationIndex(field, value);
                                 that.updateForm();
                             });
                         }
@@ -6007,10 +6011,14 @@ $(function() {
             });
             applyButton.addEventListener('click', function(e) {
                 that.plugin.currentDisaggregation = that.currentDisaggregation;
+                that.plugin.updatePrecision();
                 that.plugin.setColorScale();
                 that.plugin.updateColors();
+                that.plugin.updateTooltips();
                 that.plugin.selectionLegend.resetSwatches();
                 that.plugin.selectionLegend.update();
+                that.plugin.updateTitle();
+                that.plugin.updateFooterFields();
                 that.updateList();
                 $('.disaggregation-form-outer').toggle();
             });
@@ -6118,7 +6126,7 @@ $(function() {
             return allDisaggregations;
         },
 
-        getSelectedDisaggregationIndex: function() {
+        getSelectedDisaggregationIndex: function(changedKey, newValue) {
             for (var i = 0; i < this.disaggregations.length; i++) {
                 var disaggregation = this.disaggregations[i],
                     keys = Object.keys(disaggregation),
@@ -6126,8 +6134,9 @@ $(function() {
                 for (var j = 0; j < keys.length; j++) {
                     var key = keys[j],
                         inputName = 'map-' + key,
-                        selection = $('input[name="' + inputName + '"]:checked').val();
-                    if (selection !== disaggregation[key]) {
+                        $inputElement = $('input[name="' + inputName + '"]:checked'),
+                        selection = $inputElement.val();
+                    if ($inputElement.length > 0 && selection !== disaggregation[key]) {
                         matchesSelections = false;
                         break;
                     }
@@ -6136,6 +6145,18 @@ $(function() {
                     return i;
                 }
             }
+            // If we are still here, it means that a recent change
+            // has resulted in an illegal combination. In this case
+            // we look at the recently-changed key and its value,
+            // and we pick the first disaggregation that matches.
+            for (var i = 0; i < this.disaggregations.length; i++) {
+                var disaggregation = this.disaggregations[i],
+                    keys = Object.keys(disaggregation);
+                if (keys.includes(changedKey) && disaggregation[changedKey] === newValue) {
+                    return i;
+                }
+            }
+            // If we are still here, something went wrong.
             throw('Could not find match');
         },
 
