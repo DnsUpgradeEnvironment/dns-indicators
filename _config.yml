@@ -270,28 +270,14 @@ map_options:
     color: '#172d44'
     dashArray: 5,5
 
-
-
 map_layers:
-  -
-    # The subfolder under 'geojson' in the data repository holding the GeoJSON files:
-    subfolder: boundaries
-    # The label to use in the "Download GeoJSON" button:
-    label: Region
-    # The minimum zoom at which this layer should be visible.
-    min_zoom: 4.5
-    # The maximum zoom at which this layer should be visible.
-    max_zoom: 7.5
-    # Whether or not these boundaries should display statically on lower layers.
-    staticBorders: true
-  -
-    # The subfolder under 'geojson' in the data repository holding the GeoJSON files:
-    subfolder: boundariesKrs
-    # The label to use in the "Download GeoJSON" button:
-    label: Kreis
-    # The minimum zoom at which this layer should be visible.
-    min_zoom: 8
-    # The maximum zoom at which this layer should be visible.
-    max_zoom: 11
-    # Whether or not these boundaries should display statically on lower layers.
-    staticBorders: true
+- min_zoom: 4.5
+  max_zoom: 7.5
+  staticBorders: true
+  subfolder: boundaries
+  label: indicator.map
+- min_zoom: 8
+  max_zoom: 11
+  staticBorders: false
+  subfolder: RboundariesKrs
+  label: ??
