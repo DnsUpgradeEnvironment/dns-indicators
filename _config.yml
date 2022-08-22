@@ -277,8 +277,3 @@ map_layers:
     staticBorders: true
     subfolder: boundaries
     label: indicator.map
-  - min_zoom: 8
-    max_zoom: 11
-    staticBorders: false
-    subfolder: boundariesKrs
-    label: ??
