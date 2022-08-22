@@ -270,7 +270,6 @@ map_options:
     color: '#172d44'
     dashArray: 5,5
 
-
 map_layers:
   - serviceUrl:  https://dnsupgradeenvironment.github.io/dns-indicators/assets/maps/boundaries.geojson
     min_zoom: 4.5
