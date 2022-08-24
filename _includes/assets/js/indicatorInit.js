@@ -25,6 +25,7 @@ var indicatorInit = function () {
                         edgesData: res.edges,
                         showMap: domData.showmap,
                         country: domData.country,
+                        goal: domData.goal,
                         indicatorId: domData.indicatorid,
                         shortIndicatorId: domData.id,
                         chartTitle: domData.charttitle,

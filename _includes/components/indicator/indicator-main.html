@@ -6,6 +6,7 @@
 
 <div class="row"
   id="indicatorData"
+  data-goal='{{ page.goal }}'
   data-indicatorid='indicator_{{ page.indicator.slug }}'
   data-id="{{ page.indicator.slug }}"
   data-country="{{ page.indicator.national_geographical_coverage | default: site.country.name }}"
