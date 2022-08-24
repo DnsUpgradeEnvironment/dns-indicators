@@ -218,7 +218,7 @@
                     var form = L.DomUtil.create('div', 'disaggregation-fieldset-container'),
                         legend = L.DomUtil.create('legend', 'disaggregation-fieldset-legend'),
                         fieldset = L.DomUtil.create('fieldset', 'disaggregation-fieldset'),
-                        field = disaggregation.field;
+                        field = translations.t(disaggregation.field);
                     legend.innerHTML = field;
                     fieldset.append(legend);
                     form.append(fieldset);
@@ -232,7 +232,7 @@
                             input.tabindex = 0;
                             input.checked = (value === currentDisaggregation[field]) ? 'checked' : '';
                             var label = L.DomUtil.create('label', 'disaggregation-label');
-                            label.innerHTML = (value === '') ? 'All' : value;
+                            label.innerHTML = (value === '') ? translations.indicator.total : value;
                             label.prepend(input);
                             fieldset.append(label);
                             input.addEventListener('change', function(e) {
