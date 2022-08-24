@@ -79,7 +79,7 @@
     // Support multiple colorsets
     if (Array.isArray(options.mapOptions.colorRange[0])) {
       options.mapOptions.colorRange = options.mapOptions.colorRange[2];
-      console.log(options.goal);
+      console.log("goal: ",options.goal);
     }
 
 
