@@ -20,7 +20,6 @@ var indicatorModel = function (options) {
   this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
-  this.goal = options.goal;
   this.indicatorId = options.indicatorId;
   this.shortIndicatorId = options.shortIndicatorId;
   this.chartTitle = options.chartTitle,
@@ -279,7 +278,6 @@ var indicatorModel = function (options) {
         allowedFields: this.allowedFields,
         edges: this.edgesData,
         hasGeoData: this.hasGeoData,
-        goal: this.goal,
         indicatorId: this.indicatorId,
         showMap: this.showMap,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
@@ -336,7 +334,6 @@ var indicatorModel = function (options) {
       labels: this.years,
       headlineTable: helpers.getHeadlineTable(headline, this.selectedUnit),
       selectionsTable: selectionsTable,
-      goal: this.goal,
       indicatorId: this.indicatorId,
       shortIndicatorId: this.shortIndicatorId,
       selectedUnit: this.selectedUnit,

@@ -78,14 +78,14 @@
 
     // Support multiple colorsets
     if (Array.isArray(options.mapOptions.colorRange[0])) {
-      options.mapOptions.colorRange = options.mapOptions.colorRange[options.goal];
-      console.log("goal: ",options.goal);
+      this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
+      options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber];
+      console.log("goal: ",this.goalNumber);
     }
 
 
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     this.mapLayers = [];
-    this.goal = options.goal;
     this.indicatorId = options.indicatorId;
     this._precision = options.precision;
     this.precisionItems = options.precisionItems;

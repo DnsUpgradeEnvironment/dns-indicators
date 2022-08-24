@@ -92,7 +92,6 @@ var indicatorView = function (model, options) {
         if (args.hasGeoData && args.showMap) {
             VIEW._mapView = new mapView();
             VIEW._mapView.initialise(
-                args.goal,
                 args.indicatorId,
                 args.precision,
                 args.precisionItems,
