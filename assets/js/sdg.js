@@ -5893,7 +5893,7 @@ $(function() {
                         container = L.DomUtil.create('div', 'disaggregation-container'),
                         field = disaggregation.field;
                     //title.innerHTML = translations.t(key);
-                    title.innerHTML = field;
+                    title.innerHTML = translations.t(field);
                     //var disaggregationValue = translations.t(currentDisaggregation[key]);
                     var disaggregationValue = currentDisaggregation[field];
                     if (disaggregationValue !== '') {
