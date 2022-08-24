@@ -275,6 +275,7 @@
                 that = this;
 
             if (this.hasSeries || this.hasUnits || this.hasDisaggregations) {
+                console.log('Series: ', this.hasSeries, ' Units: ', this.hasUnits, ' Disagg: ', this.hasDisaggregations);
                 this.list = list;
                 div.append(list);
                 this.updateList();
