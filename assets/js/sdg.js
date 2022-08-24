@@ -110,12 +110,13 @@ opensdg.autotrack = function(preset, category, action, label) {
     // Support multiple colorsets
     if (Array.isArray(options.mapOptions.colorRange[0])) {
       options.mapOptions.colorRange = options.mapOptions.colorRange[2];
-      console.log(options.indicatorId);
+      console.log(options.goal);
     }
 
 
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     this.mapLayers = [];
+    this.goal = options.goal;
     this.indicatorId = options.indicatorId;
     this._precision = options.precision;
     this.precisionItems = options.precisionItems;
@@ -2758,6 +2759,7 @@ function getTimeSeriesAttributes(rows) {
   this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
+  this.goal = options.goal;
   this.indicatorId = options.indicatorId;
   this.shortIndicatorId = options.shortIndicatorId;
   this.chartTitle = options.chartTitle,
@@ -3016,6 +3018,7 @@ function getTimeSeriesAttributes(rows) {
         allowedFields: this.allowedFields,
         edges: this.edgesData,
         hasGeoData: this.hasGeoData,
+        goal: this.goal,
         indicatorId: this.indicatorId,
         showMap: this.showMap,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
@@ -3072,6 +3075,7 @@ function getTimeSeriesAttributes(rows) {
       labels: this.years,
       headlineTable: helpers.getHeadlineTable(headline, this.selectedUnit),
       selectionsTable: selectionsTable,
+      goal: this.goal,
       indicatorId: this.indicatorId,
       shortIndicatorId: this.shortIndicatorId,
       selectedUnit: this.selectedUnit,
@@ -4712,6 +4716,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
         if (args.hasGeoData && args.showMap) {
             VIEW._mapView = new mapView();
             VIEW._mapView.initialise(
+                args.goal,
                 args.indicatorId,
                 args.precision,
                 args.precisionItems,
@@ -4911,6 +4916,7 @@ var indicatorInit = function () {
                         edgesData: res.edges,
                         showMap: domData.showmap,
                         country: domData.country,
+                        goal: domData.goal,
                         indicatorId: domData.indicatorid,
                         shortIndicatorId: domData.id,
                         chartTitle: domData.charttitle,
