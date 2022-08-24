@@ -275,11 +275,11 @@ map_layers:
     min_zoom: 4.5
     max_zoom: 7.5
     staticBorders: true
-    subfolder: boundaries
+    subfolder: laender
     label: indicator.map
   - serviceUrl:  https://dnsupgradeenvironment.github.io/dns-indicators/assets/maps/boundariesKrs.geojson
     min_zoom: 8
     max_zoom: 11
     staticBorders: false
-    subfolder: boundariesKrs
+    subfolder: kreise
     label: indicator.map
