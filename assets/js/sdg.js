@@ -110,7 +110,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     // Support multiple colorsets
     if (Array.isArray(options.mapOptions.colorRange[0])) {
       options.mapOptions.colorRange = options.mapOptions.colorRange[2];
-      console.log(options.goal);
+      console.log("goal: ",options.goal);
     }
 
 
@@ -4318,7 +4318,7 @@ function createTable(table, indicatorId, el) {
                 var isYear = (index == 0);
                 var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
-                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ? data[index] : ' ') + cell_suffix;
+                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ? data[index] : '&nbsp;') + cell_suffix;
             });
             row_html += '</tr>';
             currentTable.find('tbody').append(row_html);
