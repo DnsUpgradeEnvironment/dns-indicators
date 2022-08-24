@@ -109,7 +109,7 @@ opensdg.autotrack = function(preset, category, action, label) {
 
     // Support multiple colorsets
     if (Array.isArray(options.mapOptions.colorRange[0])) {
-      this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
+      this.goalNumber = parseInt(options.indicatorId.slice(options.indicatorId.indexOf('_')+1,options.indicatorId.indexOf('-')));
       options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber];
       console.log("goal: ",this.goalNumber);
     }
@@ -6030,6 +6030,7 @@ $(function() {
                 that = this;
 
             if (this.hasSeries || this.hasUnits || this.hasDisaggregations) {
+                console.log('Series: ', this.hasSeries, ' Units: ', this.hasUnits, ' Disagg: ', this.hasDisaggregations);
                 this.list = list;
                 div.append(list);
                 this.updateList();
