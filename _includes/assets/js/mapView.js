@@ -5,8 +5,8 @@ var mapView = function () {
   this.initialise = function(goal, indicatorId, precision, precisionItems, decimalSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles) {
     $('.map').show();
     $('#map').sdgMap({
-      indicatorId: indicatorId,
       goal: goal,
+      indicatorId: indicatorId,
       mapOptions: {{ site.map_options | jsonify }},
       mapLayers: {{ site.map_layers | jsonify }},
       precision: precision,
