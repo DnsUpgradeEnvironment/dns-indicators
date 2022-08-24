@@ -79,7 +79,7 @@
     // Support multiple colorsets
     if (Array.isArray(options.mapOptions.colorRange[0])) {
       this.goalNumber = parseInt(options.indicatorId.slice(options.indicatorId.indexOf('_')+1,options.indicatorId.indexOf('-')));
-      options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber];
+      options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber-1];
       console.log("goal: ",this.goalNumber);
     }
 
