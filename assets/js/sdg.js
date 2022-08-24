@@ -5973,8 +5973,8 @@ $(function() {
                     var form = L.DomUtil.create('div', 'disaggregation-fieldset-container'),
                         legend = L.DomUtil.create('legend', 'disaggregation-fieldset-legend'),
                         fieldset = L.DomUtil.create('fieldset', 'disaggregation-fieldset'),
-                        field = translations.t(disaggregation.field);
-                    legend.innerHTML = field;
+                        field = disaggregation.field;
+                    legend.innerHTML = translations.t(field);
                     fieldset.append(legend);
                     form.append(fieldset);
                     formInputs.append(form);
