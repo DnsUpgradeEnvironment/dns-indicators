@@ -95,6 +95,7 @@
     this.viewHelpers = options.viewHelpers;
     this.modelHelpers = options.modelHelpers;
     this.chartTitles = options.chartTitles;
+    this.chartSubtitles = options.chartSubtitles;
 
     // Require at least one geoLayer.
     if (!options.mapLayers || !options.mapLayers.length) {
@@ -137,6 +138,7 @@
       else {
         var currentTitle = $('#map-heading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentTitle, this.chartSubTitles, currentUnit, currentSeries);
       }
       if (newTitle) {
         $('#map-heading').text(newTitle);

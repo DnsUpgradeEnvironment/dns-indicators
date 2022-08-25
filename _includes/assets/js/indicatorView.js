@@ -55,6 +55,7 @@ var indicatorView = function (model, options) {
                 // Make sure the unit/series items are updated, in case
                 // they were changed while on the map.
                 helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle);
+                helpers.updateChartTitle(VIEW._dataCompleteArgs.chartSubtitle);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateTimeSeriesAttributes(VIEW._dataCompleteArgs.timeSeriesAttributes);
@@ -78,6 +79,7 @@ var indicatorView = function (model, options) {
 
         helpers.createSelectionsTable(args);
         helpers.updateChartTitle(args.chartTitle);
+        helpers.updateChartTitle(args.chartSubTitle);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
         helpers.updateUnitElements(args.selectedUnit);
         helpers.updateTimeSeriesAttributes(args.timeSeriesAttributes);
@@ -100,6 +102,7 @@ var indicatorView = function (model, options) {
                 VIEW.helpers,
                 MODEL.helpers,
                 args.chartTitles,
+                args.chartSubtitles,
             );
         }
     });

@@ -30,6 +30,7 @@ var indicatorInit = function () {
                         chartTitle: domData.charttitle,
                         chartTitles: domData.charttitles,
                         chartSubtitle: domData.chartsubtitle,
+                        chartSubtitles: domData.chartsubtitles,
                         measurementUnit: domData.measurementunit,
                         xAxisLabel: domData.xaxislabel,
                         showData: domData.showdata,

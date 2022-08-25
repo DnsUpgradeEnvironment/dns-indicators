@@ -25,6 +25,7 @@ var indicatorModel = function (options) {
   this.chartTitle = options.chartTitle,
   this.chartTitles = options.chartTitles;
   this.chartSubtitle = options.chartSubtitle;
+  this.chartSubtitles = options.chartSubtitles;
   this.graphType = options.graphType;
   this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
@@ -136,7 +137,7 @@ var indicatorModel = function (options) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
-    this.chartSubtitle = this.chartSubtitle;
+    this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartType = function() {
@@ -284,6 +285,7 @@ var indicatorModel = function (options) {
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
         chartTitles: this.chartTitles,
+        chartSubtitles: this.chartSubtitles,
       });
     }
 

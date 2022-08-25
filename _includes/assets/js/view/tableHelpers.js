@@ -137,6 +137,7 @@ function createTable(table, indicatorId, el) {
         });
 
         currentTable.append('<caption>' + MODEL.chartTitle + '</caption>');
+        currentTable.append('<caption> <small>' + MODEL.chartSubtitle + '</small></caption>');
 
         var table_head = '<thead><tr>';
 
