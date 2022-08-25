@@ -126,6 +126,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this.viewHelpers = options.viewHelpers;
     this.modelHelpers = options.modelHelpers;
     this.chartTitles = options.chartTitles;
+    this.chartSubtitles = options.chartSubtitles;
 
     // Require at least one geoLayer.
     if (!options.mapLayers || !options.mapLayers.length) {
@@ -168,6 +169,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       else {
         var currentTitle = $('#map-heading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentTitle, this.chartSubTitles, currentUnit, currentSeries);
       }
       if (newTitle) {
         $('#map-heading').text(newTitle);
@@ -2764,6 +2766,7 @@ function getTimeSeriesAttributes(rows) {
   this.chartTitle = options.chartTitle,
   this.chartTitles = options.chartTitles;
   this.chartSubtitle = options.chartSubtitle;
+  this.chartSubtitles = options.chartSubtitles;
   this.graphType = options.graphType;
   this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
@@ -2875,7 +2878,7 @@ function getTimeSeriesAttributes(rows) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
-    this.chartSubtitle = this.chartSubtitle;
+    this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartType = function() {
@@ -3023,6 +3026,7 @@ function getTimeSeriesAttributes(rows) {
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
         chartTitles: this.chartTitles,
+        chartSubtitles: this.chartSubtitles,
       });
     }
 
@@ -3105,7 +3109,7 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles) {
+  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles, chartSubtitles) {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
@@ -3118,6 +3122,7 @@ var mapView = function () {
       viewHelpers: viewHelpers,
       modelHelpers: modelHelpers,
       chartTitles: chartTitles,
+      chartSubtitles: chartSubtitles,
     });
   };
 };
@@ -4290,6 +4295,7 @@ function createTable(table, indicatorId, el) {
         });
 
         currentTable.append('<caption>' + MODEL.chartTitle + '</caption>');
+        currentTable.append('<caption> <small>' + MODEL.chartSubtitle + '</small></caption>');
 
         var table_head = '<thead><tr>';
 
@@ -4676,6 +4682,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 // Make sure the unit/series items are updated, in case
                 // they were changed while on the map.
                 helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle);
+                helpers.updateChartTitle(VIEW._dataCompleteArgs.chartSubtitle);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateTimeSeriesAttributes(VIEW._dataCompleteArgs.timeSeriesAttributes);
@@ -4699,6 +4706,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
 
         helpers.createSelectionsTable(args);
         helpers.updateChartTitle(args.chartTitle);
+        helpers.updateChartTitle(args.chartSubTitle);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
         helpers.updateUnitElements(args.selectedUnit);
         helpers.updateTimeSeriesAttributes(args.timeSeriesAttributes);
@@ -4721,6 +4729,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 VIEW.helpers,
                 MODEL.helpers,
                 args.chartTitles,
+                args.chartSubtitles,
             );
         }
     });
@@ -4917,6 +4926,7 @@ var indicatorInit = function () {
                         chartTitle: domData.charttitle,
                         chartTitles: domData.charttitles,
                         chartSubtitle: domData.chartsubtitle,
+                        chartSubtitles: domData.chartsubtitles,
                         measurementUnit: domData.measurementunit,
                         xAxisLabel: domData.xaxislabel,
                         showData: domData.showdata,
