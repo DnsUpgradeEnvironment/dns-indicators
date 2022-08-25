@@ -38,8 +38,16 @@
           "status": "complete"
         },
         {
+          "id": "2-2",
+          "title": "Unterstützung guter Regierungsführung bei der Erreichung einer angemessenen Ernährung weltweit",
+          "description": "",
+          "keywords": "",
+          "href": "/dns-indicators/en/2-2",
+          "status": "complete"
+        },
+        {
           "id": "2-2-a",
-          "title": "Support for good governance in attaining appropriate nutrition worldwide",
+          "title": "global_indicators.2-2-a-title",
           "description": "",
           "keywords": "",
           "href": "/dns-indicators/en/2-2-a",
