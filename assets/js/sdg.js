@@ -2878,6 +2878,9 @@ function getTimeSeriesAttributes(rows) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
+  }
+
+  this.updateChartSubtitle = function() {
     this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
   }
 
@@ -3063,6 +3066,7 @@ function getTimeSeriesAttributes(rows) {
     }
 
     this.updateChartTitle();
+    this.updateChartSubtitle();
     this.updateChartType();
 
     this.onFieldsStatusUpdated.notify({
