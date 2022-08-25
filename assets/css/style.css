@@ -2526,7 +2526,8 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   font-weight: bold; }
 
 .chart-title {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 1.0rem; }
 
 .chart-subtitle {
   text-align: center;
