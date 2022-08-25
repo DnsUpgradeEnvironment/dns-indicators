@@ -5,11 +5,13 @@
       {{ page.t.indicator.dataset_size_warning }}
     </div>
 
-    {% assign graph_title = page.indicator.graph_titles.first.title | default: page.indicator.graph_title | replace: '<br>', '\n' %}
+    {% assign graph_title = page.indicator.graph_titles.first.title | default: page.indicator.graph_title %}
+    {% assign graph_subtitle = page.indicator.graph_subtitles.first.title | default: page.indicator.graph_subtitle %}
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">{{ graph_title }}?</h4>
+          <h4 id="chart-heading" class="chart-title">{{ graph_title }}?</h4
+          <h2 id="chart-heading" class="chart-title">{{ graph_subtitle }}?</h2>
           <div id="chart" class="plot-container">
             {% include components/charts/canvas.html %}
           </div>
