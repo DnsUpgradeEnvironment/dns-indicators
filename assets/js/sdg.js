@@ -3341,8 +3341,8 @@ function updateChartTitle(chartTitle) {
  * @param {String} chartSubtitle
  * @return null
  */
-function updateChartSubtitle(chartSubTitle) {
-    if (typeof chartSubTitle !== 'undefined') {
+function updateChartSubtitle(chartSubtitle) {
+    if (typeof chartSubtitle !== 'undefined') {
         $('.chart-subtitle').text(chartSubtitle);
     }
 }
