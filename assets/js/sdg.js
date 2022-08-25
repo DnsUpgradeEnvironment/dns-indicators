@@ -3334,6 +3334,16 @@ function updateChartTitle(chartTitle) {
 }
 
 /**
+ * @param {String} chartSubtitle
+ * @return null
+ */
+function updateChartSubtitle(chartSubTitle) {
+    if (typeof chartSubTitle !== 'undefined') {
+        $('.chart-subtitle').text(chartSubtitle);
+    }
+}
+
+/**
  * @param {Array} oldDatasets
  * @param {Array} newDatasets
  * @return null
@@ -4681,7 +4691,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 // Make sure the unit/series items are updated, in case
                 // they were changed while on the map.
                 helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle);
-                helpers.updateChartTitle(VIEW._dataCompleteArgs.chartSubtitle);
+                helpers.updateChartSubtitle(VIEW._dataCompleteArgs.chartSubtitle);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateTimeSeriesAttributes(VIEW._dataCompleteArgs.timeSeriesAttributes);
@@ -4705,7 +4715,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
 
         helpers.createSelectionsTable(args);
         helpers.updateChartTitle(args.chartTitle);
-        helpers.updateChartTitle(args.chartSubTitle);
+        helpers.updateChartSubtitle(args.chartSubTitle);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
         helpers.updateUnitElements(args.selectedUnit);
         helpers.updateTimeSeriesAttributes(args.timeSeriesAttributes);
