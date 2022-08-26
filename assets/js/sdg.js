@@ -3656,7 +3656,7 @@ function strToArray (str, limit) {
         borderDash: [10, 5],
         borderWidth: 1,
         label: {
-            backgroundColor: rgba(255,255,255,0.3),
+            backgroundColor: 'rgba(255,255,255,0.3)',
             color: 'black',
         },
         // This "highContrast" overrides colors when in high-contrast mode.
