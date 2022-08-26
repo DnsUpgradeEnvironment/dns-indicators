@@ -5823,34 +5823,36 @@ $(function() {
             // The purpose of the rest of this function is to
             // "prune" the disaggregations by removing any keys
             // that are identical across all disaggregations.
-            var allKeys = Object.keys(disaggregations[0]);
-            var relevantKeys = {};
-            var rememberedValues = {};
-            disaggregations.forEach(function(disagg) {
-                for (var i = 0; i < allKeys.length; i++) {
-                    var key = allKeys[i];
-                    if (rememberedValues[key]) {
-                        if (rememberedValues[key] !== disagg[key]) {
-                            relevantKeys[key] = true;
-                        }
-                    }
-                    rememberedValues[key] = disagg[key];
-                }
-            });
-            relevantKeys = Object.keys(relevantKeys);
-            relevantKeys.push(this.seriesColumn);
-            relevantKeys.push(this.unitsColumn);
-            var pruned = [];
-            disaggregations.forEach(function(disaggregation) {
-                var clone = Object.assign({}, disaggregation);
-                Object.keys(clone).forEach(function(key) {
-                    if (!(relevantKeys.includes(key))) {
-                        delete clone[key];
-                    }
-                });
-                pruned.push(clone);
-            });
-            return pruned;
+            console.log("Disagg: ", disaggregations);
+            return disaggregations;
+            // var allKeys = Object.keys(disaggregations[0]);
+            // var relevantKeys = {};
+            // var rememberedValues = {};
+            // disaggregations.forEach(function(disagg) {
+            //     for (var i = 0; i < allKeys.length; i++) {
+            //         var key = allKeys[i];
+            //         if (rememberedValues[key]) {
+            //             if (rememberedValues[key] !== disagg[key]) {
+            //                 relevantKeys[key] = true;
+            //             }
+            //         }
+            //         rememberedValues[key] = disagg[key];
+            //     }
+            // });
+            // relevantKeys = Object.keys(relevantKeys);
+            // relevantKeys.push(this.seriesColumn);
+            // relevantKeys.push(this.unitsColumn);
+            // var pruned = [];
+            // disaggregations.forEach(function(disaggregation) {
+            //     var clone = Object.assign({}, disaggregation);
+            //     Object.keys(clone).forEach(function(key) {
+            //         if (!(relevantKeys.includes(key))) {
+            //             delete clone[key];
+            //         }
+            //     });
+            //     pruned.push(clone);
+            // });
+            // return pruned;
         },
 
         update: function() {
