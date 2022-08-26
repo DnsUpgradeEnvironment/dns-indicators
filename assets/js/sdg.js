@@ -2812,7 +2812,7 @@ function getTimeSeriesAttributes(rows) {
     if (this.hasSerieses) {
       if (helpers.GRAPH_TITLE_FROM_SERIES) {
         this.chartTitle = this.selectedSeries;
-        this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);;
+        this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
       }
       this.data = helpers.getDataBySeries(this.allData, this.selectedSeries);
       this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
@@ -4721,7 +4721,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
 
         helpers.createSelectionsTable(args);
         helpers.updateChartTitle(args.chartTitle);
-        helpers.updateChartSubtitle(args.chartSubTitle);
+        helpers.updateChartSubtitle(args.chartSubtitle);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
         helpers.updateUnitElements(args.selectedUnit);
         helpers.updateTimeSeriesAttributes(args.timeSeriesAttributes);
