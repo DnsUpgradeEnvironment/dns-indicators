@@ -5903,7 +5903,7 @@ $(function() {
         hasDissagregationsWithValues: function () {
             var hasDisaggregations = false;
             this.allDisaggregations.forEach(function(disaggregation) {
-                if (disaggregation.values.length > 0 && disaggregation.values[0] !== '') {
+                if (disaggregation.values.length > 1 && disaggregation.values[0] !== '') {
                     hasDisaggregations = true;
                 }
             });
@@ -6086,10 +6086,9 @@ $(function() {
 
                 var numSeries = this.allSeries.length,
                     numUnits = this.allUnits.length,
-                    numDisaggs = this.allDisaggregations.length,
                     displayForm = this.displayForm;
 
-                if (displayForm && (numDisaggs > 1 || numSeries > 1 || numUnits > 1)) {
+                if (displayForm && (this.hasDisaggregations || (numSeries > 1 || numUnits > 1))) {
 
                     var button = L.DomUtil.create('button', 'disaggregation-button');
                     button.innerHTML = translations.indicator.change_breakdowns;
