@@ -35,7 +35,7 @@
             this.hasSeries = (this.allSeries.length > 0);
             this.hasUnits = (this.allUnits.length > 0);
             this.hasDisaggregations = this.hasDissagregationsWithValues();
-            this.hasMultipleDisaggregations = this.hasMultipleDissagregationsWithValues();
+            this.hasDisaggregationsWithMultipleValues = this.hasDisaggregationsWithMultipleValues();
         },
 
         getVisibleDisaggregations: function() {
@@ -131,14 +131,14 @@
             return hasDisaggregations;
         },
 
-        hasMultipleDissagregationsWithValues: function () {
-            var hasMultipleDisaggregations = false;
+        hasDisaggregationsWithMultipleValues: function () {
+            var hasDisaggregations = false;
             this.allDisaggregations.forEach(function(disaggregation) {
-                if (disaggregation.values.length > 1 && disaggregation.values[0] !== '') {
-                    hasMultipleDisaggregations = true;
+                if (disaggregation.values.length > 1 && disaggregation.values[1] !== '') {
+                    hasDisaggregations = true;
                 }
             });
-            return hasMultipleDisaggregations;
+            return hasDisaggregations;
         },
 
         updateList: function () {
@@ -319,7 +319,7 @@
                     numUnits = this.allUnits.length,
                     displayForm = this.displayForm;
 
-                if (displayForm && (this.hasMultipleDisaggregations || (numSeries > 1 || numUnits > 1))) {
+                if (displayForm && (this.hasDisaggregationsWithMultipleValues || (numSeries > 1 || numUnits > 1))) {
 
                     var button = L.DomUtil.create('button', 'disaggregation-button');
                     button.innerHTML = translations.indicator.change_breakdowns;
