@@ -855,9 +855,6 @@ Chart.register({
             });
         }
     },
-    afterUpdate: function(chart) {
-        this.setMeta();
-    },
     setMeta: function() {
         this.meta = this.chart.getDatasetMeta(this.currentDataset);
     },
@@ -2632,9 +2629,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
  */
 function inputData(data) {
   var dropKeys = [];
-  if (opensdg.ignoredDisaggregations && opensdg.ignoredDisaggregations.length > 0) {
-    dropKeys = opensdg.ignoredDisaggregations;
-  }
+  
   return convertJsonFormatToRows(data, dropKeys);
 }
 
@@ -2644,15 +2639,7 @@ function inputData(data) {
  */
 function inputEdges(edges) {
   var edgesData = convertJsonFormatToRows(edges);
-  if (opensdg.ignoredDisaggregations && opensdg.ignoredDisaggregations.length > 0) {
-    var ignoredDisaggregations = opensdg.ignoredDisaggregations;
-    edgesData = edgesData.filter(function(edge) {
-      if (ignoredDisaggregations.includes(edge.To) || ignoredDisaggregations.includes(edge.From)) {
-        return false;
-      }
-      return true;
-    });
-  }
+  
   return edgesData;
 }
 
@@ -3285,10 +3272,7 @@ function initialiseUnits(args) {
  * @return null
  */
 function initialiseSerieses(args) {
-    var activeSeriesInput = $('#serieses').find(document.activeElement),
-        seriesWasFocused = (activeSeriesInput.length > 0) ? true : false,
-        focusedValue = (seriesWasFocused) ? $(activeSeriesInput).val() : null,
-        templateElement = $('#series_template');
+    var templateElement = $('#series_template');
     if (templateElement.length > 0) {
         var template = _.template(templateElement.html()),
             serieses = args.serieses || [],
@@ -3310,10 +3294,6 @@ function initialiseSerieses(args) {
         else {
             $(OPTIONS.rootElement).removeClass('no-serieses');
         }
-    }
-    // Return focus if necessary.
-    if (seriesWasFocused) {
-        $('#serieses :input[value="' + focusedValue + '"]').focus();
     }
 }
 
@@ -5574,12 +5554,6 @@ $(function() {
     });
     // Create the player.
     options.player = new L.TimeDimension.Player(options.playerOptions, options.timeDimension);
-    options.player.on('play', function() {
-      $('.timecontrol-play').attr('title', 'Pause');
-    });
-    options.player.on('stop', function() {
-      $('.timecontrol-play').attr('title', 'Play');
-    });
     // Listen for time changes.
     if (typeof options.yearChangeCallback === 'function') {
       options.timeDimension.on('timeload', options.yearChangeCallback);
