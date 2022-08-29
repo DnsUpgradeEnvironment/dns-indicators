@@ -136,8 +136,11 @@ function createTable(table, indicatorId, el) {
             'width': '100%'
         });
 
-        currentTable.append('<caption>' + MODEL.chartTitle + '<br><small>' + MODEL.chartSubtitle + '</small></caption>');
-
+        if (MODEL.chartSubtitle) {
+          currentTable.append('<caption>' + MODEL.chartTitle + '<br><small>' + MODEL.chartSubtitle + '</small></caption>');
+        } else {
+          currentTable.append('<caption>' + MODEL.chartTitle + '<br><small>' + MODEL.measurementUnit + '</small></caption>');
+        }
         var table_head = '<thead><tr>';
 
         var getHeading = function (heading, index) {
