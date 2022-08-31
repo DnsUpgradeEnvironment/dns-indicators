@@ -121,6 +121,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     this._precision = options.precision;
     this.precisionItems = options.precisionItems;
     this._decimalSeparator = options.decimalSeparator;
+    this._thousandsSeparator = options.thousandsSeparator;
     this.currentDisaggregation = 0;
     this.dataSchema = options.dataSchema;
     this.viewHelpers = options.viewHelpers;
@@ -312,6 +313,9 @@ opensdg.autotrack = function(preset, category, action, label) {
       }
       if (this._decimalSeparator) {
         value = value.toString().replace('.', this._decimalSeparator);
+      }
+      if (this._thousandsSeparator) {
+        value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, this._thousandsSeparator);
       }
       return value;
     },
@@ -3115,7 +3119,7 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles, chartSubtitles) {
+  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, thousandsSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles, chartSubtitles) {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
@@ -3124,6 +3128,7 @@ var mapView = function () {
       precision: precision,
       precisionItems: precisionItems,
       decimalSeparator: decimalSeparator,
+      thousandsSeparator: thousandsSeparator,
       dataSchema: dataSchema,
       viewHelpers: viewHelpers,
       modelHelpers: modelHelpers,
@@ -4471,8 +4476,8 @@ function alterDataDisplay(value, info, context) {
         altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
     }
     // Apply thousands seperator if needed
-    if (OPTIONS.thousands_seperator){
-        altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.decimalSeparator);
+    if (OPTIONS.thousandsSeparator){
+        altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.thousandsSeparator);
     }
 
     return altered;
@@ -4749,6 +4754,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 args.precision,
                 args.precisionItems,
                 OPTIONS.decimalSeparator,
+                OPTIONS.thousandsSeparator,
                 args.dataSchema,
                 VIEW.helpers,
                 MODEL.helpers,
@@ -4975,6 +4981,7 @@ var indicatorInit = function () {
                         rootElement: '#indicatorData',
                         legendElement: '#plotLegend',
                         decimalSeparator: ',',
+                        thousandsSeparator: ' ',
                         maxChartHeight: 420,
                         tableColumnDefs: [
                             { maxCharCount: 25 }, // nowrap
