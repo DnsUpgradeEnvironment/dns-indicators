@@ -163,6 +163,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
     dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
     datasets.unshift(dataset);
   }
+  console.log("DATASETS: ", datasets);
   return datasets;
 }
 
