@@ -184,6 +184,10 @@ no_value_character: ''
 
 hide_empty_metadata: true
 hide_single_unit: true
+ignored_disaggregations:
+  - lowerCi
+  - upperCi
+
 
 plugins:
   - jekyll-remote-theme
