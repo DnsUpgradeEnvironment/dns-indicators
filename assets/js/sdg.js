@@ -4471,10 +4471,10 @@ function alterDataDisplay(value, info, context) {
         altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
     }
     // Apply thousands seperator if needed
-    if (Options.thousands_seperator){
-      altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.decimalSeparator);
+    if (OPTIONS.thousands_seperator){
+        altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.decimalSeparator);
     }
-    
+
     return altered;
 }
 
