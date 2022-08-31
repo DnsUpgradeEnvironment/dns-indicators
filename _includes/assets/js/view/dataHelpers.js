@@ -32,8 +32,8 @@ function alterDataDisplay(value, info, context) {
         altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
     }
     // Apply thousands seperator if needed
-    if (OPTIONS.thousands_seperator){
-        altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.decimalSeparator);
+    if (OPTIONS.thousandsSeparator){
+        altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.thousandsSeparator);
     }
 
     return altered;

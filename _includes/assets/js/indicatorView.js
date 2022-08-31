@@ -98,6 +98,7 @@ var indicatorView = function (model, options) {
                 args.precision,
                 args.precisionItems,
                 OPTIONS.decimalSeparator,
+                OPTIONS.thousandsSeparator,
                 args.dataSchema,
                 VIEW.helpers,
                 MODEL.helpers,

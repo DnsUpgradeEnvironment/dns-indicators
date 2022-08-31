@@ -55,6 +55,7 @@ var indicatorInit = function () {
                         rootElement: '#indicatorData',
                         legendElement: '#plotLegend',
                         decimalSeparator: '{{ site.decimal_separator }}',
+                        thousandsSeparator: '{{ site.thousands_separator }}',
                         maxChartHeight: 420,
                         tableColumnDefs: [
                             { maxCharCount: 25 }, // nowrap
