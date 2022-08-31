@@ -42,7 +42,6 @@
         {% endif %}
 
         {% if page.indicator.footer_fields and page.indicator.footer_fields.size > 0 %}
-          <dt><b>???</b></dt>
           {% for footer_field in page.indicator.footer_fields %}
             <dt
               data-for-series={{ footer_field.series | default: "" | jsonify }}
