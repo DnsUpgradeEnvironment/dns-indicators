@@ -33,6 +33,8 @@ create_indicators:
   layout: indicator
 create_goals:
   layout: goal-by-target
+  previous_next_links: false
+
 create_pages: true
 
 frontpage_goals_grid:
@@ -167,7 +169,6 @@ footer_fields:
     label: metadata_fields.computation_units
     value: data.number
 
-
 series_toggle: true
 graph_title_from_series: true
 decimal_separator: ','
@@ -175,14 +176,11 @@ thousands_separator: ' '
 graph_color_headline: '#b8b8b8' #
 #graph_color_headline: ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#26bde2', '#fcc30b', '#a21942', '#fd6925', '#dd1367', '#fd9d24', '#bf8b2e', '#3f7e44', '#0a97d9', '#56c02b', '#00689d', '#19486a']
 useHeadlineColor: false
-no_value_character: ''
+no_value_character: '.'
+
 
 hide_empty_metadata: true
 hide_single_unit: true
-ignored_disaggregations:
-  - lowerCi
-  - upperCi
-
 
 plugins:
   - jekyll-remote-theme
