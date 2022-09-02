@@ -111,12 +111,6 @@ menu:
         translation_key: menu.about_this_site
       - path: /facts_publications/
         translation_key: menu.publications
-      - translation_key: menu.publications
-        dropdown:
-          - path: https://open-sdg.readthedocs.io/en/latest/
-            translation_key: menu.publications
-          - path: https://open-sdg.readthedocs.io/en/latest/about/
-            translation_key: menu.publications
   - path: menu.pathToSdg
     translation_key: menu.sdglogo
 
