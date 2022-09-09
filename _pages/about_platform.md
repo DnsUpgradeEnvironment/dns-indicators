@@ -8,7 +8,7 @@ Die Online Plattform gliedert sich in das Indikatorenset der [Deutschen Nachhalt
 
 Die Zeitreihen zu den Indikatoren beider Online Plattformen stehen Ihnen zum Download zur Verfügung.
 
-Einen Direktlink zur Startseite der SDG-Online Plattform finden Sie oben rechts auf dieser Seite neben dem Suchfeld: [<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-germany.github.io)
+Einen Direktlink zur Startseite der SDG-Online Plattform finden Sie oben rechts auf dieser Seite neben dem Suchfeld: [<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https:/www.sdg-indikatoren.de)
 
 Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der Vereinten Nationen gegliedert. Entsprechend stammen die Symbole und die Farbwahl der 17 Ziele (Abb. 1 und Abb. 2), die hier und auf der SDG-Online Plattform verwendet werden, von den Vereinten Nationen. Die Symbole sind urheberrechtlich geschützt.
 
@@ -27,7 +27,7 @@ Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der Vereinten Nati
 </div>
 
 <h3>Ziel und Hintergrund</h3>
-Die im Rahmen der Deutschen Nachhaltigkeitsstrategie zu erreichenden Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sowie die grafischen Darstellungen sind von der Bundesregierung beschlossen worden. Hierbei war auch das Statistische Bundesamt beratend beteiligt. Im Aufbau der Deutschen Nachhaltigkeitsstrategie und der Auswahl der Indikatoren orientiert sich die Bundesregierung inhaltlich an der [Agenda 2030](https://sustainabledevelopment-deutschland.github.io/agenda/) der Vereinten Nationen und deren 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SDGs). Demzufolge wurde, thematisch passend, mindestens ein Indikator zu jedem der 17 Ziele in die Deutsche Nachhaltigkeitsstrategie mitaufgenommen.
+Die im Rahmen der Deutschen Nachhaltigkeitsstrategie zu erreichenden Zielwerte, die Indikatoren, ihre Datengrundlagen und Berechnungen sowie die grafischen Darstellungen sind von der Bundesregierung beschlossen worden. Hierbei war auch das Statistische Bundesamt beratend beteiligt. Im Aufbau der Deutschen Nachhaltigkeitsstrategie und der Auswahl der Indikatoren orientiert sich die Bundesregierung inhaltlich an der [Agenda 2030](https://dns-indikatoren.de/facts_agenda/) der Vereinten Nationen und deren 17 Zielen für eine nachhaltige Entwicklung (Sustainable Development Goals, SDGs). Demzufolge wurde, thematisch passend, mindestens ein Indikator zu jedem der 17 Ziele in die Deutsche Nachhaltigkeitsstrategie mitaufgenommen.
 
 Bereits seit dem Jahr 2006 ist das Statistische Bundesamt damit beauftragt, die Messung der nationalen Indikatoren, fachlich unabhängig, mit eigenen Daten aus der amtlichen Statistik zu stützen und die Integration von Daten anderer Behörden zu koordinieren. Aus diesem Grund veröffentlicht das Statistische Bundesamt zusätzlich zu den nun auf der Online Plattform veröffentlichten Indikatoren zur Nachhaltigkeitsstrategie, im zweijährigen Rhythmus, einen [Indikatorenbericht](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Nachhaltigkeitsindikatoren/Deutsche-Nachhaltigkeit/_inhalt.html#sprg352504)) für die Deutsche Nachhaltigkeitsstrategie (zuletzt 2021).
 
