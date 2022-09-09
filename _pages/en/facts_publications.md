@@ -5,42 +5,48 @@ language: en
 layout: page
 ---
 
-### Indikatorenberichte
+### Indicator reports
 <br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://dns-indikatoren.de/assets/publications/reports/2021.pdf)
+[Sustainable Development in Germany - Indicator report  2021](https://dns-indikatoren.de/assets/publications/reports/en/2021.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
+[Sustainable Development in Germany - Indicator report  2018](https://dns-indikatoren.de/assets/publications/reports/en/2018.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00066907)
+[Sustainable Development in Germany - Indicator report  2016](https://dns-indikatoren.de/assets/publications/reports/en/2016.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2014](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00023410)
+[Sustainable Development in Germany - Indicator report  2014](https://dns-indikatoren.de/assets/publications/reports/en/2014.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2012](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010546)
+[Sustainable Development in Germany - Indicator report  2012](https://dns-indikatoren.de/assets/publications/reports/en/2012.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2010](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010549)
+[Sustainable Development in Germany - Indicator report  2010](https://dns-indikatoren.de/assets/publications/reports/en/2010.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2008](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010552)
+[Sustainable Development in Germany - Indicator report  2008](https://dns-indikatoren.de/assets/publications/reports/en/2008.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2006](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010555)
+[Sustainable Development in Germany - Indicator report  2006](https://dns-indikatoren.de/assets/publications/reports/en/2006.pdf)
 <br><br>
-### Daten zum Indikatorenbericht
+### Data on the indicator report
 <br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132993)
+[Sustainable Development in Germany - Data on the Indicator report 2021](https://dns-indikatoren.de/assets/publications/reports/en/daten2021.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2016](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00132992)
+[Sustainable Development in Germany - Data on the Indicator report 2018](https://dns-indikatoren.de/assets/publications/reports/en/daten2018.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2014](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00067001)
+[Sustainable Development in Germany - Data on the Indicator report 2016](https://dns-indikatoren.de/assets/publications/reports/en/daten2016.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2012](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010558)
+[Sustainable Development in Germany - Data on the Indicator report 2014](https://dns-indikatoren.de/assets/publications/reports/en/daten2014.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2010](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010572)
+[Sustainable Development in Germany - Data on the Indicator report 2012](https://dns-indikatoren.de/assets/publications/reports/en/daten2012.pdf)
 <br><br>
-[Nachhaltige Entwicklung in Deutschland - Daten zum Indikatorenbericht 2008](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00010568)
+[Sustainable Development in Germany - Data on the Indicator report 2010](https://dns-indikatoren.de/assets/publications/reports/en/daten2010.pdf)
 <br><br>
-### Auszug aus der Publikation "WISTA - Wirtschaft und Statistik", 1/2017
+[Sustainable Development in Germany - Data on the Indicator report 2008](https://dns-indikatoren.de/assets/publications/reports/en/daten2008.pdf)
+<br><br>
+### Extract from the publication "WISTA - Economy and Statistics", 1/2017
 <br>
-[Neuauflage der deutschen Nachhaltigkeitsstrategie](https://dns-indikatoren.de/assets/publications/reports/wista2017_01.pdf)
+[New edition of the German sustainability strategy (only available in German)](https://dns-indikatoren.de/assets/publications/wista2017_01.pdf)
 <br><br>
-### Machbarkeitsstudie zur Darstellung der Indikatoren
+### Feasibility study for the presentation of the indicators
 <br>
-[Machbarkeitsstudie zur Darstellung der Indikatorender Deutschen Nachhaltigkeitsstrategienach Bundesländern](https://dns-indikatoren.de/assets/publications/reports/machbarkeitsstudie.pdf)
+[Feasibility study for the presentation of indicators of German sustainability strategies by federal states (only available in German)](https://dns-indikatoren.de/assets/publications/machbarkeitsstudie.pd)
+<br><br>
+### Special evaluation for selected indicators by territorial status
+<br>
+[Special evaluation for selected indicators by territorial status (only available in German)](https://dns-indikatoren.de/assets/publications/DNS_Sonderauswertung_2021.pdf)
