@@ -110,7 +110,7 @@ menu:
   - translation_key: menu.facts
     dropdown:
       - path: /facts_agenda/
-        translation_key: menu.about_this_site
+        translation_key: menu.facts_agenda
       - path: /facts_publications/
         translation_key: menu.publications
   - path: menu.pathToSdg
