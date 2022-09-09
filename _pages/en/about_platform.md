@@ -5,7 +5,7 @@ language: en
 layout: page
 ---
 
-The online platform comprises two components, namely the indicator set of the [German Sustainable Development Strategy](https://www.bundesregierung.de/breg-en/issues/sustainability/) (Deutsche Nachhaltigkeitsstrategie, DNS) and the German set of indicators for the global sustainability goals ([Sustainable Development Goals, SDGs](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)) of the United Nations 2030 Agenda. Since the German Sustainable Development Strategy is aimed at implementing the 2030 Agenda at the national level, indicators shared by both strategies are linked to each other on the platform.
+The online platform comprises two components, namely the indicator set of the [German Sustainable Development Strategy](https://www.bundesregierung.de/breg-en/issues/sustainability) (Deutsche Nachhaltigkeitsstrategie, DNS) and the German set of indicators for the global sustainability goals ([Sustainable Development Goals, SDGs](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)) of the United Nations 2030 Agenda. Since the German Sustainable Development Strategy is aimed at implementing the 2030 Agenda at the national level, indicators shared by both strategies are linked to each other on the platform.
 
 The time series of the indicators of both online platforms are available for download.
 
