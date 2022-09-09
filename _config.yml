@@ -103,7 +103,7 @@ menu:
         translation_key: menu.status
   - translation_key: menu.about
     dropdown:
-      - path: /about/
+      - path: /about_platform/
         translation_key: menu.about_this_site
       - path: /guidance/
         translation_key: menu.guidance
