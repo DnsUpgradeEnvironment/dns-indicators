@@ -2757,6 +2757,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #E52B3D;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-1.heading.heading.contrast-high {
+    background: black; }
+    .goal-1.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-1.underline {
   height: 5px;
   border-top: 5px solid #c51829; }
@@ -2764,10 +2768,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #c51829;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-1.heading.contrast-high {
-  background: black; }
-  .goal-1.heading.contrast-high a {
-    color: yellow; }
 .goal-1.goal-indicators div span {
   border-color: #c51829;
   color: #c51829; }
@@ -2781,6 +2781,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #DDA63A;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-2.heading.heading.contrast-high {
+    background: black; }
+    .goal-2.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-2.underline {
   height: 5px;
   border-top: 5px solid #c28c22; }
@@ -2788,10 +2792,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #c28c22;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-2.heading.contrast-high {
-  background: black; }
-  .goal-2.heading.contrast-high a {
-    color: yellow; }
 .goal-2.goal-indicators div span {
   border-color: #c28c22;
   color: #c28c22; }
@@ -2805,6 +2805,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #4C9F38;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-3.heading.heading.contrast-high {
+    background: black; }
+    .goal-3.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-3.underline {
   height: 5px;
   border-top: 5px solid #3a792b; }
@@ -2812,10 +2816,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #3a792b;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-3.heading.contrast-high {
-  background: black; }
-  .goal-3.heading.contrast-high a {
-    color: yellow; }
 .goal-3.goal-indicators div span {
   border-color: #3a792b;
   color: #3a792b; }
@@ -2829,6 +2829,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #C42130;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-4.heading.heading.contrast-high {
+    background: black; }
+    .goal-4.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-4.underline {
   height: 5px;
   border-top: 5px solid #981a25; }
@@ -2836,10 +2840,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #981a25;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-4.heading.contrast-high {
-  background: black; }
-  .goal-4.heading.contrast-high a {
-    color: yellow; }
 .goal-4.goal-indicators div span {
   border-color: #981a25;
   color: #981a25; }
@@ -2853,6 +2853,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #FF3E24;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-5.heading.heading.contrast-high {
+    background: black; }
+    .goal-5.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-5.underline {
   height: 5px;
   border-top: 5px solid #f01c00; }
@@ -2860,10 +2864,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #f01c00;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-5.heading.contrast-high {
-  background: black; }
-  .goal-5.heading.contrast-high a {
-    color: yellow; }
 .goal-5.goal-indicators div span {
   border-color: #f01c00;
   color: #f01c00; }
@@ -2877,6 +2877,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #28BCE1;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-6.heading.heading.contrast-high {
+    background: black; }
+    .goal-6.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-6.underline {
   height: 5px;
   border-top: 5px solid #1a9bbc; }
@@ -2884,10 +2888,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #1a9bbc;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-6.heading.contrast-high {
-  background: black; }
-  .goal-6.heading.contrast-high a {
-    color: yellow; }
 .goal-6.goal-indicators div span {
   border-color: #1a9bbc;
   color: #1a9bbc; }
@@ -2901,6 +2901,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #FCC30B;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-7.heading.heading.contrast-high {
+    background: black; }
+    .goal-7.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-7.underline {
   height: 5px;
   border-top: 5px solid #d1a103; }
@@ -2908,10 +2912,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #d1a103;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-7.heading.contrast-high {
-  background: black; }
-  .goal-7.heading.contrast-high a {
-    color: yellow; }
 .goal-7.goal-indicators div span {
   border-color: #d1a103;
   color: #d1a103; }
@@ -2925,6 +2925,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #A21942;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-8.heading.heading.contrast-high {
+    background: black; }
+    .goal-8.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-8.underline {
   height: 5px;
   border-top: 5px solid #761230; }
@@ -2932,10 +2936,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #761230;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-8.heading.contrast-high {
-  background: black; }
-  .goal-8.heading.contrast-high a {
-    color: yellow; }
 .goal-8.goal-indicators div span {
   border-color: #761230;
   color: #761230; }
@@ -2949,6 +2949,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #FD6925;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-9.heading.heading.contrast-high {
+    background: black; }
+    .goal-9.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-9.underline {
   height: 5px;
   border-top: 5px solid #ed4c02; }
@@ -2956,10 +2960,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #ed4c02;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-9.heading.contrast-high {
-  background: black; }
-  .goal-9.heading.contrast-high a {
-    color: yellow; }
 .goal-9.goal-indicators div span {
   border-color: #ed4c02;
   color: #ed4c02; }
@@ -2973,6 +2973,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #DD1367;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-10.heading.heading.contrast-high {
+    background: black; }
+    .goal-10.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-10.underline {
   height: 5px;
   border-top: 5px solid #ae0f51; }
@@ -2980,10 +2984,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #ae0f51;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-10.heading.contrast-high {
-  background: black; }
-  .goal-10.heading.contrast-high a {
-    color: yellow; }
 .goal-10.goal-indicators div span {
   border-color: #ae0f51;
   color: #ae0f51; }
@@ -2997,6 +2997,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #FD9C27;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-11.heading.heading.contrast-high {
+    background: black; }
+    .goal-11.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-11.underline {
   height: 5px;
   border-top: 5px solid #ef8402; }
@@ -3004,10 +3008,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #ef8402;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-11.heading.contrast-high {
-  background: black; }
-  .goal-11.heading.contrast-high a {
-    color: yellow; }
 .goal-11.goal-indicators div span {
   border-color: #ef8402;
   color: #ef8402; }
@@ -3021,6 +3021,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #BF8B2E;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-12.heading.heading.contrast-high {
+    background: black; }
+    .goal-12.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-12.underline {
   height: 5px;
   border-top: 5px solid #966d24; }
@@ -3028,10 +3032,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #966d24;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-12.heading.contrast-high {
-  background: black; }
-  .goal-12.heading.contrast-high a {
-    color: yellow; }
 .goal-12.goal-indicators div span {
   border-color: #966d24;
   color: #966d24; }
@@ -3045,6 +3045,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #417D46;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-13.heading.heading.contrast-high {
+    background: black; }
+    .goal-13.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-13.underline {
   height: 5px;
   border-top: 5px solid #305b33; }
@@ -3052,10 +3056,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #305b33;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-13.heading.contrast-high {
-  background: black; }
-  .goal-13.heading.contrast-high a {
-    color: yellow; }
 .goal-13.goal-indicators div span {
   border-color: #305b33;
   color: #305b33; }
@@ -3069,6 +3069,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #0A96D8;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-14.heading.heading.contrast-high {
+    background: black; }
+    .goal-14.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-14.underline {
   height: 5px;
   border-top: 5px solid #0874a7; }
@@ -3076,10 +3080,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #0874a7;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-14.heading.contrast-high {
-  background: black; }
-  .goal-14.heading.contrast-high a {
-    color: yellow; }
 .goal-14.goal-indicators div span {
   border-color: #0874a7;
   color: #0874a7; }
@@ -3093,6 +3093,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #57BE2F;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-15.heading.heading.contrast-high {
+    background: black; }
+    .goal-15.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-15.underline {
   height: 5px;
   border-top: 5px solid #449525; }
@@ -3100,10 +3104,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #449525;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-15.heading.contrast-high {
-  background: black; }
-  .goal-15.heading.contrast-high a {
-    color: yellow; }
 .goal-15.goal-indicators div span {
   border-color: #449525;
   color: #449525; }
@@ -3117,6 +3117,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #00689C;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-16.heading.heading.contrast-high {
+    background: black; }
+    .goal-16.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-16.underline {
   height: 5px;
   border-top: 5px solid #004669; }
@@ -3124,10 +3128,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #004669;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-16.heading.contrast-high {
-  background: black; }
-  .goal-16.heading.contrast-high a {
-    color: yellow; }
 .goal-16.goal-indicators div span {
   border-color: #004669;
   color: #004669; }
@@ -3141,6 +3141,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-top: 15px solid #1F4A6A;
   padding-top: 0px;
   padding-bottom: 0px; }
+  .goal-17.heading.heading.contrast-high {
+    background: black; }
+    .goal-17.heading.heading.contrast-high a {
+      color: yellow; }
 .goal-17.underline {
   height: 5px;
   border-top: 5px solid #132e43; }
@@ -3148,10 +3152,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: #132e43;
   padding-top: 0px;
   padding-bottom: 0px; }
-.goal-17.heading.contrast-high {
-  background: black; }
-  .goal-17.heading.contrast-high a {
-    color: yellow; }
 .goal-17.goal-indicators div span {
   border-color: #132e43;
   color: #132e43; }
