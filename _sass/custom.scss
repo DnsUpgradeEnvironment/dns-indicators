@@ -187,6 +187,13 @@
      }
 
    }
+   &.goal-banner.contrast-high {
+       background: black;
+       color: yellow;
+       a {
+         color: yellow;
+       }
+   }
  }
 /*#2.1*/
 
