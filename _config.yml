@@ -288,10 +288,10 @@ map_layers:
     max_zoom: 6.5
     staticBorders: true
     subfolder: laender
-    label: indicator.map
+    label: indicator.laender
   - serviceUrl:  https://dnsupgradeenvironment.github.io/dns-indicators/assets/maps/boundariesKrs.geojson
     min_zoom: 7
     max_zoom: 11
     staticBorders: false
     subfolder: kreise
-    label: indicator.map
+    label: indicator.counties
