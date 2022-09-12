@@ -2559,9 +2559,42 @@ body.contrast-high #search-bar-on-page button:hover {
 body.contrast-high.layout-search form input, body.contrast-high.layout-search form label {
   color: black; }
 
-/**
- * custom.scss
- *
- * This file left blank intentionally. Implementations of Open SDG can use
- * a similarly named file for custom styles.
- */
+.frameStatus {
+  width: 20%;
+  float: left;
+  min-height: 1px; }
+
+@media screen and (max-width: 25em) {
+  .frameStatus {
+    display: none; } }
+.tableresp {
+  width: 100%;
+  align: left;
+  float: right; }
+
+@media screen and (max-width: 25em) {
+  .tableresp {
+    width: 100%;
+    align: left;
+    float: left; } }
+.responsiveWeather {
+  width: 100%;
+  max-width: 60px;
+  min-width: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: auto;
+  border: transparent; }
+
+.responsiveText {
+  font-size: 1.0em; }
+
+@media screen and (max-width: 75em) {
+  .responsiveText {
+    font-size: 0.8em; } }
+@media screen and (max-width: 50em) {
+  .responsiveText {
+    font-size: 0.6em; } }
+@media screen and (max-width: 50em) {
+  .tableresp {
+    border-collapse: collapse; } }
