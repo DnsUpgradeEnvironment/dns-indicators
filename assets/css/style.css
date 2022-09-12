@@ -2598,3 +2598,15 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
 @media screen and (max-width: 50em) {
   .tableresp {
     border-collapse: collapse; } }
+.indicator-card-number {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  font-weight: bold; }
+
+.chart-title {
+  text-align: center;
+  margin-bottom: 1.0rem; }
+
+.chart-subtitle {
+  text-align: center;
+  color: #777; }
