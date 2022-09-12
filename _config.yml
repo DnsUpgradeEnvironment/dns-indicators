@@ -91,6 +91,14 @@ languages:
   - de
   - en
 
+logos:
+  - language: de
+    src: assets/img/de/DNS_logo.png
+    alt: DESTATIS - Deutsche Nachhaltikeitsstrategie
+  - language: en
+    src: assets/img/en/DNS_logo.png
+    alt: DESTATIS - German Strategy for Sustainable Development
+
 # Menu
 menu:
   - path: /
