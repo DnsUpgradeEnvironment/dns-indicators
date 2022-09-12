@@ -3452,6 +3452,11 @@ span.small {
   @media only screen and (max-width: 300px) {
     .goal-banner h1, .goal-banner p {
       font-size: 7vw; } }
+.goal-banner.goal-banner.contrast-high {
+  background: black;
+  color: yellow; }
+  .goal-banner.goal-banner.contrast-high a {
+    color: yellow; }
 
 /*#2.1*/
 body {
