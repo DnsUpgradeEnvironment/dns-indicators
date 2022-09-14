@@ -215,6 +215,7 @@ body.contrast-high {
     .goal-banner {
 
         background: black;
+        color: white;
         a {
           color: yellow;
         };
@@ -231,3 +232,40 @@ body{
   padding-top: 0;
 }
 //---------------------------------------------
+
+
+// --- navigation btns --- start ---------------------------------------------
+ @for $i from 1 through length($goal-banner-backgroundColors) {
+   $background-c: nth($goal-banner-backgroundColors, $i);
+   .goal-#{$i} {
+     &.goal-banner {
+       background-color: white,//$background-c;
+     }
+     &.sup-goal-banner {
+       height: 5px;
+       background-color: lighten($background-c,10%);
+       padding-top: 0px;
+       padding-bottom: 0px;
+     }
+     &.sub-goal-banner {
+       height: 5px;
+       background-color: darken($background-c,10%);
+       padding-top: 0px;
+       padding-bottom: 0px;
+     }
+     &.navigation-btn {
+       background-color: $background-c;
+       color: white;
+       height: 36px;
+       border-color: transparent;
+       margin-bottom: 10px;
+       margin-top: 10px;
+       padding-top: 6px;
+       padding-bottom: 6px;
+     }
+     &.navigation-btn:hover {
+       background-color: darken($background-c,10%);
+     }
+   }
+ }
+ // --- navigation btns --- stop -------------------------------
