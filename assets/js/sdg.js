@@ -2460,7 +2460,7 @@ function getCombinationDescription(combination, fallback) {
 function prepareDataForDataset(years, rows) {
   return years.map(function(year) {
     var found = rows.find(function (row) {
-      return row[YEAR_COLUMN] === translations.t(year);
+      return row[YEAR_COLUMN] === year;
     });
     return found ? found[VALUE_COLUMN] : null;
   });
@@ -3667,7 +3667,7 @@ function strToArray (str, limit) {
             backgroundColor: 'rgba(255,255,255,0.6)',
             color: 'black',
             borderColor: '#757575',
-            borderWidth: 3,
+            borderWidth: 1,
         },
         // This "highContrast" overrides colors when in high-contrast mode.
         highContrast: {
