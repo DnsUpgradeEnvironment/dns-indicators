@@ -139,7 +139,7 @@
                             <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}" {{ opacity }}/></a> </td>
                           {% endif %}
                         {% elsif letter == 'a' %}
-                            <td width="10%" align="center" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
+                            <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
                         {% endif %}
                       {% endfor %}
 
@@ -264,7 +264,7 @@
                                 <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}" {{ opacity }}/></a> </td>
                               {% endif %}
                             {% elsif letter == 'a' %}
-                                <td width="10%" align="center" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
+                                <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
                             {% endif %}
                           {% endfor %}
 
