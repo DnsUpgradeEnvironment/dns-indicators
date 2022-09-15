@@ -138,11 +138,15 @@
       }
       else {
         var currentTitle = $('#map-heading').text();
+        var currentSubtitle = $('#map-subheading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
-        newSubtitle = this.modelHelpers.getChartTitle(currentTitle, this.chartSubTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubTitles, currentUnit, currentSeries);
       }
       if (newTitle) {
         $('#map-heading').text(newTitle);
+      }
+      if (newSubtitle) {
+        $('#map-subheading').text(newSubtitle);
       }
     },
 
