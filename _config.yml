@@ -19,14 +19,6 @@ data_edit_url: http://prose.io/#DnsUpgradeEnvironment/dns-data/edit/develop/data
 metadata_edit_url: http://prose.io/#DnsUpgradeEnvironment/dns-data/edit/develop/meta/[id].md
 # permalink: /news/:year/:month/:day/:title.html
 
-logos:
-  - language: de
-    src: assets/img/de/dns_logo.png
-    alt: 'Zum Hauptinhalt springen'
-  - language: en
-    src: assets/img/en/dns_logo.png
-    alt: To main menu
-
 # Automatically create indicator pages, goal pages,
 # and some other required pages.
 create_indicators:
@@ -92,7 +84,7 @@ languages:
   - en
 
 logos:
-  - src: assets/img/de/DNS_logo.png
+  - src: assets/img/de/dns_logo.png
     alt: DESTATIS - Deutsche Nachhaltikeitsstrategie
   - language: en
     src: assets/img/en/DNS_logo.png
