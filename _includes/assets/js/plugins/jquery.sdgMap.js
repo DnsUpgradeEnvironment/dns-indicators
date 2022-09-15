@@ -133,6 +133,7 @@
       var currentSeries = this.disaggregationControls.getCurrentSeries(),
           currentUnit = this.disaggregationControls.getCurrentUnit(),
           newTitle = null;
+          newSubtitle = null;
       if (this.modelHelpers.GRAPH_TITLE_FROM_SERIES) {
         newTitle = currentSeries;
       }
