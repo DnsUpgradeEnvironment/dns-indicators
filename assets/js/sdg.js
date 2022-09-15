@@ -2460,7 +2460,7 @@ function getCombinationDescription(combination, fallback) {
 function prepareDataForDataset(years, rows) {
   return years.map(function(year) {
     var found = rows.find(function (row) {
-      return row[YEAR_COLUMN] === year;
+      return row[YEAR_COLUMN] === translations.t(year);
     });
     return found ? found[VALUE_COLUMN] : null;
   });
