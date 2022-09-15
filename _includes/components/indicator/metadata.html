@@ -129,7 +129,7 @@
             {% assign title_a = indicator_metadata.name | replace: 'item_a', 'item_a_title' %}
             {% assign title_b = indicator_metadata.name | replace: 'item_a', 'item_b_title' %}
             {% assign title_c = indicator_metadata.name | replace: 'item_a', 'item_c_title' %}
-            {% assign title_d = indicator_metadata.name | replace: 'item_a', 'item_c_title' %}
+            {% assign title_d = indicator_metadata.name | replace: 'item_a', 'item_d_title' %}
           {% endunless %}
         {% endif %}
         {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_old" %}
@@ -151,7 +151,11 @@
               </td>
             {% endif %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_a] }}.png" alt="{{ page.indicator[item_a] | markdownify }}" class="responsiveWeather" title="{{ page.indicator[title_a] }}" style="border: transparent"/></a>
+              {% if page.indicator[item_a] %}
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_a] }}.png" alt="{{ page.indicator[item_a] | markdownify }}" class="responsiveWeather" title="{{ page.indicator[title_a] }}" style="border: transparent"/></a>
+              {% else %}
+                <p> {{ page.t.status.no_evaluation_possible }} </p>
+              {% endif %}
             </td>
           </tr>
         {% endunless %}
