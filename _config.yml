@@ -186,7 +186,7 @@ footer_fields:
     value: data.number
 
 series_toggle: true
-graph_title_from_series: true
+graph_title_from_series: false
 decimal_separator: ','
 thousands_separator: ' '
 graph_color_headline: '#b8b8b8' #
