@@ -247,7 +247,7 @@
                               {% assign opacity = '' %}
                             {% endif %}
 
-                            {% if indicator[item_key] %}
+                            {% if indicator[item_key]  and indicator[item_key] != '' %}
                               {% if indicator[item_key] == 'Sonne' %}
                                 {% assign status = page.t.weather['sonne'] %}
                               {% elsif indicator[item_key] == 'Leicht bewölkt' %}
