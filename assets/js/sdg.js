@@ -3664,16 +3664,7 @@ function strToArray (str, limit) {
         borderDash: [10, 5],
         borderWidth: 1,
         label: {
-            backgroundColor: function() {
-                var re = '',
-                if (this.type == 'line') {
-                  re.push("'rgba(255,255,255,0.6)',")
-                }
-                else {
-                  re.push("'rgba(255,255,255,0.2)',")
-                }
-                return re
-              },
+            backgroundColor: 'rgba(255,255,255,0.6)',
             color: 'black',
             borderColor: '#757575',
         },
