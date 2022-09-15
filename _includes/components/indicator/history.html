@@ -13,9 +13,9 @@
     {% assign wth_active = "weather_active_" | append: i %}
     {% assign wth_scope = "weather_" | append: i %}
     <div class="col-md-6">
-      {% if n_weathers > 1 %}
+      <!-- {% if n_weathers > 1 %}
         <h4>{{ page.t.indicator.timeseries }} {{ i }}</h4>
-      {% endif %}
+      {% endif %} -->
       {% include components/indicator/metadata.html scope=wth_scope %}
     </div>
     {% endfor %}
