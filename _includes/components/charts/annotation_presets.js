@@ -10,7 +10,7 @@ opensdg.annotationPresets = {
             backgroundColor: 'rgba(255,255,255,0.6)',
             color: 'black',
             borderColor: '#757575',
-            borderWidth: 3,
+            borderWidth: 1,
         },
         // This "highContrast" overrides colors when in high-contrast mode.
         highContrast: {
