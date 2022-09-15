@@ -7,7 +7,16 @@ opensdg.annotationPresets = {
         borderDash: [10, 5],
         borderWidth: 1,
         label: {
-            backgroundColor: 'rgba(255,255,255,0.6)',
+            backgroundColor: function() {
+                var re = '''
+                if (this.type == 'line') {
+                  re.push("'rgba(255,255,255,0.6)',")
+                }
+                else {
+                  re.push("'rgba(255,255,255,0.2)',")
+                }
+                return re
+              },
             color: 'black',
         },
         // This "highContrast" overrides colors when in high-contrast mode.
