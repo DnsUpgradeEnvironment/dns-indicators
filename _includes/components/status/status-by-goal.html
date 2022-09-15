@@ -138,7 +138,7 @@
                           {% else %}
                             <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}" {{ opacity }}/></a> </td>
                           {% endif %}
-                        {% elsif j == 'a' %}
+                        {% elsif letter == 'a' %}
                             <td width="10%" align="center"><p><span class="responsiveText">{{ page.t.weather.no_assessment }}</span></p></td>
                         {% endif %}
                       {% endfor %}
@@ -263,7 +263,7 @@
                               {% else %}
                                 <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}" {{ opacity }}/></a> </td>
                               {% endif %}
-                            {% elsif j == 'a' %}
+                            {% elsif letter == 'a' %}
                                 <td width="10%" align="center"><p><span class="responsiveText">{{ page.t.weather.no_assessment }}</span></p></td>
                             {% endif %}
                           {% endfor %}
