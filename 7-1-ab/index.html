@@ -133,7 +133,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220915141250">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20220915143403">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -486,9 +486,9 @@ data-event-label="high"
   data-id="7-1-ab"
   data-country="Deutschland"
   data-charttitle="Endenergieproduktivität und Primärenergieverbrauch"
-  data-charttitles="[{&quot;series&quot;:&quot;Endenergieproduktivität&quot;,&quot;title&quot;:&quot;Titel Endenergie&quot;},{&quot;series&quot;:&quot;Primärenergieverbrauch&quot;,&quot;title&quot;:&quot;Titel Pimärenergie&quot;}]"
+  data-charttitles="[{&quot;series&quot;:&quot;Endenergieproduktivität&quot;,&quot;title&quot;:&quot;Endenergieproduktivität&quot;},{&quot;series&quot;:&quot;Primärenergieverbrauch&quot;,&quot;title&quot;:&quot;Primärenergieverbrauch&quot;}]"
   data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;Endenergieproduktivität&quot;,&quot;title&quot;:&quot;Untertitel Endenergie&quot;},{&quot;series&quot;:&quot;Primärenergieverbrauch&quot;,&quot;title&quot;:&quot;Unteritel Pimärenergie&quot;}]"
+  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
@@ -497,7 +497,7 @@ data-event-label="high"
   data-geocoderegex=""
   data-showmap="true"
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Endenergieproduktivität&quot;}]"
-  data-graphlimits="[{&quot;series&quot;:&quot;Endenergieproduktivität&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:250.0},{&quot;series&quot;:&quot;Primärenergieverbrauch&quot;,&quot;maximum&quot;:100.0}]"
+  data-graphlimits="[{&quot;series&quot;:&quot;Endenergieproduktivität&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:260.0},{&quot;series&quot;:&quot;Primärenergieverbrauch&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:105.0}]"
   data-stackeddisaggregation=""
   data-showline="true"
   data-spangaps="true"
@@ -509,7 +509,7 @@ data-event-label="high"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;2008 = 100&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Endenergieproduktivität&quot;,&quot;Primärenergieverbrauch&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;federal state&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Württemberg&quot;,&quot;Bayern&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hessen&quot;,&quot;Mecklenburg-Vorpommern&quot;,&quot;Niedersachsen&quot;,&quot;Nordrhein-Westfalen&quot;,&quot;Rheinland-Pfalz&quot;,&quot;Saarland&quot;,&quot;Sachsen&quot;,&quot;Sachsen-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thüringen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Bundesland&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;series&quot;:&quot;Endenergieproduktivität&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;Primärenergieverbrauch&quot;,&quot;step&quot;:50.0}]"
+  data-graphstepsize="[{&quot;series&quot;:&quot;Endenergieproduktivität&quot;,&quot;step&quot;:40.0},{&quot;series&quot;:&quot;Primärenergieverbrauch&quot;,&quot;step&quot;:20.0}]"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
@@ -1372,8 +1372,8 @@ data-event-label="Change to Map tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Titel Endenergie</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Untertitel Endenergie</h6>
+          <h4 id="chart-heading" class="chart-title">Endenergieproduktivität</h4>
+          <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1568,8 +1568,8 @@ data-event-label="Change to Map tab"
         <div role="tabpanel" class="tab-pane " id="mapview" class="map">
           
 
-<h4 id="map-heading" class="chart-title">Titel Endenergie</h4>
-<h6 id="map-subheading" class="chart-subtitle">Untertitel Endenergie</h6>
+<h4 id="map-heading" class="chart-title">Endenergieproduktivität</h4>
+<h6 id="map-subheading" class="chart-subtitle"></h6>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/dns-indicators/assets/img/loading.gif" alt="Karte wird geladen" />
 </div>
@@ -2719,7 +2719,7 @@ data-event-label="Change to indicator.sources tab"
 
       
          <!-- case: content -->
-          <p> <p><i>Text aus dem Indikatorenbericht 2021 </i><br />Endenergie- und Primärenergieverbrauch sind direkt miteinander verbunden. Der Endenergieverbrauch ergibt sich aus dem Primärenergieverbrauch abzüglich der Summe aus Umwandlungs-, Fackel- und Leitungsverlusten sowie der statistischen Differenz.<br />Der Primärenergieverbrauch ist die Summe aus den im Inland gewonnenen Primärenergieträgern, Vorratsentnahmen und sämtlichen importierten Energieträgern abzüglich der Bevorratung, Energieexporte und Hochseebunkerungen. Wesentliche Grundlage für die Berechnung des Energieverbrauchs sind die Daten der Energiebilanzen der Arbeitsgemeinschaft Energiebilanzen (AGEB), welche um Daten aus weiteren Quellen ergänzt werden.<br />Die Endenergieproduktivität gibt an, wie hoch die Wertschöpfung je eingesetzter Einheit Endenergie ist. Sie stellt ein Maß für die Energieeffizienz bei der Herstellung von Gütern und im Energieeinsatz der privaten Haushalte dar. Einschätzungen zur Energieeffizienz in den Umwandlungsbereichen (Wirkungsgrad der Kraftwerke) oder in der Energieübertragung und -speicherung (Beseitigung von Leckagen, bessere Wärmedämmung usw.) lassen sich anhand des Indikators jedoch nicht direkt ableiten.<br />Die Endenergieproduktivität hat sich nach vorläufigen Ergebnissen im Zeitraum 2008 bis 2019 um 15,4 % erhöht, was einem durchschnittlichen jährlichen Anstieg von rund 1,4 % entspricht. Somit wird das Ziel eines jährlichen Anstieges von durchschnittlich 2,1 % bis 2050 zum jetzigen Zeitpunkt noch nicht erreicht. Gegenüber dem Vorjahr ist die Energieproduktivität im Jahr 2019 um 0,6 Prozentpunkte gesunken.<br />Der Primärenergieverbrauch ist im Jahr 2019 gegenüber dem Vorjahr gesunken. Im gesamten Zeitraum von 2008 bis 2019 wurde der Primärenergieverbrauch nach vorläufigen Ergebnissen um 11,1 % reduziert. Bei gleichbleibender Entwicklung wie in den vergangenen Jahren würde der Zielwert im Jahr 2020 somit nicht erreicht.</p>
+          <p> <p><i><a href="https://dns-indikatoren.de/assets/publications/reports/de/2021.pdf">Text aus dem Indikatorenbericht 2021 </a></i><br />Endenergie- und Primärenergieverbrauch sind direkt miteinander verbunden. Der Endenergieverbrauch ergibt sich aus dem Primärenergieverbrauch abzüglich der Summe aus Umwandlungs-, Fackel- und Leitungsverlusten sowie der statistischen Differenz.<br />Der Primärenergieverbrauch ist die Summe aus den im Inland gewonnenen Primärenergieträgern, Vorratsentnahmen und sämtlichen importierten Energieträgern abzüglich der Bevorratung, Energieexporte und Hochseebunkerungen. Wesentliche Grundlage für die Berechnung des Energieverbrauchs sind die Daten der Energiebilanzen der Arbeitsgemeinschaft Energiebilanzen (AGEB), welche um Daten aus weiteren Quellen ergänzt werden.<br />Die Endenergieproduktivität gibt an, wie hoch die Wertschöpfung je eingesetzter Einheit Endenergie ist. Sie stellt ein Maß für die Energieeffizienz bei der Herstellung von Gütern und im Energieeinsatz der privaten Haushalte dar. Einschätzungen zur Energieeffizienz in den Umwandlungsbereichen (Wirkungsgrad der Kraftwerke) oder in der Energieübertragung und -speicherung (Beseitigung von Leckagen, bessere Wärmedämmung usw.) lassen sich anhand des Indikators jedoch nicht direkt ableiten.<br />Die Endenergieproduktivität hat sich nach vorläufigen Ergebnissen im Zeitraum 2008 bis 2019 um 15,4 % erhöht, was einem durchschnittlichen jährlichen Anstieg von rund 1,4 % entspricht. Somit wird das Ziel eines jährlichen Anstieges von durchschnittlich 2,1 % bis 2050 zum jetzigen Zeitpunkt noch nicht erreicht. Gegenüber dem Vorjahr ist die Energieproduktivität im Jahr 2019 um 0,6 Prozentpunkte gesunken.<br />Der Primärenergieverbrauch ist im Jahr 2019 gegenüber dem Vorjahr gesunken. Im gesamten Zeitraum von 2008 bis 2019 wurde der Primärenergieverbrauch nach vorläufigen Ergebnissen um 11,1 % reduziert. Bei gleichbleibender Entwicklung wie in den vergangenen Jahren würde der Zielwert im Jahr 2020 somit nicht erreicht.</p>
  </p>
         
       
@@ -9828,12 +9828,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20220915141250'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20220915143403'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20220915141250"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20220915143403"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
