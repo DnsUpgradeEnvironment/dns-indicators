@@ -141,7 +141,7 @@
         var currentTitle = $('#map-heading').text();
         var currentSubtitle = $('#map-subheading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
-        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
       if (newTitle) {
         $('#map-heading').text(newTitle);
