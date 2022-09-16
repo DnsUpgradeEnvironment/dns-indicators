@@ -121,6 +121,7 @@
                       <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
                       {% for letter in letters %}
                         {% assign item_key = target_key | replace: '_target','' | append:'_item_' | append: letter %}
+                        {% assign title_key = item_key | append: '_title' %}
                         {% if indicator[item_key] and indicator[item_key] != '-' %}
                           {% if indicator[item_key] == 'Sonne' %}
                             {% assign status = page.t.weather['sonne'] %}
@@ -133,9 +134,9 @@
                           {% endif %}
 
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
-                            <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ status }}" class="responsiveWeather hidden-xs" title="{{ status }}" {{ opacity }}/></a> </td>
+                            <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ status }}" class="responsiveWeather hidden-xs" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
                           {% else %}
-                            <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ status }}" {{ opacity }}/></a> </td>
+                            <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
                           {% endif %}
                         {% elsif letter == 'a' %}
                             <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
