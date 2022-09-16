@@ -2217,7 +2217,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       border = getBorderDash(striped);
 
       for (var i = 0; i < years.length; i++) {
-        year[i] = translations.t(year[i])
+        years[i] = translations.t(years[i])
       };
 
       dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps);
