@@ -121,8 +121,7 @@
                       <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
                       {% for letter in letters %}
                         {% assign item_key = target_key | replace: '_target','' | append:'_item_' | append: letter %}
-                        {% if indicator[item_key] %}
-
+                        {% if indicator[item_key] and indicator[item_key] != '-' %}
                           {% if indicator[item_key] == 'Sonne' %}
                             {% assign status = page.t.weather['sonne'] %}
                           {% elsif indicator[item_key] == 'Leicht bewölkt' %}
