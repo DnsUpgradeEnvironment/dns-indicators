@@ -153,10 +153,6 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
-      for (var i = 0; i < years.length; i++) {
-        years[i] = translations.t(years[i])
-      };
-
       dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps);
       datasets.push(dataset);
       index++;
