@@ -151,7 +151,7 @@
               </td>
             {% endif %}
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              {% if page.indicator[item_a] and page.indicator[item_a] != '' %}
+              {% if page.indicator[item_a] and page.indicator[item_a] != '-' %}
                 <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_a] }}.png" alt="{{ page.indicator[item_a] | markdownify }}" class="responsiveWeather" title="{{ page.indicator[title_a] }}" style="border: transparent"/></a>
               {% else %}
                 <p> {{ page.t.status.no_evaluation_possible }} </p>
