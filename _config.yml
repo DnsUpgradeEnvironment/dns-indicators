@@ -184,6 +184,7 @@ footer_fields:
   - unit: number
     label: metadata_fields.computation_units
     value: data.number
+    
 
 series_toggle: true
 graph_title_from_series: false
