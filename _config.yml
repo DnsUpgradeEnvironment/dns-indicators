@@ -112,7 +112,7 @@ menu:
         translation_key: menu.facts_agenda
       - path: /facts_publications/
         translation_key: menu.publications
-  - path: menu.pathToSdg
+  - path: menu.pathtosdg
     translation_key: menu.sdglogo
 
 frontpage_cards:
