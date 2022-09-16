@@ -4351,7 +4351,7 @@ function createTable(table, indicatorId, el) {
                 var isYear = (index == 0);
                 var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
-                var cell_content = (isYear) ? translation.t(data[index]) : data[index];
+                var cell_content = (isYear) ? translations.t(data[index]) : data[index];
                 row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (cell_content !== null &&  cell_content !== undefined ?  cell_content : '.') + cell_suffix;
             });
             row_html += '</tr>';
