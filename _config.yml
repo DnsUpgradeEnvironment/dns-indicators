@@ -134,7 +134,6 @@ frontpage_cards:
       # This controls the URL the button links to.
       #button_link: https://example.com
 
-
 contrast_type: single
 
 header_language_toggle: links
