@@ -2747,6 +2747,10 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   padding-bottom: 0px;
   padding-left: 0px; }
 
+.heading-goal-page {
+  padding-right: 0px;
+  padding-left: 0px; }
+
 .range-and-postulate {
   margin-bottom: 25px;
   padding-right: 15px; }
@@ -2754,6 +2758,9 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
 .postulate {
   padding-left: 0px;
   font-style: italic; }
+
+.indicator-link-goal-page {
+  padding-left: 0px; }
 
 .chart-title {
   text-align: center;
