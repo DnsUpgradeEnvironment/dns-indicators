@@ -2505,7 +2505,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
     headline: true,
     pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
-    showLine: showLine,
+    showLine: false,
     spanGaps: spanGaps,
   });
 }
