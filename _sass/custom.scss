@@ -241,16 +241,6 @@ body.contrast-high {
         background-color: black !important;
     }
   }
-  .indicator {
-    background: black;
-    color: red;
-    a {
-      color: yellow;
-    };
-    img {
-        background-color: black !important;
-    }
-  }
 }
 // ---head banner --- stop ---
 
@@ -267,7 +257,14 @@ body{
  $background-c: nth($goal-banner-backgroundColors, $i);
  .goal-#{$i} {
    &.goal-banner {
-     background-color: white,//$background-c;
+     background-color: white;//$background-c;
+     &.goal-banner.contrast-high {
+         background: black;
+         color: yellow;
+         a {
+           color: yellow;
+         }
+     }
    }
    &.sup-goal-banner {
      height: 5px;
