@@ -79,7 +79,6 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @return null
  */
 function updateHeadlineColor(contrast, chartInfo, indicatorId) {
-    console.log('indicatorId: ', indicatorId);
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
