@@ -2497,10 +2497,10 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
   var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: label,
-    borderColor: #a9e13e,//getHeadlineColor(colors),
-    backgroundColor: #a9e13e,//getHeadlineColor(colors),
-    pointBorderColor: #a9e13e,//getHeadlineColor(colors),
-    pointBackgroundColor: g#a9e13e,//etHeadlineColor(colors),
+    borderColor: '#a9e13e',//getHeadlineColor(colors),
+    backgroundColor: '#a9e13e',//getHeadlineColor(colors),
+    pointBorderColor: '#a9e13e',//getHeadlineColor(colors),
+    pointBackgroundColor: '#a9e13e',//etHeadlineColor(colors),
     borderWidth: 4,
     headline: true,
     pointStyle: 'circle',
@@ -4361,7 +4361,7 @@ function createTable(table, indicatorId, el) {
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
                 //var cell_content = (isYear) ? translations.t(data[index]) : data[index];
                 //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (cell_content !== null &&  cell_content !== undefined ?  cell_content : '.') + cell_suffix;
-                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null &&  data[index] !== undefined ?  data[index] : null) + cell_suffix;
+                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null &&  data[index] !== undefined ?  data[index] : '.') + cell_suffix;
             });
             row_html += '</tr>';
             currentTable.find('tbody').append(row_html);
