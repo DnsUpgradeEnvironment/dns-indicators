@@ -126,7 +126,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       excess = (index >= maxColorAssignments);
       if (excess) {
         // This doesn't really matter: excess datasets won't be displayed.
-        color = getHeadlineColor();
+        color = getHeadlineColor(colors);
         striped = false;
       }
       else {
@@ -148,8 +148,13 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
           assignColor(colorAssignment, combinationKey, colorIndex, striped);
         }
       }
-
-      color = getColor(colorIndex, colors);
+      if (headline.length > 0) {
+        color = getColor(colorIndex+1, colors);
+      }
+      else{
+        color = getColor(colorIndex, colors);
+      }
+      //color = getColor(colorIndex, colors);
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
@@ -160,7 +165,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, colors);
     datasets.unshift(dataset);
   }
   console.log("DATASETS: ", datasets);
@@ -413,8 +418,10 @@ function prepareDataForDataset(years, rows) {
  *
  * TODO: Make this dynamic to support high-contrast.
  */
-function getHeadlineColor() {
-  return HEADLINE_COLOR;
+function getHeadlineColor(colors) {
+  //return HEADLINE_COLOR;
+  var color = getColor(0, colors);
+  return color;
 }
 
 /**
@@ -423,14 +430,14 @@ function getHeadlineColor() {
  * @param {string} label
  * @return {Object} Dataset object for Chart.js
  */
-function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
+function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
   var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: label,
-    borderColor: getHeadlineColor(),
-    backgroundColor: getHeadlineColor(),
-    pointBorderColor: getHeadlineColor(),
-    pointBackgroundColor: getHeadlineColor(),
+    borderColor: getHeadlineColor(colors),
+    backgroundColor: getHeadlineColor(colors),
+    pointBorderColor: getHeadlineColor(colors),
+    pointBackgroundColor: getHeadlineColor(colors),
     borderWidth: 4,
     headline: true,
     pointStyle: 'circle',
