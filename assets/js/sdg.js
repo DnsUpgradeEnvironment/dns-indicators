@@ -3423,7 +3423,7 @@ function updateHeadlineColor(contrast, chartInfo) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
         if (isHeadline) {
-            var newColor = getHeadlineColor(contrast);
+            var newColor = getHeadlineColor(contrast, chartInfo.indicatorId);
             firstDataset.backgroundColor = newColor;
             firstDataset.borderColor = newColor;
             firstDataset.pointBackgroundColor = newColor;
@@ -3436,8 +3436,9 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
-function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '#FFDD00' : '#b8b8b8';
+function getHeadlineColor(contrast, indicatorId) {
+    var goalDependentHeadlineColor = opensdg.chartColors(indicatorId)[0];
+    return isHighContrast(contrast) ? '#FFDD00' : goalDependentHeadlineColor;
 }
 
 /**
