@@ -79,6 +79,7 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @return null
  */
 function updateHeadlineColor(contrast, chartInfo) {
+    console.log('Chartinfo: ', chartInfo);
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
@@ -97,7 +98,7 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @return {String} The headline color in hex form.
  */
 function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
+    return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#a9e13e" }}';
 }
 
 /**
