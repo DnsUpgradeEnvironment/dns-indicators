@@ -233,10 +233,10 @@ function setDataTableWidth(table) {
             consloe.log('b) Column ' + column + ': ' +  $(this).width() + ', Total: ' + totalWidth);
         }
     });
-    console.log('Table: ', totalWidth);
+
     // ascertain whether the table should be width 100% or explicit width:
     var containerWidth = table.closest('.dataTables_wrapper').width();
-
+    console.log('Table: ', totalWidth, 'Container: ' containerWidth);
     if (totalWidth > containerWidth) {
         table.css('width', totalWidth + 'px');
     } else {
