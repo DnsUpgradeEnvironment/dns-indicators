@@ -4409,17 +4409,21 @@ function setDataTableWidth(table) {
     table.removeAttr('style width');
 
     var totalWidth = 0;
+    var column = 0;
     table.find('thead th').each(function () {
+        column += 1;
         if ($(this).data('width')) {
             totalWidth += $(this).data('width');
+            consloe.log('a) Column ' + column + ': ' +  $(this).data('width') + ', Total: ' + totalWidth);
         } else {
             totalWidth += $(this).width();
+            consloe.log('b) Column ' + column + ': ' +  $(this).width() + ', Total: ' + totalWidth);
         }
     });
-    console.log('Table: ', totalWidth);
+
     // ascertain whether the table should be width 100% or explicit width:
     var containerWidth = table.closest('.dataTables_wrapper').width();
-
+    console.log('Table: ', totalWidth, 'Container: ' containerWidth);
     if (totalWidth > containerWidth) {
         table.css('width', totalWidth + 'px');
     } else {
