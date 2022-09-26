@@ -3117,6 +3117,13 @@ body.contrast-high .goal-banner {
     color: yellow; }
   body.contrast-high .goal-banner img {
     background-color: black !important; }
+body.contrast-high .indicator {
+  background: black;
+  color: red; }
+  body.contrast-high .indicator a {
+    color: yellow; }
+  body.contrast-high .indicator img {
+    background-color: black !important; }
 
 body {
   background: white;
