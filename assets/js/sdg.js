@@ -4389,7 +4389,7 @@ function createTable(table, indicatorId, el) {
  * @return null
  */
 function setDataTableWidth(table) {
-    console.log('Table: ', table.find('thead th').length);
+
     table.find('thead th').each(function () {
         var textLength = $(this).text().length;
         for (var loop = 0; loop < VIEW._tableColumnDefs.length; loop++) {
@@ -4416,7 +4416,7 @@ function setDataTableWidth(table) {
             totalWidth += $(this).width();
         }
     });
-
+    console.log('Table: ', totalWidth);
     // ascertain whether the table should be width 100% or explicit width:
     var containerWidth = table.closest('.dataTables_wrapper').width();
 
