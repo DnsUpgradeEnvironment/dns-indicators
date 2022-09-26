@@ -2505,7 +2505,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
     headline: true,
     pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
-    showLine: false,
+    showLine: showLine,
     spanGaps: spanGaps,
   });
 }
@@ -3418,6 +3418,7 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @return null
  */
 function updateHeadlineColor(contrast, chartInfo) {
+    console.log('Chartinfo: ', chartInfo);
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
