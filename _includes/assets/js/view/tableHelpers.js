@@ -202,6 +202,7 @@ function createTable(table, indicatorId, el) {
  * @return null
  */
 function setDataTableWidth(table) {
+  console.loc('Table: ', table.find('thead th').length);
     table.find('thead th').each(function () {
         var textLength = $(this).text().length;
         for (var loop = 0; loop < VIEW._tableColumnDefs.length; loop++) {
