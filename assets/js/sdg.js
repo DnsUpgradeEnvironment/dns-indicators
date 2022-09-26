@@ -4414,16 +4414,16 @@ function setDataTableWidth(table) {
         column += 1;
         if ($(this).data('width')) {
             totalWidth += $(this).data('width');
-            consloe.log('a) Column ' + column + ': ' +  $(this).data('width') + ', Total: ' + totalWidth);
+            consloe.log('a) Column ', column, ': ',  $(this).data('width'), ', Total: ' + totalWidth);
         } else {
             totalWidth += $(this).width();
-            consloe.log('b) Column ' + column + ': ' +  $(this).width() + ', Total: ' + totalWidth);
+            consloe.log('b) Column ', column + ': ',  $(this).width(), ', Total: ' + totalWidth);
         }
     });
 
     // ascertain whether the table should be width 100% or explicit width:
     var containerWidth = table.closest('.dataTables_wrapper').width();
-    console.log('Table: ', totalWidth, 'Container: ' containerWidth);
+    console.log('Table: ', totalWidth, 'Container: ', containerWidth);
     if (totalWidth > containerWidth) {
         table.css('width', totalWidth + 'px');
     } else {
