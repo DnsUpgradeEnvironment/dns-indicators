@@ -3117,13 +3117,6 @@ body.contrast-high .goal-banner {
     color: yellow; }
   body.contrast-high .goal-banner img {
     background-color: black !important; }
-body.contrast-high .indicator {
-  background: black;
-  color: red; }
-  body.contrast-high .indicator a {
-    color: yellow; }
-  body.contrast-high .indicator img {
-    background-color: black !important; }
 
 body {
   background: white;
@@ -3131,6 +3124,11 @@ body {
 
 .goal-1.goal-banner {
   background-color: white; }
+  .goal-1.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-1.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-1.sup-goal-banner {
   height: 5px;
   background-color: #eb5867;
@@ -3155,6 +3153,11 @@ body {
 
 .goal-2.goal-banner {
   background-color: white; }
+  .goal-2.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-2.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-2.sup-goal-banner {
   height: 5px;
   background-color: #e5ba65;
@@ -3179,6 +3182,11 @@ body {
 
 .goal-3.goal-banner {
   background-color: white; }
+  .goal-3.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-3.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-3.sup-goal-banner {
   height: 5px;
   background-color: #61bf4b;
@@ -3203,6 +3211,11 @@ body {
 
 .goal-4.goal-banner {
   background-color: white; }
+  .goal-4.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-4.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-4.sup-goal-banner {
   height: 5px;
   background-color: #de3a49;
@@ -3227,6 +3240,11 @@ body {
 
 .goal-5.goal-banner {
   background-color: white; }
+  .goal-5.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-5.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-5.sup-goal-banner {
   height: 5px;
   background-color: #ff6b57;
@@ -3251,6 +3269,11 @@ body {
 
 .goal-6.goal-banner {
   background-color: white; }
+  .goal-6.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-6.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-6.sup-goal-banner {
   height: 5px;
   background-color: #55cae7;
@@ -3275,6 +3298,11 @@ body {
 
 .goal-7.goal-banner {
   background-color: white; }
+  .goal-7.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-7.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-7.sup-goal-banner {
   height: 5px;
   background-color: #fdcf3d;
@@ -3299,6 +3327,11 @@ body {
 
 .goal-8.goal-banner {
   background-color: white; }
+  .goal-8.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-8.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-8.sup-goal-banner {
   height: 5px;
   background-color: #ce2054;
@@ -3323,6 +3356,11 @@ body {
 
 .goal-9.goal-banner {
   background-color: white; }
+  .goal-9.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-9.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-9.sup-goal-banner {
   height: 5px;
   background-color: #fd8c58;
@@ -3347,6 +3385,11 @@ body {
 
 .goal-10.goal-banner {
   background-color: white; }
+  .goal-10.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-10.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-10.sup-goal-banner {
   height: 5px;
   background-color: #ee3582;
@@ -3371,6 +3414,11 @@ body {
 
 .goal-11.goal-banner {
   background-color: white; }
+  .goal-11.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-11.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-11.sup-goal-banner {
   height: 5px;
   background-color: #fdb35a;
@@ -3395,6 +3443,11 @@ body {
 
 .goal-12.goal-banner {
   background-color: white; }
+  .goal-12.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-12.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-12.sup-goal-banner {
   height: 5px;
   background-color: #d4a34c;
@@ -3419,6 +3472,11 @@ body {
 
 .goal-13.goal-banner {
   background-color: white; }
+  .goal-13.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-13.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-13.sup-goal-banner {
   height: 5px;
   background-color: #529f59;
@@ -3443,6 +3501,11 @@ body {
 
 .goal-14.goal-banner {
   background-color: white; }
+  .goal-14.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-14.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-14.sup-goal-banner {
   height: 5px;
   background-color: #20b1f5;
@@ -3467,6 +3530,11 @@ body {
 
 .goal-15.goal-banner {
   background-color: white; }
+  .goal-15.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-15.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-15.sup-goal-banner {
   height: 5px;
   background-color: #72d34d;
@@ -3491,6 +3559,11 @@ body {
 
 .goal-16.goal-banner {
   background-color: white; }
+  .goal-16.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-16.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-16.sup-goal-banner {
   height: 5px;
   background-color: #008acf;
@@ -3515,6 +3588,11 @@ body {
 
 .goal-17.goal-banner {
   background-color: white; }
+  .goal-17.goal-banner.goal-banner.contrast-high {
+    background: black;
+    color: yellow; }
+    .goal-17.goal-banner.goal-banner.contrast-high a {
+      color: yellow; }
 .goal-17.sup-goal-banner {
   height: 5px;
   background-color: #2b6691;
