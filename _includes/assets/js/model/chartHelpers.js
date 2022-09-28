@@ -126,6 +126,8 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       excess = (index >= maxColorAssignments);
       if (excess) {
         // This doesn't really matter: excess datasets won't be displayed.
+        // Override: no headline color
+        //color = getHeadlineColor();
         color = getHeadlineColor(colors);
         striped = false;
       }
@@ -148,6 +150,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
           assignColor(colorAssignment, combinationKey, colorIndex, striped);
         }
       }
+      // Override: no headline color
       if (headline.length > 0) {
         color = getColor(colorIndex+1, colors);
       }
@@ -155,6 +158,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
         color = getColor(colorIndex, colors);
       }
       //color = getColor(colorIndex, colors);
+
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
@@ -419,9 +423,11 @@ function prepareDataForDataset(years, rows) {
  * TODO: Make this dynamic to support high-contrast.
  */
 function getHeadlineColor(colors) {
+  // Override: no headline color
   //return HEADLINE_COLOR;
   var color = getColor(0, colors);
   return color;
+
 }
 
 /**
@@ -434,6 +440,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
   var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: label,
+    // Override: no headline color
     borderColor: '#a9e13e',//getHeadlineColor(colors),
     backgroundColor: '#a9e13e',//getHeadlineColor(colors),
     pointBorderColor: '#a9e13e',//getHeadlineColor(colors),
