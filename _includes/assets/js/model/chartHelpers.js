@@ -141,6 +141,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       else {
         combinationKey = JSON.stringify(combination);
         colorAssignment = getColorAssignmentByCombination(colorAssignments, combinationKey);
+        console.log("colorAssignment: ", colorAssignment);
         if (colorAssignment !== undefined) {
           colorIndex = colorAssignment.colorIndex;
           striped = colorAssignment.striped;
