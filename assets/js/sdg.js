@@ -2178,11 +2178,11 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
 function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
   // Override: no headline color
-  var originalColors = colors
+  var originalColors = colors;
   if (headline.length > 0) {
     colors.shift();
   }
-  var numColors = colors.length,
+  var numColors = colors.length;
   var maxColorAssignments = numColors * 2;
 
   prepareColorAssignments(colorAssignments, maxColorAssignments);
