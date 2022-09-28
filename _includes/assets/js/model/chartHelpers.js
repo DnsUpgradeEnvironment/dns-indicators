@@ -115,13 +115,11 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
 function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
   // Override: no headline color
+  var originalColors = colors
   if (headline.length > 0) {
-    var numColors = colors.length -1
+    colors.shift();
   }
-  else{
-    var numColors = colors.length
-  }
-  //var numColors = colors.length,
+  var numColors = colors.length,
   var maxColorAssignments = numColors * 2;
 
   prepareColorAssignments(colorAssignments, maxColorAssignments);
@@ -135,7 +133,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
         // This doesn't really matter: excess datasets won't be displayed.
         // Override: no headline color
         //color = getHeadlineColor();
-        color = getHeadlineColor(colors);
+        color = getHeadlineColor(originalColors);
         striped = false;
       }
       else {
@@ -159,13 +157,13 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
         }
       }
       // Override: no headline color
-      if (headline.length > 0) {
-        color = getColor(colorIndex+1, colors);
-      }
-      else{
-        color = getColor(colorIndex, colors);
-      }
-      //color = getColor(colorIndex, colors);
+      // if (headline.length > 0) {
+      //   color = getColor(colorIndex+1, colors);
+      // }
+      // else{
+      //   color = getColor(colorIndex, colors);
+      // }
+      color = getColor(colorIndex, colors);
 
       background = getBackground(color, striped);
       border = getBorderDash(striped);
@@ -178,7 +176,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, colors);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, originalColors);
     datasets.unshift(dataset);
   }
   console.log("DATASETS: ", datasets);
