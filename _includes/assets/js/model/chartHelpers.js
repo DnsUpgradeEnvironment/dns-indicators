@@ -114,8 +114,16 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  */
 function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
-  var numColors = colors.length,
-      maxColorAssignments = numColors * 2;
+  // Override: no headline color
+  if (headline.length > 0) {
+    var numColors = colors.length -1
+
+  }
+  else{
+    var numColors = colors.length
+  }
+  //var numColors = colors.length,
+  var maxColorAssignments = numColors * 2;
 
   prepareColorAssignments(colorAssignments, maxColorAssignments);
   setAllColorAssignmentsReadyForEviction(colorAssignments);
