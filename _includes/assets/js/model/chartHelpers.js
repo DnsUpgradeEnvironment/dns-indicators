@@ -119,7 +119,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
   if (headline.length > 0) {
     colors.shift();
   }
-  var numColors = colors.length,
+  var numColors = colors.length;
   var maxColorAssignments = numColors * 2;
 
   prepareColorAssignments(colorAssignments, maxColorAssignments);
