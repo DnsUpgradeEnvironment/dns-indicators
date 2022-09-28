@@ -2189,6 +2189,8 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       excess = (index >= maxColorAssignments);
       if (excess) {
         // This doesn't really matter: excess datasets won't be displayed.
+        // Override: no headline color
+        //color = getHeadlineColor();
         color = getHeadlineColor(colors);
         striped = false;
       }
@@ -2211,6 +2213,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
           assignColor(colorAssignment, combinationKey, colorIndex, striped);
         }
       }
+      // Override: no headline color
       if (headline.length > 0) {
         color = getColor(colorIndex+1, colors);
       }
@@ -2218,6 +2221,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
         color = getColor(colorIndex, colors);
       }
       //color = getColor(colorIndex, colors);
+
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
@@ -2482,9 +2486,11 @@ function prepareDataForDataset(years, rows) {
  * TODO: Make this dynamic to support high-contrast.
  */
 function getHeadlineColor(colors) {
+  // Override: no headline color
   //return HEADLINE_COLOR;
   var color = getColor(0, colors);
   return color;
+
 }
 
 /**
@@ -2497,6 +2503,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
   var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: label,
+    // Override: no headline color
     borderColor: '#a9e13e',//getHeadlineColor(colors),
     backgroundColor: '#a9e13e',//getHeadlineColor(colors),
     pointBorderColor: '#a9e13e',//getHeadlineColor(colors),
@@ -3417,11 +3424,15 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @param {Object} chartInfo
  * @return null
  */
+// Override: no headline color
+//function updateHeadlineColor(contrast, chartInfo) {
 function updateHeadlineColor(contrast, chartInfo, indicatorId) {
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
         if (isHeadline) {
+            // Override: no headline color
+            //var newColor = getHeadlineColor(contrast);
             var newColor = getHeadlineColor(contrast, indicatorId);
             firstDataset.backgroundColor = newColor;
             firstDataset.borderColor = newColor;
@@ -3435,9 +3446,13 @@ function updateHeadlineColor(contrast, chartInfo, indicatorId) {
  * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
+// Override: no headline color
+//function getHeadlineColor(contrast) {
 function getHeadlineColor(contrast, indicatorId) {
-    var goalDependentHeadlineColor = opensdg.chartColors(indicatorId)[0];
+
+    var goalDependentHeadlineColor = '#' + opensdg.chartColors(indicatorId)[0];
     return isHighContrast(contrast) ? '#FFDD00' : goalDependentHeadlineColor;
+    //return isHighContrast(contrast) ? '#FFDD00' : '#a9e13e';
 }
 
 /**
@@ -3469,6 +3484,8 @@ function setPlotEvents(chartInfo) {
     window.addEventListener('contrastChange', function (e) {
         var gridColor = getGridColor(e.detail);
         var tickColor = getTickColor(e.detail);
+        //Override: no headline color
+        //updateHeadlineColor(e.detail, VIEW._chartInstance);
         updateHeadlineColor(e.detail, VIEW._chartInstance, chartInfo.indicatorId);
         updateGraphAnnotationColors(e.detail, VIEW._chartInstance);
         VIEW._chartInstance.options.scales.y.title.color = tickColor;
@@ -3547,9 +3564,13 @@ function createPlot(chartInfo) {
     alterChartConfig(chartConfig, chartInfo);
     if (isHighContrast()) {
         updateGraphAnnotationColors('high', chartConfig);
+        // Override: no headline color
+        //updateHeadlineColor('high', chartConfig);
         updateHeadlineColor('high', chartConfig, chartInfo.indicatorId);
     }
     else {
+        // Override: no headline color
+        //updateHeadlineColor('default', chartConfig);
         updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
     }
     refreshChartLineWrapping(chartConfig);
@@ -3573,6 +3594,8 @@ function createPlot(chartInfo) {
     }
 
     updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
+    // Override: no headline color
+    //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
     updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig, chartInfo.indicatorId);
 
     if (chartInfo.selectedUnit) {
