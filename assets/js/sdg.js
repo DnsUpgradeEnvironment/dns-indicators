@@ -2180,7 +2180,6 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
   // Override: no headline color
   if (headline.length > 0) {
     var numColors = colors.length -1
-
   }
   else{
     var numColors = colors.length
@@ -2236,6 +2235,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps);
       datasets.push(dataset);
       index++;
+      console.log("openColorInfo: ", openColorInfo);
     }
   }, this);
 
