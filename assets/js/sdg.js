@@ -3434,9 +3434,9 @@ function updateHeadlineColor(contrast, chartInfo, indicatorId) {
     //return isHighContrast(contrast) ? '#FFDD00' : '#e5243b#dda63a#4c9f38#c5192d#ff3a21#26bde2#fcc30b#a21942#fd6925#dd1367#fd9d24#bf8b2e#3f7e44#0a97d9#56c02b#00689d#19486a';
 function getHeadlineColor(contrast, goalNumber) {
 
-  var headlineColors = ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#26bde2', '#fcc30b', '#a21942', '#fd6925', '#dd1367', '#fd9d24', '#bf8b2e', '#3f7e44', '#0a97d9', '#56c02b', '#00689d', '#19486a'];
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
   var headlineColor = headlineColors[goalNumber-1];
-  var htmlString = ' + headlineColor + ';
+  var htmlString = '' + headlineColor + '';
   console.log("goalNumber: ", htmlString);
     return isHighContrast(contrast) ? '#FFDD00' : htmlString;
 }
