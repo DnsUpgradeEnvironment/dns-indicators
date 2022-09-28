@@ -2177,13 +2177,8 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  */
 function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
-  // Override: no headline color
-  var originalColors = colors;
-  if (headline.length > 0) {
-    colors.shift();
-  }
-  var numColors = colors.length;
-  var maxColorAssignments = numColors * 2;
+  var numColors = colors.length,
+      maxColorAssignments = numColors * 2;
 
   prepareColorAssignments(colorAssignments, maxColorAssignments);
   setAllColorAssignmentsReadyForEviction(colorAssignments);
@@ -2194,15 +2189,12 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       excess = (index >= maxColorAssignments);
       if (excess) {
         // This doesn't really matter: excess datasets won't be displayed.
-        // Override: no headline color
-        //color = getHeadlineColor();
-        color = getHeadlineColor(originalColors);
+        color = getHeadlineColor();
         striped = false;
       }
       else {
         combinationKey = JSON.stringify(combination);
         colorAssignment = getColorAssignmentByCombination(colorAssignments, combinationKey);
-        console.log("colorAssignment: ", colorAssignment);
         if (colorAssignment !== undefined) {
           colorIndex = colorAssignment.colorIndex;
           striped = colorAssignment.striped;
@@ -2219,30 +2211,21 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
           assignColor(colorAssignment, combinationKey, colorIndex, striped);
         }
       }
-      // Override: no headline color
-      // if (headline.length > 0) {
-      //   color = getColor(colorIndex+1, colors);
-      // }
-      // else{
-      //   color = getColor(colorIndex, colors);
-      // }
-      color = getColor(colorIndex, colors);
 
+      color = getColor(colorIndex, colors);
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
       dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps);
       datasets.push(dataset);
       index++;
-      console.log("openColorInfo: ", openColorInfo);
     }
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, originalColors);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
     datasets.unshift(dataset);
   }
-  console.log("DATASETS: ", datasets);
   return datasets;
 }
 
@@ -2492,12 +2475,8 @@ function prepareDataForDataset(years, rows) {
  *
  * TODO: Make this dynamic to support high-contrast.
  */
-function getHeadlineColor(colors) {
-  // Override: no headline color
-  //return HEADLINE_COLOR;
-  var color = getColor(0, colors);
-  return color;
-
+function getHeadlineColor() {
+  return HEADLINE_COLOR;
 }
 
 /**
@@ -3431,16 +3410,12 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @param {Object} chartInfo
  * @return null
  */
-// Override: no headline color
-//function updateHeadlineColor(contrast, chartInfo) {
-function updateHeadlineColor(contrast, chartInfo, indicatorId) {
+function updateHeadlineColor(contrast, chartInfo) {
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
         if (isHeadline) {
-            // Override: no headline color
-            //var newColor = getHeadlineColor(contrast);
-            var newColor = getHeadlineColor(contrast, indicatorId);
+            var newColor = getHeadlineColor(contrast);
             firstDataset.backgroundColor = newColor;
             firstDataset.borderColor = newColor;
             firstDataset.pointBackgroundColor = newColor;
@@ -3453,13 +3428,8 @@ function updateHeadlineColor(contrast, chartInfo, indicatorId) {
  * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
-// Override: no headline color
-//function getHeadlineColor(contrast) {
-function getHeadlineColor(contrast, indicatorId) {
-
-    var goalDependentHeadlineColor = '#' + opensdg.chartColors(indicatorId)[0];
-    return isHighContrast(contrast) ? '#FFDD00' : goalDependentHeadlineColor;
-    //return isHighContrast(contrast) ? '#FFDD00' : '#a9e13e';
+function getHeadlineColor(contrast) {
+    return isHighContrast(contrast) ? '#FFDD00' : '#00006a';
 }
 
 /**
@@ -3491,9 +3461,7 @@ function setPlotEvents(chartInfo) {
     window.addEventListener('contrastChange', function (e) {
         var gridColor = getGridColor(e.detail);
         var tickColor = getTickColor(e.detail);
-        //Override: no headline color
-        //updateHeadlineColor(e.detail, VIEW._chartInstance);
-        updateHeadlineColor(e.detail, VIEW._chartInstance, chartInfo.indicatorId);
+        updateHeadlineColor(e.detail, VIEW._chartInstance);
         updateGraphAnnotationColors(e.detail, VIEW._chartInstance);
         VIEW._chartInstance.options.scales.y.title.color = tickColor;
         VIEW._chartInstance.options.scales.x.title.color = tickColor;
@@ -3571,14 +3539,10 @@ function createPlot(chartInfo) {
     alterChartConfig(chartConfig, chartInfo);
     if (isHighContrast()) {
         updateGraphAnnotationColors('high', chartConfig);
-        // Override: no headline color
-        //updateHeadlineColor('high', chartConfig);
-        updateHeadlineColor('high', chartConfig, chartInfo.indicatorId);
+        updateHeadlineColor('high', chartConfig);
     }
     else {
-        // Override: no headline color
-        //updateHeadlineColor('default', chartConfig);
-        updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
+        updateHeadlineColor('default', chartConfig);
     }
     refreshChartLineWrapping(chartConfig);
 
@@ -3601,9 +3565,7 @@ function createPlot(chartInfo) {
     }
 
     updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
-    // Override: no headline color
-    //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
-    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig, chartInfo.indicatorId);
+    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
 
     if (chartInfo.selectedUnit) {
         updatedConfig.options.scales.y.title.text = translations.t(chartInfo.selectedUnit);
@@ -3653,7 +3615,7 @@ function generateChartLegend(chart) {
     text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
     _.each(chart.data.datasets, function (dataset) {
         text.push('<li>');
-        text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+        text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
         text.push('</span>');
         text.push(translations.t(dataset.label));
