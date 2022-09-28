@@ -102,6 +102,7 @@ function updateHeadlineColor(contrast, chartInfo, indicatorId) {
 //function getHeadlineColor(contrast) {
     //return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
 function getHeadlineColor(contrast, goalNumber) {
+  console.log("goalNumber: ", goalNumber);
     return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline[' + (goalNumber-1) + '] | default: "#00006a" }}';
 }
 
