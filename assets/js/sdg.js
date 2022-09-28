@@ -2500,7 +2500,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
     borderColor: '#a9e13e',//getHeadlineColor(colors),
     backgroundColor: '#a9e13e',//getHeadlineColor(colors),
     pointBorderColor: '#a9e13e',//getHeadlineColor(colors),
-    pointBackgroundColor: '#a9e13e',//etHeadlineColor(colors),
+    pointBackgroundColor: '#a9e13e',//getHeadlineColor(colors),
     borderWidth: 4,
     headline: true,
     pointStyle: 'circle',
