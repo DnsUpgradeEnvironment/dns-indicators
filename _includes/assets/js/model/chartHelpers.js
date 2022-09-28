@@ -114,13 +114,8 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  */
 function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
-  // Override: no headline color
-  var originalColors = colors;
-  if (headline.length > 0) {
-    colors.shift();
-  }
-  var numColors = colors.length;
-  var maxColorAssignments = numColors * 2;
+  var numColors = colors.length,
+      maxColorAssignments = numColors * 2;
 
   prepareColorAssignments(colorAssignments, maxColorAssignments);
   setAllColorAssignmentsReadyForEviction(colorAssignments);
@@ -131,15 +126,12 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       excess = (index >= maxColorAssignments);
       if (excess) {
         // This doesn't really matter: excess datasets won't be displayed.
-        // Override: no headline color
-        //color = getHeadlineColor();
-        color = getHeadlineColor(originalColors);
+        color = getHeadlineColor();
         striped = false;
       }
       else {
         combinationKey = JSON.stringify(combination);
         colorAssignment = getColorAssignmentByCombination(colorAssignments, combinationKey);
-        console.log("colorAssignment: ", colorAssignment);
         if (colorAssignment !== undefined) {
           colorIndex = colorAssignment.colorIndex;
           striped = colorAssignment.striped;
@@ -156,30 +148,21 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
           assignColor(colorAssignment, combinationKey, colorIndex, striped);
         }
       }
-      // Override: no headline color
-      // if (headline.length > 0) {
-      //   color = getColor(colorIndex+1, colors);
-      // }
-      // else{
-      //   color = getColor(colorIndex, colors);
-      // }
-      color = getColor(colorIndex, colors);
 
+      color = getColor(colorIndex, colors);
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
       dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps);
       datasets.push(dataset);
       index++;
-      console.log("openColorInfo: ", openColorInfo);
     }
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, originalColors);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
     datasets.unshift(dataset);
   }
-  console.log("DATASETS: ", datasets);
   return datasets;
 }
 
@@ -429,12 +412,8 @@ function prepareDataForDataset(years, rows) {
  *
  * TODO: Make this dynamic to support high-contrast.
  */
-function getHeadlineColor(colors) {
-  // Override: no headline color
-  //return HEADLINE_COLOR;
-  var color = getColor(0, colors);
-  return color;
-
+function getHeadlineColor() {
+  return HEADLINE_COLOR;
 }
 
 /**
