@@ -79,7 +79,6 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @return null
  */
 function updateHeadlineColor(contrast, chartInfo, indicatorId) {
-    console.log("c: ", chartInfo);
     var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
@@ -102,8 +101,11 @@ function updateHeadlineColor(contrast, chartInfo, indicatorId) {
 //function getHeadlineColor(contrast) {
     //return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
 function getHeadlineColor(contrast, goalNumber) {
-  console.log("goalNumber: ", goalNumber);
-  var htmlString = '{{ site.graph_color_headline[' + (goalNumber-1) + '] | default: "#00006a" }}';
+
+  var headlineColors = ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#26bde2', '#fcc30b', '#a21942', '#fd6925', '#dd1367', '#fd9d24', '#bf8b2e', '#3f7e44', '#0a97d9', '#56c02b', '#00689d', '#19486a']
+  var headlineColor = headlineColors[goalNumber-1];
+  var htmlString = '{{ ' + headlineColor + ' | default: "#00006a" }}';
+  console.log("goalNumber: ", htmlString);
     return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : htmlString;
 }
 
