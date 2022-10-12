@@ -27,6 +27,13 @@
         <b class="btn-label d-none d-md-block">{{ page.t.general.link_sdg_indicator }} {{ page.indicator.sdg_indicator | replace: "/", ""}} </b><b class="btn-label d-block d-md-none">{{ page.t.general.indicator }} {{ page.indicator.sdg_indicator | replace: "/", ""}}</b>
       </a>
     </div>
+      {% if page.indicator.sdg_indicator2 and page.indicator != '' %}
+      <div class="col-md-auto">
+        <a href="https://sdg-indikatoren.de/{{ language }}/{{ page.indicator.sdg_indicator2 | replace: '.', '-'}}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
+          <b class="btn-label d-none d-md-block">{{ page.t.general.link_sdg_indicator }} {{ page.indicator.sdg_indicator2 | replace: "/", ""}} </b><b class="btn-label d-block d-md-none">{{ page.t.general.indicator }} {{ page.indicator.sdg_indicator2 | replace: "/", ""}}</b>
+        </a>
+      </div>
+      {% endif %}
     {% endif %}
 
     <div class="col d-grid gap-2">
