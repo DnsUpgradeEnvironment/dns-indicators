@@ -1156,6 +1156,16 @@ var accessibilitySwitcher = function () {
     }
 
 };
+
+// Dynamic aria labels on navbar toggle.
+$(document).ready(function() {
+    $('#navbarSupportedContent').on('shown.bs.collapse', function() {
+        $('.navbar-toggler').attr('aria-label', translations.header.hide_menu);
+    });
+    $('#navbarSupportedContent').on('hidden.bs.collapse', function() {
+        $('.navbar-toggler').attr('aria-label', translations.header.show_menu);
+    });
+});
 opensdg.chartColors = function(indicatorId) {
   var colorSet = "goal";
   var numberOfColors = 9;
@@ -4597,6 +4607,7 @@ function createDownloadButton(table, name, indicatorId, el) {
             .attr({
                 'download': fileName,
                 'title': translations.indicator.download_csv_title,
+                'aria-label': translations.indicator.download_csv_title,
                 'class': 'btn btn-primary btn-download',
                 'tabindex': 0
             });
@@ -4628,6 +4639,7 @@ function createDownloadButton(table, name, indicatorId, el) {
                 'href': opensdg.remoteDataBaseUrl + '/headline/' + id + '.csv',
                 'download': headlineId + '.csv',
                 'title': translations.indicator.download_headline_title,
+                'aria-label': translations.indicator.download_headline_title,
                 'class': 'btn btn-primary btn-download',
                 'tabindex': 0
             }));
@@ -4647,6 +4659,7 @@ function createSourceButton(indicatorId, el) {
             'href': opensdg.remoteDataBaseUrl + '/data/' + indicatorId + '.csv',
             'download': indicatorId + '.csv',
             'title': translations.indicator.download_source_title,
+            'aria-label': translations.indicator.download_source_title,
             'class': 'btn btn-primary btn-download',
             'tabindex': 0
         }));
@@ -5573,9 +5586,15 @@ $(function() {
           maxYear = years[years.length - 1],
           knobElement = knob._element;
 
+      control._buttonBackward.title = translations.indicator.map_slider_back;
+      control._buttonBackward.setAttribute('aria-label', control._buttonBackward.title);
+      control._buttonForward.title = translations.indicator.map_slider_forward;
+      control._buttonForward.setAttribute('aria-label', control._buttonForward.title);
+
       knobElement.setAttribute('tabindex', '0');
       knobElement.setAttribute('role', 'slider');
-      knobElement.setAttribute('aria-label', translations.indicator.map_year_slider);
+      knobElement.setAttribute('aria-label', translations.indicator.map_slider_keyboard);
+      knobElement.title = translations.indicator.map_slider_mouse;
       knobElement.setAttribute('aria-valuemin', minYear);
       knobElement.setAttribute('aria-valuemax', maxYear);
 
@@ -5731,6 +5750,7 @@ $(function() {
       this._button.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>';
 
       this._cancel.setAttribute('role', 'button');
+      this._cancel.title = translations.indicator.map_search_cancel;
       this._cancel.setAttribute('aria-label', this._cancel.title);
       this._cancel.innerHTML = '<i class="fa fa-close" aria-hidden="true"></i>';
 

@@ -128,7 +128,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20221012131011">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20221013025530">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -174,10 +174,10 @@ layout-reportingstatus
 <header role="banner" class="">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/dns-indicators/" id="home">
+            <a class="navbar-brand" href="/dns-indicators/" id="home" aria-label="" title="">
     <img src="/dns-indicators/assets/img/de/dns_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
@@ -227,7 +227,7 @@ layout-reportingstatus
         <label class="visually-hidden" for="indicator_search">Suche</label>
         <input class="form-control" type="search" name="q" id="indicator_search" title="Suche">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Suche" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
@@ -365,7 +365,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div>
   <h2>Status nach Ziel</h2><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/1">
+        <a href="/dns-indicators/1" title=" 1" aria-label=" 1">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/1.png" alt="Keine Armut - Ziel 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -399,7 +399,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/2">
+        <a href="/dns-indicators/2" title=" 2" aria-label=" 2">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/2.png" alt="Kein Hunger - Ziel 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -433,7 +433,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/3">
+        <a href="/dns-indicators/3" title=" 3" aria-label=" 3">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png" alt="Gesundheit und Wohlergehen - Ziel 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -467,7 +467,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/4">
+        <a href="/dns-indicators/4" title=" 4" aria-label=" 4">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/4.png" alt="Hochwertige Bildung - Ziel 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -501,7 +501,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/5">
+        <a href="/dns-indicators/5" title=" 5" aria-label=" 5">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -535,7 +535,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/6">
+        <a href="/dns-indicators/6" title=" 6" aria-label=" 6">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png" alt="Sauberes Wasser und Sanitärversorgung - Ziel 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -569,7 +569,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/7">
+        <a href="/dns-indicators/7" title=" 7" aria-label=" 7">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/7.png" alt="Bezahlbare und saubere Energie - Ziel 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -603,7 +603,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/8">
+        <a href="/dns-indicators/8" title=" 8" aria-label=" 8">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -637,7 +637,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/9">
+        <a href="/dns-indicators/9" title=" 9" aria-label=" 9">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/9.png" alt="Industrie, Innovationen und Infrastruktur - Ziel 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -671,7 +671,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/10">
+        <a href="/dns-indicators/10" title=" 10" aria-label=" 10">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -705,7 +705,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/11">
+        <a href="/dns-indicators/11" title=" 11" aria-label=" 11">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -739,7 +739,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/12">
+        <a href="/dns-indicators/12" title=" 12" aria-label=" 12">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -773,7 +773,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/13">
+        <a href="/dns-indicators/13" title=" 13" aria-label=" 13">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/13.png" alt="Maßnahmen zum Klimaschutz - Ziel 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -807,7 +807,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/14">
+        <a href="/dns-indicators/14" title=" 14" aria-label=" 14">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/14.png" alt="Leben unter Wasser - Ziel 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -841,7 +841,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/15">
+        <a href="/dns-indicators/15" title=" 15" aria-label=" 15">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png" alt="Leben an Land - Ziel 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -875,7 +875,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/16">
+        <a href="/dns-indicators/16" title=" 16" aria-label=" 16">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/16.png" alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -909,7 +909,7 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/dns-indicators/17">
+        <a href="/dns-indicators/17" title=" 17" aria-label=" 17">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/17.png" alt="Partnerschaften zur Erreichung der Ziele - Ziel 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
@@ -1081,12 +1081,12 @@ data-event-label="Change reporting status view to un_designated_tier"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20221012131011'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20221013025530'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20221012131011"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20221013025530"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
