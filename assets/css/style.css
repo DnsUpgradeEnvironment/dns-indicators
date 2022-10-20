@@ -2770,6 +2770,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   margin-bottom: 1.0rem; }
 
 .chart-subtitle {
+  margin-left: 20px;
   text-align: center;
   color: #777; }
 
