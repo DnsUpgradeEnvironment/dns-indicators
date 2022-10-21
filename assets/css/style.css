@@ -1796,8 +1796,13 @@ body.contrast-high #main-content .nav-tabs {
   width: 115px;
   float: left;
   min-height: 1px; }
-  .layout-reportingstatus #main-content .frame > a:focus {
-    outline: 6px #ffdd00 solid !important; }
+  .layout-reportingstatus #main-content .frame > a {
+    display: block;
+    width: calc(100% - 15px); }
+    .layout-reportingstatus #main-content .frame > a:focus {
+      outline: 2px #0b0c0c solid !important; }
+      .layout-reportingstatus #main-content .frame > a:focus .goal-icon-image {
+        outline: 8px #ffdd00 solid !important; }
 .layout-reportingstatus #main-content .details {
   width: calc(100% - 125px);
   float: left; }
