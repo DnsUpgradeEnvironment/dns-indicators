@@ -1980,6 +1980,11 @@ body.contrast-high.layout-goals #main-content .goal-tiles .global-goals-extra-ic
 .layout-config-builder.contrast-high .btn-group .btn span {
   color: black; }
 
+body.contrast-high.layout-config-builder .config-widgets {
+  background-color: black; }
+body.contrast-high.layout-config-builder .config-repository-button span {
+  color: black; }
+
 #main-content #map {
   height: 500px;
   width: 100%; }
@@ -2390,6 +2395,14 @@ body.contrast-high .success {
     margin-bottom: 10px; }
   .layout-data-editor .config-widgets .data-grid-buttons #add-column {
     margin-top: 0; }
+
+body.contrast-high.layout-data-editor .config-widgets {
+  background-color: black; }
+body.contrast-high.layout-data-editor .config-repository-button span {
+  color: black; }
+body.contrast-high.layout-data-editor .ag-root-wrapper, body.contrast-high.layout-data-editor .ag-root-wrapper .ag-header, body.contrast-high.layout-data-editor .ag-root-wrapper .ag-row {
+  background-color: black;
+  color: white; }
 
 .layout-news .post-listing {
   clear: both;
