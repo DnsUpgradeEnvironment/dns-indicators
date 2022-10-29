@@ -15,7 +15,11 @@
 
 <div class="container">
   <div class="row justify-content-around">
-    <div class="col-sm-3 d-grid gap-2">
+    {% if page.indicator.sdg_indicator and page.indicator != '' %}
+      <div class="col-sm-3 d-grid gap-2">
+    {% else %}
+      <div class="col-sm-6 d-grid gap-2">
+    {% endif %}
       <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
         <b class="d-sm-none d-lg-block"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.t.general.prev_indicator }}</b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-left" aria-hidden="true"></i></b>
       </a>
@@ -42,7 +46,11 @@
       {% endif %}
     {% endif %}
 
-    <div class="col-sm-3 d-grid gap-2">
+    {% if page.indicator.sdg_indicator and page.indicator != '' %}
+      <div class="col-sm-3 d-grid gap-2">
+    {% else %}
+      <div class="col-sm-6 d-grid gap-2">
+    {% endif %}
       <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
         <b class="btn-label d-sm-none d-lg-block">{{ page.t.general.next_indicator }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-right" aria-hidden="true"></i></b>
       </a>
