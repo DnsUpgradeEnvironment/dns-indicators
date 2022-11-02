@@ -45,7 +45,7 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoint) {
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoints) {
   var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
   if (graphTargetLines) {
     annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
