@@ -2118,7 +2118,7 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars) {
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoint) {
   var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
   if (graphTargetLines) {
     annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
@@ -2128,6 +2128,9 @@ function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, gra
   }
   if (graphErrorBars) {
     annotations = annotations.concat(getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries));
+  }
+  if (graphTargetPoints) {
+    annotations = annotations.concat(getGraphTargetPoints(graphTargetPoint, selectedUnit, selectedSeries));
   }
   return annotations;
 }
@@ -2157,6 +2160,20 @@ function getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries) {
     errorBar.preset = 'error_bar';
     errorBar.label = { content: errorBar.label_content };
     return errorBar;
+  });
+}
+
+/**
+ * @param {Array} graphTargetPoints Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphTargetPoints, selectedUnit, selectedSeries).map(function(targetPoint) {
+    targetPoint.preset = 'target_point';
+    targetPoint.label = { content: targetPoint.label_content };
+    return targetPoint;
   });
 }
 
@@ -2813,6 +2830,7 @@ function getTimeSeriesAttributes(rows) {
   this.graphTargetLines = options.graphTargetLines;
   this.graphSeriesBreaks = options.graphSeriesBreaks;
   this.graphErrorBars = options.graphErrorBars;
+  this.graphTargetPoints = options.graphTargetPoints;
   this.indicatorDownloads = options.indicatorDownloads;
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
@@ -3079,7 +3097,7 @@ function getTimeSeriesAttributes(rows) {
     }
 
     var combinations = helpers.getCombinationData(this.selectedFields);
-    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps , this.errorBars);
+    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps , this.errorBars, this.targetPoints);
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
 
     var datasetCountExceedsMax = false;
@@ -3110,7 +3128,7 @@ function getTimeSeriesAttributes(rows) {
       selectedSeries: this.selectedSeries,
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
-      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars),
+      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints),
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
@@ -3698,8 +3716,6 @@ function strToArray (str, limit) {
         label: {
             backgroundColor: 'rgba(255,255,255,0.6)',
             color: 'black',
-            borderColor: '#757575',
-            borderWidth: 1,
         },
         // This "highContrast" overrides colors when in high-contrast mode.
         highContrast: {
@@ -3755,6 +3771,18 @@ function strToArray (str, limit) {
         adjustScaleRange: true,
         drawTime: 'afterDatasetsDraw',
         type: 'line',
+        backgroundColor: 'blue',
+        xScaleID: 'x',
+        yScaleID: 'y',
+        xMin: 2,
+        xMax: 2,
+        yMin: 15000,
+        yMax: 25000,
+    },
+    target_point: {
+        adjustScaleRange: true,
+        drawTime: 'afterDatasetsDraw',
+        type: 'point',
         backgroundColor: 'blue',
         xScaleID: 'x',
         yScaleID: 'y',
@@ -5035,6 +5063,7 @@ var indicatorInit = function () {
                         graphTargetLines: domData.graphtargetlines,
                         graphSeriesBreaks: domData.graphseriesbreaks,
                         graphErrorBars: domData.grapherrorbars,
+                        graphTargetPoins: domData.graphtargetpoints,
                         indicatorDownloads: domData.indicatordownloads,
                         dataSchema: domData.dataschema,
                         compositeBreakdownLabel: domData.compositebreakdownlabel,
