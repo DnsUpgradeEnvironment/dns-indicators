@@ -57,7 +57,7 @@ function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, gra
     annotations = annotations.concat(getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries));
   }
   if (graphTargetPoints) {
-    annotations = annotations.concat(getGraphTargetPoints(graphTargetPoint, selectedUnit, selectedSeries));
+    annotations = annotations.concat(getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries));
   }
   return annotations;
 }
