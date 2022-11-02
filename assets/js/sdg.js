@@ -2118,7 +2118,7 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoint) {
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoints) {
   var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
   if (graphTargetLines) {
     annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
@@ -2130,7 +2130,7 @@ function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, gra
     annotations = annotations.concat(getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries));
   }
   if (graphTargetPoints) {
-    annotations = annotations.concat(getGraphTargetPoints(graphTargetPoint, selectedUnit, selectedSeries));
+    annotations = annotations.concat(getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries));
   }
   return annotations;
 }
@@ -5063,7 +5063,7 @@ var indicatorInit = function () {
                         graphTargetLines: domData.graphtargetlines,
                         graphSeriesBreaks: domData.graphseriesbreaks,
                         graphErrorBars: domData.grapherrorbars,
-                        graphTargetPoins: domData.graphtargetpoints,
+                        graphTargetPoints: domData.graphtargetpoints,
                         indicatorDownloads: domData.indicatordownloads,
                         dataSchema: domData.dataschema,
                         compositeBreakdownLabel: domData.compositebreakdownlabel,
