@@ -9,8 +9,6 @@ opensdg.annotationPresets = {
         label: {
             backgroundColor: 'rgba(255,255,255,0.6)',
             color: 'black',
-            borderColor: '#757575',
-            borderWidth: 1,
         },
         // This "highContrast" overrides colors when in high-contrast mode.
         highContrast: {
@@ -66,6 +64,18 @@ opensdg.annotationPresets = {
         adjustScaleRange: true,
         drawTime: 'afterDatasetsDraw',
         type: 'line',
+        backgroundColor: 'blue',
+        xScaleID: 'x',
+        yScaleID: 'y',
+        xMin: 2,
+        xMax: 2,
+        yMin: 15000,
+        yMax: 25000,
+    },
+    target_point: {
+        adjustScaleRange: true,
+        drawTime: 'afterDatasetsDraw',
+        type: 'point',
         backgroundColor: 'blue',
         xScaleID: 'x',
         yScaleID: 'y',

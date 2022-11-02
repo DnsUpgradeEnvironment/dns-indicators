@@ -45,6 +45,7 @@ var indicatorInit = function () {
                         graphTargetLines: domData.graphtargetlines,
                         graphSeriesBreaks: domData.graphseriesbreaks,
                         graphErrorBars: domData.grapherrorbars,
+                        graphTargetPoins: domData.graphtargetpoints,
                         indicatorDownloads: domData.indicatordownloads,
                         dataSchema: domData.dataschema,
                         compositeBreakdownLabel: domData.compositebreakdownlabel,

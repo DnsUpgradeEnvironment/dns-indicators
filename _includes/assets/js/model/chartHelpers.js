@@ -45,7 +45,7 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars) {
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoint) {
   var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
   if (graphTargetLines) {
     annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
@@ -55,6 +55,9 @@ function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, gra
   }
   if (graphErrorBars) {
     annotations = annotations.concat(getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries));
+  }
+  if (graphTargetPoints) {
+    annotations = annotations.concat(getGraphTargetPoints(graphTargetPoint, selectedUnit, selectedSeries));
   }
   return annotations;
 }
@@ -84,6 +87,20 @@ function getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries) {
     errorBar.preset = 'error_bar';
     errorBar.label = { content: errorBar.label_content };
     return errorBar;
+  });
+}
+
+/**
+ * @param {Array} graphTargetPoints Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphTargetPoints, selectedUnit, selectedSeries).map(function(targetPoint) {
+    targetPoint.preset = 'target_point';
+    targetPoint.label = { content: targetPoint.label_content };
+    return targetPoint;
   });
 }
 
