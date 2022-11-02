@@ -89,6 +89,15 @@ logos:
   - language: en
     src: assets/img/en/DNS_logo.png
     alt: DESTATIS - German Strategy for Sustainable Development
+    
+date_formats:
+  - type: standard
+    language: de
+    format: "%d.%m.%Y"
+  - type: standard
+    language: en
+    format: "%b %d, %Y"
+  
 
 # Menu
 menu:
