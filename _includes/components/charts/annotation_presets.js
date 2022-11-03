@@ -80,5 +80,11 @@ opensdg.annotationPresets = {
         borderWidth: 0,
         radius: 8,
         xAdjust: -0.4,
+        xScaleID: 'x',
+        yScaleID: 'y',
+        xMin: 2,
+        xMax: 2,
+        yMin: 15000,
+        yMax: 25000,
     },
 };
