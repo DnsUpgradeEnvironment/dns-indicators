@@ -3801,7 +3801,6 @@ function strToArray (str, limit) {
         type: 'point',
         borderColor: 'transparent',
         radius: 8,
-        xAdjust: -20,
     },
 };
 
