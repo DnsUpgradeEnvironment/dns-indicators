@@ -188,7 +188,7 @@ opensdg.chartTypes.base = function(info) {
             // Now add any more annotation config.
             $.extend(true, annotation, annotationOverrides);
             // Default to horizontal lines.
-            if (!annotation.mode && annotation.type === 'line' && annotation.preset !== 'error_bar' && annotation.preset !== 'target_point') {
+            if (!annotation.mode && annotation.type === 'line' && annotation.preset !== 'error_bar') {
                 annotation.mode = 'horizontal';
             }
             // Provide the obscure scaleID properties on user's behalf.
@@ -200,10 +200,10 @@ opensdg.chartTypes.base = function(info) {
                     annotation.scaleID = 'x';
                 }
             }
-            if (!annotation.xScaleID && annotation.type === 'box') {
+            if (!annotation.xScaleID && (annotation.type === 'box' || annotation.type === 'point')) {
                 annotation.xScaleID = 'x';
             }
-            if (!annotation.yScaleID && annotation.type === 'box') {
+            if (!annotation.yScaleID && (annotation.type === 'box' || annotation.type === 'point')) {
                 annotation.yScaleID = 'y';
             }
             // Provide the "enabled" label property on the user's behalf.
