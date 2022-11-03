@@ -3786,7 +3786,7 @@ function strToArray (str, limit) {
         backgroundColor: 'grey',
         borderWidth: 0,
         radius: 8,
-        xAdjust: -0.4,
+        //xAdjust: -0.4,
         xScaleID: 'x',
         yScaleID: 'y',
         xMin: 2,
