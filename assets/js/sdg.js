@@ -2189,7 +2189,6 @@ function getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries) {
 function getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries) {
   return getMatchesByUnitSeries(graphTargetPoints, selectedUnit, selectedSeries).map(function(targetPoint) {
     targetPoint.preset = 'target_point';
-    targetPoint.label = { content: targetPoint.label_content };
     return targetPoint;
   });
 }
@@ -3800,13 +3799,8 @@ function strToArray (str, limit) {
         adjustScaleRange: true,
         drawTime: 'afterDatasetsDraw',
         type: 'point',
-        backgroundColor: 'blue',
-        xScaleID: 'x',
-        yScaleID: 'y',
-        xMin: 2,
-        xMax: 2,
-        yMin: 15000,
-        yMax: 25000,
+        borderColor: 'transparent',
+        radius: 8,
         xAdjust: -0.4,
     },
 };
