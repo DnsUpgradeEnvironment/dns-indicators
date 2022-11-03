@@ -78,6 +78,6 @@ opensdg.annotationPresets = {
         type: 'point',
         borderColor: 'transparent',
         radius: 8,
-        xAdjust: -0.4,
+        xAdjust: -20,
     },
 };
