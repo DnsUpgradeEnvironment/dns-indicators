@@ -3790,6 +3790,7 @@ function strToArray (str, limit) {
         xMax: 2,
         yMin: 15000,
         yMax: 25000,
+        xAdjust: -0.4,
     },
 };
 
