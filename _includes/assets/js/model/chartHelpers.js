@@ -99,7 +99,6 @@ function getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries) {
 function getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries) {
   return getMatchesByUnitSeries(graphTargetPoints, selectedUnit, selectedSeries).map(function(targetPoint) {
     targetPoint.preset = 'target_point';
-    targetPoint.label = { content: targetPoint.label_content };
     return targetPoint;
   });
 }
