@@ -42,9 +42,7 @@
                   {% assign target_key = single_indicator_key | append: "_target_"  | append: multi_target %}  <!--weather_indicator_2_target_1-->
                   {% assign target_category_key = target_key | append: "_category" %}  <!--weather_indicator_2_target_1_category-->
                   {% assign target_trans_key = indicator[target_category_key] | append: "_target" %} <!--normal_target-->
-
-                  {% assign additional_cells = letters.size %}>
-
+                  {% assign additional_cells = letters.size %}
                   {% if indicator[target_key] %}
                     <tr>
                       <th>
