@@ -1,0 +1,303 @@
+{%- assign indicators_plural = page.t.general.indicators | downcase -%}
+
+{% if page.language == 'de' %}
+  {% assign language = '' %}
+{% else %}
+  {% assign language = '/en' %}
+{% endif %}
+
+{%- for goalreport in include.goals -%}
+  {%- assign goal_number = goalreport.goal -%} <!--7-->
+  {%- assign goal_short_key = goal_number | append: '-short' -%} <!--7-short-->
+  {%- assign goal_short = page.t.global_goals[goal_short_key] -%} <!--Bezahlbare und saubere Energie-->
+
+  {%- assign goal = goalreport.goal | strip | sdg_lookup -%}
+  <div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="{{ goal.url }}">
+        <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="100" height="100" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+        </a>
+    </div>
+    <div class="details">
+      <h3 class="status-goal">
+          <a href="{{ goal.url }}">{{ goal.short }}</a>
+      </h3>
+
+      {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_id' %}
+      {% for group in goal_indicators %}
+        {%- assign target_id = group.name -%}
+        {% for indicator in group.items %}
+          {% for single_indicator in (1..3) %}
+            {% assign weather_active_key = "weather_active_" | append: single_indicator %} <!--weather_active_2-->
+            {% assign single_indicator_key = "weather_indicator_" | append: single_indicator %}  <!--weather_indicator_1-->
+
+            {% assign idc_sort_order = indicator["indicator_sort_order"] %} <!--7-1-ab-->
+            {% assign letters = "g,f,e,d,c,b,a" | split: ',' %}
+
+            {% if indicator[weather_active_key] == true %}
+              <!--Check for multiple targets-->
+              {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
+              {% assign target_year_key = target_key | append: "_year" %} <!--weather_indicator_2_target_year-->
+              {% assign test_target_key = target_key | append: "_1" %}  <!--weather_indicator_2_target_1-->
+
+              {% if indicator[test_target_key] %}
+                {% assign target_trans = 'multi_target' %}
+              {% else %}
+                {% assign target_trans = 'single_target' %}
+              {% endif %}
+              <table class="table table-hover tableresp">
+
+                <!-- INDICATOR !!!!!!!!!!!!!!!!-->
+                <tr>
+                  <th width="10%" style="padding-top: 40px;"> <div class=responsiveText>{{ page.t.weather.indicator }}</div> </th>
+                  <th colspan="9" style="padding-top: 40px; padding-left: 50px"> <a href="{{ indicator.url }}"><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
+                </tr>
+                <!-- !!!!!!!!!!!!!!!!-->
+                {% if target_trans == 'single_target' %}
+
+                  <!--Check for old targets-->
+                  {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_1_target_old-->
+                  {% if indicator[old_target_key] %}
+                    {% assign cases = '_old,_new' | split: ',' %}
+                  {% else %}
+                    {% assign cases = 'xx' | split: ',' %}
+                  {% endif %}
+
+                  {% for case in cases %}
+                    {% assign additional_cells = letters.size %}
+                    {% assign target_trans = 'single_target' | append: case | replace: 'xx', '' %}  <!--single_target_old-->
+                    {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %}  <!--weather_indicator_1_target_old or weather_indicator_1_target-->
+
+                    <!-- TARGET !!!!!!!!!!!!!!!!-->
+                    <tr>
+                      <th>
+                        <div class=responsiveText>{{ page.t.weather[target_trans] }}
+                        {% if target_trans contains '_old' %}
+                          {% assign opacity = ' style="opacity: 0.2"' %}
+                          {% assign old_date_key = target_key | append: '_date' %}
+                          <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
+                        {% else %}
+                          {% assign opacity = '' %}
+                          {% if target_trans contains '_new' %}
+                            <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[old_date_key] }})</span>
+                          {% endif %}
+                        {% endif %}
+                        </div>
+                      </th>
+                      <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                    </tr>
+                    <!-- !!!!!!!!!!!!!!!!-->
+                    <!-- YEAR !!!!!!!!!!!!!!!!-->
+                    <tr>
+                      <th> <div class=responsiveText>{{ page.t.weather.year }}</div> </th>
+                      {% for letter in letters %}
+                        {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %} <!--weather_indicator_1_year_a-->
+                        {% if indicator[year_key] %}
+                          {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
+                            <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}<span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
+                          {% else %}
+                            <td width="10%" align="center"> <p {{ opacity }}<span class="responsiveText">{{ indicator[year_key] }}</span></p> </td>
+                          {% endif %}
+
+                          {% assign additional_cells = additional_cells | minus: 1 %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if additional_cells == letters.size %}
+                        {% assign add = add | minus: 1 %}
+                      {% endif %}
+
+                      <!--add empty cells-->
+                      {% for empty_cell in (1..additional_cells) %}
+                        {% if empty_cell > 5 %}
+                          <td width="10%" align="center"> </td>
+                        {% else %}
+                          <td width="10%" align="center" class="hidden-xs"> </td>
+                        {% endif %}
+                      {% endfor %}
+                    </tr>
+                    <!-- !!!!!!!!!!!!!!!!-->
+                    <!-- ITEM !!!!!!!!!!!!!!!!-->
+                    <tr>
+                      <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
+                      {% for letter in letters %}
+                        {% assign item_key = target_key | replace: '_target','' | append:'_item_' | append: letter %}
+                        {% assign title_key = item_key | append: '_title' %}
+                        {% if indicator[item_key] and indicator[item_key] != '-' %}
+                          {% if indicator[item_key] == 'Sonne' %}
+                            {% assign status = page.t.weather['sonne'] %}
+                          {% elsif indicator[item_key] == 'Leicht bewölkt' %}
+                            {% assign status = page.t.weather['leicht bewölkt'] %}
+                          {% elsif indicator[item_key] == 'Wolke' %}
+                            {% assign status = page.t.weather['wolke'] %}
+                          {% elsif indicator[item_key] == 'Blitz' %}
+                            {% assign status = page.t.weather['blitz'] %}
+                          {% endif %}
+
+                          {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
+                            <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ status }}" class="responsiveWeather hidden-xs" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
+                          {% else %}
+                            <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
+                          {% endif %}
+                        {% elsif letter == 'a' %}
+                            <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
+                        {% endif %}
+                      {% endfor %}
+
+                      <!--add empty cells-->
+                      {% for empty_cell in (1..additional_cells) %}
+                        {% if empty_cell > 5 %}
+                          <td width="10%" align="center"></td>
+                        {% else %}
+                          <td width="10%" align="center"class="hidden-xs"></td>
+                        {% endif %}
+                      {% endfor %}
+                    </tr>
+                    <!-- !!!!!!!!!!!!!!!!-->
+                  {% endfor %} <!--for case in cases-->
+                <!-- ..........................................................................................................-->
+                {% elsif target_trans == 'multi_target' %}
+                {% assign previous_target_year_key = single_indicator_key | append: '_target_1_year' %} <!--weather_indicator_2_target_1_year-->
+                  {% for multi_target in (1..4) %}
+                    {% assign target_key = single_indicator_key | append: "_target" %}  <!--weather_indicator_2_target-->
+                    {% assign target_key = target_key | append: '_' | append: multi_target %}  <!--weather_indicator_2_target_3-->
+                    {% assign target_year_key = target_key | append: "_year" %} <!--weather_indicator_2_target_3_year-->
+
+                    <!--Check for old targets-->
+                    {% assign old_target_key = target_key | append: '_old' %} <!--weather_indicator_2_target_3_old-->
+                    {% if indicator[old_target_key] %}
+                      {% assign cases = '_old,_new' | split: ',' %}
+                    {% else %}
+                      {% assign cases = 'xx' | split: ',' %}
+                    {% endif %}
+
+                    {% assign last_case = '' %}
+                    {% for case in cases %}
+                      {% assign additional_cells = letters.size %}
+                      {% assign target_trans = 'multi_target_' | append: multi_target | append: case | replace: 'xx', '' %} <!--multi_target_3_old-->
+                      {% assign target_key = target_key | replace: '_old', '' | append: case | replace: 'xx', '' %} <!--indicator_1_target_3_old-->
+
+                      {% if indicator[target_key] %}
+                        <!-- TARGET !!!!!!!!!!!!!!!!-->
+                        <tr>
+                          <th>
+                            <div class=responsiveText>{{ page.t.weather[target_trans] }}
+                              {% if target_trans contains '_old' %}
+                                {% assign old_date_key = target_key | append: '_date' %}
+                                <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
+                                {% elsif target_trans contains '_new' %}
+                                <!--{% assign new_date_key = target_key | append: '_date' %}-->
+                                <br><span class="small">({{ page.t.weather.new_pretext }} {{ indicator[old_date_key] }})</span>
+                              {% endif %}
+                            </div>
+                          </th>
+                          <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                        </tr>
+                        <!-- !!!!!!!!!!!!!!!!-->
+                        <!-- YEAR !!!!!!!!!!!!!!!!-->
+                        <tr>
+                          <th> <div class=responsiveText>{{ page.t.weather.year }}</div> </th>
+
+                          {% for letter in letters %}
+                            {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
+                            {% if indicator[year_key] %}
+                              <!--check if year is valid or not-->
+                              {% if (multi_target > 1 and indicator[year_key] <= indicator[previous_target_year_key]) or case == '_old' %}
+                                {% assign opacity = ' style="opacity: 0.2"' %}
+                              {% elsif (indicator[year_key] > indicator[target_year_key]) %}
+                                {% assign opacity = ' style="opacity: 0.2"' %}
+                              {% else %}
+                                {% assign opacity = '' %}
+                              {% endif %}
+
+                              {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
+                                <td width="10%" align="center" class="hidden-xs"> <p {{ opacity }}><span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
+                              {% else %}
+                                <td width="10%" align="center"> <p {{ opacity }}><span class="responsiveText">{{ indicator[year_key] }}</span></p> </td>
+                              {% endif %}
+
+                              {% assign additional_cells = additional_cells | minus: 1 %}
+                            {% endif %}
+                          {% endfor %}
+                          {% if additional_cells == letters.size %}
+                            {% assign add = add | minus: 1 %}
+                          {% endif %}
+
+                          <!--add empty cells-->
+                          {% for empty_cell in (1..additional_cells) %}
+                            {% if empty_cell > 5 %}
+                              <td width="10%" align="center"> </td>
+                            {% else %}
+                              <td width="10%" align="center" class="hidden-xs"> </td>
+                            {% endif %}
+                          {% endfor %}
+                        </tr>
+                        <!-- !!!!!!!!!!!!!!!!-->
+                        <!-- ITEM !!!!!!!!!!!!!!!!-->
+                        <tr>
+                          <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
+                          {% for letter in letters %}
+                            {% assign item_key = target_key | append:'_item_' | append: letter %}
+                            {% assign year_key = 'weather_indicator_' | append: single_indicator | append:'_year_' | append: letter %}
+                            {% assign title_key = item_key | append: '_title' %}
+                            <!--check if year is valid or not-->
+                            {% if (multi_target > 1 and indicator[year_key] <= indicator[previous_target_year_key]) or case == '_old' %}
+                              {% assign opacity = ' style="opacity: 0.2"' %}
+                            {% elsif (indicator[year_key] > indicator[previous_target_year_key] and indicator[year_key] > indicator[target_year_key]) %}
+                              {% assign opacity = ' style="opacity: 0.2"' %}
+                            {% else %}
+                              {% assign opacity = '' %}
+                            {% endif %}
+
+                            {% if indicator[item_key] and indicator[item_key] != '-' %}
+                              {% if indicator[item_key] == 'Sonne' %}
+                                {% assign status = page.t.weather['sonne'] %}
+                              {% elsif indicator[item_key] == 'Leicht bewölkt' %}
+                                {% assign status = page.t.weather['leicht bewölkt'] %}
+                              {% elsif indicator[item_key] == 'Wolke' %}
+                                {% assign status = page.t.weather['wolke'] %}
+                              {% elsif indicator[item_key] == 'Blitz' %}
+                                {% assign status = page.t.weather['blitz'] %}
+                              {% endif %}
+
+                              {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
+                                <td width="10%" align="center" class="hidden-xs"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ status }}" class="responsiveWeather hidden-xs" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
+                              {% else %}
+                                <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
+                              {% endif %}
+                            {% elsif letter == 'a' %}
+                                <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
+                            {% endif %}
+                          {% endfor %}
+
+                          <!--add empty cells-->
+                          {% for empty_cell in (1..additional_cells) %}
+                            {% if empty_cell > 5 %}
+                              <td width="10%" align="center"></td>
+                            {% else %}
+                              <td width="10%" align="center"class="hidden-xs"></td>
+                            {% endif %}
+                          {% endfor %}
+                        </tr>
+                        <!-- !!!!!!!!!!!!!!!!-->
+                      {% endif %}
+                    {% endfor %} <!--case-->
+
+                    {% assign previous_target_year_key = single_indicator_key | append: '_target_' | append: multi_target | append: '_year' %} <!--weather_indicator_2_target_1_year-->
+                    {% assign previous_target_new_year_key = previous_target_year_key | replace: '_year', '_new_year' %}
+                    {% if indicator[previous_target_new_year_key] %}
+                      {% assign previous_target_year_key = previous_target_new_year_key %} <!--weather_indicator_2_target_1_new_year-->
+                    {% endif%}
+
+                  {% endfor %} <!--multi_target-->
+                {% endif %} <!-- target_trans == 'single_target' -->
+
+              </table>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+      <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+  </div> <!--class="goal"-->
+{%- endfor -%} <!--for goalreport in site.data.reporting.goals-->
