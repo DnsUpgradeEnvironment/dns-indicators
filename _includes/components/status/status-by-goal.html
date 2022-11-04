@@ -97,10 +97,10 @@
                         {% assign title_key = item_key | append: '_title' %}
                         {% assign valid_key = item_key | append: '_valid' %}
                         <!--check if year is valid or not-->
-                        {% if not indicator[valid_key] %}
-                          {% assign opacity = ' style="opacity: 0.2"' %}
-                        {% else %}
+                        {% if indicator[valid_key] %}
                           {% assign opacity = '' %}
+                        {% else %}
+                          {% assign opacity = ' style="opacity: 0.2"' %}
                         {% endif %}
 
                         {% if indicator[item_key] and indicator[item_key] != '' %}
