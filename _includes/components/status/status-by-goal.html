@@ -5,7 +5,7 @@
 {% endif %}
 
 {%- for goalreport in include.goals -%}
-  {%- assign goal_number = goalreport.goal -%} <!--7-->
+  {%- assign goal_number = goalreport.goal -%}
   {%- assign goal = goalreport.goal | strip | sdg_lookup -%}
 
   <div class="goal reporting-status-item">
@@ -97,7 +97,7 @@
                         {% assign title_key = item_key | append: '_title' %}
                         {% assign valid_key = item_key | append: '_valid' %}
                         <!--check if year is valid or not-->
-                        {% if indicator[valid_key] == 'false' %}
+                        {% if not indicator[valid_key] %}
                           {% assign opacity = ' style="opacity: 0.2"' %}
                         {% else %}
                           {% assign opacity = '' %}
