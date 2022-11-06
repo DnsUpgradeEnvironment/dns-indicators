@@ -134,7 +134,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20221106073056">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20221106075307">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -465,8 +465,6 @@ data-event-label="high"
       </a>
     </h5>
   </div>
-  <div class="my-header-note">
-  </div>
 </div>
 <div>
   <div class="my-header">
@@ -475,8 +473,9 @@ data-event-label="high"
       </a>
     </h5>
   </div>
-  <div class="my-header-note">
-  </div>
+</div>
+<div class="my-header-note">
+  Die Bewertung des Indikators beruht auf den Daten des Berichtsjahres 2020 zum Stand 31.9.2022.
 </div>
 
   </div>
@@ -514,7 +513,7 @@ data-event-label="high"
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;All-day care provision for 0 to 2-year-old children&quot;,&quot;All-day care provision for 3 to 5-year-old children&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;federal state&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Wuerttemberg&quot;,&quot;Bavaria&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hesse&quot;,&quot;Mecklenburg Western Pomerania&quot;,&quot;Lower Saxony&quot;,&quot;North Rhine-Westphalia&quot;,&quot;Rhineland Palatinate&quot;,&quot;Saarland&quot;,&quot;Saxony&quot;,&quot;Saxony-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thuringia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Federal state&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;county&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Stuttgart, Stadt&quot;,&quot;Böblingen&quot;,&quot;Esslingen&quot;,&quot;Göppingen&quot;,&quot;Ludwigsburg&quot;,&quot;Rems-Murr-Kreis&quot;,&quot;Heilbronn, Stadt&quot;,&quot;Heilbronn&quot;,&quot;Hohenlohekreis&quot;,&quot;Schwäbisch Hall&quot;,&quot;Main-Tauber-Kreis&quot;,&quot;Heidenheim&quot;,&quot;Ostalbkreis&quot;,&quot;Baden-Baden, Stadt&quot;,&quot;Karlsruhe, Stadt&quot;,&quot;Karlsruhe&quot;,&quot;Rastatt&quot;,&quot;Heidelberg, Stadt&quot;,&quot;Mannheim, Stadt&quot;,&quot;Neckar-Odenwald-Kreis&quot;,&quot;Rhein-Neckar-Kreis&quot;,&quot;Pforzheim, Stadt&quot;,&quot;Calw&quot;,&quot;Enzkreis&quot;,&quot;Freudenstadt&quot;,&quot;Freiburg im Breisgau, Stadt&quot;,&quot;Breisgau-Hochschwarzwald&quot;,&quot;Emmendingen&quot;,&quot;Ortenaukreis&quot;,&quot;Rottweil&quot;,&quot;Schwarzwald-Baar-Kreis&quot;,&quot;Tuttlingen&quot;,&quot;Konstanz&quot;,&quot;Lörrach&quot;,&quot;Waldshut&quot;,&quot;Reutlingen&quot;,&quot;Tübingen&quot;,&quot;Zollernalbkreis&quot;,&quot;Ulm, Stadt&quot;,&quot;Alb-Donau-Kreis&quot;,&quot;Biberach&quot;,&quot;Bodenseekreis&quot;,&quot;Ravensburg&quot;,&quot;Sigmaringen&quot;,&quot;Ingolstadt, Stadt&quot;,&quot;München, Stadt&quot;,&quot;Rosenheim, Stadt&quot;,&quot;Altötting&quot;,&quot;Berchtesgadener Land&quot;,&quot;Bad Tölz-Wolfratshausen&quot;,&quot;Dachau&quot;,&quot;Ebersberg&quot;,&quot;Eichstätt&quot;,&quot;Erding&quot;,&quot;Freising&quot;,&quot;Fürstenfeldbruck&quot;,&quot;Garmisch-Partenkirchen&quot;,&quot;Landsberg am Lech&quot;,&quot;Miesbach&quot;,&quot;Mühldorf am Inn&quot;,&quot;München&quot;,&quot;Neuburg-Schrobenhausen&quot;,&quot;Pfaffenhofen an der Ilm&quot;,&quot;Rosenheim&quot;,&quot;Starnberg&quot;,&quot;Traunstein&quot;,&quot;Weilheim-Schongau&quot;,&quot;Landshut, Stadt&quot;,&quot;Passau, Stadt&quot;,&quot;Straubing, Stadt&quot;,&quot;Deggendorf&quot;,&quot;Freyung-Grafenau&quot;,&quot;Kelheim&quot;,&quot;Landshut&quot;,&quot;Passau&quot;,&quot;Regen&quot;,&quot;Rottal-Inn&quot;,&quot;Straubing-Bogen&quot;,&quot;Dingolfing-Landau&quot;,&quot;Amberg, Stadt&quot;,&quot;Regensburg, Stadt&quot;,&quot;Weiden in der Oberpfalz, Stadt&quot;,&quot;Amberg-Sulzbach&quot;,&quot;Cham&quot;,&quot;Neumarkt in der Oberpfalz&quot;,&quot;Neustadt an der Waldnaab&quot;,&quot;Regensburg&quot;,&quot;Schwandorf&quot;,&quot;Tirschenreuth&quot;,&quot;Bamberg, Stadt&quot;,&quot;Bayreuth, Stadt&quot;,&quot;Coburg, Stadt&quot;,&quot;Hof, Stadt&quot;,&quot;Bamberg&quot;,&quot;Bayreuth&quot;,&quot;Coburg&quot;,&quot;Forchheim&quot;,&quot;Hof&quot;,&quot;Kronach&quot;,&quot;Kulmbach&quot;,&quot;Lichtenfels&quot;,&quot;Wunsiedel im Fichtelgebirge&quot;,&quot;Ansbach, Stadt&quot;,&quot;Erlangen, Stadt&quot;,&quot;Fürth, Stadt&quot;,&quot;Nürnberg, Stadt&quot;,&quot;Schwabach, Stadt&quot;,&quot;Ansbach&quot;,&quot;Erlangen-Höchstadt&quot;,&quot;Fürth&quot;,&quot;Nürnberger Land&quot;,&quot;Neustadt an der Aisch-Bad Windsheim&quot;,&quot;Roth&quot;,&quot;Weißenburg-Gunzenhausen&quot;,&quot;Aschaffenburg, Stadt&quot;,&quot;Schweinfurt, Stadt&quot;,&quot;Würzburg, Stadt&quot;,&quot;Aschaffenburg&quot;,&quot;Bad Kissingen&quot;,&quot;Rhön-Grabfeld&quot;,&quot;Haßberge&quot;,&quot;Kitzingen&quot;,&quot;Miltenberg&quot;,&quot;Main-Spessart&quot;,&quot;Schweinfurt&quot;,&quot;Würzburg&quot;,&quot;Augsburg, Stadt&quot;,&quot;Kaufbeuren, Stadt&quot;,&quot;Kempten (Allgäu), Stadt&quot;,&quot;Memmingen, Stadt&quot;,&quot;Aichach-Friedberg&quot;,&quot;Augsburg&quot;,&quot;Dillingen an der Donau&quot;,&quot;Günzburg&quot;,&quot;Neu-Ulm&quot;,&quot;Lindau (Bodensee)&quot;,&quot;Ostallgäu&quot;,&quot;Unterallgäu&quot;,&quot;Donau-Ries&quot;,&quot;Oberallgäu&quot;,&quot;Berlin, Stadt&quot;,&quot;Brandenburg an der Havel, Stadt&quot;,&quot;Cottbus, Stadt&quot;,&quot;Frankfurt (Oder), Stadt&quot;,&quot;Potsdam, Stadt&quot;,&quot;Barnim&quot;,&quot;Dahme-Spreewald&quot;,&quot;Elbe-Elster&quot;,&quot;Havelland&quot;,&quot;Märkisch-Oderland&quot;,&quot;Oberhavel&quot;,&quot;Oberspreewald-Lausitz&quot;,&quot;Oder-Spree&quot;,&quot;Ostprignitz-Ruppin&quot;,&quot;Potsdam-Mittelmark&quot;,&quot;Prignitz&quot;,&quot;Spree-Neiße&quot;,&quot;Teltow-Fläming&quot;,&quot;Uckermark&quot;,&quot;Bremen, Stadt&quot;,&quot;Bremerhaven, Stadt&quot;,&quot;Hamburg&quot;,&quot;Darmstadt, Stadt&quot;,&quot;Frankfurt am Main, Stadt&quot;,&quot;Offenbach am Main, Stadt&quot;,&quot;Wiesbaden, Stadt&quot;,&quot;Bergstraße&quot;,&quot;Darmstadt-Dieburg&quot;,&quot;Groß-Gerau&quot;,&quot;Hochtaunuskreis&quot;,&quot;Main-Kinzig-Kreis&quot;,&quot;Main-Taunus-Kreis&quot;,&quot;Odenwaldkreis&quot;,&quot;Offenbach&quot;,&quot;Rheingau-Taunus-Kreis&quot;,&quot;Wetteraukreis&quot;,&quot;Gießen&quot;,&quot;Lahn-Dill-Kreis&quot;,&quot;Limburg-Weilburg&quot;,&quot;Marburg-Biedenkopf&quot;,&quot;Vogelsbergkreis&quot;,&quot;Kassel, Stadt&quot;,&quot;Fulda&quot;,&quot;Hersfeld-Rotenburg&quot;,&quot;Kassel&quot;,&quot;Schwalm-Eder-Kreis&quot;,&quot;Waldeck-Frankenberg&quot;,&quot;Werra-Meißner-Kreis&quot;,&quot;Rostock, Stadt&quot;,&quot;Schwerin, Stadt&quot;,&quot;Mecklenburgische Seenplatte&quot;,&quot;Rostock&quot;,&quot;Vorpommern-Rügen&quot;,&quot;Nordwestmecklenburg&quot;,&quot;Vorpommern-Greifswald&quot;,&quot;Ludwigslust-Parchim&quot;,&quot;Braunschweig, Stadt&quot;,&quot;Salzgitter, Stadt&quot;,&quot;Wolfsburg, Stadt&quot;,&quot;Gifhorn&quot;,&quot;Goslar&quot;,&quot;Helmstedt&quot;,&quot;Northeim&quot;,&quot;Osterode am Harz&quot;,&quot;Peine&quot;,&quot;Wolfenbüttel&quot;,&quot;Göttingen&quot;,&quot;Region Hannover&quot;,&quot;Diepholz&quot;,&quot;Hameln-Pyrmont&quot;,&quot;Hildesheim&quot;,&quot;Holzminden&quot;,&quot;Nienburg (Weser)&quot;,&quot;Schaumburg&quot;,&quot;Celle&quot;,&quot;Cuxhaven&quot;,&quot;Harburg&quot;,&quot;Lüchow-Dannenberg&quot;,&quot;Lüneburg&quot;,&quot;Osterholz&quot;,&quot;Rotenburg (Wümme)&quot;,&quot;Heidekreis&quot;,&quot;Stade&quot;,&quot;Uelzen&quot;,&quot;Verden&quot;,&quot;Delmenhorst, Stadt&quot;,&quot;Emden, Stadt&quot;,&quot;Oldenburg (Oldenburg), Stadt&quot;,&quot;Osnabrück, Stadt&quot;,&quot;Wilhelmshaven, Stadt&quot;,&quot;Ammerland&quot;,&quot;Aurich&quot;,&quot;Cloppenburg&quot;,&quot;Emsland&quot;,&quot;Friesland&quot;,&quot;Grafschaft Bentheim&quot;,&quot;Leer&quot;,&quot;Oldenburg&quot;,&quot;Osnabrück&quot;,&quot;Vechta&quot;,&quot;Wesermarsch&quot;,&quot;Wittmund&quot;,&quot;Düsseldorf, Stadt&quot;,&quot;Duisburg, Stadt&quot;,&quot;Essen, Stadt&quot;,&quot;Krefeld, Stadt&quot;,&quot;Mönchengladbach, Stadt&quot;,&quot;Mülheim an der Ruhr, Stadt&quot;,&quot;Oberhausen, Stadt&quot;,&quot;Remscheid, Stadt&quot;,&quot;Solingen, Stadt&quot;,&quot;Wuppertal, Stadt&quot;,&quot;Kleve&quot;,&quot;Mettmann&quot;,&quot;Rhein-Kreis Neuss&quot;,&quot;Viersen&quot;,&quot;Wesel&quot;,&quot;Bonn, Stadt&quot;,&quot;Köln, Stadt&quot;,&quot;Leverkusen, Stadt&quot;,&quot;Städteregion Aachen&quot;,&quot;Düren&quot;,&quot;Rhein-Erft-Kreis&quot;,&quot;Euskirchen&quot;,&quot;Heinsberg&quot;,&quot;Oberbergischer Kreis&quot;,&quot;Rheinisch-Bergischer Kreis&quot;,&quot;Rhein-Sieg-Kreis&quot;,&quot;Bottrop, Stadt&quot;,&quot;Gelsenkirchen, Stadt&quot;,&quot;Münster, Stadt&quot;,&quot;Borken&quot;,&quot;Coesfeld&quot;,&quot;Recklinghausen&quot;,&quot;Steinfurt&quot;,&quot;Warendorf&quot;,&quot;Bielefeld, Stadt&quot;,&quot;Gütersloh&quot;,&quot;Herford&quot;,&quot;Höxter&quot;,&quot;Lippe&quot;,&quot;Minden-Lübbecke&quot;,&quot;Paderborn&quot;,&quot;Bochum, Stadt&quot;,&quot;Dortmund, Stadt&quot;,&quot;Hagen, Stadt&quot;,&quot;Hamm, Stadt&quot;,&quot;Herne, Stadt&quot;,&quot;Ennepe-Ruhr-Kreis&quot;,&quot;Hochsauerlandkreis&quot;,&quot;Märkischer Kreis&quot;,&quot;Olpe&quot;,&quot;Siegen-Wittgenstein&quot;,&quot;Soest&quot;,&quot;Unna&quot;,&quot;Koblenz, Stadt&quot;,&quot;Ahrweiler&quot;,&quot;Altenkirchen (Westerwald)&quot;,&quot;Bad Kreuznach&quot;,&quot;Birkenfeld&quot;,&quot;Cochem-Zell&quot;,&quot;Mayen-Koblenz&quot;,&quot;Neuwied&quot;,&quot;Rhein-Hunsrück-Kreis&quot;,&quot;Rhein-Lahn-Kreis&quot;,&quot;Westerwaldkreis&quot;,&quot;Trier, Stadt&quot;,&quot;Bernkastel-Wittlich&quot;,&quot;Eifelkreis Bitburg-Prüm&quot;,&quot;Vulkaneifel&quot;,&quot;Trier-Saarburg&quot;,&quot;Frankenthal (Pfalz), Stadt&quot;,&quot;Kaiserslautern, Stadt&quot;,&quot;Landau in der Pfalz, Stadt&quot;,&quot;Ludwigshafen am Rhein, Stadt&quot;,&quot;Mainz, Stadt&quot;,&quot;Neustadt an der Weinstraße, Stadt&quot;,&quot;Pirmasens, Stadt&quot;,&quot;Speyer, Stadt&quot;,&quot;Worms, Stadt&quot;,&quot;Zweibrücken, Stadt&quot;,&quot;Alzey-Worms&quot;,&quot;Bad Dürkheim&quot;,&quot;Donnersbergkreis&quot;,&quot;Germersheim&quot;,&quot;Kaiserslautern&quot;,&quot;Kusel&quot;,&quot;Südliche Weinstraße&quot;,&quot;Rhein-Pfalz-Kreis&quot;,&quot;Mainz-Bingen&quot;,&quot;Südwestpfalz&quot;,&quot;Saarbrücken, Regionalverband&quot;,&quot;Merzig-Wadern&quot;,&quot;Neunkirchen&quot;,&quot;Saarlouis&quot;,&quot;Saarpfalz-Kreis&quot;,&quot;St. Wendel&quot;,&quot;Chemnitz, Stadt&quot;,&quot;Erzgebirgskreis&quot;,&quot;Mittelsachsen&quot;,&quot;Vogtlandkreis&quot;,&quot;Zwickau&quot;,&quot;Dresden, Stadt&quot;,&quot;Bautzen&quot;,&quot;Görlitz&quot;,&quot;Meißen&quot;,&quot;Sächsische Schweiz-Osterzgebirge&quot;,&quot;Leipzig, Stadt&quot;,&quot;Leipzig&quot;,&quot;Nordsachsen&quot;,&quot;Dessau-Roßlau, Stadt&quot;,&quot;Halle (Saale), Stadt&quot;,&quot;Magdeburg, Stadt&quot;,&quot;Altmarkkreis Salzwedel&quot;,&quot;Anhalt-Bitterfeld&quot;,&quot;Börde&quot;,&quot;Burgenlandkreis&quot;,&quot;Harz&quot;,&quot;Jerichower Land&quot;,&quot;Mansfeld-Südharz&quot;,&quot;Saalekreis&quot;,&quot;Salzlandkreis&quot;,&quot;Stendal&quot;,&quot;Wittenberg&quot;,&quot;Flensburg, Stadt&quot;,&quot;Kiel, Stadt&quot;,&quot;Lübeck, Stadt&quot;,&quot;Neumünster, Stadt&quot;,&quot;Dithmarschen&quot;,&quot;Herzogtum Lauenburg&quot;,&quot;Nordfriesland&quot;,&quot;Ostholstein&quot;,&quot;Pinneberg&quot;,&quot;Plön&quot;,&quot;Rendsburg-Eckernförde&quot;,&quot;Schleswig-Flensburg&quot;,&quot;Segeberg&quot;,&quot;Steinburg&quot;,&quot;Stormarn&quot;,&quot;Erfurt, Stadt&quot;,&quot;Gera, Stadt&quot;,&quot;Jena, Stadt&quot;,&quot;Suhl, Stadt&quot;,&quot;Weimar, Stadt&quot;,&quot;Eisenach, Stadt&quot;,&quot;Eichsfeld&quot;,&quot;Nordhausen&quot;,&quot;Wartburgkreis&quot;,&quot;Unstrut-Hainich-Kreis&quot;,&quot;Kyffhäuserkreis&quot;,&quot;Schmalkalden-Meiningen&quot;,&quot;Gotha&quot;,&quot;Sömmerda&quot;,&quot;Hildburghausen&quot;,&quot;Ilm-Kreis&quot;,&quot;Weimarer Land&quot;,&quot;Sonneberg&quot;,&quot;Saalfeld-Rudolstadt&quot;,&quot;Saale-Holzland-Kreis&quot;,&quot;Saale-Orla-Kreis&quot;,&quot;Greiz&quot;,&quot;Altenburger Land&quot;,&quot;&quot;]},&quot;title&quot;:&quot;County&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;All-day care provision for 0 to 2-year-old children&quot;,&quot;All-day care provision for 3 to 5-year-old children&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;federal state&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Wuerttemberg&quot;,&quot;Bavaria&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hesse&quot;,&quot;Mecklenburg Western Pomerania&quot;,&quot;Lower Saxony&quot;,&quot;North Rhine-Westphalia&quot;,&quot;Rhineland Palatinate&quot;,&quot;Saarland&quot;,&quot;Saxony&quot;,&quot;Saxony-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thuringia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Federal state&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;county&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Stuttgart, Stadt&quot;,&quot;Böblingen&quot;,&quot;Esslingen&quot;,&quot;Göppingen&quot;,&quot;Ludwigsburg&quot;,&quot;Rems-Murr-Kreis&quot;,&quot;Heilbronn, Stadt&quot;,&quot;Heilbronn&quot;,&quot;Hohenlohekreis&quot;,&quot;Schwäbisch Hall&quot;,&quot;Main-Tauber-Kreis&quot;,&quot;Heidenheim&quot;,&quot;Ostalbkreis&quot;,&quot;Baden-Baden, Stadt&quot;,&quot;Karlsruhe, Stadt&quot;,&quot;Karlsruhe&quot;,&quot;Rastatt&quot;,&quot;Heidelberg, Stadt&quot;,&quot;Mannheim, Stadt&quot;,&quot;Neckar-Odenwald-Kreis&quot;,&quot;Rhein-Neckar-Kreis&quot;,&quot;Pforzheim, Stadt&quot;,&quot;Calw&quot;,&quot;Enzkreis&quot;,&quot;Freudenstadt&quot;,&quot;Freiburg im Breisgau, Stadt&quot;,&quot;Breisgau-Hochschwarzwald&quot;,&quot;Emmendingen&quot;,&quot;Ortenaukreis&quot;,&quot;Rottweil&quot;,&quot;Schwarzwald-Baar-Kreis&quot;,&quot;Tuttlingen&quot;,&quot;Konstanz&quot;,&quot;Lörrach&quot;,&quot;Waldshut&quot;,&quot;Reutlingen&quot;,&quot;Tübingen&quot;,&quot;Zollernalbkreis&quot;,&quot;Ulm, Stadt&quot;,&quot;Alb-Donau-Kreis&quot;,&quot;Biberach&quot;,&quot;Bodenseekreis&quot;,&quot;Ravensburg&quot;,&quot;Sigmaringen&quot;,&quot;Ingolstadt, Stadt&quot;,&quot;München, Stadt&quot;,&quot;Rosenheim, Stadt&quot;,&quot;Altötting&quot;,&quot;Berchtesgadener Land&quot;,&quot;Bad Tölz-Wolfratshausen&quot;,&quot;Dachau&quot;,&quot;Ebersberg&quot;,&quot;Eichstätt&quot;,&quot;Erding&quot;,&quot;Freising&quot;,&quot;Fürstenfeldbruck&quot;,&quot;Garmisch-Partenkirchen&quot;,&quot;Landsberg am Lech&quot;,&quot;Miesbach&quot;,&quot;Mühldorf am Inn&quot;,&quot;München&quot;,&quot;Neuburg-Schrobenhausen&quot;,&quot;Pfaffenhofen an der Ilm&quot;,&quot;Rosenheim&quot;,&quot;Starnberg&quot;,&quot;Traunstein&quot;,&quot;Weilheim-Schongau&quot;,&quot;Landshut, Stadt&quot;,&quot;Passau, Stadt&quot;,&quot;Straubing, Stadt&quot;,&quot;Deggendorf&quot;,&quot;Freyung-Grafenau&quot;,&quot;Kelheim&quot;,&quot;Landshut&quot;,&quot;Passau&quot;,&quot;Regen&quot;,&quot;Rottal-Inn&quot;,&quot;Straubing-Bogen&quot;,&quot;Dingolfing-Landau&quot;,&quot;Amberg, Stadt&quot;,&quot;Regensburg, Stadt&quot;,&quot;Weiden in der Oberpfalz, Stadt&quot;,&quot;Amberg-Sulzbach&quot;,&quot;Cham&quot;,&quot;Neumarkt in der Oberpfalz&quot;,&quot;Neustadt an der Waldnaab&quot;,&quot;Regensburg&quot;,&quot;Schwandorf&quot;,&quot;Tirschenreuth&quot;,&quot;Bamberg, Stadt&quot;,&quot;Bayreuth, Stadt&quot;,&quot;Coburg, Stadt&quot;,&quot;Hof, Stadt&quot;,&quot;Bamberg&quot;,&quot;Bayreuth&quot;,&quot;Coburg&quot;,&quot;Forchheim&quot;,&quot;Hof&quot;,&quot;Kronach&quot;,&quot;Kulmbach&quot;,&quot;Lichtenfels&quot;,&quot;Wunsiedel im Fichtelgebirge&quot;,&quot;Ansbach, Stadt&quot;,&quot;Erlangen, Stadt&quot;,&quot;Fürth, Stadt&quot;,&quot;Nürnberg, Stadt&quot;,&quot;Schwabach, Stadt&quot;,&quot;Ansbach&quot;,&quot;Erlangen-Höchstadt&quot;,&quot;Fürth&quot;,&quot;Nürnberger Land&quot;,&quot;Neustadt an der Aisch-Bad Windsheim&quot;,&quot;Roth&quot;,&quot;Weißenburg-Gunzenhausen&quot;,&quot;Aschaffenburg, Stadt&quot;,&quot;Schweinfurt, Stadt&quot;,&quot;Würzburg, Stadt&quot;,&quot;Aschaffenburg&quot;,&quot;Bad Kissingen&quot;,&quot;Rhön-Grabfeld&quot;,&quot;Haßberge&quot;,&quot;Kitzingen&quot;,&quot;Miltenberg&quot;,&quot;Main-Spessart&quot;,&quot;Schweinfurt&quot;,&quot;Würzburg&quot;,&quot;Augsburg, Stadt&quot;,&quot;Kaufbeuren, Stadt&quot;,&quot;Kempten (Allgäu), Stadt&quot;,&quot;Memmingen, Stadt&quot;,&quot;Aichach-Friedberg&quot;,&quot;Augsburg&quot;,&quot;Dillingen an der Donau&quot;,&quot;Günzburg&quot;,&quot;Neu-Ulm&quot;,&quot;Lindau (Bodensee)&quot;,&quot;Ostallgäu&quot;,&quot;Unterallgäu&quot;,&quot;Donau-Ries&quot;,&quot;Oberallgäu&quot;,&quot;Berlin, Stadt&quot;,&quot;Brandenburg an der Havel, Stadt&quot;,&quot;Cottbus, Stadt&quot;,&quot;Frankfurt (Oder), Stadt&quot;,&quot;Potsdam, Stadt&quot;,&quot;Barnim&quot;,&quot;Dahme-Spreewald&quot;,&quot;Elbe-Elster&quot;,&quot;Havelland&quot;,&quot;Märkisch-Oderland&quot;,&quot;Oberhavel&quot;,&quot;Oberspreewald-Lausitz&quot;,&quot;Oder-Spree&quot;,&quot;Ostprignitz-Ruppin&quot;,&quot;Potsdam-Mittelmark&quot;,&quot;Prignitz&quot;,&quot;Spree-Neiße&quot;,&quot;Teltow-Fläming&quot;,&quot;Uckermark&quot;,&quot;Bremen, Stadt&quot;,&quot;Bremerhaven, Stadt&quot;,&quot;Hamburg&quot;,&quot;Darmstadt, Stadt&quot;,&quot;Frankfurt am Main, Stadt&quot;,&quot;Offenbach am Main, Stadt&quot;,&quot;Wiesbaden, Stadt&quot;,&quot;Bergstraße&quot;,&quot;Darmstadt-Dieburg&quot;,&quot;Groß-Gerau&quot;,&quot;Hochtaunuskreis&quot;,&quot;Main-Kinzig-Kreis&quot;,&quot;Main-Taunus-Kreis&quot;,&quot;Odenwaldkreis&quot;,&quot;Offenbach&quot;,&quot;Rheingau-Taunus-Kreis&quot;,&quot;Wetteraukreis&quot;,&quot;Gießen&quot;,&quot;Lahn-Dill-Kreis&quot;,&quot;Limburg-Weilburg&quot;,&quot;Marburg-Biedenkopf&quot;,&quot;Vogelsbergkreis&quot;,&quot;Kassel, Stadt&quot;,&quot;Fulda&quot;,&quot;Hersfeld-Rotenburg&quot;,&quot;Kassel&quot;,&quot;Schwalm-Eder-Kreis&quot;,&quot;Waldeck-Frankenberg&quot;,&quot;Werra-Meißner-Kreis&quot;,&quot;Rostock, Stadt&quot;,&quot;Schwerin, Stadt&quot;,&quot;Mecklenburgische Seenplatte&quot;,&quot;Rostock&quot;,&quot;Vorpommern-Rügen&quot;,&quot;Nordwestmecklenburg&quot;,&quot;Vorpommern-Greifswald&quot;,&quot;Ludwigslust-Parchim&quot;,&quot;Braunschweig, Stadt&quot;,&quot;Salzgitter, Stadt&quot;,&quot;Wolfsburg, Stadt&quot;,&quot;Gifhorn&quot;,&quot;Goslar&quot;,&quot;Helmstedt&quot;,&quot;Northeim&quot;,&quot;Osterode am Harz&quot;,&quot;Peine&quot;,&quot;Wolfenbüttel&quot;,&quot;Göttingen&quot;,&quot;Region Hannover&quot;,&quot;Diepholz&quot;,&quot;Hameln-Pyrmont&quot;,&quot;Hildesheim&quot;,&quot;Holzminden&quot;,&quot;Nienburg (Weser)&quot;,&quot;Schaumburg&quot;,&quot;Celle&quot;,&quot;Cuxhaven&quot;,&quot;Harburg&quot;,&quot;Lüchow-Dannenberg&quot;,&quot;Lüneburg&quot;,&quot;Osterholz&quot;,&quot;Rotenburg (Wümme)&quot;,&quot;Heidekreis&quot;,&quot;Stade&quot;,&quot;Uelzen&quot;,&quot;Verden&quot;,&quot;Delmenhorst, Stadt&quot;,&quot;Emden, Stadt&quot;,&quot;Oldenburg (Oldenburg), Stadt&quot;,&quot;Osnabrück, Stadt&quot;,&quot;Wilhelmshaven, Stadt&quot;,&quot;Ammerland&quot;,&quot;Aurich&quot;,&quot;Cloppenburg&quot;,&quot;Emsland&quot;,&quot;Friesland&quot;,&quot;Grafschaft Bentheim&quot;,&quot;Leer&quot;,&quot;Oldenburg&quot;,&quot;Osnabrück&quot;,&quot;Vechta&quot;,&quot;Wesermarsch&quot;,&quot;Wittmund&quot;,&quot;Düsseldorf, Stadt&quot;,&quot;Duisburg, Stadt&quot;,&quot;Essen, Stadt&quot;,&quot;Krefeld, Stadt&quot;,&quot;Mönchengladbach, Stadt&quot;,&quot;Mülheim an der Ruhr, Stadt&quot;,&quot;Oberhausen, Stadt&quot;,&quot;Remscheid, Stadt&quot;,&quot;Solingen, Stadt&quot;,&quot;Wuppertal, Stadt&quot;,&quot;Kleve&quot;,&quot;Mettmann&quot;,&quot;Rhein-Kreis Neuss&quot;,&quot;Viersen&quot;,&quot;Wesel&quot;,&quot;Bonn, Stadt&quot;,&quot;Köln, Stadt&quot;,&quot;Leverkusen, Stadt&quot;,&quot;Städteregion Aachen&quot;,&quot;Düren&quot;,&quot;Rhein-Erft-Kreis&quot;,&quot;Euskirchen&quot;,&quot;Heinsberg&quot;,&quot;Oberbergischer Kreis&quot;,&quot;Rheinisch-Bergischer Kreis&quot;,&quot;Rhein-Sieg-Kreis&quot;,&quot;Bottrop, Stadt&quot;,&quot;Gelsenkirchen, Stadt&quot;,&quot;Münster, Stadt&quot;,&quot;Borken&quot;,&quot;Coesfeld&quot;,&quot;Recklinghausen&quot;,&quot;Steinfurt&quot;,&quot;Warendorf&quot;,&quot;Bielefeld, Stadt&quot;,&quot;Gütersloh&quot;,&quot;Herford&quot;,&quot;Höxter&quot;,&quot;Lippe&quot;,&quot;Minden-Lübbecke&quot;,&quot;Paderborn&quot;,&quot;Bochum, Stadt&quot;,&quot;Dortmund, Stadt&quot;,&quot;Hagen, Stadt&quot;,&quot;Hamm, Stadt&quot;,&quot;Herne, Stadt&quot;,&quot;Ennepe-Ruhr-Kreis&quot;,&quot;Hochsauerlandkreis&quot;,&quot;Märkischer Kreis&quot;,&quot;Olpe&quot;,&quot;Siegen-Wittgenstein&quot;,&quot;Soest&quot;,&quot;Unna&quot;,&quot;Koblenz, Stadt&quot;,&quot;Ahrweiler&quot;,&quot;Altenkirchen (Westerwald)&quot;,&quot;Bad Kreuznach&quot;,&quot;Birkenfeld&quot;,&quot;Cochem-Zell&quot;,&quot;Mayen-Koblenz&quot;,&quot;Neuwied&quot;,&quot;Rhein-Hunsrück-Kreis&quot;,&quot;Rhein-Lahn-Kreis&quot;,&quot;Westerwaldkreis&quot;,&quot;Trier, Stadt&quot;,&quot;Bernkastel-Wittlich&quot;,&quot;Eifelkreis Bitburg-Prüm&quot;,&quot;Vulkaneifel&quot;,&quot;Trier-Saarburg&quot;,&quot;Frankenthal (Pfalz), Stadt&quot;,&quot;Kaiserslautern, Stadt&quot;,&quot;Landau in der Pfalz, Stadt&quot;,&quot;Ludwigshafen am Rhein, Stadt&quot;,&quot;Mainz, Stadt&quot;,&quot;Neustadt an der Weinstraße, Stadt&quot;,&quot;Pirmasens, Stadt&quot;,&quot;Speyer, Stadt&quot;,&quot;Worms, Stadt&quot;,&quot;Zweibrücken, Stadt&quot;,&quot;Alzey-Worms&quot;,&quot;Bad Dürkheim&quot;,&quot;Donnersbergkreis&quot;,&quot;Germersheim&quot;,&quot;Kaiserslautern&quot;,&quot;Kusel&quot;,&quot;Südliche Weinstraße&quot;,&quot;Rhein-Pfalz-Kreis&quot;,&quot;Mainz-Bingen&quot;,&quot;Südwestpfalz&quot;,&quot;Saarbrücken, Regionalverband&quot;,&quot;Merzig-Wadern&quot;,&quot;Neunkirchen&quot;,&quot;Saarlouis&quot;,&quot;Saarpfalz-Kreis&quot;,&quot;St. Wendel&quot;,&quot;Chemnitz, Stadt&quot;,&quot;Erzgebirgskreis&quot;,&quot;Mittelsachsen&quot;,&quot;Vogtlandkreis&quot;,&quot;Zwickau&quot;,&quot;Dresden, Stadt&quot;,&quot;Bautzen&quot;,&quot;Görlitz&quot;,&quot;Meißen&quot;,&quot;Sächsische Schweiz-Osterzgebirge&quot;,&quot;Leipzig, Stadt&quot;,&quot;Leipzig&quot;,&quot;Nordsachsen&quot;,&quot;Dessau-Roßlau, Stadt&quot;,&quot;Halle (Saale), Stadt&quot;,&quot;Magdeburg, Stadt&quot;,&quot;Altmarkkreis Salzwedel&quot;,&quot;Anhalt-Bitterfeld&quot;,&quot;Börde&quot;,&quot;Burgenlandkreis&quot;,&quot;Harz&quot;,&quot;Jerichower Land&quot;,&quot;Mansfeld-Südharz&quot;,&quot;Saalekreis&quot;,&quot;Salzlandkreis&quot;,&quot;Stendal&quot;,&quot;Wittenberg&quot;,&quot;Flensburg, Stadt&quot;,&quot;Kiel, Stadt&quot;,&quot;Lübeck, Stadt&quot;,&quot;Neumünster, Stadt&quot;,&quot;Dithmarschen&quot;,&quot;Herzogtum Lauenburg&quot;,&quot;Nordfriesland&quot;,&quot;Ostholstein&quot;,&quot;Pinneberg&quot;,&quot;Plön&quot;,&quot;Rendsburg-Eckernförde&quot;,&quot;Schleswig-Flensburg&quot;,&quot;Segeberg&quot;,&quot;Steinburg&quot;,&quot;Stormarn&quot;,&quot;Erfurt, Stadt&quot;,&quot;Gera, Stadt&quot;,&quot;Jena, Stadt&quot;,&quot;Suhl, Stadt&quot;,&quot;Weimar, Stadt&quot;,&quot;Eisenach, Stadt&quot;,&quot;Eichsfeld&quot;,&quot;Nordhausen&quot;,&quot;Wartburgkreis&quot;,&quot;Unstrut-Hainich-Kreis&quot;,&quot;Kyffhäuserkreis&quot;,&quot;Schmalkalden-Meiningen&quot;,&quot;Gotha&quot;,&quot;Sömmerda&quot;,&quot;Hildburghausen&quot;,&quot;Ilm-Kreis&quot;,&quot;Weimarer Land&quot;,&quot;Sonneberg&quot;,&quot;Saalfeld-Rudolstadt&quot;,&quot;Saale-Holzland-Kreis&quot;,&quot;Saale-Orla-Kreis&quot;,&quot;Greiz&quot;,&quot;Altenburger Land&quot;,&quot;&quot;]},&quot;title&quot;:&quot;County&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
   data-graphstepsize="[{&quot;step&quot;:10.0}]"
@@ -584,7 +583,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2006.0</td>
+          <td>2006</td>
           
           
           
@@ -608,7 +607,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2007.0</td>
+          <td>2007</td>
           
           
           
@@ -632,7 +631,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2008.0</td>
+          <td>2008</td>
           
           
           
@@ -656,7 +655,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2009.0</td>
+          <td>2009</td>
           
           
           
@@ -680,7 +679,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2010.0</td>
+          <td>2010</td>
           
           
           
@@ -704,7 +703,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2011.0</td>
+          <td>2011</td>
           
           
           
@@ -728,7 +727,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2012.0</td>
+          <td>2012</td>
           
           
           
@@ -752,7 +751,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2013.0</td>
+          <td>2013</td>
           
           
           
@@ -776,7 +775,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2014.0</td>
+          <td>2014</td>
           
           
           
@@ -800,7 +799,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2015.0</td>
+          <td>2015</td>
           
           
           
@@ -824,7 +823,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2016.0</td>
+          <td>2016</td>
           
           
           
@@ -848,7 +847,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2017.0</td>
+          <td>2017</td>
           
           
           
@@ -872,7 +871,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2018.0</td>
+          <td>2018</td>
           
           
           
@@ -896,7 +895,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2019.0</td>
+          <td>2019</td>
           
           
           
@@ -920,7 +919,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2020.0</td>
+          <td>2020</td>
           
           
           
@@ -944,7 +943,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2021.0</td>
+          <td>2021</td>
           
           
           
@@ -968,7 +967,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2022.0</td>
+          <td>2022</td>
           
           
           
@@ -992,418 +991,10 @@ data-event-label="high"
         <tr>
           
           
-          <td>2006.0</td>
+          <td>2030</td>
           
           
           
-          <td>5.87</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2007.0</td>
-          
-          
-          
-          <td>6.521</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2008.0</td>
-          
-          
-          
-          <td>7.313</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2009.0</td>
-          
-          
-          
-          <td>8.669</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2010.0</td>
-          
-          
-          
-          <td>10.167</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011.0</td>
-          
-          
-          
-          <td>11.344</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012.0</td>
-          
-          
-          
-          <td>12.745</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2013.0</td>
-          
-          
-          
-          <td>13.718</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014.0</td>
-          
-          
-          
-          <td>15.306</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015.0</td>
-          
-          
-          
-          <td>15.919</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016.0</td>
-          
-          
-          
-          <td>16.158</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2017.0</td>
-          
-          
-          
-          <td>16.231</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018.0</td>
-          
-          
-          
-          <td>16.528</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019.0</td>
-          
-          
-          
-          <td>16.914</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020.0</td>
-          
-          
-          
-          <td>17.096</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2021.0</td>
-          
-          
-          
-          <td>16.461</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2030.0</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 0 to 2-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020.0</td>
-          
-          
-          
           <td></td>
           
           
@@ -1424,7 +1015,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1448,7 +1039,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1472,7 +1063,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1496,7 +1087,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1520,7 +1111,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1544,7 +1135,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1568,7 +1159,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1592,7 +1183,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1616,7 +1207,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1640,7 +1231,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1664,7 +1255,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1688,7 +1279,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1712,7 +1303,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1736,7 +1327,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1760,7 +1351,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1784,7 +1375,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1808,7 +1399,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1832,7 +1423,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1856,7 +1447,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1880,7 +1471,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1904,7 +1495,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1928,7 +1519,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1952,7 +1543,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -1976,7 +1567,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2000,7 +1591,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2024,7 +1615,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2048,7 +1639,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2072,7 +1663,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2096,7 +1687,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2120,7 +1711,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2144,7 +1735,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2168,7 +1759,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2192,7 +1783,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2216,7 +1807,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2240,7 +1831,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2264,7 +1855,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2288,7 +1879,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2312,7 +1903,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2336,7 +1927,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2360,7 +1951,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2384,7 +1975,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2408,7 +1999,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2432,7 +2023,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2456,7 +2047,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2480,7 +2071,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2504,7 +2095,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2528,7 +2119,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2552,7 +2143,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2576,7 +2167,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2600,7 +2191,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2624,7 +2215,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2648,7 +2239,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2672,7 +2263,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2696,7 +2287,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2720,7 +2311,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2744,7 +2335,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2768,7 +2359,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2792,7 +2383,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2816,7 +2407,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2840,7 +2431,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2864,7 +2455,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2888,7 +2479,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2912,7 +2503,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2936,7 +2527,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2960,7 +2551,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -2984,7 +2575,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3008,7 +2599,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3032,7 +2623,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3056,7 +2647,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3080,7 +2671,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3104,7 +2695,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3128,7 +2719,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3152,7 +2743,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3176,7 +2767,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3200,7 +2791,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3224,7 +2815,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3248,7 +2839,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3272,7 +2863,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3296,7 +2887,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3320,7 +2911,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3344,7 +2935,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3368,7 +2959,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3392,7 +2983,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3416,7 +3007,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3440,7 +3031,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3464,7 +3055,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3488,7 +3079,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3512,7 +3103,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3536,7 +3127,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3560,7 +3151,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3584,7 +3175,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3608,7 +3199,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3632,7 +3223,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3656,7 +3247,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3680,7 +3271,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3704,7 +3295,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3728,7 +3319,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3752,7 +3343,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3776,7 +3367,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3800,7 +3391,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3824,7 +3415,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3848,7 +3439,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3872,7 +3463,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3896,7 +3487,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3920,7 +3511,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3944,7 +3535,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3968,7 +3559,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -3992,7 +3583,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4016,7 +3607,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4040,7 +3631,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4064,7 +3655,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4088,7 +3679,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4112,7 +3703,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4136,7 +3727,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4160,7 +3751,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4184,7 +3775,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4208,7 +3799,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4232,7 +3823,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4256,7 +3847,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4280,7 +3871,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4304,7 +3895,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4328,7 +3919,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4352,7 +3943,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4376,7 +3967,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4400,7 +3991,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4424,7 +4015,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4448,7 +4039,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4472,7 +4063,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4496,7 +4087,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4520,7 +4111,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4544,7 +4135,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4568,7 +4159,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4592,7 +4183,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4616,7 +4207,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4640,7 +4231,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4664,7 +4255,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4688,7 +4279,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4712,7 +4303,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4736,7 +4327,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4760,7 +4351,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4784,7 +4375,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4808,7 +4399,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4832,7 +4423,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4856,7 +4447,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4880,7 +4471,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4904,7 +4495,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4928,7 +4519,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4952,7 +4543,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -4976,7 +4567,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5000,7 +4591,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5024,7 +4615,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5048,7 +4639,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5072,7 +4663,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5096,7 +4687,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5120,7 +4711,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5144,7 +4735,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5168,7 +4759,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5192,7 +4783,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5216,7 +4807,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5240,7 +4831,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5264,7 +4855,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5288,7 +4879,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5312,7 +4903,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5336,7 +4927,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5360,7 +4951,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5384,7 +4975,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5408,7 +4999,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5432,7 +5023,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5456,7 +5047,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5480,7 +5071,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5504,7 +5095,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5528,7 +5119,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5552,7 +5143,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5576,7 +5167,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5600,7 +5191,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5624,7 +5215,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5648,7 +5239,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5672,7 +5263,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5696,7 +5287,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5720,7 +5311,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5744,7 +5335,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5768,7 +5359,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5792,7 +5383,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5816,7 +5407,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5840,7 +5431,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5864,7 +5455,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5888,7 +5479,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5912,7 +5503,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5936,7 +5527,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5960,7 +5551,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -5984,7 +5575,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6008,7 +5599,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6032,7 +5623,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6056,7 +5647,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6080,7 +5671,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6104,7 +5695,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6128,7 +5719,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6152,7 +5743,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6176,7 +5767,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6200,7 +5791,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6224,7 +5815,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6248,7 +5839,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6272,7 +5863,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6296,7 +5887,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6320,7 +5911,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6344,7 +5935,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6368,7 +5959,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6392,7 +5983,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6416,7 +6007,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6440,7 +6031,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6464,7 +6055,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6488,7 +6079,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6512,7 +6103,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6536,7 +6127,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6560,7 +6151,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6584,7 +6175,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6608,7 +6199,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6632,7 +6223,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6656,7 +6247,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6680,7 +6271,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6704,7 +6295,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6728,7 +6319,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6752,7 +6343,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6776,7 +6367,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6800,7 +6391,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6824,7 +6415,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6848,7 +6439,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6872,7 +6463,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6896,7 +6487,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6920,7 +6511,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6944,7 +6535,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6968,7 +6559,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -6992,7 +6583,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7016,7 +6607,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7040,7 +6631,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7064,7 +6655,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7088,7 +6679,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7112,7 +6703,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7136,7 +6727,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7160,7 +6751,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7184,7 +6775,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7208,7 +6799,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7232,7 +6823,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7256,7 +6847,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7280,7 +6871,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7304,7 +6895,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7328,7 +6919,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7352,7 +6943,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7376,7 +6967,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7400,7 +6991,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7424,7 +7015,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7448,7 +7039,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7472,7 +7063,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7496,7 +7087,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7520,7 +7111,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7544,7 +7135,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7568,7 +7159,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7592,7 +7183,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7616,7 +7207,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7640,7 +7231,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7664,7 +7255,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7688,7 +7279,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7712,7 +7303,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7736,7 +7327,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7760,7 +7351,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7784,7 +7375,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7808,7 +7399,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7832,7 +7423,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7856,7 +7447,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7880,7 +7471,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7904,7 +7495,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7928,7 +7519,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7952,7 +7543,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -7976,7 +7567,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8000,7 +7591,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8024,7 +7615,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8048,7 +7639,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8072,7 +7663,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8096,7 +7687,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8120,7 +7711,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8144,7 +7735,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8168,7 +7759,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8192,7 +7783,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8216,7 +7807,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8240,7 +7831,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8264,7 +7855,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8288,7 +7879,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8312,7 +7903,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8336,7 +7927,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8360,7 +7951,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8384,7 +7975,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8408,7 +7999,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8432,7 +8023,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8456,7 +8047,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8480,7 +8071,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8504,7 +8095,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8528,7 +8119,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8552,7 +8143,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8576,7 +8167,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8600,7 +8191,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8624,7 +8215,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8648,7 +8239,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8672,7 +8263,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8696,7 +8287,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8720,7 +8311,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8744,7 +8335,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8768,7 +8359,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8792,7 +8383,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8816,7 +8407,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8840,7 +8431,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8864,7 +8455,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8888,7 +8479,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8912,7 +8503,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8936,7 +8527,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8960,7 +8551,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -8984,7 +8575,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9008,7 +8599,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9032,7 +8623,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9056,7 +8647,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9080,7 +8671,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9104,7 +8695,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9128,7 +8719,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9152,7 +8743,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9176,7 +8767,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9200,7 +8791,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9224,7 +8815,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9248,7 +8839,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9272,7 +8863,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9296,7 +8887,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9320,7 +8911,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9344,7 +8935,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9368,7 +8959,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9392,7 +8983,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9416,7 +9007,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9440,7 +9031,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9464,7 +9055,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9488,7 +9079,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9512,7 +9103,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9536,7 +9127,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9560,7 +9151,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9584,7 +9175,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9608,7 +9199,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9632,7 +9223,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9656,7 +9247,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9680,7 +9271,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9704,7 +9295,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9728,7 +9319,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9752,7 +9343,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9776,7 +9367,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9800,7 +9391,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9824,7 +9415,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9848,7 +9439,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9872,7 +9463,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9896,7 +9487,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9920,7 +9511,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9944,7 +9535,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9968,7 +9559,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -9992,7 +9583,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10016,7 +9607,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10040,7 +9631,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10064,7 +9655,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10088,7 +9679,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10112,7 +9703,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10136,7 +9727,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10160,7 +9751,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10184,7 +9775,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10208,7 +9799,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10232,7 +9823,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10256,7 +9847,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10280,7 +9871,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10304,7 +9895,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10328,7 +9919,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10352,7 +9943,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10376,7 +9967,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10400,7 +9991,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10424,7 +10015,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10448,7 +10039,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10472,7 +10063,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10496,7 +10087,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10520,7 +10111,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10544,7 +10135,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10568,7 +10159,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10592,7 +10183,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10616,7 +10207,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10640,7 +10231,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10664,7 +10255,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10688,7 +10279,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10712,7 +10303,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10736,7 +10327,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10760,7 +10351,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10784,7 +10375,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10808,7 +10399,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10832,7 +10423,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10856,7 +10447,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10880,7 +10471,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10904,7 +10495,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10928,7 +10519,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10952,7 +10543,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -10976,7 +10567,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11000,7 +10591,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11024,7 +10615,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11048,7 +10639,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11072,7 +10663,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11096,7 +10687,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11120,7 +10711,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11144,7 +10735,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11168,7 +10759,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11192,7 +10783,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11216,7 +10807,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11240,7 +10831,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11264,7 +10855,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11288,7 +10879,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11312,7 +10903,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11336,7 +10927,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11360,7 +10951,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11384,7 +10975,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11408,7 +10999,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11432,7 +11023,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -11456,7 +11047,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2006.0</td>
+          <td>2006</td>
           
           
           
@@ -11480,7 +11071,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2007.0</td>
+          <td>2007</td>
           
           
           
@@ -11504,7 +11095,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2008.0</td>
+          <td>2008</td>
           
           
           
@@ -11528,7 +11119,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2009.0</td>
+          <td>2009</td>
           
           
           
@@ -11552,7 +11143,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2010.0</td>
+          <td>2010</td>
           
           
           
@@ -11576,7 +11167,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2011.0</td>
+          <td>2011</td>
           
           
           
@@ -11600,7 +11191,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2012.0</td>
+          <td>2012</td>
           
           
           
@@ -11624,7 +11215,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2013.0</td>
+          <td>2013</td>
           
           
           
@@ -11648,7 +11239,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2014.0</td>
+          <td>2014</td>
           
           
           
@@ -11672,7 +11263,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2015.0</td>
+          <td>2015</td>
           
           
           
@@ -11696,7 +11287,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2016.0</td>
+          <td>2016</td>
           
           
           
@@ -11720,7 +11311,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2017.0</td>
+          <td>2017</td>
           
           
           
@@ -11744,7 +11335,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2018.0</td>
+          <td>2018</td>
           
           
           
@@ -11768,7 +11359,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2019.0</td>
+          <td>2019</td>
           
           
           
@@ -11792,7 +11383,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2020.0</td>
+          <td>2020</td>
           
           
           
@@ -11816,7 +11407,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2021.0</td>
+          <td>2021</td>
           
           
           
@@ -11840,7 +11431,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2022.0</td>
+          <td>2022</td>
           
           
           
@@ -11864,418 +11455,10 @@ data-event-label="high"
         <tr>
           
           
-          <td>2006.0</td>
+          <td>2030</td>
           
           
           
-          <td>21.963</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2007.0</td>
-          
-          
-          
-          <td>24.189</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2008.0</td>
-          
-          
-          
-          <td>26.896</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2009.0</td>
-          
-          
-          
-          <td>29.696</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2010.0</td>
-          
-          
-          
-          <td>32.138</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011.0</td>
-          
-          
-          
-          <td>34.672</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012.0</td>
-          
-          
-          
-          <td>36.847</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2013.0</td>
-          
-          
-          
-          <td>39.05</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014.0</td>
-          
-          
-          
-          <td>41.428</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015.0</td>
-          
-          
-          
-          <td>44.136</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016.0</td>
-          
-          
-          
-          <td>44.49</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2017.0</td>
-          
-          
-          
-          <td>45.239</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018.0</td>
-          
-          
-          
-          <td>45.838</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019.0</td>
-          
-          
-          
-          <td>46.871</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020.0</td>
-          
-          
-          
-          <td>47.553</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2021.0</td>
-          
-          
-          
-          <td>46.934</td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2030.0</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td>Percentage</td>
-          
-          
-          
-          <td>All-day care provision for 3 to 5-year-old children</td>
-          
-          
-          
-          <td class="table-value"></td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020.0</td>
-          
-          
-          
           <td></td>
           
           
@@ -12296,7 +11479,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12320,7 +11503,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12344,7 +11527,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12368,7 +11551,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12392,7 +11575,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12416,7 +11599,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12440,7 +11623,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12464,7 +11647,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12488,7 +11671,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12512,7 +11695,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12536,7 +11719,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12560,7 +11743,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12584,7 +11767,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12608,7 +11791,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12632,7 +11815,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12656,7 +11839,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12680,7 +11863,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12704,7 +11887,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12728,7 +11911,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12752,7 +11935,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12776,7 +11959,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12800,7 +11983,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12824,7 +12007,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12848,7 +12031,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12872,7 +12055,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12896,7 +12079,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12920,7 +12103,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12944,7 +12127,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12968,7 +12151,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -12992,7 +12175,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13016,7 +12199,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13040,7 +12223,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13064,7 +12247,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13088,7 +12271,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13112,7 +12295,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13136,7 +12319,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13160,7 +12343,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13184,7 +12367,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13208,7 +12391,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13232,7 +12415,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13256,7 +12439,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13280,7 +12463,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13304,7 +12487,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13328,7 +12511,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13352,7 +12535,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13376,7 +12559,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13400,7 +12583,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13424,7 +12607,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13448,7 +12631,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13472,7 +12655,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13496,7 +12679,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13520,7 +12703,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13544,7 +12727,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13568,7 +12751,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13592,7 +12775,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13616,7 +12799,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13640,7 +12823,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13664,7 +12847,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13688,7 +12871,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13712,7 +12895,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13736,7 +12919,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13760,7 +12943,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13784,7 +12967,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13808,7 +12991,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13832,7 +13015,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13856,7 +13039,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13880,7 +13063,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13904,7 +13087,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13928,7 +13111,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13952,7 +13135,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -13976,7 +13159,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14000,7 +13183,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14024,7 +13207,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14048,7 +13231,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14072,7 +13255,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14096,7 +13279,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14120,7 +13303,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14144,7 +13327,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14168,7 +13351,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14192,7 +13375,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14216,7 +13399,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14240,7 +13423,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14264,7 +13447,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14288,7 +13471,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14312,7 +13495,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14336,7 +13519,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14360,7 +13543,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14384,7 +13567,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14408,7 +13591,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14432,7 +13615,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14456,7 +13639,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14480,7 +13663,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14504,7 +13687,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14528,7 +13711,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14552,7 +13735,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14576,7 +13759,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14600,7 +13783,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14624,7 +13807,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14648,7 +13831,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14672,7 +13855,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14696,7 +13879,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14720,7 +13903,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14744,7 +13927,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14768,7 +13951,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14792,7 +13975,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14816,7 +13999,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14840,7 +14023,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14864,7 +14047,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14888,7 +14071,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14912,7 +14095,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14936,7 +14119,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14960,7 +14143,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -14984,7 +14167,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15008,7 +14191,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15032,7 +14215,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15056,7 +14239,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15080,7 +14263,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15104,7 +14287,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15128,7 +14311,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15152,7 +14335,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15176,7 +14359,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15200,7 +14383,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15224,7 +14407,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15248,7 +14431,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15272,7 +14455,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15296,7 +14479,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15320,7 +14503,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15344,7 +14527,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15368,7 +14551,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15392,7 +14575,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15416,7 +14599,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15440,7 +14623,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15464,7 +14647,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15488,7 +14671,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15512,7 +14695,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15536,7 +14719,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15560,7 +14743,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15584,7 +14767,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15608,7 +14791,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15632,7 +14815,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15656,7 +14839,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15680,7 +14863,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15704,7 +14887,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15728,7 +14911,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15752,7 +14935,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15776,7 +14959,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15800,7 +14983,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15824,7 +15007,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15848,7 +15031,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15872,7 +15055,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15896,7 +15079,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15920,7 +15103,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15944,7 +15127,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15968,7 +15151,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -15992,7 +15175,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16016,7 +15199,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16040,7 +15223,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16064,7 +15247,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16088,7 +15271,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16112,7 +15295,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16136,7 +15319,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16160,7 +15343,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16184,7 +15367,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16208,7 +15391,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16232,7 +15415,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16256,7 +15439,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16280,7 +15463,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16304,7 +15487,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16328,7 +15511,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16352,7 +15535,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16376,7 +15559,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16400,7 +15583,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16424,7 +15607,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16448,7 +15631,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16472,7 +15655,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16496,7 +15679,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16520,7 +15703,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16544,7 +15727,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16568,7 +15751,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16592,7 +15775,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16616,7 +15799,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16640,7 +15823,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16664,7 +15847,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16688,7 +15871,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16712,7 +15895,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16736,7 +15919,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16760,7 +15943,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16784,7 +15967,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16808,7 +15991,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16832,7 +16015,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16856,7 +16039,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16880,7 +16063,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16904,7 +16087,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16928,7 +16111,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16952,7 +16135,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -16976,7 +16159,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17000,7 +16183,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17024,7 +16207,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17048,7 +16231,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17072,7 +16255,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17096,7 +16279,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17120,7 +16303,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17144,7 +16327,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17168,7 +16351,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17192,7 +16375,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17216,7 +16399,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17240,7 +16423,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17264,7 +16447,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17288,7 +16471,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17312,7 +16495,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17336,7 +16519,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17360,7 +16543,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17384,7 +16567,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17408,7 +16591,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17432,7 +16615,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17456,7 +16639,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17480,7 +16663,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17504,7 +16687,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17528,7 +16711,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17552,7 +16735,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17576,7 +16759,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17600,7 +16783,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17624,7 +16807,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17648,7 +16831,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17672,7 +16855,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17696,7 +16879,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17720,7 +16903,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17744,7 +16927,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17768,7 +16951,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17792,7 +16975,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17816,7 +16999,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17840,7 +17023,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17864,7 +17047,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17888,7 +17071,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17912,7 +17095,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17936,7 +17119,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17960,7 +17143,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -17984,7 +17167,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18008,7 +17191,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18032,7 +17215,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18056,7 +17239,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18080,7 +17263,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18104,7 +17287,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18128,7 +17311,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18152,7 +17335,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18176,7 +17359,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18200,7 +17383,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18224,7 +17407,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18248,7 +17431,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18272,7 +17455,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18296,7 +17479,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18320,7 +17503,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18344,7 +17527,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18368,7 +17551,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18392,7 +17575,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18416,7 +17599,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18440,7 +17623,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18464,7 +17647,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18488,7 +17671,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18512,7 +17695,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18536,7 +17719,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18560,7 +17743,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18584,7 +17767,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18608,7 +17791,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18632,7 +17815,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18656,7 +17839,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18680,7 +17863,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18704,7 +17887,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18728,7 +17911,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18752,7 +17935,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18776,7 +17959,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18800,7 +17983,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18824,7 +18007,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18848,7 +18031,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18872,7 +18055,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18896,7 +18079,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18920,7 +18103,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18944,7 +18127,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18968,7 +18151,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -18992,7 +18175,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19016,7 +18199,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19040,7 +18223,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19064,7 +18247,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19088,7 +18271,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19112,7 +18295,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19136,7 +18319,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19160,7 +18343,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19184,7 +18367,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19208,7 +18391,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19232,7 +18415,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19256,7 +18439,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19280,7 +18463,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19304,7 +18487,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19328,7 +18511,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19352,7 +18535,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19376,7 +18559,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19400,7 +18583,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19424,7 +18607,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19448,7 +18631,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19472,7 +18655,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19496,7 +18679,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19520,7 +18703,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19544,7 +18727,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19568,7 +18751,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19592,7 +18775,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19616,7 +18799,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19640,7 +18823,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19664,7 +18847,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19688,7 +18871,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19712,7 +18895,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19736,7 +18919,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19760,7 +18943,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19784,7 +18967,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19808,7 +18991,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19832,7 +19015,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19856,7 +19039,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19880,7 +19063,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19904,7 +19087,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19928,7 +19111,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19952,7 +19135,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -19976,7 +19159,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20000,7 +19183,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20024,7 +19207,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20048,7 +19231,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20072,7 +19255,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20096,7 +19279,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20120,7 +19303,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20144,7 +19327,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20168,7 +19351,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20192,7 +19375,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20216,7 +19399,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20240,7 +19423,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20264,7 +19447,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20288,7 +19471,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20312,7 +19495,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20336,7 +19519,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20360,7 +19543,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20384,7 +19567,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20408,7 +19591,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20432,7 +19615,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20456,7 +19639,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20480,7 +19663,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20504,7 +19687,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20528,7 +19711,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20552,7 +19735,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20576,7 +19759,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20600,7 +19783,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20624,7 +19807,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20648,7 +19831,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20672,7 +19855,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20696,7 +19879,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20720,7 +19903,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20744,7 +19927,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20768,7 +19951,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20792,7 +19975,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20816,7 +19999,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20840,7 +20023,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20864,7 +20047,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20888,7 +20071,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20912,7 +20095,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20936,7 +20119,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20960,7 +20143,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -20984,7 +20167,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21008,7 +20191,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21032,7 +20215,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21056,7 +20239,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21080,7 +20263,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21104,7 +20287,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21128,7 +20311,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21152,7 +20335,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21176,7 +20359,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21200,7 +20383,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21224,7 +20407,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21248,7 +20431,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21272,7 +20455,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21296,7 +20479,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21320,7 +20503,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21344,7 +20527,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21368,7 +20551,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21392,7 +20575,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21416,7 +20599,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21440,7 +20623,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21464,7 +20647,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21488,7 +20671,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21512,7 +20695,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21536,7 +20719,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21560,7 +20743,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21584,7 +20767,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21608,7 +20791,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21632,7 +20815,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21656,7 +20839,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21680,7 +20863,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21704,7 +20887,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21728,7 +20911,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21752,7 +20935,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21776,7 +20959,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21800,7 +20983,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21824,7 +21007,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21848,7 +21031,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21872,7 +21055,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21896,7 +21079,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21920,7 +21103,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21944,7 +21127,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21968,7 +21151,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -21992,7 +21175,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22016,7 +21199,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22040,7 +21223,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22064,7 +21247,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22088,7 +21271,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22112,7 +21295,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22136,7 +21319,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22160,7 +21343,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22184,7 +21367,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22208,7 +21391,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22232,7 +21415,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22256,7 +21439,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22280,7 +21463,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -22304,7 +21487,7 @@ data-event-label="high"
         <tr>
           
           
-          <td>2030.0</td>
+          <td>2030</td>
           
           
           
@@ -28314,12 +27497,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20221106073056'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20221106075307'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20221106073056"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20221106075307"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
