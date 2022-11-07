@@ -76,7 +76,8 @@ opensdg.annotationPresets = {
         adjustScaleRange: true,
         drawTime: 'afterDatasetsDraw',
         type: 'point',
-        borderColor: 'transparent',
+        backgroundColor: 'white',
+        borderDash: [1,0],
         radius: 8,
     },
     target_label: {
@@ -87,10 +88,7 @@ opensdg.annotationPresets = {
         font: {
           size: 18
         },
-        callout: {
-            display: true,
-            side: 10
-        },
+        display: true,
     },
     target_labels: {
         type: 'label',
