@@ -2135,7 +2135,7 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoints) {
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoints, graphTargetLabels) {
   var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
   if (graphTargetLines) {
     annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
@@ -2148,6 +2148,9 @@ function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, gra
   }
   if (graphTargetPoints) {
     annotations = annotations.concat(getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries));
+  }
+  if (graphTargetLabels) {
+    annotations = annotations.concat(getGraphTargetLabels(graphTargetLabels, selectedUnit, selectedSeries));
   }
   return annotations;
 }
@@ -2192,6 +2195,20 @@ function getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries) {
     return targetPoint;
   });
 }
+
+/**
+ * @param {Array} graphTargetLabels Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphTargetLabels(graphTargetLabels, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphTargetLabels, selectedUnit, selectedSeries).map(function(targetLabel) {
+    targetLabel.preset = 'target_label';
+    return targetLabel;
+  });
+}
+
 
 /**
  * @param {Array} graphSeriesBreaks Objects containing 'unit' or 'series' or more
@@ -2847,6 +2864,7 @@ function getTimeSeriesAttributes(rows) {
   this.graphSeriesBreaks = options.graphSeriesBreaks;
   this.graphErrorBars = options.graphErrorBars;
   this.graphTargetPoints = options.graphTargetPoints;
+  this.graphTargetLabels = options.graphTargetLabels;
   this.indicatorDownloads = options.indicatorDownloads;
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
@@ -3144,7 +3162,7 @@ function getTimeSeriesAttributes(rows) {
       selectedSeries: this.selectedSeries,
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
-      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints),
+      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
@@ -4010,7 +4028,7 @@ opensdg.chartTypes.base = function(info) {
                 annotation.mode = 'horizontal';
             }
             // Provide the obscure scaleID properties on user's behalf.
-            if (!annotation.scaleID && annotation.type === 'line' && annotation.preset !== 'error_bar' && annotation.preset !== 'target_point') {
+            if (!annotation.scaleID && annotation.type === 'line' && annotation.preset !== 'error_bar' && annotation.preset !== 'target_point' && annotation.preset !== 'target_label') {
                 if (annotation.mode === 'horizontal') {
                     annotation.scaleID = 'y';
                 }
@@ -5088,6 +5106,7 @@ var indicatorInit = function () {
                         graphSeriesBreaks: domData.graphseriesbreaks,
                         graphErrorBars: domData.grapherrorbars,
                         graphTargetPoints: domData.graphtargetpoints,
+                        graphTargetLabels: domData.graphtargetlabels,
                         indicatorDownloads: domData.indicatordownloads,
                         dataSchema: domData.dataschema,
                         compositeBreakdownLabel: domData.compositebreakdownlabel,
