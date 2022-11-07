@@ -9,6 +9,11 @@ opensdg.chartTypes.line = function(info) {
                     intersect: false,
                 },
             },
+            layout: {
+              padding: {
+                right: 90,
+              },
+            },
         },
         plugins: [{
             beforeDatasetsDraw: function(chart) {
