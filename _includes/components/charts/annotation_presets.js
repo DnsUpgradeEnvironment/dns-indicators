@@ -79,4 +79,15 @@ opensdg.annotationPresets = {
         borderColor: 'transparent',
         radius: 8,
     },
+    target_label: {
+        adjustScaleRange: true,
+        drawTime: 'afterDatasetsDraw',
+        type: 'label',
+        borderColor: 'transparent',
+        color: 'black',
+        callout: {
+          display: true
+        },
+        radius: 8,
+    },
 };
