@@ -77,6 +77,7 @@ opensdg.annotationPresets = {
         drawTime: 'afterDatasetsDraw',
         type: 'point',
         backgroundColor: 'white',
+        borderWidth: 2,
         borderDash: [1,0],
         radius: 8,
     },
