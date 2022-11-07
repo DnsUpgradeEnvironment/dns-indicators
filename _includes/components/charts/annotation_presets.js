@@ -80,14 +80,16 @@ opensdg.annotationPresets = {
         radius: 8,
     },
     target_label: {
-        adjustScaleRange: true,
-        drawTime: 'afterDatasetsDraw',
         type: 'label',
-        borderColor: 'transparent',
-        color: 'black',
-        callout: {
-          display: true
+        backgroundColor: 'rgba(245,245,245)',
+        content: ['In this point of time,', 'something happened'],
+        textAlign: 'start',
+        font: {
+          size: 18
         },
-        radius: 8,
+        callout: {
+            display: true,
+            side: 10
+        },
     },
 };
