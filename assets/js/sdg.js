@@ -1896,7 +1896,7 @@ function selectFieldsFromStartValues(startValues, selectableFieldNames) {
   return Object.keys(valuesByField).map(function(field) {
     return {
       field: field,
-      values: valuesByField[field],
+      values: _.uniq(valuesByField[field]),
     };
   });
 }
@@ -3817,7 +3817,8 @@ function strToArray (str, limit) {
         adjustScaleRange: true,
         drawTime: 'afterDatasetsDraw',
         type: 'point',
-        borderColor: 'transparent',
+        backgroundColor: 'white',
+        borderDash: [1,0],
         radius: 8,
     },
     target_label: {
@@ -3828,10 +3829,7 @@ function strToArray (str, limit) {
         font: {
           size: 18
         },
-        callout: {
-            display: true,
-            side: 10
-        },
+        display: true,
     },
     target_labels: {
         type: 'label',
