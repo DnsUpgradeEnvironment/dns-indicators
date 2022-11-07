@@ -3817,7 +3817,7 @@ function strToArray (str, limit) {
         adjustScaleRange: true,
         drawTime: 'afterDatasetsDraw',
         type: 'point',
-        borderColor: 'red',
+        borderColor: 'transparent',
         radius: 8,
     },
     target_label: {
