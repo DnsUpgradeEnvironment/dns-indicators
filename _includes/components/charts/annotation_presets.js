@@ -81,7 +81,7 @@ opensdg.annotationPresets = {
     },
     target_label: {
         type: 'label',
-        backgroundColor: 'rgba(245,245,245)',
+        backgroundColor: 'rgba(50,100,245)',
         content: ['In this point of time,', 'something happened'],
         textAlign: 'start',
         font: {
