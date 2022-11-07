@@ -192,7 +192,7 @@ opensdg.chartTypes.base = function(info) {
                 annotation.mode = 'horizontal';
             }
             // Provide the obscure scaleID properties on user's behalf.
-            if (!annotation.scaleID && annotation.type === 'line' && annotation.preset !== 'error_bar' && annotation.preset !== 'target_point') {
+            if (!annotation.scaleID && annotation.type === 'line' && annotation.preset !== 'error_bar' && annotation.preset !== 'target_point' && annotation.preset !== 'target_label') {
                 if (annotation.mode === 'horizontal') {
                     annotation.scaleID = 'y';
                 }

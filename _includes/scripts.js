@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
-{% if page.indicator and (page.indicator.graph_annotations or page.indicator.graph_target_lines or page.indicator.graph_series_breaks or page.indicator.graph_error_bars or page.indicator.graph_target_points) %}
+{% if page.indicator and (page.indicator.graph_annotations or page.indicator.graph_target_lines or page.indicator.graph_series_breaks or page.indicator.graph_error_bars or page.indicator.graph_target_points or page.indicator.graph_target_labels) %}
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 {% endif %}
 {% if page.indicator and page.indicator.data_show_map %}
