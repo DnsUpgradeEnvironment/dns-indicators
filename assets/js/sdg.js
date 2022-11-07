@@ -3822,7 +3822,20 @@ function strToArray (str, limit) {
     },
     target_label: {
         type: 'label',
-        backgroundColor: 'rgba(245,245,245)',
+        backgroundColor: 'rgba(50,100,245)',
+        content: ['In this point of time,', 'something happened'],
+        textAlign: 'start',
+        font: {
+          size: 18
+        },
+        callout: {
+            display: true,
+            side: 10
+        },
+    },
+    target_labels: {
+        type: 'label',
+        backgroundColor: 'rgba(50,100,245)',
         content: ['In this point of time,', 'something happened'],
         textAlign: 'start',
         font: {
