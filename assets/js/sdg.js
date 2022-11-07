@@ -4093,6 +4093,11 @@ opensdg.chartTypes.base = function(info) {
                     intersect: false,
                 },
             },
+            layout: {
+              padding: {
+                right: 90,
+              },
+            },
         },
         plugins: [{
             beforeDatasetsDraw: function(chart) {
