@@ -3861,6 +3861,11 @@ opensdg.chartTypes.base = function(info) {
             labels: info.labels,
         },
         options: {
+            layout: {
+              padding: {
+                top: 5
+              }
+            },
             responsive: true,
             maintainAspectRatio: false,
             spanGaps: true,
