@@ -3860,7 +3860,7 @@ opensdg.chartTypes.base = function(info) {
                 top: 5
               }
             },
-            clip: {left: 5, top: 5, right: 5, bottom: 0},
+            clip: false,
             responsive: true,
             maintainAspectRatio: false,
             spanGaps: true,
