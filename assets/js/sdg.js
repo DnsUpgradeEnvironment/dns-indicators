@@ -3824,7 +3824,6 @@ function strToArray (str, limit) {
     },
     target_label: {
         type: 'label',
-        borderColor: transparent,
         content: ['In this point of time,', 'something happened'],
         textAlign: 'start',
         font: {
@@ -3834,7 +3833,6 @@ function strToArray (str, limit) {
     },
     target_labels: {
         type: 'label',
-        borderColor: transparent,
         content: ['In this point of time,', 'something happened'],
         textAlign: 'start',
         font: {
