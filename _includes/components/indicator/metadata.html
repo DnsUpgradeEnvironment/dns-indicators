@@ -114,7 +114,7 @@
               {% assign target_item_key = target_item_key | replace: '_c', '_d' %}
               {% assign target_item_valid_key = target_item_key | append: '_valid' %}
               {% if page.indicator[target_item_key] and page.indicator[target_item_valid_key] %}
-                {% assign item_d = target_item_key %}
+                {% assign item_d = page.indicator[target_item_key] %}
               {% endif %}
             {% endfor %}
           {% endif %}
