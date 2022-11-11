@@ -56,9 +56,6 @@
                       {% assign additional_cells = additional_cells | minus: 1 %}
                     {% endif %}
                   {% endfor %}
-                  {% if additional_cells == letters.size %}
-                    {% assign add = add | minus: 1 %}
-                  {% endif %}
 
                   <!--add empty cells-->
                   {% for empty_cell in (1..additional_cells) %}
@@ -122,10 +119,18 @@
                           {% else %}
                             <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
                           {% endif %}
+                          {% assign additional_cells = additional_cells | minus: 1 %}
                         {% elsif letter == 'a' %}
-                            <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
+                          <td width="10%" style="padding-left: 50px"> <div class=responsiveText {{ opacity }}>{{ page.t.weather.no_assessment }}</div> </td>
+                          {% assign additional_cells = additional_cells | minus: 1 %}
+                        {% else %}
+                          {% if empty_cell > 5 %}
+                            <td width="10%" align="center"></td>
+                          {% else %}
+                            <td width="10%" align="center"class="hidden-xs"></td>
+                          {% endif %}
                         {% endif %}
-                        {% assign additional_cells = additional_cells | minus: 1 %}
+
                       {% endfor %}
 
                       <!--add empty cells-->
