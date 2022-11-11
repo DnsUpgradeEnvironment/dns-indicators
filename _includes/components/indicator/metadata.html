@@ -89,9 +89,9 @@
         </tr>
       {% elsif indicator_metadata.name contains "item_a" %} <!--weather_indicator_1_target_1_item_a-->
         {% if indicator_metadata.name contains "_target_1" %} <!--Multiple targets-->
-          {% assign item_a = '' %}
-          {% assign item_b = '' %}
-          {% assign item_c = '' %}
+          {% assign item_a = 'x' %}
+          {% assign item_b = 'y' %}
+          {% assign item_c = 'z' %}
           {% assign item_d = '' %}
 
           {% for target in (1..8) %}
@@ -112,9 +112,9 @@
             {% endif %}
             {% assign target_item_key = target_item_key | replace: '_c', '_d' %}
             {% assign target_item_valid_key = target_item_key | append: '_valid' %}
-            {% if page.indicator[target_item_key] and page.indicator[target_item_valid_key] %}
-              {% assign item_d = page.indicator[target_item_key] %}
-            {% endif %}
+
+              {% assign item_d = target_item_key %}
+
           {% endfor %}
         {% endif %}
         {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_target_5" or indicator_metadata.name contains "_target_6" or indicator_metadata.name contains "_target_7" or indicator_metadata.name contains "_target_8" or indicator_metadata.name contains "_target_9"%}
