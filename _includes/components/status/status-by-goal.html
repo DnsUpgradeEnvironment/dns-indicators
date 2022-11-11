@@ -125,6 +125,7 @@
                         {% elsif letter == 'a' %}
                             <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
                         {% endif %}
+                        {% assign additional_cells = additional_cells | minus: 1 %}
                       {% endfor %}
 
                       <!--add empty cells-->
