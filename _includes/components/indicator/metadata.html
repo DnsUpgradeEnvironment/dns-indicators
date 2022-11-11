@@ -127,9 +127,7 @@
             <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
 
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <!--<a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_d }}.png" alt="{{  page.indicator[item_d] | markdownify }}" class="responsiveWeather" title="{{ page.indicator[title_d] }}" style="border: transparent"/></a>
-                -->
-                {{ item_d }}
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_d }}.png" alt="{{  item_d | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
               </td>
 
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
