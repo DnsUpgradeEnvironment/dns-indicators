@@ -41,6 +41,7 @@
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
                 <tr>
                   {% assign test_item_key = single_indicator_key | append:'_target_1_item_a' %}
+                  {% assign additional_cells_y = letters.size %}
                   {% if indicator[test_item_key] %}
                     <th> <div class=responsiveText>{{ page.t.weather.year }}</div> </th>
                   {% endif %}
@@ -53,12 +54,12 @@
                         <td width="10%" align="center"> <p><span class="responsiveText">{{ indicator[year_key] }}</span></p> </td>
                       {% endif %}
 
-                      {% assign additional_cells = additional_cells | minus: 1 %}
+                      {% assign additional_cells_y = additional_cells_y | minus: 1 %}
                     {% endif %}
                   {% endfor %}
 
                   <!--add empty cells-->
-                  {% for empty_cell in (1..additional_cells) %}
+                  {% for empty_cell in (1..additional_cells_y) %}
                     {% if empty_cell > 5 %}
                       <td width="10%" align="center"> </td>
                     {% else %}
@@ -72,7 +73,7 @@
                   {% assign target_key = single_indicator_key | append: "_target_"  | append: multi_target %}  <!--weather_indicator_2_target_1-->
                   {% assign target_category_key = target_key | append: "_category" %}  <!--weather_indicator_2_target_1_category-->
                   {% assign target_trans_key = indicator[target_category_key] | append: "_target" %} <!--normal_target-->
-                  {% assign additional_cells = letters.size %}
+                  {% assign additional_cells_i = letters.size %}
                   {% if indicator[target_key] %}
                     <tr>
                       <th>
@@ -96,6 +97,7 @@
                         {% assign item_key = target_key | append:'_item_' | append: letter %} <!--weather_indicator_2_target_1_item_a-->
                         {% assign title_key = item_key | append: '_title' %}
                         {% assign valid_key = item_key | append: '_valid' %}
+                        {% assign year_key = single_indicator_key | append:'_year_' | append: letter %} <!--weather_indicator_1_yaer_a-->
                         <!--check if year is valid or not-->
                         {% if indicator[valid_key] %}
                           {% assign opacity = '' %}
@@ -119,11 +121,12 @@
                           {% else %}
                             <td width="10%" align="center"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ indicator[item_key] }}" class="responsiveWeather" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
                           {% endif %}
-                          {% assign additional_cells = additional_cells | minus: 1 %}
+
+                          {% assign additional_cells_i  = additional_cells_i | minus: 1 %}
                         {% elsif letter == 'a' %}
                           <td width="10%" style="padding-left: 50px"> <div class=responsiveText {{ opacity }}>{{ page.t.weather.no_assessment }}</div> </td>
-                          {% assign additional_cells = additional_cells | minus: 1 %}
-                        {% else %}
+                          {% assign additional_cells_i  = additional_cells_i | minus: 1 %}
+                        {% elif indicator[year_key] %}
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
                             <td width="10%" align="center"class="hidden-xs">1</td>
                           {% else %}
@@ -134,7 +137,7 @@
                       {% endfor %}
 
                       <!--add empty cells-->
-                      {% for empty_cell in (1..additional_cells) %}
+                      {% for empty_cell in (1..additional_cells_i ) %}
                         {% if empty_cell > 5 %}
                           <td width="10%" align="center"></td>
                         {% else %}
