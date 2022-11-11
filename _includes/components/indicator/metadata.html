@@ -87,52 +87,37 @@
             <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
           </td>
         </tr>
-      {% elsif indicator_metadata.name contains "item_a" %}
+      {% elsif indicator_metadata.name contains "item_a" %} <!--weather_indicator_1_target_1_item_a-->
         {% if indicator_metadata.name contains "_target_1" %} <!--Multiple targets-->
           {% assign item_a = '' %}
           {% assign item_b = '' %}
           {% assign item_c = '' %}
           {% assign item_d = '' %}
-          {% assign year_a_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_a' %} <!--weather_indicator_(1...3)_year_a-->
-          {% assign year_b_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_b' %} <!--weather_indicator_(1...3)_year_b-->
-          {% assign year_c_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_c' %} <!--weather_indicator_(1...3)_year_c-->
-          {% assign year_d_key = indicator_metadata.name | replace: '_target_1','' | replace: '_old','' | replace: '_new','' | replace: 'item_a', 'year_d' %} <!--weather_indicator_(1...3)_year_d-->
 
-          {% for target in (1..4) %}
-            {% assign target_year_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_year' %} <!--weather_indicator_(1...3)_target_(1...4)_year-->
-            {% assign test_new_key = target_year_key | replace: '_year', '_new_year' %}
-            {% if page.indicator[test_new_key] %}
-              {% assign target_year_key = test_new_key %}
+          {% for target in (1..8) %}
+            {% assign target_item_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_item_a' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a-->
+            {% assign target_item_valid_key = target_item_key | append: '_valid' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_valid-->
+            {% if page.indicator[target_item_key] and page.indicator[target_item_valid_key] %}
+              {% assign item_a = page.indicator[target_item_key] %}
             {% endif %}
-
-            {% if page.indicator[target_year_key] %}
-              {% if item_a == '' and page.indicator[year_a_key] <= page.indicator[target_year_key] %}
-                {% assign item_a = target_year_key | replace: 'year', 'item_a' %}
-              {% endif %}
-              {% if item_b == '' and page.indicator[year_b_key] <= page.indicator[target_year_key] %}
-                {% assign item_b = target_year_key | replace: 'year', 'item_b' %}
-              {% endif %}
-              {% if item_c == '' and page.indicator[year_c_key] <= page.indicator[target_year_key] %}
-                {% assign item_c =  target_year_key | replace: 'year', 'item_c' %}
-              {% endif %}
-              {% if item_d == '' and page.indicator[year_d_key] <= page.indicator[target_year_key] %}
-                {% assign item_d =  target_year_key | replace: 'year', 'item_d' %}
-              {% endif %}
+            {% assign target_item_key = target_item_key | replace: '_a', '_b' %}
+            {% assign target_item_valid_key = target_item_key | append: '_valid' %}
+            {% if page.indicator[target_item_key] and page.indicator[target_item_valid_key] %}
+              {% assign item_b = page.indicator[target_item_key] %}
+            {% endif %}
+            {% assign target_item_key = target_item_key | replace: '_b', '_c' %}
+            {% assign target_item_valid_key = target_item_key | append: '_valid' %}
+            {% if page.indicator[target_item_key] and page.indicator[target_item_valid_key] %}
+              {% assign item_c = page.indicator[target_item_key] %}
+            {% endif %}
+            {% assign target_item_key = target_item_key | replace: '_c', '_d' %}
+            {% assign target_item_valid_key = target_item_key | append: '_valid' %}
+            {% if page.indicator[target_item_key] and page.indicator[target_item_valid_key] %}
+              {% assign item_d = page.indicator[target_item_key] %}
             {% endif %}
           {% endfor %}
-        {% else %} <!--Single target-->
-          {% unless indicator_metadata.name contains "_target_" or indicator_metadata.name contains "_old"%}
-            {% assign item_a = indicator_metadata.name %}
-            {% assign item_b = indicator_metadata.name | replace: '_a', '_b' %}
-            {% assign item_c = indicator_metadata.name | replace: '_a', '_c' %}
-            {% assign item_d = indicator_metadata.name | replace: '_a', '_d' %}
-            {% assign title_a = indicator_metadata.name | replace: 'item_a', 'item_a_title' %}
-            {% assign title_b = indicator_metadata.name | replace: 'item_a', 'item_b_title' %}
-            {% assign title_c = indicator_metadata.name | replace: 'item_a', 'item_c_title' %}
-            {% assign title_d = indicator_metadata.name | replace: 'item_a', 'item_d_title' %}
-          {% endunless %}
         {% endif %}
-        {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_old" %}
+        {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_target_5" or indicator_metadata.name contains "_target_6" or indicator_metadata.name contains "_target_7" or indicator_metadata.name contains "_target_8" or indicator_metadata.name contains "_target_9"%}
           <tr id="items">
             <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
             {% if page.indicator[item_d] %}
