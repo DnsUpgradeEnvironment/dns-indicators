@@ -59,7 +59,7 @@
                   {% endfor %}
 
                   <!--add empty cells-->
-                  {% for empty_cell in (1..additional_cells_y) %}
+                  {% for empty_cell in (0..additional_cells_y) %}
                     {% if empty_cell > 5 %}
                       <td width="10%" align="center">x</td>
                     {% else %}
