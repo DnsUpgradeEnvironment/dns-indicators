@@ -90,9 +90,9 @@
       {% elsif indicator_metadata.name contains "item_a" %} <!--weather_indicator_1_target_1_item_a-->
         {% unless indicator_metadata.name contains "item_a_" %}
           {% if indicator_metadata.name contains "_target_1" %} <!--Multiple targets-->
-            {% assign item_a = 'x' %}
-            {% assign item_b = 'y' %}
-            {% assign item_c = 'z' %}
+            {% assign item_a = '' %}
+            {% assign item_b = '' %}
+            {% assign item_c = '' %}
             {% assign item_d = '' %}
 
             {% for target in (1..8) %}
@@ -113,36 +113,37 @@
               {% endif %}
               {% assign target_item_key = target_item_key | replace: '_c', '_d' %}
               {% assign target_item_valid_key = target_item_key | append: '_valid' %}
-
+              {% if page.indicator[target_item_key] and page.indicator[target_item_valid_key] %}
                 {% assign item_d = target_item_key %}
-
+              {% endif %}
             {% endfor %}
           {% endif %}
         {% endunless %}
+
+        {% assign item_a = page.indicator['weather_indicator_1_target_1_item_a'} %}
+
         {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_target_5" or indicator_metadata.name contains "_target_6" or indicator_metadata.name contains "_target_7" or indicator_metadata.name contains "_target_8" or indicator_metadata.name contains "_target_9"%}
           <tr id="items">
             <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
-            <!--{% if page.indicator[item_d] %}-->
+
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
-                <!--<a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_d] }}.png" alt="{{  page.indicator[item_d] | markdownify }}" class="responsiveWeather" title="{{ page.indicator[title_d] }}" style="border: transparent"/></a>
-              -->{{ item_d }}</td>
-            <!--{% endif %}-->
-            <!--{% if page.indicator[item_c] %}-->
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ page.indicator[item_d] }}.png" alt="{{  page.indicator[item_d] | markdownify }}" class="responsiveWeather" title="{{ page.indicator[title_d] }}" style="border: transparent"/></a>
+              </td>
+
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
                 <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_c }}.png" alt="{{  item_c | markdownify }}" class="responsiveWeather"  style="border: transparent"/></a>
               </td>
-            <!--{% endif %}-->
-            <!--{% if page.indicator[item_b] %}-->
+
               <td align="left" style="padding-left: 0px;padding-right: 0px;">
                 <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_b }}.png" alt="{{  item_b | markdownify }}" class="responsiveWeather"  style="border: transparent"/></a>
               </td>
-            <!--{% endif %}-->
+
             <td align="left" style="padding-left: 0px;padding-right: 0px;">
-              <!--{% if page.indicator[item_a] and page.indicator[item_a] != '-' %}-->
+              {% if item_a != '' %}
                 <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_a }}.png" alt="{{ item_a | markdownify }}" class="responsiveWeather"  style="border: transparent"/></a>
-              <!--{% else %}
+              {% else %}
                 <p> {{ page.t.status.no_evaluation_possible }} </p>
-              {% endif %}-->
+              {% endif %}
             </td>
           </tr>
         {% endunless %}
