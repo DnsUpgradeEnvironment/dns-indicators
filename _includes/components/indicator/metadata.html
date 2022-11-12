@@ -100,7 +100,7 @@
               {% assign target_item_a_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_item_a' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a-->
               {% assign target_item_a_valid_key = target_item_a_key | append: '_valid' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_valid-->
               {% assign target_item_a_title_key = target_item_a_key | append: '_title' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_title-->
-              {% if page.indicator[target_item_a_key] and page.indicator[target_item_a_valid_key] %}
+              {% if page.indicator[target_item_a_key] != '' and page.indicator[target_item_a_valid_key] %}
                 {% assign item_a = page.indicator[target_item_a_key] %}
                 {% assign title_a =  page.indicator[target_item_a_title_key] %}
               {% endif %}
@@ -108,7 +108,7 @@
               {% assign target_item_b_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_item_b' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a-->
               {% assign target_item_b_valid_key = target_item_b_key | append: '_valid' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_valid-->
               {% assign target_item_b_title_key = target_item_b_key | append: '_title' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_title-->
-              {% if page.indicator[target_item_b_key] and page.indicator[target_item_b_valid_key] %}
+              {% if page.indicator[target_item_b_key] != '' and page.indicator[target_item_b_valid_key] %}
                 {% assign item_b = page.indicator[target_item_b_key] %}
                 {% assign title_b =  page.indicator[target_item_b_title_key] %}
               {% endif %}
@@ -116,7 +116,7 @@
               {% assign target_item_c_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_item_c' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a-->
               {% assign target_item_c_valid_key = target_item_c_key | append: '_valid' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_valid-->
               {% assign target_item_c_title_key = target_item_c_key | append: '_title' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_title-->
-              {% if page.indicator[target_item_c_key] and page.indicator[target_item_c_valid_key] %}
+              {% if page.indicator[target_item_c_key] != '' and page.indicator[target_item_c_valid_key] %}
                 {% assign item_c = page.indicator[target_item_c_key] %}
                 {% assign title_c =  page.indicator[target_item_c_title_key] %}
               {% endif %}
@@ -124,7 +124,7 @@
               {% assign target_item_d_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_item_d' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a-->
               {% assign target_item_d_valid_key = target_item_d_key | append: '_valid' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_valid-->
               {% assign target_item_d_title_key = target_item_d_key | append: '_title' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_title-->
-              {% if page.indicator[target_item_d_key] and page.indicator[target_item_d_valid_key] %}
+              {% if page.indicator[target_item_d_key] != '' and page.indicator[target_item_d_valid_key] %}
                 {% assign item_d = page.indicator[target_item_d_key] %}
                 {% assign title_d =  page.indicator[target_item_d_title_key] %}
               {% endif %}
