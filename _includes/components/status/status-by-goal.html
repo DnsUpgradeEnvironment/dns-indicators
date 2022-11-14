@@ -73,6 +73,7 @@
                   {% assign target_key = single_indicator_key | append: "_target_"  | append: multi_target %}  <!--weather_indicator_2_target_1-->
                   {% assign target_category_key = target_key | append: "_category" %}  <!--weather_indicator_2_target_1_category-->
                   {% assign target_trans_key = indicator[target_category_key] | append: "_target" %} <!--normal_target-->
+                  {% assign target_note_key = target_key | append: "_note" %}  <!--weather_indicator_2_target_1_note-->
                   {% assign additional_cells_i = letters.size %}
                   {% if indicator[target_key] %}
                     <tr>
@@ -145,6 +146,17 @@
                         {% endif %}
                       {% endfor %}
                     </tr>
+
+                    {% if indicator[target_note_key] %}
+                      <tr>
+                        <th>
+                          <div class=responsiveText>{{ page.t.weather[note] }}
+                          </div>
+                        </th>
+                        <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_note_key] }}</div> </td>
+                      </tr>
+                    {% endif %}
+  
                     <tr>
                       <th> <div></div> </th>
                       {% for empty_cell in (0..7) %}
