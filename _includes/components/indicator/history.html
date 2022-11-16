@@ -14,7 +14,7 @@
 
       {% for j in (1..8) %}
         {% assign tgt_category = "weather_indicator_" | append: i | append: '_target_' | append: j | append: '_category' %}
-        {% ifpage.indicator[tgt_category] and  page.indicator[tgt_category] != 'old' %}
+        {% if page.indicator[tgt_category] and  page.indicator[tgt_category] != 'old' %}
           {% assign has_valid_target = true %}
         {% endif %}
       {% endfor %}
