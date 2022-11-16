@@ -96,7 +96,7 @@
         {% endunless %}
       {% elsif indicator_metadata.name contains "item_a" %} <!--weather_indicator_1_target_1_item_a-->
         {% unless indicator_metadata.name contains "item_a_" %}
-          {% assign target_category_key = indicator_metadata.name | replace: 'item_a', 'target_1_category' %}
+          {% assign target_category_key = indicator_metadata.name | replace: 'item_a', 'category' %}
           {% unless page.indicator[target_category_key] == 'old' %}
             {% if indicator_metadata.name contains "_target_1" %} <!--Multiple targets-->
               {% assign item_a = '' %}
