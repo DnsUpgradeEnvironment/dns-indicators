@@ -136,7 +136,7 @@
                   {% assign title_d =  page.indicator[target_item_d_title_key] %}
                 {% endif %}
               {% endfor %}
-            {% endif %}}
+            {% endif %}
         {% endunless %}
         {% unless indicator_metadata.name contains "_target_2" or indicator_metadata.name contains "_target_3" or indicator_metadata.name contains "_target_4" or indicator_metadata.name contains "_target_5" or indicator_metadata.name contains "_target_6" or indicator_metadata.name contains "_target_7" or indicator_metadata.name contains "_target_8" or indicator_metadata.name contains "_target_9"%}
           {% assign target_category_key = indicator_metadata.name | replace: 'item_a', 'category' %}
