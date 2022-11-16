@@ -67,7 +67,7 @@
       {% endif %}
 
       {% if indicator_metadata.name contains "year_a" %}
-        {% assign target_category_key = indicator_metadata.name | replace: 'yera_a', 'target_1_category' %}
+        {% assign target_category_key = indicator_metadata.name | replace: 'year_a', 'target_1_category' %}
         {% unless page.indicator[target_category_key] == 'old' %}
           {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
           {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
