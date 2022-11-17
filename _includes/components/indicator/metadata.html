@@ -61,14 +61,14 @@
                   {{ page.indicator[indicator_metadata.name] | markdownify }}
                 </td>
               </tr>
-              {% assign test_year_key = indicator_metadata.name | append: '_year_a' %}
-              {% unless page.indicator[test_year_key] %}
-                <tr id="items">
-                  <td align="left" style="padding-left: 0px;padding-right: 0px;">
+              {% if indicator_metadata.name contains "_target"
+                {% assign test_year_key = indicator_metadata.name | append: '_year_a' %}
+                {% unless page.indicator[test_year_key] %}
+                  <tr id="items">
                     <p> {{ page.t.status.no_evaluation_possible }} </p>
-                  </td>
-                </tr>
-              {% endunless %}
+                  </tr>
+                {% endunless %}
+              {% endif %}
             {% endunless %}
           {% endunless %}
         {% endunless %}
