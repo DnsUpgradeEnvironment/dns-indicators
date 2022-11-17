@@ -70,6 +70,17 @@
               </td>
             </tr>
 
+            {% if indicator_metadata.name contains "_target" %}
+              {% assign test_year_key = target_category_key | replace: '_category', '_item_a' %}
+              {% unless page.indeicator[test_year_key] %}
+                <tr id="item">
+                  <td colspan="9">
+                    <p>{{ page.t.no_evaluation_possible }}</p>
+                  </td>
+                </tr>
+              {% endunless %}
+            {% endif %}
+
           {% endunless %}
         {% endunless %}
       {% endif %}
