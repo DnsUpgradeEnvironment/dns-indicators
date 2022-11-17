@@ -1,5 +1,5 @@
 ---
 layout: status_summary
-title: Status Summary
+title: Statusübersicht
 permalink: /status_summary/
 ---

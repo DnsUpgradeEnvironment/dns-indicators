@@ -1,6 +1,6 @@
 ---
 layout: status_summary
-title: Status Summary
+title: Status overview
 permalink: /en/status_summary/
 language: en
 ---
