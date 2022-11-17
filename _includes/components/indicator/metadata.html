@@ -55,9 +55,9 @@
           {% unless indicator_metadata.name contains '_target_' %}
             {% if indicator_metadata.name contains "_target" %}
               {% for t in (1..8) %}
-                {% assign t = indicator_metadata.name | append: '_' | append: t | append: '_category' %}
-                {% if page.indicator[t] and page.indicator != 'old' %}
-                  {% assign target_category_key = t %}
+                {% assign j = indicator_metadata.name | append: '_' | append: t | append: '_category' %}
+                {% if page.indicator[j] and page.indicator != 'old' %}
+                  {% assign valid_target = j | replace '_category', '' %}
                 {% endif %}
               {% endfor %}
             {% endif %}
@@ -70,22 +70,11 @@
               </td>
             </tr>
 
-            <!-- {% if indicator_metadata.name contains "_target" %}
-              {% assign test_year_key = target_category_key | replace: '_category', '_item_a' %}
-              {% unless page.indeicator[test_year_key] %}
-                <tr id="item">
-                  <td colspan="9">
-                    <p>{{ page.t.status.no_evaluation_possible }}</p>
-                  </td>
-                </tr>
-              {% endunless %}
-            {% endif %} -->
-
           {% endunless %}
         {% endunless %}
       {% endif %}
 
-      {% if indicator_metadata.name contains "year_a" %}
+      {% if indicator_metadata.name contains "year_a" and indicator_metadata.name contains valid_target %}
         {% unless page.indicator[target_category_key] == 'old' %}
           {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
           {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
