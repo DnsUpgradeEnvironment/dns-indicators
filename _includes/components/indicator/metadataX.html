@@ -61,7 +61,6 @@
                   {{ page.indicator[indicator_metadata.name] | markdownify }}
                 </td>
               </tr>
-              {% assign item_a = 'x' %}
             {% endunless %}
           {% endunless %}
         {% endunless %}
@@ -170,13 +169,6 @@
           {% endunless %}
         {% endunless %}
       {% endif %}
-
-      {% if item_a == 'x' %}
-      <tr id="items">
-        <p> {{ page.t.status.no_evaluation_possible }} </p>
-      </tr>
-      {% endif %}
-
 
     {% endif %}
   {% endfor %}
