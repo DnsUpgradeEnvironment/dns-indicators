@@ -129,7 +129,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20221117071155">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20221117103235">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -284,7 +284,7 @@ data-event-label="high"
             Status summary - Evaluation for Germany in previous years
         </h2>
         <div class="container">
-          In the overview table, the ratings of the indicators are given according to the status of the previous years. This shows whether the weather symbol for an indicator has been stable or rather volatile in the past years.<br> The basis for the assessments presented here is the data as published in the 2022 indicator report. The data on this platform is updated regularly, so that more current data may be available online than published in the indicator report.<br><br> <b>Indicators with multiple targets</b><br> For indicators with multiple targets to be met over time (e.g., indicator 7.1.b), the ratings for meeting each target are provided. The same applies to indicators with multiple targets to be met simultaneously (e.g., Indicator 10.1).<br><br> <b>Indicators with target changes and tightening</b><br> In addition to the currently valid goals of the federal government, the goals are presented that were valid in the past but have been changed and generally tightened in the meantime.<br><br> In grayed out form, all weather icons are displayed for destinations that are currently not valid, because<br> • the target has been changed and usually tightened in the past,<br> • a goal closer in time must be fulfilled first, or<br> • the target is only one of several targets to be fulfilled at the same time.<br><br>
+          In the overview table, the ratings of the indicators are given according to the status of the previous years. This shows whether the weather symbol for an indicator has been stable or rather volatile in the past years.<br> The basis for the assessments presented here is the data as published in the 2022 indicator report. The data on this platform is updated regularly, so that more current data may be available online than published in the indicator report.<br><br> <b>Indicators with multiple targets</b><br> For indicators with multiple targets to be met over time (e.g., indicator 7.1.b), the ratings for meeting each target are provided. The same applies to indicators with multiple targets to be met simultaneously (e.g., indicator 10.1).<br><br> <b>Indicators with target changes and tightening</b><br> In addition to the currently valid goals of the federal government, the goals are presented that were valid in the past but have been changed and generally tightened in the meantime.<br><br> In grayed out form, all weather icons are displayed for destinations that are currently not valid, because<br> • the target has been changed and usually tightened in the past,<br> • a goal closer in time must be fulfilled first, or<br> • the target is only one of several targets to be fulfilled at the same time.<br><br>
         </div>
     </div>
     <br style="clear:both;">
@@ -313,7 +313,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="1.1.a Material deprivation">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/1-1-ab"><div class=responsiveText>1.1.a Material deprivation</div></a> </th>
                 </tr>
@@ -648,7 +648,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="1.1.b Severe material deprivation">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/1-1-ab"><div class=responsiveText>1.1.b Severe material deprivation</div></a> </th>
                 </tr>
@@ -1010,7 +1010,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="2.1.a Nitrogen surplus in agriculture">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/2-1-a"><div class=responsiveText>2.1.a Nitrogen surplus in agriculture</div></a> </th>
                 </tr>
@@ -1365,7 +1365,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="2.1.b Organic farming">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/2-1-b"><div class=responsiveText>2.1.b Organic farming</div></a> </th>
                 </tr>
@@ -1908,7 +1908,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="2.2 Support for good governance in attaining appropriate nutrition world-wide">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/2-2"><div class=responsiveText>2.2 Support for good governance in attaining appropriate nutrition world-wide</div></a> </th>
                 </tr>
@@ -2242,7 +2242,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.1.a Premature mortality (women)">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-1-ab"><div class=responsiveText>3.1.a Premature mortality (women)</div></a> </th>
                 </tr>
@@ -2579,7 +2579,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.1.b Premature mortality (men)">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-1-ab"><div class=responsiveText>3.1.b Premature mortality (men)</div></a> </th>
                 </tr>
@@ -2926,7 +2926,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.1.c Smoking rate among adolescents">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-1-cd"><div class=responsiveText>3.1.c Smoking rate among adolescents</div></a> </th>
                 </tr>
@@ -3263,7 +3263,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.1.d Smoking rate among adults">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-1-cd"><div class=responsiveText>3.1.d Smoking rate among adults</div></a> </th>
                 </tr>
@@ -3585,7 +3585,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.1.e Obesity rate among children and adolescents">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-1-e"><div class=responsiveText>3.1.e Obesity rate among children and adolescents</div></a> </th>
                 </tr>
@@ -3902,7 +3902,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.1.f Obesity rate among adults">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-1-f"><div class=responsiveText>3.1.f Obesity rate among adults</div></a> </th>
                 </tr>
@@ -4233,7 +4233,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.2.a Emissions of air pollutants">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-2-a"><div class=responsiveText>3.2.a Emissions of air pollutants</div></a> </th>
                 </tr>
@@ -4588,7 +4588,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.2.b Share of the population with excessive exposure to PM₁₀">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-2-b"><div class=responsiveText>3.2.b Share of the population with excessive exposure to PM₁₀</div></a> </th>
                 </tr>
@@ -4944,7 +4944,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="3.3 Germany’s contribution to global pandemic prevention and response">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/3-3"><div class=responsiveText>3.3 Germany’s contribution to global pandemic prevention and response</div></a> </th>
                 </tr>
@@ -5291,7 +5291,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="4.1.a Early school leavers">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/4-1-a"><div class=responsiveText>4.1.a Early school leavers</div></a> </th>
                 </tr>
@@ -5831,7 +5831,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="4.1.b Persons with an academic or higher vocational qualification (30&nbsp;to 34-year-olds with a tertiary or post-secondary non-tertiary level of education)">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/4-1-b"><div class=responsiveText>4.1.b Persons with an academic or higher vocational qualification (30&nbsp;to 34-year-olds with a tertiary or post-secondary non-tertiary level of education)</div></a> </th>
                 </tr>
@@ -6372,7 +6372,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="4.2.a All-day care provision for 0&nbsp;to 2-year-old children">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/4-2-ab"><div class=responsiveText>4.2.a All-day care provision for 0&nbsp;to 2-year-old children</div></a> </th>
                 </tr>
@@ -6709,7 +6709,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="4.2.b All-day care provision for 3&nbsp;to 5-year-old children">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/4-2-ab"><div class=responsiveText>4.2.b All-day care provision for 3&nbsp;to 5-year-old children</div></a> </th>
                 </tr>
@@ -7253,7 +7253,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="5.1.a Gender pay gap">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/5-1-a"><div class=responsiveText>5.1.a Gender pay gap</div></a> </th>
                 </tr>
@@ -7775,7 +7775,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="5.1.b On supervisory boards of listed and fully co-determined companies">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/5-1-bc"><div class=responsiveText>5.1.b On supervisory boards of listed and fully co-determined companies</div></a> </th>
                 </tr>
@@ -8092,7 +8092,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="5.1.c In management positions in the federal civil service">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/5-1-bc"><div class=responsiveText>5.1.c In management positions in the federal civil service</div></a> </th>
                 </tr>
@@ -8424,7 +8424,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="5.1.d Proportion of fathers receiving parental allowance">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/5-1-d"><div class=responsiveText>5.1.d Proportion of fathers receiving parental allowance</div></a> </th>
                 </tr>
@@ -8780,7 +8780,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="5.1.e Vocational qualifications of women and girls through German development cooperation">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/5-1-e"><div class=responsiveText>5.1.e Vocational qualifications of women and girls through German development cooperation</div></a> </th>
                 </tr>
@@ -9114,7 +9114,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="6.1.a Phosphorous in flowing waters">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/6-1-a"><div class=responsiveText>6.1.a Phosphorous in flowing waters</div></a> </th>
                 </tr>
@@ -9469,7 +9469,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="6.1.b Nitrate in groundwater">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/6-1-b"><div class=responsiveText>6.1.b Nitrate in groundwater</div></a> </th>
                 </tr>
@@ -9825,7 +9825,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="6.2 Number of people gaining first-time or upgraded access to drinking water or sanitation owing to German support">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/6-2-ab"><div class=responsiveText>6.2 Number of people gaining first-time or upgraded access to drinking water or sanitation owing to German support</div></a> </th>
                 </tr>
@@ -10158,7 +10158,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="6.2.a Number of people gaining first-time or upgraded access to drinking water owing to German support">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/6-2-ab"><div class=responsiveText>6.2.a Number of people gaining first-time or upgraded access to drinking water owing to German support</div></a> </th>
                 </tr>
@@ -10460,7 +10460,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="6.2.b Number of people gaining first-time or improved access to sanitation owing to German support">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/6-2-ab"><div class=responsiveText>6.2.b Number of people gaining first-time or improved access to sanitation owing to German support</div></a> </th>
                 </tr>
@@ -10781,7 +10781,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="7.1.a Final energy productivity">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/7-1-ab"><div class=responsiveText>7.1.a Final energy productivity</div></a> </th>
                 </tr>
@@ -11118,7 +11118,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="7.1.b Primary energy consumption">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/7-1-ab"><div class=responsiveText>7.1.b Primary energy consumption</div></a> </th>
                 </tr>
@@ -11826,7 +11826,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="7.2.a Share of renewable energies in gross final energy consumption">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/7-2-a"><div class=responsiveText>7.2.a Share of renewable energies in gross final energy consumption</div></a> </th>
                 </tr>
@@ -12722,7 +12722,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="7.2.b Share of electricity from renewable energy sources in gross electricity consumption">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/7-2-b"><div class=responsiveText>7.2.b Share of electricity from renewable energy sources in gross electricity consumption</div></a> </th>
                 </tr>
@@ -14199,7 +14199,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.1 Raw material input productivity">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-1"><div class=responsiveText>8.1 Raw material input productivity</div></a> </th>
                 </tr>
@@ -14555,7 +14555,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.2.a Government deficit">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-2-ab"><div class=responsiveText>8.2.a Government deficit</div></a> </th>
                 </tr>
@@ -14892,7 +14892,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.2.b Structural deficit">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-2-ab"><div class=responsiveText>8.2.b Structural deficit</div></a> </th>
                 </tr>
@@ -15239,7 +15239,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.2.c Government debt">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-2-c"><div class=responsiveText>8.2.c Government debt</div></a> </th>
                 </tr>
@@ -15595,7 +15595,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.3 Gross fixed capital formation in relation to GDP">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-3"><div class=responsiveText>8.3 Gross fixed capital formation in relation to GDP</div></a> </th>
                 </tr>
@@ -15951,7 +15951,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.4 Gross domestic product per capita">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-4"><div class=responsiveText>8.4 Gross domestic product per capita</div></a> </th>
                 </tr>
@@ -16307,7 +16307,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.5.a Employment rate, total (20&nbsp;to 64-year-olds)">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-5-ab"><div class=responsiveText>8.5.a Employment rate, total (20&nbsp;to 64-year-olds)</div></a> </th>
                 </tr>
@@ -16644,7 +16644,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.5.b Employment rate, older people (60&nbsp;to 64-year-olds)">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-5-ab"><div class=responsiveText>8.5.b Employment rate, older people (60&nbsp;to 64-year-olds)</div></a> </th>
                 </tr>
@@ -16992,7 +16992,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="8.6 Members of the Textile Partnership">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/8-6"><div class=responsiveText>8.6 Members of the Textile Partnership</div></a> </th>
                 </tr>
@@ -17344,7 +17344,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="9.1.a Private and public expenditure on research and development">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/9-1-a"><div class=responsiveText>9.1.a Private and public expenditure on research and development</div></a> </th>
                 </tr>
@@ -17886,7 +17886,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="9.1.b Roll-out of broadband – share of households with access to gigabit broadband services">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/9-1-b"><div class=responsiveText>9.1.b Roll-out of broadband – share of households with access to gigabit broadband services</div></a> </th>
                 </tr>
@@ -18220,7 +18220,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="10.1 Foreign school graduates">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/10-1"><div class=responsiveText>10.1 Foreign school graduates</div></a> </th>
                 </tr>
@@ -18946,7 +18946,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="10.2 Gini coefficient of income after social transfers">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/10-2"><div class=responsiveText>10.2 Gini coefficient of income after social transfers</div></a> </th>
                 </tr>
@@ -19316,7 +19316,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.1.a Expansion of settlement and transport area in <abbr title="Hectare">ha</abbr> per day">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-1-a"><div class=responsiveText>11.1.a Expansion of settlement and transport area in <abbr title="Hectare">ha</abbr> per day</div></a> </th>
                 </tr>
@@ -19671,7 +19671,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.1.b Loss of open space area">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-1-b"><div class=responsiveText>11.1.b Loss of open space area</div></a> </th>
                 </tr>
@@ -20026,7 +20026,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.1.c Density of settlements">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-1-c"><div class=responsiveText>11.1.c Density of settlements</div></a> </th>
                 </tr>
@@ -20382,7 +20382,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.2.a Final energy consumption in goods transport">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-2-a"><div class=responsiveText>11.2.a Final energy consumption in goods transport</div></a> </th>
                 </tr>
@@ -20737,7 +20737,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.2.b Final energy consumption in passenger transport">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-2-b"><div class=responsiveText>11.2.b Final energy consumption in passenger transport</div></a> </th>
                 </tr>
@@ -20749,9 +20749,6 @@ data-event-label="high"
                   
                     <th> <div class=responsiveText>Year</div> </th>
                   
-                  
-                     <!--weather_indicator_1_yaer_a-->
-                    
                   
                      <!--weather_indicator_1_yaer_a-->
                     
@@ -20774,7 +20771,7 @@ data-event-label="high"
                      <!--weather_indicator_1_yaer_a-->
                     
                       
-                        <td width="10%" align="center"> <p><span class="responsiveText">2016</span></p> </td>
+                        <td width="10%" align="center" class="hidden-xs"> <p><span class="responsiveText hidden-xs">2016</span></p> </td>
                       
 
                       
@@ -20807,12 +20804,17 @@ data-event-label="high"
                       
                     
                   
+                     <!--weather_indicator_1_yaer_a-->
+                    
+                      
+                        <td width="10%" align="center"> <p><span class="responsiveText">2020</span></p> </td>
+                      
+
+                      
+                    
+                  
 
                   <!--add empty cells-->
-                  
-                    
-                      <td width="10%" align="center" class="hidden-xs"></td>
-                    
                   
                     
                       <td width="10%" align="center" class="hidden-xs"></td>
@@ -20840,16 +20842,6 @@ data-event-label="high"
                     <!-- ITEM !!!!!!!!!!!!!!!!-->
                     <tr>
                       <th> <div class=responsiveText>Status</div> </th>
-                      
-                         <!--weather_indicator_2_target_1_item_a-->
-                        
-                        
-                         <!--weather_indicator_1_yaer_a-->
-                        <!--check if year is valid or not-->
-                        
-
-                        
-
                       
                          <!--weather_indicator_2_target_1_item_a-->
                         
@@ -20896,7 +20888,7 @@ data-event-label="high"
                           
 
                           
-                            <td width="10%" align="center"> <a href=" /dns-indicators/en/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole//Blitz.png" alt="Blitz" class="responsiveWeather" title="In 2016 the distance to the target was constantly high or had increased. Thus, the indicator did not develop in the desired direction." /></a> </td>
+                            <td width="10%" align="center" class="hidden-xs"> <a href=" /dns-indicators/en/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole//Blitz.png" alt="" class="responsiveWeather hidden-xs" title="In 2016 the distance to the target was constantly high or had increased. Thus, the indicator did not develop in the desired direction." /></a> </td>
                           
                           
                         
@@ -20953,12 +20945,25 @@ data-event-label="high"
                         
 
                       
+                         <!--weather_indicator_2_target_1_item_a-->
+                        
+                        
+                         <!--weather_indicator_1_yaer_a-->
+                        <!--check if year is valid or not-->
+                        
+
+                        
+                          
+
+                          
+                            <td width="10%" align="center"> <a href=" /dns-indicators/en/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole//Sonne.png" alt="Sonne" class="responsiveWeather" title="If the trend from 2020 had continued, the target value would have been reached or missed by less than 5% of the difference between the target value and the value at that time." /></a> </td>
+                          
+                          
+                        
+
+                      
 
                       <!--add empty cells-->
-                      
-                        
-                          <td width="10%" align="center"class="hidden-xs"></td>
-                        
                       
                         
                           <td width="10%" align="center"class="hidden-xs"></td>
@@ -21087,7 +21092,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.2.c Accessibility of medium-sized and large cities by public transport">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-2-c"><div class=responsiveText>11.2.c Accessibility of medium-sized and large cities by public transport</div></a> </th>
                 </tr>
@@ -21405,7 +21410,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.3 Housing cost overload">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-3"><div class=responsiveText>11.3 Housing cost overload</div></a> </th>
                 </tr>
@@ -21759,7 +21764,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="11.4 Number of objects in the German Digital Library">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/11-4"><div class=responsiveText>11.4 Number of objects in the German Digital Library</div></a> </th>
                 </tr>
@@ -22131,7 +22136,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="12.1.a Market share of products certified by publicly managed eco-labelling schemes">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-1-a"><div class=responsiveText>12.1.a Market share of products certified by publicly managed eco-labelling schemes</div></a> </th>
                 </tr>
@@ -22466,9 +22471,9 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="12.1.ba Direct and indirect use of raw materials">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
-                  <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-1-b"><div class=responsiveText>12.1.ba Use of raw materials</div></a> </th>
+                  <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-1-b"><div class=responsiveText>12.1.ba Direct and indirect use of raw materials</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -22788,9 +22793,9 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="12.1.bb Direct and indirect energy consumption">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
-                  <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-1-b"><div class=responsiveText>12.1.bb Energy consumption</div></a> </th>
+                  <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-1-b"><div class=responsiveText>12.1.bb Direct and indirect energy consumption</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -23110,9 +23115,9 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="12.1.bc Direct and indirect <abbr title="Carbon dioxide">CO₂</abbr> emissions">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
-                  <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-1-b"><div class=responsiveText>12.1.bc CO₂ emissions</div></a> </th>
+                  <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-1-b"><div class=responsiveText>12.1.bc Direct and indirect <abbr title="Carbon dioxide">CO₂</abbr> emissions</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -23435,7 +23440,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="12.2 EMAS eco-management">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-2"><div class=responsiveText>12.2 EMAS eco-management</div></a> </th>
                 </tr>
@@ -23791,7 +23796,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="12.3.a Paper bearing the Blue Angel label as a proportion of the total paper consumption of the direct federal administration">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-3-ab"><div class=responsiveText>12.3.a Paper bearing the Blue Angel label as a proportion of the total paper consumption of the direct federal administration</div></a> </th>
                 </tr>
@@ -24098,7 +24103,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="12.3.b CO₂ emissions of commercially available vehicles in the public sector">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/12-3-ab"><div class=responsiveText>12.3.b CO₂ emissions of commercially available vehicles in the public sector</div></a> </th>
                 </tr>
@@ -24432,7 +24437,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="13.1.a Greenhouse gas emissions">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/13-1-a"><div class=responsiveText>13.1.a Greenhouse gas emissions</div></a> </th>
                 </tr>
@@ -26077,7 +26082,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="13.1.b International climate finance for the reduction of greenhouse gases and adaptation to climate change">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/13-1-b"><div class=responsiveText>13.1.b International climate finance for the reduction of greenhouse gases and adaptation to climate change</div></a> </th>
                 </tr>
@@ -26634,7 +26639,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="14.1.aa Nitrogen input in coastal and marine waters of the Baltic Sea">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/14-1-a"><div class=responsiveText>14.1.aa Nitrogen input in coastal and marine waters of the Baltic Sea</div></a> </th>
                 </tr>
@@ -26971,7 +26976,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="14.1.ab Nitrogen input in coastal and marine waters of the North Sea">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/14-1-a"><div class=responsiveText>14.1.ab Nitrogen input in coastal and marine waters of the North Sea</div></a> </th>
                 </tr>
@@ -27318,7 +27323,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="14.1.b Share of sustainably fished fish populations in the North Sea and Baltic">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/14-1-b"><div class=responsiveText>14.1.b Share of sustainably fished fish populations in the North Sea and Baltic</div></a> </th>
                 </tr>
@@ -27690,7 +27695,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="15.1 Biodiversity and landscape quality">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/15-1"><div class=responsiveText>15.1 Biodiversity and landscape quality</div></a> </th>
                 </tr>
@@ -28046,7 +28051,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="15.2 Eutrophication of ecosystems">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/15-2"><div class=responsiveText>15.2 Eutrophication of ecosystems</div></a> </th>
                 </tr>
@@ -28397,7 +28402,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="15.3.a Preservation or restoration of forests in developing countries under the <abbr title="Reducing emissions from deforestation and forest degradation and the role of conservation, sustainable management of forests and enhancement of forest carbon stocks in developing countries">REDD</abbr>+ rulebook">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/15-3-ab"><div class=responsiveText>15.3.a Preservation or restoration of forests in developing countries under the <abbr title="Reducing emissions from deforestation and forest degradation and the role of conservation, sustainable management of forests and enhancement of forest carbon stocks in developing countries">REDD</abbr>+ rulebook</div></a> </th>
                 </tr>
@@ -28734,7 +28739,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="15.3.b German gross bilateral development expenditure for the implementation of the <abbr title="United Nations">UN</abbr> Convention to Combat Desertification">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/15-3-ab"><div class=responsiveText>15.3.b German gross bilateral development expenditure for the implementation of the <abbr title="United Nations">UN</abbr> Convention to Combat Desertification</div></a> </th>
                 </tr>
@@ -29098,7 +29103,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="16.1 Criminal offences">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/16-1"><div class=responsiveText>16.1 Criminal offences</div></a> </th>
                 </tr>
@@ -29641,7 +29646,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="16.2 Number of projects to secure, register and destroy small arms and light weapons carried out by Germany in affected regions of the world">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/16-2"><div class=responsiveText>16.2 Number of projects to secure, register and destroy small arms and light weapons carried out by Germany in affected regions of the world</div></a> </th>
                 </tr>
@@ -29997,7 +30002,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="16.3.a Corruption Perceptions Index in Germany">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/16-3-ab"><div class=responsiveText>16.3.a Corruption Perceptions Index in Germany</div></a> </th>
                 </tr>
@@ -30324,7 +30329,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="16.3.b Number of partner countries involved in German development cooperation with improved <abbr title="Corruption Perception Index">CPI</abbr> scores compared with 2012">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/16-3-ab"><div class=responsiveText>16.3.b Number of partner countries involved in German development cooperation with improved <abbr title="Corruption Perception Index">CPI</abbr> scores compared with 2012</div></a> </th>
                 </tr>
@@ -30673,7 +30678,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="17.1 Official development assistance as a proportion of gross national income">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/17-1"><div class=responsiveText>17.1 Official development assistance as a proportion of gross national income</div></a> </th>
                 </tr>
@@ -31029,7 +31034,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="17.2 Number of students and researchers from developing countries and <abbr title="Least developed countries">LDCs</abbr> per year">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/17-2"><div class=responsiveText>17.2 Number of students and researchers from developing countries and <abbr title="Least developed countries">LDCs</abbr> per year</div></a> </th>
                 </tr>
@@ -31552,7 +31557,7 @@ data-event-label="high"
             
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr>
+                <tr id="17.3 Imports from least developed countries">
                   <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>Indicator</div> </th>
                   <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="/dns-indicators/en/17-3"><div class=responsiveText>17.3 Imports from least developed countries</div></a> </th>
                 </tr>
@@ -31965,12 +31970,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20221117071155'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20221117103235'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20221117071155"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20221117103235"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
