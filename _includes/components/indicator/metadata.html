@@ -61,7 +61,14 @@
                   {{ page.indicator[indicator_metadata.name] | markdownify }}
                 </td>
               </tr>
-              {% assign item_a = 'x' %}
+              {% assign test_year_key = indicator_metadata.name | append: '_year_a' %}
+              {% unless page.indicator[test_year_key] %}
+                <tr id="items">
+                  <td align="left" style="padding-left: 0px;padding-right: 0px;">
+                    <p> {{ page.t.status.no_evaluation_possible }} </p>
+                  </td>
+                </tr>
+              {% endunless %}
             {% endunless %}
           {% endunless %}
         {% endunless %}
@@ -170,13 +177,6 @@
           {% endunless %}
         {% endunless %}
       {% endif %}
-
-      {% if item_a == 'x' %}
-      <tr id="items">
-        <p> {{ page.t.status.no_evaluation_possible }} </p>
-      </tr>
-      {% endif %}
-
 
     {% endif %}
   {% endfor %}
