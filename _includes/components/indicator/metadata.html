@@ -70,7 +70,7 @@
               </td>
             </tr>
 
-            {% if indicator_metadata.name contains "_target" %}
+            <!-- {% if indicator_metadata.name contains "_target" %}
               {% assign test_year_key = target_category_key | replace: '_category', '_item_a' %}
               {% unless page.indeicator[test_year_key] %}
                 <tr id="item">
@@ -79,7 +79,7 @@
                   </td>
                 </tr>
               {% endunless %}
-            {% endif %}
+            {% endif %} -->
 
           {% endunless %}
         {% endunless %}
