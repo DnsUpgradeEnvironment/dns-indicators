@@ -53,22 +53,28 @@
       {% if indicator_metadata.name contains "weather_indicator" or indicator_metadata.name contains "_target" %}
         {% unless indicator_metadata.name contains "_year" or indicator_metadata.name contains "_item_" %}
           {% unless indicator_metadata.name contains '_target_' %}
-          {% assign target_category_key = indicator_metadata.name | append: '_target_1_category' %}
-            {% unless page.indicator[target_category_key] == 'old' %}
-              <tr id="indAndtarg">
-                <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
-                <td colspan="9">
-                  {{ page.indicator[indicator_metadata.name] | markdownify }}
-                </td>
-              </tr>
-              
-            {% endunless %}
+            {% if indicator_metadata.name contains "_target" %}
+              {% for t in (1..8) %}
+                {% assign t = indicator_metadata.name | append: '_' | append: t | append: '_category' %}
+                {% if page.indicator[t] and page.indicator != 'old' %}
+                  {% assign target_category_key = t %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+
+
+            <tr id="indAndtarg">
+              <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
+              <td colspan="9">
+                {{ page.indicator[indicator_metadata.name] | markdownify }}
+              </td>
+            </tr>
+
           {% endunless %}
         {% endunless %}
       {% endif %}
 
       {% if indicator_metadata.name contains "year_a" %}
-        {% assign target_category_key = indicator_metadata.name | replace: 'year_a', 'target_1_category' %}
         {% unless page.indicator[target_category_key] == 'old' %}
           {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
           {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
