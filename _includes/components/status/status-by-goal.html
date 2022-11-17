@@ -42,7 +42,7 @@
                 <tr>
                   {% assign test_item_key = single_indicator_key | append:'_target_1_item_a' %}
                   {% assign additional_cells_y = letters.size %}
-                  {% if indicator[test_item_key] %}
+                  {% if indicator[test_item_key] and indicator[test_item_key] != '' %}
                     <th> <div class=responsiveText>{{ page.t.weather.year }}</div> </th>
                   {% endif %}
                   {% for letter in letters %}
