@@ -39,8 +39,14 @@
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
-                {% assign test_item_key = single_indicator_key | append:'_target_1_item_a' %}
-                {% if indicator[test_item_key] and indicator[test_item_key] != '' %}
+
+                {% for multi_target in (1..8) %}
+                  {% assign test_item_key = single_indicator_key | append:'_target_' | append: multi_target | append: '_item_a' %}
+                  {% if indicator[test_item_key] and indicator[test_item_key] != '' %}
+                    {% assign has_years = true %}
+                  {% endif %}
+                {% endfor %}
+                {% if has_years %}
                   <tr>
                   {% assign additional_cells_y = letters.size %}
                     <th> <div class=responsiveText>{{ page.t.weather.year }}</div> </th>
