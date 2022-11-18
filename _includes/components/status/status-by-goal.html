@@ -44,7 +44,6 @@
                   <tr>
                   {% assign additional_cells_y = letters.size %}
                     <th> <div class=responsiveText>{{ page.t.weather.year }}</div> </th>
-                  {% endif %}
                   {% for letter in letters %}
                     {% assign year_key = single_indicator_key | append:'_year_' | append: letter %} <!--weather_indicator_1_yaer_a-->
                     {% if indicator[year_key] %}
@@ -58,6 +57,7 @@
                     {% endif %}
                   {% endfor %}
 
+
                   <!--add empty cells-->
                   {% for empty_cell in (0..additional_cells_y) %}
                     {% if empty_cell > 5 %}
@@ -66,7 +66,8 @@
                       <td width="10%" align="center" class="hidden-xs"></td>
                     {% endif %}
                   {% endfor %}
-                </tr>
+                  </tr>
+                {% endif %}
                 <!-- !!!!!!!!!!!!!!!!-->
 
                 {% for multi_target in (1..8) %}
