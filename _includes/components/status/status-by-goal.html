@@ -39,7 +39,7 @@
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
-
+                {% assign has_years = false %}
                 {% for multi_target in (1..8) %}
                   {% assign test_item_key = single_indicator_key | append:'_target_' | append: multi_target | append: '_item_a' %}
                   {% if indicator[test_item_key] and indicator[test_item_key] != '' %}
