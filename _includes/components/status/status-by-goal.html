@@ -125,7 +125,7 @@
                           {% endif %}
                           {% assign additional_cells_i  = additional_cells_i | minus: 1 %}
                         {% elsif letter == 'a' and additional_cells_i == letters.size %}
-                          <td width="10%" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment | replace: '<br>', '' }}</div> </td>
+                          <td style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
                           {% assign additional_cells_i  = additional_cells_i | minus: 1 %}
                         {% elsif indicator[year_key] %}
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
