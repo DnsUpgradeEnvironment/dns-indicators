@@ -65,29 +65,54 @@
       {% endif %}
 
       {% if indicator_metadata.name contains "year_a" %}
+
+        {% for multi_target in (1..8) %}
+          {% assign category_key = indicator_metadata.name | replace: 'year_a', 'target_' | append: multi_target | append: '_category' %}
+          {% unless page.indicator[category_key] == 'old' %}
+            {% assign valid_a_key = category_key | replace: '_category', '_item_a_valid' %}
+            {% if page.indicator[valid_a_key] %}
+              {% assign valid_a = page.indicator[valid_a_key] %}
+            {% endif %}
+            {% assign valid_b_key = category_key | replace: '_category', '_item_b_valid' %}
+            {% if page.indicator[valid_b_key] %}
+              {% assign valid_b = page.indicator[valid_b_key] %}
+            {% endif %}
+            {% assign valid_c_key = category_key | replace: '_category', '_item_c_valid' %}
+            {% if page.indicator[valid_c_key] %}
+              {% assign valid_c = page.indicator[valid_c_key] %}
+            {% endif %}
+            {% assign valid_d_key = category_key | replace: '_category', '_item_d_valid' %}
+            {% if page.indicator[valid_d_key] %}
+              {% assign valid_d = page.indicator[valid_d_key] %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+
         {% assign year_b = indicator_metadata.name | replace: '_a', '_b' %}
         {% assign year_c = indicator_metadata.name | replace: '_a', '_c' %}
         {% assign year_d = indicator_metadata.name | replace: '_a', '_d' %}
         <tr id="years">
           <th scope="row" style="padding-right: 10px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
-          {% if page.indicator[year_d] %}
+          {% if page.indicator[year_d] and valid_d %}
             <td align="left" style="margin-bottom: 15px;">
               <p>{{ page.indicator[year_d] | markdownify }}</p>
             </td>
           {% endif %}
-          {% if page.indicator[year_c] %}
+          {% if page.indicator[year_c] and valid_c %}
             <td align="left" style="margin-bottom: 15px;">
               <p>{{ page.indicator[year_c] | markdownify }}</p>
             </td>
           {% endif %}
-          {% if page.indicator[year_b] %}
+          {% if page.indicator[year_b] and valid_b %}
             <td align="left" style="margin-bottom: 15px;">
               <p>{{ page.indicator[year_b] | markdownify }}</p>
             </td>
           {% endif %}
-          <td align="left" style="margin-bottom: 15px;">
-            <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
-          </td>
+          {% if valid_a %}
+            <td align="left" style="margin-bottom: 15px;">
+              <p>{{ page.indicator[indicator_metadata.name] | markdownify }}</p>
+            </td>
+          {% endif %}
         </tr>
       {% elsif indicator_metadata.name contains "_target_1_item_a" %} <!--weather_indicator_1_target_1_item_a-->
         {% unless indicator_metadata.name contains "item_a_" %}
