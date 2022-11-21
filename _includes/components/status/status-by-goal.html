@@ -84,12 +84,13 @@
                   {% assign additional_cells_i = letters.size %}
                   {% assign year_a_key = single_indicator_key | append: '_year_a' %}  <!--weather_indicator_2_year_a-->
                   {% assign target_year_key = target_key | append: '_targetYear' %}  <!--weather_indicator_2_target_1_targetYear-->
+                  {% assign validUntil_key = target_key | append: '_validUntil' %}  <!--weather_indicator_2_target_1_targetYear-->
 
                   {% if indicator[target_key] %}
                     <tr>
                       <th>
                         <div class=responsiveText>{{ page.t.weather[target_trans_key] }}
-                          {% if target_trans_key contains 'old' %}
+                          {% if target_trans_key contains 'old' and indicator[target_year_key] <= indicator[validUntil_key] %} <!--consider targets who were made invalid after their target year as valid here-->
                             {% assign old_date_key = target_key | append: '_validUntil' %}
                             <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
                           {% elsif target_trans_key contains 'new' %}
