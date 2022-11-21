@@ -90,12 +90,12 @@
                     <tr>
                       <th>
                         <div class=responsiveText>{{ page.t.weather[target_trans_key] }}
-                          <!--{% if target_trans_key contains 'old' %} consider targets who were made invalid after their target year as valid here
+                          {% if target_trans_key contains 'old' %} <!--consider targets who were made invalid after their target year as valid here-->
                             {% assign old_date_key = target_key | append: '_validUntil' %}
-                            <br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>-->
-                          {% if target_trans_key contains 'new' %}
+                            <!--<br><span class="small">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>-->
+                          {% elsif target_trans_key contains 'new' %}
                             {% assign new_date_key = target_key | append: '_validFrom' %}
-                            <br><span class="smaller" >({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
+                            <br><span class="smaller">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
                           {% elsif indicator[year_a_key] > indicator[target_year_key] %}
                             <br><span class="smaller">(Abgelaufen)</span>
                           {% endif %}
