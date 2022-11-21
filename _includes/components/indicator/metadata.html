@@ -65,7 +65,10 @@
       {% endif %}
 
       {% if indicator_metadata.name contains "year_a" %}
-
+        {% assign valid_a = false %}
+        {% assign valid_b = false %}
+        {% assign valid_c = false %}
+        {% assign valid_d = false %}
         {% for multi_target in (1..8) %}
           {% assign category_key = indicator_metadata.name | replace: 'year_a', 'target_' | append: multi_target | append: '_category' %}
           {% unless page.indicator[category_key] == 'old' %}
