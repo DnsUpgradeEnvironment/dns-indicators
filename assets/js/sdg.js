@@ -4384,22 +4384,22 @@ function createSelectionsTable(chartInfo) {
  * @return null
  */
 function createTableTargetLines(graphAnnotations) {
-    var targetLines = graphAnnotations.filter(function (a) { return a.preset === 'target_line'; });
-    var $targetLines = $('#tableTargetLines');
-    $targetLines.empty();
-    targetLines.forEach(function (targetLine) {
-        var targetLineLabel = targetLine.label.content;
-        if (!targetLineLabel) {
-            targetLineLabel = opensdg.annotationPresets.target_line.label.content;
-        }
-        $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + alterDataDisplay(targetLine.value, targetLine, 'target line') + '</dd>');
-    });
-    if (targetLines.length === 0) {
-        $targetLines.hide();
-    }
-    else {
-        $targetLines.show();
-    }
+    // var targetLines = graphAnnotations.filter(function (a) { return a.preset === 'target_line'; });
+    // var $targetLines = $('#tableTargetLines');
+    // $targetLines.empty();
+    // targetLines.forEach(function (targetLine) {
+    //     var targetLineLabel = targetLine.label.content;
+    //     if (!targetLineLabel) {
+    //         targetLineLabel = opensdg.annotationPresets.target_line.label.content;
+    //     }
+    //     $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + alterDataDisplay(targetLine.value, targetLine, 'target line') + '</dd>');
+    // });
+    // if (targetLines.length === 0) {
+    //     $targetLines.hide();
+    // }
+    // else {
+    //     $targetLines.show();
+    // }
 }
 
 /**
