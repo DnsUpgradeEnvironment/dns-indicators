@@ -34,8 +34,8 @@
               <table class="table table-hover tableresp">
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
                 <tr id="{{ indicator[single_indicator_key] }}">
-                  <th width="10%" style="padding-top: 55px;"> <div class=responsiveText>{{ page.t.weather.indicator }}</div> </th>
-                  <th colspan="9" style="padding-top: 55px; padding-left: 50px"> <a href="{{ indicator.url }}"><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
+                  <th width="15%" style="padding-top: 55px;"> <div class=responsiveText>{{ page.t.weather.indicator }}</div> </th>
+                  <th colspan="7" style="padding-top: 55px; padding-left: 50px"> <a href="{{ indicator.url }}"><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -53,7 +53,7 @@
                   {% for letter in letters %}
                     {% assign year_key = single_indicator_key | append:'_year_' | append: letter %} <!--weather_indicator_1_yaer_a-->
                     {% if indicator[year_key] %}
-                      <td width="10%" align="center" class=letter> <p><span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
+                      <td width="10%" align="center" class="{{ letter }}"> <p><span class="responsiveText hidden-xs">{{ indicator[year_key] }}</span></p> </td>
                       {% assign additional_cells_y = additional_cells_y | minus: 1 %}
                     {% endif %}
                   {% endfor %}
@@ -92,7 +92,7 @@
                           {% endif %}
                         </div>
                       </th>
-                      <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                      <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
                     </tr>
 
                     <!-- ITEM !!!!!!!!!!!!!!!!-->
@@ -128,7 +128,7 @@
                           {% endif %}
                           {% assign additional_cells_i  = additional_cells_i | minus: 1 %}
                         {% elsif letter == 'a' and additional_cells_i == letters.size %}
-                          <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
+                          <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
                           {% assign additional_cells_i  = -1 %}
                         {% elsif indicator[year_key] %}
                           {% if letter == 'i' or letter == 'h' or letter == 'g' or letter == 'f' or letter == 'e' %}
@@ -156,13 +156,13 @@
                           <div class=responsiveText>{{ page.t.weather.note }}
                           </div>
                         </th>
-                        <td colspan="9" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_note_key] }}</div> </td>
+                        <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_note_key] }}</div> </td>
                       </tr>
                     {% endif %}
 
                     <tr>
                       <th> <div></div> </th>
-                      {% for empty_cell in (0..7) %}
+                      {% for empty_cell in (0..6) %}
                         {% if empty_cell > 5 %}
                           <td width="10%" align="center" height="30"></td>
                         {% else %}
