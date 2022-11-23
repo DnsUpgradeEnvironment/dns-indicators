@@ -299,20 +299,37 @@ body{
 }
 
 // --- making table in status overview responsiveText@media screen and (max-width: 1225px) and (min-width: 1045px) {
+@media screen and (max-width: 1225px) and (min-width: 1045px) {
+  .prio-g{
+		display:none;
+	}
+}
+
+@media screen and (max-width: 1045px) and (min-width: 565px) {
+	.prio-g{
+		display:none;
+	}
+	.prio-f{
+		display:none;
+	}
+}
 
 @media screen and (max-width: 565px) and (min-width: 300px) {
+	.prio-g{
+		display:none;
+	}
 	.prio-f{
 		display:none;
 	}
 	.prio-e{
-		display:none;
-	}
-	.prio-d{
 		display:none;
 	}
 }
 
 @media screen and (max-width: 300px) {
+	.prio-g{
+		display:none;
+	}
 	.prio-f{
 		display:none;
 	}
@@ -320,9 +337,6 @@ body{
 		display:none;
 	}
 	.prio-d{
-		display:none;
-	}
-	.prio-c{
 		display:none;
 	}
 
