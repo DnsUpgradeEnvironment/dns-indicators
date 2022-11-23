@@ -297,3 +297,46 @@ body{
 .smaller {
   font-size: 10px;
 }
+
+// --- making table in status overview responsiveText@media screen and (max-width: 1225px) and (min-width: 1045px) {
+		.prio-f{
+			display:none;
+		}
+	}
+
+	@media screen and (max-width: 1045px) and (min-width: 835px) {
+		.prio-f{
+			display:none;
+		}
+		.prio-e{
+			display:none;
+		}
+	}
+
+	@media screen and (max-width: 565px) and (min-width: 300px) {
+		.prio-f{
+			display:none;
+		}
+		.prio-e{
+			display:none;
+		}
+		.prio-d{
+			display:none;
+		}
+	}
+
+	@media screen and (max-width: 300px) {
+		.prio-f{
+			display:none;
+		}
+		.prio-e{
+			display:none;
+		}
+		.prio-d{
+			display:none;
+		}
+		.prio-c{
+			display:none;
+		}
+
+	}
