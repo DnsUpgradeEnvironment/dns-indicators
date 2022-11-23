@@ -6,6 +6,8 @@ layout: page
 
 ### Indikatorenberichte
 <br>
+Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2022 - Bericht zum Download folgt in Kürze.
+<br><br>
 [Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2021](https://sustainabledevelopment-deutschland.github.io/assets/publications/reports/de/2021.pdf)
 <br><br>
 [Nachhaltige Entwicklung in Deutschland - Indikatorenbericht 2018](https://www.statistischebibliothek.de/mir/receive/DEHeft_mods_00089372)
