@@ -71,7 +71,8 @@
         {% assign valid_d = false %}
         {% for multi_target in (1..8) %}
           {% assign category_key = indicator_metadata.name | replace: 'year_a', 'target_' | append: multi_target | append: '_category' %}
-          {% unless page.indicator[category_key] == 'old' %}
+          {% assign valdUntil_key = category_key | replace: '_category', '_validUntil' %}
+          {% unless page.indicator[category_key] == 'old' or page.indicator[valdUntil_key] %}
             {% assign valid_a_key = category_key | replace: '_category', '_item_a_valid' %}
             {% if page.indicator[valid_a_key] %}
               {% assign valid_a = page.indicator[valid_a_key] %}
