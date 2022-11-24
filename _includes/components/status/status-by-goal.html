@@ -80,16 +80,19 @@
                   {% if indicator[target_key] %}
                     <tr>
                       <th>
-                        <div class=responsiveText>{{ page.t.weather[target_trans_key] }}
-                          {% if target_trans_key contains 'old' %} <!--consider targets who were made invalid after their target year as valid here-->
-                            {% assign old_date_key = target_key | append: '_validUntil' %}
-                            <br><span class="smaller">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
-                          {% elsif target_trans_key contains 'new' %}
+                        {% if target_trans_key contains 'old' %}
+                          <div class=responsiveText style="opacity: 0.4">{{ page.t.weather[target_trans_key] }}
+                          {% assign old_date_key = target_key | append: '_validUntil' %}
+                          <br><span class="smaller">({{ page.t.weather.old_pretext }} {{ indicator[old_date_key] }})</span>
+                        {% else %}
+                          <div class=responsiveText>{{ page.t.weather[target_trans_key] }}
+                        {% endif %}
+                        {% if target_trans_key contains 'new' %}
                             {% assign new_date_key = target_key | append: '_validFrom' %}
                             <br><span class="smaller">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
-                          {% elsif indicator[year_a_key] > indicator[target_year_key] %}
+                        {% elsif indicator[year_a_key] > indicator[target_year_key] %}
                             <br><span class="smaller">({{ page.t.weather.expired }})</span>
-                          {% endif %}
+                        {% endif %}
                         </div>
                       </th>
                       <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>

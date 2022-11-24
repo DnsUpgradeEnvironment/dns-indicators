@@ -127,7 +127,7 @@
 
           {% for target in (1..8) %}
             {% assign target_valid_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_category' %} <!--weather_indicator_(1...3)_target_(1...4)_category-->
-            {% if page.indicator[target_valid_key] != 'old' %}
+            {% if page.indicator[target_valid_key] != 'old' or page.indicator[valdUntil_key] %}
 
               {% assign target_item_a_key = indicator_metadata.name | replace: '1_item_a', '' | append: target | append: '_item_a' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a-->
               {% assign target_item_a_valid_key = target_item_a_key | append: '_valid' %} <!--weather_indicator_(1...3)_target_(1...4)_item_a_valid-->
