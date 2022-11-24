@@ -166,8 +166,8 @@
                     {% endif %}
 
                     {% assign next_multi_target = multi_target | plus: 1 %}
-                    {% assign next_target_key = single_indicator_key | append: "_target_"  | append: next_multi_target %}  <!--weather_indicator_2_target_1-->
-                    {% if indicator[next_multi_target] %}
+                    {% assign next_target_key = single_indicator_key | append: "_target_"  | append: next_multi_target %}  <!--weather_indicator_2_target_2-->
+                    {% if indicator[next_target_key] %}
                       <tr>
                         <th> <div></div> </th>
                         {% for empty_cell in (0..6) %}
