@@ -13,9 +13,9 @@
         <a href="{{ goal.url }}">
         <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="150" height="150" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
         </a>
-        <h3 class="status-goal">
+        <!-- <h3 class="status-goal">
             <a href="{{ goal.url }}">{{ goal.short }}</a>
-        </h3>    
+        </h3>     -->
     </div>
     <div class="details" style= "display: block;">
       {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_id' %}
