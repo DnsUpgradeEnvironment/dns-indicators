@@ -95,12 +95,20 @@
                         {% endif %}
                         </div>
                       </th>
-                      <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                      {% if target_trans_key contains 'old' %}
+                        <td colspan="7" style="padding-left: 50px; pacity: 0.4""> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                      {% else %}
+                        <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                      {% endif %}
                     </tr>
 
                     <!-- ITEM !!!!!!!!!!!!!!!!-->
                     <tr>
-                      <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
+                      {% if target_trans_key contains 'old' %}
+                        <th> <div class=responsiveText style="opacity: 0.4">{{ page.t.weather.status }}</div> </th>
+                      {% else %}
+                        <th> <div class=responsiveText>{{ page.t.weather.status }}</div> </th>
+                      {% endif %}
                       {% for letter in letters %}
                         {% assign item_key = target_key | append:'_item_' | append: letter %} <!--weather_indicator_2_target_1_item_a-->
                         {% assign title_key = item_key | append: '_title' %}
