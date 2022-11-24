@@ -30,12 +30,12 @@
             {% assign letters = "g,f,e,d,c,b,a" | split: ',' %}
 
             {% if indicator[weather_active_key] == true %}
-              <table class="table table-hover tableresp">
+              <table class="table table-hover tableresp" frame="box">
                 {% assign no_additional_cells = false %}
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
                 <tr id="{{ indicator[single_indicator_key] }}">
                   <th width="12%" style="padding-top: 55px;"> <div class=responsiveText>{{ page.t.weather.indicator }}</div> </th>
-                  <th colspan="7" style="padding-top: 55px; padding-left: 50px"> <a href="{{ indicator.url }}"><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
+                  <th colspan="7" style="padding-top: 55px; padding-left: 4%"> <a href="{{ indicator.url }}"><div class=responsiveText>{{ indicator[single_indicator_key] }}</div></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -98,9 +98,9 @@
                         </div>
                       </th>
                       {% if target_trans_key contains 'old' %}
-                        <td colspan="7" style="padding-left: 50px; opacity: 0.5""> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                        <td colspan="7" style="padding-left: 4%; opacity: 0.5""> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
                       {% else %}
-                        <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
+                        <td colspan="7" style="padding-left: 4%"> <div class=responsiveText>{{ indicator[target_key] }}</div> </td>
                       {% endif %}
                     </tr>
 
@@ -137,7 +137,7 @@
                           <td width="10%" align="center" class="prio-{{ letter }}"> <a href=" {{ site.baseurl }}{{ baseurl_folder }}{{ language }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/{{ current_language }}/{{ indicator[item_key] }}.png" alt="{{ status }}" class="responsiveWeather hidden-xs" title="{{ indicator[title_key] }}" {{ opacity }}/></a> </td>
                           {% assign additional_cells_i  = additional_cells_i | minus: 1 %}
                         {% elsif letter == 'a' and additional_cells_i == letters.size %}
-                          <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
+                          <td colspan="7" style="padding-left: 4%"> <div class=responsiveText>{{ page.t.weather.no_assessment }}</div> </td>
                           {% assign no_additional_cells = true %}
                         {% elsif indicator[year_key] %}
 
@@ -161,16 +161,20 @@
                           <div class=responsiveText>{{ page.t.weather.note }}
                           </div>
                         </th>
-                        <td colspan="7" style="padding-left: 50px"> <div class=responsiveText>{{ indicator[target_note_key] }}</div> </td>
+                        <td colspan="7" style="padding-left: 4%"> <div class=responsiveText>{{ indicator[target_note_key] }}</div> </td>
                       </tr>
                     {% endif %}
 
-                    <tr>
-                      <th> <div></div> </th>
-                      {% for empty_cell in (0..6) %}
-                        <td width="10%" align="center" height="30"></td>
-                      {% endfor %}
-                    </tr>
+                    {% assign next_multi_target = multi_target | plus: 1 %}
+                    {% assign next_target_key = single_indicator_key | append: "_target_"  | append: next_multi_target %}  <!--weather_indicator_2_target_1-->
+                    {% if indicator[next_multi_target] %}
+                      <tr>
+                        <th> <div></div> </th>
+                        {% for empty_cell in (0..6) %}
+                          <td width="10%" align="center" height="30"></td>
+                        {% endfor %}
+                      </tr>
+                    {% endif %}
                     <!-- !!!!!!!!!!!!!!!!-->
                   {% endif %}
                 {% endfor %} <!--multi_target-->
