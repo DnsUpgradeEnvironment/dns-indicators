@@ -9,7 +9,7 @@
   {%- assign goal = goalreport.goal | strip | sdg_lookup -%}
 
   <div class="goal reporting-status-item">
-    <div class="frame goal-tiles">
+    <div>
         <a href="{{ goal.url }}">
         <img src="{{ goal.icon }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" width="150" height="150" class="goal-icon-{{ goal.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
         </a>
