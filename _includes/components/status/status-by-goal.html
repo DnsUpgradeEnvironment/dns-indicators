@@ -92,7 +92,9 @@
                             {% assign new_date_key = target_key | append: '_validFrom' %}
                             <br><span class="smaller">({{ page.t.weather.new_pretext }} {{ indicator[new_date_key] }})</span>
                         {% elsif indicator[year_a_key] > indicator[target_year_key] %}
+                          {% unless page.indicator[old_date_key] %}
                             <br><span class="smaller">({{ page.t.weather.expired }})</span>
+                          {% endunless %}
                         {% endif %}
                         </div>
                       </th>
