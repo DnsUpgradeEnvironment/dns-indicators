@@ -3,13 +3,13 @@
 {% else %}
   {% assign language = page.language %}
 {% endif %}
-<!---
+
 {% if site.environment == 'staging' %}
-  {% assign baseurl = 'https://g205sdgs.github.io/sdg-indicators' %}
+  {% assign baseurl = 'https://dnsupgradeenvironment.github.io/dns-indicators' %}
 {% else %}
-  {% assign baseurl = 'https://sdg-indikatoren.de' %}
+  {% assign baseurl = 'https://dns-indikatoren.de' %}
 {% endif %}
--->
+
 <!---Indicator page-->
 <!---3 Btns if there is a corresponding Indicator-->
 
@@ -20,7 +20,7 @@
     {% else %}
       <div class="col-sm-6 d-grid gap-2">
     {% endif %}
-      <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+      <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
         <b class="d-sm-none d-lg-block"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.t.general.prev_indicator }}</b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-left" aria-hidden="true"></i></b>
       </a>
     </div>
@@ -51,7 +51,7 @@
     {% else %}
       <div class="col-sm-6 d-grid gap-2">
     {% endif %}
-      <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+      <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
         <b class="btn-label d-sm-none d-lg-block">{{ page.t.general.next_indicator }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-right" aria-hidden="true"></i></b>
       </a>
     </div>
