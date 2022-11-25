@@ -43,9 +43,9 @@
                 <!-- INDICATOR !!!!!!!!!!!!!!!!-->
                 <tr id="{{ indicator[single_indicator_key] }}">
                   {% if has_years %}
-                    <th width="14.68%"> <h3 class=responsiveText>{{ page.t.weather.indicator }}</h3> </th>
-                  {% else %}
                     <th width="12%"> <h3 class=responsiveText>{{ page.t.weather.indicator }}</h3> </th>
+                  {% else %}
+                    <th width="14.68%"> <h3 class=responsiveText>{{ page.t.weather.indicator }}</h3> </th>
                   {% endif %}
                   <th colspan="7" style="padding-left: 4%"> <a href="{{ indicator.url }}"><h3 class=responsiveText>{{ indicator[single_indicator_key] }}</h3></a> </th>
                 </tr>
