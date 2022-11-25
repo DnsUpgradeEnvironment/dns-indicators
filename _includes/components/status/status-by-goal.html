@@ -17,7 +17,7 @@
             <a href="{{ goal.url }}">{{ goal.short }}</a>
         </h3>     -->
     </div>
-    <div class="details" >
+    <div>
       {% assign goal_indicators = page.indicators | where: 'goal_number', goal.number | group_by: 'target_id' %}
       {% for group in goal_indicators %}
         {%- assign target_id = group.name -%}
