@@ -32,13 +32,6 @@
             {% if indicator[weather_active_key] == true %}
               <table class="table table-hover tableresp" frame="box" style="margin-top: 55px;">
                 {% assign no_additional_cells = false %}
-                <!-- INDICATOR !!!!!!!!!!!!!!!!-->
-                <tr id="{{ indicator[single_indicator_key] }}">
-                  <th width="12%"> <h3 class=responsiveText>{{ page.t.weather.indicator }}</h3> </th>
-                  <th colspan="7" style="padding-left: 4%"> <a href="{{ indicator.url }}"><h3 class=responsiveText>{{ indicator[single_indicator_key] }}</h3></a> </th>
-                </tr>
-                <!-- !!!!!!!!!!!!!!!!-->
-                <!-- YEAR !!!!!!!!!!!!!!!!-->
                 {% assign has_years = false %}
                 {% for multi_target in (1..8) %}
                   {% assign test_item_key = single_indicator_key | append:'_target_' | append: multi_target | append: '_item_a' %}
@@ -46,6 +39,19 @@
                     {% assign has_years = true %}
                   {% endif %}
                 {% endfor %}
+
+                <!-- INDICATOR !!!!!!!!!!!!!!!!-->
+                <tr id="{{ indicator[single_indicator_key] }}">
+                  {% if has_years %}
+                    <th width="12%"> <h3 class=responsiveText>{{ page.t.weather.indicator }}</h3> </th>
+                  {% else %}
+                    <th width="14.68%"> <h3 class=responsiveText>{{ page.t.weather.indicator }}</h3> </th>
+                  {% endif %}
+                  <th colspan="7" style="padding-left: 4%"> <a href="{{ indicator.url }}"><h3 class=responsiveText>{{ indicator[single_indicator_key] }}</h3></a> </th>
+                </tr>
+                <!-- !!!!!!!!!!!!!!!!-->
+                <!-- YEAR !!!!!!!!!!!!!!!!-->
+
                 {% if has_years %}
                   <tr>
                   {% assign additional_cells_y = letters.size  | minus: 1 %}
