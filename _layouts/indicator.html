@@ -7,6 +7,7 @@
 {% include multilingual-js.html key="indicator" %}
 {% include multilingual-js.html key="data" %}
 
+{% include components/indicator/header.html %}
 <div class="container">
   {% include components/indicator/breadcrumbs.html %}
   {% include components/indicator/navigationbuttons.html %}
@@ -14,7 +15,6 @@
     {% include components/previous-next-links.html previous_label=page.t.indicator.previous next_label=page.t.indicator.next %}
   {% endif %}
 </div>
-{% include components/indicator/header.html %}
 <div id="main-content" class="container goal-{{ page.goal.number }}" role="main">
   {% include components/indicator/data-notice.html %}
   {% include components/indicator/indicator-available.html %}
