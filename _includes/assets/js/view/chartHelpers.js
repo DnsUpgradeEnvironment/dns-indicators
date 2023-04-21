@@ -13,19 +13,12 @@ function alterChartConfig(config, info) {
  * @param {String} chartTitle
  * @return null
  */
-function updateChartTitle(chartTitle) {
+function updateChartTitle(chartTitle, isProxy) {
     if (typeof chartTitle !== 'undefined') {
-        $('.chart-title').text(chartTitle);
-    }
-}
-
-/**
- * @param {String} chartSubtitle
- * @return null
- */
-function updateChartSubtitle(chartSubtitle) {
-    if (typeof chartSubtitle !== 'undefined') {
-        $('.chart-subtitle').text(chartSubtitle);
+        if (isProxy) {
+            chartTitle += ' ' + PROXY_PILL;
+        }
+        $('.chart-title').html(chartTitle);
     }
 }
 
@@ -174,6 +167,7 @@ function setPlotEvents(chartInfo) {
             y: 0,
             scrollX: 0,
             scrollY: 0,
+            scale: 2,
             backgroundColor: isHighContrast() ? '#000000' : '#FFFFFF',
             // Allow a chance to alter the screenshot's HTML.
             onclone: function (clone) {

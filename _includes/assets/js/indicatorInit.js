@@ -53,6 +53,8 @@ var indicatorInit = function () {
                         compositeBreakdownLabel: domData.compositebreakdownlabel,
                         precision: domData.precision,
                         graphStepsize: domData.graphstepsize,
+                        proxy: domData.proxy,
+                        proxySeries: domData.proxyseries,
                     });
                     var view = new indicatorView(model, {
                         rootElement: '#indicatorData',
