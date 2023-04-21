@@ -54,9 +54,9 @@ opensdg.chartTypes.base = function(info) {
                     suggestedMin: 0,
                     ticks: {
                         color: tickColor,
-                         callback: function (value) {
-                             return alterDataDisplay(value, undefined, 'chart y-axis tick');
-                         },
+                        callback: function (value) {
+                            return alterDataDisplay(value, undefined, 'chart y-axis tick');
+                        },
                     },
                     title: {
                         display: MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit,
@@ -120,7 +120,7 @@ opensdg.chartTypes.base = function(info) {
                                 line = line.concat(label[i] + ' ');
                               }
                             };
-                            re.push(line.slice(0, -1) + ': ' + alterDataDisplay(tooltipItem.formattedValue, tooltipItem.dataset, 'chart tooltip'));
+                            re.push(line.slice(0, -1) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip'));
                             re.shift();
                           }
                           return re;

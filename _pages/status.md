@@ -3,7 +3,6 @@ title: Status der Indikatoren
 permalink: /status/
 layout: page
 ---
-<h5>Bewertung für Deutschland aus den Vorjahren</h5>
 
 Um sich einen schnellen Überblick zum Status der einzelnen Indikatoren zu verschaffen, wird im Bericht bei jedem Indikator, sofern berechenbar, eines von vier möglichen Wettersymbolen abgebildet. Diese Kennzeichnung ist keine politische Bewertung und auch keine Prognose. Stattdessen bieten die Symbole eine erste Einschätzung der Entwicklung, ersetzen aber nicht die erläuternden Texte sowie weitere Analysen und Hintergrundinformationen. Die Art und Weise, wie die Symbole den einzelnen Indikatoren zugeordnet werden, hängt von der Formulierung des jeweiligen Ziels ab.
 
@@ -27,7 +26,7 @@ Falls kein exakter Zielwert, sondern ein Zielintervall vorgegeben ist (zum Beisp
 
 <b>Indikatoren mit gleichbleibender Zielvorgabe in jedem Jahr</b>
 
-Soll ein Ziel- oder Grenzwert nicht zukünftig erreicht, sondern jedes Jahr eingehalten werden (zum Beispiel [Indikator 6.2.a ,b](https://dns-indikatoren.de/6-2-ab/)), so werden für die Bewertung zwei Informationen kombiniert, und zwar vorrangig der zuletzt erreichte Wert sowie untergeordnet der Durchschnitt der letzten fünf Veränderungen:
+Soll ein Ziel- oder Grenzwert nicht zukünftig erreicht, sondern jedes Jahr eingehalten werden (zum Beispiel [Indikator 6.2.a, b](https://dns-indikatoren.de/6-2-ab/)), so werden für die Bewertung zwei Informationen kombiniert, und zwar vorrangig der zuletzt erreichte Wert sowie untergeordnet der Durchschnitt der letzten fünf Veränderungen:
 
 * Wurde der Zielwert oder ein besserer Wert im letzten Jahr erreicht und deutet die durchschnittliche Veränderung nicht in Richtung einer Verschlechterung, so wird eine Sonne dargestellt.
 * Wurde der Zielwert oder ein besserer Wert im letzten Jahr erreicht, aber die durchschnittliche Veränderung deutet in Richtung einer Verschlechterung, so führt der Indikator weiterhin eine Sonne, jedoch leicht verdeckt durch eine Wolke.

@@ -8,7 +8,7 @@ Dieses Impressum gilt auch für unseren [Twitter-Account](https://twitter.com/de
 
 ## Herausgeber
 
-<b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch den Präsidenten
+<b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch die Präsidentin
 <br><br>
 <b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundesministeriums des Innern, für Bau und Heimat
 <br><br>
@@ -25,10 +25,10 @@ Postfach 17 03 77<br>
 53029 Bonn
 <br><br>
 Telefon:	+49 (0)611 75-8855<br>
-E-Mail:	[sdg-indicators@destatis.de](mailto:sdg-indicators@destatis.de)
+E-Mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
 <br><br>
 <b>Redaktion</b>:<br>
-E-Mail:	[sdg-indicators@destatis.de](mailto:sdg-indicators@destatis.de)
+E-Mail:	[dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de)
 <br><br>
 <b>Inhalte/Produktion</b>:<br>
 Statistisches Bundesamt (Destatis)
@@ -39,7 +39,7 @@ Statistisches Bundesamt (Destatis)
 
 ## Haftungsausschluss
 
-Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie bitte an unsere E-Mail-Adresse: [sdg-indicators@destatis.de](mailto:sdg-indicators@destatis.de).
+Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie bitte an unsere E-Mail-Adresse: [dns-indikatoren@destatis.de](mailto:dns-indikatoren@destatis.de).
 
 Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Website kann trotz sorgfältiger Prüfung nicht übernommen werden. Das Statistische Bundesamt übernimmt insbesondere keinerlei Haftung für eventuelle Schäden oder Konsequenzen, die durch die direkte oder indirekte Nutzung der angebotenen Inhalte entstehen.
 
@@ -109,7 +109,7 @@ Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen
 
 ## Kontaktdaten des Verantwortlichen
 
-Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch den [Präsidenten](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
+Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch die [Präsidentin](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
 
 ## Kontaktdaten des/der behördlichen Datenschutzbeauftragten
 
@@ -118,7 +118,7 @@ Da uns Ihr Vertrauen wichtig ist, möchten wir Ihnen jederzeit Rede und Antwort 
 Datenschutzbeauftragte im Statistischen Bundesamt<br>
 65180 Wiesbaden<br>
 Telefon:	+49 (0)611 75-4449<br>
-E-Mail:	[datenschutzbeauftragter@destatis.de](mailto:datenschutzbeauftragter@destatis.de)
+E-Mail:	[datenschutz@destatis.de](mailto:datenschutz@destatis.de)
 
 ## Copyright allgemein
 
