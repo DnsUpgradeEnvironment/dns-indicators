@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -43,6 +43,20 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
 };
 
 </script>
@@ -107,12 +121,9 @@ var translations = {
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
         
-        <link rel="canonical" href="/">
 
         <!--[if IE 9]>
         <script src="/dns-indicators/assets/js/lib/classList.js"></script>
@@ -123,13 +134,14 @@ var translations = {
 <link rel="icon" type="image/png" sizes="16x16" href="/dns-indicators/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/dns-indicators/assets/img/favicons/favicon.ico" />
 
+        
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20230421084647">
+        <link rel="stylesheet" href="/dns-indicators/assets/css/style.css?v=20230421104527">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -139,6 +151,9 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
+
+        
+
 
         <!--[if IE]>
         <link rel="stylesheet" href="/dns-indicators/assets/css/ie.css">
@@ -295,11 +310,11 @@ data-event-label="high"
 
   <div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/1">
+        <a href="/dns-indicators/1/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/1.png" alt="Keine Armut - Ziel 1" width="150" height="150" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/1">Keine Armut</a>
+            <a href="/dns-indicators/1/">Keine Armut</a>
         </h3>     -->
     </div>
     <div>
@@ -323,7 +338,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/1-1-ab"><h3 class=responsiveText>1.1.a Materielle Deprivation</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/1-1-ab/"><h3 class=responsiveText>1.1.a Materielle Deprivation</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -628,7 +643,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/1-1-ab"><h3 class=responsiveText>1.1.b Erhebliche materielle Deprivation</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/1-1-ab/"><h3 class=responsiveText>1.1.b Erhebliche materielle Deprivation</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -931,11 +946,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/2">
+        <a href="/dns-indicators/2/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/2.png" alt="Kein Hunger - Ziel 2" width="150" height="150" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/2">Kein Hunger</a>
+            <a href="/dns-indicators/2/">Kein Hunger</a>
         </h3>     -->
     </div>
     <div>
@@ -959,7 +974,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/2-1-a"><h3 class=responsiveText>2.1.a Stickstoffüberschuss der Landwirtschaft</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/2-1-a/"><h3 class=responsiveText>2.1.a Stickstoffüberschuss der Landwirtschaft</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -1280,7 +1295,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/2-1-b"><h3 class=responsiveText>2.1.b Ökologischer Landbau</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/2-1-b/"><h3 class=responsiveText>2.1.b Ökologischer Landbau</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -1772,7 +1787,7 @@ data-event-label="high"
                   
                     <th width="14.68%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/2-2"><h3 class=responsiveText>2.2 Unterstützung guter Regierungsführung bei der Erreichung einer angemessenen Ernährung weltweit</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/2-2/"><h3 class=responsiveText>2.2 Unterstützung guter Regierungsführung bei der Erreichung einer angemessenen Ernährung weltweit</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -1995,11 +2010,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/3">
+        <a href="/dns-indicators/3/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png" alt="Gesundheit und Wohlergehen - Ziel 3" width="150" height="150" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/3">Gesundheit und Wohlergehen</a>
+            <a href="/dns-indicators/3/">Gesundheit und Wohlergehen</a>
         </h3>     -->
     </div>
     <div>
@@ -2023,7 +2038,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-ab"><h3 class=responsiveText>3.1.a Vorzeitige Sterblichkeit (Frauen)</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-ab/"><h3 class=responsiveText>3.1.a Vorzeitige Sterblichkeit (Frauen)</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -2326,7 +2341,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-ab"><h3 class=responsiveText>3.1.b Vorzeitige Sterblichkeit (Männer)</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-ab/"><h3 class=responsiveText>3.1.b Vorzeitige Sterblichkeit (Männer)</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -2639,7 +2654,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-cd"><h3 class=responsiveText>3.1.c Raucherquote von Jugendlichen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-cd/"><h3 class=responsiveText>3.1.c Raucherquote von Jugendlichen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -2942,7 +2957,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-cd"><h3 class=responsiveText>3.1.d Raucherquote von Erwachsenen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-cd/"><h3 class=responsiveText>3.1.d Raucherquote von Erwachsenen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -3251,7 +3266,7 @@ data-event-label="high"
                   
                     <th width="14.68%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-e"><h3 class=responsiveText>3.1.e Adipositasquote von Kindern und Jugendlichen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-e/"><h3 class=responsiveText>3.1.e Adipositasquote von Kindern und Jugendlichen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -3486,7 +3501,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-f"><h3 class=responsiveText>3.1.f Adipositasquote von Erwachsenen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-1-f/"><h3 class=responsiveText>3.1.f Adipositasquote von Erwachsenen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -3798,7 +3813,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-2-a"><h3 class=responsiveText>3.2.a Emissionen von Luftschadstoffen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-2-a/"><h3 class=responsiveText>3.2.a Emissionen von Luftschadstoffen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -4119,7 +4134,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-2-b"><h3 class=responsiveText>3.2.b Anteil der Bevölkerung mit erhöhter PM₁₀-Feinstaubexposition</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-2-b/"><h3 class=responsiveText>3.2.b Anteil der Bevölkerung mit erhöhter PM₁₀-Feinstaubexposition</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -4441,7 +4456,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-3"><h3 class=responsiveText>3.3 Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/3-3/"><h3 class=responsiveText>3.3 Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -4746,11 +4761,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/4">
+        <a href="/dns-indicators/4/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/4.png" alt="Hochwertige Bildung - Ziel 4" width="150" height="150" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/4">Hochwertige Bildung</a>
+            <a href="/dns-indicators/4/">Hochwertige Bildung</a>
         </h3>     -->
     </div>
     <div>
@@ -4774,7 +4789,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-1-a"><h3 class=responsiveText>4.1.a Frühe Schulabgängerinnen und Schulabgänger</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-1-a/"><h3 class=responsiveText>4.1.a Frühe Schulabgängerinnen und Schulabgänger</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -5251,7 +5266,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-1-b"><h3 class=responsiveText>4.1.b Akademisch Qualifizierte und beruflich Höherqualifizierte (30- bis 34-Jährige mit tertiärem oder post-sekundarem nichttertiärem Abschluss)</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-1-b/"><h3 class=responsiveText>4.1.b Akademisch Qualifizierte und beruflich Höherqualifizierte (30- bis 34-Jährige mit tertiärem oder post-sekundarem nichttertiärem Abschluss)</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -5729,7 +5744,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-2-ab"><h3 class=responsiveText>4.2.a Ganztagsbetreuung für Kinder <br>0- bis 2-Jährige</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-2-ab/"><h3 class=responsiveText>4.2.a Ganztagsbetreuung für Kinder <br>0- bis 2-Jährige</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -6032,7 +6047,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-2-ab"><h3 class=responsiveText>4.2.b Ganztagsbetreuung für Kinder <br>3- bis 5-Jährige</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/4-2-ab/"><h3 class=responsiveText>4.2.b Ganztagsbetreuung für Kinder <br>3- bis 5-Jährige</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -6482,11 +6497,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/5">
+        <a href="/dns-indicators/5/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png" alt="Geschlechtergleichheit - Ziel 5" width="150" height="150" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/5">Geschlechtergleichheit</a>
+            <a href="/dns-indicators/5/">Geschlechtergleichheit</a>
         </h3>     -->
     </div>
     <div>
@@ -6510,7 +6525,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-a"><h3 class=responsiveText>5.1.a Verdienstabstand zwischen Frauen und Männern</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-a/"><h3 class=responsiveText>5.1.a Verdienstabstand zwischen Frauen und Männern</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -6980,7 +6995,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-bc"><h3 class=responsiveText>5.1.b Frauen in Führungspositionen in der Wirtschaft</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-bc/"><h3 class=responsiveText>5.1.b Frauen in Führungspositionen in der Wirtschaft</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -7279,7 +7294,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-bc"><h3 class=responsiveText>5.1.c Frauen in Führungspositionen im öffentlichen Dienst des Bundes</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-bc/"><h3 class=responsiveText>5.1.c Frauen in Führungspositionen im öffentlichen Dienst des Bundes</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -7592,7 +7607,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-d"><h3 class=responsiveText>5.1.d Väterbeteiligung beim Elterngeld</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-d/"><h3 class=responsiveText>5.1.d Väterbeteiligung beim Elterngeld</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -7914,7 +7929,7 @@ data-event-label="high"
                   
                     <th width="14.68%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-e"><h3 class=responsiveText>5.1.e Berufliche Qualifizierung von Frauen und Mädchen durch deutsche entwicklungspolitische Zusammenarbeit</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/5-1-e/"><h3 class=responsiveText>5.1.e Berufliche Qualifizierung von Frauen und Mädchen durch deutsche entwicklungspolitische Zusammenarbeit</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -8137,11 +8152,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/6">
+        <a href="/dns-indicators/6/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png" alt="Sauberes Wasser und Sanitäreinrichtungen - Ziel 6" width="150" height="150" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/6">Sauberes Wasser und Sanitäreinrichtungen</a>
+            <a href="/dns-indicators/6/">Sauberes Wasser und Sanitäreinrichtungen</a>
         </h3>     -->
     </div>
     <div>
@@ -8165,7 +8180,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-1-a"><h3 class=responsiveText>6.1.a Phosphor in Fließgewässern</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-1-a/"><h3 class=responsiveText>6.1.a Phosphor in Fließgewässern</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -8486,7 +8501,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-1-b"><h3 class=responsiveText>6.1.b Nitrat im Grundwasser</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-1-b/"><h3 class=responsiveText>6.1.b Nitrat im Grundwasser</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -8808,7 +8823,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-2-ab"><h3 class=responsiveText>6.2 Anzahl der Menschen, die einen neuen oder hochwertigeren Zugang zur Trinkwasserversorgung oder Anschluss zur Sanitärversorgung durch deutsche Unterstützung erhalten</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-2-ab/"><h3 class=responsiveText>6.2 Anzahl der Menschen, die einen neuen oder hochwertigeren Zugang zur Trinkwasserversorgung oder Anschluss zur Sanitärversorgung durch deutsche Unterstützung erhalten</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -9121,7 +9136,7 @@ data-event-label="high"
                   
                     <th width="14.68%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-2-ab"><h3 class=responsiveText>6.2.a Anzahl der Menschen, die einen neuen oder hochwertigeren Zugang zur Trinkwasserversorgung durch deutsche Unterstützung erhalten</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-2-ab/"><h3 class=responsiveText>6.2.a Anzahl der Menschen, die einen neuen oder hochwertigeren Zugang zur Trinkwasserversorgung durch deutsche Unterstützung erhalten</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -9338,7 +9353,7 @@ data-event-label="high"
                   
                     <th width="14.68%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-2-ab"><h3 class=responsiveText>6.2.b Anzahl der Menschen, die einen neuen oder verbesserten Anschluss zur Sanitärversorgung durch deutsche Unterstützung erhalten</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/6-2-ab/"><h3 class=responsiveText>6.2.b Anzahl der Menschen, die einen neuen oder verbesserten Anschluss zur Sanitärversorgung durch deutsche Unterstützung erhalten</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -9545,11 +9560,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/7">
+        <a href="/dns-indicators/7/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/7.png" alt="Bezahlbare und saubere Energie - Ziel 7" width="150" height="150" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/7">Bezahlbare und saubere Energie</a>
+            <a href="/dns-indicators/7/">Bezahlbare und saubere Energie</a>
         </h3>     -->
     </div>
     <div>
@@ -9573,7 +9588,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-1-ab"><h3 class=responsiveText>7.1.a Endenergieproduktivität</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-1-ab/"><h3 class=responsiveText>7.1.a Endenergieproduktivität</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -9876,7 +9891,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-1-ab"><h3 class=responsiveText>7.1.b Primärenergieverbrauch</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-1-ab/"><h3 class=responsiveText>7.1.b Primärenergieverbrauch</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -10478,7 +10493,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-2-a"><h3 class=responsiveText>7.2.a Anteil erneuerbarer Energien am Brutto-Endenergieverbrauch</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-2-a/"><h3 class=responsiveText>7.2.a Anteil erneuerbarer Energien am Brutto-Endenergieverbrauch</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -11226,7 +11241,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-2-b"><h3 class=responsiveText>7.2.b Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/7-2-b/"><h3 class=responsiveText>7.2.b Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -12416,11 +12431,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/8">
+        <a href="/dns-indicators/8/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" width="150" height="150" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/8">Menschenwürdige Arbeit und Wirtschaftswachstum</a>
+            <a href="/dns-indicators/8/">Menschenwürdige Arbeit und Wirtschaftswachstum</a>
         </h3>     -->
     </div>
     <div>
@@ -12444,7 +12459,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-1"><h3 class=responsiveText>8.1 Gesamtrohstoffproduktivität</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-1/"><h3 class=responsiveText>8.1 Gesamtrohstoffproduktivität</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -12766,7 +12781,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-2-ab"><h3 class=responsiveText>8.2.a Staatsdefizit</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-2-ab/"><h3 class=responsiveText>8.2.a Staatsdefizit</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -13069,7 +13084,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-2-ab"><h3 class=responsiveText>8.2.b Strukturelles Defizit</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-2-ab/"><h3 class=responsiveText>8.2.b Strukturelles Defizit</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -13382,7 +13397,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-2-c"><h3 class=responsiveText>8.2.c Schuldenstand</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-2-c/"><h3 class=responsiveText>8.2.c Schuldenstand</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -13704,7 +13719,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-3"><h3 class=responsiveText>8.3 Verhältnis der Bruttoanlageinvestitionen zum BIP</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-3/"><h3 class=responsiveText>8.3 Verhältnis der Bruttoanlageinvestitionen zum BIP</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -14026,7 +14041,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-4"><h3 class=responsiveText>8.4 Bruttoinlandsprodukt je Einwohner</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-4/"><h3 class=responsiveText>8.4 Bruttoinlandsprodukt je Einwohner</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -14348,7 +14363,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-5-ab"><h3 class=responsiveText>8.5.a Erwerbstätigenquote insgesamt (20 bis 64 Jahre)</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-5-ab/"><h3 class=responsiveText>8.5.a Erwerbstätigenquote insgesamt (20 bis 64 Jahre)</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -14651,7 +14666,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-5-ab"><h3 class=responsiveText>8.5.b Erwerbstätigenquote Ältere (60 bis 64 Jahre)</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-5-ab/"><h3 class=responsiveText>8.5.b Erwerbstätigenquote Ältere (60 bis 64 Jahre)</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -14965,7 +14980,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-6"><h3 class=responsiveText>8.6 Mitglieder des Textilbündnisses</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/8-6/"><h3 class=responsiveText>8.6 Mitglieder des Textilbündnisses</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -15270,11 +15285,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/9">
+        <a href="/dns-indicators/9/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/9.png" alt="Industrie, Innovationen und Infrastruktur - Ziel 9" width="150" height="150" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/9">Industrie, Innovationen und Infrastruktur</a>
+            <a href="/dns-indicators/9/">Industrie, Innovationen und Infrastruktur</a>
         </h3>     -->
     </div>
     <div>
@@ -15298,7 +15313,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/9-1-a"><h3 class=responsiveText>9.1.a Private und öffentliche Ausgaben für Forschung und Entwicklung</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/9-1-a/"><h3 class=responsiveText>9.1.a Private und öffentliche Ausgaben für Forschung und Entwicklung</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -15777,7 +15792,7 @@ data-event-label="high"
                   
                     <th width="14.68%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/9-1-b"><h3 class=responsiveText>9.1.b Breitbandausbau – Anteil der Haushalte mit Zugang zu Gigabit-Breitbandversorgung</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/9-1-b/"><h3 class=responsiveText>9.1.b Breitbandausbau – Anteil der Haushalte mit Zugang zu Gigabit-Breitbandversorgung</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -16000,11 +16015,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/10">
+        <a href="/dns-indicators/10/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" width="150" height="150" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/10">Weniger Ungleichheiten</a>
+            <a href="/dns-indicators/10/">Weniger Ungleichheiten</a>
         </h3>     -->
     </div>
     <div>
@@ -16028,7 +16043,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/10-1"><h3 class=responsiveText>10.1 Ausländische Schulabsolventinnen und Schulabsolventen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/10-1/"><h3 class=responsiveText>10.1 Ausländische Schulabsolventinnen und Schulabsolventen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -16644,7 +16659,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/10-2"><h3 class=responsiveText>10.2 Gini-Koeffizient des Einkommens nach Sozialtransfers</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/10-2/"><h3 class=responsiveText>10.2 Gini-Koeffizient des Einkommens nach Sozialtransfers</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -16961,11 +16976,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/11">
+        <a href="/dns-indicators/11/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" width="150" height="150" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/11">Nachhaltige Städte und Gemeinden</a>
+            <a href="/dns-indicators/11/">Nachhaltige Städte und Gemeinden</a>
         </h3>     -->
     </div>
     <div>
@@ -16989,7 +17004,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-1-a"><h3 class=responsiveText>11.1.a Anstieg der Siedlungs- und Verkehrsfläche in ha pro Tag</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-1-a/"><h3 class=responsiveText>11.1.a Anstieg der Siedlungs- und Verkehrsfläche in ha pro Tag</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -17310,7 +17325,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-1-b"><h3 class=responsiveText>11.1.b Freiraumverlust</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-1-b/"><h3 class=responsiveText>11.1.b Freiraumverlust</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -17631,7 +17646,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-1-c"><h3 class=responsiveText>11.1.c Siedlungsdichte</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-1-c/"><h3 class=responsiveText>11.1.c Siedlungsdichte</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -17953,7 +17968,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-2-a"><h3 class=responsiveText>11.2.a Endenergieverbrauch im Güterverkehr</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-2-a/"><h3 class=responsiveText>11.2.a Endenergieverbrauch im Güterverkehr</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -18274,7 +18289,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-2-b"><h3 class=responsiveText>11.2.b Endenergieverbrauch im Personenverkehr</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-2-b/"><h3 class=responsiveText>11.2.b Endenergieverbrauch im Personenverkehr</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -18595,7 +18610,7 @@ data-event-label="high"
                   
                     <th width="14.68%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-2-c"><h3 class=responsiveText>11.2.c Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-2-c/"><h3 class=responsiveText>11.2.c Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -18831,7 +18846,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-3"><h3 class=responsiveText>11.3 Überlastung durch Wohnkosten</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-3/"><h3 class=responsiveText>11.3 Überlastung durch Wohnkosten</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -19161,7 +19176,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-4"><h3 class=responsiveText>11.4 Zahl der Objekte in der Deutschen Digitalen Bibliothek</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/11-4/"><h3 class=responsiveText>11.4 Zahl der Objekte in der Deutschen Digitalen Bibliothek</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -19470,11 +19485,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/12">
+        <a href="/dns-indicators/12/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png" alt="Nachhaltige/r Konsum und Produktion - Ziel 12" width="150" height="150" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/12">Nachhaltige/r Konsum und Produktion</a>
+            <a href="/dns-indicators/12/">Nachhaltige/r Konsum und Produktion</a>
         </h3>     -->
     </div>
     <div>
@@ -19498,7 +19513,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-a"><h3 class=responsiveText>12.1.a Marktanteil von Produkten mit staatlichen Umweltzeichen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-a/"><h3 class=responsiveText>12.1.a Marktanteil von Produkten mit staatlichen Umweltzeichen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -19815,7 +19830,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-b"><h3 class=responsiveText>12.1.ba Globale Umweltinanspruchnahme durch den Konsum privater Haushalte - Rohstoffeinsatz</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-b/"><h3 class=responsiveText>12.1.ba Globale Umweltinanspruchnahme durch den Konsum privater Haushalte - Rohstoffeinsatz</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -20114,7 +20129,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-b"><h3 class=responsiveText>12.1.bb Globale Umweltinanspruchnahme durch den Konsum privater Haushalte - Energieverbrauch</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-b/"><h3 class=responsiveText>12.1.bb Globale Umweltinanspruchnahme durch den Konsum privater Haushalte - Energieverbrauch</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -20411,7 +20426,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-b"><h3 class=responsiveText>12.1.bc Globale Umweltinanspruchnahme durch den Konsum privater Haushalte - CO₂-Emissionen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-1-b/"><h3 class=responsiveText>12.1.bc Globale Umweltinanspruchnahme durch den Konsum privater Haushalte - CO₂-Emissionen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -20711,7 +20726,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-2"><h3 class=responsiveText>12.2 Umweltmanagement EMAS</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-2/"><h3 class=responsiveText>12.2 Umweltmanagement EMAS</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -21033,7 +21048,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-3-ab"><h3 class=responsiveText>12.3.a Anteil des Papiers mit Blauem Engel am Gesamtpapierverbrauch der unmittelbaren Bundesverwaltung</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-3-ab/"><h3 class=responsiveText>12.3.a Anteil des Papiers mit Blauem Engel am Gesamtpapierverbrauch der unmittelbaren Bundesverwaltung</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -21326,7 +21341,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-3-ab"><h3 class=responsiveText>12.3.b CO₂-Emissionen von handelsüblichen Kraftfahrzeugen der öffentlichen Hand</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/12-3-ab/"><h3 class=responsiveText>12.3.b CO₂-Emissionen von handelsüblichen Kraftfahrzeugen der öffentlichen Hand</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -21617,11 +21632,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/13">
+        <a href="/dns-indicators/13/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/13.png" alt="Maßnahmen zum Klimaschutz - Ziel 13" width="150" height="150" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/13">Maßnahmen zum Klimaschutz</a>
+            <a href="/dns-indicators/13/">Maßnahmen zum Klimaschutz</a>
         </h3>     -->
     </div>
     <div>
@@ -21645,7 +21660,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/13-1-a"><h3 class=responsiveText>13.1.a Treibhausgasemissionen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/13-1-a/"><h3 class=responsiveText>13.1.a Treibhausgasemissionen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -22991,7 +23006,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/13-1-b"><h3 class=responsiveText>13.1.b Internationale Klimafinanzierung zur Reduktion von Treibhausgasen und zur Anpassung an den Klimawandel</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/13-1-b/"><h3 class=responsiveText>13.1.b Internationale Klimafinanzierung zur Reduktion von Treibhausgasen und zur Anpassung an den Klimawandel</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -23453,11 +23468,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/14">
+        <a href="/dns-indicators/14/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/14.png" alt="Leben unter Wasser - Ziel 14" width="150" height="150" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/14">Leben unter Wasser</a>
+            <a href="/dns-indicators/14/">Leben unter Wasser</a>
         </h3>     -->
     </div>
     <div>
@@ -23481,7 +23496,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/14-1-a"><h3 class=responsiveText>14.1.aa Nährstoffeinträge in Küstengewässer und Meeresgewässer – Stickstoffeintrag über die Zuflüsse in die Ostsee</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/14-1-a/"><h3 class=responsiveText>14.1.aa Nährstoffeinträge in Küstengewässer und Meeresgewässer – Stickstoffeintrag über die Zuflüsse in die Ostsee</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -23784,7 +23799,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/14-1-a"><h3 class=responsiveText>14.1.ab Nährstoffeinträge in Küstengewässer und Meeresgewässer – Stickstoffeintrag über die Zuflüsse in die Nordsee</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/14-1-a/"><h3 class=responsiveText>14.1.ab Nährstoffeinträge in Küstengewässer und Meeresgewässer – Stickstoffeintrag über die Zuflüsse in die Nordsee</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -24097,7 +24112,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/14-1-b"><h3 class=responsiveText>14.1.b Anteil der nachhaltig befischten Fischbestände in Nord- und Ostsee</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/14-1-b/"><h3 class=responsiveText>14.1.b Anteil der nachhaltig befischten Fischbestände in Nord- und Ostsee</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -24406,11 +24421,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/15">
+        <a href="/dns-indicators/15/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png" alt="Leben an Land - Ziel 15" width="150" height="150" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/15">Leben an Land</a>
+            <a href="/dns-indicators/15/">Leben an Land</a>
         </h3>     -->
     </div>
     <div>
@@ -24434,7 +24449,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-1"><h3 class=responsiveText>15.1 Artenvielfalt und Landschaftsqualität</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-1/"><h3 class=responsiveText>15.1 Artenvielfalt und Landschaftsqualität</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -24756,7 +24771,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-2"><h3 class=responsiveText>15.2 Eutrophierung der Ökosysteme</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-2/"><h3 class=responsiveText>15.2 Eutrophierung der Ökosysteme</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -25074,7 +25089,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-3-ab"><h3 class=responsiveText>15.3.a REDD+ (ergebnisbasierte Auszahlungen für internationalen Waldschutz)</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-3-ab/"><h3 class=responsiveText>15.3.a REDD+ (ergebnisbasierte Auszahlungen für internationalen Waldschutz)</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -25377,7 +25392,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-3-ab"><h3 class=responsiveText>15.3.b Internationaler Bodenschutz (Bruttoentwicklungsausgaben für internationalen Bodenschutz)</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/15-3-ab/"><h3 class=responsiveText>15.3.b Internationaler Bodenschutz (Bruttoentwicklungsausgaben für internationalen Bodenschutz)</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -25678,11 +25693,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/16">
+        <a href="/dns-indicators/16/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/16.png" alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16" width="150" height="150" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/16">Frieden, Gerechtigkeit und starke Institutionen</a>
+            <a href="/dns-indicators/16/">Frieden, Gerechtigkeit und starke Institutionen</a>
         </h3>     -->
     </div>
     <div>
@@ -25706,7 +25721,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-1"><h3 class=responsiveText>16.1 Straftaten</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-1/"><h3 class=responsiveText>16.1 Straftaten</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -26186,7 +26201,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-2"><h3 class=responsiveText>16.2 Anzahl der in betroffenen Weltregionen durchgeführten Projekte zur Sicherung, Registrierung und Zerstörung von Kleinwaffen und leichten Waffen durch Deutschland</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-2/"><h3 class=responsiveText>16.2 Anzahl der in betroffenen Weltregionen durchgeführten Projekte zur Sicherung, Registrierung und Zerstörung von Kleinwaffen und leichten Waffen durch Deutschland</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -26508,7 +26523,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-3-ab"><h3 class=responsiveText>16.3.a Corruption Perception Index in Deutschland</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-3-ab/"><h3 class=responsiveText>16.3.a Corruption Perception Index in Deutschland</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -26807,7 +26822,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-3-ab"><h3 class=responsiveText>16.3.b Corruption Perception Index in den Partnerländern der deutschen Entwicklungszusammenarbeit</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/16-3-ab/"><h3 class=responsiveText>16.3.b Corruption Perception Index in den Partnerländern der deutschen Entwicklungszusammenarbeit</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -27104,11 +27119,11 @@ data-event-label="high"
     <br style="clear:both;">
   </div> <!--class="goal"--><div class="goal reporting-status-item">
     <div>
-        <a href="/dns-indicators/17">
+        <a href="/dns-indicators/17/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/17.png" alt="Partnerschaften zur Erreichung der Ziele - Ziel 17" width="150" height="150" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
         </a>
         <!-- <h3 class="status-goal">
-            <a href="/dns-indicators/17">Partnerschaften zur Erreichung der Ziele</a>
+            <a href="/dns-indicators/17/">Partnerschaften zur Erreichung der Ziele</a>
         </h3>     -->
     </div>
     <div>
@@ -27132,7 +27147,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/17-1"><h3 class=responsiveText>17.1 Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/17-1/"><h3 class=responsiveText>17.1 Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -27454,7 +27469,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/17-2"><h3 class=responsiveText>17.2 Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/17-2/"><h3 class=responsiveText>17.2 Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie LDCs pro Jahr</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -27925,7 +27940,7 @@ data-event-label="high"
                   
                     <th width="12%"> <h3 class=responsiveText>Indikator</h3> </th>
                   
-                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/17-3"><h3 class=responsiveText>17.3 Einfuhren aus am wenigsten entwickelten Ländern</h3></a> </th>
+                  <th colspan="7" style="padding-left: 4%"> <a href="/dns-indicators/17-3/"><h3 class=responsiveText>17.3 Einfuhren aus am wenigsten entwickelten Ländern</h3></a> </th>
                 </tr>
                 <!-- !!!!!!!!!!!!!!!!-->
                 <!-- YEAR !!!!!!!!!!!!!!!!-->
@@ -28296,12 +28311,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/dns-indicators/assets/js/sdg.js?v=20230421084647'></script>
+<script src='/dns-indicators/assets/js/sdg.js?v=20230421104527'></script>
 
 
     
     
-    <script src="/dns-indicators/assets/js/custom.js?v=20230421084647"></script><script>
+    <script src="/dns-indicators/assets/js/custom.js?v=20230421104527"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
