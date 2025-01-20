@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+UpgradeEn# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: xxx #frontpage.heading
+title: frontpage.heading
 description: Data Platform Prototype
 url: ""
 data_dir: data
@@ -101,114 +101,56 @@ date_formats:
 # Menu
 menu:
   - path: /
-    translation_key: general.seventeen_goals
-  - translation_key: menu.status_title
+    translation_key: menu.1_start
+  - translation_key: menu.1_status
     dropdown:
-      - path: /status_summary/
-        translation_key: menu.status_summary
       - path: /status/
-        translation_key: menu.status
-  - translation_key: menu.about
+        translation_key: menu.1_status_2_methodology
+      - path: /status_summary/
+        translation_key: menu.1_status_2_overview
+  - translation_key: menu.1_strategy
     dropdown:
-      - path: /about_platform/
-        translation_key: menu.about_this_site
-      - path: /guidance/
-        translation_key: menu.guidance
-  # - translation_key: menu.facts
-  #   dropdown:
-  #     - path: /facts_agenda/
-  #       translation_key: menu.facts_agenda
-  - translation_key: menu.publications
+      - path: /strategy/dns/
+        translation_key: menu.1_strategy_2_dns
+      - path: /strategy/monitoring/
+        translation_key: menu.1_strategy_2_monitoring
+      - path: /strategy/publications/
+        translation_key: menu.1_strategy_2_publications
+      - path: /strategy/links/
+        translation_key: menu.1_strategy_2_links
+  - path: /laender/
+    translation_key: menu.1_laender
+  - path: menu.1_global_indicators_path
+    translation_key: menu.1_global_indicators
+  - translation_key: menu.1_help
     dropdown:
-      - path: /publications_reports/
-        translation_key: menu.reports
-      - path: /publications_strategy/
-        translation_key: menu.sustainable_development_strategy
-      - path: /publications_other/
-        translation_key: menu.other_publications
-  # - path: /publications/
-  #   translation_key: menu.publications
-  # - translation_key: menu.publications
-  #   dropdown:
-  #     - translation_key: menu.reports
-  #       dropdown:
-  #         - path: menu.report21path
-  #           translation_key: menu.report21
-  #         - path: menu.report_data21path
-  #           translation_key: menu.report_data21
-  #         - path: menu.report18path
-  #           translation_key: menu.report18
-  #         - path: menu.report_data18path
-  #           translation_key: menu.report_data18
-  #         - path: menu.report16path
-  #           translation_key: menu.report16
-  #         - path: menu.report_data16path
-  #           translation_key: menu.report_data16
-  #         - path: menu.report14path
-  #           translation_key: menu.report14
-  #         - path: menu.report_data14path
-  #           translation_key: menu.report_data14
-  #         - path: menu.report12path
-  #           translation_key: menu.report12
-  #         - path: menu.report_data12path
-  #           translation_key: menu.report_data12
-  #         - path: menu.report10path
-  #           translation_key: menu.report10
-  #         - path: menu.report_data10path
-  #           translation_key: menu.report_data10
-  #         - path: menu.report08path
-  #           translation_key: menu.report08
-  #         - path: menu.report_data08path
-  #           translation_key: menu.report_data08
-  #         - path: menu.report06path
-  #           translation_key: menu.report06
-  #     - translation_key: menu.sustainable_development_strategy
-  #       dropdown:
-  #         - path: menu.government_reports_path
-  #           translation_key: menu.government_reports
-  #     - translation_key: menu.other_publications
-  #       dropdown:
-  #         - path: menu.wista_path
-  #           translation_key: menu.wista
-  #         - path: menu.feasibility_study_path
-  #           translation_key: menu.feasibility_study
-  #         - path: menu.special_evel_path
-  #           translation_key: menu.special_evel
-  - path: menu.pathtosdg
-    translation_key: menu.sdglogo
+    - path: /help/navigation/
+      translation_key: menu.1_help_2_navigation
+    - path: /help/guidance/
+      translation_key: menu.1_help_2_guidance
+    - path: /help/faq/
+      translation_key: menu.1_help_2_faq
 
 frontpage_cards:
-    -
-      # This controls the color of the line at the top of the card.
-      rule_color: grey
-      # This sets the title of the card.
-      title: frontpage.download_all
-      # This sets the content of the card. Markdown is supported. Note that all
-      # internal links should be relative to the frontpage. For example, instead
-      # of [link](/path) you should use [link](path).
-      #content: |
-      #  * List item
-      #  * List item with [link](https://example.com)
-      # This displays any file in the `_includes` folder.
+    - rule_color: grey
+      title: ''
       include: components/download-all-data.html
-      # This controls the text for a call-to-action button.
-      #button_label: My button text
-      # This controls the URL the button links to.
-      #button_link: https://example.com
-
-contrast_type: single
+    - rule_color: grey
+      title: ''
+      include: components/joint_action_column.html
+    - rule_color: grey
+      title: ''
+      include: components/strategy_column.html
 
 header_language_toggle: links
+contrast_type: single
+
 header:
     include: header-default.html
 
 footer_menu:
   - path: 'mailto:dns-indikatoren@destatis.de' #menu.contactPath
     translation_key: menu.contact_us
-  - path: menu.twitterPath #https://twitter.com/destatis?lang=de
-    translation_key:  general.twitter
-  # - path: /faq/
-  #   translation_key: menu.faq
   - path: /imprint/
     translation_key: menu.imprint
 
@@ -246,7 +188,6 @@ footer_fields:
     label: metadata_fields.computation_units
     value: data.number
 
-
 series_toggle: true
 graph_title_from_series: false
 decimal_separator: ','
@@ -267,7 +208,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@alter-data-display-decimal-fix
-remote_theme: open-sdg/open-sdg@2.2.0-beta1
+remote_theme: open-sdg/open-sdg@2.2.1
 
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns
 
@@ -295,7 +236,7 @@ map_options:
   tileOptions:
     id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w
-    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2023</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2023</a>
+    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2024</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2024</a>
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
   # 1 map color depending on goal --- start ---
   #colorRange: ["#F6E8EC", "#E3BAC6", "#D18CA1", "#BE5E7B", "#AB3055", "#A21942", "#821435", "#610F28", "#410A1A", "#20050D"]
@@ -344,15 +285,21 @@ map_options:
     dashArray: 5,5
 
 map_layers:
-  - serviceUrl:  https://DnsTestEnvironment.github.io/dns-indicators/assets/maps/boundariesKrs.geojson
+  - serviceUrl:  https://DnsUpgradeEnvironment.github.io/dns-indicators/assets/maps/boundariesKrs.geojson
     min_zoom: 8
     max_zoom: 11
     staticBorders: true
     subfolder: kreise
     label: indicator.counties
-  - serviceUrl:  https://DnsTestEnvironment.github.io/dns-indicators/assets/maps/boundaries.geojson
+  - serviceUrl:  https://DnsUpgradeEnvironment.github.io/dns-indicators/assets/maps/boundaries.geojson
     min_zoom: 0
     max_zoom: 7
     staticBorders: true
     subfolder: laender
     label: indicator.laender
+
+progressive_web_app:
+  enabled: true
+  name: DNS Indikatoren
+  short_name: DNS App
+  precaching: true

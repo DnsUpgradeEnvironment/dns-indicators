@@ -73,15 +73,16 @@
           break;
         }
       }
-      if (overrideColorRange && typeof colorRange === 'function') {
-        var indicatorId = options.indicatorId.replace('indicator_', ''),
-            indicatorIdParts = indicatorId.split('-'),
-            goalId = (indicatorIdParts.length > 0) ? indicatorIdParts[0] : null,
-            indicatorIdDots = indicatorIdParts.join('.');
-        colorRange = colorRange(indicatorIdDots, goalId);
-      }
       options.mapOptions.colorRange = (overrideColorRange) ? colorRange : defaults.colorRange;
     }
+
+    // Support multiple colorsets
+    if (Array.isArray(options.mapOptions.colorRange[0])) {
+      this.goalNumber = parseInt(options.indicatorId.slice(options.indicatorId.indexOf('_')+1,options.indicatorId.indexOf('-')));
+      options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber-1];
+      console.log("goal: ",this.goalNumber);
+    }
+
 
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     this.mapLayers = [];
@@ -146,16 +147,10 @@
         newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
       if (newTitle) {
-        if (this.proxy === 'proxy' || this.proxySerieses.includes(currentSeries)) {
-            newTitle += ' ' + this.viewHelpers.PROXY_PILL;
-        }
-        $('#map-heading').html(newTitle);
+        $('#map-heading').text(newTitle);
       }
       if (newSubtitle) {
-        if (this.proxy === 'proxy' || this.proxySerieses.includes(currentSeries)) {
-            newSubtitle += ' ' + this.viewHelpers.PROXY_PILL;
-        }
-        $('#map-heading').html(newSubtitle);
+        $('#map-subheading').text(newSubtitle);
       }
     },
 
@@ -291,6 +286,7 @@
         value = callback(value);
       });
       if (this._precision || this._precision === 0) {
+        value = Number((+(Math.round(+(value + 'e' + this._precision)) + 'e' + -this._precision)).toFixed(this._precision));
         value = Number.parseFloat(value).toFixed(this._precision);
       }
       if (this._decimalSeparator) {

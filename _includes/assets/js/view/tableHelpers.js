@@ -135,7 +135,6 @@ function createTable(table, indicatorId, el, isProxy) {
             'class': table_class,
             'width': '100%'
         });
-
         var tableTitle = MODEL.chartTitle;
         if (isProxy) {
             tableTitle += ' ' + PROXY_PILL;
@@ -144,8 +143,7 @@ function createTable(table, indicatorId, el, isProxy) {
           currentTable.append('<caption>' + tableTitle + '<br><small>' + MODEL.chartSubtitle + '</small></caption>');
         } else {
           currentTable.append('<caption>' + tableTitle + '<br><small>' + MODEL.measurementUnit + '</small></caption>');
-        //currentTable.append('<caption>' + tableTitle + '</caption>');
-
+        }
         var table_head = '<thead><tr>';
 
         var getHeading = function (heading, index) {
@@ -169,7 +167,9 @@ function createTable(table, indicatorId, el, isProxy) {
                 var isYear = (index == 0);
                 var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
-                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ? data[index] : '-') + cell_suffix;
+                //var cell_content = (isYear) ? translations.t(data[index]) : data[index];
+                //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (cell_content !== null &&  cell_content !== undefined ?  cell_content : '.') + cell_suffix;
+                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null &&  data[index] !== undefined ?  data[index] : '.') + cell_suffix;
             });
             row_html += '</tr>';
             currentTable.find('tbody').append(row_html);
@@ -205,6 +205,7 @@ function createTable(table, indicatorId, el, isProxy) {
  * @return null
  */
 function setDataTableWidth(table) {
+
     table.find('thead th').each(function () {
         var textLength = $(this).text().length;
         for (var loop = 0; loop < VIEW._tableColumnDefs.length; loop++) {
@@ -222,24 +223,28 @@ function setDataTableWidth(table) {
     });
 
     table.removeAttr('style width');
-
-    var totalWidth = 0;
-    table.find('thead th').each(function () {
-        if ($(this).data('width')) {
-            totalWidth += $(this).data('width');
-        } else {
-            totalWidth += $(this).width();
-        }
-    });
+    table.css('width', '100%');
+    // var totalWidth = 0;
+    // var column = 0;
+    // table.find('thead th').each(function () {
+    //     column += 1;
+    //     if ($(this).data('width')) {
+    //         totalWidth += $(this).data('width');
+    //         console.log('a) Column ', column, ': ',  $(this).data('width'), ', Total: ' + totalWidth);
+    //     } else {
+    //         totalWidth += $(this).width();
+    //         console.log('b) Column ', column + ': ',  $(this).width(), ', Total: ' + totalWidth);
+    //     }
+    // });
 
     // ascertain whether the table should be width 100% or explicit width:
-    var containerWidth = table.closest('.dataTables_wrapper').width();
-
-    if (totalWidth > containerWidth) {
-        table.css('width', totalWidth + 'px');
-    } else {
-        table.css('width', '100%');
-    }
+    // var containerWidth = table.closest('.dataTables_wrapper').width();
+    // console.log('Table: ', totalWidth, 'Container: ', containerWidth);
+    // if (totalWidth > containerWidth) {
+    //     table.css('width', totalWidth + 'px');
+    // } else {
+    //     table.css('width', '100%');
+    // }
 }
 
 /**

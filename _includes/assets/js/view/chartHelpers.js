@@ -15,10 +15,20 @@ function alterChartConfig(config, info) {
  */
 function updateChartTitle(chartTitle, isProxy) {
     if (typeof chartTitle !== 'undefined') {
-        if (isProxy) {
-            chartTitle += ' ' + PROXY_PILL;
-        }
-        $('.chart-title').html(chartTitle);
+      if (isProxy) {
+          chartTitle += ' ' + PROXY_PILL;
+      }
+      $('.chart-title').html(chartTitle);
+    }
+}
+
+/**
+ * @param {String} chartSubtitle
+ * @return null
+ */
+function updateChartSubtitle(chartSubtitle) {
+    if (typeof chartSubtitle !== 'undefined') {
+        $('.chart-subtitle').text(chartSubtitle);
     }
 }
 

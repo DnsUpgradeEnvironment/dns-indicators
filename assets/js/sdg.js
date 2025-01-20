@@ -1,6 +1,9 @@
 ---
 # Don't delete this line.
 ---
+{%- if site.progressive_web_app.enabled -%}
+{%- include assets/js/serviceWorkerInit.js -%}
+{%- endif -%}
 {%- include assets/js/autotrack-element.js -%}
 {%- include assets/js/plugins/jquery.sdgMap.js -%}
 {%- include assets/js/chartjs/rescaler.js -%}
@@ -26,3 +29,5 @@
 {%- include assets/js/plugins/leaflet.searchAccessible.js -%}
 {%- include assets/js/plugins/leaflet.disaggregationControls.js -%}
 {%- include assets/js/backToTop.js -%}
+{%- include assets/js/linkExtAlert.js -%}
+{%- include assets/js/indicatorCleanupForIframe.js -%}
