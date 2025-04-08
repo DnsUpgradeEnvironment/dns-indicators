@@ -5,7 +5,7 @@ layout: page
 ---
 
 <h3>Aufbau der DNS-Online Plattform</h3>
-Die Online Plattform gliedert sich in das Indikatorenset der [Deutschen Nachhaltigkeitsstrategie](https://www.bundesregierung.de/breg-de/themen/nachhaltigkeitspolitik/eine-strategie-begleitet-uns/die-deutsche-nachhaltigkeitsstrategie) (DNS) sowie das Indikatorenset für Deutschland zu den globalen Nachhaltigkeitszielen ([Sustainable Development Goals, SDGs](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)) der Agenda 2030 der Vereinten Nationen. Da die Deutsche Nachhaltigkeitsstrategie die nationale Umsetzung der Agenda 2030 ist, werden verwandte Indikatoren beider Strategien auf der Plattform miteinander verlinkt.
+Die Online Plattform gliedert sich in das Indikatorenset der [Deutschen Nachhaltigkeitsstrategie](https://www.bundesregierung.de/breg-de/schwerpunkte-der-bundesregierung/nachhaltigkeitspolitik/eine-strategie-begleitet-uns) (DNS) sowie das Indikatorenset für Deutschland zu den globalen Nachhaltigkeitszielen ([Sustainable Development Goals, SDGs](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)) der Agenda 2030 der Vereinten Nationen. Da die Deutsche Nachhaltigkeitsstrategie die nationale Umsetzung der Agenda 2030 ist, werden verwandte Indikatoren beider Strategien auf der Plattform miteinander verlinkt.
 
 Einen Direktlink zur Startseite der SDG-Online Plattform finden Sie oben rechts auf dieser Seite neben dem Suchfeld: [<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-germany.github.io)
 
